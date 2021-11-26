@@ -1,0 +1,101 @@
+body {
+    background-color: #202326;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+a, .affix ul > li.active > a, .affix ul > li.active > a::before {
+    color: #9df;
+}
+
+a:hover {
+    color: #9df;
+    text-decoration: underline;
+}
+
+#logo {
+    max-height: 100%;
+    padding: 5% 0;
+    margin-right: 1em;
+}
+
+.navbar-default, .footer, .sidenav, .sidefilter, .sidetoc, .sideaffix, body .toc {
+    background-color: #25282b;
+    border-color: #080808;
+    border-width: 0;
+}
+
+.navbar, header .navbar {
+    border-width: 0;
+}
+
+.sideaffix {
+    min-width: 16.66666667%;
+}
+
+.toc .nav > li > a, .affix ul > li > a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.toc .nav > li > a:hover, .affix ul > li > a:hover {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: underline;
+}
+
+.toc .nav > li.active > a {
+    color: #ee7381;
+}
+
+.toc .nav > li.active > a:hover {
+    color: #ee7381;
+    text-decoration: underline;
+}
+
+.toc-filter {
+    background-color: #333537;
+}
+
+.toc-filter > input {
+    background-color: #333537;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+code {
+    color: #faa;
+    background-color: #434649;
+    border-color: #505356;
+    border-radius: 0;
+}
+
+pre {
+    background-color: #1c1b1b;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #3b3e41;
+}
+
+.table-bordered, .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border-color: #505356;
+}
+
+.table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border-bottom-width: 1px;
+}
+
+
+
+pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: StackOverflow Dark
+  Description: Dark theme as used on stackoverflow.com
+  Author: stackoverflow.com
+  Maintainer: @Hirse
+  Website: https://github.com/StackExchange/Stacks
+  License: MIT
+  Updated: 2021-05-15
+
+  Updated for @stackoverflow/stacks v0.64.0
+  Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less
+  Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
+*/.hljs{color:#fff;background:#1c1b1b}.hljs-subst{color:#fff}.hljs-comment{color:#999}.hljs-attr,.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-section,.hljs-selector-tag{color:#88aece}.hljs-attribute{color:#c59bc1}.hljs-name,.hljs-number,.hljs-quote,.hljs-selector-id,.hljs-template-tag,.hljs-type{color:#f08d49}.hljs-selector-class{color:#88aece}.hljs-link,.hljs-regexp,.hljs-selector-attr,.hljs-string,.hljs-symbol,.hljs-template-variable,.hljs-variable{color:#b5bd68}.hljs-meta,.hljs-selector-pseudo{color:#88aece}.hljs-built_in,.hljs-literal,.hljs-title{color:#f08d49}.hljs-bullet,.hljs-code{color:#ccc}.hljs-meta .hljs-string{color:#b5bd68}.hljs-deletion{color:#de7176}.hljs-addition{color:#76c490}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
