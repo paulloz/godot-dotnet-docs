@@ -22,6 +22,9 @@
         "files": [
           "toc.yml",
           "*.md"
+        ],
+        "exclude": [
+          "README.md"
         ]
       }
     ],
