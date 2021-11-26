@@ -1,0 +1,1263 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Timer
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Timer
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.Timer">
+  
+  
+  <h1 id="Godot_Timer" data-uid="Godot.Timer" class="text-break">Class Timer
+  </h1>
+  <div class="markdown level0 summary"><p>Counts down a specified interval and emits a signal on reaching 0. Can be set to repeat or &quot;one-shot&quot; mode.</p>
+<p>Note: To create a one-shot timer without instantiating a node, use <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CreateTimer_System_Single_System_Boolean_">CreateTimer(Single, Boolean)</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Node.html">Node</a></div>
+    <div class="level3"><span class="xref">Timer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationEnterTree">Node.NotificationEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationExitTree">Node.NotificationExitTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationMovedInParent">Node.NotificationMovedInParent</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationReady">Node.NotificationReady</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPaused">Node.NotificationPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnpaused">Node.NotificationUnpaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPhysicsProcess">Node.NotificationPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationProcess">Node.NotificationProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationParented">Node.NotificationParented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnparented">Node.NotificationUnparented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInstanced">Node.NotificationInstanced</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragBegin">Node.NotificationDragBegin</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragEnd">Node.NotificationDragEnd</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPathChanged">Node.NotificationPathChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalProcess">Node.NotificationInternalProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalPhysicsProcess">Node.NotificationInternalPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPostEnterTree">Node.NotificationPostEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseEnter">Node.NotificationWmMouseEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseExit">Node.NotificationWmMouseExit</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusIn">Node.NotificationWmFocusIn</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusOut">Node.NotificationWmFocusOut</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmQuitRequest">Node.NotificationWmQuitRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmGoBackRequest">Node.NotificationWmGoBackRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmUnfocusRequest">Node.NotificationWmUnfocusRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsMemoryWarning">Node.NotificationOsMemoryWarning</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationTranslationChanged">Node.NotificationTranslationChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmAbout">Node.NotificationWmAbout</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationCrash">Node.NotificationCrash</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsImeUpdate">Node.NotificationOsImeUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppResumed">Node.NotificationAppResumed</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppPaused">Node.NotificationAppPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode__1_Godot_NodePath_">Node.GetNode&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull__1_Godot_NodePath_">Node.GetNodeOrNull&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild__1_System_Int32_">Node.GetChild&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildOrNull__1_System_Int32_">Node.GetChildOrNull&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner__1">Node.GetOwner&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwnerOrNull__1">Node.GetOwnerOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent__1">Node.GetParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParentOrNull__1">Node.GetParentOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">Node._EnterTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ExitTree">Node._ExitTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__GetConfigurationWarning">Node._GetConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">Node._Input(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">Node._PhysicsProcess(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">Node._Process(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Ready">Node._Ready()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">Node._UnhandledInput(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledKeyInput_Godot_InputEventKey_">Node._UnhandledKeyInput(InputEventKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChildBelowNode_Godot_Node_Godot_Node_System_Boolean_">Node.AddChildBelowNode(Node, Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetName_System_String_">Node.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetName">Node.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">Node.AddChild(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveChild_Godot_Node_">Node.RemoveChild(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildCount">Node.GetChildCount()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildren">Node.GetChildren()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild_System_Int32_">Node.GetChild(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNode_Godot_NodePath_">Node.HasNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">Node.GetNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull_Godot_NodePath_">Node.GetNodeOrNull(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent">Node.GetParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindNode_System_String_System_Boolean_System_Boolean_">Node.FindNode(String, Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindParent_System_String_">Node.FindParent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNodeAndResource_Godot_NodePath_">Node.HasNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeAndResource_Godot_NodePath_">Node.GetNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">Node.IsInsideTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsAParentOf_Godot_Node_">Node.IsAParentOf(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsGreaterThan_Godot_Node_">Node.IsGreaterThan(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPath">Node.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPathTo_Godot_Node_">Node.GetPathTo(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddToGroup_System_String_System_Boolean_">Node.AddToGroup(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveFromGroup_System_String_">Node.RemoveFromGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInGroup_System_String_">Node.IsInGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_MoveChild_Godot_Node_System_Int32_">Node.MoveChild(Node, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetGroups">Node.GetGroups()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Raise">Node.Raise()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetOwner_Godot_Node_">Node.SetOwner(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner">Node.GetOwner()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveAndSkip">Node.RemoveAndSkip()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetIndex">Node.GetIndex()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTree">Node.PrintTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTreePretty">Node.PrintTreePretty()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetFilename_System_String_">Node.SetFilename(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetFilename">Node.GetFilename()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateNotification_System_Int32_">Node.PropagateNotification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateCall_System_String_Godot_Collections_Array_System_Boolean_">Node.PropagateCall(String, Array, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">Node.SetPhysicsProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPhysicsProcessDeltaTime">Node.GetPhysicsProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessing">Node.IsPhysicsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessDeltaTime">Node.GetProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">Node.SetProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessPriority_System_Int32_">Node.SetProcessPriority(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessPriority">Node.GetProcessPriority()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessing">Node.IsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInput_System_Boolean_">Node.SetProcessInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInput">Node.IsProcessingInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledInput_System_Boolean_">Node.SetProcessUnhandledInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledInput">Node.IsProcessingUnhandledInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledKeyInput_System_Boolean_">Node.SetProcessUnhandledKeyInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledKeyInput">Node.IsProcessingUnhandledKeyInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPauseMode_Godot_Node_PauseModeEnum_">Node.SetPauseMode(Node.PauseModeEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPauseMode">Node.GetPauseMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CanProcess">Node.CanProcess()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintStrayNodes">Node.PrintStrayNodes()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPositionInParent">Node.GetPositionInParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetDisplayFolded_System_Boolean_">Node.SetDisplayFolded(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsDisplayedFolded">Node.IsDisplayedFolded()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInternal_System_Boolean_">Node.SetProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInternal">Node.IsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcessInternal_System_Boolean_">Node.SetPhysicsProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessingInternal">Node.IsPhysicsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetTree">Node.GetTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Duplicate_System_Int32_">Node.Duplicate(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ReplaceBy_Godot_Node_System_Boolean_">Node.ReplaceBy(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetSceneInstanceLoadPlaceholder_System_Boolean_">Node.SetSceneInstanceLoadPlaceholder(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetSceneInstanceLoadPlaceholder">Node.GetSceneInstanceLoadPlaceholder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetViewport">Node.GetViewport()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_QueueFree">Node.QueueFree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RequestReady">Node.RequestReady()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetNetworkMaster_System_Int32_System_Boolean_">Node.SetNetworkMaster(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNetworkMaster">Node.GetNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsNetworkMaster">Node.IsNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetMultiplayer">Node.GetMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetCustomMultiplayer">Node.GetCustomMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetCustomMultiplayer_Godot_MultiplayerAPI_">Node.SetCustomMultiplayer(MultiplayerAPI)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RpcConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RsetConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Node.Rpc(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliable_System_String_System_Object___">Node.RpcUnreliable(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcId_System_Int32_System_String_System_Object___">Node.RpcId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliableId_System_Int32_System_String_System_Object___">Node.RpcUnreliableId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rset_System_String_System_Object_">Node.Rset(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetId_System_Int32_System_String_System_Object_">Node.RsetId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliable_System_String_System_Object_">Node.RsetUnreliable(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliableId_System_Int32_System_String_System_Object_">Node.RsetUnreliableId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_UpdateConfigurationWarning">Node.UpdateConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_EditorDescription">Node.EditorDescription</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ImportPath">Node._ImportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PauseMode">Node.PauseMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Name">Node.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Filename">Node.Filename</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Node.Owner</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Multiplayer">Node.Multiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CustomMultiplayer">Node.CustomMultiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ProcessPriority">Node.ProcessPriority</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_Timer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Timer : Node, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_Timer__ctor_" data-uid="Godot.Timer.#ctor*"></a>
+  <h4 id="Godot_Timer__ctor" data-uid="Godot.Timer.#ctor">Timer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timer()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_Timer_Autostart_" data-uid="Godot.Timer.Autostart*"></a>
+  <h4 id="Godot_Timer_Autostart" data-uid="Godot.Timer.Autostart">Autostart</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the timer will automatically start when entering the scene tree.</p>
+<p>Note: This property is automatically set to <code>false</code> after the timer enters the scene tree and starts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Autostart { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_OneShot_" data-uid="Godot.Timer.OneShot*"></a>
+  <h4 id="Godot_Timer_OneShot" data-uid="Godot.Timer.OneShot">OneShot</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the timer will stop when reaching 0. If <code>false</code>, it will restart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OneShot { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_Paused_" data-uid="Godot.Timer.Paused*"></a>
+  <h4 id="Godot_Timer_Paused" data-uid="Godot.Timer.Paused">Paused</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the timer is paused and will not process until it is unpaused again, even if <a class="xref" href="Godot.Timer.html#Godot_Timer_Start_System_Single_">Start(Single)</a> is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Paused { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_ProcessMode_" data-uid="Godot.Timer.ProcessMode*"></a>
+  <h4 id="Godot_Timer_ProcessMode" data-uid="Godot.Timer.ProcessMode">ProcessMode</h4>
+  <div class="markdown level1 summary"><p>Processing mode. See <a class="xref" href="Godot.Timer.TimerProcessMode.html">Timer.TimerProcessMode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timer.TimerProcessMode ProcessMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Timer.TimerProcessMode.html">Timer.TimerProcessMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_TimeLeft_" data-uid="Godot.Timer.TimeLeft*"></a>
+  <h4 id="Godot_Timer_TimeLeft" data-uid="Godot.Timer.TimeLeft">TimeLeft</h4>
+  <div class="markdown level1 summary"><p>The timer&apos;s remaining time in seconds. Returns 0 if the timer is inactive.</p>
+<p>Note: You cannot set this value. To change the timer&apos;s remaining time, use <a class="xref" href="Godot.Timer.html#Godot_Timer_Start_System_Single_">Start(Single)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float TimeLeft { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_WaitTime_" data-uid="Godot.Timer.WaitTime*"></a>
+  <h4 id="Godot_Timer_WaitTime" data-uid="Godot.Timer.WaitTime">WaitTime</h4>
+  <div class="markdown level1 summary"><p>The wait time in seconds.</p>
+<p>Note: Timers can only emit once per rendered frame at most (or once per physics frame if <a class="xref" href="Godot.Timer.html#Godot_Timer_ProcessMode">ProcessMode</a> is <a class="xref" href="Godot.Timer.TimerProcessMode.html#Godot_Timer_TimerProcessMode_Physics">Physics</a>). This means very low wait times (lower than 0.05 seconds) will behave in significantly different ways depending on the rendered framerate. For very low wait times, it is recommended to use a process loop in a script instead of using a Timer node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float WaitTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_Timer_GetTimeLeft_" data-uid="Godot.Timer.GetTimeLeft*"></a>
+  <h4 id="Godot_Timer_GetTimeLeft" data-uid="Godot.Timer.GetTimeLeft">GetTimeLeft()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetTimeLeft()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_GetTimerProcessMode_" data-uid="Godot.Timer.GetTimerProcessMode*"></a>
+  <h4 id="Godot_Timer_GetTimerProcessMode" data-uid="Godot.Timer.GetTimerProcessMode">GetTimerProcessMode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Timer.TimerProcessMode GetTimerProcessMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Timer.TimerProcessMode.html">Timer.TimerProcessMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_GetWaitTime_" data-uid="Godot.Timer.GetWaitTime*"></a>
+  <h4 id="Godot_Timer_GetWaitTime" data-uid="Godot.Timer.GetWaitTime">GetWaitTime()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetWaitTime()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_HasAutostart_" data-uid="Godot.Timer.HasAutostart*"></a>
+  <h4 id="Godot_Timer_HasAutostart" data-uid="Godot.Timer.HasAutostart">HasAutostart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasAutostart()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_IsOneShot_" data-uid="Godot.Timer.IsOneShot*"></a>
+  <h4 id="Godot_Timer_IsOneShot" data-uid="Godot.Timer.IsOneShot">IsOneShot()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOneShot()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_IsPaused_" data-uid="Godot.Timer.IsPaused*"></a>
+  <h4 id="Godot_Timer_IsPaused" data-uid="Godot.Timer.IsPaused">IsPaused()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaused()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_IsStopped_" data-uid="Godot.Timer.IsStopped*"></a>
+  <h4 id="Godot_Timer_IsStopped" data-uid="Godot.Timer.IsStopped">IsStopped()</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the timer is stopped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsStopped()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_SetAutostart_" data-uid="Godot.Timer.SetAutostart*"></a>
+  <h4 id="Godot_Timer_SetAutostart_System_Boolean_" data-uid="Godot.Timer.SetAutostart(System.Boolean)">SetAutostart(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAutostart(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_SetOneShot_" data-uid="Godot.Timer.SetOneShot*"></a>
+  <h4 id="Godot_Timer_SetOneShot_System_Boolean_" data-uid="Godot.Timer.SetOneShot(System.Boolean)">SetOneShot(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOneShot(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_SetPaused_" data-uid="Godot.Timer.SetPaused*"></a>
+  <h4 id="Godot_Timer_SetPaused_System_Boolean_" data-uid="Godot.Timer.SetPaused(System.Boolean)">SetPaused(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPaused(bool paused)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">paused</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_SetTimerProcessMode_" data-uid="Godot.Timer.SetTimerProcessMode*"></a>
+  <h4 id="Godot_Timer_SetTimerProcessMode_Godot_Timer_TimerProcessMode_" data-uid="Godot.Timer.SetTimerProcessMode(Godot.Timer.TimerProcessMode)">SetTimerProcessMode(Timer.TimerProcessMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTimerProcessMode(Timer.TimerProcessMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Timer.TimerProcessMode.html">Timer.TimerProcessMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_SetWaitTime_" data-uid="Godot.Timer.SetWaitTime*"></a>
+  <h4 id="Godot_Timer_SetWaitTime_System_Single_" data-uid="Godot.Timer.SetWaitTime(System.Single)">SetWaitTime(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetWaitTime(float timeSec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">timeSec</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_Start_" data-uid="Godot.Timer.Start*"></a>
+  <h4 id="Godot_Timer_Start_System_Single_" data-uid="Godot.Timer.Start(System.Single)">Start(Single)</h4>
+  <div class="markdown level1 summary"><p>Starts the timer. Sets <code>wait_time</code> to <code>time_sec</code> if <code>time_sec > 0</code>. This also resets the remaining time to <code>wait_time</code>.</p>
+<p>Note: This method will not resume a paused timer. See <a class="xref" href="Godot.Timer.html#Godot_Timer_Paused">Paused</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start(float timeSec = -1F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">timeSec</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_Timer_Stop_" data-uid="Godot.Timer.Stop*"></a>
+  <h4 id="Godot_Timer_Stop" data-uid="Godot.Timer.Stop">Stop()</h4>
+  <div class="markdown level1 summary"><p>Stops the timer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

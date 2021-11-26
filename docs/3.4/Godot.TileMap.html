@@ -1,0 +1,3466 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TileMap
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TileMap
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.TileMap">
+  
+  
+  <h1 id="Godot_TileMap" data-uid="Godot.TileMap" class="text-break">Class TileMap
+  </h1>
+  <div class="markdown level0 summary"><p>Node for 2D tile-based maps. Tilemaps use a <a class="xref" href="Godot.TileSet.html">TileSet</a> which contain a list of tiles (textures plus optional collision, navigation, and/or occluder shapes) which are used to create grid-based maps.</p>
+<p>When doing physics queries against the tilemap, the cell coordinates are encoded as <code>metadata</code> for each detected collision shape returned by methods such as <a class="xref" href="Godot.Physics2DDirectSpaceState.html#Godot_Physics2DDirectSpaceState_IntersectShape_Godot_Physics2DShapeQueryParameters_System_Int32_">IntersectShape(Physics2DShapeQueryParameters, Int32)</a>, <a class="xref" href="Godot.Physics2DDirectBodyState.html#Godot_Physics2DDirectBodyState_GetContactColliderShapeMetadata_System_Int32_">GetContactColliderShapeMetadata(Int32)</a>, etc.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Node.html">Node</a></div>
+    <div class="level3"><a class="xref" href="Godot.CanvasItem.html">CanvasItem</a></div>
+    <div class="level4"><a class="xref" href="Godot.Node2D.html">Node2D</a></div>
+    <div class="level5"><span class="xref">TileMap</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetPosition_Godot_Vector2_">Node2D.SetPosition(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetRotation_System_Single_">Node2D.SetRotation(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetRotationDegrees_System_Single_">Node2D.SetRotationDegrees(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetScale_Godot_Vector2_">Node2D.SetScale(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetPosition">Node2D.GetPosition()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetRotation">Node2D.GetRotation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetRotationDegrees">Node2D.GetRotationDegrees()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetScale">Node2D.GetScale()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_Rotate_System_Single_">Node2D.Rotate(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_MoveLocalX_System_Single_System_Boolean_">Node2D.MoveLocalX(Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_MoveLocalY_System_Single_System_Boolean_">Node2D.MoveLocalY(Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_Translate_Godot_Vector2_">Node2D.Translate(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GlobalTranslate_Godot_Vector2_">Node2D.GlobalTranslate(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_ApplyScale_Godot_Vector2_">Node2D.ApplyScale(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetGlobalPosition_Godot_Vector2_">Node2D.SetGlobalPosition(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetGlobalPosition">Node2D.GetGlobalPosition()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetGlobalRotation_System_Single_">Node2D.SetGlobalRotation(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetGlobalRotation">Node2D.GetGlobalRotation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetGlobalRotationDegrees_System_Single_">Node2D.SetGlobalRotationDegrees(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetGlobalRotationDegrees">Node2D.GetGlobalRotationDegrees()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetGlobalScale_Godot_Vector2_">Node2D.SetGlobalScale(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetGlobalScale">Node2D.GetGlobalScale()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetTransform_Godot_Transform2D_">Node2D.SetTransform(Transform2D)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetGlobalTransform_Godot_Transform2D_">Node2D.SetGlobalTransform(Transform2D)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_LookAt_Godot_Vector2_">Node2D.LookAt(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetAngleTo_Godot_Vector2_">Node2D.GetAngleTo(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_ToLocal_Godot_Vector2_">Node2D.ToLocal(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_ToGlobal_Godot_Vector2_">Node2D.ToGlobal(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetZIndex_System_Int32_">Node2D.SetZIndex(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetZIndex">Node2D.GetZIndex()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_SetZAsRelative_System_Boolean_">Node2D.SetZAsRelative(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_IsZRelative">Node2D.IsZRelative()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GetRelativeTransformToParent_Godot_Node_">Node2D.GetRelativeTransformToParent(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_Position">Node2D.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_Rotation">Node2D.Rotation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_RotationDegrees">Node2D.RotationDegrees</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_Scale">Node2D.Scale</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_Transform">Node2D.Transform</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GlobalPosition">Node2D.GlobalPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GlobalRotation">Node2D.GlobalRotation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GlobalRotationDegrees">Node2D.GlobalRotationDegrees</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GlobalScale">Node2D.GlobalScale</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GlobalTransform">Node2D.GlobalTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_ZIndex">Node2D.ZIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node2D.html#Godot_Node2D_ZAsRelative">Node2D.ZAsRelative</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_NotificationTransformChanged">CanvasItem.NotificationTransformChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_NotificationDraw">CanvasItem.NotificationDraw</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_NotificationVisibilityChanged">CanvasItem.NotificationVisibilityChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_NotificationEnterCanvas">CanvasItem.NotificationEnterCanvas</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_NotificationExitCanvas">CanvasItem.NotificationExitCanvas</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem__Draw">CanvasItem._Draw()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetCanvasItem">CanvasItem.GetCanvasItem()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetVisible_System_Boolean_">CanvasItem.SetVisible(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_IsVisible">CanvasItem.IsVisible()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_IsVisibleInTree">CanvasItem.IsVisibleInTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Show">CanvasItem.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Hide">CanvasItem.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Update">CanvasItem.Update()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetAsToplevel_System_Boolean_">CanvasItem.SetAsToplevel(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_IsSetAsToplevel">CanvasItem.IsSetAsToplevel()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetLightMask_System_Int32_">CanvasItem.SetLightMask(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetLightMask">CanvasItem.GetLightMask()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetModulate_Godot_Color_">CanvasItem.SetModulate(Color)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetModulate">CanvasItem.GetModulate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetSelfModulate_Godot_Color_">CanvasItem.SetSelfModulate(Color)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetSelfModulate">CanvasItem.GetSelfModulate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetDrawBehindParent_System_Boolean_">CanvasItem.SetDrawBehindParent(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_IsDrawBehindParentEnabled">CanvasItem.IsDrawBehindParentEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawLine_Godot_Vector2_Godot_Vector2_Godot_Color_System_Single_System_Boolean_">CanvasItem.DrawLine(Vector2, Vector2, Color, Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawPolyline_Godot_Vector2___Godot_Color_System_Single_System_Boolean_">CanvasItem.DrawPolyline(Vector2[], Color, Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawPolylineColors_Godot_Vector2___Godot_Color___System_Single_System_Boolean_">CanvasItem.DrawPolylineColors(Vector2[], Color[], Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawArc_Godot_Vector2_System_Single_System_Single_System_Single_System_Int32_Godot_Color_System_Single_System_Boolean_">CanvasItem.DrawArc(Vector2, Single, Single, Single, Int32, Color, Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawMultiline_Godot_Vector2___Godot_Color_System_Single_System_Boolean_">CanvasItem.DrawMultiline(Vector2[], Color, Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawMultilineColors_Godot_Vector2___Godot_Color___System_Single_System_Boolean_">CanvasItem.DrawMultilineColors(Vector2[], Color[], Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawRect_Godot_Rect2_Godot_Color_System_Boolean_System_Single_System_Boolean_">CanvasItem.DrawRect(Rect2, Color, Boolean, Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawCircle_Godot_Vector2_System_Single_Godot_Color_">CanvasItem.DrawCircle(Vector2, Single, Color)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawTexture_Godot_Texture_Godot_Vector2_System_Nullable_Godot_Color__Godot_Texture_">CanvasItem.DrawTexture(Texture, Vector2, Nullable&lt;Color&gt;, Texture)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawTextureRect_Godot_Texture_Godot_Rect2_System_Boolean_System_Nullable_Godot_Color__System_Boolean_Godot_Texture_">CanvasItem.DrawTextureRect(Texture, Rect2, Boolean, Nullable&lt;Color&gt;, Boolean, Texture)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawTextureRectRegion_Godot_Texture_Godot_Rect2_Godot_Rect2_System_Nullable_Godot_Color__System_Boolean_Godot_Texture_System_Boolean_">CanvasItem.DrawTextureRectRegion(Texture, Rect2, Rect2, Nullable&lt;Color&gt;, Boolean, Texture, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawStyleBox_Godot_StyleBox_Godot_Rect2_">CanvasItem.DrawStyleBox(StyleBox, Rect2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawPrimitive_Godot_Vector2___Godot_Color___Godot_Vector2___Godot_Texture_System_Single_Godot_Texture_">CanvasItem.DrawPrimitive(Vector2[], Color[], Vector2[], Texture, Single, Texture)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawPolygon_Godot_Vector2___Godot_Color___Godot_Vector2___Godot_Texture_Godot_Texture_System_Boolean_">CanvasItem.DrawPolygon(Vector2[], Color[], Vector2[], Texture, Texture, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawColoredPolygon_Godot_Vector2___Godot_Color_Godot_Vector2___Godot_Texture_Godot_Texture_System_Boolean_">CanvasItem.DrawColoredPolygon(Vector2[], Color, Vector2[], Texture, Texture, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawString_Godot_Font_Godot_Vector2_System_String_System_Nullable_Godot_Color__System_Int32_">CanvasItem.DrawString(Font, Vector2, String, Nullable&lt;Color&gt;, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawChar_Godot_Font_Godot_Vector2_System_String_System_String_System_Nullable_Godot_Color__">CanvasItem.DrawChar(Font, Vector2, String, String, Nullable&lt;Color&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawMesh_Godot_Mesh_Godot_Texture_Godot_Texture_System_Nullable_Godot_Transform2D__System_Nullable_Godot_Color__">CanvasItem.DrawMesh(Mesh, Texture, Texture, Nullable&lt;Transform2D&gt;, Nullable&lt;Color&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawMultimesh_Godot_MultiMesh_Godot_Texture_Godot_Texture_">CanvasItem.DrawMultimesh(MultiMesh, Texture, Texture)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawSetTransform_Godot_Vector2_System_Single_Godot_Vector2_">CanvasItem.DrawSetTransform(Vector2, Single, Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawSetTransformMatrix_Godot_Transform2D_">CanvasItem.DrawSetTransformMatrix(Transform2D)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetTransform">CanvasItem.GetTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetGlobalTransform">CanvasItem.GetGlobalTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetGlobalTransformWithCanvas">CanvasItem.GetGlobalTransformWithCanvas()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetViewportTransform">CanvasItem.GetViewportTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetViewportRect">CanvasItem.GetViewportRect()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetCanvasTransform">CanvasItem.GetCanvasTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetLocalMousePosition">CanvasItem.GetLocalMousePosition()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetGlobalMousePosition">CanvasItem.GetGlobalMousePosition()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetCanvas">CanvasItem.GetCanvas()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetWorld2d">CanvasItem.GetWorld2d()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetMaterial_Godot_Material_">CanvasItem.SetMaterial(Material)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetMaterial">CanvasItem.GetMaterial()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetUseParentMaterial_System_Boolean_">CanvasItem.SetUseParentMaterial(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetUseParentMaterial">CanvasItem.GetUseParentMaterial()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetNotifyLocalTransform_System_Boolean_">CanvasItem.SetNotifyLocalTransform(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_IsLocalTransformNotificationEnabled">CanvasItem.IsLocalTransformNotificationEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SetNotifyTransform_System_Boolean_">CanvasItem.SetNotifyTransform(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_IsTransformNotificationEnabled">CanvasItem.IsTransformNotificationEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_ForceUpdateTransform">CanvasItem.ForceUpdateTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_MakeCanvasPositionLocal_Godot_Vector2_">CanvasItem.MakeCanvasPositionLocal(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_MakeInputLocal_Godot_InputEvent_">CanvasItem.MakeInputLocal(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">CanvasItem.Visible</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Modulate">CanvasItem.Modulate</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_SelfModulate">CanvasItem.SelfModulate</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_ShowBehindParent">CanvasItem.ShowBehindParent</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_ShowOnTop">CanvasItem.ShowOnTop</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_LightMask">CanvasItem.LightMask</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Material">CanvasItem.Material</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_UseParentMaterial">CanvasItem.UseParentMaterial</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationEnterTree">Node.NotificationEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationExitTree">Node.NotificationExitTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationMovedInParent">Node.NotificationMovedInParent</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationReady">Node.NotificationReady</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPaused">Node.NotificationPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnpaused">Node.NotificationUnpaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPhysicsProcess">Node.NotificationPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationProcess">Node.NotificationProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationParented">Node.NotificationParented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnparented">Node.NotificationUnparented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInstanced">Node.NotificationInstanced</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragBegin">Node.NotificationDragBegin</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragEnd">Node.NotificationDragEnd</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPathChanged">Node.NotificationPathChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalProcess">Node.NotificationInternalProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalPhysicsProcess">Node.NotificationInternalPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPostEnterTree">Node.NotificationPostEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseEnter">Node.NotificationWmMouseEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseExit">Node.NotificationWmMouseExit</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusIn">Node.NotificationWmFocusIn</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusOut">Node.NotificationWmFocusOut</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmQuitRequest">Node.NotificationWmQuitRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmGoBackRequest">Node.NotificationWmGoBackRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmUnfocusRequest">Node.NotificationWmUnfocusRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsMemoryWarning">Node.NotificationOsMemoryWarning</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationTranslationChanged">Node.NotificationTranslationChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmAbout">Node.NotificationWmAbout</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationCrash">Node.NotificationCrash</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsImeUpdate">Node.NotificationOsImeUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppResumed">Node.NotificationAppResumed</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppPaused">Node.NotificationAppPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode__1_Godot_NodePath_">Node.GetNode&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull__1_Godot_NodePath_">Node.GetNodeOrNull&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild__1_System_Int32_">Node.GetChild&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildOrNull__1_System_Int32_">Node.GetChildOrNull&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner__1">Node.GetOwner&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwnerOrNull__1">Node.GetOwnerOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent__1">Node.GetParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParentOrNull__1">Node.GetParentOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">Node._EnterTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ExitTree">Node._ExitTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__GetConfigurationWarning">Node._GetConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">Node._Input(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">Node._PhysicsProcess(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">Node._Process(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Ready">Node._Ready()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">Node._UnhandledInput(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledKeyInput_Godot_InputEventKey_">Node._UnhandledKeyInput(InputEventKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChildBelowNode_Godot_Node_Godot_Node_System_Boolean_">Node.AddChildBelowNode(Node, Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetName_System_String_">Node.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetName">Node.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">Node.AddChild(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveChild_Godot_Node_">Node.RemoveChild(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildCount">Node.GetChildCount()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildren">Node.GetChildren()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild_System_Int32_">Node.GetChild(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNode_Godot_NodePath_">Node.HasNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">Node.GetNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull_Godot_NodePath_">Node.GetNodeOrNull(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent">Node.GetParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindNode_System_String_System_Boolean_System_Boolean_">Node.FindNode(String, Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindParent_System_String_">Node.FindParent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNodeAndResource_Godot_NodePath_">Node.HasNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeAndResource_Godot_NodePath_">Node.GetNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">Node.IsInsideTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsAParentOf_Godot_Node_">Node.IsAParentOf(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsGreaterThan_Godot_Node_">Node.IsGreaterThan(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPath">Node.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPathTo_Godot_Node_">Node.GetPathTo(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddToGroup_System_String_System_Boolean_">Node.AddToGroup(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveFromGroup_System_String_">Node.RemoveFromGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInGroup_System_String_">Node.IsInGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_MoveChild_Godot_Node_System_Int32_">Node.MoveChild(Node, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetGroups">Node.GetGroups()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Raise">Node.Raise()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetOwner_Godot_Node_">Node.SetOwner(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner">Node.GetOwner()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveAndSkip">Node.RemoveAndSkip()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetIndex">Node.GetIndex()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTree">Node.PrintTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTreePretty">Node.PrintTreePretty()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetFilename_System_String_">Node.SetFilename(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetFilename">Node.GetFilename()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateNotification_System_Int32_">Node.PropagateNotification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateCall_System_String_Godot_Collections_Array_System_Boolean_">Node.PropagateCall(String, Array, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">Node.SetPhysicsProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPhysicsProcessDeltaTime">Node.GetPhysicsProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessing">Node.IsPhysicsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessDeltaTime">Node.GetProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">Node.SetProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessPriority_System_Int32_">Node.SetProcessPriority(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessPriority">Node.GetProcessPriority()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessing">Node.IsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInput_System_Boolean_">Node.SetProcessInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInput">Node.IsProcessingInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledInput_System_Boolean_">Node.SetProcessUnhandledInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledInput">Node.IsProcessingUnhandledInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledKeyInput_System_Boolean_">Node.SetProcessUnhandledKeyInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledKeyInput">Node.IsProcessingUnhandledKeyInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPauseMode_Godot_Node_PauseModeEnum_">Node.SetPauseMode(Node.PauseModeEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPauseMode">Node.GetPauseMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CanProcess">Node.CanProcess()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintStrayNodes">Node.PrintStrayNodes()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPositionInParent">Node.GetPositionInParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetDisplayFolded_System_Boolean_">Node.SetDisplayFolded(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsDisplayedFolded">Node.IsDisplayedFolded()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInternal_System_Boolean_">Node.SetProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInternal">Node.IsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcessInternal_System_Boolean_">Node.SetPhysicsProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessingInternal">Node.IsPhysicsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetTree">Node.GetTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Duplicate_System_Int32_">Node.Duplicate(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ReplaceBy_Godot_Node_System_Boolean_">Node.ReplaceBy(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetSceneInstanceLoadPlaceholder_System_Boolean_">Node.SetSceneInstanceLoadPlaceholder(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetSceneInstanceLoadPlaceholder">Node.GetSceneInstanceLoadPlaceholder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetViewport">Node.GetViewport()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_QueueFree">Node.QueueFree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RequestReady">Node.RequestReady()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetNetworkMaster_System_Int32_System_Boolean_">Node.SetNetworkMaster(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNetworkMaster">Node.GetNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsNetworkMaster">Node.IsNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetMultiplayer">Node.GetMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetCustomMultiplayer">Node.GetCustomMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetCustomMultiplayer_Godot_MultiplayerAPI_">Node.SetCustomMultiplayer(MultiplayerAPI)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RpcConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RsetConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Node.Rpc(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliable_System_String_System_Object___">Node.RpcUnreliable(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcId_System_Int32_System_String_System_Object___">Node.RpcId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliableId_System_Int32_System_String_System_Object___">Node.RpcUnreliableId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rset_System_String_System_Object_">Node.Rset(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetId_System_Int32_System_String_System_Object_">Node.RsetId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliable_System_String_System_Object_">Node.RsetUnreliable(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliableId_System_Int32_System_String_System_Object_">Node.RsetUnreliableId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_UpdateConfigurationWarning">Node.UpdateConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_EditorDescription">Node.EditorDescription</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ImportPath">Node._ImportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PauseMode">Node.PauseMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Name">Node.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Filename">Node.Filename</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Node.Owner</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Multiplayer">Node.Multiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CustomMultiplayer">Node.CustomMultiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ProcessPriority">Node.ProcessPriority</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_TileMap_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TileMap : Node2D, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_TileMap__ctor_" data-uid="Godot.TileMap.#ctor*"></a>
+  <h4 id="Godot_TileMap__ctor" data-uid="Godot.TileMap.#ctor">TileMap()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileMap()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Godot_TileMap_InvalidCell" data-uid="Godot.TileMap.InvalidCell">InvalidCell</h4>
+  <div class="markdown level1 summary"><p>Returned when a cell doesn&apos;t exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int InvalidCell = -1</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_TileMap_CellClipUv_" data-uid="Godot.TileMap.CellClipUv*"></a>
+  <h4 id="Godot_TileMap_CellClipUv" data-uid="Godot.TileMap.CellClipUv">CellClipUv</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the cell&apos;s UVs will be clipped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CellClipUv { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CellCustomTransform_" data-uid="Godot.TileMap.CellCustomTransform*"></a>
+  <h4 id="Godot_TileMap_CellCustomTransform" data-uid="Godot.TileMap.CellCustomTransform">CellCustomTransform</h4>
+  <div class="markdown level1 summary"><p>The custom <a class="xref" href="Godot.Transform2D.html">Transform2D</a> to be applied to the TileMap&apos;s cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform2D CellCustomTransform { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CellHalfOffset_" data-uid="Godot.TileMap.CellHalfOffset*"></a>
+  <h4 id="Godot_TileMap_CellHalfOffset" data-uid="Godot.TileMap.CellHalfOffset">CellHalfOffset</h4>
+  <div class="markdown level1 summary"><p>Amount to offset alternating tiles. See <a class="xref" href="Godot.TileMap.HalfOffset.html">TileMap.HalfOffset</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileMap.HalfOffset CellHalfOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileMap.HalfOffset.html">TileMap.HalfOffset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CellQuadrantSize_" data-uid="Godot.TileMap.CellQuadrantSize*"></a>
+  <h4 id="Godot_TileMap_CellQuadrantSize" data-uid="Godot.TileMap.CellQuadrantSize">CellQuadrantSize</h4>
+  <div class="markdown level1 summary"><p>The TileMap&apos;s quadrant size. Optimizes drawing by batching, using chunks of this size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CellQuadrantSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CellSize_" data-uid="Godot.TileMap.CellSize*"></a>
+  <h4 id="Godot_TileMap_CellSize" data-uid="Godot.TileMap.CellSize">CellSize</h4>
+  <div class="markdown level1 summary"><p>The TileMap&apos;s cell size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 CellSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CellTileOrigin_" data-uid="Godot.TileMap.CellTileOrigin*"></a>
+  <h4 id="Godot_TileMap_CellTileOrigin" data-uid="Godot.TileMap.CellTileOrigin">CellTileOrigin</h4>
+  <div class="markdown level1 summary"><p>Position for tile origin. See <a class="xref" href="Godot.TileMap.TileOrigin.html">TileMap.TileOrigin</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileMap.TileOrigin CellTileOrigin { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileMap.TileOrigin.html">TileMap.TileOrigin</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CellYSort_" data-uid="Godot.TileMap.CellYSort*"></a>
+  <h4 id="Godot_TileMap_CellYSort" data-uid="Godot.TileMap.CellYSort">CellYSort</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the TileMap&apos;s direct children will be drawn in order of their Y coordinate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CellYSort { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CenteredTextures_" data-uid="Godot.TileMap.CenteredTextures*"></a>
+  <h4 id="Godot_TileMap_CenteredTextures" data-uid="Godot.TileMap.CenteredTextures">CenteredTextures</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the textures will be centered in the middle of each tile. This is useful for certain isometric or top-down modes when textures are made larger or smaller than the tiles (e.g. to avoid flickering on tile edges). The offset is still applied, but from the center of the tile. If used, <a class="xref" href="Godot.TileMap.html#Godot_TileMap_CompatibilityMode">CompatibilityMode</a> is ignored.</p>
+<p>If <code>false</code>, the texture position start in the top-left corner unless <a class="xref" href="Godot.TileMap.html#Godot_TileMap_CompatibilityMode">CompatibilityMode</a> is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CenteredTextures { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CollisionBounce_" data-uid="Godot.TileMap.CollisionBounce*"></a>
+  <h4 id="Godot_TileMap_CollisionBounce" data-uid="Godot.TileMap.CollisionBounce">CollisionBounce</h4>
+  <div class="markdown level1 summary"><p>Bounce value for static body collisions (see <code>collision_use_kinematic</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CollisionBounce { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CollisionFriction_" data-uid="Godot.TileMap.CollisionFriction*"></a>
+  <h4 id="Godot_TileMap_CollisionFriction" data-uid="Godot.TileMap.CollisionFriction">CollisionFriction</h4>
+  <div class="markdown level1 summary"><p>Friction value for static body collisions (see <code>collision_use_kinematic</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CollisionFriction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CollisionLayer_" data-uid="Godot.TileMap.CollisionLayer*"></a>
+  <h4 id="Godot_TileMap_CollisionLayer" data-uid="Godot.TileMap.CollisionLayer">CollisionLayer</h4>
+  <div class="markdown level1 summary"><p>The collision layer(s) for all colliders in the TileMap. See <a href="https://docs.godotengine.org/en/3.4/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint CollisionLayer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CollisionMask_" data-uid="Godot.TileMap.CollisionMask*"></a>
+  <h4 id="Godot_TileMap_CollisionMask" data-uid="Godot.TileMap.CollisionMask">CollisionMask</h4>
+  <div class="markdown level1 summary"><p>The collision mask(s) for all colliders in the TileMap. See <a href="https://docs.godotengine.org/en/3.4/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint CollisionMask { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CollisionUseKinematic_" data-uid="Godot.TileMap.CollisionUseKinematic*"></a>
+  <h4 id="Godot_TileMap_CollisionUseKinematic" data-uid="Godot.TileMap.CollisionUseKinematic">CollisionUseKinematic</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, TileMap collisions will be handled as a kinematic body. If <code>false</code>, collisions will be handled as static body.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CollisionUseKinematic { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CollisionUseParent_" data-uid="Godot.TileMap.CollisionUseParent*"></a>
+  <h4 id="Godot_TileMap_CollisionUseParent" data-uid="Godot.TileMap.CollisionUseParent">CollisionUseParent</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this tilemap&apos;s collision shape will be added to the collision shape of the parent. The parent has to be a <a class="xref" href="Godot.CollisionObject2D.html">CollisionObject2D</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CollisionUseParent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_CompatibilityMode_" data-uid="Godot.TileMap.CompatibilityMode*"></a>
+  <h4 id="Godot_TileMap_CompatibilityMode" data-uid="Godot.TileMap.CompatibilityMode">CompatibilityMode</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the compatibility with the tilemaps made in Godot 3.1 or earlier is maintained (textures move when the tile origin changes and rotate if the texture size is not homogeneous). This mode presents problems when doing <code>flip_h</code>, <code>flip_v</code> and <code>transpose</code> tile operations on non-homogeneous isometric tiles (e.g. 2:1), in which the texture could not coincide with the collision, thus it is not recommended for isometric or non-square tiles.</p>
+<p>If <code>false</code>, the textures do not move when doing <code>flip_h</code>, <code>flip_v</code> operations if no offset is used, nor when changing the tile origin.</p>
+<p>The compatibility mode doesn&apos;t work with the <a class="xref" href="Godot.TileMap.html#Godot_TileMap_CenteredTextures">CenteredTextures</a> option, because displacing textures with the <a class="xref" href="Godot.TileMap.html#Godot_TileMap_CellTileOrigin">CellTileOrigin</a> option or in irregular tiles is not relevant when centering those textures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CompatibilityMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_Mode_" data-uid="Godot.TileMap.Mode*"></a>
+  <h4 id="Godot_TileMap_Mode" data-uid="Godot.TileMap.Mode">Mode</h4>
+  <div class="markdown level1 summary"><p>The TileMap orientation mode. See <a class="xref" href="Godot.TileMap.ModeEnum.html">TileMap.ModeEnum</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileMap.ModeEnum Mode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileMap.ModeEnum.html">TileMap.ModeEnum</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_OccluderLightMask_" data-uid="Godot.TileMap.OccluderLightMask*"></a>
+  <h4 id="Godot_TileMap_OccluderLightMask" data-uid="Godot.TileMap.OccluderLightMask">OccluderLightMask</h4>
+  <div class="markdown level1 summary"><p>The light mask assigned to all light occluders in the TileMap. The TileSet&apos;s light occluders will cast shadows only from Light2D(s) that have the same light mask(s).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int OccluderLightMask { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_ShowCollision_" data-uid="Godot.TileMap.ShowCollision*"></a>
+  <h4 id="Godot_TileMap_ShowCollision" data-uid="Godot.TileMap.ShowCollision">ShowCollision</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, collision shapes are visible in the editor. Doesn&apos;t affect collision shapes visibility at runtime. To show collision shapes at runtime, enable Visible Collision Shapes in the Debug menu instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowCollision { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_TileSet_" data-uid="Godot.TileMap.TileSet*"></a>
+  <h4 id="Godot_TileMap_TileSet" data-uid="Godot.TileMap.TileSet">TileSet</h4>
+  <div class="markdown level1 summary"><p>The assigned <a class="xref" href="Godot.TileSet.html">TileSet</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileSet TileSet { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileSet.html">TileSet</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_TileMap_Clear_" data-uid="Godot.TileMap.Clear*"></a>
+  <h4 id="Godot_TileMap_Clear" data-uid="Godot.TileMap.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Clears all cells.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_TileMap_FixInvalidTiles_" data-uid="Godot.TileMap.FixInvalidTiles*"></a>
+  <h4 id="Godot_TileMap_FixInvalidTiles" data-uid="Godot.TileMap.FixInvalidTiles">FixInvalidTiles()</h4>
+  <div class="markdown level1 summary"><p>Clears cells that do not exist in the tileset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FixInvalidTiles()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_TileMap_GetCell_" data-uid="Godot.TileMap.GetCell*"></a>
+  <h4 id="Godot_TileMap_GetCell_System_Int32_System_Int32_" data-uid="Godot.TileMap.GetCell(System.Int32,System.Int32)">GetCell(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns the tile index of the given cell. If no tile exists in the cell, returns <a class="xref" href="Godot.TileMap.html#Godot_TileMap_InvalidCell">InvalidCell</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetCell(int x, int y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCellAutotileCoord_" data-uid="Godot.TileMap.GetCellAutotileCoord*"></a>
+  <h4 id="Godot_TileMap_GetCellAutotileCoord_System_Int32_System_Int32_" data-uid="Godot.TileMap.GetCellAutotileCoord(System.Int32,System.Int32)">GetCellAutotileCoord(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns the coordinate (subtile column and row) of the autotile variation in the tileset. Returns a zero vector if the cell doesn&apos;t have autotiling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 GetCellAutotileCoord(int x, int y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCellSize_" data-uid="Godot.TileMap.GetCellSize*"></a>
+  <h4 id="Godot_TileMap_GetCellSize" data-uid="Godot.TileMap.GetCellSize">GetCellSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 GetCellSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCellv_" data-uid="Godot.TileMap.GetCellv*"></a>
+  <h4 id="Godot_TileMap_GetCellv_Godot_Vector2_" data-uid="Godot.TileMap.GetCellv(Godot.Vector2)">GetCellv(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Returns the tile index of the cell given by a Vector2. If no tile exists in the cell, returns <a class="xref" href="Godot.TileMap.html#Godot_TileMap_InvalidCell">InvalidCell</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetCellv(Vector2 position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetClipUv_" data-uid="Godot.TileMap.GetClipUv*"></a>
+  <h4 id="Godot_TileMap_GetClipUv" data-uid="Godot.TileMap.GetClipUv">GetClipUv()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetClipUv()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCollisionBounce_" data-uid="Godot.TileMap.GetCollisionBounce*"></a>
+  <h4 id="Godot_TileMap_GetCollisionBounce" data-uid="Godot.TileMap.GetCollisionBounce">GetCollisionBounce()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetCollisionBounce()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCollisionFriction_" data-uid="Godot.TileMap.GetCollisionFriction*"></a>
+  <h4 id="Godot_TileMap_GetCollisionFriction" data-uid="Godot.TileMap.GetCollisionFriction">GetCollisionFriction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetCollisionFriction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCollisionLayer_" data-uid="Godot.TileMap.GetCollisionLayer*"></a>
+  <h4 id="Godot_TileMap_GetCollisionLayer" data-uid="Godot.TileMap.GetCollisionLayer">GetCollisionLayer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint GetCollisionLayer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCollisionLayerBit_" data-uid="Godot.TileMap.GetCollisionLayerBit*"></a>
+  <h4 id="Godot_TileMap_GetCollisionLayerBit_System_Int32_" data-uid="Godot.TileMap.GetCollisionLayerBit(System.Int32)">GetCollisionLayerBit(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given collision layer bit is set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetCollisionLayerBit(int bit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCollisionMask_" data-uid="Godot.TileMap.GetCollisionMask*"></a>
+  <h4 id="Godot_TileMap_GetCollisionMask" data-uid="Godot.TileMap.GetCollisionMask">GetCollisionMask()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint GetCollisionMask()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCollisionMaskBit_" data-uid="Godot.TileMap.GetCollisionMaskBit*"></a>
+  <h4 id="Godot_TileMap_GetCollisionMaskBit_System_Int32_" data-uid="Godot.TileMap.GetCollisionMaskBit(System.Int32)">GetCollisionMaskBit(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given collision mask bit is set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetCollisionMaskBit(int bit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCollisionUseKinematic_" data-uid="Godot.TileMap.GetCollisionUseKinematic*"></a>
+  <h4 id="Godot_TileMap_GetCollisionUseKinematic" data-uid="Godot.TileMap.GetCollisionUseKinematic">GetCollisionUseKinematic()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetCollisionUseKinematic()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCollisionUseParent_" data-uid="Godot.TileMap.GetCollisionUseParent*"></a>
+  <h4 id="Godot_TileMap_GetCollisionUseParent" data-uid="Godot.TileMap.GetCollisionUseParent">GetCollisionUseParent()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetCollisionUseParent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetCustomTransform_" data-uid="Godot.TileMap.GetCustomTransform*"></a>
+  <h4 id="Godot_TileMap_GetCustomTransform" data-uid="Godot.TileMap.GetCustomTransform">GetCustomTransform()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform2D GetCustomTransform()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetHalfOffset_" data-uid="Godot.TileMap.GetHalfOffset*"></a>
+  <h4 id="Godot_TileMap_GetHalfOffset" data-uid="Godot.TileMap.GetHalfOffset">GetHalfOffset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileMap.HalfOffset GetHalfOffset()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileMap.HalfOffset.html">TileMap.HalfOffset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetMode_" data-uid="Godot.TileMap.GetMode*"></a>
+  <h4 id="Godot_TileMap_GetMode" data-uid="Godot.TileMap.GetMode">GetMode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileMap.ModeEnum GetMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileMap.ModeEnum.html">TileMap.ModeEnum</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetOccluderLightMask_" data-uid="Godot.TileMap.GetOccluderLightMask*"></a>
+  <h4 id="Godot_TileMap_GetOccluderLightMask" data-uid="Godot.TileMap.GetOccluderLightMask">GetOccluderLightMask()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetOccluderLightMask()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetQuadrantSize_" data-uid="Godot.TileMap.GetQuadrantSize*"></a>
+  <h4 id="Godot_TileMap_GetQuadrantSize" data-uid="Godot.TileMap.GetQuadrantSize">GetQuadrantSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetQuadrantSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetTileOrigin_" data-uid="Godot.TileMap.GetTileOrigin*"></a>
+  <h4 id="Godot_TileMap_GetTileOrigin" data-uid="Godot.TileMap.GetTileOrigin">GetTileOrigin()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileMap.TileOrigin GetTileOrigin()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileMap.TileOrigin.html">TileMap.TileOrigin</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetTileset_" data-uid="Godot.TileMap.GetTileset*"></a>
+  <h4 id="Godot_TileMap_GetTileset" data-uid="Godot.TileMap.GetTileset">GetTileset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TileSet GetTileset()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileSet.html">TileSet</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetUsedCells_" data-uid="Godot.TileMap.GetUsedCells*"></a>
+  <h4 id="Godot_TileMap_GetUsedCells" data-uid="Godot.TileMap.GetUsedCells">GetUsedCells()</h4>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.Vector2.html">Vector2</a> array with the positions of all cells containing a tile from the tileset (i.e. a tile index different from <code>-1</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Array GetUsedCells()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetUsedCellsById_" data-uid="Godot.TileMap.GetUsedCellsById*"></a>
+  <h4 id="Godot_TileMap_GetUsedCellsById_System_Int32_" data-uid="Godot.TileMap.GetUsedCellsById(System.Int32)">GetUsedCellsById(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns an array of all cells with the given tile index specified in <code>id</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Array GetUsedCellsById(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_GetUsedRect_" data-uid="Godot.TileMap.GetUsedRect*"></a>
+  <h4 id="Godot_TileMap_GetUsedRect" data-uid="Godot.TileMap.GetUsedRect">GetUsedRect()</h4>
+  <div class="markdown level1 summary"><p>Returns a rectangle enclosing the used (non-empty) tiles of the map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect2 GetUsedRect()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Rect2.html">Rect2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_IsCellTransposed_" data-uid="Godot.TileMap.IsCellTransposed*"></a>
+  <h4 id="Godot_TileMap_IsCellTransposed_System_Int32_System_Int32_" data-uid="Godot.TileMap.IsCellTransposed(System.Int32,System.Int32)">IsCellTransposed(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given cell is transposed, i.e. the X and Y axes are swapped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCellTransposed(int x, int y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_IsCellXFlipped_" data-uid="Godot.TileMap.IsCellXFlipped*"></a>
+  <h4 id="Godot_TileMap_IsCellXFlipped_System_Int32_System_Int32_" data-uid="Godot.TileMap.IsCellXFlipped(System.Int32,System.Int32)">IsCellXFlipped(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given cell is flipped in the X axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCellXFlipped(int x, int y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_IsCellYFlipped_" data-uid="Godot.TileMap.IsCellYFlipped*"></a>
+  <h4 id="Godot_TileMap_IsCellYFlipped_System_Int32_System_Int32_" data-uid="Godot.TileMap.IsCellYFlipped(System.Int32,System.Int32)">IsCellYFlipped(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given cell is flipped in the Y axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCellYFlipped(int x, int y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_IsCenteredTexturesEnabled_" data-uid="Godot.TileMap.IsCenteredTexturesEnabled*"></a>
+  <h4 id="Godot_TileMap_IsCenteredTexturesEnabled" data-uid="Godot.TileMap.IsCenteredTexturesEnabled">IsCenteredTexturesEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCenteredTexturesEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_IsCompatibilityModeEnabled_" data-uid="Godot.TileMap.IsCompatibilityModeEnabled*"></a>
+  <h4 id="Godot_TileMap_IsCompatibilityModeEnabled" data-uid="Godot.TileMap.IsCompatibilityModeEnabled">IsCompatibilityModeEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCompatibilityModeEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_IsShowCollisionEnabled_" data-uid="Godot.TileMap.IsShowCollisionEnabled*"></a>
+  <h4 id="Godot_TileMap_IsShowCollisionEnabled" data-uid="Godot.TileMap.IsShowCollisionEnabled">IsShowCollisionEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsShowCollisionEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_IsYSortModeEnabled_" data-uid="Godot.TileMap.IsYSortModeEnabled*"></a>
+  <h4 id="Godot_TileMap_IsYSortModeEnabled" data-uid="Godot.TileMap.IsYSortModeEnabled">IsYSortModeEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsYSortModeEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_MapToWorld_" data-uid="Godot.TileMap.MapToWorld*"></a>
+  <h4 id="Godot_TileMap_MapToWorld_Godot_Vector2_System_Boolean_" data-uid="Godot.TileMap.MapToWorld(Godot.Vector2,System.Boolean)">MapToWorld(Vector2, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns the local position of the top left corner of the cell corresponding to the given tilemap (grid-based) coordinates.</p>
+<p>To get the global position, use <a class="xref" href="Godot.Node2D.html#Godot_Node2D_ToGlobal_Godot_Vector2_">ToGlobal(Vector2)</a>:</p>
+<p><pre><code>var local_position = my_tilemap.map_to_world(map_position)
+var global_position = my_tilemap.to_global(local_position)</code></pre></p>
+<p>Optionally, the tilemap&apos;s half offset can be ignored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 MapToWorld(Vector2 mapPosition, bool ignoreHalfOfs = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">mapPosition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">ignoreHalfOfs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCell_" data-uid="Godot.TileMap.SetCell*"></a>
+  <h4 id="Godot_TileMap_SetCell_System_Int32_System_Int32_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Nullable_Godot_Vector2__" data-uid="Godot.TileMap.SetCell(System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Nullable{Godot.Vector2})">SetCell(Int32, Int32, Int32, Boolean, Boolean, Boolean, Nullable&lt;Vector2&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets the tile index for the cell given by a Vector2.</p>
+<p>An index of <code>-1</code> clears the cell.</p>
+<p>Optionally, the tile can also be flipped, transposed, or given autotile coordinates. The autotile coordinate refers to the column and row of the subtile.</p>
+<p>Note: Data such as navigation polygons and collision shapes are not immediately updated for performance reasons.</p>
+<p>If you need these to be immediately updated, you can call <a class="xref" href="Godot.TileMap.html#Godot_TileMap_UpdateDirtyQuadrants">UpdateDirtyQuadrants()</a>.</p>
+<p>Overriding this method also overrides it internally, allowing custom logic to be implemented when tiles are placed/removed:</p>
+<p><pre><code>func set_cell(x, y, tile, flip_x=false, flip_y=false, transpose=false, autotile_coord=Vector2()):
+    # Write your custom logic here.
+    # To call the default method:
+    .set_cell(x, y, tile, flip_x, flip_y, transpose, autotile_coord)</code></pre></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCell(int x, int y, int tile, bool flipX = false, bool flipY = false, bool transpose = false, Nullable&lt;Vector2&gt; autotileCoord = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">tile</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">flipX</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">flipY</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">transpose</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
+        <td><span class="parametername">autotileCoord</span></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCellSize_" data-uid="Godot.TileMap.SetCellSize*"></a>
+  <h4 id="Godot_TileMap_SetCellSize_Godot_Vector2_" data-uid="Godot.TileMap.SetCellSize(Godot.Vector2)">SetCellSize(Vector2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCellSize(Vector2 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCellv_" data-uid="Godot.TileMap.SetCellv*"></a>
+  <h4 id="Godot_TileMap_SetCellv_Godot_Vector2_System_Int32_System_Boolean_System_Boolean_System_Boolean_" data-uid="Godot.TileMap.SetCellv(Godot.Vector2,System.Int32,System.Boolean,System.Boolean,System.Boolean)">SetCellv(Vector2, Int32, Boolean, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the tile index for the given cell.</p>
+<p>An index of <code>-1</code> clears the cell.</p>
+<p>Optionally, the tile can also be flipped or transposed.</p>
+<p>Note: Data such as navigation polygons and collision shapes are not immediately updated for performance reasons.</p>
+<p>If you need these to be immediately updated, you can call <a class="xref" href="Godot.TileMap.html#Godot_TileMap_UpdateDirtyQuadrants">UpdateDirtyQuadrants()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCellv(Vector2 position, int tile, bool flipX = false, bool flipY = false, bool transpose = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">tile</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">flipX</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">flipY</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">transpose</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCenteredTextures_" data-uid="Godot.TileMap.SetCenteredTextures*"></a>
+  <h4 id="Godot_TileMap_SetCenteredTextures_System_Boolean_" data-uid="Godot.TileMap.SetCenteredTextures(System.Boolean)">SetCenteredTextures(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCenteredTextures(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetClipUv_" data-uid="Godot.TileMap.SetClipUv*"></a>
+  <h4 id="Godot_TileMap_SetClipUv_System_Boolean_" data-uid="Godot.TileMap.SetClipUv(System.Boolean)">SetClipUv(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetClipUv(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCollisionBounce_" data-uid="Godot.TileMap.SetCollisionBounce*"></a>
+  <h4 id="Godot_TileMap_SetCollisionBounce_System_Single_" data-uid="Godot.TileMap.SetCollisionBounce(System.Single)">SetCollisionBounce(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionBounce(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCollisionFriction_" data-uid="Godot.TileMap.SetCollisionFriction*"></a>
+  <h4 id="Godot_TileMap_SetCollisionFriction_System_Single_" data-uid="Godot.TileMap.SetCollisionFriction(System.Single)">SetCollisionFriction(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionFriction(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCollisionLayer_" data-uid="Godot.TileMap.SetCollisionLayer*"></a>
+  <h4 id="Godot_TileMap_SetCollisionLayer_System_UInt32_" data-uid="Godot.TileMap.SetCollisionLayer(System.UInt32)">SetCollisionLayer(UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionLayer(uint layer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">layer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCollisionLayerBit_" data-uid="Godot.TileMap.SetCollisionLayerBit*"></a>
+  <h4 id="Godot_TileMap_SetCollisionLayerBit_System_Int32_System_Boolean_" data-uid="Godot.TileMap.SetCollisionLayerBit(System.Int32,System.Boolean)">SetCollisionLayerBit(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the given collision layer bit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionLayerBit(int bit, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCollisionMask_" data-uid="Godot.TileMap.SetCollisionMask*"></a>
+  <h4 id="Godot_TileMap_SetCollisionMask_System_UInt32_" data-uid="Godot.TileMap.SetCollisionMask(System.UInt32)">SetCollisionMask(UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionMask(uint mask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCollisionMaskBit_" data-uid="Godot.TileMap.SetCollisionMaskBit*"></a>
+  <h4 id="Godot_TileMap_SetCollisionMaskBit_System_Int32_System_Boolean_" data-uid="Godot.TileMap.SetCollisionMaskBit(System.Int32,System.Boolean)">SetCollisionMaskBit(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the given collision mask bit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionMaskBit(int bit, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCollisionUseKinematic_" data-uid="Godot.TileMap.SetCollisionUseKinematic*"></a>
+  <h4 id="Godot_TileMap_SetCollisionUseKinematic_System_Boolean_" data-uid="Godot.TileMap.SetCollisionUseKinematic(System.Boolean)">SetCollisionUseKinematic(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionUseKinematic(bool useKinematic)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">useKinematic</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCollisionUseParent_" data-uid="Godot.TileMap.SetCollisionUseParent*"></a>
+  <h4 id="Godot_TileMap_SetCollisionUseParent_System_Boolean_" data-uid="Godot.TileMap.SetCollisionUseParent(System.Boolean)">SetCollisionUseParent(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionUseParent(bool useParent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">useParent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCompatibilityMode_" data-uid="Godot.TileMap.SetCompatibilityMode*"></a>
+  <h4 id="Godot_TileMap_SetCompatibilityMode_System_Boolean_" data-uid="Godot.TileMap.SetCompatibilityMode(System.Boolean)">SetCompatibilityMode(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCompatibilityMode(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetCustomTransform_" data-uid="Godot.TileMap.SetCustomTransform*"></a>
+  <h4 id="Godot_TileMap_SetCustomTransform_Godot_Transform2D_" data-uid="Godot.TileMap.SetCustomTransform(Godot.Transform2D)">SetCustomTransform(Transform2D)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCustomTransform(Transform2D customTransform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
+        <td><span class="parametername">customTransform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetHalfOffset_" data-uid="Godot.TileMap.SetHalfOffset*"></a>
+  <h4 id="Godot_TileMap_SetHalfOffset_Godot_TileMap_HalfOffset_" data-uid="Godot.TileMap.SetHalfOffset(Godot.TileMap.HalfOffset)">SetHalfOffset(TileMap.HalfOffset)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHalfOffset(TileMap.HalfOffset halfOffset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileMap.HalfOffset.html">TileMap.HalfOffset</a></td>
+        <td><span class="parametername">halfOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetMode_" data-uid="Godot.TileMap.SetMode*"></a>
+  <h4 id="Godot_TileMap_SetMode_Godot_TileMap_ModeEnum_" data-uid="Godot.TileMap.SetMode(Godot.TileMap.ModeEnum)">SetMode(TileMap.ModeEnum)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMode(TileMap.ModeEnum mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileMap.ModeEnum.html">TileMap.ModeEnum</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetOccluderLightMask_" data-uid="Godot.TileMap.SetOccluderLightMask*"></a>
+  <h4 id="Godot_TileMap_SetOccluderLightMask_System_Int32_" data-uid="Godot.TileMap.SetOccluderLightMask(System.Int32)">SetOccluderLightMask(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOccluderLightMask(int mask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">mask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetQuadrantSize_" data-uid="Godot.TileMap.SetQuadrantSize*"></a>
+  <h4 id="Godot_TileMap_SetQuadrantSize_System_Int32_" data-uid="Godot.TileMap.SetQuadrantSize(System.Int32)">SetQuadrantSize(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetQuadrantSize(int size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetShowCollision_" data-uid="Godot.TileMap.SetShowCollision*"></a>
+  <h4 id="Godot_TileMap_SetShowCollision_System_Boolean_" data-uid="Godot.TileMap.SetShowCollision(System.Boolean)">SetShowCollision(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetShowCollision(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetTileOrigin_" data-uid="Godot.TileMap.SetTileOrigin*"></a>
+  <h4 id="Godot_TileMap_SetTileOrigin_Godot_TileMap_TileOrigin_" data-uid="Godot.TileMap.SetTileOrigin(Godot.TileMap.TileOrigin)">SetTileOrigin(TileMap.TileOrigin)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTileOrigin(TileMap.TileOrigin origin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileMap.TileOrigin.html">TileMap.TileOrigin</a></td>
+        <td><span class="parametername">origin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetTileset_" data-uid="Godot.TileMap.SetTileset*"></a>
+  <h4 id="Godot_TileMap_SetTileset_Godot_TileSet_" data-uid="Godot.TileMap.SetTileset(Godot.TileSet)">SetTileset(TileSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTileset(TileSet tileset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.TileSet.html">TileSet</a></td>
+        <td><span class="parametername">tileset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_SetYSortMode_" data-uid="Godot.TileMap.SetYSortMode*"></a>
+  <h4 id="Godot_TileMap_SetYSortMode_System_Boolean_" data-uid="Godot.TileMap.SetYSortMode(System.Boolean)">SetYSortMode(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetYSortMode(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_UpdateBitmaskArea_" data-uid="Godot.TileMap.UpdateBitmaskArea*"></a>
+  <h4 id="Godot_TileMap_UpdateBitmaskArea_Godot_Vector2_" data-uid="Godot.TileMap.UpdateBitmaskArea(Godot.Vector2)">UpdateBitmaskArea(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Applies autotiling rules to the cell (and its adjacent cells) referenced by its grid-based X and Y coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateBitmaskArea(Vector2 position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_UpdateBitmaskRegion_" data-uid="Godot.TileMap.UpdateBitmaskRegion*"></a>
+  <h4 id="Godot_TileMap_UpdateBitmaskRegion_System_Nullable_Godot_Vector2__System_Nullable_Godot_Vector2__" data-uid="Godot.TileMap.UpdateBitmaskRegion(System.Nullable{Godot.Vector2},System.Nullable{Godot.Vector2})">UpdateBitmaskRegion(Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;)</h4>
+  <div class="markdown level1 summary"><p>Applies autotiling rules to the cells in the given region (specified by grid-based X and Y coordinates).</p>
+<p>Calling with invalid (or missing) parameters applies autotiling rules for the entire tilemap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateBitmaskRegion(Nullable&lt;Vector2&gt; start = null, Nullable&lt;Vector2&gt; end = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
+        <td><span class="parametername">start</span></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
+        <td><span class="parametername">end</span></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_TileMap_UpdateDirtyQuadrants_" data-uid="Godot.TileMap.UpdateDirtyQuadrants*"></a>
+  <h4 id="Godot_TileMap_UpdateDirtyQuadrants" data-uid="Godot.TileMap.UpdateDirtyQuadrants">UpdateDirtyQuadrants()</h4>
+  <div class="markdown level1 summary"><p>Updates the tile map&apos;s quadrants, allowing things such as navigation and collision shapes to be immediately used if modified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateDirtyQuadrants()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_TileMap_WorldToMap_" data-uid="Godot.TileMap.WorldToMap*"></a>
+  <h4 id="Godot_TileMap_WorldToMap_Godot_Vector2_" data-uid="Godot.TileMap.WorldToMap(Godot.Vector2)">WorldToMap(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Returns the tilemap (grid-based) coordinates corresponding to the given local position.</p>
+<p>To use this with a global position, first determine the local position with <a class="xref" href="Godot.Node2D.html#Godot_Node2D_ToLocal_Godot_Vector2_">ToLocal(Vector2)</a>:</p>
+<p><pre><code>var local_position = my_tilemap.to_local(global_position)
+var map_position = my_tilemap.world_to_map(local_position)</code></pre></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 WorldToMap(Vector2 worldPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">worldPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

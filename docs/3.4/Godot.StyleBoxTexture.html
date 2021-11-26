@@ -1,0 +1,1405 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StyleBoxTexture
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StyleBoxTexture
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.StyleBoxTexture">
+  
+  
+  <h1 id="Godot_StyleBoxTexture" data-uid="Godot.StyleBoxTexture" class="text-break">Class StyleBoxTexture
+  </h1>
+  <div class="markdown level0 summary"><p>Texture-based nine-patch <a class="xref" href="Godot.StyleBox.html">StyleBox</a>, in a way similar to <a class="xref" href="Godot.NinePatchRect.html">NinePatchRect</a>. This stylebox performs a 3×3 scaling of a texture, where only the center cell is fully stretched. This makes it possible to design bordered styles regardless of the stylebox&apos;s size.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Reference.html">Reference</a></div>
+    <div class="level3"><a class="xref" href="Godot.Resource.html">Resource</a></div>
+    <div class="level4"><a class="xref" href="Godot.StyleBox.html">StyleBox</a></div>
+    <div class="level5"><span class="xref">StyleBoxTexture</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_TestMask_Godot_Vector2_Godot_Rect2_">StyleBox.TestMask(Vector2, Rect2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_SetDefaultMargin_Godot_Margin_System_Single_">StyleBox.SetDefaultMargin(Margin, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetDefaultMargin_Godot_Margin_">StyleBox.GetDefaultMargin(Margin)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetMargin_Godot_Margin_">StyleBox.GetMargin(Margin)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetMinimumSize">StyleBox.GetMinimumSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetCenterSize">StyleBox.GetCenterSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetOffset">StyleBox.GetOffset()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetCurrentItemDrawn">StyleBox.GetCurrentItemDrawn()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_Draw_Godot_RID_Godot_Rect2_">StyleBox.Draw(RID, Rect2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginLeft">StyleBox.ContentMarginLeft</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginRight">StyleBox.ContentMarginRight</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginTop">StyleBox.ContentMarginTop</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginBottom">StyleBox.ContentMarginBottom</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource__SetupLocalToScene">Resource._SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetPath_System_String_">Resource.SetPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_TakeOverPath_System_String_">Resource.TakeOverPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetPath">Resource.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetName_System_String_">Resource.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetName">Resource.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetRid">Resource.GetRid()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetLocalToScene_System_Boolean_">Resource.SetLocalToScene(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_IsLocalToScene">Resource.IsLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetLocalScene">Resource.GetLocalScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetupLocalToScene">Resource.SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_EmitChanged">Resource.EmitChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_Duplicate_System_Boolean_">Resource.Duplicate(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceLocalToScene">Resource.ResourceLocalToScene</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourcePath">Resource.ResourcePath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceName">Resource.ResourceName</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_InitRef">Reference.InitRef()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Reference_">Reference.Reference_()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Unreference">Reference.Unreference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_StyleBoxTexture_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StyleBoxTexture : StyleBox, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_StyleBoxTexture__ctor_" data-uid="Godot.StyleBoxTexture.#ctor*"></a>
+  <h4 id="Godot_StyleBoxTexture__ctor" data-uid="Godot.StyleBoxTexture.#ctor">StyleBoxTexture()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StyleBoxTexture()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_StyleBoxTexture_AxisStretchHorizontal_" data-uid="Godot.StyleBoxTexture.AxisStretchHorizontal*"></a>
+  <h4 id="Godot_StyleBoxTexture_AxisStretchHorizontal" data-uid="Godot.StyleBoxTexture.AxisStretchHorizontal">AxisStretchHorizontal</h4>
+  <div class="markdown level1 summary"><p>Controls how the stylebox&apos;s texture will be stretched or tiled horizontally. See <a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StyleBoxTexture.AxisStretchMode AxisStretchHorizontal { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_AxisStretchVertical_" data-uid="Godot.StyleBoxTexture.AxisStretchVertical*"></a>
+  <h4 id="Godot_StyleBoxTexture_AxisStretchVertical" data-uid="Godot.StyleBoxTexture.AxisStretchVertical">AxisStretchVertical</h4>
+  <div class="markdown level1 summary"><p>Controls how the stylebox&apos;s texture will be stretched or tiled vertically. See <a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StyleBoxTexture.AxisStretchMode AxisStretchVertical { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_DrawCenter_" data-uid="Godot.StyleBoxTexture.DrawCenter*"></a>
+  <h4 id="Godot_StyleBoxTexture_DrawCenter" data-uid="Godot.StyleBoxTexture.DrawCenter">DrawCenter</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the nine-patch texture&apos;s center tile will be drawn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DrawCenter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_ExpandMarginBottom_" data-uid="Godot.StyleBoxTexture.ExpandMarginBottom*"></a>
+  <h4 id="Godot_StyleBoxTexture_ExpandMarginBottom" data-uid="Godot.StyleBoxTexture.ExpandMarginBottom">ExpandMarginBottom</h4>
+  <div class="markdown level1 summary"><p>Expands the bottom margin of this style box when drawing, causing it to be drawn larger than requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ExpandMarginBottom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_ExpandMarginLeft_" data-uid="Godot.StyleBoxTexture.ExpandMarginLeft*"></a>
+  <h4 id="Godot_StyleBoxTexture_ExpandMarginLeft" data-uid="Godot.StyleBoxTexture.ExpandMarginLeft">ExpandMarginLeft</h4>
+  <div class="markdown level1 summary"><p>Expands the left margin of this style box when drawing, causing it to be drawn larger than requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ExpandMarginLeft { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_ExpandMarginRight_" data-uid="Godot.StyleBoxTexture.ExpandMarginRight*"></a>
+  <h4 id="Godot_StyleBoxTexture_ExpandMarginRight" data-uid="Godot.StyleBoxTexture.ExpandMarginRight">ExpandMarginRight</h4>
+  <div class="markdown level1 summary"><p>Expands the right margin of this style box when drawing, causing it to be drawn larger than requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ExpandMarginRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_ExpandMarginTop_" data-uid="Godot.StyleBoxTexture.ExpandMarginTop*"></a>
+  <h4 id="Godot_StyleBoxTexture_ExpandMarginTop" data-uid="Godot.StyleBoxTexture.ExpandMarginTop">ExpandMarginTop</h4>
+  <div class="markdown level1 summary"><p>Expands the top margin of this style box when drawing, causing it to be drawn larger than requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ExpandMarginTop { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_MarginBottom_" data-uid="Godot.StyleBoxTexture.MarginBottom*"></a>
+  <h4 id="Godot_StyleBoxTexture_MarginBottom" data-uid="Godot.StyleBoxTexture.MarginBottom">MarginBottom</h4>
+  <div class="markdown level1 summary"><p>Increases the bottom margin of the 3×3 texture box.</p>
+<p>A higher value means more of the source texture is considered to be part of the bottom border of the 3×3 box.</p>
+<p>This is also the value used as fallback for <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginBottom">ContentMarginBottom</a> if it is negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MarginBottom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_MarginLeft_" data-uid="Godot.StyleBoxTexture.MarginLeft*"></a>
+  <h4 id="Godot_StyleBoxTexture_MarginLeft" data-uid="Godot.StyleBoxTexture.MarginLeft">MarginLeft</h4>
+  <div class="markdown level1 summary"><p>Increases the left margin of the 3×3 texture box.</p>
+<p>A higher value means more of the source texture is considered to be part of the left border of the 3×3 box.</p>
+<p>This is also the value used as fallback for <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginLeft">ContentMarginLeft</a> if it is negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MarginLeft { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_MarginRight_" data-uid="Godot.StyleBoxTexture.MarginRight*"></a>
+  <h4 id="Godot_StyleBoxTexture_MarginRight" data-uid="Godot.StyleBoxTexture.MarginRight">MarginRight</h4>
+  <div class="markdown level1 summary"><p>Increases the right margin of the 3×3 texture box.</p>
+<p>A higher value means more of the source texture is considered to be part of the right border of the 3×3 box.</p>
+<p>This is also the value used as fallback for <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginRight">ContentMarginRight</a> if it is negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MarginRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_MarginTop_" data-uid="Godot.StyleBoxTexture.MarginTop*"></a>
+  <h4 id="Godot_StyleBoxTexture_MarginTop" data-uid="Godot.StyleBoxTexture.MarginTop">MarginTop</h4>
+  <div class="markdown level1 summary"><p>Increases the top margin of the 3×3 texture box.</p>
+<p>A higher value means more of the source texture is considered to be part of the top border of the 3×3 box.</p>
+<p>This is also the value used as fallback for <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginTop">ContentMarginTop</a> if it is negative.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MarginTop { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_ModulateColor_" data-uid="Godot.StyleBoxTexture.ModulateColor*"></a>
+  <h4 id="Godot_StyleBoxTexture_ModulateColor" data-uid="Godot.StyleBoxTexture.ModulateColor">ModulateColor</h4>
+  <div class="markdown level1 summary"><p>Modulates the color of the texture when this style box is drawn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ModulateColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_NormalMap_" data-uid="Godot.StyleBoxTexture.NormalMap*"></a>
+  <h4 id="Godot_StyleBoxTexture_NormalMap" data-uid="Godot.StyleBoxTexture.NormalMap">NormalMap</h4>
+  <div class="markdown level1 summary"><p>The normal map to use when drawing this style box.</p>
+<p>Note: Godot expects the normal map to use X+, Y-, and Z+ coordinates. See <a href="http://wiki.polycount.com/wiki/Normal_Map_Technical_Details#Common_Swizzle_Coordinates">this page</a> for a comparison of normal map coordinates expected by popular engines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture NormalMap { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Texture.html">Texture</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_RegionRect_" data-uid="Godot.StyleBoxTexture.RegionRect*"></a>
+  <h4 id="Godot_StyleBoxTexture_RegionRect" data-uid="Godot.StyleBoxTexture.RegionRect">RegionRect</h4>
+  <div class="markdown level1 summary"><p>Species a sub-region of the texture to use.</p>
+<p>This is equivalent to first wrapping the texture in an <a class="xref" href="Godot.AtlasTexture.html">AtlasTexture</a> with the same region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect2 RegionRect { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Rect2.html">Rect2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_Texture_" data-uid="Godot.StyleBoxTexture.Texture*"></a>
+  <h4 id="Godot_StyleBoxTexture_Texture" data-uid="Godot.StyleBoxTexture.Texture">Texture</h4>
+  <div class="markdown level1 summary"><p>The texture to use when drawing this style box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture Texture { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Texture.html">Texture</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_StyleBoxTexture_GetExpandMarginSize_" data-uid="Godot.StyleBoxTexture.GetExpandMarginSize*"></a>
+  <h4 id="Godot_StyleBoxTexture_GetExpandMarginSize_Godot_Margin_" data-uid="Godot.StyleBoxTexture.GetExpandMarginSize(Godot.Margin)">GetExpandMarginSize(Margin)</h4>
+  <div class="markdown level1 summary"><p>Returns the size of the given <code>margin</code>&apos;s expand margin. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetExpandMarginSize(Margin margin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Margin.html">Margin</a></td>
+        <td><span class="parametername">margin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_GetHAxisStretchMode_" data-uid="Godot.StyleBoxTexture.GetHAxisStretchMode*"></a>
+  <h4 id="Godot_StyleBoxTexture_GetHAxisStretchMode" data-uid="Godot.StyleBoxTexture.GetHAxisStretchMode">GetHAxisStretchMode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StyleBoxTexture.AxisStretchMode GetHAxisStretchMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_GetMarginSize_" data-uid="Godot.StyleBoxTexture.GetMarginSize*"></a>
+  <h4 id="Godot_StyleBoxTexture_GetMarginSize_Godot_Margin_" data-uid="Godot.StyleBoxTexture.GetMarginSize(Godot.Margin)">GetMarginSize(Margin)</h4>
+  <div class="markdown level1 summary"><p>Returns the size of the given <code>margin</code>. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetMarginSize(Margin margin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Margin.html">Margin</a></td>
+        <td><span class="parametername">margin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_GetModulate_" data-uid="Godot.StyleBoxTexture.GetModulate*"></a>
+  <h4 id="Godot_StyleBoxTexture_GetModulate" data-uid="Godot.StyleBoxTexture.GetModulate">GetModulate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetModulate()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_GetNormalMap_" data-uid="Godot.StyleBoxTexture.GetNormalMap*"></a>
+  <h4 id="Godot_StyleBoxTexture_GetNormalMap" data-uid="Godot.StyleBoxTexture.GetNormalMap">GetNormalMap()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture GetNormalMap()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Texture.html">Texture</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_GetRegionRect_" data-uid="Godot.StyleBoxTexture.GetRegionRect*"></a>
+  <h4 id="Godot_StyleBoxTexture_GetRegionRect" data-uid="Godot.StyleBoxTexture.GetRegionRect">GetRegionRect()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect2 GetRegionRect()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Rect2.html">Rect2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_GetTexture_" data-uid="Godot.StyleBoxTexture.GetTexture*"></a>
+  <h4 id="Godot_StyleBoxTexture_GetTexture" data-uid="Godot.StyleBoxTexture.GetTexture">GetTexture()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture GetTexture()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Texture.html">Texture</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_GetVAxisStretchMode_" data-uid="Godot.StyleBoxTexture.GetVAxisStretchMode*"></a>
+  <h4 id="Godot_StyleBoxTexture_GetVAxisStretchMode" data-uid="Godot.StyleBoxTexture.GetVAxisStretchMode">GetVAxisStretchMode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StyleBoxTexture.AxisStretchMode GetVAxisStretchMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_IsDrawCenterEnabled_" data-uid="Godot.StyleBoxTexture.IsDrawCenterEnabled*"></a>
+  <h4 id="Godot_StyleBoxTexture_IsDrawCenterEnabled" data-uid="Godot.StyleBoxTexture.IsDrawCenterEnabled">IsDrawCenterEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDrawCenterEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetDrawCenter_" data-uid="Godot.StyleBoxTexture.SetDrawCenter*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetDrawCenter_System_Boolean_" data-uid="Godot.StyleBoxTexture.SetDrawCenter(System.Boolean)">SetDrawCenter(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDrawCenter(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetExpandMarginAll_" data-uid="Godot.StyleBoxTexture.SetExpandMarginAll*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetExpandMarginAll_System_Single_" data-uid="Godot.StyleBoxTexture.SetExpandMarginAll(System.Single)">SetExpandMarginAll(Single)</h4>
+  <div class="markdown level1 summary"><p>Sets the expand margin to <code>size</code> pixels for all margins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetExpandMarginAll(float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetExpandMarginIndividual_" data-uid="Godot.StyleBoxTexture.SetExpandMarginIndividual*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetExpandMarginIndividual_System_Single_System_Single_System_Single_System_Single_" data-uid="Godot.StyleBoxTexture.SetExpandMarginIndividual(System.Single,System.Single,System.Single,System.Single)">SetExpandMarginIndividual(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Sets the expand margin for each margin to <code>size_left</code>, <code>size_top</code>, <code>size_right</code>, and <code>size_bottom</code> pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetExpandMarginIndividual(float sizeLeft, float sizeTop, float sizeRight, float sizeBottom)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeTop</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeRight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeBottom</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetExpandMarginSize_" data-uid="Godot.StyleBoxTexture.SetExpandMarginSize*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetExpandMarginSize_Godot_Margin_System_Single_" data-uid="Godot.StyleBoxTexture.SetExpandMarginSize(Godot.Margin,System.Single)">SetExpandMarginSize(Margin, Single)</h4>
+  <div class="markdown level1 summary"><p>Sets the expand margin to <code>size</code> pixels for the given <code>margin</code>. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetExpandMarginSize(Margin margin, float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Margin.html">Margin</a></td>
+        <td><span class="parametername">margin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetHAxisStretchMode_" data-uid="Godot.StyleBoxTexture.SetHAxisStretchMode*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetHAxisStretchMode_Godot_StyleBoxTexture_AxisStretchMode_" data-uid="Godot.StyleBoxTexture.SetHAxisStretchMode(Godot.StyleBoxTexture.AxisStretchMode)">SetHAxisStretchMode(StyleBoxTexture.AxisStretchMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHAxisStretchMode(StyleBoxTexture.AxisStretchMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetMarginSize_" data-uid="Godot.StyleBoxTexture.SetMarginSize*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetMarginSize_Godot_Margin_System_Single_" data-uid="Godot.StyleBoxTexture.SetMarginSize(Godot.Margin,System.Single)">SetMarginSize(Margin, Single)</h4>
+  <div class="markdown level1 summary"><p>Sets the margin to <code>size</code> pixels for the given <code>margin</code>. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMarginSize(Margin margin, float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Margin.html">Margin</a></td>
+        <td><span class="parametername">margin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetModulate_" data-uid="Godot.StyleBoxTexture.SetModulate*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetModulate_Godot_Color_" data-uid="Godot.StyleBoxTexture.SetModulate(Godot.Color)">SetModulate(Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetModulate(Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetNormalMap_" data-uid="Godot.StyleBoxTexture.SetNormalMap*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetNormalMap_Godot_Texture_" data-uid="Godot.StyleBoxTexture.SetNormalMap(Godot.Texture)">SetNormalMap(Texture)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetNormalMap(Texture normalMap)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Texture.html">Texture</a></td>
+        <td><span class="parametername">normalMap</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetRegionRect_" data-uid="Godot.StyleBoxTexture.SetRegionRect*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetRegionRect_Godot_Rect2_" data-uid="Godot.StyleBoxTexture.SetRegionRect(Godot.Rect2)">SetRegionRect(Rect2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRegionRect(Rect2 region)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Rect2.html">Rect2</a></td>
+        <td><span class="parametername">region</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetTexture_" data-uid="Godot.StyleBoxTexture.SetTexture*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetTexture_Godot_Texture_" data-uid="Godot.StyleBoxTexture.SetTexture(Godot.Texture)">SetTexture(Texture)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTexture(Texture texture)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Texture.html">Texture</a></td>
+        <td><span class="parametername">texture</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxTexture_SetVAxisStretchMode_" data-uid="Godot.StyleBoxTexture.SetVAxisStretchMode*"></a>
+  <h4 id="Godot_StyleBoxTexture_SetVAxisStretchMode_Godot_StyleBoxTexture_AxisStretchMode_" data-uid="Godot.StyleBoxTexture.SetVAxisStretchMode(Godot.StyleBoxTexture.AxisStretchMode)">SetVAxisStretchMode(StyleBoxTexture.AxisStretchMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVAxisStretchMode(StyleBoxTexture.AxisStretchMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

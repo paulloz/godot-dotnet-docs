@@ -1,0 +1,1940 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ReflectionProbe
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ReflectionProbe
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.ReflectionProbe">
+  
+  
+  <h1 id="Godot_ReflectionProbe" data-uid="Godot.ReflectionProbe" class="text-break">Class ReflectionProbe
+  </h1>
+  <div class="markdown level0 summary"><p>Capture its surroundings as a dual paraboloid image, and stores versions of it with increasing levels of blur to simulate different material roughnesses.</p>
+<p>The <a class="xref" href="Godot.ReflectionProbe.html">ReflectionProbe</a> is used to create high-quality reflections at the cost of performance. It can be combined with <a class="xref" href="Godot.GIProbe.html">GIProbe</a>s and Screen Space Reflections to achieve high quality reflections. <a class="xref" href="Godot.ReflectionProbe.html">ReflectionProbe</a>s render all objects within their <a class="xref" href="Godot.ReflectionProbe.html#Godot_ReflectionProbe_CullMask">CullMask</a>, so updating them can be quite expensive. It is best to update them once with the important static objects and then leave them.</p>
+<p>Note: By default Godot will only render 16 reflection probes. If you need more, increase the number of atlas subdivisions. This setting can be found in .</p>
+<p>Note: The GLES2 backend will only display two reflection probes at the same time for a single mesh. If possible, split up large meshes that span over multiple reflection probes into smaller ones.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Node.html">Node</a></div>
+    <div class="level3"><a class="xref" href="Godot.Spatial.html">Spatial</a></div>
+    <div class="level4"><a class="xref" href="Godot.CullInstance.html">CullInstance</a></div>
+    <div class="level5"><a class="xref" href="Godot.VisualInstance.html">VisualInstance</a></div>
+    <div class="level6"><span class="xref">ReflectionProbe</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_SetBase_Godot_RID_">VisualInstance.SetBase(RID)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetBase">VisualInstance.GetBase()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetInstance">VisualInstance.GetInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_SetLayerMask_System_UInt32_">VisualInstance.SetLayerMask(UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetLayerMask">VisualInstance.GetLayerMask()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_SetLayerMaskBit_System_Int32_System_Boolean_">VisualInstance.SetLayerMaskBit(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetLayerMaskBit_System_Int32_">VisualInstance.GetLayerMaskBit(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetTransformedAabb">VisualInstance.GetTransformedAabb()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetAabb">VisualInstance.GetAabb()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_Layers">VisualInstance.Layers</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_SetPortalMode_Godot_CullInstance_PortalModeEnum_">CullInstance.SetPortalMode(CullInstance.PortalModeEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_GetPortalMode">CullInstance.GetPortalMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_SetIncludeInBound_System_Boolean_">CullInstance.SetIncludeInBound(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_GetIncludeInBound">CullInstance.GetIncludeInBound()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_SetPortalAutoplacePriority_System_Int32_">CullInstance.SetPortalAutoplacePriority(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_GetPortalAutoplacePriority">CullInstance.GetPortalAutoplacePriority()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_PortalMode">CullInstance.PortalMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_IncludeInBound">CullInstance.IncludeInBound</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_AutoplacePriority">CullInstance.AutoplacePriority</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationTransformChanged">Spatial.NotificationTransformChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationEnterWorld">Spatial.NotificationEnterWorld</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationExitWorld">Spatial.NotificationExitWorld</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationVisibilityChanged">Spatial.NotificationVisibilityChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationEnterGameplay">Spatial.NotificationEnterGameplay</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationExitGameplay">Spatial.NotificationExitGameplay</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetTransform_Godot_Transform_">Spatial.SetTransform(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetTransform">Spatial.GetTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetTranslation_Godot_Vector3_">Spatial.SetTranslation(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetTranslation">Spatial.GetTranslation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetRotation_Godot_Vector3_">Spatial.SetRotation(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetRotation">Spatial.GetRotation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetRotationDegrees_Godot_Vector3_">Spatial.SetRotationDegrees(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetRotationDegrees">Spatial.GetRotationDegrees()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetScale_Godot_Vector3_">Spatial.SetScale(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetScale">Spatial.GetScale()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetGlobalTransform_Godot_Transform_">Spatial.SetGlobalTransform(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetGlobalTransform">Spatial.GetGlobalTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetParentSpatial">Spatial.GetParentSpatial()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetIgnoreTransformNotification_System_Boolean_">Spatial.SetIgnoreTransformNotification(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetAsToplevel_System_Boolean_">Spatial.SetAsToplevel(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsSetAsToplevel">Spatial.IsSetAsToplevel()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetDisableScale_System_Boolean_">Spatial.SetDisableScale(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsScaleDisabled">Spatial.IsScaleDisabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetWorld">Spatial.GetWorld()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ForceUpdateTransform">Spatial.ForceUpdateTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_UpdateGizmo">Spatial.UpdateGizmo()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetGizmo_Godot_SpatialGizmo_">Spatial.SetGizmo(SpatialGizmo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetGizmo">Spatial.GetGizmo()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetVisible_System_Boolean_">Spatial.SetVisible(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsVisible">Spatial.IsVisible()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsVisibleInTree">Spatial.IsVisibleInTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Show">Spatial.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Hide">Spatial.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetNotifyLocalTransform_System_Boolean_">Spatial.SetNotifyLocalTransform(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsLocalTransformNotificationEnabled">Spatial.IsLocalTransformNotificationEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetNotifyTransform_System_Boolean_">Spatial.SetNotifyTransform(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsTransformNotificationEnabled">Spatial.IsTransformNotificationEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Rotate_Godot_Vector3_System_Single_">Spatial.Rotate(Vector3, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalRotate_Godot_Vector3_System_Single_">Spatial.GlobalRotate(Vector3, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalScale_Godot_Vector3_">Spatial.GlobalScale(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalTranslate_Godot_Vector3_">Spatial.GlobalTranslate(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateObjectLocal_Godot_Vector3_System_Single_">Spatial.RotateObjectLocal(Vector3, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ScaleObjectLocal_Godot_Vector3_">Spatial.ScaleObjectLocal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_TranslateObjectLocal_Godot_Vector3_">Spatial.TranslateObjectLocal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateX_System_Single_">Spatial.RotateX(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateY_System_Single_">Spatial.RotateY(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateZ_System_Single_">Spatial.RotateZ(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Translate_Godot_Vector3_">Spatial.Translate(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Orthonormalize">Spatial.Orthonormalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetIdentity">Spatial.SetIdentity()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_LookAt_Godot_Vector3_Godot_Vector3_">Spatial.LookAt(Vector3, Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_LookAtFromPosition_Godot_Vector3_Godot_Vector3_Godot_Vector3_">Spatial.LookAtFromPosition(Vector3, Vector3, Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ToLocal_Godot_Vector3_">Spatial.ToLocal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ToGlobal_Godot_Vector3_">Spatial.ToGlobal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalTransform">Spatial.GlobalTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Translation">Spatial.Translation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotationDegrees">Spatial.RotationDegrees</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Rotation">Spatial.Rotation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Scale">Spatial.Scale</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Transform">Spatial.Transform</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Visible">Spatial.Visible</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Gizmo">Spatial.Gizmo</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationEnterTree">Node.NotificationEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationExitTree">Node.NotificationExitTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationMovedInParent">Node.NotificationMovedInParent</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationReady">Node.NotificationReady</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPaused">Node.NotificationPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnpaused">Node.NotificationUnpaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPhysicsProcess">Node.NotificationPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationProcess">Node.NotificationProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationParented">Node.NotificationParented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnparented">Node.NotificationUnparented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInstanced">Node.NotificationInstanced</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragBegin">Node.NotificationDragBegin</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragEnd">Node.NotificationDragEnd</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPathChanged">Node.NotificationPathChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalProcess">Node.NotificationInternalProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalPhysicsProcess">Node.NotificationInternalPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPostEnterTree">Node.NotificationPostEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseEnter">Node.NotificationWmMouseEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseExit">Node.NotificationWmMouseExit</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusIn">Node.NotificationWmFocusIn</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusOut">Node.NotificationWmFocusOut</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmQuitRequest">Node.NotificationWmQuitRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmGoBackRequest">Node.NotificationWmGoBackRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmUnfocusRequest">Node.NotificationWmUnfocusRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsMemoryWarning">Node.NotificationOsMemoryWarning</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationTranslationChanged">Node.NotificationTranslationChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmAbout">Node.NotificationWmAbout</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationCrash">Node.NotificationCrash</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsImeUpdate">Node.NotificationOsImeUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppResumed">Node.NotificationAppResumed</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppPaused">Node.NotificationAppPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode__1_Godot_NodePath_">Node.GetNode&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull__1_Godot_NodePath_">Node.GetNodeOrNull&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild__1_System_Int32_">Node.GetChild&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildOrNull__1_System_Int32_">Node.GetChildOrNull&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner__1">Node.GetOwner&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwnerOrNull__1">Node.GetOwnerOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent__1">Node.GetParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParentOrNull__1">Node.GetParentOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">Node._EnterTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ExitTree">Node._ExitTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__GetConfigurationWarning">Node._GetConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">Node._Input(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">Node._PhysicsProcess(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">Node._Process(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Ready">Node._Ready()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">Node._UnhandledInput(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledKeyInput_Godot_InputEventKey_">Node._UnhandledKeyInput(InputEventKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChildBelowNode_Godot_Node_Godot_Node_System_Boolean_">Node.AddChildBelowNode(Node, Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetName_System_String_">Node.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetName">Node.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">Node.AddChild(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveChild_Godot_Node_">Node.RemoveChild(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildCount">Node.GetChildCount()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildren">Node.GetChildren()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild_System_Int32_">Node.GetChild(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNode_Godot_NodePath_">Node.HasNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">Node.GetNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull_Godot_NodePath_">Node.GetNodeOrNull(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent">Node.GetParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindNode_System_String_System_Boolean_System_Boolean_">Node.FindNode(String, Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindParent_System_String_">Node.FindParent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNodeAndResource_Godot_NodePath_">Node.HasNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeAndResource_Godot_NodePath_">Node.GetNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">Node.IsInsideTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsAParentOf_Godot_Node_">Node.IsAParentOf(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsGreaterThan_Godot_Node_">Node.IsGreaterThan(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPath">Node.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPathTo_Godot_Node_">Node.GetPathTo(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddToGroup_System_String_System_Boolean_">Node.AddToGroup(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveFromGroup_System_String_">Node.RemoveFromGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInGroup_System_String_">Node.IsInGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_MoveChild_Godot_Node_System_Int32_">Node.MoveChild(Node, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetGroups">Node.GetGroups()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Raise">Node.Raise()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetOwner_Godot_Node_">Node.SetOwner(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner">Node.GetOwner()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveAndSkip">Node.RemoveAndSkip()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetIndex">Node.GetIndex()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTree">Node.PrintTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTreePretty">Node.PrintTreePretty()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetFilename_System_String_">Node.SetFilename(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetFilename">Node.GetFilename()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateNotification_System_Int32_">Node.PropagateNotification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateCall_System_String_Godot_Collections_Array_System_Boolean_">Node.PropagateCall(String, Array, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">Node.SetPhysicsProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPhysicsProcessDeltaTime">Node.GetPhysicsProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessing">Node.IsPhysicsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessDeltaTime">Node.GetProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">Node.SetProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessPriority_System_Int32_">Node.SetProcessPriority(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessPriority">Node.GetProcessPriority()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessing">Node.IsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInput_System_Boolean_">Node.SetProcessInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInput">Node.IsProcessingInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledInput_System_Boolean_">Node.SetProcessUnhandledInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledInput">Node.IsProcessingUnhandledInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledKeyInput_System_Boolean_">Node.SetProcessUnhandledKeyInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledKeyInput">Node.IsProcessingUnhandledKeyInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPauseMode_Godot_Node_PauseModeEnum_">Node.SetPauseMode(Node.PauseModeEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPauseMode">Node.GetPauseMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CanProcess">Node.CanProcess()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintStrayNodes">Node.PrintStrayNodes()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPositionInParent">Node.GetPositionInParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetDisplayFolded_System_Boolean_">Node.SetDisplayFolded(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsDisplayedFolded">Node.IsDisplayedFolded()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInternal_System_Boolean_">Node.SetProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInternal">Node.IsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcessInternal_System_Boolean_">Node.SetPhysicsProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessingInternal">Node.IsPhysicsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetTree">Node.GetTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Duplicate_System_Int32_">Node.Duplicate(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ReplaceBy_Godot_Node_System_Boolean_">Node.ReplaceBy(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetSceneInstanceLoadPlaceholder_System_Boolean_">Node.SetSceneInstanceLoadPlaceholder(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetSceneInstanceLoadPlaceholder">Node.GetSceneInstanceLoadPlaceholder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetViewport">Node.GetViewport()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_QueueFree">Node.QueueFree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RequestReady">Node.RequestReady()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetNetworkMaster_System_Int32_System_Boolean_">Node.SetNetworkMaster(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNetworkMaster">Node.GetNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsNetworkMaster">Node.IsNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetMultiplayer">Node.GetMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetCustomMultiplayer">Node.GetCustomMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetCustomMultiplayer_Godot_MultiplayerAPI_">Node.SetCustomMultiplayer(MultiplayerAPI)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RpcConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RsetConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Node.Rpc(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliable_System_String_System_Object___">Node.RpcUnreliable(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcId_System_Int32_System_String_System_Object___">Node.RpcId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliableId_System_Int32_System_String_System_Object___">Node.RpcUnreliableId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rset_System_String_System_Object_">Node.Rset(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetId_System_Int32_System_String_System_Object_">Node.RsetId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliable_System_String_System_Object_">Node.RsetUnreliable(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliableId_System_Int32_System_String_System_Object_">Node.RsetUnreliableId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_UpdateConfigurationWarning">Node.UpdateConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_EditorDescription">Node.EditorDescription</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ImportPath">Node._ImportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PauseMode">Node.PauseMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Name">Node.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Filename">Node.Filename</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Node.Owner</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Multiplayer">Node.Multiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CustomMultiplayer">Node.CustomMultiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ProcessPriority">Node.ProcessPriority</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_ReflectionProbe_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ReflectionProbe : VisualInstance, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_ReflectionProbe__ctor_" data-uid="Godot.ReflectionProbe.#ctor*"></a>
+  <h4 id="Godot_ReflectionProbe__ctor" data-uid="Godot.ReflectionProbe.#ctor">ReflectionProbe()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReflectionProbe()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_ReflectionProbe_BoxProjection_" data-uid="Godot.ReflectionProbe.BoxProjection*"></a>
+  <h4 id="Godot_ReflectionProbe_BoxProjection" data-uid="Godot.ReflectionProbe.BoxProjection">BoxProjection</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables box projection. This makes reflections look more correct in rectangle-shaped rooms by offsetting the reflection center depending on the camera&apos;s location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BoxProjection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_CullMask_" data-uid="Godot.ReflectionProbe.CullMask*"></a>
+  <h4 id="Godot_ReflectionProbe_CullMask" data-uid="Godot.ReflectionProbe.CullMask">CullMask</h4>
+  <div class="markdown level1 summary"><p>Sets the cull mask which determines what objects are drawn by this probe. Every <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> with a layer included in this cull mask will be rendered by the probe. It is best to only include large objects which are likely to take up a lot of space in the reflection in order to save on rendering cost.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint CullMask { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_EnableShadows_" data-uid="Godot.ReflectionProbe.EnableShadows*"></a>
+  <h4 id="Godot_ReflectionProbe_EnableShadows" data-uid="Godot.ReflectionProbe.EnableShadows">EnableShadows</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, computes shadows in the reflection probe. This makes the reflection probe slower to render; you may want to disable this if using the <a class="xref" href="Godot.ReflectionProbe.UpdateModeEnum.html#Godot_ReflectionProbe_UpdateModeEnum_Always">Always</a> <a class="xref" href="Godot.ReflectionProbe.html#Godot_ReflectionProbe_UpdateMode">UpdateMode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableShadows { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_Extents_" data-uid="Godot.ReflectionProbe.Extents*"></a>
+  <h4 id="Godot_ReflectionProbe_Extents" data-uid="Godot.ReflectionProbe.Extents">Extents</h4>
+  <div class="markdown level1 summary"><p>The size of the reflection probe. The larger the extents the more space covered by the probe which will lower the perceived resolution. It is best to keep the extents only as large as you need them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Extents { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_Intensity_" data-uid="Godot.ReflectionProbe.Intensity*"></a>
+  <h4 id="Godot_ReflectionProbe_Intensity" data-uid="Godot.ReflectionProbe.Intensity">Intensity</h4>
+  <div class="markdown level1 summary"><p>Defines the reflection intensity. Intensity modulates the strength of the reflection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Intensity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_InteriorAmbientColor_" data-uid="Godot.ReflectionProbe.InteriorAmbientColor*"></a>
+  <h4 id="Godot_ReflectionProbe_InteriorAmbientColor" data-uid="Godot.ReflectionProbe.InteriorAmbientColor">InteriorAmbientColor</h4>
+  <div class="markdown level1 summary"><p>Sets the ambient light color to be used when this probe is set to <a class="xref" href="Godot.ReflectionProbe.html#Godot_ReflectionProbe_InteriorEnable">InteriorEnable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color InteriorAmbientColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_InteriorAmbientContrib_" data-uid="Godot.ReflectionProbe.InteriorAmbientContrib*"></a>
+  <h4 id="Godot_ReflectionProbe_InteriorAmbientContrib" data-uid="Godot.ReflectionProbe.InteriorAmbientContrib">InteriorAmbientContrib</h4>
+  <div class="markdown level1 summary"><p>Sets the contribution value for how much the reflection affects the ambient light for this reflection probe when set to <a class="xref" href="Godot.ReflectionProbe.html#Godot_ReflectionProbe_InteriorEnable">InteriorEnable</a>. Useful so that ambient light matches the color of the room.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InteriorAmbientContrib { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_InteriorAmbientEnergy_" data-uid="Godot.ReflectionProbe.InteriorAmbientEnergy*"></a>
+  <h4 id="Godot_ReflectionProbe_InteriorAmbientEnergy" data-uid="Godot.ReflectionProbe.InteriorAmbientEnergy">InteriorAmbientEnergy</h4>
+  <div class="markdown level1 summary"><p>Sets the energy multiplier for this reflection probe&apos;s ambient light contribution when set to <a class="xref" href="Godot.ReflectionProbe.html#Godot_ReflectionProbe_InteriorEnable">InteriorEnable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InteriorAmbientEnergy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_InteriorEnable_" data-uid="Godot.ReflectionProbe.InteriorEnable*"></a>
+  <h4 id="Godot_ReflectionProbe_InteriorEnable" data-uid="Godot.ReflectionProbe.InteriorEnable">InteriorEnable</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, reflections will ignore sky contribution. Ambient lighting is then controlled by the <code>interior_ambient_*</code> properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InteriorEnable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_MaxDistance_" data-uid="Godot.ReflectionProbe.MaxDistance*"></a>
+  <h4 id="Godot_ReflectionProbe_MaxDistance" data-uid="Godot.ReflectionProbe.MaxDistance">MaxDistance</h4>
+  <div class="markdown level1 summary"><p>Sets the max distance away from the probe an object can be before it is culled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MaxDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_OriginOffset_" data-uid="Godot.ReflectionProbe.OriginOffset*"></a>
+  <h4 id="Godot_ReflectionProbe_OriginOffset" data-uid="Godot.ReflectionProbe.OriginOffset">OriginOffset</h4>
+  <div class="markdown level1 summary"><p>Sets the origin offset to be used when this reflection probe is in box project mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 OriginOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_UpdateMode_" data-uid="Godot.ReflectionProbe.UpdateMode*"></a>
+  <h4 id="Godot_ReflectionProbe_UpdateMode" data-uid="Godot.ReflectionProbe.UpdateMode">UpdateMode</h4>
+  <div class="markdown level1 summary"><p>Sets how frequently the probe is updated. Can be <a class="xref" href="Godot.ReflectionProbe.UpdateModeEnum.html#Godot_ReflectionProbe_UpdateModeEnum_Once">Once</a> or <a class="xref" href="Godot.ReflectionProbe.UpdateModeEnum.html#Godot_ReflectionProbe_UpdateModeEnum_Always">Always</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReflectionProbe.UpdateModeEnum UpdateMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.ReflectionProbe.UpdateModeEnum.html">ReflectionProbe.UpdateModeEnum</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_ReflectionProbe_AreShadowsEnabled_" data-uid="Godot.ReflectionProbe.AreShadowsEnabled*"></a>
+  <h4 id="Godot_ReflectionProbe_AreShadowsEnabled" data-uid="Godot.ReflectionProbe.AreShadowsEnabled">AreShadowsEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AreShadowsEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_GetCullMask_" data-uid="Godot.ReflectionProbe.GetCullMask*"></a>
+  <h4 id="Godot_ReflectionProbe_GetCullMask" data-uid="Godot.ReflectionProbe.GetCullMask">GetCullMask()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint GetCullMask()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_GetExtents_" data-uid="Godot.ReflectionProbe.GetExtents*"></a>
+  <h4 id="Godot_ReflectionProbe_GetExtents" data-uid="Godot.ReflectionProbe.GetExtents">GetExtents()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetExtents()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_GetIntensity_" data-uid="Godot.ReflectionProbe.GetIntensity*"></a>
+  <h4 id="Godot_ReflectionProbe_GetIntensity" data-uid="Godot.ReflectionProbe.GetIntensity">GetIntensity()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetIntensity()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_GetInteriorAmbient_" data-uid="Godot.ReflectionProbe.GetInteriorAmbient*"></a>
+  <h4 id="Godot_ReflectionProbe_GetInteriorAmbient" data-uid="Godot.ReflectionProbe.GetInteriorAmbient">GetInteriorAmbient()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetInteriorAmbient()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_GetInteriorAmbientEnergy_" data-uid="Godot.ReflectionProbe.GetInteriorAmbientEnergy*"></a>
+  <h4 id="Godot_ReflectionProbe_GetInteriorAmbientEnergy" data-uid="Godot.ReflectionProbe.GetInteriorAmbientEnergy">GetInteriorAmbientEnergy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetInteriorAmbientEnergy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_GetInteriorAmbientProbeContribution_" data-uid="Godot.ReflectionProbe.GetInteriorAmbientProbeContribution*"></a>
+  <h4 id="Godot_ReflectionProbe_GetInteriorAmbientProbeContribution" data-uid="Godot.ReflectionProbe.GetInteriorAmbientProbeContribution">GetInteriorAmbientProbeContribution()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetInteriorAmbientProbeContribution()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_GetMaxDistance_" data-uid="Godot.ReflectionProbe.GetMaxDistance*"></a>
+  <h4 id="Godot_ReflectionProbe_GetMaxDistance" data-uid="Godot.ReflectionProbe.GetMaxDistance">GetMaxDistance()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetMaxDistance()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_GetOriginOffset_" data-uid="Godot.ReflectionProbe.GetOriginOffset*"></a>
+  <h4 id="Godot_ReflectionProbe_GetOriginOffset" data-uid="Godot.ReflectionProbe.GetOriginOffset">GetOriginOffset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetOriginOffset()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_GetUpdateMode_" data-uid="Godot.ReflectionProbe.GetUpdateMode*"></a>
+  <h4 id="Godot_ReflectionProbe_GetUpdateMode" data-uid="Godot.ReflectionProbe.GetUpdateMode">GetUpdateMode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReflectionProbe.UpdateModeEnum GetUpdateMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.ReflectionProbe.UpdateModeEnum.html">ReflectionProbe.UpdateModeEnum</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_IsBoxProjectionEnabled_" data-uid="Godot.ReflectionProbe.IsBoxProjectionEnabled*"></a>
+  <h4 id="Godot_ReflectionProbe_IsBoxProjectionEnabled" data-uid="Godot.ReflectionProbe.IsBoxProjectionEnabled">IsBoxProjectionEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBoxProjectionEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_IsSetAsInterior_" data-uid="Godot.ReflectionProbe.IsSetAsInterior*"></a>
+  <h4 id="Godot_ReflectionProbe_IsSetAsInterior" data-uid="Godot.ReflectionProbe.IsSetAsInterior">IsSetAsInterior()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSetAsInterior()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetAsInterior_" data-uid="Godot.ReflectionProbe.SetAsInterior*"></a>
+  <h4 id="Godot_ReflectionProbe_SetAsInterior_System_Boolean_" data-uid="Godot.ReflectionProbe.SetAsInterior(System.Boolean)">SetAsInterior(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAsInterior(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetCullMask_" data-uid="Godot.ReflectionProbe.SetCullMask*"></a>
+  <h4 id="Godot_ReflectionProbe_SetCullMask_System_UInt32_" data-uid="Godot.ReflectionProbe.SetCullMask(System.UInt32)">SetCullMask(UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCullMask(uint layers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">layers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetEnableBoxProjection_" data-uid="Godot.ReflectionProbe.SetEnableBoxProjection*"></a>
+  <h4 id="Godot_ReflectionProbe_SetEnableBoxProjection_System_Boolean_" data-uid="Godot.ReflectionProbe.SetEnableBoxProjection(System.Boolean)">SetEnableBoxProjection(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEnableBoxProjection(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetEnableShadows_" data-uid="Godot.ReflectionProbe.SetEnableShadows*"></a>
+  <h4 id="Godot_ReflectionProbe_SetEnableShadows_System_Boolean_" data-uid="Godot.ReflectionProbe.SetEnableShadows(System.Boolean)">SetEnableShadows(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEnableShadows(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetExtents_" data-uid="Godot.ReflectionProbe.SetExtents*"></a>
+  <h4 id="Godot_ReflectionProbe_SetExtents_Godot_Vector3_" data-uid="Godot.ReflectionProbe.SetExtents(Godot.Vector3)">SetExtents(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetExtents(Vector3 extents)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">extents</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetIntensity_" data-uid="Godot.ReflectionProbe.SetIntensity*"></a>
+  <h4 id="Godot_ReflectionProbe_SetIntensity_System_Single_" data-uid="Godot.ReflectionProbe.SetIntensity(System.Single)">SetIntensity(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIntensity(float intensity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">intensity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetInteriorAmbient_" data-uid="Godot.ReflectionProbe.SetInteriorAmbient*"></a>
+  <h4 id="Godot_ReflectionProbe_SetInteriorAmbient_Godot_Color_" data-uid="Godot.ReflectionProbe.SetInteriorAmbient(Godot.Color)">SetInteriorAmbient(Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInteriorAmbient(Color ambient)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td><span class="parametername">ambient</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetInteriorAmbientEnergy_" data-uid="Godot.ReflectionProbe.SetInteriorAmbientEnergy*"></a>
+  <h4 id="Godot_ReflectionProbe_SetInteriorAmbientEnergy_System_Single_" data-uid="Godot.ReflectionProbe.SetInteriorAmbientEnergy(System.Single)">SetInteriorAmbientEnergy(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInteriorAmbientEnergy(float ambientEnergy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">ambientEnergy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetInteriorAmbientProbeContribution_" data-uid="Godot.ReflectionProbe.SetInteriorAmbientProbeContribution*"></a>
+  <h4 id="Godot_ReflectionProbe_SetInteriorAmbientProbeContribution_System_Single_" data-uid="Godot.ReflectionProbe.SetInteriorAmbientProbeContribution(System.Single)">SetInteriorAmbientProbeContribution(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInteriorAmbientProbeContribution(float ambientProbeContribution)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">ambientProbeContribution</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetMaxDistance_" data-uid="Godot.ReflectionProbe.SetMaxDistance*"></a>
+  <h4 id="Godot_ReflectionProbe_SetMaxDistance_System_Single_" data-uid="Godot.ReflectionProbe.SetMaxDistance(System.Single)">SetMaxDistance(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMaxDistance(float maxDistance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">maxDistance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetOriginOffset_" data-uid="Godot.ReflectionProbe.SetOriginOffset*"></a>
+  <h4 id="Godot_ReflectionProbe_SetOriginOffset_Godot_Vector3_" data-uid="Godot.ReflectionProbe.SetOriginOffset(Godot.Vector3)">SetOriginOffset(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOriginOffset(Vector3 originOffset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">originOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_ReflectionProbe_SetUpdateMode_" data-uid="Godot.ReflectionProbe.SetUpdateMode*"></a>
+  <h4 id="Godot_ReflectionProbe_SetUpdateMode_Godot_ReflectionProbe_UpdateModeEnum_" data-uid="Godot.ReflectionProbe.SetUpdateMode(Godot.ReflectionProbe.UpdateModeEnum)">SetUpdateMode(ReflectionProbe.UpdateModeEnum)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUpdateMode(ReflectionProbe.UpdateModeEnum mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.ReflectionProbe.UpdateModeEnum.html">ReflectionProbe.UpdateModeEnum</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

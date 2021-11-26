@@ -1,0 +1,1183 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AnimationNode
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AnimationNode
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.AnimationNode">
+  
+  
+  <h1 id="Godot_AnimationNode" data-uid="Godot.AnimationNode" class="text-break">Class AnimationNode
+  </h1>
+  <div class="markdown level0 summary"><p>Base resource for <a class="xref" href="Godot.AnimationTree.html">AnimationTree</a> nodes. In general, it&apos;s not used directly, but you can create custom ones with custom blending formulas.</p>
+<p>Inherit this when creating nodes mainly for use in <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>, otherwise <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a> should be used instead.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Reference.html">Reference</a></div>
+    <div class="level3"><a class="xref" href="Godot.Resource.html">Resource</a></div>
+    <div class="level4"><span class="xref">AnimationNode</span></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationNodeAdd2.html">AnimationNodeAdd2</a></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationNodeAdd3.html">AnimationNodeAdd3</a></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationNodeBlend2.html">AnimationNodeBlend2</a></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationNodeBlend3.html">AnimationNodeBlend3</a></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationNodeOneShot.html">AnimationNodeOneShot</a></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationNodeOutput.html">AnimationNodeOutput</a></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationNodeTimeScale.html">AnimationNodeTimeScale</a></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationNodeTimeSeek.html">AnimationNodeTimeSeek</a></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationNodeTransition.html">AnimationNodeTransition</a></div>
+      <div class="level5"><a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource__SetupLocalToScene">Resource._SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetPath_System_String_">Resource.SetPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_TakeOverPath_System_String_">Resource.TakeOverPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetPath">Resource.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetName_System_String_">Resource.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetName">Resource.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetRid">Resource.GetRid()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetLocalToScene_System_Boolean_">Resource.SetLocalToScene(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_IsLocalToScene">Resource.IsLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetLocalScene">Resource.GetLocalScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetupLocalToScene">Resource.SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_EmitChanged">Resource.EmitChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_Duplicate_System_Boolean_">Resource.Duplicate(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceLocalToScene">Resource.ResourceLocalToScene</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourcePath">Resource.ResourcePath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceName">Resource.ResourceName</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_InitRef">Reference.InitRef()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Reference_">Reference.Reference_()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Unreference">Reference.Unreference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_AnimationNode_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AnimationNode : Resource, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_AnimationNode__ctor_" data-uid="Godot.AnimationNode.#ctor*"></a>
+  <h4 id="Godot_AnimationNode__ctor" data-uid="Godot.AnimationNode.#ctor">AnimationNode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationNode()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_AnimationNode_FilterEnabled_" data-uid="Godot.AnimationNode.FilterEnabled*"></a>
+  <h4 id="Godot_AnimationNode_FilterEnabled" data-uid="Godot.AnimationNode.FilterEnabled">FilterEnabled</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, filtering is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FilterEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_Filters_" data-uid="Godot.AnimationNode.Filters*"></a>
+  <h4 id="Godot_AnimationNode_Filters" data-uid="Godot.AnimationNode.Filters">Filters</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Array Filters { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_AnimationNode_AddInput_" data-uid="Godot.AnimationNode.AddInput*"></a>
+  <h4 id="Godot_AnimationNode_AddInput_System_String_" data-uid="Godot.AnimationNode.AddInput(System.String)">AddInput(String)</h4>
+  <div class="markdown level1 summary"><p>Adds an input to the node. This is only useful for nodes created for use in an <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddInput(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_BlendAnimation_" data-uid="Godot.AnimationNode.BlendAnimation*"></a>
+  <h4 id="Godot_AnimationNode_BlendAnimation_System_String_System_Single_System_Single_System_Boolean_System_Single_" data-uid="Godot.AnimationNode.BlendAnimation(System.String,System.Single,System.Single,System.Boolean,System.Single)">BlendAnimation(String, Single, Single, Boolean, Single)</h4>
+  <div class="markdown level1 summary"><p>Blend an animation by <code>blend</code> amount (name must be valid in the linked <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a>). A <code>time</code> and <code>delta</code> may be passed, as well as whether <code>seek</code> happened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BlendAnimation(string animation, float time, float delta, bool seeked, float blend)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">animation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">time</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">delta</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">seeked</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">blend</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_BlendInput_" data-uid="Godot.AnimationNode.BlendInput*"></a>
+  <h4 id="Godot_AnimationNode_BlendInput_System_Int32_System_Single_System_Boolean_System_Single_Godot_AnimationNode_FilterAction_System_Boolean_" data-uid="Godot.AnimationNode.BlendInput(System.Int32,System.Single,System.Boolean,System.Single,Godot.AnimationNode.FilterAction,System.Boolean)">BlendInput(Int32, Single, Boolean, Single, AnimationNode.FilterAction, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Blend an input. This is only useful for nodes created for an <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>. The <code>time</code> parameter is a relative delta, unless <code>seek</code> is <code>true</code>, in which case it is absolute. A filter mode may be optionally passed (see <a class="xref" href="Godot.AnimationNode.FilterAction.html">AnimationNode.FilterAction</a> for options).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BlendInput(int inputIndex, float time, bool seek, float blend, AnimationNode.FilterAction filter, bool optimize = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">inputIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">time</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">seek</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">blend</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.AnimationNode.FilterAction.html">AnimationNode.FilterAction</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">optimize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_BlendNode_" data-uid="Godot.AnimationNode.BlendNode*"></a>
+  <h4 id="Godot_AnimationNode_BlendNode_System_String_Godot_AnimationNode_System_Single_System_Boolean_System_Single_Godot_AnimationNode_FilterAction_System_Boolean_" data-uid="Godot.AnimationNode.BlendNode(System.String,Godot.AnimationNode,System.Single,System.Boolean,System.Single,Godot.AnimationNode.FilterAction,System.Boolean)">BlendNode(String, AnimationNode, Single, Boolean, Single, AnimationNode.FilterAction, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Blend another animation node (in case this node contains children animation nodes). This function is only useful if you inherit from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a> instead, else editors will not display your node for addition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BlendNode(string name, AnimationNode node, float time, bool seek, float blend, AnimationNode.FilterAction filter, bool optimize = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.AnimationNode.html">AnimationNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">time</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">seek</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">blend</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.AnimationNode.FilterAction.html">AnimationNode.FilterAction</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">optimize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_GetCaption_" data-uid="Godot.AnimationNode.GetCaption*"></a>
+  <h4 id="Godot_AnimationNode_GetCaption" data-uid="Godot.AnimationNode.GetCaption">GetCaption()</h4>
+  <div class="markdown level1 summary"><p>Gets the text caption for this node (used by some editors).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string GetCaption()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_GetChildByName_" data-uid="Godot.AnimationNode.GetChildByName*"></a>
+  <h4 id="Godot_AnimationNode_GetChildByName_System_String_" data-uid="Godot.AnimationNode.GetChildByName(System.String)">GetChildByName(String)</h4>
+  <div class="markdown level1 summary"><p>Gets a child node by index (used by editors inheriting from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Object GetChildByName(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Object.html">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_GetChildNodes_" data-uid="Godot.AnimationNode.GetChildNodes*"></a>
+  <h4 id="Godot_AnimationNode_GetChildNodes" data-uid="Godot.AnimationNode.GetChildNodes">GetChildNodes()</h4>
+  <div class="markdown level1 summary"><p>Gets all children nodes in order as a <code>name: node</code> dictionary. Only useful when inheriting <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Dictionary GetChildNodes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_GetInputCount_" data-uid="Godot.AnimationNode.GetInputCount*"></a>
+  <h4 id="Godot_AnimationNode_GetInputCount" data-uid="Godot.AnimationNode.GetInputCount">GetInputCount()</h4>
+  <div class="markdown level1 summary"><p>Amount of inputs in this node, only useful for nodes that go into <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetInputCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_GetInputName_" data-uid="Godot.AnimationNode.GetInputName*"></a>
+  <h4 id="Godot_AnimationNode_GetInputName_System_Int32_" data-uid="Godot.AnimationNode.GetInputName(System.Int32)">GetInputName(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the name of an input by index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetInputName(int input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_GetParameter_" data-uid="Godot.AnimationNode.GetParameter*"></a>
+  <h4 id="Godot_AnimationNode_GetParameter_System_String_" data-uid="Godot.AnimationNode.GetParameter(System.String)">GetParameter(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the value of a parameter. Parameters are custom local memory used for your nodes, given a resource can be reused in multiple trees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object GetParameter(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_GetParameterDefaultValue_" data-uid="Godot.AnimationNode.GetParameterDefaultValue*"></a>
+  <h4 id="Godot_AnimationNode_GetParameterDefaultValue_System_String_" data-uid="Godot.AnimationNode.GetParameterDefaultValue(System.String)">GetParameterDefaultValue(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the default value of a parameter. Parameters are custom local memory used for your nodes, given a resource can be reused in multiple trees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual object GetParameterDefaultValue(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_GetParameterList_" data-uid="Godot.AnimationNode.GetParameterList*"></a>
+  <h4 id="Godot_AnimationNode_GetParameterList" data-uid="Godot.AnimationNode.GetParameterList">GetParameterList()</h4>
+  <div class="markdown level1 summary"><p>Gets the property information for parameter. Parameters are custom local memory used for your nodes, given a resource can be reused in multiple trees. Format is similar to <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">GetPropertyList()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Array GetParameterList()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_HasFilter_" data-uid="Godot.AnimationNode.HasFilter*"></a>
+  <h4 id="Godot_AnimationNode_HasFilter" data-uid="Godot.AnimationNode.HasFilter">HasFilter()</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> whether you want the blend tree editor to display filter editing on this node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string HasFilter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_IsFilterEnabled_" data-uid="Godot.AnimationNode.IsFilterEnabled*"></a>
+  <h4 id="Godot_AnimationNode_IsFilterEnabled" data-uid="Godot.AnimationNode.IsFilterEnabled">IsFilterEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFilterEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_IsPathFiltered_" data-uid="Godot.AnimationNode.IsPathFiltered*"></a>
+  <h4 id="Godot_AnimationNode_IsPathFiltered_Godot_NodePath_" data-uid="Godot.AnimationNode.IsPathFiltered(Godot.NodePath)">IsPathFiltered(NodePath)</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> whether a given path is filtered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPathFiltered(NodePath path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NodePath.html">NodePath</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_Process_" data-uid="Godot.AnimationNode.Process*"></a>
+  <h4 id="Godot_AnimationNode_Process_System_Single_System_Boolean_" data-uid="Godot.AnimationNode.Process(System.Single,System.Boolean)">Process(Single, Boolean)</h4>
+  <div class="markdown level1 summary"><p>User-defined callback called when a custom node is processed. The <code>time</code> parameter is a relative delta, unless <code>seek</code> is <code>true</code>, in which case it is absolute.</p>
+<p>Here, call the <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_BlendInput_System_Int32_System_Single_System_Boolean_System_Single_Godot_AnimationNode_FilterAction_System_Boolean_">BlendInput(Int32, Single, Boolean, Single, AnimationNode.FilterAction, Boolean)</a>, <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_BlendNode_System_String_Godot_AnimationNode_System_Single_System_Boolean_System_Single_Godot_AnimationNode_FilterAction_System_Boolean_">BlendNode(String, AnimationNode, Single, Boolean, Single, AnimationNode.FilterAction, Boolean)</a> or <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_BlendAnimation_System_String_System_Single_System_Single_System_Boolean_System_Single_">BlendAnimation(String, Single, Single, Boolean, Single)</a> functions. You can also use <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_GetParameter_System_String_">GetParameter(String)</a> and <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_SetParameter_System_String_System_Object_">SetParameter(String, Object)</a> to modify local memory.</p>
+<p>This function should return the time left for the current animation to finish (if unsure, pass the value from the main blend being called).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Process(float time, bool seek)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">time</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">seek</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_RemoveInput_" data-uid="Godot.AnimationNode.RemoveInput*"></a>
+  <h4 id="Godot_AnimationNode_RemoveInput_System_Int32_" data-uid="Godot.AnimationNode.RemoveInput(System.Int32)">RemoveInput(Int32)</h4>
+  <div class="markdown level1 summary"><p>Removes an input, call this only when inactive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveInput(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_SetFilterEnabled_" data-uid="Godot.AnimationNode.SetFilterEnabled*"></a>
+  <h4 id="Godot_AnimationNode_SetFilterEnabled_System_Boolean_" data-uid="Godot.AnimationNode.SetFilterEnabled(System.Boolean)">SetFilterEnabled(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFilterEnabled(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_SetFilterPath_" data-uid="Godot.AnimationNode.SetFilterPath*"></a>
+  <h4 id="Godot_AnimationNode_SetFilterPath_Godot_NodePath_System_Boolean_" data-uid="Godot.AnimationNode.SetFilterPath(Godot.NodePath,System.Boolean)">SetFilterPath(NodePath, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Adds or removes a path for the filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFilterPath(NodePath path, bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NodePath.html">NodePath</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AnimationNode_SetParameter_" data-uid="Godot.AnimationNode.SetParameter*"></a>
+  <h4 id="Godot_AnimationNode_SetParameter_System_String_System_Object_" data-uid="Godot.AnimationNode.SetParameter(System.String,System.Object)">SetParameter(String, Object)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom parameter. These are used as local storage, because resources can be reused across the tree or scenes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetParameter(string name, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

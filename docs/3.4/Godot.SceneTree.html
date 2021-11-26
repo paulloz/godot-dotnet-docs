@@ -1,0 +1,2144 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SceneTree
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SceneTree
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.SceneTree">
+  
+  
+  <h1 id="Godot_SceneTree" data-uid="Godot.SceneTree" class="text-break">Class SceneTree
+  </h1>
+  <div class="markdown level0 summary"><p>As one of the most important classes, the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> manages the hierarchy of nodes in a scene as well as scenes themselves. Nodes can be added, retrieved and removed. The whole scene tree (and thus the current scene) can be paused. Scenes can be loaded, switched and reloaded.</p>
+<p>You can also use the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> to organize your nodes into groups: every node can be assigned as many groups as you want to create, e.g. an &quot;enemy&quot; group. You can then iterate these groups or even call methods and set properties on all the group&apos;s members at once.</p>
+<p><a class="xref" href="Godot.SceneTree.html">SceneTree</a> is the default <a class="xref" href="Godot.MainLoop.html">MainLoop</a> implementation used by scenes, and is thus in charge of the game loop.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.MainLoop.html">MainLoop</a></div>
+    <div class="level3"><span class="xref">SceneTree</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmMouseEnter">MainLoop.NotificationWmMouseEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmMouseExit">MainLoop.NotificationWmMouseExit</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmFocusIn">MainLoop.NotificationWmFocusIn</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmFocusOut">MainLoop.NotificationWmFocusOut</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmQuitRequest">MainLoop.NotificationWmQuitRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmGoBackRequest">MainLoop.NotificationWmGoBackRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmUnfocusRequest">MainLoop.NotificationWmUnfocusRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationOsMemoryWarning">MainLoop.NotificationOsMemoryWarning</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationTranslationChanged">MainLoop.NotificationTranslationChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmAbout">MainLoop.NotificationWmAbout</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationCrash">MainLoop.NotificationCrash</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationOsImeUpdate">MainLoop.NotificationOsImeUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationAppResumed">MainLoop.NotificationAppResumed</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationAppPaused">MainLoop.NotificationAppPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__DropFiles_System_String___System_Int32_">MainLoop._DropFiles(String[], Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__Finalize">MainLoop._Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__GlobalMenuAction_System_Object_System_Object_">MainLoop._GlobalMenuAction(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__Idle_System_Single_">MainLoop._Idle(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__Initialize">MainLoop._Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__InputEvent_Godot_InputEvent_">MainLoop._InputEvent(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__InputText_System_String_">MainLoop._InputText(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__Iteration_System_Single_">MainLoop._Iteration(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_InputEvent_Godot_InputEvent_">MainLoop.InputEvent(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_InputText_System_String_">MainLoop.InputText(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_Init">MainLoop.Init()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_Iteration_System_Single_">MainLoop.Iteration(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_Idle_System_Single_">MainLoop.Idle(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_Finish">MainLoop.Finish()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_SceneTree_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SceneTree : MainLoop, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_SceneTree__ctor_" data-uid="Godot.SceneTree.#ctor*"></a>
+  <h4 id="Godot_SceneTree__ctor" data-uid="Godot.SceneTree.#ctor">SceneTree()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneTree()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_SceneTree_CurrentScene_" data-uid="Godot.SceneTree.CurrentScene*"></a>
+  <h4 id="Godot_SceneTree_CurrentScene" data-uid="Godot.SceneTree.CurrentScene">CurrentScene</h4>
+  <div class="markdown level1 summary"><p>The current scene.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node CurrentScene { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Node.html">Node</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_DebugCollisionsHint_" data-uid="Godot.SceneTree.DebugCollisionsHint*"></a>
+  <h4 id="Godot_SceneTree_DebugCollisionsHint" data-uid="Godot.SceneTree.DebugCollisionsHint">DebugCollisionsHint</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, collision shapes will be visible when running the game from the editor for debugging purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DebugCollisionsHint { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_DebugNavigationHint_" data-uid="Godot.SceneTree.DebugNavigationHint*"></a>
+  <h4 id="Godot_SceneTree_DebugNavigationHint" data-uid="Godot.SceneTree.DebugNavigationHint">DebugNavigationHint</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, navigation polygons will be visible when running the game from the editor for debugging purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DebugNavigationHint { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_EditedSceneRoot_" data-uid="Godot.SceneTree.EditedSceneRoot*"></a>
+  <h4 id="Godot_SceneTree_EditedSceneRoot" data-uid="Godot.SceneTree.EditedSceneRoot">EditedSceneRoot</h4>
+  <div class="markdown level1 summary"><p>The root of the edited scene.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node EditedSceneRoot { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Node.html">Node</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_Multiplayer_" data-uid="Godot.SceneTree.Multiplayer*"></a>
+  <h4 id="Godot_SceneTree_Multiplayer" data-uid="Godot.SceneTree.Multiplayer">Multiplayer</h4>
+  <div class="markdown level1 summary"><p>The default <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a> instance for this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiplayerAPI Multiplayer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_MultiplayerPoll_" data-uid="Godot.SceneTree.MultiplayerPoll*"></a>
+  <h4 id="Godot_SceneTree_MultiplayerPoll" data-uid="Godot.SceneTree.MultiplayerPoll">MultiplayerPoll</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code> (default value), enables automatic polling of the <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a> for this SceneTree during <code>idle_frame</code>.</p>
+<p>If <code>false</code>, you need to manually call <a class="xref" href="Godot.MultiplayerAPI.html#Godot_MultiplayerAPI_Poll">Poll()</a> to process network packets and deliver RPCs/RSETs. This allows running RPCs/RSETs in a different loop (e.g. physics, thread, specific time step) and for manual <a class="xref" href="Godot.Mutex.html">Mutex</a> protection when accessing the <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a> from threads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MultiplayerPoll { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_NetworkPeer_" data-uid="Godot.SceneTree.NetworkPeer*"></a>
+  <h4 id="Godot_SceneTree_NetworkPeer" data-uid="Godot.SceneTree.NetworkPeer">NetworkPeer</h4>
+  <div class="markdown level1 summary"><p>The peer object to handle the RPC system (effectively enabling networking when set). Depending on the peer itself, the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> will become a network server (check with <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_IsNetworkServer">IsNetworkServer()</a>) and will set the root node&apos;s network mode to master, or it will become a regular peer with the root node set to puppet. All child nodes are set to inherit the network mode by default. Handling of networking-related events (connection, disconnection, new clients) is done by connecting to <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s signals.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkedMultiplayerPeer NetworkPeer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NetworkedMultiplayerPeer.html">NetworkedMultiplayerPeer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_Paused_" data-uid="Godot.SceneTree.Paused*"></a>
+  <h4 id="Godot_SceneTree_Paused" data-uid="Godot.SceneTree.Paused">Paused</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> is paused. Doing so will have the following behavior:</p>
+<p>- 2D and 3D physics will be stopped. This includes signals and collision detection.</p>
+<p>- <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>, <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> and <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">_Input(InputEvent)</a> will not be called anymore in nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Paused { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_RefuseNewNetworkConnections_" data-uid="Godot.SceneTree.RefuseNewNetworkConnections*"></a>
+  <h4 id="Godot_SceneTree_RefuseNewNetworkConnections" data-uid="Godot.SceneTree.RefuseNewNetworkConnections">RefuseNewNetworkConnections</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a> refuses new incoming connections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RefuseNewNetworkConnections { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_Root_" data-uid="Godot.SceneTree.Root*"></a>
+  <h4 id="Godot_SceneTree_Root" data-uid="Godot.SceneTree.Root">Root</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s root <a class="xref" href="Godot.Viewport.html">Viewport</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Viewport Root { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Viewport.html">Viewport</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_UseFontOversampling_" data-uid="Godot.SceneTree.UseFontOversampling*"></a>
+  <h4 id="Godot_SceneTree_UseFontOversampling" data-uid="Godot.SceneTree.UseFontOversampling">UseFontOversampling</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, font oversampling is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseFontOversampling { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_SceneTree_CallGroup_" data-uid="Godot.SceneTree.CallGroup*"></a>
+  <h4 id="Godot_SceneTree_CallGroup_System_String_System_String_System_Object___" data-uid="Godot.SceneTree.CallGroup(System.String,System.String,System.Object[])">CallGroup(String, String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Calls <code>method</code> on each member of the given group. You can pass arguments to <code>method</code> by specifying them at the end of the method call. This method is equivalent of calling <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroupFlags_System_Int32_System_String_System_String_System_Object___">CallGroupFlags(Int32, String, String, Object[])</a> with <a class="xref" href="Godot.SceneTree.GroupCallFlags.html#Godot_SceneTree_GroupCallFlags_Default">Default</a> flag.</p>
+<p>Note: <code>method</code> may only have 5 arguments at most (7 arguments passed to this method in total).</p>
+<p>Note: Due to design limitations, <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroup_System_String_System_String_System_Object___">CallGroup(String, String, Object[])</a> will fail silently if one of the arguments is <code>null</code>.</p>
+<p>Note: <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroup_System_String_System_String_System_Object___">CallGroup(String, String, Object[])</a> will always call methods with an one-frame delay, in a way similar to <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">CallDeferred(String, Object[])</a>. To call methods immediately, use <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroupFlags_System_Int32_System_String_System_String_System_Object___">CallGroupFlags(Int32, String, String, Object[])</a> with the <a class="xref" href="Godot.SceneTree.GroupCallFlags.html#Godot_SceneTree_GroupCallFlags_Realtime">Realtime</a> flag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object CallGroup(string group, string method, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">method</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_CallGroupFlags_" data-uid="Godot.SceneTree.CallGroupFlags*"></a>
+  <h4 id="Godot_SceneTree_CallGroupFlags_System_Int32_System_String_System_String_System_Object___" data-uid="Godot.SceneTree.CallGroupFlags(System.Int32,System.String,System.String,System.Object[])">CallGroupFlags(Int32, String, String, Object[])</h4>
+  <div class="markdown level1 summary"><p>Calls <code>method</code> on each member of the given group, respecting the given <a class="xref" href="Godot.SceneTree.GroupCallFlags.html">SceneTree.GroupCallFlags</a>. You can pass arguments to <code>method</code> by specifying them at the end of the method call.</p>
+<p>Note: <code>method</code> may only have 5 arguments at most (8 arguments passed to this method in total).</p>
+<p>Note: Due to design limitations, <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroupFlags_System_Int32_System_String_System_String_System_Object___">CallGroupFlags(Int32, String, String, Object[])</a> will fail silently if one of the arguments is <code>null</code>.</p>
+<p><pre><code># Call the method immediately and in reverse order.
+get_tree().call_group_flags(SceneTree.GROUP_CALL_REALTIME | SceneTree.GROUP_CALL_REVERSE, &quot;bases&quot;, &quot;destroy&quot;)</code></pre></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object CallGroupFlags(int flags, string group, string method, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">method</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_ChangeScene_" data-uid="Godot.SceneTree.ChangeScene*"></a>
+  <h4 id="Godot_SceneTree_ChangeScene_System_String_" data-uid="Godot.SceneTree.ChangeScene(System.String)">ChangeScene(String)</h4>
+  <div class="markdown level1 summary"><p>Changes the running scene to the one at the given <code>path</code>, after loading it into a <a class="xref" href="Godot.PackedScene.html">PackedScene</a> and creating a new instance.</p>
+<p>Returns <code>OK</code> on success, <code>ERR_CANT_OPEN</code> if the <code>path</code> cannot be loaded into a <a class="xref" href="Godot.PackedScene.html">PackedScene</a>, or <code>ERR_CANT_CREATE</code> if that scene cannot be instantiated.</p>
+<p>Note: The scene change is deferred, which means that the new scene node is added on the next idle frame. You won&apos;t be able to access it immediately after the <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_ChangeScene_System_String_">ChangeScene(String)</a> call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Error ChangeScene(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Error.html">Error</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_ChangeSceneTo_" data-uid="Godot.SceneTree.ChangeSceneTo*"></a>
+  <h4 id="Godot_SceneTree_ChangeSceneTo_Godot_PackedScene_" data-uid="Godot.SceneTree.ChangeSceneTo(Godot.PackedScene)">ChangeSceneTo(PackedScene)</h4>
+  <div class="markdown level1 summary"><p>Changes the running scene to a new instance of the given <a class="xref" href="Godot.PackedScene.html">PackedScene</a>.</p>
+<p>Returns <code>OK</code> on success or <code>ERR_CANT_CREATE</code> if the scene cannot be instantiated.</p>
+<p>Note: The scene change is deferred, which means that the new scene node is added on the next idle frame. You won&apos;t be able to access it immediately after the <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_ChangeSceneTo_Godot_PackedScene_">ChangeSceneTo(PackedScene)</a> call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Error ChangeSceneTo(PackedScene packedScene)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.PackedScene.html">PackedScene</a></td>
+        <td><span class="parametername">packedScene</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Error.html">Error</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_CreateTimer_" data-uid="Godot.SceneTree.CreateTimer*"></a>
+  <h4 id="Godot_SceneTree_CreateTimer_System_Single_System_Boolean_" data-uid="Godot.SceneTree.CreateTimer(System.Single,System.Boolean)">CreateTimer(Single, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.SceneTreeTimer.html">SceneTreeTimer</a> which will <code>SceneTreeTimer.timeout</code> after the given time in seconds elapsed in this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>. If <code>pause_mode_process</code> is set to <code>false</code>, pausing the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> will also pause the timer.</p>
+<p>Commonly used to create a one-shot delay timer as in the following example:</p>
+<p><pre><code>func some_function():
+    print(&quot;start&quot;)
+    yield(get_tree().create_timer(1.0), &quot;timeout&quot;)
+    print(&quot;end&quot;)</code></pre></p>
+<p>The timer will be automatically freed after its time elapses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneTreeTimer CreateTimer(float timeSec, bool pauseModeProcess = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">timeSec</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">pauseModeProcess</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.SceneTreeTimer.html">SceneTreeTimer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetCurrentScene_" data-uid="Godot.SceneTree.GetCurrentScene*"></a>
+  <h4 id="Godot_SceneTree_GetCurrentScene" data-uid="Godot.SceneTree.GetCurrentScene">GetCurrentScene()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node GetCurrentScene()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Node.html">Node</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetEditedSceneRoot_" data-uid="Godot.SceneTree.GetEditedSceneRoot*"></a>
+  <h4 id="Godot_SceneTree_GetEditedSceneRoot" data-uid="Godot.SceneTree.GetEditedSceneRoot">GetEditedSceneRoot()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Node GetEditedSceneRoot()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Node.html">Node</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetFrame_" data-uid="Godot.SceneTree.GetFrame*"></a>
+  <h4 id="Godot_SceneTree_GetFrame" data-uid="Godot.SceneTree.GetFrame">GetFrame()</h4>
+  <div class="markdown level1 summary"><p>Returns the current frame number, i.e. the total frame count since the application started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long GetFrame()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetMultiplayer_" data-uid="Godot.SceneTree.GetMultiplayer*"></a>
+  <h4 id="Godot_SceneTree_GetMultiplayer" data-uid="Godot.SceneTree.GetMultiplayer">GetMultiplayer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiplayerAPI GetMultiplayer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetNetworkConnectedPeers_" data-uid="Godot.SceneTree.GetNetworkConnectedPeers*"></a>
+  <h4 id="Godot_SceneTree_GetNetworkConnectedPeers" data-uid="Godot.SceneTree.GetNetworkConnectedPeers">GetNetworkConnectedPeers()</h4>
+  <div class="markdown level1 summary"><p>Returns the peer IDs of all connected peers of this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int[] GetNetworkConnectedPeers()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetNetworkPeer_" data-uid="Godot.SceneTree.GetNetworkPeer*"></a>
+  <h4 id="Godot_SceneTree_GetNetworkPeer" data-uid="Godot.SceneTree.GetNetworkPeer">GetNetworkPeer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkedMultiplayerPeer GetNetworkPeer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NetworkedMultiplayerPeer.html">NetworkedMultiplayerPeer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetNetworkUniqueId_" data-uid="Godot.SceneTree.GetNetworkUniqueId*"></a>
+  <h4 id="Godot_SceneTree_GetNetworkUniqueId" data-uid="Godot.SceneTree.GetNetworkUniqueId">GetNetworkUniqueId()</h4>
+  <div class="markdown level1 summary"><p>Returns the unique peer ID of this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetNetworkUniqueId()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetNodeCount_" data-uid="Godot.SceneTree.GetNodeCount*"></a>
+  <h4 id="Godot_SceneTree_GetNodeCount" data-uid="Godot.SceneTree.GetNodeCount">GetNodeCount()</h4>
+  <div class="markdown level1 summary"><p>Returns the number of nodes in this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetNodeCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetNodesInGroup_" data-uid="Godot.SceneTree.GetNodesInGroup*"></a>
+  <h4 id="Godot_SceneTree_GetNodesInGroup_System_String_" data-uid="Godot.SceneTree.GetNodesInGroup(System.String)">GetNodesInGroup(String)</h4>
+  <div class="markdown level1 summary"><p>Returns a list of all nodes assigned to the given group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Array GetNodesInGroup(string group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetRoot_" data-uid="Godot.SceneTree.GetRoot*"></a>
+  <h4 id="Godot_SceneTree_GetRoot" data-uid="Godot.SceneTree.GetRoot">GetRoot()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Viewport GetRoot()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Viewport.html">Viewport</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_GetRpcSenderId_" data-uid="Godot.SceneTree.GetRpcSenderId*"></a>
+  <h4 id="Godot_SceneTree_GetRpcSenderId" data-uid="Godot.SceneTree.GetRpcSenderId">GetRpcSenderId()</h4>
+  <div class="markdown level1 summary"><p>Returns the sender&apos;s peer ID for the most recently received RPC call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetRpcSenderId()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_HasGroup_" data-uid="Godot.SceneTree.HasGroup*"></a>
+  <h4 id="Godot_SceneTree_HasGroup_System_String_" data-uid="Godot.SceneTree.HasGroup(System.String)">HasGroup(String)</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given group exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasGroup(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_HasNetworkPeer_" data-uid="Godot.SceneTree.HasNetworkPeer*"></a>
+  <h4 id="Godot_SceneTree_HasNetworkPeer" data-uid="Godot.SceneTree.HasNetworkPeer">HasNetworkPeer()</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if there is a <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a> set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasNetworkPeer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_IsDebuggingCollisionsHint_" data-uid="Godot.SceneTree.IsDebuggingCollisionsHint*"></a>
+  <h4 id="Godot_SceneTree_IsDebuggingCollisionsHint" data-uid="Godot.SceneTree.IsDebuggingCollisionsHint">IsDebuggingCollisionsHint()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDebuggingCollisionsHint()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_IsDebuggingNavigationHint_" data-uid="Godot.SceneTree.IsDebuggingNavigationHint*"></a>
+  <h4 id="Godot_SceneTree_IsDebuggingNavigationHint" data-uid="Godot.SceneTree.IsDebuggingNavigationHint">IsDebuggingNavigationHint()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDebuggingNavigationHint()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_IsInputHandled_" data-uid="Godot.SceneTree.IsInputHandled*"></a>
+  <h4 id="Godot_SceneTree_IsInputHandled" data-uid="Godot.SceneTree.IsInputHandled">IsInputHandled()</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the most recent <a class="xref" href="Godot.InputEvent.html">InputEvent</a> was marked as handled with <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_SetInputAsHandled">SetInputAsHandled()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInputHandled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_IsMultiplayerPollEnabled_" data-uid="Godot.SceneTree.IsMultiplayerPollEnabled*"></a>
+  <h4 id="Godot_SceneTree_IsMultiplayerPollEnabled" data-uid="Godot.SceneTree.IsMultiplayerPollEnabled">IsMultiplayerPollEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMultiplayerPollEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_IsNetworkServer_" data-uid="Godot.SceneTree.IsNetworkServer*"></a>
+  <h4 id="Godot_SceneTree_IsNetworkServer" data-uid="Godot.SceneTree.IsNetworkServer">IsNetworkServer()</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a> is in server mode (listening for connections).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNetworkServer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_IsPaused_" data-uid="Godot.SceneTree.IsPaused*"></a>
+  <h4 id="Godot_SceneTree_IsPaused" data-uid="Godot.SceneTree.IsPaused">IsPaused()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaused()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_IsRefusingNewNetworkConnections_" data-uid="Godot.SceneTree.IsRefusingNewNetworkConnections*"></a>
+  <h4 id="Godot_SceneTree_IsRefusingNewNetworkConnections" data-uid="Godot.SceneTree.IsRefusingNewNetworkConnections">IsRefusingNewNetworkConnections()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRefusingNewNetworkConnections()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_IsUsingFontOversampling_" data-uid="Godot.SceneTree.IsUsingFontOversampling*"></a>
+  <h4 id="Godot_SceneTree_IsUsingFontOversampling" data-uid="Godot.SceneTree.IsUsingFontOversampling">IsUsingFontOversampling()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUsingFontOversampling()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_NotifyGroup_" data-uid="Godot.SceneTree.NotifyGroup*"></a>
+  <h4 id="Godot_SceneTree_NotifyGroup_System_String_System_Int32_" data-uid="Godot.SceneTree.NotifyGroup(System.String,System.Int32)">NotifyGroup(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Sends the given notification to all members of the <code>group</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NotifyGroup(string group, int notification)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">notification</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_NotifyGroupFlags_" data-uid="Godot.SceneTree.NotifyGroupFlags*"></a>
+  <h4 id="Godot_SceneTree_NotifyGroupFlags_System_UInt32_System_String_System_Int32_" data-uid="Godot.SceneTree.NotifyGroupFlags(System.UInt32,System.String,System.Int32)">NotifyGroupFlags(UInt32, String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Sends the given notification to all members of the <code>group</code>, respecting the given <a class="xref" href="Godot.SceneTree.GroupCallFlags.html">SceneTree.GroupCallFlags</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NotifyGroupFlags(uint callFlags, string group, int notification)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">callFlags</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">notification</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_QueueDelete_" data-uid="Godot.SceneTree.QueueDelete*"></a>
+  <h4 id="Godot_SceneTree_QueueDelete_Godot_Object_" data-uid="Godot.SceneTree.QueueDelete(Godot.Object)">QueueDelete(Object)</h4>
+  <div class="markdown level1 summary"><p>Queues the given object for deletion, delaying the call to <a class="xref" href="Godot.Object.html#Godot_Object_Free">Free()</a> to after the current frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void QueueDelete(Object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Object.html">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_Quit_" data-uid="Godot.SceneTree.Quit*"></a>
+  <h4 id="Godot_SceneTree_Quit_System_Int32_" data-uid="Godot.SceneTree.Quit(System.Int32)">Quit(Int32)</h4>
+  <div class="markdown level1 summary"><p>Quits the application at the end of the current iteration. A process <code>exit_code</code> can optionally be passed as an argument. If this argument is <code>0</code> or greater, it will override the <a class="xref" href="Godot.OS.html#Godot_OS_ExitCode">ExitCode</a> defined before quitting the application.</p>
+<p>Note: On iOS this method doesn&apos;t work. Instead, as recommended by the iOS Human Interface Guidelines, the user is expected to close apps via the Home button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Quit(int exitCode = -1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">exitCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_ReloadCurrentScene_" data-uid="Godot.SceneTree.ReloadCurrentScene*"></a>
+  <h4 id="Godot_SceneTree_ReloadCurrentScene" data-uid="Godot.SceneTree.ReloadCurrentScene">ReloadCurrentScene()</h4>
+  <div class="markdown level1 summary"><p>Reloads the currently active scene.</p>
+<p>Returns <code>OK</code> on success, <code>ERR_UNCONFIGURED</code> if no <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CurrentScene">CurrentScene</a> was defined yet, <code>ERR_CANT_OPEN</code> if <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CurrentScene">CurrentScene</a> cannot be loaded into a <a class="xref" href="Godot.PackedScene.html">PackedScene</a>, or <code>ERR_CANT_CREATE</code> if the scene cannot be instantiated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Error ReloadCurrentScene()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Error.html">Error</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetAutoAcceptQuit_" data-uid="Godot.SceneTree.SetAutoAcceptQuit*"></a>
+  <h4 id="Godot_SceneTree_SetAutoAcceptQuit_System_Boolean_" data-uid="Godot.SceneTree.SetAutoAcceptQuit(System.Boolean)">SetAutoAcceptQuit(Boolean)</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the application automatically accepts quitting. Enabled by default.</p>
+<p>For mobile platforms, see <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_SetQuitOnGoBack_System_Boolean_">SetQuitOnGoBack(Boolean)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAutoAcceptQuit(bool enabled)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetCurrentScene_" data-uid="Godot.SceneTree.SetCurrentScene*"></a>
+  <h4 id="Godot_SceneTree_SetCurrentScene_Godot_Node_" data-uid="Godot.SceneTree.SetCurrentScene(Godot.Node)">SetCurrentScene(Node)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCurrentScene(Node childNode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Node.html">Node</a></td>
+        <td><span class="parametername">childNode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetDebugCollisionsHint_" data-uid="Godot.SceneTree.SetDebugCollisionsHint*"></a>
+  <h4 id="Godot_SceneTree_SetDebugCollisionsHint_System_Boolean_" data-uid="Godot.SceneTree.SetDebugCollisionsHint(System.Boolean)">SetDebugCollisionsHint(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDebugCollisionsHint(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetDebugNavigationHint_" data-uid="Godot.SceneTree.SetDebugNavigationHint*"></a>
+  <h4 id="Godot_SceneTree_SetDebugNavigationHint_System_Boolean_" data-uid="Godot.SceneTree.SetDebugNavigationHint(System.Boolean)">SetDebugNavigationHint(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDebugNavigationHint(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetEditedSceneRoot_" data-uid="Godot.SceneTree.SetEditedSceneRoot*"></a>
+  <h4 id="Godot_SceneTree_SetEditedSceneRoot_Godot_Node_" data-uid="Godot.SceneTree.SetEditedSceneRoot(Godot.Node)">SetEditedSceneRoot(Node)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEditedSceneRoot(Node scene)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Node.html">Node</a></td>
+        <td><span class="parametername">scene</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetGroup_" data-uid="Godot.SceneTree.SetGroup*"></a>
+  <h4 id="Godot_SceneTree_SetGroup_System_String_System_String_System_Object_" data-uid="Godot.SceneTree.SetGroup(System.String,System.String,System.Object)">SetGroup(String, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Sets the given <code>property</code> to <code>value</code> on all members of the given group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGroup(string group, string property, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">property</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetGroupFlags_" data-uid="Godot.SceneTree.SetGroupFlags*"></a>
+  <h4 id="Godot_SceneTree_SetGroupFlags_System_UInt32_System_String_System_String_System_Object_" data-uid="Godot.SceneTree.SetGroupFlags(System.UInt32,System.String,System.String,System.Object)">SetGroupFlags(UInt32, String, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Sets the given <code>property</code> to <code>value</code> on all members of the given group, respecting the given <a class="xref" href="Godot.SceneTree.GroupCallFlags.html">SceneTree.GroupCallFlags</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGroupFlags(uint callFlags, string group, string property, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">callFlags</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">group</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">property</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetInputAsHandled_" data-uid="Godot.SceneTree.SetInputAsHandled*"></a>
+  <h4 id="Godot_SceneTree_SetInputAsHandled" data-uid="Godot.SceneTree.SetInputAsHandled">SetInputAsHandled()</h4>
+  <div class="markdown level1 summary"><p>Marks the most recent <a class="xref" href="Godot.InputEvent.html">InputEvent</a> as handled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInputAsHandled()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_SceneTree_SetMultiplayer_" data-uid="Godot.SceneTree.SetMultiplayer*"></a>
+  <h4 id="Godot_SceneTree_SetMultiplayer_Godot_MultiplayerAPI_" data-uid="Godot.SceneTree.SetMultiplayer(Godot.MultiplayerAPI)">SetMultiplayer(MultiplayerAPI)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMultiplayer(MultiplayerAPI multiplayer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a></td>
+        <td><span class="parametername">multiplayer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetMultiplayerPollEnabled_" data-uid="Godot.SceneTree.SetMultiplayerPollEnabled*"></a>
+  <h4 id="Godot_SceneTree_SetMultiplayerPollEnabled_System_Boolean_" data-uid="Godot.SceneTree.SetMultiplayerPollEnabled(System.Boolean)">SetMultiplayerPollEnabled(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMultiplayerPollEnabled(bool enabled)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetNetworkPeer_" data-uid="Godot.SceneTree.SetNetworkPeer*"></a>
+  <h4 id="Godot_SceneTree_SetNetworkPeer_Godot_NetworkedMultiplayerPeer_" data-uid="Godot.SceneTree.SetNetworkPeer(Godot.NetworkedMultiplayerPeer)">SetNetworkPeer(NetworkedMultiplayerPeer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetNetworkPeer(NetworkedMultiplayerPeer peer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NetworkedMultiplayerPeer.html">NetworkedMultiplayerPeer</a></td>
+        <td><span class="parametername">peer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetPause_" data-uid="Godot.SceneTree.SetPause*"></a>
+  <h4 id="Godot_SceneTree_SetPause_System_Boolean_" data-uid="Godot.SceneTree.SetPause(System.Boolean)">SetPause(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPause(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetQuitOnGoBack_" data-uid="Godot.SceneTree.SetQuitOnGoBack*"></a>
+  <h4 id="Godot_SceneTree_SetQuitOnGoBack_System_Boolean_" data-uid="Godot.SceneTree.SetQuitOnGoBack(System.Boolean)">SetQuitOnGoBack(Boolean)</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the application quits automatically on going back (e.g. on Android). Enabled by default.</p>
+<p>To handle &apos;Go Back&apos; button when this option is disabled, use <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmGoBackRequest">NotificationWmGoBackRequest</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetQuitOnGoBack(bool enabled)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetRefuseNewNetworkConnections_" data-uid="Godot.SceneTree.SetRefuseNewNetworkConnections*"></a>
+  <h4 id="Godot_SceneTree_SetRefuseNewNetworkConnections_System_Boolean_" data-uid="Godot.SceneTree.SetRefuseNewNetworkConnections(System.Boolean)">SetRefuseNewNetworkConnections(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRefuseNewNetworkConnections(bool refuse)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">refuse</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetScreenStretch_" data-uid="Godot.SceneTree.SetScreenStretch*"></a>
+  <h4 id="Godot_SceneTree_SetScreenStretch_Godot_SceneTree_StretchMode_Godot_SceneTree_StretchAspect_Godot_Vector2_System_Single_" data-uid="Godot.SceneTree.SetScreenStretch(Godot.SceneTree.StretchMode,Godot.SceneTree.StretchAspect,Godot.Vector2,System.Single)">SetScreenStretch(SceneTree.StretchMode, SceneTree.StretchAspect, Vector2, Single)</h4>
+  <div class="markdown level1 summary"><p>Configures screen stretching to the given <a class="xref" href="Godot.SceneTree.StretchMode.html">SceneTree.StretchMode</a>, <a class="xref" href="Godot.SceneTree.StretchAspect.html">SceneTree.StretchAspect</a>, minimum size and <code>scale</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetScreenStretch(SceneTree.StretchMode mode, SceneTree.StretchAspect aspect, Vector2 minsize, float scale = 1F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.SceneTree.StretchMode.html">SceneTree.StretchMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.SceneTree.StretchAspect.html">SceneTree.StretchAspect</a></td>
+        <td><span class="parametername">aspect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">minsize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scale</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SceneTree_SetUseFontOversampling_" data-uid="Godot.SceneTree.SetUseFontOversampling*"></a>
+  <h4 id="Godot_SceneTree_SetUseFontOversampling_System_Boolean_" data-uid="Godot.SceneTree.SetUseFontOversampling(System.Boolean)">SetUseFontOversampling(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUseFontOversampling(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

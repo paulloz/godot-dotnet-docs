@@ -1,0 +1,1948 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StyleBoxFlat
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StyleBoxFlat
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.StyleBoxFlat">
+  
+  
+  <h1 id="Godot_StyleBoxFlat" data-uid="Godot.StyleBoxFlat" class="text-break">Class StyleBoxFlat
+  </h1>
+  <div class="markdown level0 summary"><p>This <a class="xref" href="Godot.StyleBox.html">StyleBox</a> can be used to achieve all kinds of looks without the need of a texture. The following properties are customizable:</p>
+<p>- Color</p>
+<p>- Border width (individual width for each border)</p>
+<p>- Rounded corners (individual radius for each corner)</p>
+<p>- Shadow (with blur and offset)</p>
+<p>Setting corner radius to high values is allowed. As soon as corners overlap, the stylebox will switch to a relative system. Example:</p>
+<p><pre><code>height = 30
+corner_radius_top_left = 50
+corner_radius_bottom_left = 100</code></pre></p>
+<p>The relative system now would take the 1:2 ratio of the two left corners to calculate the actual corner width. Both corners added will never be more than the height. Result:</p>
+<p><pre><code>corner_radius_top_left: 10
+corner_radius_bottom_left: 20</code></pre></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Reference.html">Reference</a></div>
+    <div class="level3"><a class="xref" href="Godot.Resource.html">Resource</a></div>
+    <div class="level4"><a class="xref" href="Godot.StyleBox.html">StyleBox</a></div>
+    <div class="level5"><span class="xref">StyleBoxFlat</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_TestMask_Godot_Vector2_Godot_Rect2_">StyleBox.TestMask(Vector2, Rect2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_SetDefaultMargin_Godot_Margin_System_Single_">StyleBox.SetDefaultMargin(Margin, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetDefaultMargin_Godot_Margin_">StyleBox.GetDefaultMargin(Margin)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetMargin_Godot_Margin_">StyleBox.GetMargin(Margin)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetMinimumSize">StyleBox.GetMinimumSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetCenterSize">StyleBox.GetCenterSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetOffset">StyleBox.GetOffset()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetCurrentItemDrawn">StyleBox.GetCurrentItemDrawn()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_Draw_Godot_RID_Godot_Rect2_">StyleBox.Draw(RID, Rect2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginLeft">StyleBox.ContentMarginLeft</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginRight">StyleBox.ContentMarginRight</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginTop">StyleBox.ContentMarginTop</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginBottom">StyleBox.ContentMarginBottom</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource__SetupLocalToScene">Resource._SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetPath_System_String_">Resource.SetPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_TakeOverPath_System_String_">Resource.TakeOverPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetPath">Resource.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetName_System_String_">Resource.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetName">Resource.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetRid">Resource.GetRid()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetLocalToScene_System_Boolean_">Resource.SetLocalToScene(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_IsLocalToScene">Resource.IsLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetLocalScene">Resource.GetLocalScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetupLocalToScene">Resource.SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_EmitChanged">Resource.EmitChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_Duplicate_System_Boolean_">Resource.Duplicate(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceLocalToScene">Resource.ResourceLocalToScene</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourcePath">Resource.ResourcePath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceName">Resource.ResourceName</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_InitRef">Reference.InitRef()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Reference_">Reference.Reference_()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Unreference">Reference.Unreference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_StyleBoxFlat_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StyleBoxFlat : StyleBox, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_StyleBoxFlat__ctor_" data-uid="Godot.StyleBoxFlat.#ctor*"></a>
+  <h4 id="Godot_StyleBoxFlat__ctor" data-uid="Godot.StyleBoxFlat.#ctor">StyleBoxFlat()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StyleBoxFlat()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_StyleBoxFlat_AntiAliasing_" data-uid="Godot.StyleBoxFlat.AntiAliasing*"></a>
+  <h4 id="Godot_StyleBoxFlat_AntiAliasing" data-uid="Godot.StyleBoxFlat.AntiAliasing">AntiAliasing</h4>
+  <div class="markdown level1 summary"><p>Antialiasing draws a small ring around the edges, which fades to transparency. As a result, edges look much smoother. This is only noticeable when using rounded corners.</p>
+<p>Note: When using beveled corners with 45-degree angles (<a class="xref" href="Godot.StyleBoxFlat.html#Godot_StyleBoxFlat_CornerDetail">CornerDetail</a> = 1), it is recommended to set <a class="xref" href="Godot.StyleBoxFlat.html#Godot_StyleBoxFlat_AntiAliasing">AntiAliasing</a> to <code>false</code> to ensure crisp visuals and avoid possible visual glitches.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AntiAliasing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_AntiAliasingSize_" data-uid="Godot.StyleBoxFlat.AntiAliasingSize*"></a>
+  <h4 id="Godot_StyleBoxFlat_AntiAliasingSize" data-uid="Godot.StyleBoxFlat.AntiAliasingSize">AntiAliasingSize</h4>
+  <div class="markdown level1 summary"><p>This changes the size of the faded ring. Higher values can be used to achieve a &quot;blurry&quot; effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AntiAliasingSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_BgColor_" data-uid="Godot.StyleBoxFlat.BgColor*"></a>
+  <h4 id="Godot_StyleBoxFlat_BgColor" data-uid="Godot.StyleBoxFlat.BgColor">BgColor</h4>
+  <div class="markdown level1 summary"><p>The background color of the stylebox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color BgColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_BorderBlend_" data-uid="Godot.StyleBoxFlat.BorderBlend*"></a>
+  <h4 id="Godot_StyleBoxFlat_BorderBlend" data-uid="Godot.StyleBoxFlat.BorderBlend">BorderBlend</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the border will fade into the background color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BorderBlend { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_BorderColor_" data-uid="Godot.StyleBoxFlat.BorderColor*"></a>
+  <h4 id="Godot_StyleBoxFlat_BorderColor" data-uid="Godot.StyleBoxFlat.BorderColor">BorderColor</h4>
+  <div class="markdown level1 summary"><p>Sets the color of the border.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color BorderColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_BorderWidthBottom_" data-uid="Godot.StyleBoxFlat.BorderWidthBottom*"></a>
+  <h4 id="Godot_StyleBoxFlat_BorderWidthBottom" data-uid="Godot.StyleBoxFlat.BorderWidthBottom">BorderWidthBottom</h4>
+  <div class="markdown level1 summary"><p>Border width for the bottom border.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BorderWidthBottom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_BorderWidthLeft_" data-uid="Godot.StyleBoxFlat.BorderWidthLeft*"></a>
+  <h4 id="Godot_StyleBoxFlat_BorderWidthLeft" data-uid="Godot.StyleBoxFlat.BorderWidthLeft">BorderWidthLeft</h4>
+  <div class="markdown level1 summary"><p>Border width for the left border.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BorderWidthLeft { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_BorderWidthRight_" data-uid="Godot.StyleBoxFlat.BorderWidthRight*"></a>
+  <h4 id="Godot_StyleBoxFlat_BorderWidthRight" data-uid="Godot.StyleBoxFlat.BorderWidthRight">BorderWidthRight</h4>
+  <div class="markdown level1 summary"><p>Border width for the right border.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BorderWidthRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_BorderWidthTop_" data-uid="Godot.StyleBoxFlat.BorderWidthTop*"></a>
+  <h4 id="Godot_StyleBoxFlat_BorderWidthTop" data-uid="Godot.StyleBoxFlat.BorderWidthTop">BorderWidthTop</h4>
+  <div class="markdown level1 summary"><p>Border width for the top border.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BorderWidthTop { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_CornerDetail_" data-uid="Godot.StyleBoxFlat.CornerDetail*"></a>
+  <h4 id="Godot_StyleBoxFlat_CornerDetail" data-uid="Godot.StyleBoxFlat.CornerDetail">CornerDetail</h4>
+  <div class="markdown level1 summary"><p>This sets the number of vertices used for each corner. Higher values result in rounder corners but take more processing power to compute. When choosing a value, you should take the corner radius (<a class="xref" href="Godot.StyleBoxFlat.html#Godot_StyleBoxFlat_SetCornerRadiusAll_System_Int32_">SetCornerRadiusAll(Int32)</a>) into account.</p>
+<p>For corner radii less than 10, <code>4</code> or <code>5</code> should be enough. For corner radii less than 30, values between <code>8</code> and <code>12</code> should be enough.</p>
+<p>A corner detail of <code>1</code> will result in chamfered corners instead of rounded corners, which is useful for some artistic effects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CornerDetail { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_CornerRadiusBottomLeft_" data-uid="Godot.StyleBoxFlat.CornerRadiusBottomLeft*"></a>
+  <h4 id="Godot_StyleBoxFlat_CornerRadiusBottomLeft" data-uid="Godot.StyleBoxFlat.CornerRadiusBottomLeft">CornerRadiusBottomLeft</h4>
+  <div class="markdown level1 summary"><p>The bottom-left corner&apos;s radius. If <code>0</code>, the corner is not rounded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CornerRadiusBottomLeft { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_CornerRadiusBottomRight_" data-uid="Godot.StyleBoxFlat.CornerRadiusBottomRight*"></a>
+  <h4 id="Godot_StyleBoxFlat_CornerRadiusBottomRight" data-uid="Godot.StyleBoxFlat.CornerRadiusBottomRight">CornerRadiusBottomRight</h4>
+  <div class="markdown level1 summary"><p>The bottom-right corner&apos;s radius. If <code>0</code>, the corner is not rounded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CornerRadiusBottomRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_CornerRadiusTopLeft_" data-uid="Godot.StyleBoxFlat.CornerRadiusTopLeft*"></a>
+  <h4 id="Godot_StyleBoxFlat_CornerRadiusTopLeft" data-uid="Godot.StyleBoxFlat.CornerRadiusTopLeft">CornerRadiusTopLeft</h4>
+  <div class="markdown level1 summary"><p>The top-left corner&apos;s radius. If <code>0</code>, the corner is not rounded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CornerRadiusTopLeft { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_CornerRadiusTopRight_" data-uid="Godot.StyleBoxFlat.CornerRadiusTopRight*"></a>
+  <h4 id="Godot_StyleBoxFlat_CornerRadiusTopRight" data-uid="Godot.StyleBoxFlat.CornerRadiusTopRight">CornerRadiusTopRight</h4>
+  <div class="markdown level1 summary"><p>The top-right corner&apos;s radius. If <code>0</code>, the corner is not rounded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CornerRadiusTopRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_DrawCenter_" data-uid="Godot.StyleBoxFlat.DrawCenter*"></a>
+  <h4 id="Godot_StyleBoxFlat_DrawCenter" data-uid="Godot.StyleBoxFlat.DrawCenter">DrawCenter</h4>
+  <div class="markdown level1 summary"><p>Toggles drawing of the inner part of the stylebox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DrawCenter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_ExpandMarginBottom_" data-uid="Godot.StyleBoxFlat.ExpandMarginBottom*"></a>
+  <h4 id="Godot_StyleBoxFlat_ExpandMarginBottom" data-uid="Godot.StyleBoxFlat.ExpandMarginBottom">ExpandMarginBottom</h4>
+  <div class="markdown level1 summary"><p>Expands the stylebox outside of the control rect on the bottom edge. Useful in combination with <a class="xref" href="Godot.StyleBoxFlat.html#Godot_StyleBoxFlat_BorderWidthBottom">BorderWidthBottom</a> to draw a border outside the control rect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ExpandMarginBottom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_ExpandMarginLeft_" data-uid="Godot.StyleBoxFlat.ExpandMarginLeft*"></a>
+  <h4 id="Godot_StyleBoxFlat_ExpandMarginLeft" data-uid="Godot.StyleBoxFlat.ExpandMarginLeft">ExpandMarginLeft</h4>
+  <div class="markdown level1 summary"><p>Expands the stylebox outside of the control rect on the left edge. Useful in combination with <a class="xref" href="Godot.StyleBoxFlat.html#Godot_StyleBoxFlat_BorderWidthLeft">BorderWidthLeft</a> to draw a border outside the control rect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ExpandMarginLeft { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_ExpandMarginRight_" data-uid="Godot.StyleBoxFlat.ExpandMarginRight*"></a>
+  <h4 id="Godot_StyleBoxFlat_ExpandMarginRight" data-uid="Godot.StyleBoxFlat.ExpandMarginRight">ExpandMarginRight</h4>
+  <div class="markdown level1 summary"><p>Expands the stylebox outside of the control rect on the right edge. Useful in combination with <a class="xref" href="Godot.StyleBoxFlat.html#Godot_StyleBoxFlat_BorderWidthRight">BorderWidthRight</a> to draw a border outside the control rect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ExpandMarginRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_ExpandMarginTop_" data-uid="Godot.StyleBoxFlat.ExpandMarginTop*"></a>
+  <h4 id="Godot_StyleBoxFlat_ExpandMarginTop" data-uid="Godot.StyleBoxFlat.ExpandMarginTop">ExpandMarginTop</h4>
+  <div class="markdown level1 summary"><p>Expands the stylebox outside of the control rect on the top edge. Useful in combination with <a class="xref" href="Godot.StyleBoxFlat.html#Godot_StyleBoxFlat_BorderWidthTop">BorderWidthTop</a> to draw a border outside the control rect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ExpandMarginTop { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_ShadowColor_" data-uid="Godot.StyleBoxFlat.ShadowColor*"></a>
+  <h4 id="Godot_StyleBoxFlat_ShadowColor" data-uid="Godot.StyleBoxFlat.ShadowColor">ShadowColor</h4>
+  <div class="markdown level1 summary"><p>The color of the shadow. This has no effect if <a class="xref" href="Godot.StyleBoxFlat.html#Godot_StyleBoxFlat_ShadowSize">ShadowSize</a> is lower than 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ShadowColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_ShadowOffset_" data-uid="Godot.StyleBoxFlat.ShadowOffset*"></a>
+  <h4 id="Godot_StyleBoxFlat_ShadowOffset" data-uid="Godot.StyleBoxFlat.ShadowOffset">ShadowOffset</h4>
+  <div class="markdown level1 summary"><p>The shadow offset in pixels. Adjusts the position of the shadow relatively to the stylebox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 ShadowOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_ShadowSize_" data-uid="Godot.StyleBoxFlat.ShadowSize*"></a>
+  <h4 id="Godot_StyleBoxFlat_ShadowSize" data-uid="Godot.StyleBoxFlat.ShadowSize">ShadowSize</h4>
+  <div class="markdown level1 summary"><p>The shadow size in pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ShadowSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetAaSize_" data-uid="Godot.StyleBoxFlat.GetAaSize*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetAaSize" data-uid="Godot.StyleBoxFlat.GetAaSize">GetAaSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetAaSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetBgColor_" data-uid="Godot.StyleBoxFlat.GetBgColor*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetBgColor" data-uid="Godot.StyleBoxFlat.GetBgColor">GetBgColor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetBgColor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetBorderBlend_" data-uid="Godot.StyleBoxFlat.GetBorderBlend*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetBorderBlend" data-uid="Godot.StyleBoxFlat.GetBorderBlend">GetBorderBlend()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetBorderBlend()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetBorderColor_" data-uid="Godot.StyleBoxFlat.GetBorderColor*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetBorderColor" data-uid="Godot.StyleBoxFlat.GetBorderColor">GetBorderColor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetBorderColor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetBorderWidth_" data-uid="Godot.StyleBoxFlat.GetBorderWidth*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetBorderWidth_Godot_Margin_" data-uid="Godot.StyleBoxFlat.GetBorderWidth(Godot.Margin)">GetBorderWidth(Margin)</h4>
+  <div class="markdown level1 summary"><p>Returns the given <code>margin</code>&apos;s border width. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetBorderWidth(Margin margin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Margin.html">Margin</a></td>
+        <td><span class="parametername">margin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetBorderWidthMin_" data-uid="Godot.StyleBoxFlat.GetBorderWidthMin*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetBorderWidthMin" data-uid="Godot.StyleBoxFlat.GetBorderWidthMin">GetBorderWidthMin()</h4>
+  <div class="markdown level1 summary"><p>Returns the smallest border width out of all four borders.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetBorderWidthMin()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetCornerDetail_" data-uid="Godot.StyleBoxFlat.GetCornerDetail*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetCornerDetail" data-uid="Godot.StyleBoxFlat.GetCornerDetail">GetCornerDetail()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetCornerDetail()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetCornerRadius_" data-uid="Godot.StyleBoxFlat.GetCornerRadius*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetCornerRadius_Godot_Corner_" data-uid="Godot.StyleBoxFlat.GetCornerRadius(Godot.Corner)">GetCornerRadius(Corner)</h4>
+  <div class="markdown level1 summary"><p>Returns the given <code>corner</code>&apos;s radius. See <a class="xref" href="Godot.Corner.html">Corner</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetCornerRadius(Corner corner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Corner.html">Corner</a></td>
+        <td><span class="parametername">corner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetExpandMargin_" data-uid="Godot.StyleBoxFlat.GetExpandMargin*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetExpandMargin_Godot_Margin_" data-uid="Godot.StyleBoxFlat.GetExpandMargin(Godot.Margin)">GetExpandMargin(Margin)</h4>
+  <div class="markdown level1 summary"><p>Returns the size of the given <code>margin</code>&apos;s expand margin. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetExpandMargin(Margin margin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Margin.html">Margin</a></td>
+        <td><span class="parametername">margin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetShadowColor_" data-uid="Godot.StyleBoxFlat.GetShadowColor*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetShadowColor" data-uid="Godot.StyleBoxFlat.GetShadowColor">GetShadowColor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetShadowColor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetShadowOffset_" data-uid="Godot.StyleBoxFlat.GetShadowOffset*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetShadowOffset" data-uid="Godot.StyleBoxFlat.GetShadowOffset">GetShadowOffset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 GetShadowOffset()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_GetShadowSize_" data-uid="Godot.StyleBoxFlat.GetShadowSize*"></a>
+  <h4 id="Godot_StyleBoxFlat_GetShadowSize" data-uid="Godot.StyleBoxFlat.GetShadowSize">GetShadowSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetShadowSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_IsAntiAliased_" data-uid="Godot.StyleBoxFlat.IsAntiAliased*"></a>
+  <h4 id="Godot_StyleBoxFlat_IsAntiAliased" data-uid="Godot.StyleBoxFlat.IsAntiAliased">IsAntiAliased()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAntiAliased()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_IsDrawCenterEnabled_" data-uid="Godot.StyleBoxFlat.IsDrawCenterEnabled*"></a>
+  <h4 id="Godot_StyleBoxFlat_IsDrawCenterEnabled" data-uid="Godot.StyleBoxFlat.IsDrawCenterEnabled">IsDrawCenterEnabled()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDrawCenterEnabled()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetAaSize_" data-uid="Godot.StyleBoxFlat.SetAaSize*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetAaSize_System_Single_" data-uid="Godot.StyleBoxFlat.SetAaSize(System.Single)">SetAaSize(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAaSize(float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetAntiAliased_" data-uid="Godot.StyleBoxFlat.SetAntiAliased*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetAntiAliased_System_Boolean_" data-uid="Godot.StyleBoxFlat.SetAntiAliased(System.Boolean)">SetAntiAliased(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAntiAliased(bool antiAliased)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">antiAliased</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetBgColor_" data-uid="Godot.StyleBoxFlat.SetBgColor*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetBgColor_Godot_Color_" data-uid="Godot.StyleBoxFlat.SetBgColor(Godot.Color)">SetBgColor(Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBgColor(Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetBorderBlend_" data-uid="Godot.StyleBoxFlat.SetBorderBlend*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetBorderBlend_System_Boolean_" data-uid="Godot.StyleBoxFlat.SetBorderBlend(System.Boolean)">SetBorderBlend(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBorderBlend(bool blend)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">blend</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetBorderColor_" data-uid="Godot.StyleBoxFlat.SetBorderColor*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetBorderColor_Godot_Color_" data-uid="Godot.StyleBoxFlat.SetBorderColor(Godot.Color)">SetBorderColor(Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBorderColor(Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetBorderWidth_" data-uid="Godot.StyleBoxFlat.SetBorderWidth*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetBorderWidth_Godot_Margin_System_Int32_" data-uid="Godot.StyleBoxFlat.SetBorderWidth(Godot.Margin,System.Int32)">SetBorderWidth(Margin, Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the border width to <code>width</code> pixels for the given <code>margin</code>. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBorderWidth(Margin margin, int width)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Margin.html">Margin</a></td>
+        <td><span class="parametername">margin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetBorderWidthAll_" data-uid="Godot.StyleBoxFlat.SetBorderWidthAll*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetBorderWidthAll_System_Int32_" data-uid="Godot.StyleBoxFlat.SetBorderWidthAll(System.Int32)">SetBorderWidthAll(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the border width to <code>width</code> pixels for all margins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBorderWidthAll(int width)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetCornerDetail_" data-uid="Godot.StyleBoxFlat.SetCornerDetail*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetCornerDetail_System_Int32_" data-uid="Godot.StyleBoxFlat.SetCornerDetail(System.Int32)">SetCornerDetail(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCornerDetail(int detail)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">detail</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetCornerRadius_" data-uid="Godot.StyleBoxFlat.SetCornerRadius*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetCornerRadius_Godot_Corner_System_Int32_" data-uid="Godot.StyleBoxFlat.SetCornerRadius(Godot.Corner,System.Int32)">SetCornerRadius(Corner, Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the corner radius to <code>radius</code> pixels for the given <code>corner</code>. See <a class="xref" href="Godot.Corner.html">Corner</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCornerRadius(Corner corner, int radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Corner.html">Corner</a></td>
+        <td><span class="parametername">corner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetCornerRadiusAll_" data-uid="Godot.StyleBoxFlat.SetCornerRadiusAll*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetCornerRadiusAll_System_Int32_" data-uid="Godot.StyleBoxFlat.SetCornerRadiusAll(System.Int32)">SetCornerRadiusAll(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the corner radius to <code>radius</code> pixels for all corners.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCornerRadiusAll(int radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetCornerRadiusIndividual_" data-uid="Godot.StyleBoxFlat.SetCornerRadiusIndividual*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetCornerRadiusIndividual_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.StyleBoxFlat.SetCornerRadiusIndividual(System.Int32,System.Int32,System.Int32,System.Int32)">SetCornerRadiusIndividual(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the corner radius for each corner to <code>radius_top_left</code>, <code>radius_top_right</code>, <code>radius_bottom_right</code>, and <code>radius_bottom_left</code> pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCornerRadiusIndividual(int radiusTopLeft, int radiusTopRight, int radiusBottomRight, int radiusBottomLeft)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">radiusTopLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">radiusTopRight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">radiusBottomRight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">radiusBottomLeft</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetDrawCenter_" data-uid="Godot.StyleBoxFlat.SetDrawCenter*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetDrawCenter_System_Boolean_" data-uid="Godot.StyleBoxFlat.SetDrawCenter(System.Boolean)">SetDrawCenter(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDrawCenter(bool drawCenter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">drawCenter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetExpandMargin_" data-uid="Godot.StyleBoxFlat.SetExpandMargin*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetExpandMargin_Godot_Margin_System_Single_" data-uid="Godot.StyleBoxFlat.SetExpandMargin(Godot.Margin,System.Single)">SetExpandMargin(Margin, Single)</h4>
+  <div class="markdown level1 summary"><p>Sets the expand margin to <code>size</code> pixels for the given <code>margin</code>. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetExpandMargin(Margin margin, float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Margin.html">Margin</a></td>
+        <td><span class="parametername">margin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetExpandMarginAll_" data-uid="Godot.StyleBoxFlat.SetExpandMarginAll*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetExpandMarginAll_System_Single_" data-uid="Godot.StyleBoxFlat.SetExpandMarginAll(System.Single)">SetExpandMarginAll(Single)</h4>
+  <div class="markdown level1 summary"><p>Sets the expand margin to <code>size</code> pixels for all margins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetExpandMarginAll(float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetExpandMarginIndividual_" data-uid="Godot.StyleBoxFlat.SetExpandMarginIndividual*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetExpandMarginIndividual_System_Single_System_Single_System_Single_System_Single_" data-uid="Godot.StyleBoxFlat.SetExpandMarginIndividual(System.Single,System.Single,System.Single,System.Single)">SetExpandMarginIndividual(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Sets the expand margin for each margin to <code>size_left</code>, <code>size_top</code>, <code>size_right</code>, and <code>size_bottom</code> pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetExpandMarginIndividual(float sizeLeft, float sizeTop, float sizeRight, float sizeBottom)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeTop</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeRight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeBottom</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetShadowColor_" data-uid="Godot.StyleBoxFlat.SetShadowColor*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetShadowColor_Godot_Color_" data-uid="Godot.StyleBoxFlat.SetShadowColor(Godot.Color)">SetShadowColor(Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetShadowColor(Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetShadowOffset_" data-uid="Godot.StyleBoxFlat.SetShadowOffset*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetShadowOffset_Godot_Vector2_" data-uid="Godot.StyleBoxFlat.SetShadowOffset(Godot.Vector2)">SetShadowOffset(Vector2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetShadowOffset(Vector2 offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_StyleBoxFlat_SetShadowSize_" data-uid="Godot.StyleBoxFlat.SetShadowSize*"></a>
+  <h4 id="Godot_StyleBoxFlat_SetShadowSize_System_Int32_" data-uid="Godot.StyleBoxFlat.SetShadowSize(System.Int32)">SetShadowSize(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetShadowSize(int size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2116 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VehicleWheel
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VehicleWheel
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.VehicleWheel">
+  
+  
+  <h1 id="Godot_VehicleWheel" data-uid="Godot.VehicleWheel" class="text-break">Class VehicleWheel
+  </h1>
+  <div class="markdown level0 summary"><p>This node needs to be used as a child node of <a class="xref" href="Godot.VehicleBody.html">VehicleBody</a> and simulates the behavior of one of its wheels. This node also acts as a collider to detect if the wheel is touching a surface.</p>
+<p>Note: This class has known issues and isn&apos;t designed to provide realistic 3D vehicle physics. If you want advanced vehicle physics, you will probably have to write your own physics integration using another <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a> class.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Node.html">Node</a></div>
+    <div class="level3"><a class="xref" href="Godot.Spatial.html">Spatial</a></div>
+    <div class="level4"><span class="xref">VehicleWheel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationTransformChanged">Spatial.NotificationTransformChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationEnterWorld">Spatial.NotificationEnterWorld</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationExitWorld">Spatial.NotificationExitWorld</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationVisibilityChanged">Spatial.NotificationVisibilityChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationEnterGameplay">Spatial.NotificationEnterGameplay</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationExitGameplay">Spatial.NotificationExitGameplay</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetTransform_Godot_Transform_">Spatial.SetTransform(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetTransform">Spatial.GetTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetTranslation_Godot_Vector3_">Spatial.SetTranslation(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetTranslation">Spatial.GetTranslation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetRotation_Godot_Vector3_">Spatial.SetRotation(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetRotation">Spatial.GetRotation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetRotationDegrees_Godot_Vector3_">Spatial.SetRotationDegrees(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetRotationDegrees">Spatial.GetRotationDegrees()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetScale_Godot_Vector3_">Spatial.SetScale(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetScale">Spatial.GetScale()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetGlobalTransform_Godot_Transform_">Spatial.SetGlobalTransform(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetGlobalTransform">Spatial.GetGlobalTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetParentSpatial">Spatial.GetParentSpatial()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetIgnoreTransformNotification_System_Boolean_">Spatial.SetIgnoreTransformNotification(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetAsToplevel_System_Boolean_">Spatial.SetAsToplevel(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsSetAsToplevel">Spatial.IsSetAsToplevel()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetDisableScale_System_Boolean_">Spatial.SetDisableScale(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsScaleDisabled">Spatial.IsScaleDisabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetWorld">Spatial.GetWorld()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ForceUpdateTransform">Spatial.ForceUpdateTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_UpdateGizmo">Spatial.UpdateGizmo()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetGizmo_Godot_SpatialGizmo_">Spatial.SetGizmo(SpatialGizmo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetGizmo">Spatial.GetGizmo()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetVisible_System_Boolean_">Spatial.SetVisible(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsVisible">Spatial.IsVisible()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsVisibleInTree">Spatial.IsVisibleInTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Show">Spatial.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Hide">Spatial.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetNotifyLocalTransform_System_Boolean_">Spatial.SetNotifyLocalTransform(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsLocalTransformNotificationEnabled">Spatial.IsLocalTransformNotificationEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetNotifyTransform_System_Boolean_">Spatial.SetNotifyTransform(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsTransformNotificationEnabled">Spatial.IsTransformNotificationEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Rotate_Godot_Vector3_System_Single_">Spatial.Rotate(Vector3, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalRotate_Godot_Vector3_System_Single_">Spatial.GlobalRotate(Vector3, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalScale_Godot_Vector3_">Spatial.GlobalScale(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalTranslate_Godot_Vector3_">Spatial.GlobalTranslate(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateObjectLocal_Godot_Vector3_System_Single_">Spatial.RotateObjectLocal(Vector3, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ScaleObjectLocal_Godot_Vector3_">Spatial.ScaleObjectLocal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_TranslateObjectLocal_Godot_Vector3_">Spatial.TranslateObjectLocal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateX_System_Single_">Spatial.RotateX(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateY_System_Single_">Spatial.RotateY(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateZ_System_Single_">Spatial.RotateZ(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Translate_Godot_Vector3_">Spatial.Translate(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Orthonormalize">Spatial.Orthonormalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetIdentity">Spatial.SetIdentity()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_LookAt_Godot_Vector3_Godot_Vector3_">Spatial.LookAt(Vector3, Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_LookAtFromPosition_Godot_Vector3_Godot_Vector3_Godot_Vector3_">Spatial.LookAtFromPosition(Vector3, Vector3, Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ToLocal_Godot_Vector3_">Spatial.ToLocal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ToGlobal_Godot_Vector3_">Spatial.ToGlobal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalTransform">Spatial.GlobalTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Translation">Spatial.Translation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotationDegrees">Spatial.RotationDegrees</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Rotation">Spatial.Rotation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Scale">Spatial.Scale</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Transform">Spatial.Transform</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Visible">Spatial.Visible</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Gizmo">Spatial.Gizmo</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationEnterTree">Node.NotificationEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationExitTree">Node.NotificationExitTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationMovedInParent">Node.NotificationMovedInParent</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationReady">Node.NotificationReady</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPaused">Node.NotificationPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnpaused">Node.NotificationUnpaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPhysicsProcess">Node.NotificationPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationProcess">Node.NotificationProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationParented">Node.NotificationParented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnparented">Node.NotificationUnparented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInstanced">Node.NotificationInstanced</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragBegin">Node.NotificationDragBegin</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragEnd">Node.NotificationDragEnd</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPathChanged">Node.NotificationPathChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalProcess">Node.NotificationInternalProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalPhysicsProcess">Node.NotificationInternalPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPostEnterTree">Node.NotificationPostEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseEnter">Node.NotificationWmMouseEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseExit">Node.NotificationWmMouseExit</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusIn">Node.NotificationWmFocusIn</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusOut">Node.NotificationWmFocusOut</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmQuitRequest">Node.NotificationWmQuitRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmGoBackRequest">Node.NotificationWmGoBackRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmUnfocusRequest">Node.NotificationWmUnfocusRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsMemoryWarning">Node.NotificationOsMemoryWarning</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationTranslationChanged">Node.NotificationTranslationChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmAbout">Node.NotificationWmAbout</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationCrash">Node.NotificationCrash</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsImeUpdate">Node.NotificationOsImeUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppResumed">Node.NotificationAppResumed</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppPaused">Node.NotificationAppPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode__1_Godot_NodePath_">Node.GetNode&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull__1_Godot_NodePath_">Node.GetNodeOrNull&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild__1_System_Int32_">Node.GetChild&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildOrNull__1_System_Int32_">Node.GetChildOrNull&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner__1">Node.GetOwner&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwnerOrNull__1">Node.GetOwnerOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent__1">Node.GetParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParentOrNull__1">Node.GetParentOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">Node._EnterTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ExitTree">Node._ExitTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__GetConfigurationWarning">Node._GetConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">Node._Input(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">Node._PhysicsProcess(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">Node._Process(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Ready">Node._Ready()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">Node._UnhandledInput(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledKeyInput_Godot_InputEventKey_">Node._UnhandledKeyInput(InputEventKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChildBelowNode_Godot_Node_Godot_Node_System_Boolean_">Node.AddChildBelowNode(Node, Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetName_System_String_">Node.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetName">Node.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">Node.AddChild(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveChild_Godot_Node_">Node.RemoveChild(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildCount">Node.GetChildCount()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildren">Node.GetChildren()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild_System_Int32_">Node.GetChild(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNode_Godot_NodePath_">Node.HasNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">Node.GetNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull_Godot_NodePath_">Node.GetNodeOrNull(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent">Node.GetParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindNode_System_String_System_Boolean_System_Boolean_">Node.FindNode(String, Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindParent_System_String_">Node.FindParent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNodeAndResource_Godot_NodePath_">Node.HasNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeAndResource_Godot_NodePath_">Node.GetNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">Node.IsInsideTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsAParentOf_Godot_Node_">Node.IsAParentOf(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsGreaterThan_Godot_Node_">Node.IsGreaterThan(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPath">Node.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPathTo_Godot_Node_">Node.GetPathTo(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddToGroup_System_String_System_Boolean_">Node.AddToGroup(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveFromGroup_System_String_">Node.RemoveFromGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInGroup_System_String_">Node.IsInGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_MoveChild_Godot_Node_System_Int32_">Node.MoveChild(Node, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetGroups">Node.GetGroups()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Raise">Node.Raise()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetOwner_Godot_Node_">Node.SetOwner(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner">Node.GetOwner()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveAndSkip">Node.RemoveAndSkip()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetIndex">Node.GetIndex()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTree">Node.PrintTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTreePretty">Node.PrintTreePretty()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetFilename_System_String_">Node.SetFilename(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetFilename">Node.GetFilename()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateNotification_System_Int32_">Node.PropagateNotification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateCall_System_String_Godot_Collections_Array_System_Boolean_">Node.PropagateCall(String, Array, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">Node.SetPhysicsProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPhysicsProcessDeltaTime">Node.GetPhysicsProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessing">Node.IsPhysicsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessDeltaTime">Node.GetProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">Node.SetProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessPriority_System_Int32_">Node.SetProcessPriority(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessPriority">Node.GetProcessPriority()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessing">Node.IsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInput_System_Boolean_">Node.SetProcessInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInput">Node.IsProcessingInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledInput_System_Boolean_">Node.SetProcessUnhandledInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledInput">Node.IsProcessingUnhandledInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledKeyInput_System_Boolean_">Node.SetProcessUnhandledKeyInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledKeyInput">Node.IsProcessingUnhandledKeyInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPauseMode_Godot_Node_PauseModeEnum_">Node.SetPauseMode(Node.PauseModeEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPauseMode">Node.GetPauseMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CanProcess">Node.CanProcess()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintStrayNodes">Node.PrintStrayNodes()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPositionInParent">Node.GetPositionInParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetDisplayFolded_System_Boolean_">Node.SetDisplayFolded(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsDisplayedFolded">Node.IsDisplayedFolded()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInternal_System_Boolean_">Node.SetProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInternal">Node.IsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcessInternal_System_Boolean_">Node.SetPhysicsProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessingInternal">Node.IsPhysicsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetTree">Node.GetTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Duplicate_System_Int32_">Node.Duplicate(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ReplaceBy_Godot_Node_System_Boolean_">Node.ReplaceBy(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetSceneInstanceLoadPlaceholder_System_Boolean_">Node.SetSceneInstanceLoadPlaceholder(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetSceneInstanceLoadPlaceholder">Node.GetSceneInstanceLoadPlaceholder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetViewport">Node.GetViewport()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_QueueFree">Node.QueueFree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RequestReady">Node.RequestReady()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetNetworkMaster_System_Int32_System_Boolean_">Node.SetNetworkMaster(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNetworkMaster">Node.GetNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsNetworkMaster">Node.IsNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetMultiplayer">Node.GetMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetCustomMultiplayer">Node.GetCustomMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetCustomMultiplayer_Godot_MultiplayerAPI_">Node.SetCustomMultiplayer(MultiplayerAPI)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RpcConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RsetConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Node.Rpc(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliable_System_String_System_Object___">Node.RpcUnreliable(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcId_System_Int32_System_String_System_Object___">Node.RpcId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliableId_System_Int32_System_String_System_Object___">Node.RpcUnreliableId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rset_System_String_System_Object_">Node.Rset(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetId_System_Int32_System_String_System_Object_">Node.RsetId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliable_System_String_System_Object_">Node.RsetUnreliable(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliableId_System_Int32_System_String_System_Object_">Node.RsetUnreliableId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_UpdateConfigurationWarning">Node.UpdateConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_EditorDescription">Node.EditorDescription</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ImportPath">Node._ImportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PauseMode">Node.PauseMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Name">Node.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Filename">Node.Filename</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Node.Owner</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Multiplayer">Node.Multiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CustomMultiplayer">Node.CustomMultiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ProcessPriority">Node.ProcessPriority</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_VehicleWheel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VehicleWheel : Spatial, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_VehicleWheel__ctor_" data-uid="Godot.VehicleWheel.#ctor*"></a>
+  <h4 id="Godot_VehicleWheel__ctor" data-uid="Godot.VehicleWheel.#ctor">VehicleWheel()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VehicleWheel()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_VehicleWheel_Brake_" data-uid="Godot.VehicleWheel.Brake*"></a>
+  <h4 id="Godot_VehicleWheel_Brake" data-uid="Godot.VehicleWheel.Brake">Brake</h4>
+  <div class="markdown level1 summary"><p>Slows down the wheel by applying a braking force. The wheel is only slowed down if it is in contact with a surface. The force you need to apply to adequately slow down your vehicle depends on the <a class="xref" href="Godot.RigidBody.html#Godot_RigidBody_Mass">Mass</a> of the vehicle. For a vehicle with a mass set to 1000, try a value in the 25 - 30 range for hard braking.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Brake { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_DampingCompression_" data-uid="Godot.VehicleWheel.DampingCompression*"></a>
+  <h4 id="Godot_VehicleWheel_DampingCompression" data-uid="Godot.VehicleWheel.DampingCompression">DampingCompression</h4>
+  <div class="markdown level1 summary"><p>The damping applied to the spring when the spring is being compressed. This value should be between 0.0 (no damping) and 1.0. A value of 0.0 means the car will keep bouncing as the spring keeps its energy. A good value for this is around 0.3 for a normal car, 0.5 for a race car.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DampingCompression { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_DampingRelaxation_" data-uid="Godot.VehicleWheel.DampingRelaxation*"></a>
+  <h4 id="Godot_VehicleWheel_DampingRelaxation" data-uid="Godot.VehicleWheel.DampingRelaxation">DampingRelaxation</h4>
+  <div class="markdown level1 summary"><p>The damping applied to the spring when relaxing. This value should be between 0.0 (no damping) and 1.0. This value should always be slightly higher than the <a class="xref" href="Godot.VehicleWheel.html#Godot_VehicleWheel_DampingCompression">DampingCompression</a> property. For a <a class="xref" href="Godot.VehicleWheel.html#Godot_VehicleWheel_DampingCompression">DampingCompression</a> value of 0.3, try a relaxation value of 0.5.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DampingRelaxation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_EngineForce_" data-uid="Godot.VehicleWheel.EngineForce*"></a>
+  <h4 id="Godot_VehicleWheel_EngineForce" data-uid="Godot.VehicleWheel.EngineForce">EngineForce</h4>
+  <div class="markdown level1 summary"><p>Accelerates the wheel by applying an engine force. The wheel is only speed up if it is in contact with a surface. The <a class="xref" href="Godot.RigidBody.html#Godot_RigidBody_Mass">Mass</a> of the vehicle has an effect on the acceleration of the vehicle. For a vehicle with a mass set to 1000, try a value in the 25 - 50 range for acceleration.</p>
+<p>Note: The simulation does not take the effect of gears into account, you will need to add logic for this if you wish to simulate gears.</p>
+<p>A negative value will result in the wheel reversing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float EngineForce { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_Steering_" data-uid="Godot.VehicleWheel.Steering*"></a>
+  <h4 id="Godot_VehicleWheel_Steering" data-uid="Godot.VehicleWheel.Steering">Steering</h4>
+  <div class="markdown level1 summary"><p>The steering angle for the wheel. Setting this to a non-zero value will result in the vehicle turning when it&apos;s moving.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Steering { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SuspensionMaxForce_" data-uid="Godot.VehicleWheel.SuspensionMaxForce*"></a>
+  <h4 id="Godot_VehicleWheel_SuspensionMaxForce" data-uid="Godot.VehicleWheel.SuspensionMaxForce">SuspensionMaxForce</h4>
+  <div class="markdown level1 summary"><p>The maximum force the spring can resist. This value should be higher than a quarter of the <a class="xref" href="Godot.RigidBody.html#Godot_RigidBody_Mass">Mass</a> of the <a class="xref" href="Godot.VehicleBody.html">VehicleBody</a> or the spring will not carry the weight of the vehicle. Good results are often obtained by a value that is about 3× to 4× this number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SuspensionMaxForce { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SuspensionStiffness_" data-uid="Godot.VehicleWheel.SuspensionStiffness*"></a>
+  <h4 id="Godot_VehicleWheel_SuspensionStiffness" data-uid="Godot.VehicleWheel.SuspensionStiffness">SuspensionStiffness</h4>
+  <div class="markdown level1 summary"><p>This value defines the stiffness of the suspension. Use a value lower than 50 for an off-road car, a value between 50 and 100 for a race car and try something around 200 for something like a Formula 1 car.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SuspensionStiffness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SuspensionTravel_" data-uid="Godot.VehicleWheel.SuspensionTravel*"></a>
+  <h4 id="Godot_VehicleWheel_SuspensionTravel" data-uid="Godot.VehicleWheel.SuspensionTravel">SuspensionTravel</h4>
+  <div class="markdown level1 summary"><p>This is the distance the suspension can travel. As Godot units are equivalent to meters, keep this setting relatively low. Try a value between 0.1 and 0.3 depending on the type of car.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SuspensionTravel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_UseAsSteering_" data-uid="Godot.VehicleWheel.UseAsSteering*"></a>
+  <h4 id="Godot_VehicleWheel_UseAsSteering" data-uid="Godot.VehicleWheel.UseAsSteering">UseAsSteering</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this wheel will be turned when the car steers. This value is used in conjunction with <a class="xref" href="Godot.VehicleBody.html#Godot_VehicleBody_Steering">Steering</a> and ignored if you are using the per-wheel <a class="xref" href="Godot.VehicleWheel.html#Godot_VehicleWheel_Steering">Steering</a> value instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseAsSteering { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_UseAsTraction_" data-uid="Godot.VehicleWheel.UseAsTraction*"></a>
+  <h4 id="Godot_VehicleWheel_UseAsTraction" data-uid="Godot.VehicleWheel.UseAsTraction">UseAsTraction</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this wheel transfers engine force to the ground to propel the vehicle forward. This value is used in conjunction with <a class="xref" href="Godot.VehicleBody.html#Godot_VehicleBody_EngineForce">EngineForce</a> and ignored if you are using the per-wheel <a class="xref" href="Godot.VehicleWheel.html#Godot_VehicleWheel_EngineForce">EngineForce</a> value instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseAsTraction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_WheelFrictionSlip_" data-uid="Godot.VehicleWheel.WheelFrictionSlip*"></a>
+  <h4 id="Godot_VehicleWheel_WheelFrictionSlip" data-uid="Godot.VehicleWheel.WheelFrictionSlip">WheelFrictionSlip</h4>
+  <div class="markdown level1 summary"><p>This determines how much grip this wheel has. It is combined with the friction setting of the surface the wheel is in contact with. 0.0 means no grip, 1.0 is normal grip. For a drift car setup, try setting the grip of the rear wheels slightly lower than the front wheels, or use a lower value to simulate tire wear.</p>
+<p>It&apos;s best to set this to 1.0 when starting out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float WheelFrictionSlip { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_WheelRadius_" data-uid="Godot.VehicleWheel.WheelRadius*"></a>
+  <h4 id="Godot_VehicleWheel_WheelRadius" data-uid="Godot.VehicleWheel.WheelRadius">WheelRadius</h4>
+  <div class="markdown level1 summary"><p>The radius of the wheel in meters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float WheelRadius { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_WheelRestLength_" data-uid="Godot.VehicleWheel.WheelRestLength*"></a>
+  <h4 id="Godot_VehicleWheel_WheelRestLength" data-uid="Godot.VehicleWheel.WheelRestLength">WheelRestLength</h4>
+  <div class="markdown level1 summary"><p>This is the distance in meters the wheel is lowered from its origin point. Don&apos;t set this to 0.0 and move the wheel into position, instead move the origin point of your wheel (the gizmo in Godot) to the position the wheel will take when bottoming out, then use the rest length to move the wheel down to the position it should be in when the car is in rest.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float WheelRestLength { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_WheelRollInfluence_" data-uid="Godot.VehicleWheel.WheelRollInfluence*"></a>
+  <h4 id="Godot_VehicleWheel_WheelRollInfluence" data-uid="Godot.VehicleWheel.WheelRollInfluence">WheelRollInfluence</h4>
+  <div class="markdown level1 summary"><p>This value affects the roll of your vehicle. If set to 1.0 for all wheels, your vehicle will be prone to rolling over, while a value of 0.0 will resist body roll.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float WheelRollInfluence { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_VehicleWheel_GetBrake_" data-uid="Godot.VehicleWheel.GetBrake*"></a>
+  <h4 id="Godot_VehicleWheel_GetBrake" data-uid="Godot.VehicleWheel.GetBrake">GetBrake()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetBrake()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetDampingCompression_" data-uid="Godot.VehicleWheel.GetDampingCompression*"></a>
+  <h4 id="Godot_VehicleWheel_GetDampingCompression" data-uid="Godot.VehicleWheel.GetDampingCompression">GetDampingCompression()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetDampingCompression()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetDampingRelaxation_" data-uid="Godot.VehicleWheel.GetDampingRelaxation*"></a>
+  <h4 id="Godot_VehicleWheel_GetDampingRelaxation" data-uid="Godot.VehicleWheel.GetDampingRelaxation">GetDampingRelaxation()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetDampingRelaxation()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetEngineForce_" data-uid="Godot.VehicleWheel.GetEngineForce*"></a>
+  <h4 id="Godot_VehicleWheel_GetEngineForce" data-uid="Godot.VehicleWheel.GetEngineForce">GetEngineForce()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEngineForce()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetFrictionSlip_" data-uid="Godot.VehicleWheel.GetFrictionSlip*"></a>
+  <h4 id="Godot_VehicleWheel_GetFrictionSlip" data-uid="Godot.VehicleWheel.GetFrictionSlip">GetFrictionSlip()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetFrictionSlip()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetRadius_" data-uid="Godot.VehicleWheel.GetRadius*"></a>
+  <h4 id="Godot_VehicleWheel_GetRadius" data-uid="Godot.VehicleWheel.GetRadius">GetRadius()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetRadius()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetRollInfluence_" data-uid="Godot.VehicleWheel.GetRollInfluence*"></a>
+  <h4 id="Godot_VehicleWheel_GetRollInfluence" data-uid="Godot.VehicleWheel.GetRollInfluence">GetRollInfluence()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetRollInfluence()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetRpm_" data-uid="Godot.VehicleWheel.GetRpm*"></a>
+  <h4 id="Godot_VehicleWheel_GetRpm" data-uid="Godot.VehicleWheel.GetRpm">GetRpm()</h4>
+  <div class="markdown level1 summary"><p>Returns the rotational speed of the wheel in revolutions per minute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetRpm()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetSkidinfo_" data-uid="Godot.VehicleWheel.GetSkidinfo*"></a>
+  <h4 id="Godot_VehicleWheel_GetSkidinfo" data-uid="Godot.VehicleWheel.GetSkidinfo">GetSkidinfo()</h4>
+  <div class="markdown level1 summary"><p>Returns a value between 0.0 and 1.0 that indicates whether this wheel is skidding. 0.0 is skidding (the wheel has lost grip, e.g. icy terrain), 1.0 means not skidding (the wheel has full grip, e.g. dry asphalt road).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetSkidinfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetSteering_" data-uid="Godot.VehicleWheel.GetSteering*"></a>
+  <h4 id="Godot_VehicleWheel_GetSteering" data-uid="Godot.VehicleWheel.GetSteering">GetSteering()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetSteering()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetSuspensionMaxForce_" data-uid="Godot.VehicleWheel.GetSuspensionMaxForce*"></a>
+  <h4 id="Godot_VehicleWheel_GetSuspensionMaxForce" data-uid="Godot.VehicleWheel.GetSuspensionMaxForce">GetSuspensionMaxForce()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetSuspensionMaxForce()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetSuspensionRestLength_" data-uid="Godot.VehicleWheel.GetSuspensionRestLength*"></a>
+  <h4 id="Godot_VehicleWheel_GetSuspensionRestLength" data-uid="Godot.VehicleWheel.GetSuspensionRestLength">GetSuspensionRestLength()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetSuspensionRestLength()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetSuspensionStiffness_" data-uid="Godot.VehicleWheel.GetSuspensionStiffness*"></a>
+  <h4 id="Godot_VehicleWheel_GetSuspensionStiffness" data-uid="Godot.VehicleWheel.GetSuspensionStiffness">GetSuspensionStiffness()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetSuspensionStiffness()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_GetSuspensionTravel_" data-uid="Godot.VehicleWheel.GetSuspensionTravel*"></a>
+  <h4 id="Godot_VehicleWheel_GetSuspensionTravel" data-uid="Godot.VehicleWheel.GetSuspensionTravel">GetSuspensionTravel()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetSuspensionTravel()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_IsInContact_" data-uid="Godot.VehicleWheel.IsInContact*"></a>
+  <h4 id="Godot_VehicleWheel_IsInContact" data-uid="Godot.VehicleWheel.IsInContact">IsInContact()</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this wheel is in contact with a surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInContact()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_IsUsedAsSteering_" data-uid="Godot.VehicleWheel.IsUsedAsSteering*"></a>
+  <h4 id="Godot_VehicleWheel_IsUsedAsSteering" data-uid="Godot.VehicleWheel.IsUsedAsSteering">IsUsedAsSteering()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUsedAsSteering()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_IsUsedAsTraction_" data-uid="Godot.VehicleWheel.IsUsedAsTraction*"></a>
+  <h4 id="Godot_VehicleWheel_IsUsedAsTraction" data-uid="Godot.VehicleWheel.IsUsedAsTraction">IsUsedAsTraction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUsedAsTraction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetBrake_" data-uid="Godot.VehicleWheel.SetBrake*"></a>
+  <h4 id="Godot_VehicleWheel_SetBrake_System_Single_" data-uid="Godot.VehicleWheel.SetBrake(System.Single)">SetBrake(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBrake(float brake)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">brake</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetDampingCompression_" data-uid="Godot.VehicleWheel.SetDampingCompression*"></a>
+  <h4 id="Godot_VehicleWheel_SetDampingCompression_System_Single_" data-uid="Godot.VehicleWheel.SetDampingCompression(System.Single)">SetDampingCompression(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDampingCompression(float length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetDampingRelaxation_" data-uid="Godot.VehicleWheel.SetDampingRelaxation*"></a>
+  <h4 id="Godot_VehicleWheel_SetDampingRelaxation_System_Single_" data-uid="Godot.VehicleWheel.SetDampingRelaxation(System.Single)">SetDampingRelaxation(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDampingRelaxation(float length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetEngineForce_" data-uid="Godot.VehicleWheel.SetEngineForce*"></a>
+  <h4 id="Godot_VehicleWheel_SetEngineForce_System_Single_" data-uid="Godot.VehicleWheel.SetEngineForce(System.Single)">SetEngineForce(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEngineForce(float engineForce)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">engineForce</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetFrictionSlip_" data-uid="Godot.VehicleWheel.SetFrictionSlip*"></a>
+  <h4 id="Godot_VehicleWheel_SetFrictionSlip_System_Single_" data-uid="Godot.VehicleWheel.SetFrictionSlip(System.Single)">SetFrictionSlip(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFrictionSlip(float length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetRadius_" data-uid="Godot.VehicleWheel.SetRadius*"></a>
+  <h4 id="Godot_VehicleWheel_SetRadius_System_Single_" data-uid="Godot.VehicleWheel.SetRadius(System.Single)">SetRadius(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRadius(float length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetRollInfluence_" data-uid="Godot.VehicleWheel.SetRollInfluence*"></a>
+  <h4 id="Godot_VehicleWheel_SetRollInfluence_System_Single_" data-uid="Godot.VehicleWheel.SetRollInfluence(System.Single)">SetRollInfluence(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRollInfluence(float rollInfluence)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">rollInfluence</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetSteering_" data-uid="Godot.VehicleWheel.SetSteering*"></a>
+  <h4 id="Godot_VehicleWheel_SetSteering_System_Single_" data-uid="Godot.VehicleWheel.SetSteering(System.Single)">SetSteering(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSteering(float steering)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">steering</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetSuspensionMaxForce_" data-uid="Godot.VehicleWheel.SetSuspensionMaxForce*"></a>
+  <h4 id="Godot_VehicleWheel_SetSuspensionMaxForce_System_Single_" data-uid="Godot.VehicleWheel.SetSuspensionMaxForce(System.Single)">SetSuspensionMaxForce(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSuspensionMaxForce(float length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetSuspensionRestLength_" data-uid="Godot.VehicleWheel.SetSuspensionRestLength*"></a>
+  <h4 id="Godot_VehicleWheel_SetSuspensionRestLength_System_Single_" data-uid="Godot.VehicleWheel.SetSuspensionRestLength(System.Single)">SetSuspensionRestLength(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSuspensionRestLength(float length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetSuspensionStiffness_" data-uid="Godot.VehicleWheel.SetSuspensionStiffness*"></a>
+  <h4 id="Godot_VehicleWheel_SetSuspensionStiffness_System_Single_" data-uid="Godot.VehicleWheel.SetSuspensionStiffness(System.Single)">SetSuspensionStiffness(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSuspensionStiffness(float length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetSuspensionTravel_" data-uid="Godot.VehicleWheel.SetSuspensionTravel*"></a>
+  <h4 id="Godot_VehicleWheel_SetSuspensionTravel_System_Single_" data-uid="Godot.VehicleWheel.SetSuspensionTravel(System.Single)">SetSuspensionTravel(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSuspensionTravel(float length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetUseAsSteering_" data-uid="Godot.VehicleWheel.SetUseAsSteering*"></a>
+  <h4 id="Godot_VehicleWheel_SetUseAsSteering_System_Boolean_" data-uid="Godot.VehicleWheel.SetUseAsSteering(System.Boolean)">SetUseAsSteering(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUseAsSteering(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_VehicleWheel_SetUseAsTraction_" data-uid="Godot.VehicleWheel.SetUseAsTraction*"></a>
+  <h4 id="Godot_VehicleWheel_SetUseAsTraction_System_Boolean_" data-uid="Godot.VehicleWheel.SetUseAsTraction(System.Boolean)">SetUseAsTraction(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUseAsTraction(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

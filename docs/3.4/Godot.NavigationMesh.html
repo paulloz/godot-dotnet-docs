@@ -1,0 +1,2341 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NavigationMesh
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NavigationMesh
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.NavigationMesh">
+  
+  
+  <h1 id="Godot_NavigationMesh" data-uid="Godot.NavigationMesh" class="text-break">Class NavigationMesh
+  </h1>
+  <div class="markdown level0 summary"><p>A navigation mesh is a collection of polygons that define which areas of an environment are traversable to aid agents in pathfinding through complicated spaces.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Reference.html">Reference</a></div>
+    <div class="level3"><a class="xref" href="Godot.Resource.html">Resource</a></div>
+    <div class="level4"><span class="xref">NavigationMesh</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource__SetupLocalToScene">Resource._SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetPath_System_String_">Resource.SetPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_TakeOverPath_System_String_">Resource.TakeOverPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetPath">Resource.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetName_System_String_">Resource.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetName">Resource.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetRid">Resource.GetRid()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetLocalToScene_System_Boolean_">Resource.SetLocalToScene(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_IsLocalToScene">Resource.IsLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetLocalScene">Resource.GetLocalScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetupLocalToScene">Resource.SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_EmitChanged">Resource.EmitChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_Duplicate_System_Boolean_">Resource.Duplicate(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceLocalToScene">Resource.ResourceLocalToScene</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourcePath">Resource.ResourcePath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceName">Resource.ResourceName</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_InitRef">Reference.InitRef()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Reference_">Reference.Reference_()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Unreference">Reference.Unreference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_NavigationMesh_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NavigationMesh : Resource, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_NavigationMesh__ctor_" data-uid="Godot.NavigationMesh.#ctor*"></a>
+  <h4 id="Godot_NavigationMesh__ctor" data-uid="Godot.NavigationMesh.#ctor">NavigationMesh()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NavigationMesh()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_NavigationMesh_Agent__height_" data-uid="Godot.NavigationMesh.Agent__height*"></a>
+  <h4 id="Godot_NavigationMesh_Agent__height" data-uid="Godot.NavigationMesh.Agent__height">Agent__height</h4>
+  <div class="markdown level1 summary"><p>The minimum floor to ceiling height that will still allow the floor area to be considered walkable.</p>
+<p>Note: While baking, this value will be rounded up to the nearest multiple of <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Cell__height">Cell__height</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Agent__height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Agent__maxClimb_" data-uid="Godot.NavigationMesh.Agent__maxClimb*"></a>
+  <h4 id="Godot_NavigationMesh_Agent__maxClimb" data-uid="Godot.NavigationMesh.Agent__maxClimb">Agent__maxClimb</h4>
+  <div class="markdown level1 summary"><p>The minimum ledge height that is considered to still be traversable.</p>
+<p>Note: While baking, this value will be rounded down to the nearest multiple of <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Cell__height">Cell__height</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Agent__maxClimb { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Agent__maxSlope_" data-uid="Godot.NavigationMesh.Agent__maxSlope*"></a>
+  <h4 id="Godot_NavigationMesh_Agent__maxSlope" data-uid="Godot.NavigationMesh.Agent__maxSlope">Agent__maxSlope</h4>
+  <div class="markdown level1 summary"><p>The maximum slope that is considered walkable, in degrees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Agent__maxSlope { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Agent__radius_" data-uid="Godot.NavigationMesh.Agent__radius*"></a>
+  <h4 id="Godot_NavigationMesh_Agent__radius" data-uid="Godot.NavigationMesh.Agent__radius">Agent__radius</h4>
+  <div class="markdown level1 summary"><p>The distance to erode/shrink the walkable area of the heightfield away from obstructions.</p>
+<p>Note: While baking, this value will be rounded up to the nearest multiple of <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Cell__size">Cell__size</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Agent__radius { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Cell__height_" data-uid="Godot.NavigationMesh.Cell__height*"></a>
+  <h4 id="Godot_NavigationMesh_Cell__height" data-uid="Godot.NavigationMesh.Cell__height">Cell__height</h4>
+  <div class="markdown level1 summary"><p>The Y axis cell size to use for fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Cell__height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Cell__size_" data-uid="Godot.NavigationMesh.Cell__size*"></a>
+  <h4 id="Godot_NavigationMesh_Cell__size" data-uid="Godot.NavigationMesh.Cell__size">Cell__size</h4>
+  <div class="markdown level1 summary"><p>The XZ plane cell size to use for fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Cell__size { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Detail__sampleDistance_" data-uid="Godot.NavigationMesh.Detail__sampleDistance*"></a>
+  <h4 id="Godot_NavigationMesh_Detail__sampleDistance" data-uid="Godot.NavigationMesh.Detail__sampleDistance">Detail__sampleDistance</h4>
+  <div class="markdown level1 summary"><p>The sampling distance to use when generating the detail mesh, in cell unit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Detail__sampleDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Detail__sampleMaxError_" data-uid="Godot.NavigationMesh.Detail__sampleMaxError*"></a>
+  <h4 id="Godot_NavigationMesh_Detail__sampleMaxError" data-uid="Godot.NavigationMesh.Detail__sampleMaxError">Detail__sampleMaxError</h4>
+  <div class="markdown level1 summary"><p>The maximum distance the detail mesh surface should deviate from heightfield, in cell unit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Detail__sampleMaxError { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Edge__maxError_" data-uid="Godot.NavigationMesh.Edge__maxError*"></a>
+  <h4 id="Godot_NavigationMesh_Edge__maxError" data-uid="Godot.NavigationMesh.Edge__maxError">Edge__maxError</h4>
+  <div class="markdown level1 summary"><p>The maximum distance a simplfied contour&apos;s border edges should deviate the original raw contour.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Edge__maxError { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Edge__maxLength_" data-uid="Godot.NavigationMesh.Edge__maxLength*"></a>
+  <h4 id="Godot_NavigationMesh_Edge__maxLength" data-uid="Godot.NavigationMesh.Edge__maxLength">Edge__maxLength</h4>
+  <div class="markdown level1 summary"><p>The maximum allowed length for contour edges along the border of the mesh.</p>
+<p>Note: While baking, this value will be rounded up to the nearest multiple of <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Cell__size">Cell__size</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Edge__maxLength { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Filter__filterWalkableLowHeightSpans_" data-uid="Godot.NavigationMesh.Filter__filterWalkableLowHeightSpans*"></a>
+  <h4 id="Godot_NavigationMesh_Filter__filterWalkableLowHeightSpans" data-uid="Godot.NavigationMesh.Filter__filterWalkableLowHeightSpans">Filter__filterWalkableLowHeightSpans</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, marks walkable spans as not walkable if the clearance above the span is less than <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Agent__height">Agent__height</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Filter__filterWalkableLowHeightSpans { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Filter__ledgeSpans_" data-uid="Godot.NavigationMesh.Filter__ledgeSpans*"></a>
+  <h4 id="Godot_NavigationMesh_Filter__ledgeSpans" data-uid="Godot.NavigationMesh.Filter__ledgeSpans">Filter__ledgeSpans</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, marks spans that are ledges as non-walkable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Filter__ledgeSpans { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Filter__lowHangingObstacles_" data-uid="Godot.NavigationMesh.Filter__lowHangingObstacles*"></a>
+  <h4 id="Godot_NavigationMesh_Filter__lowHangingObstacles" data-uid="Godot.NavigationMesh.Filter__lowHangingObstacles">Filter__lowHangingObstacles</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, marks non-walkable spans as walkable if their maximum is within <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Agent__maxClimb">Agent__maxClimb</a> of a walkable neighbor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Filter__lowHangingObstacles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Geometry__collisionMask_" data-uid="Godot.NavigationMesh.Geometry__collisionMask*"></a>
+  <h4 id="Godot_NavigationMesh_Geometry__collisionMask" data-uid="Godot.NavigationMesh.Geometry__collisionMask">Geometry__collisionMask</h4>
+  <div class="markdown level1 summary"><p>The physics layers to scan for static colliders.</p>
+<p>Only used when <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Geometry__parsedGeometryType">Geometry__parsedGeometryType</a> is <a class="xref" href="Godot.NavigationMesh.ParsedGeometryType.html#Godot_NavigationMesh_ParsedGeometryType_StaticColliders">StaticColliders</a> or <a class="xref" href="Godot.NavigationMesh.ParsedGeometryType.html#Godot_NavigationMesh_ParsedGeometryType_Both">Both</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint Geometry__collisionMask { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Geometry__parsedGeometryType_" data-uid="Godot.NavigationMesh.Geometry__parsedGeometryType*"></a>
+  <h4 id="Godot_NavigationMesh_Geometry__parsedGeometryType" data-uid="Godot.NavigationMesh.Geometry__parsedGeometryType">Geometry__parsedGeometryType</h4>
+  <div class="markdown level1 summary"><p>Determines which type of nodes will be parsed as geometry. See <a class="xref" href="Godot.NavigationMesh.ParsedGeometryType.html">NavigationMesh.ParsedGeometryType</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NavigationMesh.ParsedGeometryType Geometry__parsedGeometryType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NavigationMesh.ParsedGeometryType.html">NavigationMesh.ParsedGeometryType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Geometry__sourceGeometryMode_" data-uid="Godot.NavigationMesh.Geometry__sourceGeometryMode*"></a>
+  <h4 id="Godot_NavigationMesh_Geometry__sourceGeometryMode" data-uid="Godot.NavigationMesh.Geometry__sourceGeometryMode">Geometry__sourceGeometryMode</h4>
+  <div class="markdown level1 summary"><p>The source of the geometry used when baking. See <a class="xref" href="Godot.NavigationMesh.SourceGeometryMode.html">NavigationMesh.SourceGeometryMode</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NavigationMesh.SourceGeometryMode Geometry__sourceGeometryMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NavigationMesh.SourceGeometryMode.html">NavigationMesh.SourceGeometryMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Geometry__sourceGroupName_" data-uid="Godot.NavigationMesh.Geometry__sourceGroupName*"></a>
+  <h4 id="Godot_NavigationMesh_Geometry__sourceGroupName" data-uid="Godot.NavigationMesh.Geometry__sourceGroupName">Geometry__sourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the group to scan for geometry.</p>
+<p>Only used when <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Geometry__sourceGeometryMode">Geometry__sourceGeometryMode</a> is <a class="xref" href="Godot.NavigationMesh.SourceGeometryMode.html#Godot_NavigationMesh_SourceGeometryMode_GroupsWithChildren">GroupsWithChildren</a> or <a class="xref" href="Godot.NavigationMesh.SourceGeometryMode.html#Godot_NavigationMesh_SourceGeometryMode_GroupsExplicit">GroupsExplicit</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Geometry__sourceGroupName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Polygon__vertsPerPoly_" data-uid="Godot.NavigationMesh.Polygon__vertsPerPoly*"></a>
+  <h4 id="Godot_NavigationMesh_Polygon__vertsPerPoly" data-uid="Godot.NavigationMesh.Polygon__vertsPerPoly">Polygon__vertsPerPoly</h4>
+  <div class="markdown level1 summary"><p>The maximum number of vertices allowed for polygons generated during the contour to polygon conversion process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Polygon__vertsPerPoly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Polygons_" data-uid="Godot.NavigationMesh.Polygons*"></a>
+  <h4 id="Godot_NavigationMesh_Polygons" data-uid="Godot.NavigationMesh.Polygons">Polygons</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Array Polygons { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Region__mergeSize_" data-uid="Godot.NavigationMesh.Region__mergeSize*"></a>
+  <h4 id="Godot_NavigationMesh_Region__mergeSize" data-uid="Godot.NavigationMesh.Region__mergeSize">Region__mergeSize</h4>
+  <div class="markdown level1 summary"><p>Any regions with a size smaller than this will be merged with larger regions if possible.</p>
+<p>Note: This value will be squared to calculate the number of cells. For example, a value of 20 will set the number of cells to 400.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Region__mergeSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Region__minSize_" data-uid="Godot.NavigationMesh.Region__minSize*"></a>
+  <h4 id="Godot_NavigationMesh_Region__minSize" data-uid="Godot.NavigationMesh.Region__minSize">Region__minSize</h4>
+  <div class="markdown level1 summary"><p>The minimum size of a region for it to be created.</p>
+<p>Note: This value will be squared to calculate the minimum number of cells allowed to form isolated island areas. For example, a value of 8 will set the number of cells to 64.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Region__minSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SamplePartitionType__samplePartitionType_" data-uid="Godot.NavigationMesh.SamplePartitionType__samplePartitionType*"></a>
+  <h4 id="Godot_NavigationMesh_SamplePartitionType__samplePartitionType" data-uid="Godot.NavigationMesh.SamplePartitionType__samplePartitionType">SamplePartitionType__samplePartitionType</h4>
+  <div class="markdown level1 summary"><p>Partitioning algorithm for creating the navigation mesh polys. See <a class="xref" href="Godot.NavigationMesh.SamplePartitionType.html">NavigationMesh.SamplePartitionType</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NavigationMesh.SamplePartitionType SamplePartitionType__samplePartitionType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NavigationMesh.SamplePartitionType.html">NavigationMesh.SamplePartitionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_Vertices_" data-uid="Godot.NavigationMesh.Vertices*"></a>
+  <h4 id="Godot_NavigationMesh_Vertices" data-uid="Godot.NavigationMesh.Vertices">Vertices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3[] Vertices { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_NavigationMesh_AddPolygon_" data-uid="Godot.NavigationMesh.AddPolygon*"></a>
+  <h4 id="Godot_NavigationMesh_AddPolygon_System_Int32___" data-uid="Godot.NavigationMesh.AddPolygon(System.Int32[])">AddPolygon(Int32[])</h4>
+  <div class="markdown level1 summary"><p>Adds a polygon using the indices of the vertices you get when calling <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_GetVertices">GetVertices()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddPolygon(int[] polygon)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td><span class="parametername">polygon</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_ClearPolygons_" data-uid="Godot.NavigationMesh.ClearPolygons*"></a>
+  <h4 id="Godot_NavigationMesh_ClearPolygons" data-uid="Godot.NavigationMesh.ClearPolygons">ClearPolygons()</h4>
+  <div class="markdown level1 summary"><p>Clears the array of polygons, but it doesn&apos;t clear the array of vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearPolygons()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_NavigationMesh_CreateFromMesh_" data-uid="Godot.NavigationMesh.CreateFromMesh*"></a>
+  <h4 id="Godot_NavigationMesh_CreateFromMesh_Godot_Mesh_" data-uid="Godot.NavigationMesh.CreateFromMesh(Godot.Mesh)">CreateFromMesh(Mesh)</h4>
+  <div class="markdown level1 summary"><p>Initializes the navigation mesh by setting the vertices and indices according to a <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateFromMesh(Mesh mesh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Mesh.html">Mesh</a></td>
+        <td><span class="parametername">mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetAgentHeight_" data-uid="Godot.NavigationMesh.GetAgentHeight*"></a>
+  <h4 id="Godot_NavigationMesh_GetAgentHeight" data-uid="Godot.NavigationMesh.GetAgentHeight">GetAgentHeight()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetAgentHeight()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetAgentMaxClimb_" data-uid="Godot.NavigationMesh.GetAgentMaxClimb*"></a>
+  <h4 id="Godot_NavigationMesh_GetAgentMaxClimb" data-uid="Godot.NavigationMesh.GetAgentMaxClimb">GetAgentMaxClimb()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetAgentMaxClimb()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetAgentMaxSlope_" data-uid="Godot.NavigationMesh.GetAgentMaxSlope*"></a>
+  <h4 id="Godot_NavigationMesh_GetAgentMaxSlope" data-uid="Godot.NavigationMesh.GetAgentMaxSlope">GetAgentMaxSlope()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetAgentMaxSlope()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetAgentRadius_" data-uid="Godot.NavigationMesh.GetAgentRadius*"></a>
+  <h4 id="Godot_NavigationMesh_GetAgentRadius" data-uid="Godot.NavigationMesh.GetAgentRadius">GetAgentRadius()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetAgentRadius()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetCellHeight_" data-uid="Godot.NavigationMesh.GetCellHeight*"></a>
+  <h4 id="Godot_NavigationMesh_GetCellHeight" data-uid="Godot.NavigationMesh.GetCellHeight">GetCellHeight()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetCellHeight()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetCellSize_" data-uid="Godot.NavigationMesh.GetCellSize*"></a>
+  <h4 id="Godot_NavigationMesh_GetCellSize" data-uid="Godot.NavigationMesh.GetCellSize">GetCellSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetCellSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetCollisionMask_" data-uid="Godot.NavigationMesh.GetCollisionMask*"></a>
+  <h4 id="Godot_NavigationMesh_GetCollisionMask" data-uid="Godot.NavigationMesh.GetCollisionMask">GetCollisionMask()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint GetCollisionMask()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetCollisionMaskBit_" data-uid="Godot.NavigationMesh.GetCollisionMaskBit*"></a>
+  <h4 id="Godot_NavigationMesh_GetCollisionMaskBit_System_Int32_" data-uid="Godot.NavigationMesh.GetCollisionMaskBit(System.Int32)">GetCollisionMaskBit(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns whether the specified <code>bit</code> of the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Geometry__collisionMask">Geometry__collisionMask</a> is set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetCollisionMaskBit(int bit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetDetailSampleDistance_" data-uid="Godot.NavigationMesh.GetDetailSampleDistance*"></a>
+  <h4 id="Godot_NavigationMesh_GetDetailSampleDistance" data-uid="Godot.NavigationMesh.GetDetailSampleDistance">GetDetailSampleDistance()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetDetailSampleDistance()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetDetailSampleMaxError_" data-uid="Godot.NavigationMesh.GetDetailSampleMaxError*"></a>
+  <h4 id="Godot_NavigationMesh_GetDetailSampleMaxError" data-uid="Godot.NavigationMesh.GetDetailSampleMaxError">GetDetailSampleMaxError()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetDetailSampleMaxError()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetEdgeMaxError_" data-uid="Godot.NavigationMesh.GetEdgeMaxError*"></a>
+  <h4 id="Godot_NavigationMesh_GetEdgeMaxError" data-uid="Godot.NavigationMesh.GetEdgeMaxError">GetEdgeMaxError()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEdgeMaxError()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetEdgeMaxLength_" data-uid="Godot.NavigationMesh.GetEdgeMaxLength*"></a>
+  <h4 id="Godot_NavigationMesh_GetEdgeMaxLength" data-uid="Godot.NavigationMesh.GetEdgeMaxLength">GetEdgeMaxLength()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEdgeMaxLength()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetFilterLedgeSpans_" data-uid="Godot.NavigationMesh.GetFilterLedgeSpans*"></a>
+  <h4 id="Godot_NavigationMesh_GetFilterLedgeSpans" data-uid="Godot.NavigationMesh.GetFilterLedgeSpans">GetFilterLedgeSpans()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetFilterLedgeSpans()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetFilterLowHangingObstacles_" data-uid="Godot.NavigationMesh.GetFilterLowHangingObstacles*"></a>
+  <h4 id="Godot_NavigationMesh_GetFilterLowHangingObstacles" data-uid="Godot.NavigationMesh.GetFilterLowHangingObstacles">GetFilterLowHangingObstacles()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetFilterLowHangingObstacles()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetFilterWalkableLowHeightSpans_" data-uid="Godot.NavigationMesh.GetFilterWalkableLowHeightSpans*"></a>
+  <h4 id="Godot_NavigationMesh_GetFilterWalkableLowHeightSpans" data-uid="Godot.NavigationMesh.GetFilterWalkableLowHeightSpans">GetFilterWalkableLowHeightSpans()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetFilterWalkableLowHeightSpans()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetParsedGeometryType_" data-uid="Godot.NavigationMesh.GetParsedGeometryType*"></a>
+  <h4 id="Godot_NavigationMesh_GetParsedGeometryType" data-uid="Godot.NavigationMesh.GetParsedGeometryType">GetParsedGeometryType()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NavigationMesh.ParsedGeometryType GetParsedGeometryType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NavigationMesh.ParsedGeometryType.html">NavigationMesh.ParsedGeometryType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetPolygon_" data-uid="Godot.NavigationMesh.GetPolygon*"></a>
+  <h4 id="Godot_NavigationMesh_GetPolygon_System_Int32_" data-uid="Godot.NavigationMesh.GetPolygon(System.Int32)">GetPolygon(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.Int32</span> containing the indices of the vertices of a created polygon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int[] GetPolygon(int idx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">idx</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetPolygonCount_" data-uid="Godot.NavigationMesh.GetPolygonCount*"></a>
+  <h4 id="Godot_NavigationMesh_GetPolygonCount" data-uid="Godot.NavigationMesh.GetPolygonCount">GetPolygonCount()</h4>
+  <div class="markdown level1 summary"><p>Returns the number of polygons in the navigation mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetPolygonCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetRegionMergeSize_" data-uid="Godot.NavigationMesh.GetRegionMergeSize*"></a>
+  <h4 id="Godot_NavigationMesh_GetRegionMergeSize" data-uid="Godot.NavigationMesh.GetRegionMergeSize">GetRegionMergeSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetRegionMergeSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetRegionMinSize_" data-uid="Godot.NavigationMesh.GetRegionMinSize*"></a>
+  <h4 id="Godot_NavigationMesh_GetRegionMinSize" data-uid="Godot.NavigationMesh.GetRegionMinSize">GetRegionMinSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetRegionMinSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetSamplePartitionType_" data-uid="Godot.NavigationMesh.GetSamplePartitionType*"></a>
+  <h4 id="Godot_NavigationMesh_GetSamplePartitionType" data-uid="Godot.NavigationMesh.GetSamplePartitionType">GetSamplePartitionType()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NavigationMesh.SamplePartitionType GetSamplePartitionType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NavigationMesh.SamplePartitionType.html">NavigationMesh.SamplePartitionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetSourceGeometryMode_" data-uid="Godot.NavigationMesh.GetSourceGeometryMode*"></a>
+  <h4 id="Godot_NavigationMesh_GetSourceGeometryMode" data-uid="Godot.NavigationMesh.GetSourceGeometryMode">GetSourceGeometryMode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NavigationMesh.SourceGeometryMode GetSourceGeometryMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NavigationMesh.SourceGeometryMode.html">NavigationMesh.SourceGeometryMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetSourceGroupName_" data-uid="Godot.NavigationMesh.GetSourceGroupName*"></a>
+  <h4 id="Godot_NavigationMesh_GetSourceGroupName" data-uid="Godot.NavigationMesh.GetSourceGroupName">GetSourceGroupName()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetSourceGroupName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetVertices_" data-uid="Godot.NavigationMesh.GetVertices*"></a>
+  <h4 id="Godot_NavigationMesh_GetVertices" data-uid="Godot.NavigationMesh.GetVertices">GetVertices()</h4>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.Vector3.html">Vector3</a> containing all the vertices being used to create the polygons.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3[] GetVertices()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_GetVertsPerPoly_" data-uid="Godot.NavigationMesh.GetVertsPerPoly*"></a>
+  <h4 id="Godot_NavigationMesh_GetVertsPerPoly" data-uid="Godot.NavigationMesh.GetVertsPerPoly">GetVertsPerPoly()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetVertsPerPoly()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetAgentHeight_" data-uid="Godot.NavigationMesh.SetAgentHeight*"></a>
+  <h4 id="Godot_NavigationMesh_SetAgentHeight_System_Single_" data-uid="Godot.NavigationMesh.SetAgentHeight(System.Single)">SetAgentHeight(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAgentHeight(float agentHeight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">agentHeight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetAgentMaxClimb_" data-uid="Godot.NavigationMesh.SetAgentMaxClimb*"></a>
+  <h4 id="Godot_NavigationMesh_SetAgentMaxClimb_System_Single_" data-uid="Godot.NavigationMesh.SetAgentMaxClimb(System.Single)">SetAgentMaxClimb(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAgentMaxClimb(float agentMaxClimb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">agentMaxClimb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetAgentMaxSlope_" data-uid="Godot.NavigationMesh.SetAgentMaxSlope*"></a>
+  <h4 id="Godot_NavigationMesh_SetAgentMaxSlope_System_Single_" data-uid="Godot.NavigationMesh.SetAgentMaxSlope(System.Single)">SetAgentMaxSlope(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAgentMaxSlope(float agentMaxSlope)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">agentMaxSlope</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetAgentRadius_" data-uid="Godot.NavigationMesh.SetAgentRadius*"></a>
+  <h4 id="Godot_NavigationMesh_SetAgentRadius_System_Single_" data-uid="Godot.NavigationMesh.SetAgentRadius(System.Single)">SetAgentRadius(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAgentRadius(float agentRadius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">agentRadius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetCellHeight_" data-uid="Godot.NavigationMesh.SetCellHeight*"></a>
+  <h4 id="Godot_NavigationMesh_SetCellHeight_System_Single_" data-uid="Godot.NavigationMesh.SetCellHeight(System.Single)">SetCellHeight(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCellHeight(float cellHeight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">cellHeight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetCellSize_" data-uid="Godot.NavigationMesh.SetCellSize*"></a>
+  <h4 id="Godot_NavigationMesh_SetCellSize_System_Single_" data-uid="Godot.NavigationMesh.SetCellSize(System.Single)">SetCellSize(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCellSize(float cellSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">cellSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetCollisionMask_" data-uid="Godot.NavigationMesh.SetCollisionMask*"></a>
+  <h4 id="Godot_NavigationMesh_SetCollisionMask_System_UInt32_" data-uid="Godot.NavigationMesh.SetCollisionMask(System.UInt32)">SetCollisionMask(UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionMask(uint mask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetCollisionMaskBit_" data-uid="Godot.NavigationMesh.SetCollisionMaskBit*"></a>
+  <h4 id="Godot_NavigationMesh_SetCollisionMaskBit_System_Int32_System_Boolean_" data-uid="Godot.NavigationMesh.SetCollisionMaskBit(System.Int32,System.Boolean)">SetCollisionMaskBit(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>If <code>value</code> is <code>true</code>, sets the specified <code>bit</code> in the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Geometry__collisionMask">Geometry__collisionMask</a>.</p>
+<p>If <code>value</code> is <code>false</code>, clears the specified <code>bit</code> in the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_Geometry__collisionMask">Geometry__collisionMask</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionMaskBit(int bit, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetDetailSampleDistance_" data-uid="Godot.NavigationMesh.SetDetailSampleDistance*"></a>
+  <h4 id="Godot_NavigationMesh_SetDetailSampleDistance_System_Single_" data-uid="Godot.NavigationMesh.SetDetailSampleDistance(System.Single)">SetDetailSampleDistance(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDetailSampleDistance(float detailSampleDist)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">detailSampleDist</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetDetailSampleMaxError_" data-uid="Godot.NavigationMesh.SetDetailSampleMaxError*"></a>
+  <h4 id="Godot_NavigationMesh_SetDetailSampleMaxError_System_Single_" data-uid="Godot.NavigationMesh.SetDetailSampleMaxError(System.Single)">SetDetailSampleMaxError(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDetailSampleMaxError(float detailSampleMaxError)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">detailSampleMaxError</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetEdgeMaxError_" data-uid="Godot.NavigationMesh.SetEdgeMaxError*"></a>
+  <h4 id="Godot_NavigationMesh_SetEdgeMaxError_System_Single_" data-uid="Godot.NavigationMesh.SetEdgeMaxError(System.Single)">SetEdgeMaxError(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEdgeMaxError(float edgeMaxError)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">edgeMaxError</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetEdgeMaxLength_" data-uid="Godot.NavigationMesh.SetEdgeMaxLength*"></a>
+  <h4 id="Godot_NavigationMesh_SetEdgeMaxLength_System_Single_" data-uid="Godot.NavigationMesh.SetEdgeMaxLength(System.Single)">SetEdgeMaxLength(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEdgeMaxLength(float edgeMaxLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">edgeMaxLength</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetFilterLedgeSpans_" data-uid="Godot.NavigationMesh.SetFilterLedgeSpans*"></a>
+  <h4 id="Godot_NavigationMesh_SetFilterLedgeSpans_System_Boolean_" data-uid="Godot.NavigationMesh.SetFilterLedgeSpans(System.Boolean)">SetFilterLedgeSpans(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFilterLedgeSpans(bool filterLedgeSpans)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">filterLedgeSpans</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetFilterLowHangingObstacles_" data-uid="Godot.NavigationMesh.SetFilterLowHangingObstacles*"></a>
+  <h4 id="Godot_NavigationMesh_SetFilterLowHangingObstacles_System_Boolean_" data-uid="Godot.NavigationMesh.SetFilterLowHangingObstacles(System.Boolean)">SetFilterLowHangingObstacles(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFilterLowHangingObstacles(bool filterLowHangingObstacles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">filterLowHangingObstacles</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetFilterWalkableLowHeightSpans_" data-uid="Godot.NavigationMesh.SetFilterWalkableLowHeightSpans*"></a>
+  <h4 id="Godot_NavigationMesh_SetFilterWalkableLowHeightSpans_System_Boolean_" data-uid="Godot.NavigationMesh.SetFilterWalkableLowHeightSpans(System.Boolean)">SetFilterWalkableLowHeightSpans(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFilterWalkableLowHeightSpans(bool filterWalkableLowHeightSpans)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">filterWalkableLowHeightSpans</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetParsedGeometryType_" data-uid="Godot.NavigationMesh.SetParsedGeometryType*"></a>
+  <h4 id="Godot_NavigationMesh_SetParsedGeometryType_Godot_NavigationMesh_ParsedGeometryType_" data-uid="Godot.NavigationMesh.SetParsedGeometryType(Godot.NavigationMesh.ParsedGeometryType)">SetParsedGeometryType(NavigationMesh.ParsedGeometryType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetParsedGeometryType(NavigationMesh.ParsedGeometryType geometryType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NavigationMesh.ParsedGeometryType.html">NavigationMesh.ParsedGeometryType</a></td>
+        <td><span class="parametername">geometryType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetRegionMergeSize_" data-uid="Godot.NavigationMesh.SetRegionMergeSize*"></a>
+  <h4 id="Godot_NavigationMesh_SetRegionMergeSize_System_Single_" data-uid="Godot.NavigationMesh.SetRegionMergeSize(System.Single)">SetRegionMergeSize(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRegionMergeSize(float regionMergeSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">regionMergeSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetRegionMinSize_" data-uid="Godot.NavigationMesh.SetRegionMinSize*"></a>
+  <h4 id="Godot_NavigationMesh_SetRegionMinSize_System_Single_" data-uid="Godot.NavigationMesh.SetRegionMinSize(System.Single)">SetRegionMinSize(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRegionMinSize(float regionMinSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">regionMinSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetSamplePartitionType_" data-uid="Godot.NavigationMesh.SetSamplePartitionType*"></a>
+  <h4 id="Godot_NavigationMesh_SetSamplePartitionType_Godot_NavigationMesh_SamplePartitionType_" data-uid="Godot.NavigationMesh.SetSamplePartitionType(Godot.NavigationMesh.SamplePartitionType)">SetSamplePartitionType(NavigationMesh.SamplePartitionType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSamplePartitionType(NavigationMesh.SamplePartitionType samplePartitionType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NavigationMesh.SamplePartitionType.html">NavigationMesh.SamplePartitionType</a></td>
+        <td><span class="parametername">samplePartitionType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetSourceGeometryMode_" data-uid="Godot.NavigationMesh.SetSourceGeometryMode*"></a>
+  <h4 id="Godot_NavigationMesh_SetSourceGeometryMode_Godot_NavigationMesh_SourceGeometryMode_" data-uid="Godot.NavigationMesh.SetSourceGeometryMode(Godot.NavigationMesh.SourceGeometryMode)">SetSourceGeometryMode(NavigationMesh.SourceGeometryMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSourceGeometryMode(NavigationMesh.SourceGeometryMode mask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.NavigationMesh.SourceGeometryMode.html">NavigationMesh.SourceGeometryMode</a></td>
+        <td><span class="parametername">mask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetSourceGroupName_" data-uid="Godot.NavigationMesh.SetSourceGroupName*"></a>
+  <h4 id="Godot_NavigationMesh_SetSourceGroupName_System_String_" data-uid="Godot.NavigationMesh.SetSourceGroupName(System.String)">SetSourceGroupName(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSourceGroupName(string mask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">mask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetVertices_" data-uid="Godot.NavigationMesh.SetVertices*"></a>
+  <h4 id="Godot_NavigationMesh_SetVertices_Godot_Vector3___" data-uid="Godot.NavigationMesh.SetVertices(Godot.Vector3[])">SetVertices(Vector3[])</h4>
+  <div class="markdown level1 summary"><p>Sets the vertices that can be then indexed to create polygons with the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_AddPolygon_System_Int32___">AddPolygon(Int32[])</a> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVertices(Vector3[] vertices)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td><span class="parametername">vertices</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_NavigationMesh_SetVertsPerPoly_" data-uid="Godot.NavigationMesh.SetVertsPerPoly*"></a>
+  <h4 id="Godot_NavigationMesh_SetVertsPerPoly_System_Single_" data-uid="Godot.NavigationMesh.SetVertsPerPoly(System.Single)">SetVertsPerPoly(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVertsPerPoly(float vertsPerPoly)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">vertsPerPoly</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,990 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SurfaceTool
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SurfaceTool
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.SurfaceTool">
+  
+  
+  <h1 id="Godot_SurfaceTool" data-uid="Godot.SurfaceTool" class="text-break">Class SurfaceTool
+  </h1>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Godot.SurfaceTool.html">SurfaceTool</a> is used to construct a <a class="xref" href="Godot.Mesh.html">Mesh</a> by specifying vertex attributes individually. It can be used to construct a <a class="xref" href="Godot.Mesh.html">Mesh</a> from a script. All properties except indices need to be added before calling <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_AddVertex_Godot_Vector3_">AddVertex(Vector3)</a>. For example, to add vertex colors and UVs:</p>
+<p><pre><code>var st = SurfaceTool.new()
+st.begin(Mesh.PRIMITIVE_TRIANGLES)
+st.add_color(Color(1, 0, 0))
+st.add_uv(Vector2(0, 0))
+st.add_vertex(Vector3(0, 0, 0))</code></pre></p>
+<p>The above <a class="xref" href="Godot.SurfaceTool.html">SurfaceTool</a> now contains one vertex of a triangle which has a UV coordinate and a specified <a class="xref" href="Godot.Color.html">Color</a>. If another vertex were added without calling <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_AddUv_Godot_Vector2_">AddUv(Vector2)</a> or <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_AddColor_Godot_Color_">AddColor(Color)</a>, then the last values would be used.</p>
+<p>Vertex attributes must be passed before calling <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_AddVertex_Godot_Vector3_">AddVertex(Vector3)</a>. Failure to do so will result in an error when committing the vertex information to a mesh.</p>
+<p>Additionally, the attributes used before the first vertex is added determine the format of the mesh. For example, if you only add UVs to the first vertex, you cannot add color to any of the subsequent vertices.</p>
+<p>See also <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>, <a class="xref" href="Godot.ImmediateGeometry.html">ImmediateGeometry</a> and <a class="xref" href="Godot.MeshDataTool.html">MeshDataTool</a> for procedural geometry generation.</p>
+<p>Note: Godot uses clockwise <a href="https://learnopengl.com/Advanced-OpenGL/Face-culling">winding order</a> for front faces of triangle primitive modes.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Reference.html">Reference</a></div>
+    <div class="level3"><span class="xref">SurfaceTool</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_InitRef">Reference.InitRef()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Reference_">Reference.Reference_()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Unreference">Reference.Unreference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_SurfaceTool_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SurfaceTool : Reference, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_SurfaceTool__ctor_" data-uid="Godot.SurfaceTool.#ctor*"></a>
+  <h4 id="Godot_SurfaceTool__ctor" data-uid="Godot.SurfaceTool.#ctor">SurfaceTool()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SurfaceTool()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_SurfaceTool_AddBones_" data-uid="Godot.SurfaceTool.AddBones*"></a>
+  <h4 id="Godot_SurfaceTool_AddBones_System_Int32___" data-uid="Godot.SurfaceTool.AddBones(System.Int32[])">AddBones(Int32[])</h4>
+  <div class="markdown level1 summary"><p>Specifies an array of bones to use for the next vertex. <code>bones</code> must contain 4 integers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddBones(int[] bones)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td><span class="parametername">bones</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddColor_" data-uid="Godot.SurfaceTool.AddColor*"></a>
+  <h4 id="Godot_SurfaceTool_AddColor_Godot_Color_" data-uid="Godot.SurfaceTool.AddColor(Godot.Color)">AddColor(Color)</h4>
+  <div class="markdown level1 summary"><p>Specifies a <a class="xref" href="Godot.Color.html">Color</a> to use for the next vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all.</p>
+<p>Note: The material must have <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_VertexColorUseAsAlbedo">VertexColorUseAsAlbedo</a> enabled for the vertex color to be visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddColor(Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddIndex_" data-uid="Godot.SurfaceTool.AddIndex*"></a>
+  <h4 id="Godot_SurfaceTool_AddIndex_System_Int32_" data-uid="Godot.SurfaceTool.AddIndex(System.Int32)">AddIndex(Int32)</h4>
+  <div class="markdown level1 summary"><p>Adds an index to index array if you are using indexed vertices. Does not need to be called before adding vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddIndex(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddNormal_" data-uid="Godot.SurfaceTool.AddNormal*"></a>
+  <h4 id="Godot_SurfaceTool_AddNormal_Godot_Vector3_" data-uid="Godot.SurfaceTool.AddNormal(Godot.Vector3)">AddNormal(Vector3)</h4>
+  <div class="markdown level1 summary"><p>Specifies a normal to use for the next vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddNormal(Vector3 normal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddSmoothGroup_" data-uid="Godot.SurfaceTool.AddSmoothGroup*"></a>
+  <h4 id="Godot_SurfaceTool_AddSmoothGroup_System_Boolean_" data-uid="Godot.SurfaceTool.AddSmoothGroup(System.Boolean)">AddSmoothGroup(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the current vertex (if using only vertex arrays) or current index (if also using index arrays) should use smooth normals for normal calculation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddSmoothGroup(bool smooth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">smooth</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddTangent_" data-uid="Godot.SurfaceTool.AddTangent*"></a>
+  <h4 id="Godot_SurfaceTool_AddTangent_Godot_Plane_" data-uid="Godot.SurfaceTool.AddTangent(Godot.Plane)">AddTangent(Plane)</h4>
+  <div class="markdown level1 summary"><p>Specifies a tangent to use for the next vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTangent(Plane tangent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Plane.html">Plane</a></td>
+        <td><span class="parametername">tangent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddTriangleFan_" data-uid="Godot.SurfaceTool.AddTriangleFan*"></a>
+  <h4 id="Godot_SurfaceTool_AddTriangleFan_Godot_Vector3___Godot_Vector2___Godot_Color___Godot_Vector2___Godot_Vector3___Godot_Collections_Array_" data-uid="Godot.SurfaceTool.AddTriangleFan(Godot.Vector3[],Godot.Vector2[],Godot.Color[],Godot.Vector2[],Godot.Vector3[],Godot.Collections.Array)">AddTriangleFan(Vector3[], Vector2[], Color[], Vector2[], Vector3[], Array)</h4>
+  <div class="markdown level1 summary"><p>Inserts a triangle fan made of array data into <a class="xref" href="Godot.Mesh.html">Mesh</a> being constructed.</p>
+<p>Requires the primitive type be set to <a class="xref" href="Godot.Mesh.PrimitiveType.html#Godot_Mesh_PrimitiveType_Triangles">Triangles</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTriangleFan(Vector3[] vertices, Vector2[] uvs = null, Color[] colors = null, Vector2[] uv2s = null, Vector3[] normals = null, Array tangents = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td><span class="parametername">vertices</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a>[]</td>
+        <td><span class="parametername">uvs</span></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;Vector2&gt;()</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a>[]</td>
+        <td><span class="parametername">colors</span></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;Color&gt;()</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a>[]</td>
+        <td><span class="parametername">uv2s</span></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;Vector2&gt;()</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td><span class="parametername">normals</span></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;Vector3&gt;()</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
+        <td><span class="parametername">tangents</span></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddUv_" data-uid="Godot.SurfaceTool.AddUv*"></a>
+  <h4 id="Godot_SurfaceTool_AddUv_Godot_Vector2_" data-uid="Godot.SurfaceTool.AddUv(Godot.Vector2)">AddUv(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Specifies a set of UV coordinates to use for the next vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddUv(Vector2 uv)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">uv</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddUv2_" data-uid="Godot.SurfaceTool.AddUv2*"></a>
+  <h4 id="Godot_SurfaceTool_AddUv2_Godot_Vector2_" data-uid="Godot.SurfaceTool.AddUv2(Godot.Vector2)">AddUv2(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Specifies an optional second set of UV coordinates to use for the next vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddUv2(Vector2 uv2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">uv2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddVertex_" data-uid="Godot.SurfaceTool.AddVertex*"></a>
+  <h4 id="Godot_SurfaceTool_AddVertex_Godot_Vector3_" data-uid="Godot.SurfaceTool.AddVertex(Godot.Vector3)">AddVertex(Vector3)</h4>
+  <div class="markdown level1 summary"><p>Specifies the position of current vertex. Should be called after specifying other vertex properties (e.g. Color, UV).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddVertex(Vector3 vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">vertex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AddWeights_" data-uid="Godot.SurfaceTool.AddWeights*"></a>
+  <h4 id="Godot_SurfaceTool_AddWeights_System_Single___" data-uid="Godot.SurfaceTool.AddWeights(System.Single[])">AddWeights(Single[])</h4>
+  <div class="markdown level1 summary"><p>Specifies weight values to use for the next vertex. <code>weights</code> must contain 4 values. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddWeights(float[] weights)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span>[]</td>
+        <td><span class="parametername">weights</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_AppendFrom_" data-uid="Godot.SurfaceTool.AppendFrom*"></a>
+  <h4 id="Godot_SurfaceTool_AppendFrom_Godot_Mesh_System_Int32_Godot_Transform_" data-uid="Godot.SurfaceTool.AppendFrom(Godot.Mesh,System.Int32,Godot.Transform)">AppendFrom(Mesh, Int32, Transform)</h4>
+  <div class="markdown level1 summary"><p>Append vertices from a given <a class="xref" href="Godot.Mesh.html">Mesh</a> surface onto the current vertex array with specified <a class="xref" href="Godot.Transform.html">Transform</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AppendFrom(Mesh existing, int surface, Transform transform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Mesh.html">Mesh</a></td>
+        <td><span class="parametername">existing</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">surface</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Transform.html">Transform</a></td>
+        <td><span class="parametername">transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_Begin_" data-uid="Godot.SurfaceTool.Begin*"></a>
+  <h4 id="Godot_SurfaceTool_Begin_Godot_Mesh_PrimitiveType_" data-uid="Godot.SurfaceTool.Begin(Godot.Mesh.PrimitiveType)">Begin(Mesh.PrimitiveType)</h4>
+  <div class="markdown level1 summary"><p>Called before adding any vertices. Takes the primitive type as an argument (e.g. <a class="xref" href="Godot.Mesh.PrimitiveType.html#Godot_Mesh_PrimitiveType_Triangles">Triangles</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Mesh.PrimitiveType primitive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Mesh.PrimitiveType.html">Mesh.PrimitiveType</a></td>
+        <td><span class="parametername">primitive</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_Clear_" data-uid="Godot.SurfaceTool.Clear*"></a>
+  <h4 id="Godot_SurfaceTool_Clear" data-uid="Godot.SurfaceTool.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Clear all information passed into the surface tool so far.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_SurfaceTool_Commit_" data-uid="Godot.SurfaceTool.Commit*"></a>
+  <h4 id="Godot_SurfaceTool_Commit_Godot_ArrayMesh_System_UInt32_" data-uid="Godot.SurfaceTool.Commit(Godot.ArrayMesh,System.UInt32)">Commit(ArrayMesh, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Returns a constructed <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a> from current information passed in. If an existing <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a> is passed in as an argument, will add an extra surface to the existing <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>.</p>
+<p>Default flag is <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressDefault">CompressDefault</a> if compression is enabled. If compression is disabled the default flag is <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_FlagUseOctahedralCompression">FlagUseOctahedralCompression</a>. See <code>ARRAY_COMPRESS_*</code> constants in <a class="xref" href="Godot.Mesh.ArrayFormat.html">Mesh.ArrayFormat</a> for other flags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArrayMesh Commit(ArrayMesh existing = null, uint flags = 2194432U)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a></td>
+        <td><span class="parametername">existing</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_CommitToArrays_" data-uid="Godot.SurfaceTool.CommitToArrays*"></a>
+  <h4 id="Godot_SurfaceTool_CommitToArrays" data-uid="Godot.SurfaceTool.CommitToArrays">CommitToArrays()</h4>
+  <div class="markdown level1 summary"><p>Commits the data to the same format used by <a class="xref" href="Godot.ArrayMesh.html#Godot_ArrayMesh_AddSurfaceFromArrays_Godot_Mesh_PrimitiveType_Godot_Collections_Array_Godot_Collections_Array_System_UInt32_">AddSurfaceFromArrays(Mesh.PrimitiveType, Array, Array, UInt32)</a>. This way you can further process the mesh data using the <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a> API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Array CommitToArrays()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_CreateFrom_" data-uid="Godot.SurfaceTool.CreateFrom*"></a>
+  <h4 id="Godot_SurfaceTool_CreateFrom_Godot_Mesh_System_Int32_" data-uid="Godot.SurfaceTool.CreateFrom(Godot.Mesh,System.Int32)">CreateFrom(Mesh, Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a vertex array from an existing <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateFrom(Mesh existing, int surface)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Mesh.html">Mesh</a></td>
+        <td><span class="parametername">existing</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">surface</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_CreateFromBlendShape_" data-uid="Godot.SurfaceTool.CreateFromBlendShape*"></a>
+  <h4 id="Godot_SurfaceTool_CreateFromBlendShape_Godot_Mesh_System_Int32_System_String_" data-uid="Godot.SurfaceTool.CreateFromBlendShape(Godot.Mesh,System.Int32,System.String)">CreateFromBlendShape(Mesh, Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a vertex array from the specified blend shape of an existing <a class="xref" href="Godot.Mesh.html">Mesh</a>. This can be used to extract a specific pose from a blend shape.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateFromBlendShape(Mesh existing, int surface, string blendShape)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Mesh.html">Mesh</a></td>
+        <td><span class="parametername">existing</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">surface</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">blendShape</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_Deindex_" data-uid="Godot.SurfaceTool.Deindex*"></a>
+  <h4 id="Godot_SurfaceTool_Deindex" data-uid="Godot.SurfaceTool.Deindex">Deindex()</h4>
+  <div class="markdown level1 summary"><p>Removes the index array by expanding the vertex array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deindex()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_SurfaceTool_GenerateNormals_" data-uid="Godot.SurfaceTool.GenerateNormals*"></a>
+  <h4 id="Godot_SurfaceTool_GenerateNormals_System_Boolean_" data-uid="Godot.SurfaceTool.GenerateNormals(System.Boolean)">GenerateNormals(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Generates normals from vertices so you do not have to do it manually. If <code>flip</code> is <code>true</code>, the resulting normals will be inverted. <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_GenerateNormals_System_Boolean_">GenerateNormals(Boolean)</a> should be called after generating geometry and before committing the mesh using <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_Commit_Godot_ArrayMesh_System_UInt32_">Commit(ArrayMesh, UInt32)</a> or <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_CommitToArrays">CommitToArrays()</a>. For correct display of normal-mapped surfaces, you will also have to generate tangents using <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_GenerateTangents">GenerateTangents()</a>.</p>
+<p>Note: <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_GenerateNormals_System_Boolean_">GenerateNormals(Boolean)</a> only works if the primitive type to be set to <a class="xref" href="Godot.Mesh.PrimitiveType.html#Godot_Mesh_PrimitiveType_Triangles">Triangles</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GenerateNormals(bool flip = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">flip</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_SurfaceTool_GenerateTangents_" data-uid="Godot.SurfaceTool.GenerateTangents*"></a>
+  <h4 id="Godot_SurfaceTool_GenerateTangents" data-uid="Godot.SurfaceTool.GenerateTangents">GenerateTangents()</h4>
+  <div class="markdown level1 summary"><p>Generates a tangent vector for each vertex. Requires that each vertex have UVs and normals set already (see <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_GenerateNormals_System_Boolean_">GenerateNormals(Boolean)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GenerateTangents()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_SurfaceTool_Index_" data-uid="Godot.SurfaceTool.Index*"></a>
+  <h4 id="Godot_SurfaceTool_Index" data-uid="Godot.SurfaceTool.Index">Index()</h4>
+  <div class="markdown level1 summary"><p>Shrinks the vertex array by creating an index array. This can improve performance by avoiding vertex reuse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Index()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_SurfaceTool_SetMaterial_" data-uid="Godot.SurfaceTool.SetMaterial*"></a>
+  <h4 id="Godot_SurfaceTool_SetMaterial_Godot_Material_" data-uid="Godot.SurfaceTool.SetMaterial(Godot.Material)">SetMaterial(Material)</h4>
+  <div class="markdown level1 summary"><p>Sets <a class="xref" href="Godot.Material.html">Material</a> to be used by the <a class="xref" href="Godot.Mesh.html">Mesh</a> you are constructing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMaterial(Material material)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Material.html">Material</a></td>
+        <td><span class="parametername">material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

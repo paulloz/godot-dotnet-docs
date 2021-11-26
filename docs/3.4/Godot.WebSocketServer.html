@@ -1,0 +1,1066 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WebSocketServer
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WebSocketServer
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.WebSocketServer">
+  
+  
+  <h1 id="Godot_WebSocketServer" data-uid="Godot.WebSocketServer" class="text-break">Class WebSocketServer
+  </h1>
+  <div class="markdown level0 summary"><p>This class implements a WebSocket server that can also support the high-level multiplayer API.</p>
+<p>After starting the server (<a class="xref" href="Godot.WebSocketServer.html#Godot_WebSocketServer_Listen_System_Int32_System_String___System_Boolean_">Listen(Int32, String[], Boolean)</a>), you will need to <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_Poll">Poll()</a> it at regular intervals (e.g. inside <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>). When clients connect, disconnect, or send data, you will receive the appropriate signal.</p>
+<p>Note: Not available in HTML5 exports.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Reference.html">Reference</a></div>
+    <div class="level3"><a class="xref" href="Godot.PacketPeer.html">PacketPeer</a></div>
+    <div class="level4"><a class="xref" href="Godot.NetworkedMultiplayerPeer.html">NetworkedMultiplayerPeer</a></div>
+    <div class="level5"><a class="xref" href="Godot.WebSocketMultiplayerPeer.html">WebSocketMultiplayerPeer</a></div>
+    <div class="level6"><span class="xref">WebSocketServer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.WebSocketMultiplayerPeer.html#Godot_WebSocketMultiplayerPeer_SetBuffers_System_Int32_System_Int32_System_Int32_System_Int32_">WebSocketMultiplayerPeer.SetBuffers(Int32, Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.WebSocketMultiplayerPeer.html#Godot_WebSocketMultiplayerPeer_GetPeer_System_Int32_">WebSocketMultiplayerPeer.GetPeer(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_TargetPeerBroadcast">NetworkedMultiplayerPeer.TargetPeerBroadcast</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_TargetPeerServer">NetworkedMultiplayerPeer.TargetPeerServer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_SetTransferMode_Godot_NetworkedMultiplayerPeer_TransferModeEnum_">NetworkedMultiplayerPeer.SetTransferMode(NetworkedMultiplayerPeer.TransferModeEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_GetTransferMode">NetworkedMultiplayerPeer.GetTransferMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_SetTargetPeer_System_Int32_">NetworkedMultiplayerPeer.SetTargetPeer(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_GetPacketPeer">NetworkedMultiplayerPeer.GetPacketPeer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_Poll">NetworkedMultiplayerPeer.Poll()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_GetConnectionStatus">NetworkedMultiplayerPeer.GetConnectionStatus()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_GetUniqueId">NetworkedMultiplayerPeer.GetUniqueId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_SetRefuseNewConnections_System_Boolean_">NetworkedMultiplayerPeer.SetRefuseNewConnections(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_IsRefusingNewConnections">NetworkedMultiplayerPeer.IsRefusingNewConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_RefuseNewConnections">NetworkedMultiplayerPeer.RefuseNewConnections</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_TransferMode">NetworkedMultiplayerPeer.TransferMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetVar_System_Boolean_">PacketPeer.GetVar(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_PutVar_System_Object_System_Boolean_">PacketPeer.PutVar(Object, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetPacket">PacketPeer.GetPacket()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_PutPacket_System_Byte___">PacketPeer.PutPacket(Byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetPacketError">PacketPeer.GetPacketError()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetAvailablePacketCount">PacketPeer.GetAvailablePacketCount()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_SetAllowObjectDecoding_System_Boolean_">PacketPeer.SetAllowObjectDecoding(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_IsObjectDecodingAllowed">PacketPeer.IsObjectDecodingAllowed()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetEncodeBufferMaxSize">PacketPeer.GetEncodeBufferMaxSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_SetEncodeBufferMaxSize_System_Int32_">PacketPeer.SetEncodeBufferMaxSize(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_EncodeBufferMaxSize">PacketPeer.EncodeBufferMaxSize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_AllowObjectDecoding">PacketPeer.AllowObjectDecoding</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_InitRef">Reference.InitRef()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Reference_">Reference.Reference_()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Unreference">Reference.Unreference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_WebSocketServer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class WebSocketServer : WebSocketMultiplayerPeer, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_WebSocketServer__ctor_" data-uid="Godot.WebSocketServer.#ctor*"></a>
+  <h4 id="Godot_WebSocketServer__ctor" data-uid="Godot.WebSocketServer.#ctor">WebSocketServer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WebSocketServer()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_WebSocketServer_BindIp_" data-uid="Godot.WebSocketServer.BindIp*"></a>
+  <h4 id="Godot_WebSocketServer_BindIp" data-uid="Godot.WebSocketServer.BindIp">BindIp</h4>
+  <div class="markdown level1 summary"><p>When not set to <code>*</code> will restrict incoming connections to the specified IP address. Setting <code>bind_ip</code> to <code>127.0.0.1</code> will cause the server to listen only to the local host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BindIp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_CaChain_" data-uid="Godot.WebSocketServer.CaChain*"></a>
+  <h4 id="Godot_WebSocketServer_CaChain" data-uid="Godot.WebSocketServer.CaChain">CaChain</h4>
+  <div class="markdown level1 summary"><p>When using SSL (see <a class="xref" href="Godot.WebSocketServer.html#Godot_WebSocketServer_PrivateKey">PrivateKey</a> and <a class="xref" href="Godot.WebSocketServer.html#Godot_WebSocketServer_SslCertificate">SslCertificate</a>), you can set this to a valid <a class="xref" href="Godot.X509Certificate.html">X509Certificate</a> to be provided as additional CA chain information during the SSL handshake.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public X509Certificate CaChain { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.X509Certificate.html">X509Certificate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_HandshakeTimeout_" data-uid="Godot.WebSocketServer.HandshakeTimeout*"></a>
+  <h4 id="Godot_WebSocketServer_HandshakeTimeout" data-uid="Godot.WebSocketServer.HandshakeTimeout">HandshakeTimeout</h4>
+  <div class="markdown level1 summary"><p>The time in seconds before a pending client (i.e. a client that has not yet finished the HTTP handshake) is considered stale and forcefully disconnected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float HandshakeTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_PrivateKey_" data-uid="Godot.WebSocketServer.PrivateKey*"></a>
+  <h4 id="Godot_WebSocketServer_PrivateKey" data-uid="Godot.WebSocketServer.PrivateKey">PrivateKey</h4>
+  <div class="markdown level1 summary"><p>When set to a valid <a class="xref" href="Godot.CryptoKey.html">CryptoKey</a> (along with <a class="xref" href="Godot.WebSocketServer.html#Godot_WebSocketServer_SslCertificate">SslCertificate</a>) will cause the server to require SSL instead of regular TCP (i.e. the <code>wss://</code> protocol).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CryptoKey PrivateKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CryptoKey.html">CryptoKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_SslCertificate_" data-uid="Godot.WebSocketServer.SslCertificate*"></a>
+  <h4 id="Godot_WebSocketServer_SslCertificate" data-uid="Godot.WebSocketServer.SslCertificate">SslCertificate</h4>
+  <div class="markdown level1 summary"><p>When set to a valid <a class="xref" href="Godot.X509Certificate.html">X509Certificate</a> (along with <a class="xref" href="Godot.WebSocketServer.html#Godot_WebSocketServer_PrivateKey">PrivateKey</a>) will cause the server to require SSL instead of regular TCP (i.e. the <code>wss://</code> protocol).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public X509Certificate SslCertificate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.X509Certificate.html">X509Certificate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_WebSocketServer_DisconnectPeer_" data-uid="Godot.WebSocketServer.DisconnectPeer*"></a>
+  <h4 id="Godot_WebSocketServer_DisconnectPeer_System_Int32_System_Int32_System_String_" data-uid="Godot.WebSocketServer.DisconnectPeer(System.Int32,System.Int32,System.String)">DisconnectPeer(Int32, Int32, String)</h4>
+  <div class="markdown level1 summary"><p>Disconnects the peer identified by <code>id</code> from the server. See <a class="xref" href="Godot.WebSocketPeer.html#Godot_WebSocketPeer_Close_System_Int32_System_String_">Close(Int32, String)</a> for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisconnectPeer(int id, int code = 1000, string reason = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">code</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_GetBindIp_" data-uid="Godot.WebSocketServer.GetBindIp*"></a>
+  <h4 id="Godot_WebSocketServer_GetBindIp" data-uid="Godot.WebSocketServer.GetBindIp">GetBindIp()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetBindIp()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_GetCaChain_" data-uid="Godot.WebSocketServer.GetCaChain*"></a>
+  <h4 id="Godot_WebSocketServer_GetCaChain" data-uid="Godot.WebSocketServer.GetCaChain">GetCaChain()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public X509Certificate GetCaChain()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.X509Certificate.html">X509Certificate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_GetHandshakeTimeout_" data-uid="Godot.WebSocketServer.GetHandshakeTimeout*"></a>
+  <h4 id="Godot_WebSocketServer_GetHandshakeTimeout" data-uid="Godot.WebSocketServer.GetHandshakeTimeout">GetHandshakeTimeout()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetHandshakeTimeout()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_GetPeerAddress_" data-uid="Godot.WebSocketServer.GetPeerAddress*"></a>
+  <h4 id="Godot_WebSocketServer_GetPeerAddress_System_Int32_" data-uid="Godot.WebSocketServer.GetPeerAddress(System.Int32)">GetPeerAddress(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns the IP address of the given peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetPeerAddress(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_GetPeerPort_" data-uid="Godot.WebSocketServer.GetPeerPort*"></a>
+  <h4 id="Godot_WebSocketServer_GetPeerPort_System_Int32_" data-uid="Godot.WebSocketServer.GetPeerPort(System.Int32)">GetPeerPort(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns the remote port of the given peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetPeerPort(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_GetPrivateKey_" data-uid="Godot.WebSocketServer.GetPrivateKey*"></a>
+  <h4 id="Godot_WebSocketServer_GetPrivateKey" data-uid="Godot.WebSocketServer.GetPrivateKey">GetPrivateKey()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CryptoKey GetPrivateKey()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CryptoKey.html">CryptoKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_GetSslCertificate_" data-uid="Godot.WebSocketServer.GetSslCertificate*"></a>
+  <h4 id="Godot_WebSocketServer_GetSslCertificate" data-uid="Godot.WebSocketServer.GetSslCertificate">GetSslCertificate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public X509Certificate GetSslCertificate()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.X509Certificate.html">X509Certificate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_HasPeer_" data-uid="Godot.WebSocketServer.HasPeer*"></a>
+  <h4 id="Godot_WebSocketServer_HasPeer_System_Int32_" data-uid="Godot.WebSocketServer.HasPeer(System.Int32)">HasPeer(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a peer with the given ID is connected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasPeer(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_IsListening_" data-uid="Godot.WebSocketServer.IsListening*"></a>
+  <h4 id="Godot_WebSocketServer_IsListening" data-uid="Godot.WebSocketServer.IsListening">IsListening()</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the server is actively listening on a port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsListening()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_Listen_" data-uid="Godot.WebSocketServer.Listen*"></a>
+  <h4 id="Godot_WebSocketServer_Listen_System_Int32_System_String___System_Boolean_" data-uid="Godot.WebSocketServer.Listen(System.Int32,System.String[],System.Boolean)">Listen(Int32, String[], Boolean)</h4>
+  <div class="markdown level1 summary"><p>Starts listening on the given port.</p>
+<p>You can specify the desired subprotocols via the &quot;protocols&quot; array. If the list empty (default), no sub-protocol will be requested.</p>
+<p>If <code>true</code> is passed as <code>gd_mp_api</code>, the server will behave like a network peer for the <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a>, connections from non-Godot clients will not work, and <code>data_received</code> will not be emitted.</p>
+<p>If <code>false</code> is passed instead (default), you must call <a class="xref" href="Godot.PacketPeer.html">PacketPeer</a> functions (<code>put_packet</code>, <code>get_packet</code>, etc.), on the <a class="xref" href="Godot.WebSocketPeer.html">WebSocketPeer</a> returned via <code>get_peer(id)</code> to communicate with the peer with given <code>id</code> (e.g. <code>get_peer(id).get_available_packet_count</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Error Listen(int port, string[] protocols = null, bool gdMpApi = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">port</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">protocols</span></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;string&gt;()</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">gdMpApi</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Error.html">Error</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_SetBindIp_" data-uid="Godot.WebSocketServer.SetBindIp*"></a>
+  <h4 id="Godot_WebSocketServer_SetBindIp_System_String_" data-uid="Godot.WebSocketServer.SetBindIp(System.String)">SetBindIp(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBindIp(string arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">arg0</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_SetCaChain_" data-uid="Godot.WebSocketServer.SetCaChain*"></a>
+  <h4 id="Godot_WebSocketServer_SetCaChain_Godot_X509Certificate_" data-uid="Godot.WebSocketServer.SetCaChain(Godot.X509Certificate)">SetCaChain(X509Certificate)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCaChain(X509Certificate arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.X509Certificate.html">X509Certificate</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_SetHandshakeTimeout_" data-uid="Godot.WebSocketServer.SetHandshakeTimeout*"></a>
+  <h4 id="Godot_WebSocketServer_SetHandshakeTimeout_System_Single_" data-uid="Godot.WebSocketServer.SetHandshakeTimeout(System.Single)">SetHandshakeTimeout(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHandshakeTimeout(float timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_SetPrivateKey_" data-uid="Godot.WebSocketServer.SetPrivateKey*"></a>
+  <h4 id="Godot_WebSocketServer_SetPrivateKey_Godot_CryptoKey_" data-uid="Godot.WebSocketServer.SetPrivateKey(Godot.CryptoKey)">SetPrivateKey(CryptoKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPrivateKey(CryptoKey arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CryptoKey.html">CryptoKey</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_SetSslCertificate_" data-uid="Godot.WebSocketServer.SetSslCertificate*"></a>
+  <h4 id="Godot_WebSocketServer_SetSslCertificate_Godot_X509Certificate_" data-uid="Godot.WebSocketServer.SetSslCertificate(Godot.X509Certificate)">SetSslCertificate(X509Certificate)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSslCertificate(X509Certificate arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.X509Certificate.html">X509Certificate</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_WebSocketServer_Stop_" data-uid="Godot.WebSocketServer.Stop*"></a>
+  <h4 id="Godot_WebSocketServer_Stop" data-uid="Godot.WebSocketServer.Stop">Stop()</h4>
+  <div class="markdown level1 summary"><p>Stops the server and clear its state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

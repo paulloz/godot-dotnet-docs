@@ -1,0 +1,1034 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EditorSpatialGizmoPlugin
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EditorSpatialGizmoPlugin
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.EditorSpatialGizmoPlugin">
+  
+  
+  <h1 id="Godot_EditorSpatialGizmoPlugin" data-uid="Godot.EditorSpatialGizmoPlugin" class="text-break">Class EditorSpatialGizmoPlugin
+  </h1>
+  <div class="markdown level0 summary"><p>EditorSpatialGizmoPlugin allows you to define a new type of Gizmo. There are two main ways to do so: extending <a class="xref" href="Godot.EditorSpatialGizmoPlugin.html">EditorSpatialGizmoPlugin</a> for the simpler gizmos, or creating a new <a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a> type. See the tutorial in the documentation for more info.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Reference.html">Reference</a></div>
+    <div class="level3"><a class="xref" href="Godot.Resource.html">Resource</a></div>
+    <div class="level4"><span class="xref">EditorSpatialGizmoPlugin</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource__SetupLocalToScene">Resource._SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetPath_System_String_">Resource.SetPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_TakeOverPath_System_String_">Resource.TakeOverPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetPath">Resource.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetName_System_String_">Resource.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetRid">Resource.GetRid()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetLocalToScene_System_Boolean_">Resource.SetLocalToScene(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_IsLocalToScene">Resource.IsLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_GetLocalScene">Resource.GetLocalScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_SetupLocalToScene">Resource.SetupLocalToScene()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_EmitChanged">Resource.EmitChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_Duplicate_System_Boolean_">Resource.Duplicate(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceLocalToScene">Resource.ResourceLocalToScene</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourcePath">Resource.ResourcePath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Resource.html#Godot_Resource_ResourceName">Resource.ResourceName</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_InitRef">Reference.InitRef()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Reference_">Reference.Reference_()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Reference.html#Godot_Reference_Unreference">Reference.Unreference()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_">Object.GetMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharpEditor.dll</h6>
+  <h5 id="Godot_EditorSpatialGizmoPlugin_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EditorSpatialGizmoPlugin : Resource, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin__ctor_" data-uid="Godot.EditorSpatialGizmoPlugin.#ctor*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin__ctor" data-uid="Godot.EditorSpatialGizmoPlugin.#ctor">EditorSpatialGizmoPlugin()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EditorSpatialGizmoPlugin()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_AddMaterial_" data-uid="Godot.EditorSpatialGizmoPlugin.AddMaterial*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_AddMaterial_System_String_Godot_SpatialMaterial_" data-uid="Godot.EditorSpatialGizmoPlugin.AddMaterial(System.String,Godot.SpatialMaterial)">AddMaterial(String, SpatialMaterial)</h4>
+  <div class="markdown level1 summary"><p>Adds a new material to the internal material list for the plugin. It can then be accessed with <a class="xref" href="Godot.EditorSpatialGizmoPlugin.html#Godot_EditorSpatialGizmoPlugin_GetMaterial_System_String_Godot_EditorSpatialGizmo_">GetMaterial(String, EditorSpatialGizmo)</a>. Should not be overridden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddMaterial(string name, SpatialMaterial material)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.SpatialMaterial.html">SpatialMaterial</a></td>
+        <td><span class="parametername">material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_CanBeHidden_" data-uid="Godot.EditorSpatialGizmoPlugin.CanBeHidden*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_CanBeHidden" data-uid="Godot.EditorSpatialGizmoPlugin.CanBeHidden">CanBeHidden()</h4>
+  <div class="markdown level1 summary"><p>Override this method to define whether the gizmo can be hidden or not. Returns <code>true</code> if not overridden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CanBeHidden()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_CommitHandle_" data-uid="Godot.EditorSpatialGizmoPlugin.CommitHandle*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_CommitHandle_Godot_EditorSpatialGizmo_System_Int32_System_Object_System_Boolean_" data-uid="Godot.EditorSpatialGizmoPlugin.CommitHandle(Godot.EditorSpatialGizmo,System.Int32,System.Object,System.Boolean)">CommitHandle(EditorSpatialGizmo, Int32, Object, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Override this method to commit gizmo handles. Called for this plugin&apos;s active gizmos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void CommitHandle(EditorSpatialGizmo gizmo, int index, object restore, bool cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">restore</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_CreateGizmo_" data-uid="Godot.EditorSpatialGizmoPlugin.CreateGizmo*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_CreateGizmo_Godot_Spatial_" data-uid="Godot.EditorSpatialGizmoPlugin.CreateGizmo(Godot.Spatial)">CreateGizmo(Spatial)</h4>
+  <div class="markdown level1 summary"><p>Override this method to return a custom <a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a> for the spatial nodes of your choice, return <code>null</code> for the rest of nodes. See also <a class="xref" href="Godot.EditorSpatialGizmoPlugin.html#Godot_EditorSpatialGizmoPlugin_HasGizmo_Godot_Spatial_">HasGizmo(Spatial)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual EditorSpatialGizmo CreateGizmo(Spatial spatial)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Spatial.html">Spatial</a></td>
+        <td><span class="parametername">spatial</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_CreateHandleMaterial_" data-uid="Godot.EditorSpatialGizmoPlugin.CreateHandleMaterial*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_CreateHandleMaterial_System_String_System_Boolean_Godot_Texture_" data-uid="Godot.EditorSpatialGizmoPlugin.CreateHandleMaterial(System.String,System.Boolean,Godot.Texture)">CreateHandleMaterial(String, Boolean, Texture)</h4>
+  <div class="markdown level1 summary"><p>Creates a handle material with its variants (selected and/or editable) and adds them to the internal material list. They can then be accessed with <a class="xref" href="Godot.EditorSpatialGizmoPlugin.html#Godot_EditorSpatialGizmoPlugin_GetMaterial_System_String_Godot_EditorSpatialGizmo_">GetMaterial(String, EditorSpatialGizmo)</a> and used in <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_AddHandles_Godot_Vector3___Godot_Material_System_Boolean_System_Boolean_">AddHandles(Vector3[], Material, Boolean, Boolean)</a>. Should not be overridden.</p>
+<p>You can optionally provide a texture to use instead of the default icon.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateHandleMaterial(string name, bool billboard = false, Texture texture = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">billboard</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Texture.html">Texture</a></td>
+        <td><span class="parametername">texture</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_CreateIconMaterial_" data-uid="Godot.EditorSpatialGizmoPlugin.CreateIconMaterial*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_CreateIconMaterial_System_String_Godot_Texture_System_Boolean_System_Nullable_Godot_Color__" data-uid="Godot.EditorSpatialGizmoPlugin.CreateIconMaterial(System.String,Godot.Texture,System.Boolean,System.Nullable{Godot.Color})">CreateIconMaterial(String, Texture, Boolean, Nullable&lt;Color&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates an icon material with its variants (selected and/or editable) and adds them to the internal material list. They can then be accessed with <a class="xref" href="Godot.EditorSpatialGizmoPlugin.html#Godot_EditorSpatialGizmoPlugin_GetMaterial_System_String_Godot_EditorSpatialGizmo_">GetMaterial(String, EditorSpatialGizmo)</a> and used in <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_AddUnscaledBillboard_Godot_Material_System_Single_System_Nullable_Godot_Color__">AddUnscaledBillboard(Material, Single, Nullable&lt;Color&gt;)</a>. Should not be overridden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateIconMaterial(string name, Texture texture, bool onTop = false, Nullable&lt;Color&gt; color = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Texture.html">Texture</a></td>
+        <td><span class="parametername">texture</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onTop</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Color.html">Color</a>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>If the parameter is null, then the default value is new Color(1, 1, 1, 1)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_CreateMaterial_" data-uid="Godot.EditorSpatialGizmoPlugin.CreateMaterial*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_CreateMaterial_System_String_Godot_Color_System_Boolean_System_Boolean_System_Boolean_" data-uid="Godot.EditorSpatialGizmoPlugin.CreateMaterial(System.String,Godot.Color,System.Boolean,System.Boolean,System.Boolean)">CreateMaterial(String, Color, Boolean, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates an unshaded material with its variants (selected and/or editable) and adds them to the internal material list. They can then be accessed with <a class="xref" href="Godot.EditorSpatialGizmoPlugin.html#Godot_EditorSpatialGizmoPlugin_GetMaterial_System_String_Godot_EditorSpatialGizmo_">GetMaterial(String, EditorSpatialGizmo)</a> and used in <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_AddMesh_Godot_ArrayMesh_System_Boolean_Godot_SkinReference_Godot_Material_">AddMesh(ArrayMesh, Boolean, SkinReference, Material)</a> and <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_AddLines_Godot_Vector3___Godot_Material_System_Boolean_System_Nullable_Godot_Color__">AddLines(Vector3[], Material, Boolean, Nullable&lt;Color&gt;)</a>. Should not be overridden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateMaterial(string name, Color color, bool billboard = false, bool onTop = false, bool useVertexColor = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">billboard</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onTop</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">useVertexColor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_GetHandleName_" data-uid="Godot.EditorSpatialGizmoPlugin.GetHandleName*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_GetHandleName_Godot_EditorSpatialGizmo_System_Int32_" data-uid="Godot.EditorSpatialGizmoPlugin.GetHandleName(Godot.EditorSpatialGizmo,System.Int32)">GetHandleName(EditorSpatialGizmo, Int32)</h4>
+  <div class="markdown level1 summary"><p>Override this method to provide gizmo&apos;s handle names. Called for this plugin&apos;s active gizmos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string GetHandleName(EditorSpatialGizmo gizmo, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_GetHandleValue_" data-uid="Godot.EditorSpatialGizmoPlugin.GetHandleValue*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_GetHandleValue_Godot_EditorSpatialGizmo_System_Int32_" data-uid="Godot.EditorSpatialGizmoPlugin.GetHandleValue(Godot.EditorSpatialGizmo,System.Int32)">GetHandleValue(EditorSpatialGizmo, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets actual value of a handle from gizmo. Called for this plugin&apos;s active gizmos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual object GetHandleValue(EditorSpatialGizmo gizmo, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_GetMaterial_" data-uid="Godot.EditorSpatialGizmoPlugin.GetMaterial*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_GetMaterial_System_String_Godot_EditorSpatialGizmo_" data-uid="Godot.EditorSpatialGizmoPlugin.GetMaterial(System.String,Godot.EditorSpatialGizmo)">GetMaterial(String, EditorSpatialGizmo)</h4>
+  <div class="markdown level1 summary"><p>Gets material from the internal list of materials. If an <a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a> is provided, it will try to get the corresponding variant (selected and/or editable).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpatialMaterial GetMaterial(string name, EditorSpatialGizmo gizmo = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.SpatialMaterial.html">SpatialMaterial</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_GetName_" data-uid="Godot.EditorSpatialGizmoPlugin.GetName*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_GetName" data-uid="Godot.EditorSpatialGizmoPlugin.GetName">GetName()</h4>
+  <div class="markdown level1 summary"><p>Override this method to provide the name that will appear in the gizmo visibility menu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string GetName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_GetPriority_" data-uid="Godot.EditorSpatialGizmoPlugin.GetPriority*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_GetPriority" data-uid="Godot.EditorSpatialGizmoPlugin.GetPriority">GetPriority()</h4>
+  <div class="markdown level1 summary"><p>Override this method to set the gizmo&apos;s priority. Higher values correspond to higher priority. If a gizmo with higher priority conflicts with another gizmo, only the gizmo with higher priority will be used.</p>
+<p>All built-in editor gizmos return a priority of <code>-1</code>. If not overridden, this method will return <code>0</code>, which means custom gizmos will automatically override built-in gizmos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int GetPriority()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_HasGizmo_" data-uid="Godot.EditorSpatialGizmoPlugin.HasGizmo*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_HasGizmo_Godot_Spatial_" data-uid="Godot.EditorSpatialGizmoPlugin.HasGizmo(Godot.Spatial)">HasGizmo(Spatial)</h4>
+  <div class="markdown level1 summary"><p>Override this method to define which Spatial nodes have a gizmo from this plugin. Whenever a <a class="xref" href="Godot.Spatial.html">Spatial</a> node is added to a scene this method is called, if it returns <code>true</code> the node gets a generic <a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a> assigned and is added to this plugin&apos;s list of active gizmos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasGizmo(Spatial spatial)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Spatial.html">Spatial</a></td>
+        <td><span class="parametername">spatial</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_IsHandleHighlighted_" data-uid="Godot.EditorSpatialGizmoPlugin.IsHandleHighlighted*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_IsHandleHighlighted_Godot_EditorSpatialGizmo_System_Int32_" data-uid="Godot.EditorSpatialGizmoPlugin.IsHandleHighlighted(Godot.EditorSpatialGizmo,System.Int32)">IsHandleHighlighted(EditorSpatialGizmo, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets whether a handle is highlighted or not. Called for this plugin&apos;s active gizmos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsHandleHighlighted(EditorSpatialGizmo gizmo, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_IsSelectableWhenHidden_" data-uid="Godot.EditorSpatialGizmoPlugin.IsSelectableWhenHidden*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_IsSelectableWhenHidden" data-uid="Godot.EditorSpatialGizmoPlugin.IsSelectableWhenHidden">IsSelectableWhenHidden()</h4>
+  <div class="markdown level1 summary"><p>Override this method to define whether a Spatial with this gizmo should be selectable even when the gizmo is hidden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsSelectableWhenHidden()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_Redraw_" data-uid="Godot.EditorSpatialGizmoPlugin.Redraw*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_Redraw_Godot_EditorSpatialGizmo_" data-uid="Godot.EditorSpatialGizmoPlugin.Redraw(Godot.EditorSpatialGizmo)">Redraw(EditorSpatialGizmo)</h4>
+  <div class="markdown level1 summary"><p>Callback to redraw the provided gizmo. Called for this plugin&apos;s active gizmos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Redraw(EditorSpatialGizmo gizmo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_EditorSpatialGizmoPlugin_SetHandle_" data-uid="Godot.EditorSpatialGizmoPlugin.SetHandle*"></a>
+  <h4 id="Godot_EditorSpatialGizmoPlugin_SetHandle_Godot_EditorSpatialGizmo_System_Int32_Godot_Camera_Godot_Vector2_" data-uid="Godot.EditorSpatialGizmoPlugin.SetHandle(Godot.EditorSpatialGizmo,System.Int32,Godot.Camera,Godot.Vector2)">SetHandle(EditorSpatialGizmo, Int32, Camera, Vector2)</h4>
+  <div class="markdown level1 summary"><p>Update the value of a handle after it has been updated. Called for this plugin&apos;s active gizmos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetHandle(EditorSpatialGizmo gizmo, int index, Camera camera, Vector2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.EditorSpatialGizmo.html">EditorSpatialGizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Camera.html">Camera</a></td>
+        <td><span class="parametername">camera</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

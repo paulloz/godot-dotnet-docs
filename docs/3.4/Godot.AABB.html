@@ -1,0 +1,1534 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AABB
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AABB
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/docs_logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/docs_logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.AABB">
+  
+  
+  <h1 id="Godot_AABB" data-uid="Godot.AABB" class="text-break">Class AABB
+  </h1>
+  <div class="markdown level0 summary"><p>Axis-Aligned Bounding Box. AABB consists of a position, a size, and
+several utility functions. It is typically used for fast overlap tests.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AABB</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Godot.AABB.html">AABB</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_AABB_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class AABB : ValueType, IEquatable&lt;AABB&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_AABB__ctor_" data-uid="Godot.AABB.#ctor*"></a>
+  <h4 id="Godot_AABB__ctor_Godot_Vector3_Godot_Vector3_" data-uid="Godot.AABB.#ctor(Godot.Vector3,Godot.Vector3)">AABB(Vector3, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Godot.AABB.html">AABB</a> from a position and size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB(Vector3 position, Vector3 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>The size, typically positive.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB__ctor_" data-uid="Godot.AABB.#ctor*"></a>
+  <h4 id="Godot_AABB__ctor_Godot_Vector3_System_Single_System_Single_System_Single_" data-uid="Godot.AABB.#ctor(Godot.Vector3,System.Single,System.Single,System.Single)">AABB(Vector3, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Godot.AABB.html">AABB</a> from a <code data-dev-comment-type="paramref" class="paramref">position</code>,
+<code data-dev-comment-type="paramref" class="paramref">width</code>, <code data-dev-comment-type="paramref" class="paramref">height</code>, and <code data-dev-comment-type="paramref" class="paramref">depth</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB(Vector3 position, float width, float height, float depth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width, typically positive.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height, typically positive.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth, typically positive.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB__ctor_" data-uid="Godot.AABB.#ctor*"></a>
+  <h4 id="Godot_AABB__ctor_System_Single_System_Single_System_Single_Godot_Vector3_" data-uid="Godot.AABB.#ctor(System.Single,System.Single,System.Single,Godot.Vector3)">AABB(Single, Single, Single, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Godot.AABB.html">AABB</a> from <code data-dev-comment-type="paramref" class="paramref">x</code>,
+<code data-dev-comment-type="paramref" class="paramref">y</code>, <code data-dev-comment-type="paramref" class="paramref">z</code>, and <code data-dev-comment-type="paramref" class="paramref">size</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB(float x, float y, float z, Vector3 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The position's X coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The position's Y coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">z</span></td>
+        <td><p>The position's Z coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>The size, typically positive.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB__ctor_" data-uid="Godot.AABB.#ctor*"></a>
+  <h4 id="Godot_AABB__ctor_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="Godot.AABB.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">AABB(Single, Single, Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="Godot.AABB.html">AABB</a> from <code data-dev-comment-type="paramref" class="paramref">x</code>,
+<code data-dev-comment-type="paramref" class="paramref">y</code>, <code data-dev-comment-type="paramref" class="paramref">z</code>, <code data-dev-comment-type="paramref" class="paramref">width</code>,
+<code data-dev-comment-type="paramref" class="paramref">height</code>, and <code data-dev-comment-type="paramref" class="paramref">depth</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB(float x, float y, float z, float width, float height, float depth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The position's X coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The position's Y coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">z</span></td>
+        <td><p>The position's Z coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width, typically positive.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height, typically positive.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth, typically positive.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_AABB_End_" data-uid="Godot.AABB.End*"></a>
+  <h4 id="Godot_AABB_End" data-uid="Godot.AABB.End">End</h4>
+  <div class="markdown level1 summary"><p>Ending corner. This is calculated as <a class="xref" href="Godot.AABB.html#Godot_AABB_Position">Position</a> plus
+<a class="xref" href="Godot.AABB.html#Godot_AABB_Size">Size</a>. Setting this value will change the size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 End { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><p>Getting is equivalent to <code data-dev-comment-type="paramref" class="paramref">value</code> = <a class="xref" href="Godot.AABB.html#Godot_AABB_Position">Position</a> + <a class="xref" href="Godot.AABB.html#Godot_AABB_Size">Size</a>,
+setting is equivalent to <a class="xref" href="Godot.AABB.html#Godot_AABB_Size">Size</a> = <code data-dev-comment-type="paramref" class="paramref">value</code> - <a class="xref" href="Godot.AABB.html#Godot_AABB_Position">Position</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Position_" data-uid="Godot.AABB.Position*"></a>
+  <h4 id="Godot_AABB_Position" data-uid="Godot.AABB.Position">Position</h4>
+  <div class="markdown level1 summary"><p>Beginning corner. Typically has values lower than <a class="xref" href="Godot.AABB.html#Godot_AABB_End">End</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Position { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><p>Directly uses a private field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Size_" data-uid="Godot.AABB.Size*"></a>
+  <h4 id="Godot_AABB_Size" data-uid="Godot.AABB.Size">Size</h4>
+  <div class="markdown level1 summary"><p>Size from <a class="xref" href="Godot.AABB.html#Godot_AABB_Position">Position</a> to <a class="xref" href="Godot.AABB.html#Godot_AABB_End">End</a>. Typically all components are positive.
+If the size is negative, you can use <a class="xref" href="Godot.AABB.html#Godot_AABB_Abs">Abs()</a> to fix it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Size { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><p>Directly uses a private field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_AABB_Abs_" data-uid="Godot.AABB.Abs*"></a>
+  <h4 id="Godot_AABB_Abs" data-uid="Godot.AABB.Abs">Abs()</h4>
+  <div class="markdown level1 summary"><p>Returns an <a class="xref" href="Godot.AABB.html">AABB</a> with equivalent position and size, modified so that
+the most-negative corner is the origin and the size is positive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB Abs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><p>The modified <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Encloses_" data-uid="Godot.AABB.Encloses*"></a>
+  <h4 id="Godot_AABB_Encloses_Godot_AABB_" data-uid="Godot.AABB.Encloses(Godot.AABB)">Encloses(AABB)</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if this <a class="xref" href="Godot.AABB.html">AABB</a> completely encloses another one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Encloses(AABB with)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">with</span></td>
+        <td><p>The other <a class="xref" href="Godot.AABB.html">AABB</a> that may be enclosed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A <span class="xref">langword_csharp_bool</span> for whether or not this <a class="xref" href="Godot.AABB.html">AABB</a> encloses <code data-dev-comment-type="paramref" class="paramref">with</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Equals_" data-uid="Godot.AABB.Equals*"></a>
+  <h4 id="Godot_AABB_Equals_Godot_AABB_" data-uid="Godot.AABB.Equals(Godot.AABB)">Equals(AABB)</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if this AABB and <code data-dev-comment-type="paramref" class="paramref">other</code> are equal</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(AABB other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The other AABB to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Whether or not the AABBs are equal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Equals_" data-uid="Godot.AABB.Equals*"></a>
+  <h4 id="Godot_AABB_Equals_System_Object_" data-uid="Godot.AABB.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if this AABB and <code data-dev-comment-type="paramref" class="paramref">obj</code> are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The other object to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Whether or not the AABB structure and the other object are equal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Expand_" data-uid="Godot.AABB.Expand*"></a>
+  <h4 id="Godot_AABB_Expand_Godot_Vector3_" data-uid="Godot.AABB.Expand(Godot.Vector3)">Expand(Vector3)</h4>
+  <div class="markdown level1 summary"><p>Returns this <a class="xref" href="Godot.AABB.html">AABB</a> expanded to include a given point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB Expand(Vector3 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to include.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><p>The expanded <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetArea_" data-uid="Godot.AABB.GetArea*"></a>
+  <h4 id="Godot_AABB_GetArea" data-uid="Godot.AABB.GetArea">GetArea()</h4>
+  <div class="markdown level1 summary"><p>Returns the area of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetArea()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>The area.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetEndpoint_" data-uid="Godot.AABB.GetEndpoint*"></a>
+  <h4 id="Godot_AABB_GetEndpoint_System_Int32_" data-uid="Godot.AABB.GetEndpoint(System.Int32)">GetEndpoint(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the position of one of the 8 endpoints of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetEndpoint(int idx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">idx</span></td>
+        <td><p>Which endpoint to get.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><p>An endpoint of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetHashCode_" data-uid="Godot.AABB.GetHashCode*"></a>
+  <h4 id="Godot_AABB_GetHashCode" data-uid="Godot.AABB.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Serves as the hash function for <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code for this AABB.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetLongestAxis_" data-uid="Godot.AABB.GetLongestAxis*"></a>
+  <h4 id="Godot_AABB_GetLongestAxis" data-uid="Godot.AABB.GetLongestAxis">GetLongestAxis()</h4>
+  <div class="markdown level1 summary"><p>Returns the normalized longest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetLongestAxis()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><p>A vector representing the normalized longest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetLongestAxisIndex_" data-uid="Godot.AABB.GetLongestAxisIndex*"></a>
+  <h4 id="Godot_AABB_GetLongestAxisIndex" data-uid="Godot.AABB.GetLongestAxisIndex">GetLongestAxisIndex()</h4>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Vector3.Axis.html">Vector3.Axis</a> index of the longest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3.Axis GetLongestAxisIndex()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.Axis.html">Vector3.Axis</a></td>
+        <td><p>A <a class="xref" href="Godot.Vector3.Axis.html">Vector3.Axis</a> index for which axis is longest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetLongestAxisSize_" data-uid="Godot.AABB.GetLongestAxisSize*"></a>
+  <h4 id="Godot_AABB_GetLongestAxisSize" data-uid="Godot.AABB.GetLongestAxisSize">GetLongestAxisSize()</h4>
+  <div class="markdown level1 summary"><p>Returns the scalar length of the longest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetLongestAxisSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>The scalar length of the longest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetShortestAxis_" data-uid="Godot.AABB.GetShortestAxis*"></a>
+  <h4 id="Godot_AABB_GetShortestAxis" data-uid="Godot.AABB.GetShortestAxis">GetShortestAxis()</h4>
+  <div class="markdown level1 summary"><p>Returns the normalized shortest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetShortestAxis()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><p>A vector representing the normalized shortest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetShortestAxisIndex_" data-uid="Godot.AABB.GetShortestAxisIndex*"></a>
+  <h4 id="Godot_AABB_GetShortestAxisIndex" data-uid="Godot.AABB.GetShortestAxisIndex">GetShortestAxisIndex()</h4>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Vector3.Axis.html">Vector3.Axis</a> index of the shortest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3.Axis GetShortestAxisIndex()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.Axis.html">Vector3.Axis</a></td>
+        <td><p>A <a class="xref" href="Godot.Vector3.Axis.html">Vector3.Axis</a> index for which axis is shortest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetShortestAxisSize_" data-uid="Godot.AABB.GetShortestAxisSize*"></a>
+  <h4 id="Godot_AABB_GetShortestAxisSize" data-uid="Godot.AABB.GetShortestAxisSize">GetShortestAxisSize()</h4>
+  <div class="markdown level1 summary"><p>Returns the scalar length of the shortest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetShortestAxisSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>The scalar length of the shortest axis of the <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_GetSupport_" data-uid="Godot.AABB.GetSupport*"></a>
+  <h4 id="Godot_AABB_GetSupport_Godot_Vector3_" data-uid="Godot.AABB.GetSupport(Godot.Vector3)">GetSupport(Vector3)</h4>
+  <div class="markdown level1 summary"><p>Returns the support point in a given direction.
+This is useful for collision detection algorithms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetSupport(Vector3 dir)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">dir</span></td>
+        <td><p>The direction to find support for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><p>A vector representing the support.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Grow_" data-uid="Godot.AABB.Grow*"></a>
+  <h4 id="Godot_AABB_Grow_System_Single_" data-uid="Godot.AABB.Grow(System.Single)">Grow(Single)</h4>
+  <div class="markdown level1 summary"><p>Returns a copy of the <a class="xref" href="Godot.AABB.html">AABB</a> grown a given amount of units towards all the sides.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB Grow(float by)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">by</span></td>
+        <td><p>The amount to grow by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><p>The grown <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_HasNoArea_" data-uid="Godot.AABB.HasNoArea*"></a>
+  <h4 id="Godot_AABB_HasNoArea" data-uid="Godot.AABB.HasNoArea">HasNoArea()</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the <a class="xref" href="Godot.AABB.html">AABB</a> is flat or empty,
+or <span class="xref">false</span> otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasNoArea()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A <span class="xref">langword_csharp_bool</span> for whether or not the <a class="xref" href="Godot.AABB.html">AABB</a> has area.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_HasNoSurface_" data-uid="Godot.AABB.HasNoSurface*"></a>
+  <h4 id="Godot_AABB_HasNoSurface" data-uid="Godot.AABB.HasNoSurface">HasNoSurface()</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the <a class="xref" href="Godot.AABB.html">AABB</a> has no surface (no size),
+or <span class="xref">false</span> otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasNoSurface()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A <span class="xref">langword_csharp_bool</span> for whether or not the <a class="xref" href="Godot.AABB.html">AABB</a> has area.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_HasPoint_" data-uid="Godot.AABB.HasPoint*"></a>
+  <h4 id="Godot_AABB_HasPoint_Godot_Vector3_" data-uid="Godot.AABB.HasPoint(Godot.Vector3)">HasPoint(Vector3)</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the <a class="xref" href="Godot.AABB.html">AABB</a> contains a point,
+or <span class="xref">false</span> otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasPoint(Vector3 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A <span class="xref">langword_csharp_bool</span> for whether or not the <a class="xref" href="Godot.AABB.html">AABB</a> contains <code data-dev-comment-type="paramref" class="paramref">point</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Intersection_" data-uid="Godot.AABB.Intersection*"></a>
+  <h4 id="Godot_AABB_Intersection_Godot_AABB_" data-uid="Godot.AABB.Intersection(Godot.AABB)">Intersection(AABB)</h4>
+  <div class="markdown level1 summary"><p>Returns the intersection of this <a class="xref" href="Godot.AABB.html">AABB</a> and <code data-dev-comment-type="paramref" class="paramref">with</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB Intersection(AABB with)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">with</span></td>
+        <td><p>The other <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><p>The clipped <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Intersects_" data-uid="Godot.AABB.Intersects*"></a>
+  <h4 id="Godot_AABB_Intersects_Godot_AABB_System_Boolean_" data-uid="Godot.AABB.Intersects(Godot.AABB,System.Boolean)">Intersects(AABB, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the <a class="xref" href="Godot.AABB.html">AABB</a> overlaps with <code data-dev-comment-type="paramref" class="paramref">with</code>
+(i.e. they have at least one point in common).</p>
+<p>If <code data-dev-comment-type="paramref" class="paramref">includeBorders</code> is <span class="xref">true</span>,
+they will also be considered overlapping if their borders touch,
+even without intersection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(AABB with, bool includeBorders = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">with</span></td>
+        <td><p>The other <a class="xref" href="Godot.AABB.html">AABB</a> to check for intersections with.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeBorders</span></td>
+        <td><p>Whether or not to consider borders.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A <span class="xref">langword_csharp_bool</span> for whether or not they are intersecting.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_IntersectsPlane_" data-uid="Godot.AABB.IntersectsPlane*"></a>
+  <h4 id="Godot_AABB_IntersectsPlane_Godot_Plane_" data-uid="Godot.AABB.IntersectsPlane(Godot.Plane)">IntersectsPlane(Plane)</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the <a class="xref" href="Godot.AABB.html">AABB</a> is on both sides of <code data-dev-comment-type="paramref" class="paramref">plane</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IntersectsPlane(Plane plane)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Plane.html">Plane</a></td>
+        <td><span class="parametername">plane</span></td>
+        <td><p>The <a class="xref" href="Godot.Plane.html">Plane</a> to check for intersection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A <span class="xref">langword_csharp_bool</span> for whether or not the <a class="xref" href="Godot.AABB.html">AABB</a> intersects the <a class="xref" href="Godot.Plane.html">Plane</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_IntersectsSegment_" data-uid="Godot.AABB.IntersectsSegment*"></a>
+  <h4 id="Godot_AABB_IntersectsSegment_Godot_Vector3_Godot_Vector3_" data-uid="Godot.AABB.IntersectsSegment(Godot.Vector3,Godot.Vector3)">IntersectsSegment(Vector3, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the <a class="xref" href="Godot.AABB.html">AABB</a> intersects
+the line segment between <code data-dev-comment-type="paramref" class="paramref">from</code> and <code data-dev-comment-type="paramref" class="paramref">to</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IntersectsSegment(Vector3 from, Vector3 to)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The start of the line segment.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>The end of the line segment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A <span class="xref">langword_csharp_bool</span> for whether or not the <a class="xref" href="Godot.AABB.html">AABB</a> intersects the line segment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_IsEqualApprox_" data-uid="Godot.AABB.IsEqualApprox*"></a>
+  <h4 id="Godot_AABB_IsEqualApprox_Godot_AABB_" data-uid="Godot.AABB.IsEqualApprox(Godot.AABB)">IsEqualApprox(AABB)</h4>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if this AABB and <code data-dev-comment-type="paramref" class="paramref">other</code> are approximately equal,
+by running <a class="xref" href="Godot.Vector3.html#Godot_Vector3_IsEqualApprox_Godot_Vector3_">IsEqualApprox(Vector3)</a> on each component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEqualApprox(AABB other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The other AABB to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Whether or not the AABBs structures are approximately equal.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_Merge_" data-uid="Godot.AABB.Merge*"></a>
+  <h4 id="Godot_AABB_Merge_Godot_AABB_" data-uid="Godot.AABB.Merge(Godot.AABB)">Merge(AABB)</h4>
+  <div class="markdown level1 summary"><p>Returns a larger <a class="xref" href="Godot.AABB.html">AABB</a> that contains this <a class="xref" href="Godot.AABB.html">AABB</a> and <code data-dev-comment-type="paramref" class="paramref">with</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB Merge(AABB with)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">with</span></td>
+        <td><p>The other <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><p>The merged <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_ToString_" data-uid="Godot.AABB.ToString*"></a>
+  <h4 id="Godot_AABB_ToString" data-uid="Godot.AABB.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.AABB.html">AABB</a> to a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string representation of this AABB.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_ToString_" data-uid="Godot.AABB.ToString*"></a>
+  <h4 id="Godot_AABB_ToString_System_String_" data-uid="Godot.AABB.ToString(System.String)">ToString(String)</h4>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.AABB.html">AABB</a> to a string with the given <code data-dev-comment-type="paramref" class="paramref">format</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString(string format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string representation of this AABB.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="Godot_AABB_op_Equality_" data-uid="Godot.AABB.op_Equality*"></a>
+  <h4 id="Godot_AABB_op_Equality_Godot_AABB_Godot_AABB_" data-uid="Godot.AABB.op_Equality(Godot.AABB,Godot.AABB)">Equality(AABB, AABB)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(AABB left, AABB right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_AABB_op_Inequality_" data-uid="Godot.AABB.op_Inequality*"></a>
+  <h4 id="Godot_AABB_op_Inequality_Godot_AABB_Godot_AABB_" data-uid="Godot.AABB.op_Inequality(Godot.AABB,Godot.AABB)">Inequality(AABB, AABB)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(AABB left, AABB right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.AABB.html">AABB</a></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
