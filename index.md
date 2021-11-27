@@ -1,6 +1,9 @@
 ---
 _disableAffix: true
+_disableBreadcrumb: true
 ---
+
+<img src="~/images/documentation_logo.svg" style="float: right; margin: 0 2em 0 4em;" />
 
 # Godot C# API
 
@@ -10,4 +13,4 @@ All the documentation provided on this website is derived from [Godot's main sou
 
 The Godot documentation logo is licensed under CC BY 4.0 International. See the [LICENSE](https://github.com/godotengine/godot-design/blob/master/LICENSE) file for details.  
 
-The syntax highlighting is provided by [highlight.js](https://github.com/highlightjs/highlight.js), released under BSD license. See the [LICENSE](https://github.com/highlightjs/highlight.js/blob/main/LICENSE) file for details. The theme used is *StackOverflow Dark* by [Jan Pilzer](https://github.com/Hirse).
+The DocFX theme is a lightly modified version of [darkfx](https://github.com/steffen-wilke/darkfx), distributed under the MIT license and attributed to Steffen Wilke. See the [LICENSE](https://github.com/steffen-wilke/darkfx/blob/master/LICENSE) file for details.

@@ -1,0 +1,117 @@
+/* Colour definitions */
+
+:root, body.dark-theme {
+    --color-link: #9df;
+}
+
+body.light-theme {
+    --color-link: #337ab7;
+}
+
+/* Links */
+
+.dark-theme .affix ul > li > a, body.dark-theme .affix ul > li > a:hover {
+    color: #a2a2a2;
+}
+
+.light-theme .affix ul > li > a, body.light-theme .affix ul > li > a:hover {
+    color: #666666;
+}
+
+a, a:hover,
+.toc .nav > li.active > a, .toc .nav > li.active > a:hover,
+.sideaffix .affix ul > li.active > a, .sideaffix .affix ul > li.active > a:hover,
+.sideaffix .affix ul > li.active > a::before {
+    color: var(--color-link);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Other typography */
+
+body.light-theme h5 {
+    color: #666666;
+}
+
+/* Logo */
+
+#logo {
+    width: 50px;
+    height: 50px;
+    padding: 5px 0;
+    display: none;
+}
+
+.light-theme .navbar-brand svg {
+    filter: none;
+}
+
+/* Sidebar */
+
+.sidebrand {
+    display: block;
+    width: 260px;
+    height: 200px;
+    position: fixed;
+    top: 95px;
+}
+
+.sidebrand img {
+    margin: auto;
+}
+
+.sidebrand .navbar-brand {
+    width: 100%;
+}
+
+.sidefilter {
+    padding: 0;
+    top: 290px;
+}
+
+.sidetoc {
+    top: 350px;
+}
+
+.toc .level1 > li {
+    margin-top: 0;
+}
+
+.toc .level2 {
+    margin-left: 5px;
+}
+
+/* Afix */
+
+.sideaffix {
+    margin-top: 0;
+}
+
+/* General layout media queries */
+
+@media (min-width: 1600px) {
+    .container {
+        width: 1280px;
+    }
+
+    .sidefilter, .sidetoc, .sidebrand {
+        width: 300px;
+    }
+
+    .article.grid-right {
+        margin-left: 320px;
+        margin-right: -15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #logo {
+        display: block;
+    }
+
+    .sidebrand {
+        display: none;
+    }
+}

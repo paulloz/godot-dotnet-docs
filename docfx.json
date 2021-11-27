@@ -45,6 +45,7 @@
     },
     "template": [
       "default",
+      "templates/darkfx/darkfx",
       "templates/godot"
     ],
     "markdownEngineName": "markdig"
