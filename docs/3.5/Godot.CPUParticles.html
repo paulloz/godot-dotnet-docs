@@ -1,0 +1,4874 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CPUParticles
+   | Godot C# API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CPUParticles
+   | Godot C# API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/documentation_logo.svg">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/main-godot.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/documentation_logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Godot.CPUParticles">
+  
+  
+  <h1 id="Godot_CPUParticles" data-uid="Godot.CPUParticles" class="text-break">Class CPUParticles
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Godot.Object.html">Object</a></div>
+    <div class="level2"><a class="xref" href="Godot.Node.html">Node</a></div>
+    <div class="level3"><a class="xref" href="Godot.Spatial.html">Spatial</a></div>
+    <div class="level4"><a class="xref" href="Godot.CullInstance.html">CullInstance</a></div>
+    <div class="level5"><a class="xref" href="Godot.VisualInstance.html">VisualInstance</a></div>
+    <div class="level6"><a class="xref" href="Godot.GeometryInstance.html">GeometryInstance</a></div>
+    <div class="level7"><span class="xref">CPUParticles</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetMaterialOverride_Godot_Material_">GeometryInstance.SetMaterialOverride(Material)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetMaterialOverride">GeometryInstance.GetMaterialOverride()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetMaterialOverlay_Godot_Material_">GeometryInstance.SetMaterialOverlay(Material)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetMaterialOverlay">GeometryInstance.GetMaterialOverlay()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetFlag_Godot_GeometryInstance_Flags_System_Boolean_">GeometryInstance.SetFlag(GeometryInstance.Flags, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetFlag_Godot_GeometryInstance_Flags_">GeometryInstance.GetFlag(GeometryInstance.Flags)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetCastShadowsSetting_Godot_GeometryInstance_ShadowCastingSetting_">GeometryInstance.SetCastShadowsSetting(GeometryInstance.ShadowCastingSetting)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetCastShadowsSetting">GeometryInstance.GetCastShadowsSetting()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetGenerateLightmap_System_Boolean_">GeometryInstance.SetGenerateLightmap(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetGenerateLightmap">GeometryInstance.GetGenerateLightmap()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetLightmapScale_Godot_GeometryInstance_LightmapScaleEnum_">GeometryInstance.SetLightmapScale(GeometryInstance.LightmapScaleEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetLightmapScale">GeometryInstance.GetLightmapScale()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetLodMaxHysteresis_System_Single_">GeometryInstance.SetLodMaxHysteresis(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetLodMaxHysteresis">GeometryInstance.GetLodMaxHysteresis()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetLodMaxDistance_System_Single_">GeometryInstance.SetLodMaxDistance(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetLodMaxDistance">GeometryInstance.GetLodMaxDistance()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetLodMinHysteresis_System_Single_">GeometryInstance.SetLodMinHysteresis(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetLodMinHysteresis">GeometryInstance.GetLodMinHysteresis()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetLodMinDistance_System_Single_">GeometryInstance.SetLodMinDistance(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetLodMinDistance">GeometryInstance.GetLodMinDistance()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetExtraCullMargin_System_Single_">GeometryInstance.SetExtraCullMargin(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GetExtraCullMargin">GeometryInstance.GetExtraCullMargin()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_SetCustomAabb_Godot_AABB_">GeometryInstance.SetCustomAabb(AABB)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_MaterialOverride">GeometryInstance.MaterialOverride</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_MaterialOverlay">GeometryInstance.MaterialOverlay</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_CastShadow">GeometryInstance.CastShadow</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_ExtraCullMargin">GeometryInstance.ExtraCullMargin</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_UseInBakedLight">GeometryInstance.UseInBakedLight</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_GenerateLightmap">GeometryInstance.GenerateLightmap</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_LightmapScale">GeometryInstance.LightmapScale</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_LodMinDistance">GeometryInstance.LodMinDistance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_LodMinHysteresis">GeometryInstance.LodMinHysteresis</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_LodMaxDistance">GeometryInstance.LodMaxDistance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_LodMaxHysteresis">GeometryInstance.LodMaxHysteresis</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_SetBase_Godot_RID_">VisualInstance.SetBase(RID)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetBase">VisualInstance.GetBase()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetInstance">VisualInstance.GetInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_SetLayerMask_System_UInt32_">VisualInstance.SetLayerMask(UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetLayerMask">VisualInstance.GetLayerMask()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_SetLayerMaskBit_System_Int32_System_Boolean_">VisualInstance.SetLayerMaskBit(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetLayerMaskBit_System_Int32_">VisualInstance.GetLayerMaskBit(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetTransformedAabb">VisualInstance.GetTransformedAabb()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetAabb">VisualInstance.GetAabb()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_Layers">VisualInstance.Layers</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_SetPortalMode_Godot_CullInstance_PortalModeEnum_">CullInstance.SetPortalMode(CullInstance.PortalModeEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_GetPortalMode">CullInstance.GetPortalMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_SetIncludeInBound_System_Boolean_">CullInstance.SetIncludeInBound(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_GetIncludeInBound">CullInstance.GetIncludeInBound()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_SetAllowMerging_System_Boolean_">CullInstance.SetAllowMerging(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_GetAllowMerging">CullInstance.GetAllowMerging()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_SetPortalAutoplacePriority_System_Int32_">CullInstance.SetPortalAutoplacePriority(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_GetPortalAutoplacePriority">CullInstance.GetPortalAutoplacePriority()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_PortalMode">CullInstance.PortalMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_IncludeInBound">CullInstance.IncludeInBound</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_AllowMerging">CullInstance.AllowMerging</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.CullInstance.html#Godot_CullInstance_AutoplacePriority">CullInstance.AutoplacePriority</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationTransformChanged">Spatial.NotificationTransformChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationEnterWorld">Spatial.NotificationEnterWorld</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationExitWorld">Spatial.NotificationExitWorld</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationVisibilityChanged">Spatial.NotificationVisibilityChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationEnterGameplay">Spatial.NotificationEnterGameplay</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationExitGameplay">Spatial.NotificationExitGameplay</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetTransform_Godot_Transform_">Spatial.SetTransform(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetTransform">Spatial.GetTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetTranslation_Godot_Vector3_">Spatial.SetTranslation(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetTranslation">Spatial.GetTranslation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetRotation_Godot_Vector3_">Spatial.SetRotation(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetRotation">Spatial.GetRotation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetRotationDegrees_Godot_Vector3_">Spatial.SetRotationDegrees(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetRotationDegrees">Spatial.GetRotationDegrees()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetScale_Godot_Vector3_">Spatial.SetScale(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetScale">Spatial.GetScale()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetGlobalTransform_Godot_Transform_">Spatial.SetGlobalTransform(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetGlobalTransform">Spatial.GetGlobalTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetGlobalTranslation_Godot_Vector3_">Spatial.SetGlobalTranslation(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetGlobalTranslation">Spatial.GetGlobalTranslation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetGlobalRotation_Godot_Vector3_">Spatial.SetGlobalRotation(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetGlobalRotation">Spatial.GetGlobalRotation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetGlobalTransformInterpolated">Spatial.GetGlobalTransformInterpolated()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetParentSpatial">Spatial.GetParentSpatial()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetIgnoreTransformNotification_System_Boolean_">Spatial.SetIgnoreTransformNotification(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetAsToplevel_System_Boolean_">Spatial.SetAsToplevel(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsSetAsToplevel">Spatial.IsSetAsToplevel()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetDisableScale_System_Boolean_">Spatial.SetDisableScale(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsScaleDisabled">Spatial.IsScaleDisabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetWorld">Spatial.GetWorld()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ForceUpdateTransform">Spatial.ForceUpdateTransform()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_UpdateGizmo">Spatial.UpdateGizmo()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetGizmo_Godot_SpatialGizmo_">Spatial.SetGizmo(SpatialGizmo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GetGizmo">Spatial.GetGizmo()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetVisible_System_Boolean_">Spatial.SetVisible(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsVisible">Spatial.IsVisible()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsVisibleInTree">Spatial.IsVisibleInTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Show">Spatial.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Hide">Spatial.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetNotifyLocalTransform_System_Boolean_">Spatial.SetNotifyLocalTransform(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsLocalTransformNotificationEnabled">Spatial.IsLocalTransformNotificationEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetNotifyTransform_System_Boolean_">Spatial.SetNotifyTransform(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsTransformNotificationEnabled">Spatial.IsTransformNotificationEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Rotate_Godot_Vector3_System_Single_">Spatial.Rotate(Vector3, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalRotate_Godot_Vector3_System_Single_">Spatial.GlobalRotate(Vector3, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalScale_Godot_Vector3_">Spatial.GlobalScale(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalTranslate_Godot_Vector3_">Spatial.GlobalTranslate(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateObjectLocal_Godot_Vector3_System_Single_">Spatial.RotateObjectLocal(Vector3, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ScaleObjectLocal_Godot_Vector3_">Spatial.ScaleObjectLocal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_TranslateObjectLocal_Godot_Vector3_">Spatial.TranslateObjectLocal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateX_System_Single_">Spatial.RotateX(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateY_System_Single_">Spatial.RotateY(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotateZ_System_Single_">Spatial.RotateZ(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Translate_Godot_Vector3_">Spatial.Translate(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Orthonormalize">Spatial.Orthonormalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetIdentity">Spatial.SetIdentity()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_LookAt_Godot_Vector3_Godot_Vector3_">Spatial.LookAt(Vector3, Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_LookAtFromPosition_Godot_Vector3_Godot_Vector3_Godot_Vector3_">Spatial.LookAtFromPosition(Vector3, Vector3, Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ToLocal_Godot_Vector3_">Spatial.ToLocal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_ToGlobal_Godot_Vector3_">Spatial.ToGlobal(Vector3)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Translation">Spatial.Translation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_RotationDegrees">Spatial.RotationDegrees</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Rotation">Spatial.Rotation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Scale">Spatial.Scale</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalTransform">Spatial.GlobalTransform</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalTranslation">Spatial.GlobalTranslation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_GlobalRotation">Spatial.GlobalRotation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Transform">Spatial.Transform</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Visible">Spatial.Visible</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Gizmo">Spatial.Gizmo</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationEnterTree">Node.NotificationEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationExitTree">Node.NotificationExitTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationMovedInParent">Node.NotificationMovedInParent</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationReady">Node.NotificationReady</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPaused">Node.NotificationPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnpaused">Node.NotificationUnpaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPhysicsProcess">Node.NotificationPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationProcess">Node.NotificationProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationParented">Node.NotificationParented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationUnparented">Node.NotificationUnparented</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInstanced">Node.NotificationInstanced</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragBegin">Node.NotificationDragBegin</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragEnd">Node.NotificationDragEnd</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPathChanged">Node.NotificationPathChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalProcess">Node.NotificationInternalProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInternalPhysicsProcess">Node.NotificationInternalPhysicsProcess</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPostEnterTree">Node.NotificationPostEnterTree</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationResetPhysicsInterpolation">Node.NotificationResetPhysicsInterpolation</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseEnter">Node.NotificationWmMouseEnter</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmMouseExit">Node.NotificationWmMouseExit</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusIn">Node.NotificationWmFocusIn</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmFocusOut">Node.NotificationWmFocusOut</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmQuitRequest">Node.NotificationWmQuitRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmGoBackRequest">Node.NotificationWmGoBackRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmUnfocusRequest">Node.NotificationWmUnfocusRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsMemoryWarning">Node.NotificationOsMemoryWarning</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationTranslationChanged">Node.NotificationTranslationChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationWmAbout">Node.NotificationWmAbout</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationCrash">Node.NotificationCrash</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationOsImeUpdate">Node.NotificationOsImeUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppResumed">Node.NotificationAppResumed</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_NotificationAppPaused">Node.NotificationAppPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode__1_Godot_NodePath_">Node.GetNode&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull__1_Godot_NodePath_">Node.GetNodeOrNull&lt;T&gt;(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild__1_System_Int32_">Node.GetChild&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildOrNull__1_System_Int32_">Node.GetChildOrNull&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner__1">Node.GetOwner&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwnerOrNull__1">Node.GetOwnerOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent__1">Node.GetParent&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParentOrNull__1">Node.GetParentOrNull&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">Node._EnterTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ExitTree">Node._ExitTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__GetConfigurationWarning">Node._GetConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">Node._Input(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">Node._PhysicsProcess(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">Node._Process(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__Ready">Node._Ready()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">Node._UnhandledInput(InputEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledKeyInput_Godot_InputEventKey_">Node._UnhandledKeyInput(InputEventKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChildBelowNode_Godot_Node_Godot_Node_System_Boolean_">Node.AddChildBelowNode(Node, Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetName_System_String_">Node.SetName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetName">Node.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">Node.AddChild(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveChild_Godot_Node_">Node.RemoveChild(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildCount">Node.GetChildCount()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChildren">Node.GetChildren()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetChild_System_Int32_">Node.GetChild(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNode_Godot_NodePath_">Node.HasNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">Node.GetNode(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull_Godot_NodePath_">Node.GetNodeOrNull(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetParent">Node.GetParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindNode_System_String_System_Boolean_System_Boolean_">Node.FindNode(String, Boolean, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_FindParent_System_String_">Node.FindParent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_HasNodeAndResource_Godot_NodePath_">Node.HasNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeAndResource_Godot_NodePath_">Node.GetNodeAndResource(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">Node.IsInsideTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsAParentOf_Godot_Node_">Node.IsAParentOf(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsGreaterThan_Godot_Node_">Node.IsGreaterThan(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPath">Node.GetPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPathTo_Godot_Node_">Node.GetPathTo(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_AddToGroup_System_String_System_Boolean_">Node.AddToGroup(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveFromGroup_System_String_">Node.RemoveFromGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsInGroup_System_String_">Node.IsInGroup(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_MoveChild_Godot_Node_System_Int32_">Node.MoveChild(Node, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetGroups">Node.GetGroups()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Raise">Node.Raise()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetOwner_Godot_Node_">Node.SetOwner(Node)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetOwner">Node.GetOwner()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RemoveAndSkip">Node.RemoveAndSkip()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetIndex">Node.GetIndex()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTree">Node.PrintTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintTreePretty">Node.PrintTreePretty()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetFilename_System_String_">Node.SetFilename(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetFilename">Node.GetFilename()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateNotification_System_Int32_">Node.PropagateNotification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PropagateCall_System_String_Godot_Collections_Array_System_Boolean_">Node.PropagateCall(String, Array, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">Node.SetPhysicsProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPhysicsProcessDeltaTime">Node.GetPhysicsProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessing">Node.IsPhysicsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessDeltaTime">Node.GetProcessDeltaTime()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">Node.SetProcess(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessPriority_System_Int32_">Node.SetProcessPriority(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetProcessPriority">Node.GetProcessPriority()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessing">Node.IsProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInput_System_Boolean_">Node.SetProcessInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInput">Node.IsProcessingInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledInput_System_Boolean_">Node.SetProcessUnhandledInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledInput">Node.IsProcessingUnhandledInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledKeyInput_System_Boolean_">Node.SetProcessUnhandledKeyInput(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingUnhandledKeyInput">Node.IsProcessingUnhandledKeyInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPauseMode_Godot_Node_PauseModeEnum_">Node.SetPauseMode(Node.PauseModeEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPauseMode">Node.GetPauseMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CanProcess">Node.CanProcess()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PrintStrayNodes">Node.PrintStrayNodes()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPositionInParent">Node.GetPositionInParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetDisplayFolded_System_Boolean_">Node.SetDisplayFolded(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsDisplayedFolded">Node.IsDisplayedFolded()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInternal_System_Boolean_">Node.SetProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsProcessingInternal">Node.IsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcessInternal_System_Boolean_">Node.SetPhysicsProcessInternal(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsProcessingInternal">Node.IsPhysicsProcessingInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsInterpolationMode_Godot_Node_PhysicsInterpolationModeEnum_">Node.SetPhysicsInterpolationMode(Node.PhysicsInterpolationModeEnum)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetPhysicsInterpolationMode">Node.GetPhysicsInterpolationMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsInterpolated">Node.IsPhysicsInterpolated()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsInterpolatedAndEnabled">Node.IsPhysicsInterpolatedAndEnabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ResetPhysicsInterpolation">Node.ResetPhysicsInterpolation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetTree">Node.GetTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CreateTween">Node.CreateTween()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Duplicate_System_Int32_">Node.Duplicate(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ReplaceBy_Godot_Node_System_Boolean_">Node.ReplaceBy(Node, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetSceneInstanceLoadPlaceholder_System_Boolean_">Node.SetSceneInstanceLoadPlaceholder(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetSceneInstanceLoadPlaceholder">Node.GetSceneInstanceLoadPlaceholder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetViewport">Node.GetViewport()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_QueueFree">Node.QueueFree()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RequestReady">Node.RequestReady()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetNetworkMaster_System_Int32_System_Boolean_">Node.SetNetworkMaster(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetNetworkMaster">Node.GetNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsNetworkMaster">Node.IsNetworkMaster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetMultiplayer">Node.GetMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_GetCustomMultiplayer">Node.GetCustomMultiplayer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetCustomMultiplayer_Godot_MultiplayerAPI_">Node.SetCustomMultiplayer(MultiplayerAPI)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RpcConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetConfig_System_String_Godot_MultiplayerAPI_RPCMode_">Node.RsetConfig(String, MultiplayerAPI.RPCMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_SetUniqueNameInOwner_System_Boolean_">Node.SetUniqueNameInOwner(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_IsUniqueNameInOwner">Node.IsUniqueNameInOwner()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Node.Rpc(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliable_System_String_System_Object___">Node.RpcUnreliable(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcId_System_Int32_System_String_System_Object___">Node.RpcId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RpcUnreliableId_System_Int32_System_String_System_Object___">Node.RpcUnreliableId(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Rset_System_String_System_Object_">Node.Rset(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetId_System_Int32_System_String_System_Object_">Node.RsetId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliable_System_String_System_Object_">Node.RsetUnreliable(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_RsetUnreliableId_System_Int32_System_String_System_Object_">Node.RsetUnreliableId(Int32, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_UpdateConfigurationWarning">Node.UpdateConfigurationWarning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_EditorDescription">Node.EditorDescription</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node__ImportPath">Node._ImportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PauseMode">Node.PauseMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_PhysicsInterpolationMode">Node.PhysicsInterpolationMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Name">Node.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_UniqueNameInOwner">Node.UniqueNameInOwner</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Filename">Node.Filename</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Node.Owner</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_Multiplayer">Node.Multiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_CustomMultiplayer">Node.CustomMultiplayer</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Node.html#Godot_Node_ProcessPriority">Node.ProcessPriority</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">Object.NotificationPostinitialize</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">Object.NotificationPredelete</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsInstanceValid_Godot_Object_">Object.IsInstanceValid(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">Object.WeakRef(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Finalize">Object.Finalize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose">Object.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Dispose_System_Boolean_">Object.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_ToSignal_Godot_Object_System_String_">Object.ToSignal(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">Object._Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">Object._GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">Object._Notification(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">Object._Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Free">Object.Free()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">Object.GetClass()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">Object.IsClass(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Object.Set(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Object.Get(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetIndexed_Godot_NodePath_System_Object_">Object.SetIndexed(NodePath, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIndexed_Godot_NodePath_">Object.GetIndexed(NodePath)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">Object.GetPropertyList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMethodList">Object.GetMethodList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Object.Notification(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetInstanceId">Object.GetInstanceId()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">Object.SetScript(Reference)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetScript">Object.GetScript()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">Object.SetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">Object.RemoveMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_System_Object_">Object.GetMeta(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMeta_System_String_">Object.HasMeta(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetMetaList">Object.GetMetaList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">Object.AddUserSignal(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasUserSignal_System_String_">Object.HasUserSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">Object.EmitSignal(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Object.Call(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">Object.CallDeferred(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetDeferred_System_String_System_Object_">Object.SetDeferred(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Callv_System_String_Godot_Collections_Array_">Object.Callv(String, Array)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasMethod_System_String_">Object.HasMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_HasSignal_System_String_">Object.HasSignal(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalList">Object.GetSignalList()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetSignalConnectionList_System_String_">Object.GetSignalConnectionList(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_GetIncomingConnections">Object.GetIncomingConnections()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Object.Connect(String, Object, String, Array, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Disconnect_System_String_Godot_Object_System_String_">Object.Disconnect(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">Object.IsConnected(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetBlockSignals_System_Boolean_">Object.SetBlockSignals(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsBlockingSignals">Object.IsBlockingSignals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_PropertyListChangedNotify">Object.PropertyListChangedNotify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">Object.SetMessageTranslation(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_CanTranslateMessages">Object.CanTranslateMessages()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Object.Tr(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">Object.IsQueuedForDeletion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_NativeInstance">Object.NativeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Godot.Object.html#Godot_Object_DynamicObject">Object.DynamicObject</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Godot.html">Godot</a></h6>
+  <h6><strong>Assembly</strong>: GodotSharp.dll</h6>
+  <h5 id="Godot_CPUParticles_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CPUParticles : GeometryInstance</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Godot_CPUParticles__ctor_" data-uid="Godot.CPUParticles.#ctor*"></a>
+  <h4 id="Godot_CPUParticles__ctor" data-uid="Godot.CPUParticles.#ctor">CPUParticles()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CPUParticles()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Godot_CPUParticles_Amount_" data-uid="Godot.CPUParticles.Amount*"></a>
+  <h4 id="Godot_CPUParticles_Amount" data-uid="Godot.CPUParticles.Amount">Amount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Amount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Angle_" data-uid="Godot.CPUParticles.Angle*"></a>
+  <h4 id="Godot_CPUParticles_Angle" data-uid="Godot.CPUParticles.Angle">Angle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Angle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AngleCurve_" data-uid="Godot.CPUParticles.AngleCurve*"></a>
+  <h4 id="Godot_CPUParticles_AngleCurve" data-uid="Godot.CPUParticles.AngleCurve">AngleCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve AngleCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AngleRandom_" data-uid="Godot.CPUParticles.AngleRandom*"></a>
+  <h4 id="Godot_CPUParticles_AngleRandom" data-uid="Godot.CPUParticles.AngleRandom">AngleRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AngleRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AngularVelocity_" data-uid="Godot.CPUParticles.AngularVelocity*"></a>
+  <h4 id="Godot_CPUParticles_AngularVelocity" data-uid="Godot.CPUParticles.AngularVelocity">AngularVelocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AngularVelocity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AngularVelocityCurve_" data-uid="Godot.CPUParticles.AngularVelocityCurve*"></a>
+  <h4 id="Godot_CPUParticles_AngularVelocityCurve" data-uid="Godot.CPUParticles.AngularVelocityCurve">AngularVelocityCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve AngularVelocityCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AngularVelocityRandom_" data-uid="Godot.CPUParticles.AngularVelocityRandom*"></a>
+  <h4 id="Godot_CPUParticles_AngularVelocityRandom" data-uid="Godot.CPUParticles.AngularVelocityRandom">AngularVelocityRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AngularVelocityRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AnimOffset_" data-uid="Godot.CPUParticles.AnimOffset*"></a>
+  <h4 id="Godot_CPUParticles_AnimOffset" data-uid="Godot.CPUParticles.AnimOffset">AnimOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AnimOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AnimOffsetCurve_" data-uid="Godot.CPUParticles.AnimOffsetCurve*"></a>
+  <h4 id="Godot_CPUParticles_AnimOffsetCurve" data-uid="Godot.CPUParticles.AnimOffsetCurve">AnimOffsetCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve AnimOffsetCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AnimOffsetRandom_" data-uid="Godot.CPUParticles.AnimOffsetRandom*"></a>
+  <h4 id="Godot_CPUParticles_AnimOffsetRandom" data-uid="Godot.CPUParticles.AnimOffsetRandom">AnimOffsetRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AnimOffsetRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AnimSpeed_" data-uid="Godot.CPUParticles.AnimSpeed*"></a>
+  <h4 id="Godot_CPUParticles_AnimSpeed" data-uid="Godot.CPUParticles.AnimSpeed">AnimSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AnimSpeed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AnimSpeedCurve_" data-uid="Godot.CPUParticles.AnimSpeedCurve*"></a>
+  <h4 id="Godot_CPUParticles_AnimSpeedCurve" data-uid="Godot.CPUParticles.AnimSpeedCurve">AnimSpeedCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve AnimSpeedCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_AnimSpeedRandom_" data-uid="Godot.CPUParticles.AnimSpeedRandom*"></a>
+  <h4 id="Godot_CPUParticles_AnimSpeedRandom" data-uid="Godot.CPUParticles.AnimSpeedRandom">AnimSpeedRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AnimSpeedRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Color_" data-uid="Godot.CPUParticles.Color*"></a>
+  <h4 id="Godot_CPUParticles_Color" data-uid="Godot.CPUParticles.Color">Color</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color Color { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_ColorInitialRamp_" data-uid="Godot.CPUParticles.ColorInitialRamp*"></a>
+  <h4 id="Godot_CPUParticles_ColorInitialRamp" data-uid="Godot.CPUParticles.ColorInitialRamp">ColorInitialRamp</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Gradient ColorInitialRamp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Gradient.html">Gradient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_ColorRamp_" data-uid="Godot.CPUParticles.ColorRamp*"></a>
+  <h4 id="Godot_CPUParticles_ColorRamp" data-uid="Godot.CPUParticles.ColorRamp">ColorRamp</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Gradient ColorRamp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Gradient.html">Gradient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Damping_" data-uid="Godot.CPUParticles.Damping*"></a>
+  <h4 id="Godot_CPUParticles_Damping" data-uid="Godot.CPUParticles.Damping">Damping</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Damping { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_DampingCurve_" data-uid="Godot.CPUParticles.DampingCurve*"></a>
+  <h4 id="Godot_CPUParticles_DampingCurve" data-uid="Godot.CPUParticles.DampingCurve">DampingCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve DampingCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_DampingRandom_" data-uid="Godot.CPUParticles.DampingRandom*"></a>
+  <h4 id="Godot_CPUParticles_DampingRandom" data-uid="Godot.CPUParticles.DampingRandom">DampingRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DampingRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Direction_" data-uid="Godot.CPUParticles.Direction*"></a>
+  <h4 id="Godot_CPUParticles_Direction" data-uid="Godot.CPUParticles.Direction">Direction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Direction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_DrawOrder_" data-uid="Godot.CPUParticles.DrawOrder*"></a>
+  <h4 id="Godot_CPUParticles_DrawOrder" data-uid="Godot.CPUParticles.DrawOrder">DrawOrder</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CPUParticles.DrawOrderEnum DrawOrder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.DrawOrderEnum.html">CPUParticles.DrawOrderEnum</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionBoxExtents_" data-uid="Godot.CPUParticles.EmissionBoxExtents*"></a>
+  <h4 id="Godot_CPUParticles_EmissionBoxExtents" data-uid="Godot.CPUParticles.EmissionBoxExtents">EmissionBoxExtents</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 EmissionBoxExtents { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionColors_" data-uid="Godot.CPUParticles.EmissionColors*"></a>
+  <h4 id="Godot_CPUParticles_EmissionColors" data-uid="Godot.CPUParticles.EmissionColors">EmissionColors</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color[] EmissionColors { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionNormals_" data-uid="Godot.CPUParticles.EmissionNormals*"></a>
+  <h4 id="Godot_CPUParticles_EmissionNormals" data-uid="Godot.CPUParticles.EmissionNormals">EmissionNormals</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3[] EmissionNormals { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionPoints_" data-uid="Godot.CPUParticles.EmissionPoints*"></a>
+  <h4 id="Godot_CPUParticles_EmissionPoints" data-uid="Godot.CPUParticles.EmissionPoints">EmissionPoints</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3[] EmissionPoints { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionRingAxis_" data-uid="Godot.CPUParticles.EmissionRingAxis*"></a>
+  <h4 id="Godot_CPUParticles_EmissionRingAxis" data-uid="Godot.CPUParticles.EmissionRingAxis">EmissionRingAxis</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 EmissionRingAxis { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionRingHeight_" data-uid="Godot.CPUParticles.EmissionRingHeight*"></a>
+  <h4 id="Godot_CPUParticles_EmissionRingHeight" data-uid="Godot.CPUParticles.EmissionRingHeight">EmissionRingHeight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float EmissionRingHeight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionRingInnerRadius_" data-uid="Godot.CPUParticles.EmissionRingInnerRadius*"></a>
+  <h4 id="Godot_CPUParticles_EmissionRingInnerRadius" data-uid="Godot.CPUParticles.EmissionRingInnerRadius">EmissionRingInnerRadius</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float EmissionRingInnerRadius { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionRingRadius_" data-uid="Godot.CPUParticles.EmissionRingRadius*"></a>
+  <h4 id="Godot_CPUParticles_EmissionRingRadius" data-uid="Godot.CPUParticles.EmissionRingRadius">EmissionRingRadius</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float EmissionRingRadius { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionShape_" data-uid="Godot.CPUParticles.EmissionShape*"></a>
+  <h4 id="Godot_CPUParticles_EmissionShape" data-uid="Godot.CPUParticles.EmissionShape">EmissionShape</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CPUParticles.EmissionShapeEnum EmissionShape { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html">CPUParticles.EmissionShapeEnum</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_EmissionSphereRadius_" data-uid="Godot.CPUParticles.EmissionSphereRadius*"></a>
+  <h4 id="Godot_CPUParticles_EmissionSphereRadius" data-uid="Godot.CPUParticles.EmissionSphereRadius">EmissionSphereRadius</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float EmissionSphereRadius { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Emitting_" data-uid="Godot.CPUParticles.Emitting*"></a>
+  <h4 id="Godot_CPUParticles_Emitting" data-uid="Godot.CPUParticles.Emitting">Emitting</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Emitting { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Explosiveness_" data-uid="Godot.CPUParticles.Explosiveness*"></a>
+  <h4 id="Godot_CPUParticles_Explosiveness" data-uid="Godot.CPUParticles.Explosiveness">Explosiveness</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Explosiveness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_FixedFps_" data-uid="Godot.CPUParticles.FixedFps*"></a>
+  <h4 id="Godot_CPUParticles_FixedFps" data-uid="Godot.CPUParticles.FixedFps">FixedFps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FixedFps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_FlagAlignY_" data-uid="Godot.CPUParticles.FlagAlignY*"></a>
+  <h4 id="Godot_CPUParticles_FlagAlignY" data-uid="Godot.CPUParticles.FlagAlignY">FlagAlignY</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagAlignY { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_FlagDisableZ_" data-uid="Godot.CPUParticles.FlagDisableZ*"></a>
+  <h4 id="Godot_CPUParticles_FlagDisableZ" data-uid="Godot.CPUParticles.FlagDisableZ">FlagDisableZ</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagDisableZ { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_FlagRotateY_" data-uid="Godot.CPUParticles.FlagRotateY*"></a>
+  <h4 id="Godot_CPUParticles_FlagRotateY" data-uid="Godot.CPUParticles.FlagRotateY">FlagRotateY</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FlagRotateY { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Flatness_" data-uid="Godot.CPUParticles.Flatness*"></a>
+  <h4 id="Godot_CPUParticles_Flatness" data-uid="Godot.CPUParticles.Flatness">Flatness</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Flatness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_FractDelta_" data-uid="Godot.CPUParticles.FractDelta*"></a>
+  <h4 id="Godot_CPUParticles_FractDelta" data-uid="Godot.CPUParticles.FractDelta">FractDelta</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FractDelta { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Gravity_" data-uid="Godot.CPUParticles.Gravity*"></a>
+  <h4 id="Godot_CPUParticles_Gravity" data-uid="Godot.CPUParticles.Gravity">Gravity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Gravity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_HueVariation_" data-uid="Godot.CPUParticles.HueVariation*"></a>
+  <h4 id="Godot_CPUParticles_HueVariation" data-uid="Godot.CPUParticles.HueVariation">HueVariation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float HueVariation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_HueVariationCurve_" data-uid="Godot.CPUParticles.HueVariationCurve*"></a>
+  <h4 id="Godot_CPUParticles_HueVariationCurve" data-uid="Godot.CPUParticles.HueVariationCurve">HueVariationCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve HueVariationCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_HueVariationRandom_" data-uid="Godot.CPUParticles.HueVariationRandom*"></a>
+  <h4 id="Godot_CPUParticles_HueVariationRandom" data-uid="Godot.CPUParticles.HueVariationRandom">HueVariationRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float HueVariationRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_InitialVelocity_" data-uid="Godot.CPUParticles.InitialVelocity*"></a>
+  <h4 id="Godot_CPUParticles_InitialVelocity" data-uid="Godot.CPUParticles.InitialVelocity">InitialVelocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InitialVelocity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_InitialVelocityRandom_" data-uid="Godot.CPUParticles.InitialVelocityRandom*"></a>
+  <h4 id="Godot_CPUParticles_InitialVelocityRandom" data-uid="Godot.CPUParticles.InitialVelocityRandom">InitialVelocityRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InitialVelocityRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Lifetime_" data-uid="Godot.CPUParticles.Lifetime*"></a>
+  <h4 id="Godot_CPUParticles_Lifetime" data-uid="Godot.CPUParticles.Lifetime">Lifetime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Lifetime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_LifetimeRandomness_" data-uid="Godot.CPUParticles.LifetimeRandomness*"></a>
+  <h4 id="Godot_CPUParticles_LifetimeRandomness" data-uid="Godot.CPUParticles.LifetimeRandomness">LifetimeRandomness</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LifetimeRandomness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_LinearAccel_" data-uid="Godot.CPUParticles.LinearAccel*"></a>
+  <h4 id="Godot_CPUParticles_LinearAccel" data-uid="Godot.CPUParticles.LinearAccel">LinearAccel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LinearAccel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_LinearAccelCurve_" data-uid="Godot.CPUParticles.LinearAccelCurve*"></a>
+  <h4 id="Godot_CPUParticles_LinearAccelCurve" data-uid="Godot.CPUParticles.LinearAccelCurve">LinearAccelCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve LinearAccelCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_LinearAccelRandom_" data-uid="Godot.CPUParticles.LinearAccelRandom*"></a>
+  <h4 id="Godot_CPUParticles_LinearAccelRandom" data-uid="Godot.CPUParticles.LinearAccelRandom">LinearAccelRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LinearAccelRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_LocalCoords_" data-uid="Godot.CPUParticles.LocalCoords*"></a>
+  <h4 id="Godot_CPUParticles_LocalCoords" data-uid="Godot.CPUParticles.LocalCoords">LocalCoords</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LocalCoords { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Mesh_" data-uid="Godot.CPUParticles.Mesh*"></a>
+  <h4 id="Godot_CPUParticles_Mesh" data-uid="Godot.CPUParticles.Mesh">Mesh</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mesh Mesh { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Mesh.html">Mesh</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_OneShot_" data-uid="Godot.CPUParticles.OneShot*"></a>
+  <h4 id="Godot_CPUParticles_OneShot" data-uid="Godot.CPUParticles.OneShot">OneShot</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OneShot { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_OrbitVelocity_" data-uid="Godot.CPUParticles.OrbitVelocity*"></a>
+  <h4 id="Godot_CPUParticles_OrbitVelocity" data-uid="Godot.CPUParticles.OrbitVelocity">OrbitVelocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OrbitVelocity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_OrbitVelocityCurve_" data-uid="Godot.CPUParticles.OrbitVelocityCurve*"></a>
+  <h4 id="Godot_CPUParticles_OrbitVelocityCurve" data-uid="Godot.CPUParticles.OrbitVelocityCurve">OrbitVelocityCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve OrbitVelocityCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_OrbitVelocityRandom_" data-uid="Godot.CPUParticles.OrbitVelocityRandom*"></a>
+  <h4 id="Godot_CPUParticles_OrbitVelocityRandom" data-uid="Godot.CPUParticles.OrbitVelocityRandom">OrbitVelocityRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float OrbitVelocityRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Preprocess_" data-uid="Godot.CPUParticles.Preprocess*"></a>
+  <h4 id="Godot_CPUParticles_Preprocess" data-uid="Godot.CPUParticles.Preprocess">Preprocess</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Preprocess { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_RadialAccel_" data-uid="Godot.CPUParticles.RadialAccel*"></a>
+  <h4 id="Godot_CPUParticles_RadialAccel" data-uid="Godot.CPUParticles.RadialAccel">RadialAccel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RadialAccel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_RadialAccelCurve_" data-uid="Godot.CPUParticles.RadialAccelCurve*"></a>
+  <h4 id="Godot_CPUParticles_RadialAccelCurve" data-uid="Godot.CPUParticles.RadialAccelCurve">RadialAccelCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve RadialAccelCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_RadialAccelRandom_" data-uid="Godot.CPUParticles.RadialAccelRandom*"></a>
+  <h4 id="Godot_CPUParticles_RadialAccelRandom" data-uid="Godot.CPUParticles.RadialAccelRandom">RadialAccelRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RadialAccelRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Randomness_" data-uid="Godot.CPUParticles.Randomness*"></a>
+  <h4 id="Godot_CPUParticles_Randomness" data-uid="Godot.CPUParticles.Randomness">Randomness</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Randomness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_ScaleAmount_" data-uid="Godot.CPUParticles.ScaleAmount*"></a>
+  <h4 id="Godot_CPUParticles_ScaleAmount" data-uid="Godot.CPUParticles.ScaleAmount">ScaleAmount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ScaleAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_ScaleAmountCurve_" data-uid="Godot.CPUParticles.ScaleAmountCurve*"></a>
+  <h4 id="Godot_CPUParticles_ScaleAmountCurve" data-uid="Godot.CPUParticles.ScaleAmountCurve">ScaleAmountCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve ScaleAmountCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_ScaleAmountRandom_" data-uid="Godot.CPUParticles.ScaleAmountRandom*"></a>
+  <h4 id="Godot_CPUParticles_ScaleAmountRandom" data-uid="Godot.CPUParticles.ScaleAmountRandom">ScaleAmountRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ScaleAmountRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SpeedScale_" data-uid="Godot.CPUParticles.SpeedScale*"></a>
+  <h4 id="Godot_CPUParticles_SpeedScale" data-uid="Godot.CPUParticles.SpeedScale">SpeedScale</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SpeedScale { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Spread_" data-uid="Godot.CPUParticles.Spread*"></a>
+  <h4 id="Godot_CPUParticles_Spread" data-uid="Godot.CPUParticles.Spread">Spread</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Spread { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_TangentialAccel_" data-uid="Godot.CPUParticles.TangentialAccel*"></a>
+  <h4 id="Godot_CPUParticles_TangentialAccel" data-uid="Godot.CPUParticles.TangentialAccel">TangentialAccel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float TangentialAccel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_TangentialAccelCurve_" data-uid="Godot.CPUParticles.TangentialAccelCurve*"></a>
+  <h4 id="Godot_CPUParticles_TangentialAccelCurve" data-uid="Godot.CPUParticles.TangentialAccelCurve">TangentialAccelCurve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve TangentialAccelCurve { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_TangentialAccelRandom_" data-uid="Godot.CPUParticles.TangentialAccelRandom*"></a>
+  <h4 id="Godot_CPUParticles_TangentialAccelRandom" data-uid="Godot.CPUParticles.TangentialAccelRandom">TangentialAccelRandom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float TangentialAccelRandom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Godot_CPUParticles_ConvertFromParticles_" data-uid="Godot.CPUParticles.ConvertFromParticles*"></a>
+  <h4 id="Godot_CPUParticles_ConvertFromParticles_Godot_Node_" data-uid="Godot.CPUParticles.ConvertFromParticles(Godot.Node)">ConvertFromParticles(Node)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ConvertFromParticles(Node particles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Node.html">Node</a></td>
+        <td><span class="parametername">particles</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetAmount_" data-uid="Godot.CPUParticles.GetAmount*"></a>
+  <h4 id="Godot_CPUParticles_GetAmount" data-uid="Godot.CPUParticles.GetAmount">GetAmount()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetAmount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetColor_" data-uid="Godot.CPUParticles.GetColor*"></a>
+  <h4 id="Godot_CPUParticles_GetColor" data-uid="Godot.CPUParticles.GetColor">GetColor()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetColor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetColorInitialRamp_" data-uid="Godot.CPUParticles.GetColorInitialRamp*"></a>
+  <h4 id="Godot_CPUParticles_GetColorInitialRamp" data-uid="Godot.CPUParticles.GetColorInitialRamp">GetColorInitialRamp()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Gradient GetColorInitialRamp()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Gradient.html">Gradient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetColorRamp_" data-uid="Godot.CPUParticles.GetColorRamp*"></a>
+  <h4 id="Godot_CPUParticles_GetColorRamp" data-uid="Godot.CPUParticles.GetColorRamp">GetColorRamp()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Gradient GetColorRamp()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Gradient.html">Gradient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetDirection_" data-uid="Godot.CPUParticles.GetDirection*"></a>
+  <h4 id="Godot_CPUParticles_GetDirection" data-uid="Godot.CPUParticles.GetDirection">GetDirection()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetDirection()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetDrawOrder_" data-uid="Godot.CPUParticles.GetDrawOrder*"></a>
+  <h4 id="Godot_CPUParticles_GetDrawOrder" data-uid="Godot.CPUParticles.GetDrawOrder">GetDrawOrder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CPUParticles.DrawOrderEnum GetDrawOrder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.DrawOrderEnum.html">CPUParticles.DrawOrderEnum</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionBoxExtents_" data-uid="Godot.CPUParticles.GetEmissionBoxExtents*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionBoxExtents" data-uid="Godot.CPUParticles.GetEmissionBoxExtents">GetEmissionBoxExtents()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetEmissionBoxExtents()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionColors_" data-uid="Godot.CPUParticles.GetEmissionColors*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionColors" data-uid="Godot.CPUParticles.GetEmissionColors">GetEmissionColors()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color[] GetEmissionColors()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionNormals_" data-uid="Godot.CPUParticles.GetEmissionNormals*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionNormals" data-uid="Godot.CPUParticles.GetEmissionNormals">GetEmissionNormals()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3[] GetEmissionNormals()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionPoints_" data-uid="Godot.CPUParticles.GetEmissionPoints*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionPoints" data-uid="Godot.CPUParticles.GetEmissionPoints">GetEmissionPoints()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3[] GetEmissionPoints()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionRingAxis_" data-uid="Godot.CPUParticles.GetEmissionRingAxis*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionRingAxis" data-uid="Godot.CPUParticles.GetEmissionRingAxis">GetEmissionRingAxis()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetEmissionRingAxis()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionRingHeight_" data-uid="Godot.CPUParticles.GetEmissionRingHeight*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionRingHeight" data-uid="Godot.CPUParticles.GetEmissionRingHeight">GetEmissionRingHeight()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEmissionRingHeight()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionRingInnerRadius_" data-uid="Godot.CPUParticles.GetEmissionRingInnerRadius*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionRingInnerRadius" data-uid="Godot.CPUParticles.GetEmissionRingInnerRadius">GetEmissionRingInnerRadius()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEmissionRingInnerRadius()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionRingRadius_" data-uid="Godot.CPUParticles.GetEmissionRingRadius*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionRingRadius" data-uid="Godot.CPUParticles.GetEmissionRingRadius">GetEmissionRingRadius()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEmissionRingRadius()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionShape_" data-uid="Godot.CPUParticles.GetEmissionShape*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionShape" data-uid="Godot.CPUParticles.GetEmissionShape">GetEmissionShape()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CPUParticles.EmissionShapeEnum GetEmissionShape()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html">CPUParticles.EmissionShapeEnum</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetEmissionSphereRadius_" data-uid="Godot.CPUParticles.GetEmissionSphereRadius*"></a>
+  <h4 id="Godot_CPUParticles_GetEmissionSphereRadius" data-uid="Godot.CPUParticles.GetEmissionSphereRadius">GetEmissionSphereRadius()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetEmissionSphereRadius()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetExplosivenessRatio_" data-uid="Godot.CPUParticles.GetExplosivenessRatio*"></a>
+  <h4 id="Godot_CPUParticles_GetExplosivenessRatio" data-uid="Godot.CPUParticles.GetExplosivenessRatio">GetExplosivenessRatio()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetExplosivenessRatio()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetFixedFps_" data-uid="Godot.CPUParticles.GetFixedFps*"></a>
+  <h4 id="Godot_CPUParticles_GetFixedFps" data-uid="Godot.CPUParticles.GetFixedFps">GetFixedFps()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetFixedFps()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetFlatness_" data-uid="Godot.CPUParticles.GetFlatness*"></a>
+  <h4 id="Godot_CPUParticles_GetFlatness" data-uid="Godot.CPUParticles.GetFlatness">GetFlatness()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetFlatness()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetFractionalDelta_" data-uid="Godot.CPUParticles.GetFractionalDelta*"></a>
+  <h4 id="Godot_CPUParticles_GetFractionalDelta" data-uid="Godot.CPUParticles.GetFractionalDelta">GetFractionalDelta()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetFractionalDelta()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetGravity_" data-uid="Godot.CPUParticles.GetGravity*"></a>
+  <h4 id="Godot_CPUParticles_GetGravity" data-uid="Godot.CPUParticles.GetGravity">GetGravity()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetGravity()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetLifetime_" data-uid="Godot.CPUParticles.GetLifetime*"></a>
+  <h4 id="Godot_CPUParticles_GetLifetime" data-uid="Godot.CPUParticles.GetLifetime">GetLifetime()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetLifetime()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetLifetimeRandomness_" data-uid="Godot.CPUParticles.GetLifetimeRandomness*"></a>
+  <h4 id="Godot_CPUParticles_GetLifetimeRandomness" data-uid="Godot.CPUParticles.GetLifetimeRandomness">GetLifetimeRandomness()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetLifetimeRandomness()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetMesh_" data-uid="Godot.CPUParticles.GetMesh*"></a>
+  <h4 id="Godot_CPUParticles_GetMesh" data-uid="Godot.CPUParticles.GetMesh">GetMesh()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mesh GetMesh()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Mesh.html">Mesh</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetOneShot_" data-uid="Godot.CPUParticles.GetOneShot*"></a>
+  <h4 id="Godot_CPUParticles_GetOneShot" data-uid="Godot.CPUParticles.GetOneShot">GetOneShot()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetOneShot()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetParam_" data-uid="Godot.CPUParticles.GetParam*"></a>
+  <h4 id="Godot_CPUParticles_GetParam_Godot_CPUParticles_Parameter_" data-uid="Godot.CPUParticles.GetParam(Godot.CPUParticles.Parameter)">GetParam(CPUParticles.Parameter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetParam(CPUParticles.Parameter param)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a></td>
+        <td><span class="parametername">param</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetParamCurve_" data-uid="Godot.CPUParticles.GetParamCurve*"></a>
+  <h4 id="Godot_CPUParticles_GetParamCurve_Godot_CPUParticles_Parameter_" data-uid="Godot.CPUParticles.GetParamCurve(Godot.CPUParticles.Parameter)">GetParamCurve(CPUParticles.Parameter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Curve GetParamCurve(CPUParticles.Parameter param)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a></td>
+        <td><span class="parametername">param</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetParamRandomness_" data-uid="Godot.CPUParticles.GetParamRandomness*"></a>
+  <h4 id="Godot_CPUParticles_GetParamRandomness_Godot_CPUParticles_Parameter_" data-uid="Godot.CPUParticles.GetParamRandomness(Godot.CPUParticles.Parameter)">GetParamRandomness(CPUParticles.Parameter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetParamRandomness(CPUParticles.Parameter param)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a></td>
+        <td><span class="parametername">param</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetParticleFlag_" data-uid="Godot.CPUParticles.GetParticleFlag*"></a>
+  <h4 id="Godot_CPUParticles_GetParticleFlag_Godot_CPUParticles_Flags_" data-uid="Godot.CPUParticles.GetParticleFlag(Godot.CPUParticles.Flags)">GetParticleFlag(CPUParticles.Flags)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetParticleFlag(CPUParticles.Flags flag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.Flags.html">CPUParticles.Flags</a></td>
+        <td><span class="parametername">flag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetPreProcessTime_" data-uid="Godot.CPUParticles.GetPreProcessTime*"></a>
+  <h4 id="Godot_CPUParticles_GetPreProcessTime" data-uid="Godot.CPUParticles.GetPreProcessTime">GetPreProcessTime()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetPreProcessTime()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetRandomnessRatio_" data-uid="Godot.CPUParticles.GetRandomnessRatio*"></a>
+  <h4 id="Godot_CPUParticles_GetRandomnessRatio" data-uid="Godot.CPUParticles.GetRandomnessRatio">GetRandomnessRatio()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetRandomnessRatio()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetSpeedScale_" data-uid="Godot.CPUParticles.GetSpeedScale*"></a>
+  <h4 id="Godot_CPUParticles_GetSpeedScale" data-uid="Godot.CPUParticles.GetSpeedScale">GetSpeedScale()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetSpeedScale()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetSpread_" data-uid="Godot.CPUParticles.GetSpread*"></a>
+  <h4 id="Godot_CPUParticles_GetSpread" data-uid="Godot.CPUParticles.GetSpread">GetSpread()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetSpread()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_GetUseLocalCoordinates_" data-uid="Godot.CPUParticles.GetUseLocalCoordinates*"></a>
+  <h4 id="Godot_CPUParticles_GetUseLocalCoordinates" data-uid="Godot.CPUParticles.GetUseLocalCoordinates">GetUseLocalCoordinates()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetUseLocalCoordinates()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_IsEmitting_" data-uid="Godot.CPUParticles.IsEmitting*"></a>
+  <h4 id="Godot_CPUParticles_IsEmitting" data-uid="Godot.CPUParticles.IsEmitting">IsEmitting()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmitting()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_Restart_" data-uid="Godot.CPUParticles.Restart*"></a>
+  <h4 id="Godot_CPUParticles_Restart" data-uid="Godot.CPUParticles.Restart">Restart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Restart()</code></pre>
+  </div>
+  
+  
+  <a id="Godot_CPUParticles_SetAmount_" data-uid="Godot.CPUParticles.SetAmount*"></a>
+  <h4 id="Godot_CPUParticles_SetAmount_System_Int32_" data-uid="Godot.CPUParticles.SetAmount(System.Int32)">SetAmount(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAmount(int amount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetColor_" data-uid="Godot.CPUParticles.SetColor*"></a>
+  <h4 id="Godot_CPUParticles_SetColor_Godot_Color_" data-uid="Godot.CPUParticles.SetColor(Godot.Color)">SetColor(Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetColor(Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetColorInitialRamp_" data-uid="Godot.CPUParticles.SetColorInitialRamp*"></a>
+  <h4 id="Godot_CPUParticles_SetColorInitialRamp_Godot_Gradient_" data-uid="Godot.CPUParticles.SetColorInitialRamp(Godot.Gradient)">SetColorInitialRamp(Gradient)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetColorInitialRamp(Gradient ramp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Gradient.html">Gradient</a></td>
+        <td><span class="parametername">ramp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetColorRamp_" data-uid="Godot.CPUParticles.SetColorRamp*"></a>
+  <h4 id="Godot_CPUParticles_SetColorRamp_Godot_Gradient_" data-uid="Godot.CPUParticles.SetColorRamp(Godot.Gradient)">SetColorRamp(Gradient)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetColorRamp(Gradient ramp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Gradient.html">Gradient</a></td>
+        <td><span class="parametername">ramp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetDirection_" data-uid="Godot.CPUParticles.SetDirection*"></a>
+  <h4 id="Godot_CPUParticles_SetDirection_Godot_Vector3_" data-uid="Godot.CPUParticles.SetDirection(Godot.Vector3)">SetDirection(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDirection(Vector3 direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetDrawOrder_" data-uid="Godot.CPUParticles.SetDrawOrder*"></a>
+  <h4 id="Godot_CPUParticles_SetDrawOrder_Godot_CPUParticles_DrawOrderEnum_" data-uid="Godot.CPUParticles.SetDrawOrder(Godot.CPUParticles.DrawOrderEnum)">SetDrawOrder(CPUParticles.DrawOrderEnum)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDrawOrder(CPUParticles.DrawOrderEnum order)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.DrawOrderEnum.html">CPUParticles.DrawOrderEnum</a></td>
+        <td><span class="parametername">order</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionBoxExtents_" data-uid="Godot.CPUParticles.SetEmissionBoxExtents*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionBoxExtents_Godot_Vector3_" data-uid="Godot.CPUParticles.SetEmissionBoxExtents(Godot.Vector3)">SetEmissionBoxExtents(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionBoxExtents(Vector3 extents)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">extents</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionColors_" data-uid="Godot.CPUParticles.SetEmissionColors*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionColors_Godot_Color___" data-uid="Godot.CPUParticles.SetEmissionColors(Godot.Color[])">SetEmissionColors(Color[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionColors(Color[] array)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Color.html">Color</a>[]</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionNormals_" data-uid="Godot.CPUParticles.SetEmissionNormals*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionNormals_Godot_Vector3___" data-uid="Godot.CPUParticles.SetEmissionNormals(Godot.Vector3[])">SetEmissionNormals(Vector3[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionNormals(Vector3[] array)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionPoints_" data-uid="Godot.CPUParticles.SetEmissionPoints*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionPoints_Godot_Vector3___" data-uid="Godot.CPUParticles.SetEmissionPoints(Godot.Vector3[])">SetEmissionPoints(Vector3[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionPoints(Vector3[] array)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a>[]</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionRingAxis_" data-uid="Godot.CPUParticles.SetEmissionRingAxis*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionRingAxis_Godot_Vector3_" data-uid="Godot.CPUParticles.SetEmissionRingAxis(Godot.Vector3)">SetEmissionRingAxis(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionRingAxis(Vector3 axis)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">axis</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionRingHeight_" data-uid="Godot.CPUParticles.SetEmissionRingHeight*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionRingHeight_System_Single_" data-uid="Godot.CPUParticles.SetEmissionRingHeight(System.Single)">SetEmissionRingHeight(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionRingHeight(float height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionRingInnerRadius_" data-uid="Godot.CPUParticles.SetEmissionRingInnerRadius*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionRingInnerRadius_System_Single_" data-uid="Godot.CPUParticles.SetEmissionRingInnerRadius(System.Single)">SetEmissionRingInnerRadius(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionRingInnerRadius(float offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionRingRadius_" data-uid="Godot.CPUParticles.SetEmissionRingRadius*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionRingRadius_System_Single_" data-uid="Godot.CPUParticles.SetEmissionRingRadius(System.Single)">SetEmissionRingRadius(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionRingRadius(float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionShape_" data-uid="Godot.CPUParticles.SetEmissionShape*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionShape_Godot_CPUParticles_EmissionShapeEnum_" data-uid="Godot.CPUParticles.SetEmissionShape(Godot.CPUParticles.EmissionShapeEnum)">SetEmissionShape(CPUParticles.EmissionShapeEnum)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionShape(CPUParticles.EmissionShapeEnum shape)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html">CPUParticles.EmissionShapeEnum</a></td>
+        <td><span class="parametername">shape</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmissionSphereRadius_" data-uid="Godot.CPUParticles.SetEmissionSphereRadius*"></a>
+  <h4 id="Godot_CPUParticles_SetEmissionSphereRadius_System_Single_" data-uid="Godot.CPUParticles.SetEmissionSphereRadius(System.Single)">SetEmissionSphereRadius(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmissionSphereRadius(float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetEmitting_" data-uid="Godot.CPUParticles.SetEmitting*"></a>
+  <h4 id="Godot_CPUParticles_SetEmitting_System_Boolean_" data-uid="Godot.CPUParticles.SetEmitting(System.Boolean)">SetEmitting(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEmitting(bool emitting)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">emitting</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetExplosivenessRatio_" data-uid="Godot.CPUParticles.SetExplosivenessRatio*"></a>
+  <h4 id="Godot_CPUParticles_SetExplosivenessRatio_System_Single_" data-uid="Godot.CPUParticles.SetExplosivenessRatio(System.Single)">SetExplosivenessRatio(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetExplosivenessRatio(float ratio)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">ratio</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetFixedFps_" data-uid="Godot.CPUParticles.SetFixedFps*"></a>
+  <h4 id="Godot_CPUParticles_SetFixedFps_System_Int32_" data-uid="Godot.CPUParticles.SetFixedFps(System.Int32)">SetFixedFps(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFixedFps(int fps)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">fps</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetFlatness_" data-uid="Godot.CPUParticles.SetFlatness*"></a>
+  <h4 id="Godot_CPUParticles_SetFlatness_System_Single_" data-uid="Godot.CPUParticles.SetFlatness(System.Single)">SetFlatness(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFlatness(float amount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetFractionalDelta_" data-uid="Godot.CPUParticles.SetFractionalDelta*"></a>
+  <h4 id="Godot_CPUParticles_SetFractionalDelta_System_Boolean_" data-uid="Godot.CPUParticles.SetFractionalDelta(System.Boolean)">SetFractionalDelta(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFractionalDelta(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetGravity_" data-uid="Godot.CPUParticles.SetGravity*"></a>
+  <h4 id="Godot_CPUParticles_SetGravity_Godot_Vector3_" data-uid="Godot.CPUParticles.SetGravity(Godot.Vector3)">SetGravity(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGravity(Vector3 accelVec)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Vector3.html">Vector3</a></td>
+        <td><span class="parametername">accelVec</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetLifetime_" data-uid="Godot.CPUParticles.SetLifetime*"></a>
+  <h4 id="Godot_CPUParticles_SetLifetime_System_Single_" data-uid="Godot.CPUParticles.SetLifetime(System.Single)">SetLifetime(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLifetime(float secs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">secs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetLifetimeRandomness_" data-uid="Godot.CPUParticles.SetLifetimeRandomness*"></a>
+  <h4 id="Godot_CPUParticles_SetLifetimeRandomness_System_Single_" data-uid="Godot.CPUParticles.SetLifetimeRandomness(System.Single)">SetLifetimeRandomness(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLifetimeRandomness(float random)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">random</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetMesh_" data-uid="Godot.CPUParticles.SetMesh*"></a>
+  <h4 id="Godot_CPUParticles_SetMesh_Godot_Mesh_" data-uid="Godot.CPUParticles.SetMesh(Godot.Mesh)">SetMesh(Mesh)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMesh(Mesh mesh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.Mesh.html">Mesh</a></td>
+        <td><span class="parametername">mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetOneShot_" data-uid="Godot.CPUParticles.SetOneShot*"></a>
+  <h4 id="Godot_CPUParticles_SetOneShot_System_Boolean_" data-uid="Godot.CPUParticles.SetOneShot(System.Boolean)">SetOneShot(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOneShot(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetParam_" data-uid="Godot.CPUParticles.SetParam*"></a>
+  <h4 id="Godot_CPUParticles_SetParam_Godot_CPUParticles_Parameter_System_Single_" data-uid="Godot.CPUParticles.SetParam(Godot.CPUParticles.Parameter,System.Single)">SetParam(CPUParticles.Parameter, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetParam(CPUParticles.Parameter param, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a></td>
+        <td><span class="parametername">param</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetParamCurve_" data-uid="Godot.CPUParticles.SetParamCurve*"></a>
+  <h4 id="Godot_CPUParticles_SetParamCurve_Godot_CPUParticles_Parameter_Godot_Curve_" data-uid="Godot.CPUParticles.SetParamCurve(Godot.CPUParticles.Parameter,Godot.Curve)">SetParamCurve(CPUParticles.Parameter, Curve)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetParamCurve(CPUParticles.Parameter param, Curve curve)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a></td>
+        <td><span class="parametername">param</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Godot.Curve.html">Curve</a></td>
+        <td><span class="parametername">curve</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetParamRandomness_" data-uid="Godot.CPUParticles.SetParamRandomness*"></a>
+  <h4 id="Godot_CPUParticles_SetParamRandomness_Godot_CPUParticles_Parameter_System_Single_" data-uid="Godot.CPUParticles.SetParamRandomness(Godot.CPUParticles.Parameter,System.Single)">SetParamRandomness(CPUParticles.Parameter, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetParamRandomness(CPUParticles.Parameter param, float randomness)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a></td>
+        <td><span class="parametername">param</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">randomness</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetParticleFlag_" data-uid="Godot.CPUParticles.SetParticleFlag*"></a>
+  <h4 id="Godot_CPUParticles_SetParticleFlag_Godot_CPUParticles_Flags_System_Boolean_" data-uid="Godot.CPUParticles.SetParticleFlag(Godot.CPUParticles.Flags,System.Boolean)">SetParticleFlag(CPUParticles.Flags, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetParticleFlag(CPUParticles.Flags flag, bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Godot.CPUParticles.Flags.html">CPUParticles.Flags</a></td>
+        <td><span class="parametername">flag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetPreProcessTime_" data-uid="Godot.CPUParticles.SetPreProcessTime*"></a>
+  <h4 id="Godot_CPUParticles_SetPreProcessTime_System_Single_" data-uid="Godot.CPUParticles.SetPreProcessTime(System.Single)">SetPreProcessTime(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPreProcessTime(float secs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">secs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetRandomnessRatio_" data-uid="Godot.CPUParticles.SetRandomnessRatio*"></a>
+  <h4 id="Godot_CPUParticles_SetRandomnessRatio_System_Single_" data-uid="Godot.CPUParticles.SetRandomnessRatio(System.Single)">SetRandomnessRatio(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRandomnessRatio(float ratio)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">ratio</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetSpeedScale_" data-uid="Godot.CPUParticles.SetSpeedScale*"></a>
+  <h4 id="Godot_CPUParticles_SetSpeedScale_System_Single_" data-uid="Godot.CPUParticles.SetSpeedScale(System.Single)">SetSpeedScale(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSpeedScale(float scale)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scale</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetSpread_" data-uid="Godot.CPUParticles.SetSpread*"></a>
+  <h4 id="Godot_CPUParticles_SetSpread_System_Single_" data-uid="Godot.CPUParticles.SetSpread(System.Single)">SetSpread(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSpread(float degrees)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">degrees</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Godot_CPUParticles_SetUseLocalCoordinates_" data-uid="Godot.CPUParticles.SetUseLocalCoordinates*"></a>
+  <h4 id="Godot_CPUParticles_SetUseLocalCoordinates_System_Boolean_" data-uid="Godot.CPUParticles.SetUseLocalCoordinates(System.Boolean)">SetUseLocalCoordinates(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUseLocalCoordinates(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              <span>Generated by <strong>DocFX</strong></span><br><span>Provided and maintained by <strong><a href='https://github.com/paulloz/godot-csharp-api/' target='_blank'>paulloz</a></strong></span>
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
