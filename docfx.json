@@ -4,18 +4,18 @@
       "src": [
         {
           "files": [
-            "src/3.4/**.dll"
+            "src/3.5/**.dll"
           ]
         }
       ],
-      "dest": "3.4"
+      "dest": "3.5"
     }
   ],
   "build": {
     "content": [
       {
         "files": [
-          "3.4/**.yml"
+          "3.5/**.yml"
         ]
       },
       {
