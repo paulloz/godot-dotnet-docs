@@ -83,7 +83,9 @@
   
   <h1 id="Godot_OmniLight" data-uid="Godot.OmniLight" class="text-break">Class OmniLight
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An Omnidirectional light is a type of <a class="xref" href="Godot.Light.html">Light</a> that emits light in all directions. The light is attenuated by distance and this attenuation can be configured by changing its energy, radius, and attenuation parameters.</p>
+<p>Note: By default, only 32 OmniLights may affect a single mesh resource at once. Consider splitting your level into several meshes to decrease the likelihood that more than 32 lights will affect the same mesh resource. Splitting the level mesh will also improve frustum culling effectiveness, leading to greater performance. If you need to use more lights per mesh, you can increase  at the cost of shader compilation times.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1129,7 +1131,8 @@
   
   <a id="Godot_OmniLight_OmniAttenuation_" data-uid="Godot.OmniLight.OmniAttenuation*"></a>
   <h4 id="Godot_OmniLight_OmniAttenuation" data-uid="Godot.OmniLight.OmniAttenuation">OmniAttenuation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The light&apos;s attenuation (drop-off) curve. A number of presets are available in the Inspector by right-clicking the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1154,7 +1157,8 @@
   
   <a id="Godot_OmniLight_OmniRange_" data-uid="Godot.OmniLight.OmniRange*"></a>
   <h4 id="Godot_OmniLight_OmniRange" data-uid="Godot.OmniLight.OmniRange">OmniRange</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The light&apos;s radius. Note that the effectively lit area may appear to be smaller depending on the <a class="xref" href="Godot.OmniLight.html#Godot_OmniLight_OmniAttenuation">OmniAttenuation</a> in use. No matter the <a class="xref" href="Godot.OmniLight.html#Godot_OmniLight_OmniAttenuation">OmniAttenuation</a> in use, the light will never reach anything outside this radius.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1179,7 +1183,8 @@
   
   <a id="Godot_OmniLight_OmniShadowDetail_" data-uid="Godot.OmniLight.OmniShadowDetail*"></a>
   <h4 id="Godot_OmniLight_OmniShadowDetail" data-uid="Godot.OmniLight.OmniShadowDetail">OmniShadowDetail</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="Godot.OmniLight.ShadowDetail.html">OmniLight.ShadowDetail</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1204,7 +1209,9 @@
   
   <a id="Godot_OmniLight_OmniShadowMode_" data-uid="Godot.OmniLight.OmniShadowMode*"></a>
   <h4 id="Godot_OmniLight_OmniShadowMode" data-uid="Godot.OmniLight.OmniShadowMode">OmniShadowMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The shadow rendering mode to use for this <a class="xref" href="Godot.OmniLight.html">OmniLight</a>. See <a class="xref" href="Godot.OmniLight.ShadowMode.html">OmniLight.ShadowMode</a>.</p>
+<p>Note: In GLES2, <a class="xref" href="Godot.OmniLight.ShadowMode.html#Godot_OmniLight_ShadowMode_Cube">Cube</a> is only supported on GPUs that feature support for depth cubemaps. Old GPUs such as the Radeon HD 4000 series don&apos;t support cubemap shadows and will fall back to dual paraboloid shadows as a result.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

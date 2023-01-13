@@ -83,7 +83,10 @@
   
   <h1 id="Godot_SceneTree" data-uid="Godot.SceneTree" class="text-break">Class SceneTree
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>As one of the most important classes, the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> manages the hierarchy of nodes in a scene as well as scenes themselves. Nodes can be added, retrieved and removed. The whole scene tree (and thus the current scene) can be paused. Scenes can be loaded, switched and reloaded.</p>
+<p>You can also use the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> to organize your nodes into groups: every node can be assigned as many groups as you want to create, e.g. an &quot;enemy&quot; group. You can then iterate these groups or even call methods and set properties on all the group&apos;s members at once.</p>
+<p><a class="xref" href="Godot.SceneTree.html">SceneTree</a> is the default <a class="xref" href="Godot.MainLoop.html">MainLoop</a> implementation used by scenes, and is thus in charge of the game loop.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -372,7 +375,9 @@
   
   <a id="Godot_SceneTree_AutoAcceptQuit_" data-uid="Godot.SceneTree.AutoAcceptQuit*"></a>
   <h4 id="Godot_SceneTree_AutoAcceptQuit" data-uid="Godot.SceneTree.AutoAcceptQuit">AutoAcceptQuit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the application automatically accepts quitting.</p>
+<p>For mobile platforms, see <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_QuitOnGoBack">QuitOnGoBack</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -397,7 +402,8 @@
   
   <a id="Godot_SceneTree_CurrentScene_" data-uid="Godot.SceneTree.CurrentScene*"></a>
   <h4 id="Godot_SceneTree_CurrentScene" data-uid="Godot.SceneTree.CurrentScene">CurrentScene</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -422,7 +428,9 @@
   
   <a id="Godot_SceneTree_DebugCollisionsHint_" data-uid="Godot.SceneTree.DebugCollisionsHint*"></a>
   <h4 id="Godot_SceneTree_DebugCollisionsHint" data-uid="Godot.SceneTree.DebugCollisionsHint">DebugCollisionsHint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, collision shapes will be visible when running the game from the editor for debugging purposes.</p>
+<p>Note: This property is not designed to be changed at run-time. Changing the value of <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_DebugCollisionsHint">DebugCollisionsHint</a> while the project is running will not have the desired effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -447,7 +455,9 @@
   
   <a id="Godot_SceneTree_DebugNavigationHint_" data-uid="Godot.SceneTree.DebugNavigationHint*"></a>
   <h4 id="Godot_SceneTree_DebugNavigationHint" data-uid="Godot.SceneTree.DebugNavigationHint">DebugNavigationHint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, navigation polygons will be visible when running the game from the editor for debugging purposes.</p>
+<p>Note: This property is not designed to be changed at run-time. Changing the value of <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_DebugNavigationHint">DebugNavigationHint</a> while the project is running will not have the desired effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -472,7 +482,8 @@
   
   <a id="Godot_SceneTree_EditedSceneRoot_" data-uid="Godot.SceneTree.EditedSceneRoot*"></a>
   <h4 id="Godot_SceneTree_EditedSceneRoot" data-uid="Godot.SceneTree.EditedSceneRoot">EditedSceneRoot</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The root of the edited scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -497,7 +508,8 @@
   
   <a id="Godot_SceneTree_Multiplayer_" data-uid="Godot.SceneTree.Multiplayer*"></a>
   <h4 id="Godot_SceneTree_Multiplayer" data-uid="Godot.SceneTree.Multiplayer">Multiplayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The default <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a> instance for this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -522,7 +534,9 @@
   
   <a id="Godot_SceneTree_MultiplayerPoll_" data-uid="Godot.SceneTree.MultiplayerPoll*"></a>
   <h4 id="Godot_SceneTree_MultiplayerPoll" data-uid="Godot.SceneTree.MultiplayerPoll">MultiplayerPoll</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code> (default value), enables automatic polling of the <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a> for this SceneTree during <code>idle_frame</code>.</p>
+<p>If <code>false</code>, you need to manually call <a class="xref" href="Godot.MultiplayerAPI.html#Godot_MultiplayerAPI_Poll">Poll()</a> to process network packets and deliver RPCs/RSETs. This allows running RPCs/RSETs in a different loop (e.g. physics, thread, specific time step) and for manual <a class="xref" href="Godot.Mutex.html">Mutex</a> protection when accessing the <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a> from threads.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -547,7 +561,8 @@
   
   <a id="Godot_SceneTree_NetworkPeer_" data-uid="Godot.SceneTree.NetworkPeer*"></a>
   <h4 id="Godot_SceneTree_NetworkPeer" data-uid="Godot.SceneTree.NetworkPeer">NetworkPeer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The peer object to handle the RPC system (effectively enabling networking when set). Depending on the peer itself, the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> will become a network server (check with <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_IsNetworkServer">IsNetworkServer()</a>) and will set the root node&apos;s network mode to master, or it will become a regular peer with the root node set to puppet. All child nodes are set to inherit the network mode by default. Handling of networking-related events (connection, disconnection, new clients) is done by connecting to <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s signals.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -572,7 +587,10 @@
   
   <a id="Godot_SceneTree_Paused_" data-uid="Godot.SceneTree.Paused*"></a>
   <h4 id="Godot_SceneTree_Paused" data-uid="Godot.SceneTree.Paused">Paused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> is paused. Doing so will have the following behavior:</p>
+<p>- 2D and 3D physics will be stopped. This includes signals and collision detection.</p>
+<p>- <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>, <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> and <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">_Input(InputEvent)</a> will not be called anymore in nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -597,7 +615,8 @@
   
   <a id="Godot_SceneTree_PhysicsInterpolation_" data-uid="Godot.SceneTree.PhysicsInterpolation*"></a>
   <h4 id="Godot_SceneTree_PhysicsInterpolation" data-uid="Godot.SceneTree.PhysicsInterpolation">PhysicsInterpolation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Although physics interpolation would normally be globally turned on and off using , this property allows control over interpolation at runtime.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -622,7 +641,9 @@
   
   <a id="Godot_SceneTree_QuitOnGoBack_" data-uid="Godot.SceneTree.QuitOnGoBack*"></a>
   <h4 id="Godot_SceneTree_QuitOnGoBack" data-uid="Godot.SceneTree.QuitOnGoBack">QuitOnGoBack</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the application quits automatically on going back (e.g. on Android).</p>
+<p>To handle &apos;Go Back&apos; button when this option is disabled, use <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop_NotificationWmGoBackRequest">NotificationWmGoBackRequest</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -647,7 +668,8 @@
   
   <a id="Godot_SceneTree_RefuseNewNetworkConnections_" data-uid="Godot.SceneTree.RefuseNewNetworkConnections*"></a>
   <h4 id="Godot_SceneTree_RefuseNewNetworkConnections" data-uid="Godot.SceneTree.RefuseNewNetworkConnections">RefuseNewNetworkConnections</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a> refuses new incoming connections.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -672,7 +694,8 @@
   
   <a id="Godot_SceneTree_Root_" data-uid="Godot.SceneTree.Root*"></a>
   <h4 id="Godot_SceneTree_Root" data-uid="Godot.SceneTree.Root">Root</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s root <a class="xref" href="Godot.Viewport.html">Viewport</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -697,7 +720,10 @@
   
   <a id="Godot_SceneTree_UseFontOversampling_" data-uid="Godot.SceneTree.UseFontOversampling*"></a>
   <h4 id="Godot_SceneTree_UseFontOversampling" data-uid="Godot.SceneTree.UseFontOversampling">UseFontOversampling</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, font oversampling is enabled. This means that <a class="xref" href="Godot.DynamicFont.html">DynamicFont</a>s will be rendered at higher or lower size than configured based on the viewport&apos;s scaling ratio. For example, in a viewport scaled with a factor 1.5, a font configured with size 14 would be rendered with size 21 (<code>14 * 1.5</code>).</p>
+<p>Note: Font oversampling is only used if the viewport stretch mode is <a class="xref" href="Godot.SceneTree.StretchMode.html#Godot_SceneTree_StretchMode_Viewport">Viewport</a>, and if the stretch aspect mode is different from <a class="xref" href="Godot.SceneTree.StretchAspect.html#Godot_SceneTree_StretchAspect_Ignore">Ignore</a>.</p>
+<p>Note: This property is set automatically for the active <a class="xref" href="Godot.SceneTree.html">SceneTree</a> when the project starts based on the configuration of <code>rendering/quality/dynamic_fonts/use_oversampling</code> in <a class="xref" href="Godot.ProjectSettings.html">ProjectSettings</a>. The property can however be overridden at runtime as needed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -724,7 +750,11 @@
   
   <a id="Godot_SceneTree_CallGroup_" data-uid="Godot.SceneTree.CallGroup*"></a>
   <h4 id="Godot_SceneTree_CallGroup_System_String_System_String_System_Object___" data-uid="Godot.SceneTree.CallGroup(System.String,System.String,System.Object[])">CallGroup(String, String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <code>method</code> on each member of the given group. You can pass arguments to <code>method</code> by specifying them at the end of the method call. This method is equivalent of calling <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroupFlags_System_Int32_System_String_System_String_System_Object___">CallGroupFlags(Int32, String, String, Object[])</a> with <a class="xref" href="Godot.SceneTree.GroupCallFlags.html#Godot_SceneTree_GroupCallFlags_Default">Default</a> flag.</p>
+<p>Note: <code>method</code> may only have 5 arguments at most (7 arguments passed to this method in total).</p>
+<p>Note: Due to design limitations, <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroup_System_String_System_String_System_Object___">CallGroup(String, String, Object[])</a> will fail silently if one of the arguments is <code>null</code>.</p>
+<p>Note: <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroup_System_String_System_String_System_Object___">CallGroup(String, String, Object[])</a> will always call methods with an one-frame delay, in a way similar to <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">CallDeferred(String, Object[])</a>. To call methods immediately, use <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroupFlags_System_Int32_System_String_System_String_System_Object___">CallGroupFlags(Int32, String, String, Object[])</a> with the <a class="xref" href="Godot.SceneTree.GroupCallFlags.html#Godot_SceneTree_GroupCallFlags_Realtime">Realtime</a> flag.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -776,7 +806,12 @@
   
   <a id="Godot_SceneTree_CallGroupFlags_" data-uid="Godot.SceneTree.CallGroupFlags*"></a>
   <h4 id="Godot_SceneTree_CallGroupFlags_System_Int32_System_String_System_String_System_Object___" data-uid="Godot.SceneTree.CallGroupFlags(System.Int32,System.String,System.String,System.Object[])">CallGroupFlags(Int32, String, String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <code>method</code> on each member of the given group, respecting the given <a class="xref" href="Godot.SceneTree.GroupCallFlags.html">SceneTree.GroupCallFlags</a>. You can pass arguments to <code>method</code> by specifying them at the end of the method call.</p>
+<p>Note: <code>method</code> may only have 5 arguments at most (8 arguments passed to this method in total).</p>
+<p>Note: Due to design limitations, <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CallGroupFlags_System_Int32_System_String_System_String_System_Object___">CallGroupFlags(Int32, String, String, Object[])</a> will fail silently if one of the arguments is <code>null</code>.</p>
+<p><pre><code># Call the method immediately and in reverse order.
+get_tree().call_group_flags(SceneTree.GROUP_CALL_REALTIME | SceneTree.GROUP_CALL_REVERSE, &quot;bases&quot;, &quot;destroy&quot;)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -833,7 +868,10 @@
   
   <a id="Godot_SceneTree_ChangeScene_" data-uid="Godot.SceneTree.ChangeScene*"></a>
   <h4 id="Godot_SceneTree_ChangeScene_System_String_" data-uid="Godot.SceneTree.ChangeScene(System.String)">ChangeScene(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the running scene to the one at the given <code>path</code>, after loading it into a <a class="xref" href="Godot.PackedScene.html">PackedScene</a> and creating a new instance.</p>
+<p>Returns <code>OK</code> on success, <code>ERR_CANT_OPEN</code> if the <code>path</code> cannot be loaded into a <a class="xref" href="Godot.PackedScene.html">PackedScene</a>, or <code>ERR_CANT_CREATE</code> if that scene cannot be instantiated.</p>
+<p>Note: The scene change is deferred, which means that the new scene node is added on the next idle frame. You won&apos;t be able to access it immediately after the <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_ChangeScene_System_String_">ChangeScene(String)</a> call.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -875,7 +913,11 @@
   
   <a id="Godot_SceneTree_ChangeSceneTo_" data-uid="Godot.SceneTree.ChangeSceneTo*"></a>
   <h4 id="Godot_SceneTree_ChangeSceneTo_Godot_PackedScene_" data-uid="Godot.SceneTree.ChangeSceneTo(Godot.PackedScene)">ChangeSceneTo(PackedScene)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the running scene to a new instance of the given <a class="xref" href="Godot.PackedScene.html">PackedScene</a>.</p>
+<p>Returns <code>OK</code> on success or <code>ERR_CANT_CREATE</code> if the scene cannot be instantiated.</p>
+<p>Note: The scene change is deferred, which means that the new scene node is added on the next idle frame. You won&apos;t be able to access it immediately after the <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_ChangeSceneTo_Godot_PackedScene_">ChangeSceneTo(PackedScene)</a> call.</p>
+<p>Note: Passing a value of <code>null</code> into the method will unload the current scene without loading a new one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -917,7 +959,14 @@
   
   <a id="Godot_SceneTree_CreateTimer_" data-uid="Godot.SceneTree.CreateTimer*"></a>
   <h4 id="Godot_SceneTree_CreateTimer_System_Single_System_Boolean_" data-uid="Godot.SceneTree.CreateTimer(System.Single,System.Boolean)">CreateTimer(Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.SceneTreeTimer.html">SceneTreeTimer</a> which will <code>SceneTreeTimer.timeout</code> after the given time in seconds elapsed in this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>. If <code>pause_mode_process</code> is set to <code>false</code>, pausing the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> will also pause the timer.</p>
+<p>Commonly used to create a one-shot delay timer as in the following example:</p>
+<p><pre><code>func some_function():
+    print(&quot;start&quot;)
+    yield(get_tree().create_timer(1.0), &quot;timeout&quot;)
+    print(&quot;end&quot;)</code></pre></p>
+<p>The timer will be automatically freed after its time elapses.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -964,7 +1013,8 @@
   
   <a id="Godot_SceneTree_CreateTween_" data-uid="Godot.SceneTree.CreateTween*"></a>
   <h4 id="Godot_SceneTree_CreateTween" data-uid="Godot.SceneTree.CreateTween">CreateTween()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates and returns a new <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1039,7 +1089,8 @@
   
   <a id="Godot_SceneTree_GetFrame_" data-uid="Godot.SceneTree.GetFrame*"></a>
   <h4 id="Godot_SceneTree_GetFrame" data-uid="Godot.SceneTree.GetFrame">GetFrame()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current frame number, i.e. the total frame count since the application started.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1089,7 +1140,8 @@
   
   <a id="Godot_SceneTree_GetNetworkConnectedPeers_" data-uid="Godot.SceneTree.GetNetworkConnectedPeers*"></a>
   <h4 id="Godot_SceneTree_GetNetworkConnectedPeers" data-uid="Godot.SceneTree.GetNetworkConnectedPeers">GetNetworkConnectedPeers()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the peer IDs of all connected peers of this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1139,7 +1191,8 @@
   
   <a id="Godot_SceneTree_GetNetworkUniqueId_" data-uid="Godot.SceneTree.GetNetworkUniqueId*"></a>
   <h4 id="Godot_SceneTree_GetNetworkUniqueId" data-uid="Godot.SceneTree.GetNetworkUniqueId">GetNetworkUniqueId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the unique peer ID of this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1164,7 +1217,8 @@
   
   <a id="Godot_SceneTree_GetNodeCount_" data-uid="Godot.SceneTree.GetNodeCount*"></a>
   <h4 id="Godot_SceneTree_GetNodeCount" data-uid="Godot.SceneTree.GetNodeCount">GetNodeCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of nodes in this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1189,7 +1243,8 @@
   
   <a id="Godot_SceneTree_GetNodesInGroup_" data-uid="Godot.SceneTree.GetNodesInGroup*"></a>
   <h4 id="Godot_SceneTree_GetNodesInGroup_System_String_" data-uid="Godot.SceneTree.GetNodesInGroup(System.String)">GetNodesInGroup(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all nodes assigned to the given group.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1231,7 +1286,8 @@
   
   <a id="Godot_SceneTree_GetProcessedTweens_" data-uid="Godot.SceneTree.GetProcessedTweens*"></a>
   <h4 id="Godot_SceneTree_GetProcessedTweens" data-uid="Godot.SceneTree.GetProcessedTweens">GetProcessedTweens()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of currently existing <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>s in the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> (both running and paused).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1281,7 +1337,8 @@
   
   <a id="Godot_SceneTree_GetRpcSenderId_" data-uid="Godot.SceneTree.GetRpcSenderId*"></a>
   <h4 id="Godot_SceneTree_GetRpcSenderId" data-uid="Godot.SceneTree.GetRpcSenderId">GetRpcSenderId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the sender&apos;s peer ID for the most recently received RPC call.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1306,7 +1363,8 @@
   
   <a id="Godot_SceneTree_HasGroup_" data-uid="Godot.SceneTree.HasGroup*"></a>
   <h4 id="Godot_SceneTree_HasGroup_System_String_" data-uid="Godot.SceneTree.HasGroup(System.String)">HasGroup(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given group exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1348,7 +1406,8 @@
   
   <a id="Godot_SceneTree_HasNetworkPeer_" data-uid="Godot.SceneTree.HasNetworkPeer*"></a>
   <h4 id="Godot_SceneTree_HasNetworkPeer" data-uid="Godot.SceneTree.HasNetworkPeer">HasNetworkPeer()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if there is a <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a> set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1448,7 +1507,8 @@
   
   <a id="Godot_SceneTree_IsInputHandled_" data-uid="Godot.SceneTree.IsInputHandled*"></a>
   <h4 id="Godot_SceneTree_IsInputHandled" data-uid="Godot.SceneTree.IsInputHandled">IsInputHandled()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the most recent <a class="xref" href="Godot.InputEvent.html">InputEvent</a> was marked as handled with <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_SetInputAsHandled">SetInputAsHandled()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1498,7 +1558,8 @@
   
   <a id="Godot_SceneTree_IsNetworkServer_" data-uid="Godot.SceneTree.IsNetworkServer*"></a>
   <h4 id="Godot_SceneTree_IsNetworkServer" data-uid="Godot.SceneTree.IsNetworkServer">IsNetworkServer()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this <a class="xref" href="Godot.SceneTree.html">SceneTree</a>&apos;s <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a> is in server mode (listening for connections).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1648,7 +1709,8 @@
   
   <a id="Godot_SceneTree_NotifyGroup_" data-uid="Godot.SceneTree.NotifyGroup*"></a>
   <h4 id="Godot_SceneTree_NotifyGroup_System_String_System_Int32_" data-uid="Godot.SceneTree.NotifyGroup(System.String,System.Int32)">NotifyGroup(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends the given notification to all members of the <code>group</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1680,7 +1742,8 @@
   
   <a id="Godot_SceneTree_NotifyGroupFlags_" data-uid="Godot.SceneTree.NotifyGroupFlags*"></a>
   <h4 id="Godot_SceneTree_NotifyGroupFlags_System_UInt32_System_String_System_Int32_" data-uid="Godot.SceneTree.NotifyGroupFlags(System.UInt32,System.String,System.Int32)">NotifyGroupFlags(UInt32, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends the given notification to all members of the <code>group</code>, respecting the given <a class="xref" href="Godot.SceneTree.GroupCallFlags.html">SceneTree.GroupCallFlags</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1717,7 +1780,8 @@
   
   <a id="Godot_SceneTree_QueueDelete_" data-uid="Godot.SceneTree.QueueDelete*"></a>
   <h4 id="Godot_SceneTree_QueueDelete_Godot_Object_" data-uid="Godot.SceneTree.QueueDelete(Godot.Object)">QueueDelete(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Queues the given object for deletion, delaying the call to <a class="xref" href="Godot.Object.html#Godot_Object_Free">Free()</a> to after the current frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1744,7 +1808,9 @@
   
   <a id="Godot_SceneTree_Quit_" data-uid="Godot.SceneTree.Quit*"></a>
   <h4 id="Godot_SceneTree_Quit_System_Int32_" data-uid="Godot.SceneTree.Quit(System.Int32)">Quit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Quits the application at the end of the current iteration. A process <code>exit_code</code> can optionally be passed as an argument. If this argument is <code>0</code> or greater, it will override the <a class="xref" href="Godot.OS.html#Godot_OS_ExitCode">ExitCode</a> defined before quitting the application.</p>
+<p>Note: On iOS this method doesn&apos;t work. Instead, as recommended by the iOS Human Interface Guidelines, the user is expected to close apps via the Home button.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1771,7 +1837,9 @@
   
   <a id="Godot_SceneTree_ReloadCurrentScene_" data-uid="Godot.SceneTree.ReloadCurrentScene*"></a>
   <h4 id="Godot_SceneTree_ReloadCurrentScene" data-uid="Godot.SceneTree.ReloadCurrentScene">ReloadCurrentScene()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reloads the currently active scene.</p>
+<p>Returns <code>OK</code> on success, <code>ERR_UNCONFIGURED</code> if no <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CurrentScene">CurrentScene</a> was defined yet, <code>ERR_CANT_OPEN</code> if <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CurrentScene">CurrentScene</a> cannot be loaded into a <a class="xref" href="Godot.PackedScene.html">PackedScene</a>, or <code>ERR_CANT_CREATE</code> if the scene cannot be instantiated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1931,7 +1999,8 @@
   
   <a id="Godot_SceneTree_SetGroup_" data-uid="Godot.SceneTree.SetGroup*"></a>
   <h4 id="Godot_SceneTree_SetGroup_System_String_System_String_System_Object_" data-uid="Godot.SceneTree.SetGroup(System.String,System.String,System.Object)">SetGroup(String, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the given <code>property</code> to <code>value</code> on all members of the given group.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1968,7 +2037,8 @@
   
   <a id="Godot_SceneTree_SetGroupFlags_" data-uid="Godot.SceneTree.SetGroupFlags*"></a>
   <h4 id="Godot_SceneTree_SetGroupFlags_System_UInt32_System_String_System_String_System_Object_" data-uid="Godot.SceneTree.SetGroupFlags(System.UInt32,System.String,System.String,System.Object)">SetGroupFlags(UInt32, String, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the given <code>property</code> to <code>value</code> on all members of the given group, respecting the given <a class="xref" href="Godot.SceneTree.GroupCallFlags.html">SceneTree.GroupCallFlags</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2010,7 +2080,8 @@
   
   <a id="Godot_SceneTree_SetInputAsHandled_" data-uid="Godot.SceneTree.SetInputAsHandled*"></a>
   <h4 id="Godot_SceneTree_SetInputAsHandled" data-uid="Godot.SceneTree.SetInputAsHandled">SetInputAsHandled()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Marks the most recent <a class="xref" href="Godot.InputEvent.html">InputEvent</a> as handled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2209,7 +2280,8 @@
   
   <a id="Godot_SceneTree_SetScreenStretch_" data-uid="Godot.SceneTree.SetScreenStretch*"></a>
   <h4 id="Godot_SceneTree_SetScreenStretch_Godot_SceneTree_StretchMode_Godot_SceneTree_StretchAspect_Godot_Vector2_System_Single_" data-uid="Godot.SceneTree.SetScreenStretch(Godot.SceneTree.StretchMode,Godot.SceneTree.StretchAspect,Godot.Vector2,System.Single)">SetScreenStretch(SceneTree.StretchMode, SceneTree.StretchAspect, Vector2, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Configures screen stretching to the given <a class="xref" href="Godot.SceneTree.StretchMode.html">SceneTree.StretchMode</a>, <a class="xref" href="Godot.SceneTree.StretchAspect.html">SceneTree.StretchAspect</a>, minimum size and <code>scale</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

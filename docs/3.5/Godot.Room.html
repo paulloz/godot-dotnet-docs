@@ -83,7 +83,12 @@
   
   <h1 id="Godot_Room" data-uid="Godot.Room" class="text-break">Class Room
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Godot.Portal.html">Portal</a> culling system requires levels to be built using objects grouped together by location in areas called <a class="xref" href="Godot.Room.html">Room</a>s. In many cases these will correspond to actual rooms in buildings, but not necessarily (a canyon area may be treated as a room).</p>
+<p>Any <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> that is a child or grandchild of a <a class="xref" href="Godot.Room.html">Room</a> will be assigned to that room, if the <code>portal_mode</code> of that <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> is set to <code>STATIC</code> (does not move) or <code>DYNAMIC</code> (moves only within the room).</p>
+<p>Internally the room boundary must form a convex hull, and by default this is determined automatically by the geometry of the objects you place within the room.</p>
+<p>You can alternatively precisely specify a manual bound. If you place a <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> with a name prefixed by <code>Bound_</code>, it will turn off the bound generation from geometry, and instead use the vertices of this MeshInstance to directly calculate a convex hull during the conversion stage (see <a class="xref" href="Godot.RoomManager.html">RoomManager</a>).</p>
+<p>In order to see from one room into an adjacent room, <a class="xref" href="Godot.Portal.html">Portal</a>s must be placed over non-occluded openings between rooms. These will often be placed over doors and windows.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +969,9 @@
   
   <a id="Godot_Room_Points_" data-uid="Godot.Room.Points*"></a>
   <h4 id="Godot_Room_Points" data-uid="Godot.Room.Points">Points</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>points</code> are set, the <a class="xref" href="Godot.Room.html">Room</a> bounding convex hull will be built from these points. If no points are set, the room bound will either be derived from a manual bound (<a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> with name prefix <code>Bound_</code>), or from the geometry within the room.</p>
+<p>Note that you can use the <code>Generate Points</code> editor button to get started. This will use either the geometry or manual bound to generate the room hull, and save the resulting points, allowing you to edit them to further refine the bound.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +996,8 @@
   
   <a id="Godot_Room_RoomSimplify_" data-uid="Godot.Room.RoomSimplify*"></a>
   <h4 id="Godot_Room_RoomSimplify" data-uid="Godot.Room.RoomSimplify">RoomSimplify</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <code>simplify</code> value determines to what degree room hulls (bounds) are simplified, by removing similar planes. A value of 0 gives no simplification, 1 gives maximum simplification.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1022,8 @@
   
   <a id="Godot_Room_UseDefaultSimplify_" data-uid="Godot.Room.UseDefaultSimplify*"></a>
   <h4 id="Godot_Room_UseDefaultSimplify" data-uid="Godot.Room.UseDefaultSimplify">UseDefaultSimplify</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The room hull simplification can either use the default value set in the <a class="xref" href="Godot.RoomManager.html">RoomManager</a>, or override this and use the per room setting.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1116,7 +1125,8 @@
   
   <a id="Godot_Room_SetPoint_" data-uid="Godot.Room.SetPoint*"></a>
   <h4 id="Godot_Room_SetPoint_System_Int32_Godot_Vector3_" data-uid="Godot.Room.SetPoint(System.Int32,Godot.Vector3)">SetPoint(Int32, Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets individual points. Primarily for use by the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

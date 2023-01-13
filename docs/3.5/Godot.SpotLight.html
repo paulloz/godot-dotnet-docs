@@ -83,7 +83,9 @@
   
   <h1 id="Godot_SpotLight" data-uid="Godot.SpotLight" class="text-break">Class SpotLight
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A Spotlight is a type of <a class="xref" href="Godot.Light.html">Light</a> node that emits lights in a specific direction, in the shape of a cone. The light is attenuated through the distance. This attenuation can be configured by changing the energy, radius and attenuation parameters of <a class="xref" href="Godot.Light.html">Light</a>.</p>
+<p>Note: By default, only 32 SpotLights may affect a single mesh resource at once. Consider splitting your level into several meshes to decrease the likelihood that more than 32 lights will affect the same mesh resource. Splitting the level mesh will also improve frustum culling effectiveness, leading to greater performance. If you need to use more lights per mesh, you can increase  at the cost of shader compilation times.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1129,7 +1131,8 @@
   
   <a id="Godot_SpotLight_SpotAngle_" data-uid="Godot.SpotLight.SpotAngle*"></a>
   <h4 id="Godot_SpotLight_SpotAngle" data-uid="Godot.SpotLight.SpotAngle">SpotAngle</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The spotlight&apos;s angle in degrees.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1154,7 +1157,8 @@
   
   <a id="Godot_SpotLight_SpotAngleAttenuation_" data-uid="Godot.SpotLight.SpotAngleAttenuation*"></a>
   <h4 id="Godot_SpotLight_SpotAngleAttenuation" data-uid="Godot.SpotLight.SpotAngleAttenuation">SpotAngleAttenuation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The spotlight&apos;s angular attenuation curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1179,7 +1183,8 @@
   
   <a id="Godot_SpotLight_SpotAttenuation_" data-uid="Godot.SpotLight.SpotAttenuation*"></a>
   <h4 id="Godot_SpotLight_SpotAttenuation" data-uid="Godot.SpotLight.SpotAttenuation">SpotAttenuation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The spotlight&apos;s light energy attenuation curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1204,7 +1209,8 @@
   
   <a id="Godot_SpotLight_SpotRange_" data-uid="Godot.SpotLight.SpotRange*"></a>
   <h4 id="Godot_SpotLight_SpotRange" data-uid="Godot.SpotLight.SpotRange">SpotRange</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximal range that can be reached by the spotlight. Note that the effectively lit area may appear to be smaller depending on the <a class="xref" href="Godot.SpotLight.html#Godot_SpotLight_SpotAttenuation">SpotAttenuation</a> in use. No matter the <a class="xref" href="Godot.SpotLight.html#Godot_SpotLight_SpotAttenuation">SpotAttenuation</a> in use, the light will never reach anything outside this range.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

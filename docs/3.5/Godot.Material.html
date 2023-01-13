@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Material" data-uid="Godot.Material" class="text-break">Class Material
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Material is a base <a class="xref" href="Godot.Resource.html">Resource</a> used for coloring and shading geometry. All materials inherit from it and almost all <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> derived nodes carry a Material. A few flags and parameters are shared between all material types and are configured here.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -337,7 +338,8 @@
   
   
   <h4 id="Godot_Material_RenderPriorityMax" data-uid="Godot.Material.RenderPriorityMax">RenderPriorityMax</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum value for the <a class="xref" href="Godot.Material.html#Godot_Material_RenderPriority">RenderPriority</a> parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -361,7 +363,8 @@
   
   
   <h4 id="Godot_Material_RenderPriorityMin" data-uid="Godot.Material.RenderPriorityMin">RenderPriorityMin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Minimum value for the <a class="xref" href="Godot.Material.html#Godot_Material_RenderPriority">RenderPriority</a> parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -388,7 +391,9 @@
   
   <a id="Godot_Material_NextPass_" data-uid="Godot.Material.NextPass*"></a>
   <h4 id="Godot_Material_NextPass" data-uid="Godot.Material.NextPass">NextPass</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Material.html">Material</a> to be used for the next pass. This renders the object again using a different material.</p>
+<p>Note: This only applies to <a class="xref" href="Godot.SpatialMaterial.html">SpatialMaterial</a>s and <a class="xref" href="Godot.ShaderMaterial.html">ShaderMaterial</a>s with type &quot;Spatial&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -413,7 +418,9 @@
   
   <a id="Godot_Material_RenderPriority_" data-uid="Godot.Material.RenderPriority*"></a>
   <h4 id="Godot_Material_RenderPriority" data-uid="Godot.Material.RenderPriority">RenderPriority</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the render priority for transparent objects in 3D scenes. Higher priority objects will be sorted in front of lower priority objects.</p>
+<p>Note: This only applies to sorting of transparent objects. This will not impact how transparent objects are sorted relative to opaque objects. This is because opaque objects are not sorted, while transparent objects are sorted from back to front (subject to priority).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,8 @@
   
   <h1 id="Godot_AudioStreamGeneratorPlayback" data-uid="Godot.AudioStreamGeneratorPlayback" class="text-break">Class AudioStreamGeneratorPlayback
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class is meant to be used with <a class="xref" href="Godot.AudioStreamGenerator.html">AudioStreamGenerator</a> to play back the generated audio in real-time.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -287,7 +288,8 @@
   
   <a id="Godot_AudioStreamGeneratorPlayback_CanPushBuffer_" data-uid="Godot.AudioStreamGeneratorPlayback.CanPushBuffer*"></a>
   <h4 id="Godot_AudioStreamGeneratorPlayback_CanPushBuffer_System_Int32_" data-uid="Godot.AudioStreamGeneratorPlayback.CanPushBuffer(System.Int32)">CanPushBuffer(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a buffer of the size <code>amount</code> can be pushed to the audio sample data buffer without overflowing it, <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -329,7 +331,8 @@
   
   <a id="Godot_AudioStreamGeneratorPlayback_ClearBuffer_" data-uid="Godot.AudioStreamGeneratorPlayback.ClearBuffer*"></a>
   <h4 id="Godot_AudioStreamGeneratorPlayback_ClearBuffer" data-uid="Godot.AudioStreamGeneratorPlayback.ClearBuffer">ClearBuffer()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the audio sample data buffer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -339,7 +342,8 @@
   
   <a id="Godot_AudioStreamGeneratorPlayback_GetFramesAvailable_" data-uid="Godot.AudioStreamGeneratorPlayback.GetFramesAvailable*"></a>
   <h4 id="Godot_AudioStreamGeneratorPlayback_GetFramesAvailable" data-uid="Godot.AudioStreamGeneratorPlayback.GetFramesAvailable">GetFramesAvailable()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of audio data frames left to play. If this returned number reaches <code>0</code>, the audio will stop playing until frames are added again. Therefore, make sure your script can always generate and push new audio frames fast enough to avoid audio cracking.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -389,7 +393,8 @@
   
   <a id="Godot_AudioStreamGeneratorPlayback_PushBuffer_" data-uid="Godot.AudioStreamGeneratorPlayback.PushBuffer*"></a>
   <h4 id="Godot_AudioStreamGeneratorPlayback_PushBuffer_Godot_Vector2___" data-uid="Godot.AudioStreamGeneratorPlayback.PushBuffer(Godot.Vector2[])">PushBuffer(Vector2[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pushes several audio data frames to the buffer. This is usually more efficient than <a class="xref" href="Godot.AudioStreamGeneratorPlayback.html#Godot_AudioStreamGeneratorPlayback_PushFrame_Godot_Vector2_">PushFrame(Vector2)</a> in C# and compiled languages via GDNative, but <a class="xref" href="Godot.AudioStreamGeneratorPlayback.html#Godot_AudioStreamGeneratorPlayback_PushBuffer_Godot_Vector2___">PushBuffer(Vector2[])</a> may be less efficient in GDScript.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -431,7 +436,8 @@
   
   <a id="Godot_AudioStreamGeneratorPlayback_PushFrame_" data-uid="Godot.AudioStreamGeneratorPlayback.PushFrame*"></a>
   <h4 id="Godot_AudioStreamGeneratorPlayback_PushFrame_Godot_Vector2_" data-uid="Godot.AudioStreamGeneratorPlayback.PushFrame(Godot.Vector2)">PushFrame(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pushes a single audio data frame to the buffer. This is usually less efficient than <a class="xref" href="Godot.AudioStreamGeneratorPlayback.html#Godot_AudioStreamGeneratorPlayback_PushBuffer_Godot_Vector2___">PushBuffer(Vector2[])</a> in C# and compiled languages via GDNative, but <a class="xref" href="Godot.AudioStreamGeneratorPlayback.html#Godot_AudioStreamGeneratorPlayback_PushFrame_Godot_Vector2_">PushFrame(Vector2)</a> may be more efficient in GDScript.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

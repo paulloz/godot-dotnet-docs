@@ -83,7 +83,9 @@
   
   <h1 id="Godot_FuncRef" data-uid="Godot.FuncRef" class="text-break">Class FuncRef
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>In GDScript, functions are not first-class objects. This means it is impossible to store them directly as variables, return them from another function, or pass them as arguments.</p>
+<p>However, by creating a <a class="xref" href="Godot.FuncRef.html">FuncRef</a> using the <code>@GDScript.funcref</code> function, a reference to a function in a given object can be created, passed around and called.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +299,8 @@
   
   <a id="Godot_FuncRef_Function_" data-uid="Godot.FuncRef.Function*"></a>
   <h4 id="Godot_FuncRef_Function" data-uid="Godot.FuncRef.Function">Function</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the referenced function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -324,7 +327,8 @@
   
   <a id="Godot_FuncRef_CallFunc_" data-uid="Godot.FuncRef.CallFunc*"></a>
   <h4 id="Godot_FuncRef_CallFunc_System_Object___" data-uid="Godot.FuncRef.CallFunc(System.Object[])">CallFunc(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls the referenced function previously set in <a class="xref" href="Godot.FuncRef.html#Godot_FuncRef_Function">Function</a> or <code>@GDScript.funcref</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -366,7 +370,8 @@
   
   <a id="Godot_FuncRef_CallFuncv_" data-uid="Godot.FuncRef.CallFuncv*"></a>
   <h4 id="Godot_FuncRef_CallFuncv_Godot_Collections_Array_" data-uid="Godot.FuncRef.CallFuncv(Godot.Collections.Array)">CallFuncv(Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls the referenced function previously set in <a class="xref" href="Godot.FuncRef.html#Godot_FuncRef_Function">Function</a> or <code>@GDScript.funcref</code>. Contrarily to <a class="xref" href="Godot.FuncRef.html#Godot_FuncRef_CallFunc_System_Object___">CallFunc(Object[])</a>, this method does not support a variable number of arguments but expects all parameters to be passed via a single <a class="xref" href="Godot.Collections.Array.html">Array</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -433,7 +438,8 @@
   
   <a id="Godot_FuncRef_IsValid_" data-uid="Godot.FuncRef.IsValid*"></a>
   <h4 id="Godot_FuncRef_IsValid" data-uid="Godot.FuncRef.IsValid">IsValid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the object still exists and has the function assigned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,7 +491,8 @@
   
   <a id="Godot_FuncRef_SetInstance_" data-uid="Godot.FuncRef.SetInstance*"></a>
   <h4 id="Godot_FuncRef_SetInstance_Godot_Object_" data-uid="Godot.FuncRef.SetInstance(Godot.Object)">SetInstance(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The object containing the referenced function. This object must be of a type actually inheriting from <a class="xref" href="Godot.Object.html">Object</a>, not a built-in type such as <span class="xref">System.Int32</span>, <a class="xref" href="Godot.Vector2.html">Vector2</a> or <a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

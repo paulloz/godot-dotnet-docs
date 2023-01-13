@@ -101,7 +101,8 @@
   
   
   <h4 id="Godot_PropertyHint_ColorNoAlpha" data-uid="Godot.PropertyHint.ColorNoAlpha">ColorNoAlpha</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a color property should be edited without changing its alpha component, i.e. only R, G and B channels are edited.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +126,8 @@
   
   
   <h4 id="Godot_PropertyHint_Dir" data-uid="Godot.PropertyHint.Dir">Dir</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a string property is a path to a directory. Editing it will show a file dialog for picking the path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +151,9 @@
   
   
   <h4 id="Godot_PropertyHint_Enum" data-uid="Godot.PropertyHint.Enum">Enum</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an integer, float or string property is an enumerated value to pick in a list specified via a hint string.</p>
+<p>The hint string is a comma separated list of names such as <code>&quot;Hello,Something,Else&quot;</code>. For integer and float properties, the first name in the list has value 0, the next 1, and so on. Explicit values can also be specified by appending <code>:integer</code> to the name, e.g. <code>&quot;Zero,One,Three:3,Four,Six:6&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -173,7 +177,9 @@
   
   
   <h4 id="Godot_PropertyHint_EnumSuggestion" data-uid="Godot.PropertyHint.EnumSuggestion">EnumSuggestion</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a string property can be an enumerated value to pick in a list specified via a hint string such as <code>&quot;Hello,Something,Else&quot;</code>.</p>
+<p>Unlike <code>PROPERTY_HINT_ENUM</code> a property with this hint still accepts arbitrary values and can be empty. The list of values serves to suggest possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,7 +203,8 @@
   
   
   <h4 id="Godot_PropertyHint_ExpEasing" data-uid="Godot.PropertyHint.ExpEasing">ExpEasing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a float property should be edited via an exponential easing function. The hint string can include <code>&quot;attenuation&quot;</code> to flip the curve horizontally and/or <code>&quot;inout&quot;</code> to also include in/out easing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -221,7 +228,8 @@
   
   
   <h4 id="Godot_PropertyHint_ExpRange" data-uid="Godot.PropertyHint.ExpRange">ExpRange</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a float property should be within an exponential range specified via the hint string <code>&quot;min,max&quot;</code> or <code>&quot;min,max,step&quot;</code>. The hint string can optionally include <code>&quot;or_greater&quot;</code> and/or <code>&quot;or_lesser&quot;</code> to allow manual input going respectively above the max or below the min values. Example: <code>&quot;0.01,100,0.01,or_greater&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -245,7 +253,8 @@
   
   
   <h4 id="Godot_PropertyHint_File" data-uid="Godot.PropertyHint.File">File</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a string property is a path to a file. Editing it will show a file dialog for picking the path. The hint string can be a set of filters with wildcards like <code>&quot;*.png,*.jpg&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -269,7 +278,8 @@
   
   
   <h4 id="Godot_PropertyHint_Flags" data-uid="Godot.PropertyHint.Flags">Flags</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an integer property is a bitmask with named bit flags. For example, to allow toggling bits 0, 1, 2 and 4, the hint could be something like <code>&quot;Bit0,Bit1,Bit2,,Bit4&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -293,7 +303,8 @@
   
   
   <h4 id="Godot_PropertyHint_GlobalDir" data-uid="Godot.PropertyHint.GlobalDir">GlobalDir</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a string property is an absolute path to a directory outside the project folder. Editing it will show a file dialog for picking the path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -317,7 +328,8 @@
   
   
   <h4 id="Godot_PropertyHint_GlobalFile" data-uid="Godot.PropertyHint.GlobalFile">GlobalFile</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a string property is an absolute path to a file outside the project folder. Editing it will show a file dialog for picking the path. The hint string can be a set of filters with wildcards like <code>&quot;*.png,*.jpg&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -341,7 +353,8 @@
   
   
   <h4 id="Godot_PropertyHint_ImageCompressLossless" data-uid="Godot.PropertyHint.ImageCompressLossless">ImageCompressLossless</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an image is compressed using lossless compression.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -365,7 +378,8 @@
   
   
   <h4 id="Godot_PropertyHint_ImageCompressLossy" data-uid="Godot.PropertyHint.ImageCompressLossy">ImageCompressLossy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an image is compressed using lossy compression.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -389,7 +403,8 @@
   
   
   <h4 id="Godot_PropertyHint_KeyAccel" data-uid="Godot.PropertyHint.KeyAccel">KeyAccel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated hint, unused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -413,7 +428,8 @@
   
   
   <h4 id="Godot_PropertyHint_Layers2dNavigation" data-uid="Godot.PropertyHint.Layers2dNavigation">Layers2dNavigation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an integer property is a bitmask using the optionally named 2D navigation layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -437,7 +453,8 @@
   
   
   <h4 id="Godot_PropertyHint_Layers2dPhysics" data-uid="Godot.PropertyHint.Layers2dPhysics">Layers2dPhysics</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an integer property is a bitmask using the optionally named 2D physics layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -461,7 +478,8 @@
   
   
   <h4 id="Godot_PropertyHint_Layers2dRender" data-uid="Godot.PropertyHint.Layers2dRender">Layers2dRender</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an integer property is a bitmask using the optionally named 2D render layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,7 +503,8 @@
   
   
   <h4 id="Godot_PropertyHint_Layers3dNavigation" data-uid="Godot.PropertyHint.Layers3dNavigation">Layers3dNavigation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an integer property is a bitmask using the optionally named 3D navigation layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -509,7 +528,8 @@
   
   
   <h4 id="Godot_PropertyHint_Layers3dPhysics" data-uid="Godot.PropertyHint.Layers3dPhysics">Layers3dPhysics</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an integer property is a bitmask using the optionally named 3D physics layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -533,7 +553,8 @@
   
   
   <h4 id="Godot_PropertyHint_Layers3dRender" data-uid="Godot.PropertyHint.Layers3dRender">Layers3dRender</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an integer property is a bitmask using the optionally named 3D render layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -557,7 +578,8 @@
   
   
   <h4 id="Godot_PropertyHint_Length" data-uid="Godot.PropertyHint.Length">Length</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated hint, unused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -581,7 +603,8 @@
   
   
   <h4 id="Godot_PropertyHint_MultilineText" data-uid="Godot.PropertyHint.MultilineText">MultilineText</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a string property is text with line breaks. Editing it will show a text input field where line breaks can be typed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -605,7 +628,8 @@
   
   
   <h4 id="Godot_PropertyHint_None" data-uid="Godot.PropertyHint.None">None</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>No hint for the edited property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -629,7 +653,8 @@
   
   
   <h4 id="Godot_PropertyHint_PlaceholderText" data-uid="Godot.PropertyHint.PlaceholderText">PlaceholderText</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a string property should have a placeholder text visible on its input field, whenever the property is empty. The hint string is the placeholder text to use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -653,7 +678,8 @@
   
   
   <h4 id="Godot_PropertyHint_Range" data-uid="Godot.PropertyHint.Range">Range</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that an integer or float property should be within a range specified via the hint string <code>&quot;min,max&quot;</code> or <code>&quot;min,max,step&quot;</code>. The hint string can optionally include <code>&quot;or_greater&quot;</code> and/or <code>&quot;or_lesser&quot;</code> to allow manual input going respectively above the max or below the min values. Example: <code>&quot;-360,360,1,or_greater,or_lesser&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -677,7 +703,8 @@
   
   
   <h4 id="Godot_PropertyHint_ResourceType" data-uid="Godot.PropertyHint.ResourceType">ResourceType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hints that a property is an instance of a <a class="xref" href="Godot.Resource.html">Resource</a>-derived type, optionally specified via the hint string (e.g. <code>&quot;Texture&quot;</code>). Editing it will show a popup menu of valid resource types to instantiate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

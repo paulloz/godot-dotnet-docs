@@ -83,7 +83,8 @@
   
   <h1 id="Godot_ScrollContainer" data-uid="Godot.ScrollContainer" class="text-break">Class ScrollContainer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A ScrollContainer node meant to contain a <a class="xref" href="Godot.Control.html">Control</a> child. ScrollContainers will automatically create a scrollbar child (<a class="xref" href="Godot.HScrollBar.html">HScrollBar</a>, <a class="xref" href="Godot.VScrollBar.html">VScrollBar</a>, or both) when needed and will only draw the Control within the ScrollContainer area. Scrollbars will automatically be drawn at the right (for vertical) or bottom (for horizontal) and will enable dragging to move the viewable Control (and its children) within the ScrollContainer. Scrollbars will also automatically resize the grabber based on the <a class="xref" href="Godot.Control.html#Godot_Control_RectMinSize">RectMinSize</a> of the Control relative to the ScrollContainer. Works great with a <a class="xref" href="Godot.Panel.html">Panel</a> control. You can set <code>EXPAND</code> on the children&apos;s size flags, so they will upscale to the ScrollContainer&apos;s size if it&apos;s larger (scroll is invisible for the chosen dimension).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1474,7 +1475,8 @@
   
   <a id="Godot_ScrollContainer_FollowFocus_" data-uid="Godot.ScrollContainer.FollowFocus*"></a>
   <h4 id="Godot_ScrollContainer_FollowFocus" data-uid="Godot.ScrollContainer.FollowFocus">FollowFocus</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the ScrollContainer will automatically scroll to focused children (including indirect children) to make sure they are fully visible.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1524,7 +1526,8 @@
   
   <a id="Godot_ScrollContainer_ScrollHorizontal_" data-uid="Godot.ScrollContainer.ScrollHorizontal*"></a>
   <h4 id="Godot_ScrollContainer_ScrollHorizontal" data-uid="Godot.ScrollContainer.ScrollHorizontal">ScrollHorizontal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current horizontal scroll value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1549,7 +1552,8 @@
   
   <a id="Godot_ScrollContainer_ScrollHorizontalEnabled_" data-uid="Godot.ScrollContainer.ScrollHorizontalEnabled*"></a>
   <h4 id="Godot_ScrollContainer_ScrollHorizontalEnabled" data-uid="Godot.ScrollContainer.ScrollHorizontalEnabled">ScrollHorizontalEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables horizontal scrolling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1574,7 +1578,8 @@
   
   <a id="Godot_ScrollContainer_ScrollVertical_" data-uid="Godot.ScrollContainer.ScrollVertical*"></a>
   <h4 id="Godot_ScrollContainer_ScrollVertical" data-uid="Godot.ScrollContainer.ScrollVertical">ScrollVertical</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current vertical scroll value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1599,7 +1604,8 @@
   
   <a id="Godot_ScrollContainer_ScrollVerticalEnabled_" data-uid="Godot.ScrollContainer.ScrollVerticalEnabled*"></a>
   <h4 id="Godot_ScrollContainer_ScrollVerticalEnabled" data-uid="Godot.ScrollContainer.ScrollVerticalEnabled">ScrollVerticalEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables vertical scrolling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1626,7 +1632,12 @@
   
   <a id="Godot_ScrollContainer_EnsureControlVisible_" data-uid="Godot.ScrollContainer.EnsureControlVisible*"></a>
   <h4 id="Godot_ScrollContainer_EnsureControlVisible_Godot_Control_" data-uid="Godot.ScrollContainer.EnsureControlVisible(Godot.Control)">EnsureControlVisible(Control)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Ensures the given <code>control</code> is visible (must be a direct or indirect child of the ScrollContainer). Used by <a class="xref" href="Godot.ScrollContainer.html#Godot_ScrollContainer_FollowFocus">FollowFocus</a>.</p>
+<p>Note: This will not work on a node that was just added during the same frame. If you want to scroll to a newly added child, you must wait until the next frame using <code>SceneTree.idle_frame</code>:</p>
+<p><pre><code>add_child(child_node)
+yield(get_tree(), &quot;idle_frame&quot;)
+ensure_control_visible(child_node)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1703,7 +1714,9 @@
   
   <a id="Godot_ScrollContainer_GetHScrollbar_" data-uid="Godot.ScrollContainer.GetHScrollbar*"></a>
   <h4 id="Godot_ScrollContainer_GetHScrollbar" data-uid="Godot.ScrollContainer.GetHScrollbar">GetHScrollbar()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the horizontal scrollbar <a class="xref" href="Godot.HScrollBar.html">HScrollBar</a> of this <a class="xref" href="Godot.ScrollContainer.html">ScrollContainer</a>.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to disable the horizontal scrollbar, use <a class="xref" href="Godot.ScrollContainer.html#Godot_ScrollContainer_ScrollHorizontalEnabled">ScrollHorizontalEnabled</a>. If you want to only hide it instead, use its <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1753,7 +1766,9 @@
   
   <a id="Godot_ScrollContainer_GetVScrollbar_" data-uid="Godot.ScrollContainer.GetVScrollbar*"></a>
   <h4 id="Godot_ScrollContainer_GetVScrollbar" data-uid="Godot.ScrollContainer.GetVScrollbar">GetVScrollbar()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the vertical scrollbar <a class="xref" href="Godot.VScrollBar.html">VScrollBar</a> of this <a class="xref" href="Godot.ScrollContainer.html">ScrollContainer</a>.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to disable the vertical scrollbar, use <a class="xref" href="Godot.ScrollContainer.html#Godot_ScrollContainer_ScrollVerticalEnabled">ScrollVerticalEnabled</a>. If you want to only hide it instead, use its <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,11 @@
   
   <h1 id="Godot_AnimatedTexture" data-uid="Godot.AnimatedTexture" class="text-break">Class AnimatedTexture
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.AnimatedTexture.html">AnimatedTexture</a> is a resource format for frame-based animations, where multiple textures can be chained automatically with a predefined delay for each frame. Unlike <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> or <a class="xref" href="Godot.AnimatedSprite.html">AnimatedSprite</a>, it isn&apos;t a <a class="xref" href="Godot.Node.html">Node</a>, but has the advantage of being usable anywhere a <a class="xref" href="Godot.Texture.html">Texture</a> resource can be used, e.g. in a <a class="xref" href="Godot.TileSet.html">TileSet</a>.</p>
+<p>The playback of the animation is controlled by the <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_Fps">Fps</a> property as well as each frame&apos;s optional delay (see <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_SetFrameDelay_System_Int32_System_Single_">SetFrameDelay(Int32, Single)</a>). The animation loops, i.e. it will restart at frame 0 automatically after playing the last frame.</p>
+<p><a class="xref" href="Godot.AnimatedTexture.html">AnimatedTexture</a> currently requires all frame textures to have the same size, otherwise the bigger ones will be cropped to match the smallest one.</p>
+<p>Note: AnimatedTexture doesn&apos;t support using <a class="xref" href="Godot.AtlasTexture.html">AtlasTexture</a>s. Each frame needs to be a separate <a class="xref" href="Godot.Texture.html">Texture</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -379,7 +383,8 @@
   
   
   <h4 id="Godot_AnimatedTexture_MaxFrames" data-uid="Godot.AnimatedTexture.MaxFrames">MaxFrames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of frames supported by <a class="xref" href="Godot.AnimatedTexture.html">AnimatedTexture</a>. If you need more frames in your animation, use <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> or <a class="xref" href="Godot.AnimatedSprite.html">AnimatedSprite</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -406,7 +411,8 @@
   
   <a id="Godot_AnimatedTexture_CurrentFrame_" data-uid="Godot.AnimatedTexture.CurrentFrame*"></a>
   <h4 id="Godot_AnimatedTexture_CurrentFrame" data-uid="Godot.AnimatedTexture.CurrentFrame">CurrentFrame</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the currently visible frame of the texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -431,7 +437,9 @@
   
   <a id="Godot_AnimatedTexture_Fps_" data-uid="Godot.AnimatedTexture.Fps*"></a>
   <h4 id="Godot_AnimatedTexture_Fps" data-uid="Godot.AnimatedTexture.Fps">Fps</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Animation speed in frames per second. This value defines the default time interval between two frames of the animation, and thus the overall duration of the animation loop based on the <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_Frames">Frames</a> property. A value of 0 means no predefined number of frames per second, the animation will play according to each frame&apos;s frame delay (see <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_SetFrameDelay_System_Int32_System_Single_">SetFrameDelay(Int32, Single)</a>).</p>
+<p>For example, an animation with 8 frames, no frame delay and a <code>fps</code> value of 2 will run for 4 seconds, with each frame lasting 0.5 seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -13256,7 +13264,8 @@
   
   <a id="Godot_AnimatedTexture_Frames_" data-uid="Godot.AnimatedTexture.Frames*"></a>
   <h4 id="Godot_AnimatedTexture_Frames" data-uid="Godot.AnimatedTexture.Frames">Frames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of frames to use in the animation. While you can create the frames independently with <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_SetFrameTexture_System_Int32_Godot_Texture_">SetFrameTexture(Int32, Texture)</a>, you need to set this value for the animation to take new frames into account. The maximum number of frames is <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_MaxFrames">MaxFrames</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -13281,7 +13290,8 @@
   
   <a id="Godot_AnimatedTexture_Oneshot_" data-uid="Godot.AnimatedTexture.Oneshot*"></a>
   <h4 id="Godot_AnimatedTexture_Oneshot" data-uid="Godot.AnimatedTexture.Oneshot">Oneshot</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the animation will only play once and will not loop back to the first frame after reaching the end. Note that reaching the end will not set <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_Pause">Pause</a> to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -13306,7 +13316,8 @@
   
   <a id="Godot_AnimatedTexture_Pause_" data-uid="Godot.AnimatedTexture.Pause*"></a>
   <h4 id="Godot_AnimatedTexture_Pause" data-uid="Godot.AnimatedTexture.Pause">Pause</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the animation will pause where it currently is (i.e. at <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_CurrentFrame">CurrentFrame</a>). The animation will continue from where it was paused when changing this property to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -13383,7 +13394,8 @@
   
   <a id="Godot_AnimatedTexture_GetFrameDelay_" data-uid="Godot.AnimatedTexture.GetFrameDelay*"></a>
   <h4 id="Godot_AnimatedTexture_GetFrameDelay_System_Int32_" data-uid="Godot.AnimatedTexture.GetFrameDelay(System.Int32)">GetFrameDelay(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the given frame&apos;s delay value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -13450,7 +13462,8 @@
   
   <a id="Godot_AnimatedTexture_GetFrameTexture_" data-uid="Godot.AnimatedTexture.GetFrameTexture*"></a>
   <h4 id="Godot_AnimatedTexture_GetFrameTexture_System_Int32_" data-uid="Godot.AnimatedTexture.GetFrameTexture(System.Int32)">GetFrameTexture(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the given frame&apos;s <a class="xref" href="Godot.Texture.html">Texture</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -13596,7 +13609,13 @@
   
   <a id="Godot_AnimatedTexture_SetFrameDelay_" data-uid="Godot.AnimatedTexture.SetFrameDelay*"></a>
   <h4 id="Godot_AnimatedTexture_SetFrameDelay_System_Int32_System_Single_" data-uid="Godot.AnimatedTexture.SetFrameDelay(System.Int32,System.Single)">SetFrameDelay(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an additional delay (in seconds) between this frame and the next one, that will be added to the time interval defined by <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_Fps">Fps</a>. By default, frames have no delay defined. If a delay value is defined, the final time interval between this frame and the next will be <code>1.0 / fps + delay</code>.</p>
+<p>For example, for an animation with 3 frames, 2 FPS and a frame delay on the second frame of 1.2, the resulting playback will be:</p>
+<p><pre><code>Frame 0: 0.5 s (1 / fps)
+Frame 1: 1.7 s (1 / fps + 1.2)
+Frame 2: 0.5 s (1 / fps)
+Total duration: 2.7 s</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -13655,7 +13674,9 @@
   
   <a id="Godot_AnimatedTexture_SetFrameTexture_" data-uid="Godot.AnimatedTexture.SetFrameTexture*"></a>
   <h4 id="Godot_AnimatedTexture_SetFrameTexture_System_Int32_Godot_Texture_" data-uid="Godot.AnimatedTexture.SetFrameTexture(System.Int32,Godot.Texture)">SetFrameTexture(Int32, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns a <a class="xref" href="Godot.Texture.html">Texture</a> to the given frame. Frame IDs start at 0, so the first frame has ID 0, and the last frame of the animation has ID <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_Frames">Frames</a> - 1.</p>
+<p>You can define any number of textures up to <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_MaxFrames">MaxFrames</a>, but keep in mind that only frames from 0 to <a class="xref" href="Godot.AnimatedTexture.html#Godot_AnimatedTexture_Frames">Frames</a> - 1 will be part of the animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

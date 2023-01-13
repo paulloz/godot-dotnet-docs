@@ -83,7 +83,9 @@
   
   <h1 id="Godot_StreamPeerBuffer" data-uid="Godot.StreamPeerBuffer" class="text-break">Class StreamPeerBuffer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Data buffer stream peer that uses a byte array as the stream. This object can be used to handle binary data from network sessions. To handle binary data stored in files, <a class="xref" href="Godot.File.html">File</a> can be used directly.</p>
+<p>A <a class="xref" href="Godot.StreamPeerBuffer.html">StreamPeerBuffer</a> object keeps an internal cursor which is the offset in bytes to the start of the buffer. Get and put operations are performed at the cursor position and will move the cursor accordingly.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -400,7 +402,8 @@
   
   <a id="Godot_StreamPeerBuffer_DataArray_" data-uid="Godot.StreamPeerBuffer.DataArray*"></a>
   <h4 id="Godot_StreamPeerBuffer_DataArray" data-uid="Godot.StreamPeerBuffer.DataArray">DataArray</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The underlying data buffer. Setting this value resets the cursor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -427,7 +430,8 @@
   
   <a id="Godot_StreamPeerBuffer_Clear_" data-uid="Godot.StreamPeerBuffer.Clear*"></a>
   <h4 id="Godot_StreamPeerBuffer_Clear" data-uid="Godot.StreamPeerBuffer.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the <a class="xref" href="Godot.StreamPeerBuffer.html#Godot_StreamPeerBuffer_DataArray">DataArray</a> and resets the cursor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -437,7 +441,8 @@
   
   <a id="Godot_StreamPeerBuffer_Duplicate_" data-uid="Godot.StreamPeerBuffer.Duplicate*"></a>
   <h4 id="Godot_StreamPeerBuffer_Duplicate" data-uid="Godot.StreamPeerBuffer.Duplicate">Duplicate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="Godot.StreamPeerBuffer.html">StreamPeerBuffer</a> with the same <a class="xref" href="Godot.StreamPeerBuffer.html#Godot_StreamPeerBuffer_DataArray">DataArray</a> content.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -487,7 +492,8 @@
   
   <a id="Godot_StreamPeerBuffer_GetPosition_" data-uid="Godot.StreamPeerBuffer.GetPosition*"></a>
   <h4 id="Godot_StreamPeerBuffer_GetPosition" data-uid="Godot.StreamPeerBuffer.GetPosition">GetPosition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current cursor position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -512,7 +518,8 @@
   
   <a id="Godot_StreamPeerBuffer_GetSize_" data-uid="Godot.StreamPeerBuffer.GetSize*"></a>
   <h4 id="Godot_StreamPeerBuffer_GetSize" data-uid="Godot.StreamPeerBuffer.GetSize">GetSize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size of <a class="xref" href="Godot.StreamPeerBuffer.html#Godot_StreamPeerBuffer_DataArray">DataArray</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -537,7 +544,8 @@
   
   <a id="Godot_StreamPeerBuffer_Resize_" data-uid="Godot.StreamPeerBuffer.Resize*"></a>
   <h4 id="Godot_StreamPeerBuffer_Resize_System_Int32_" data-uid="Godot.StreamPeerBuffer.Resize(System.Int32)">Resize(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resizes the <a class="xref" href="Godot.StreamPeerBuffer.html#Godot_StreamPeerBuffer_DataArray">DataArray</a>. This doesn&apos;t update the cursor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -564,7 +572,8 @@
   
   <a id="Godot_StreamPeerBuffer_Seek_" data-uid="Godot.StreamPeerBuffer.Seek*"></a>
   <h4 id="Godot_StreamPeerBuffer_Seek_System_Int32_" data-uid="Godot.StreamPeerBuffer.Seek(System.Int32)">Seek(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the cursor to the specified position. <code>position</code> must be a valid index of <a class="xref" href="Godot.StreamPeerBuffer.html#Godot_StreamPeerBuffer_DataArray">DataArray</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,11 @@
   
   <h1 id="Godot_WebSocketClient" data-uid="Godot.WebSocketClient" class="text-break">Class WebSocketClient
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class implements a WebSocket client compatible with any RFC 6455-compliant WebSocket server.</p>
+<p>This client can be optionally used as a network peer for the <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a>.</p>
+<p>After starting the client (<a class="xref" href="Godot.WebSocketClient.html#Godot_WebSocketClient_ConnectToUrl_System_String_System_String___System_Boolean_System_String___">ConnectToUrl(String, String[], Boolean, String[])</a>), you will need to <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_Poll">Poll()</a> it at regular intervals (e.g. inside <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>).</p>
+<p>You will receive appropriate signals when connecting, disconnecting, or when new data is available.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -381,7 +385,9 @@
   
   <a id="Godot_WebSocketClient_TrustedSslCertificate_" data-uid="Godot.WebSocketClient.TrustedSslCertificate*"></a>
   <h4 id="Godot_WebSocketClient_TrustedSslCertificate" data-uid="Godot.WebSocketClient.TrustedSslCertificate">TrustedSslCertificate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If specified, this <a class="xref" href="Godot.X509Certificate.html">X509Certificate</a> will be the only one accepted when connecting to an SSL host. Any other certificate provided by the server will be regarded as invalid.</p>
+<p>Note: Specifying a custom <code>trusted_ssl_certificate</code> is not supported in HTML5 exports due to browsers restrictions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -406,7 +412,9 @@
   
   <a id="Godot_WebSocketClient_VerifySsl_" data-uid="Godot.WebSocketClient.VerifySsl*"></a>
   <h4 id="Godot_WebSocketClient_VerifySsl" data-uid="Godot.WebSocketClient.VerifySsl">VerifySsl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, SSL certificate verification is enabled.</p>
+<p>Note: You must specify the certificates to be used in the Project Settings for it to work when exported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -433,7 +441,13 @@
   
   <a id="Godot_WebSocketClient_ConnectToUrl_" data-uid="Godot.WebSocketClient.ConnectToUrl*"></a>
   <h4 id="Godot_WebSocketClient_ConnectToUrl_System_String_System_String___System_Boolean_System_String___" data-uid="Godot.WebSocketClient.ConnectToUrl(System.String,System.String[],System.Boolean,System.String[])">ConnectToUrl(String, String[], Boolean, String[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connects to the given URL requesting one of the given <code>protocols</code> as sub-protocol. If the list empty (default), no sub-protocol will be requested.</p>
+<p>If <code>true</code> is passed as <code>gd_mp_api</code>, the client will behave like a network peer for the <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a>, connections to non-Godot servers will not work, and <code>data_received</code> will not be emitted.</p>
+<p>If <code>false</code> is passed instead (default), you must call <a class="xref" href="Godot.PacketPeer.html">PacketPeer</a> functions (<code>put_packet</code>, <code>get_packet</code>, etc.) on the <a class="xref" href="Godot.WebSocketPeer.html">WebSocketPeer</a> returned via <code>get_peer(1)</code> and not on this object directly (e.g. <code>get_peer(1).put_packet(data)</code>).</p>
+<p>You can optionally pass a list of <code>custom_headers</code> to be added to the handshake HTTP request.</p>
+<p>Note: To avoid mixed content warnings or errors in HTML5, you may have to use a <code>url</code> that starts with <code>wss://</code> (secure) instead of <code>ws://</code>. When doing so, make sure to use the fully qualified domain name that matches the one defined in the server&apos;s SSL certificate. Do not connect directly via the IP address for <code>wss://</code> connections, as it won&apos;t match with the SSL certificate.</p>
+<p>Note: Specifying <code>custom_headers</code> is not supported in HTML5 exports due to browsers restrictions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -457,7 +471,8 @@
       <tr>
         <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">protocols</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;string&gt;()</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -467,7 +482,8 @@
       <tr>
         <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">customHeaders</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;string&gt;()</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -490,7 +506,8 @@
   
   <a id="Godot_WebSocketClient_DisconnectFromHost_" data-uid="Godot.WebSocketClient.DisconnectFromHost*"></a>
   <h4 id="Godot_WebSocketClient_DisconnectFromHost_System_Int32_System_String_" data-uid="Godot.WebSocketClient.DisconnectFromHost(System.Int32,System.String)">DisconnectFromHost(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnects this client from the connected host. See <a class="xref" href="Godot.WebSocketPeer.html#Godot_WebSocketPeer_Close_System_Int32_System_String_">Close(Int32, String)</a> for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -522,7 +539,8 @@
   
   <a id="Godot_WebSocketClient_GetConnectedHost_" data-uid="Godot.WebSocketClient.GetConnectedHost*"></a>
   <h4 id="Godot_WebSocketClient_GetConnectedHost" data-uid="Godot.WebSocketClient.GetConnectedHost">GetConnectedHost()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the IP address of the currently connected host.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -547,7 +565,8 @@
   
   <a id="Godot_WebSocketClient_GetConnectedPort_" data-uid="Godot.WebSocketClient.GetConnectedPort*"></a>
   <h4 id="Godot_WebSocketClient_GetConnectedPort" data-uid="Godot.WebSocketClient.GetConnectedPort">GetConnectedPort()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the IP port of the currently connected host.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

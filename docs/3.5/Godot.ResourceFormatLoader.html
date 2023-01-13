@@ -83,7 +83,10 @@
   
   <h1 id="Godot_ResourceFormatLoader" data-uid="Godot.ResourceFormatLoader" class="text-break">Class ResourceFormatLoader
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Godot loads resources in the editor or in exported games using ResourceFormatLoaders. They are queried automatically via the <a class="xref" href="Godot.ResourceLoader.html">ResourceLoader</a> singleton, or when a resource with internal dependencies is loaded. Each file type may load as a different resource type, so multiple ResourceFormatLoaders are registered in the engine.</p>
+<p>Extending this class allows you to define your own loader. Be sure to respect the documented return types and values. You should give it a global class name with <code>class_name</code> for it to be registered. Like built-in ResourceFormatLoaders, it will be called automatically when loading resources of its handled type(s). You may also implement a <a class="xref" href="Godot.ResourceFormatSaver.html">ResourceFormatSaver</a>.</p>
+<p>Note: You can also extend <see cref="!:Godot.EditorImportPlugin"></see> if the resource type you need exists but Godot is unable to load its format. Choosing one way over another depends on if the format is suitable or not for the final exported game. For example, it&apos;s better to import <code>.png</code> textures as <code>.stex</code> (<a class="xref" href="Godot.StreamTexture.html">StreamTexture</a>) first, so they can be loaded with better efficiency on the graphics card.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +300,9 @@
   
   <a id="Godot_ResourceFormatLoader_GetDependencies_" data-uid="Godot.ResourceFormatLoader.GetDependencies*"></a>
   <h4 id="Godot_ResourceFormatLoader_GetDependencies_System_String_System_String_" data-uid="Godot.ResourceFormatLoader.GetDependencies(System.String,System.String)">GetDependencies(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If implemented, gets the dependencies of a given resource. If <code>add_types</code> is <code>true</code>, paths should be appended <code>::TypeName</code>, where <code>TypeName</code> is the class name of the dependency.</p>
+<p>Note: Custom resource types defined by scripts aren&apos;t known by the <a class="xref" href="Godot.ClassDB.html">ClassDB</a>, so you might just return <code>&quot;Resource&quot;</code> for them.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -329,7 +334,8 @@
   
   <a id="Godot_ResourceFormatLoader_GetRecognizedExtensions_" data-uid="Godot.ResourceFormatLoader.GetRecognizedExtensions*"></a>
   <h4 id="Godot_ResourceFormatLoader_GetRecognizedExtensions" data-uid="Godot.ResourceFormatLoader.GetRecognizedExtensions">GetRecognizedExtensions()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the list of extensions for files this loader is able to read.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -354,7 +360,9 @@
   
   <a id="Godot_ResourceFormatLoader_GetResourceType_" data-uid="Godot.ResourceFormatLoader.GetResourceType*"></a>
   <h4 id="Godot_ResourceFormatLoader_GetResourceType_System_String_" data-uid="Godot.ResourceFormatLoader.GetResourceType(System.String)">GetResourceType(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the class name of the resource associated with the given path. If the loader cannot handle it, it should return <code>&quot;&quot;</code>.</p>
+<p>Note: Custom resource types defined by scripts aren&apos;t known by the <a class="xref" href="Godot.ClassDB.html">ClassDB</a>, so you might just return <code>&quot;Resource&quot;</code> for them.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +404,9 @@
   
   <a id="Godot_ResourceFormatLoader_HandlesType_" data-uid="Godot.ResourceFormatLoader.HandlesType*"></a>
   <h4 id="Godot_ResourceFormatLoader_HandlesType_System_String_" data-uid="Godot.ResourceFormatLoader.HandlesType(System.String)">HandlesType(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tells which resource class this loader can load.</p>
+<p>Note: Custom resource types defined by scripts aren&apos;t known by the <a class="xref" href="Godot.ClassDB.html">ClassDB</a>, so you might just handle <code>&quot;Resource&quot;</code> for them.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -438,7 +448,8 @@
   
   <a id="Godot_ResourceFormatLoader_Load_" data-uid="Godot.ResourceFormatLoader.Load*"></a>
   <h4 id="Godot_ResourceFormatLoader_Load_System_String_System_String_" data-uid="Godot.ResourceFormatLoader.Load(System.String,System.String)">Load(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads a resource when the engine finds this loader to be compatible. If the loaded resource is the result of an import, <code>original_path</code> will target the source file. Returns a <a class="xref" href="Godot.Resource.html">Resource</a> object on success, or an <a class="xref" href="Godot.Error.html">Error</a> constant in case of failure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,7 +496,9 @@
   
   <a id="Godot_ResourceFormatLoader_RenameDependencies_" data-uid="Godot.ResourceFormatLoader.RenameDependencies*"></a>
   <h4 id="Godot_ResourceFormatLoader_RenameDependencies_System_String_System_String_" data-uid="Godot.ResourceFormatLoader.RenameDependencies(System.String,System.String)">RenameDependencies(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If implemented, renames dependencies within the given resource and saves it. <code>renames</code> is a dictionary <code>{ String => String }</code> mapping old dependency paths to new paths.</p>
+<p>Returns <code>OK</code> on success, or an <a class="xref" href="Godot.Error.html">Error</a> constant in case of failure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

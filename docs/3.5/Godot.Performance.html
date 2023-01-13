@@ -83,7 +83,10 @@
   
   <h1 id="Godot_Performance" data-uid="Godot.Performance" class="text-break">Class Performance
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class provides access to a number of different monitors related to performance, such as memory usage, draw calls, and FPS. These are the same as the values displayed in the Monitor tab in the editor&apos;s Debugger panel. By using the <a class="xref" href="Godot.Performance.html#Godot_Performance_GetMonitor_Godot_Performance_Monitor_">GetMonitor(Performance.Monitor)</a> method of this class, you can access this data from your code.</p>
+<p>Note: A few of these monitors are only available in debug mode and will always return 0 when used in a release build.</p>
+<p>Note: Many of these monitors are not updated in real-time, so there may be a short delay between changes.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +132,9 @@
   
   <a id="Godot_Performance_GetMonitor_" data-uid="Godot.Performance.GetMonitor*"></a>
   <h4 id="Godot_Performance_GetMonitor_Godot_Performance_Monitor_" data-uid="Godot.Performance.GetMonitor(Godot.Performance.Monitor)">GetMonitor(Performance.Monitor)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of one of the available monitors. You should provide one of the <a class="xref" href="Godot.Performance.Monitor.html">Performance.Monitor</a> constants as the argument, like this:</p>
+<p><pre><code>print(Performance.get_monitor(Performance.TIME_FPS)) # Prints the FPS to the console</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

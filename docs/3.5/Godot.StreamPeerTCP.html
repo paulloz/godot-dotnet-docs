@@ -83,7 +83,8 @@
   
   <h1 id="Godot_StreamPeerTCP" data-uid="Godot.StreamPeerTCP" class="text-break">Class StreamPeerTCP
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>TCP stream peer. This object can be used to connect to TCP servers, or also is returned by a TCP server.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -400,7 +401,8 @@
   
   <a id="Godot_StreamPeerTCP_ConnectToHost_" data-uid="Godot.StreamPeerTCP.ConnectToHost*"></a>
   <h4 id="Godot_StreamPeerTCP_ConnectToHost_System_String_System_Int32_" data-uid="Godot.StreamPeerTCP.ConnectToHost(System.String,System.Int32)">ConnectToHost(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connects to the specified <code>host:port</code> pair. A hostname will be resolved if valid. Returns <code>OK</code> on success or <code>FAILED</code> on failure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -447,7 +449,8 @@
   
   <a id="Godot_StreamPeerTCP_DisconnectFromHost_" data-uid="Godot.StreamPeerTCP.DisconnectFromHost*"></a>
   <h4 id="Godot_StreamPeerTCP_DisconnectFromHost" data-uid="Godot.StreamPeerTCP.DisconnectFromHost">DisconnectFromHost()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnects from host.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -457,7 +460,8 @@
   
   <a id="Godot_StreamPeerTCP_GetConnectedHost_" data-uid="Godot.StreamPeerTCP.GetConnectedHost*"></a>
   <h4 id="Godot_StreamPeerTCP_GetConnectedHost" data-uid="Godot.StreamPeerTCP.GetConnectedHost">GetConnectedHost()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the IP of this peer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -482,7 +486,8 @@
   
   <a id="Godot_StreamPeerTCP_GetConnectedPort_" data-uid="Godot.StreamPeerTCP.GetConnectedPort*"></a>
   <h4 id="Godot_StreamPeerTCP_GetConnectedPort" data-uid="Godot.StreamPeerTCP.GetConnectedPort">GetConnectedPort()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the port of this peer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -507,7 +512,8 @@
   
   <a id="Godot_StreamPeerTCP_GetStatus_" data-uid="Godot.StreamPeerTCP.GetStatus*"></a>
   <h4 id="Godot_StreamPeerTCP_GetStatus" data-uid="Godot.StreamPeerTCP.GetStatus">GetStatus()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the status of the connection, see <a class="xref" href="Godot.StreamPeerTCP.Status.html">StreamPeerTCP.Status</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -532,7 +538,8 @@
   
   <a id="Godot_StreamPeerTCP_IsConnectedToHost_" data-uid="Godot.StreamPeerTCP.IsConnectedToHost*"></a>
   <h4 id="Godot_StreamPeerTCP_IsConnectedToHost" data-uid="Godot.StreamPeerTCP.IsConnectedToHost">IsConnectedToHost()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this peer is currently connected or is connecting to a host, <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -557,7 +564,9 @@
   
   <a id="Godot_StreamPeerTCP_SetNoDelay_" data-uid="Godot.StreamPeerTCP.SetNoDelay*"></a>
   <h4 id="Godot_StreamPeerTCP_SetNoDelay_System_Boolean_" data-uid="Godot.StreamPeerTCP.SetNoDelay(System.Boolean)">SetNoDelay(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>enabled</code> is <code>true</code>, packets will be sent immediately. If <code>enabled</code> is <code>false</code> (the default), packet transfers will be delayed and combined using <a href="https://en.wikipedia.org/wiki/Nagle%27s_algorithm">Nagle&apos;s algorithm</a>.</p>
+<p>Note: It&apos;s recommended to leave this disabled for applications that send large packets or need to transfer a lot of data, as enabling this can decrease the total available bandwidth.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

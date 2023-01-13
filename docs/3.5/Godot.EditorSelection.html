@@ -83,7 +83,9 @@
   
   <h1 id="Godot_EditorSelection" data-uid="Godot.EditorSelection" class="text-break">Class EditorSelection
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This object manages the SceneTree selection in the editor.</p>
+<p>Note: This class shouldn&apos;t be instantiated directly. Instead, access the singleton using <a class="xref" href="Godot.EditorInterface.html#Godot_EditorInterface_GetSelection">GetSelection()</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -287,7 +289,9 @@
   
   <a id="Godot_EditorSelection_AddNode_" data-uid="Godot.EditorSelection.AddNode*"></a>
   <h4 id="Godot_EditorSelection_AddNode_Godot_Node_" data-uid="Godot.EditorSelection.AddNode(Godot.Node)">AddNode(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a node to the selection.</p>
+<p>Note: The newly selected node will not be automatically edited in the inspector. If you want to edit a node, use <a class="xref" href="Godot.EditorInterface.html#Godot_EditorInterface_EditNode_Godot_Node_">EditNode(Node)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -314,7 +318,8 @@
   
   <a id="Godot_EditorSelection_Clear_" data-uid="Godot.EditorSelection.Clear*"></a>
   <h4 id="Godot_EditorSelection_Clear" data-uid="Godot.EditorSelection.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clear the selection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -324,7 +329,8 @@
   
   <a id="Godot_EditorSelection_GetSelectedNodes_" data-uid="Godot.EditorSelection.GetSelectedNodes*"></a>
   <h4 id="Godot_EditorSelection_GetSelectedNodes" data-uid="Godot.EditorSelection.GetSelectedNodes">GetSelectedNodes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the list of selected nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -349,7 +355,8 @@
   
   <a id="Godot_EditorSelection_GetTransformableSelectedNodes_" data-uid="Godot.EditorSelection.GetTransformableSelectedNodes*"></a>
   <h4 id="Godot_EditorSelection_GetTransformableSelectedNodes" data-uid="Godot.EditorSelection.GetTransformableSelectedNodes">GetTransformableSelectedNodes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the list of selected nodes, optimized for transform operations (i.e. moving them, rotating, etc). This list avoids situations where a node is selected and also child/grandchild.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +381,8 @@
   
   <a id="Godot_EditorSelection_RemoveNode_" data-uid="Godot.EditorSelection.RemoveNode*"></a>
   <h4 id="Godot_EditorSelection_RemoveNode_Godot_Node_" data-uid="Godot.EditorSelection.RemoveNode(Godot.Node)">RemoveNode(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a node from the selection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

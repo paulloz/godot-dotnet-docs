@@ -83,7 +83,18 @@
   
   <h1 id="Godot_SpinBox" data-uid="Godot.SpinBox" class="text-break">Class SpinBox
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>SpinBox is a numerical input text field. It allows entering integers and floats.</p>
+<p>Example:</p>
+<p><pre><code>var spin_box = SpinBox.new()
+add_child(spin_box)
+var line_edit = spin_box.get_line_edit()
+line_edit.context_menu_enabled = false
+spin_box.align = LineEdit.ALIGN_RIGHT</code></pre></p>
+<p>The above code will create a <a class="xref" href="Godot.SpinBox.html">SpinBox</a>, disable context menu on it and set the text alignment to right.</p>
+<p>See <a class="xref" href="Godot.Range.html">Range</a> class for more options over the <a class="xref" href="Godot.SpinBox.html">SpinBox</a>.</p>
+<p>Note: <a class="xref" href="Godot.SpinBox.html">SpinBox</a> relies on an underlying <a class="xref" href="Godot.LineEdit.html">LineEdit</a> node. To theme a <a class="xref" href="Godot.SpinBox.html">SpinBox</a>&apos;s background, add theme items for <a class="xref" href="Godot.LineEdit.html">LineEdit</a> and customize them.</p>
+<p>Note: If you want to implement drag and drop for the underlying <a class="xref" href="Godot.LineEdit.html">LineEdit</a>, you can use <a class="xref" href="Godot.Control.html#Godot_Control_SetDragForwarding_Godot_Control_">SetDragForwarding(Control)</a> on the node returned by <a class="xref" href="Godot.SpinBox.html#Godot_SpinBox_GetLineEdit">GetLineEdit()</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1560,7 +1571,8 @@
   
   <a id="Godot_SpinBox_Align_" data-uid="Godot.SpinBox.Align*"></a>
   <h4 id="Godot_SpinBox_Align" data-uid="Godot.SpinBox.Align">Align</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the text alignment of the <a class="xref" href="Godot.SpinBox.html">SpinBox</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1585,7 +1597,8 @@
   
   <a id="Godot_SpinBox_Editable_" data-uid="Godot.SpinBox.Editable*"></a>
   <h4 id="Godot_SpinBox_Editable" data-uid="Godot.SpinBox.Editable">Editable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the <a class="xref" href="Godot.SpinBox.html">SpinBox</a> will be editable. Otherwise, it will be read only.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1610,7 +1623,8 @@
   
   <a id="Godot_SpinBox_Prefix_" data-uid="Godot.SpinBox.Prefix*"></a>
   <h4 id="Godot_SpinBox_Prefix" data-uid="Godot.SpinBox.Prefix">Prefix</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the specified <code>prefix</code> string before the numerical value of the <a class="xref" href="Godot.SpinBox.html">SpinBox</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1635,7 +1649,8 @@
   
   <a id="Godot_SpinBox_Suffix_" data-uid="Godot.SpinBox.Suffix*"></a>
   <h4 id="Godot_SpinBox_Suffix" data-uid="Godot.SpinBox.Suffix">Suffix</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the specified <code>suffix</code> string after the numerical value of the <a class="xref" href="Godot.SpinBox.html">SpinBox</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1662,7 +1677,8 @@
   
   <a id="Godot_SpinBox_Apply_" data-uid="Godot.SpinBox.Apply*"></a>
   <h4 id="Godot_SpinBox_Apply" data-uid="Godot.SpinBox.Apply">Apply()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies the current value of this <a class="xref" href="Godot.SpinBox.html">SpinBox</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1697,7 +1713,9 @@
   
   <a id="Godot_SpinBox_GetLineEdit_" data-uid="Godot.SpinBox.GetLineEdit*"></a>
   <h4 id="Godot_SpinBox_GetLineEdit" data-uid="Godot.SpinBox.GetLineEdit">GetLineEdit()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.LineEdit.html">LineEdit</a> instance from this <a class="xref" href="Godot.SpinBox.html">SpinBox</a>. You can use it to access properties and methods of <a class="xref" href="Godot.LineEdit.html">LineEdit</a>.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

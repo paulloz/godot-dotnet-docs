@@ -83,7 +83,9 @@
   
   <h1 id="Godot_StaticBody2D" data-uid="Godot.StaticBody2D" class="text-break">Class StaticBody2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Static body for 2D physics. A StaticBody2D is a body that is not intended to move. It is ideal for implementing objects in the environment, such as walls or platforms.</p>
+<p>Additionally, a constant linear or angular velocity can be set for the static body, which will affect colliding bodies as if it were moving (for example, a conveyor belt).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1228,7 +1230,9 @@
   
   <a id="Godot_StaticBody2D_Bounce_" data-uid="Godot.StaticBody2D.Bounce*"></a>
   <h4 id="Godot_StaticBody2D_Bounce" data-uid="Godot.StaticBody2D.Bounce">Bounce</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s bounciness. Values range from <code>0</code> (no bounce) to <code>1</code> (full bounciness).</p>
+<p>Deprecated, use <a class="xref" href="Godot.PhysicsMaterial.html#Godot_PhysicsMaterial_Bounce">Bounce</a> instead via <a class="xref" href="Godot.StaticBody2D.html#Godot_StaticBody2D_PhysicsMaterialOverride">PhysicsMaterialOverride</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1253,7 +1257,8 @@
   
   <a id="Godot_StaticBody2D_ConstantAngularVelocity_" data-uid="Godot.StaticBody2D.ConstantAngularVelocity*"></a>
   <h4 id="Godot_StaticBody2D_ConstantAngularVelocity" data-uid="Godot.StaticBody2D.ConstantAngularVelocity">ConstantAngularVelocity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s constant angular velocity. This does not rotate the body, but affects colliding bodies, as if it were rotating.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1278,7 +1283,8 @@
   
   <a id="Godot_StaticBody2D_ConstantLinearVelocity_" data-uid="Godot.StaticBody2D.ConstantLinearVelocity*"></a>
   <h4 id="Godot_StaticBody2D_ConstantLinearVelocity" data-uid="Godot.StaticBody2D.ConstantLinearVelocity">ConstantLinearVelocity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s constant linear velocity. This does not move the body, but affects colliding bodies, as if it were moving.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1303,7 +1309,9 @@
   
   <a id="Godot_StaticBody2D_Friction_" data-uid="Godot.StaticBody2D.Friction*"></a>
   <h4 id="Godot_StaticBody2D_Friction" data-uid="Godot.StaticBody2D.Friction">Friction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s friction. Values range from <code>0</code> (no friction) to <code>1</code> (full friction).</p>
+<p>Deprecated, use <a class="xref" href="Godot.PhysicsMaterial.html#Godot_PhysicsMaterial_Friction">Friction</a> instead via <a class="xref" href="Godot.StaticBody2D.html#Godot_StaticBody2D_PhysicsMaterialOverride">PhysicsMaterialOverride</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1328,7 +1336,9 @@
   
   <a id="Godot_StaticBody2D_PhysicsMaterialOverride_" data-uid="Godot.StaticBody2D.PhysicsMaterialOverride*"></a>
   <h4 id="Godot_StaticBody2D_PhysicsMaterialOverride" data-uid="Godot.StaticBody2D.PhysicsMaterialOverride">PhysicsMaterialOverride</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics material override for the body.</p>
+<p>If a material is assigned to this property, it will be used instead of any other physics material, such as an inherited one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Shader" data-uid="Godot.Shader" class="text-break">Class Shader
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class allows you to define a custom shader program that can be used by a <a class="xref" href="Godot.ShaderMaterial.html">ShaderMaterial</a>. Shaders allow you to write your own custom behavior for rendering objects or updating particle information. For a detailed explanation and usage, please see the tutorials linked below.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -347,7 +348,8 @@
   
   <a id="Godot_Shader_Code_" data-uid="Godot.Shader.Code*"></a>
   <h4 id="Godot_Shader_Code" data-uid="Godot.Shader.Code">Code</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the shader&apos;s code as the user has written it, not the full generated code used internally.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -372,7 +374,9 @@
   
   <a id="Godot_Shader_CustomDefines_" data-uid="Godot.Shader.CustomDefines*"></a>
   <h4 id="Godot_Shader_CustomDefines" data-uid="Godot.Shader.CustomDefines">CustomDefines</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the shader&apos;s custom defines. Custom defines can be used in Godot to add GLSL preprocessor directives (e.g: extensions) required for the shader logic.</p>
+<p>Note: Custom defines are not validated by the Godot shader parser, so care should be taken when using them.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -449,7 +453,9 @@
   
   <a id="Godot_Shader_GetDefaultTextureParam_" data-uid="Godot.Shader.GetDefaultTextureParam*"></a>
   <h4 id="Godot_Shader_GetDefaultTextureParam_System_String_" data-uid="Godot.Shader.GetDefaultTextureParam(System.String)">GetDefaultTextureParam(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the texture that is set as default for the specified parameter.</p>
+<p>Note: <code>param</code> must match the name of the uniform in the code exactly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -491,7 +497,8 @@
   
   <a id="Godot_Shader_GetMode_" data-uid="Godot.Shader.GetMode*"></a>
   <h4 id="Godot_Shader_GetMode" data-uid="Godot.Shader.GetMode">GetMode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the shader mode for the shader, either <a class="xref" href="Godot.Shader.Mode.html#Godot_Shader_Mode_CanvasItem">CanvasItem</a>, <a class="xref" href="Godot.Shader.Mode.html#Godot_Shader_Mode_Spatial">Spatial</a> or <a class="xref" href="Godot.Shader.Mode.html#Godot_Shader_Mode_Particles">Particles</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -516,7 +523,9 @@
   
   <a id="Godot_Shader_HasParam_" data-uid="Godot.Shader.HasParam*"></a>
   <h4 id="Godot_Shader_HasParam_System_String_" data-uid="Godot.Shader.HasParam(System.String)">HasParam(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the shader has this param defined as a uniform in its code.</p>
+<p>Note: <code>param</code> must match the name of the uniform in the code exactly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -612,7 +621,9 @@
   
   <a id="Godot_Shader_SetDefaultTextureParam_" data-uid="Godot.Shader.SetDefaultTextureParam*"></a>
   <h4 id="Godot_Shader_SetDefaultTextureParam_System_String_Godot_Texture_" data-uid="Godot.Shader.SetDefaultTextureParam(System.String,Godot.Texture)">SetDefaultTextureParam(String, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the default texture to be used with a texture uniform. The default is used if a texture is not set in the <a class="xref" href="Godot.ShaderMaterial.html">ShaderMaterial</a>.</p>
+<p>Note: <code>param</code> must match the name of the uniform in the code exactly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,10 @@
   
   <h1 id="Godot_KinematicBody2D" data-uid="Godot.KinematicBody2D" class="text-break">Class KinematicBody2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Kinematic bodies are special types of bodies that are meant to be user-controlled. They are not affected by physics at all; to other types of bodies, such as a character or a rigid body, these are the same as a static body. However, they have two main uses:</p>
+<p>Simulated motion: When these bodies are moved manually, either from code or from an <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> (with <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_PlaybackProcessMode">PlaybackProcessMode</a> set to &quot;physics&quot;), the physics will automatically compute an estimate of their linear and angular velocity. This makes them very useful for moving platforms or other AnimationPlayer-controlled objects (like a door, a bridge that opens, etc).</p>
+<p>Kinematic characters: KinematicBody2D also has an API for moving objects (the <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndCollide_Godot_Vector2_System_Boolean_System_Boolean_System_Boolean_">MoveAndCollide(Vector2, Boolean, Boolean, Boolean)</a> and <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> methods) while performing collision tests. This makes them really useful to implement characters that collide against a world, but don&apos;t require advanced physics.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1228,7 +1231,11 @@
   
   <a id="Godot_KinematicBody2D_Collision__safeMargin_" data-uid="Godot.KinematicBody2D.Collision__safeMargin*"></a>
   <h4 id="Godot_KinematicBody2D_Collision__safeMargin" data-uid="Godot.KinematicBody2D.Collision__safeMargin">Collision__safeMargin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Extra margin used for collision recovery in motion functions (see <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndCollide_Godot_Vector2_System_Boolean_System_Boolean_System_Boolean_">MoveAndCollide(Vector2, Boolean, Boolean, Boolean)</a>, <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>, <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlideWithSnap_Godot_Vector2_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlideWithSnap(Vector2, Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>).</p>
+<p>If the body is at least this close to another body, it will consider them to be colliding and will be pushed away before performing the actual motion.</p>
+<p>A higher value means it&apos;s more flexible for detecting collision, which helps with consistently detecting walls and floors.</p>
+<p>A lower value forces the collision algorithm to use more exact detection, so it can be used in cases that specifically require precision, e.g at very low scale to avoid visible jittering, or for stability with a stack of kinematic bodies.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1253,7 +1260,8 @@
   
   <a id="Godot_KinematicBody2D_Motion__syncToPhysics_" data-uid="Godot.KinematicBody2D.Motion__syncToPhysics*"></a>
   <h4 id="Godot_KinematicBody2D_Motion__syncToPhysics" data-uid="Godot.KinematicBody2D.Motion__syncToPhysics">Motion__syncToPhysics</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the body&apos;s movement will be synchronized to the physics frame. This is useful when animating movement via <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a>, for example on moving platforms. Do not use together with <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> or <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndCollide_Godot_Vector2_System_Boolean_System_Boolean_System_Boolean_">MoveAndCollide(Vector2, Boolean, Boolean, Boolean)</a> functions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1278,7 +1286,8 @@
   
   <a id="Godot_KinematicBody2D_MovingPlatformApplyVelocityOnLeave_" data-uid="Godot.KinematicBody2D.MovingPlatformApplyVelocityOnLeave*"></a>
   <h4 id="Godot_KinematicBody2D_MovingPlatformApplyVelocityOnLeave" data-uid="Godot.KinematicBody2D.MovingPlatformApplyVelocityOnLeave">MovingPlatformApplyVelocityOnLeave</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the behavior to apply when you leave a moving platform. By default, to be physically accurate, when you leave the last platform velocity is applied. See <a class="xref" href="Godot.KinematicBody2D.MovingPlatformApplyVelocityOnLeaveEnum.html">KinematicBody2D.MovingPlatformApplyVelocityOnLeaveEnum</a> constants for available behavior.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1305,7 +1314,8 @@
   
   <a id="Godot_KinematicBody2D_GetFloorAngle_" data-uid="Godot.KinematicBody2D.GetFloorAngle*"></a>
   <h4 id="Godot_KinematicBody2D_GetFloorAngle_System_Nullable_Godot_Vector2__" data-uid="Godot.KinematicBody2D.GetFloorAngle(System.Nullable{Godot.Vector2})">GetFloorAngle(Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the floor&apos;s collision angle at the last collision point according to <code>up_direction</code>, which is <code>Vector2.UP</code> by default. This value is always positive and only valid after calling <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> and when <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_IsOnFloor">IsOnFloor()</a> returns <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1324,7 +1334,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">upDirection</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, -1)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1347,7 +1358,8 @@
   
   <a id="Godot_KinematicBody2D_GetFloorNormal_" data-uid="Godot.KinematicBody2D.GetFloorNormal*"></a>
   <h4 id="Godot_KinematicBody2D_GetFloorNormal" data-uid="Godot.KinematicBody2D.GetFloorNormal">GetFloorNormal()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the surface normal of the floor at the last collision point. Only valid after calling <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> or <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlideWithSnap_Godot_Vector2_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlideWithSnap(Vector2, Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> and when <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_IsOnFloor">IsOnFloor()</a> returns <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1372,7 +1384,8 @@
   
   <a id="Godot_KinematicBody2D_GetFloorVelocity_" data-uid="Godot.KinematicBody2D.GetFloorVelocity*"></a>
   <h4 id="Godot_KinematicBody2D_GetFloorVelocity" data-uid="Godot.KinematicBody2D.GetFloorVelocity">GetFloorVelocity()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the linear velocity of the floor at the last collision point. Only valid after calling <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> or <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlideWithSnap_Godot_Vector2_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlideWithSnap(Vector2, Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> and when <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_IsOnFloor">IsOnFloor()</a> returns <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1397,7 +1410,8 @@
   
   <a id="Godot_KinematicBody2D_GetLastSlideCollision_" data-uid="Godot.KinematicBody2D.GetLastSlideCollision*"></a>
   <h4 id="Godot_KinematicBody2D_GetLastSlideCollision" data-uid="Godot.KinematicBody2D.GetLastSlideCollision">GetLastSlideCollision()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.KinematicCollision2D.html">KinematicCollision2D</a>, which contains information about the latest collision that occurred during the last call to <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1472,7 +1486,12 @@
   
   <a id="Godot_KinematicBody2D_GetSlideCollision_" data-uid="Godot.KinematicBody2D.GetSlideCollision*"></a>
   <h4 id="Godot_KinematicBody2D_GetSlideCollision_System_Int32_" data-uid="Godot.KinematicBody2D.GetSlideCollision(System.Int32)">GetSlideCollision(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.KinematicCollision2D.html">KinematicCollision2D</a>, which contains information about a collision that occurred during the last call to <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> or <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlideWithSnap_Godot_Vector2_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlideWithSnap(Vector2, Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>. Since the body can collide several times in a single call to <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>, you must specify the index of the collision in the range 0 to (<a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_GetSlideCount">GetSlideCount()</a> - 1).</p>
+<p>Example usage:</p>
+<p><pre><code>for i in get_slide_count():
+    var collision = get_slide_collision(i)
+    print(&quot;Collided with: &quot;, collision.collider.name)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1514,7 +1533,8 @@
   
   <a id="Godot_KinematicBody2D_GetSlideCount_" data-uid="Godot.KinematicBody2D.GetSlideCount*"></a>
   <h4 id="Godot_KinematicBody2D_GetSlideCount" data-uid="Godot.KinematicBody2D.GetSlideCount">GetSlideCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of times the body collided and changed direction during the last call to <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> or <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlideWithSnap_Godot_Vector2_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlideWithSnap(Vector2, Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1539,7 +1559,8 @@
   
   <a id="Godot_KinematicBody2D_IsOnCeiling_" data-uid="Godot.KinematicBody2D.IsOnCeiling*"></a>
   <h4 id="Godot_KinematicBody2D_IsOnCeiling" data-uid="Godot.KinematicBody2D.IsOnCeiling">IsOnCeiling()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the body collided with the ceiling on the last call of <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> or <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlideWithSnap_Godot_Vector2_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlideWithSnap(Vector2, Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>. Otherwise, returns <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1564,7 +1585,8 @@
   
   <a id="Godot_KinematicBody2D_IsOnFloor_" data-uid="Godot.KinematicBody2D.IsOnFloor*"></a>
   <h4 id="Godot_KinematicBody2D_IsOnFloor" data-uid="Godot.KinematicBody2D.IsOnFloor">IsOnFloor()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the body collided with the floor on the last call of <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> or <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlideWithSnap_Godot_Vector2_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlideWithSnap(Vector2, Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>. Otherwise, returns <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1589,7 +1611,8 @@
   
   <a id="Godot_KinematicBody2D_IsOnWall_" data-uid="Godot.KinematicBody2D.IsOnWall*"></a>
   <h4 id="Godot_KinematicBody2D_IsOnWall" data-uid="Godot.KinematicBody2D.IsOnWall">IsOnWall()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the body collided with a wall on the last call of <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> or <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlideWithSnap_Godot_Vector2_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlideWithSnap(Vector2, Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>. Otherwise, returns <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1639,7 +1662,9 @@
   
   <a id="Godot_KinematicBody2D_MoveAndCollide_" data-uid="Godot.KinematicBody2D.MoveAndCollide*"></a>
   <h4 id="Godot_KinematicBody2D_MoveAndCollide_Godot_Vector2_System_Boolean_System_Boolean_System_Boolean_" data-uid="Godot.KinematicBody2D.MoveAndCollide(Godot.Vector2,System.Boolean,System.Boolean,System.Boolean)">MoveAndCollide(Vector2, Boolean, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the body along the vector <code>rel_vec</code>. The body will stop if it collides. Returns a <a class="xref" href="Godot.KinematicCollision2D.html">KinematicCollision2D</a>, which contains information about the collision when stopped, or when touching another body along the motion.</p>
+<p>If <code>test_only</code> is <code>true</code>, the body does not move but the would-be collision information is given.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1696,7 +1721,17 @@
   
   <a id="Godot_KinematicBody2D_MoveAndSlide_" data-uid="Godot.KinematicBody2D.MoveAndSlide*"></a>
   <h4 id="Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_" data-uid="Godot.KinematicBody2D.MoveAndSlide(Godot.Vector2,System.Nullable{Godot.Vector2},System.Boolean,System.Int32,System.Single,System.Boolean)">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the body along a vector. If the body collides with another, it will slide along the other body rather than stop immediately. If the other body is a <a class="xref" href="Godot.KinematicBody2D.html">KinematicBody2D</a> or <a class="xref" href="Godot.RigidBody2D.html">RigidBody2D</a>, it will also be affected by the motion of the other body. You can use this to make moving and rotating platforms, or to make nodes push other nodes.</p>
+<p>This method should be used in <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> (or in a method called by <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a>), as it uses the physics step&apos;s <code>delta</code> value automatically in calculations. Otherwise, the simulation will run at an incorrect speed.</p>
+<p><code>linear_velocity</code> is the velocity vector in pixels per second. Unlike in <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndCollide_Godot_Vector2_System_Boolean_System_Boolean_System_Boolean_">MoveAndCollide(Vector2, Boolean, Boolean, Boolean)</a>, you should not multiply it by <code>delta</code> — the physics engine handles applying the velocity.</p>
+<p><code>up_direction</code> is the up direction, used to determine what is a wall and what is a floor or a ceiling. If set to the default value of <code>Vector2(0, 0)</code>, everything is considered a wall. This is useful for topdown games.</p>
+<p>If <code>stop_on_slope</code> is <code>true</code>, body will not slide on slopes when you include gravity in <code>linear_velocity</code> and the body is standing still.</p>
+<p>If the body collides, it will change direction a maximum of <code>max_slides</code> times before it stops.</p>
+<p><code>floor_max_angle</code> is the maximum angle (in radians) where a slope is still considered a floor (or a ceiling), rather than a wall. The default value equals 45 degrees.</p>
+<p>If <code>infinite_inertia</code> is <code>true</code>, body will be able to push <a class="xref" href="Godot.RigidBody2D.html">RigidBody2D</a> nodes, but it won&apos;t also detect any collisions with them. If <code>false</code>, it will interact with <a class="xref" href="Godot.RigidBody2D.html">RigidBody2D</a> nodes like with <a class="xref" href="Godot.StaticBody2D.html">StaticBody2D</a>.</p>
+<p>Returns the <code>linear_velocity</code> vector, rotated and/or scaled if a slide collision occurred. To get detailed information about collisions that occurred, use <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_GetSlideCollision_System_Int32_">GetSlideCollision(Int32)</a>.</p>
+<p>When the body touches a moving platform, the platform&apos;s velocity is automatically added to the body motion. If a collision occurs due to the platform&apos;s motion, it will always be first in the slide collisions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1720,7 +1755,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">upDirection</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -1763,7 +1799,9 @@
   
   <a id="Godot_KinematicBody2D_MoveAndSlideWithSnap_" data-uid="Godot.KinematicBody2D.MoveAndSlideWithSnap*"></a>
   <h4 id="Godot_KinematicBody2D_MoveAndSlideWithSnap_Godot_Vector2_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_" data-uid="Godot.KinematicBody2D.MoveAndSlideWithSnap(Godot.Vector2,Godot.Vector2,System.Nullable{Godot.Vector2},System.Boolean,System.Int32,System.Single,System.Boolean)">MoveAndSlideWithSnap(Vector2, Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the body while keeping it attached to slopes. Similar to <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a>.</p>
+<p>As long as the <code>snap</code> vector is in contact with the ground, the body will remain attached to the surface. This means you must disable snap in order to jump, for example. You can do this by setting <code>snap</code> to <code>(0, 0)</code> or by using <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndSlide_Godot_Vector2_System_Nullable_Godot_Vector2__System_Boolean_System_Int32_System_Single_System_Boolean_">MoveAndSlide(Vector2, Nullable&lt;Vector2&gt;, Boolean, Int32, Single, Boolean)</a> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1792,7 +1830,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">upDirection</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -1916,7 +1955,9 @@
   
   <a id="Godot_KinematicBody2D_TestMove_" data-uid="Godot.KinematicBody2D.TestMove*"></a>
   <h4 id="Godot_KinematicBody2D_TestMove_Godot_Transform2D_Godot_Vector2_System_Boolean_" data-uid="Godot.KinematicBody2D.TestMove(Godot.Transform2D,Godot.Vector2,System.Boolean)">TestMove(Transform2D, Vector2, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks for collisions without moving the body. Virtually sets the node&apos;s position, scale and rotation to that of the given <a class="xref" href="Godot.Transform2D.html">Transform2D</a>, then tries to move the body along the vector <code>rel_vec</code>. Returns <code>true</code> if a collision would stop the body from moving along the whole path.</p>
+<p>Use <a class="xref" href="Godot.KinematicBody2D.html#Godot_KinematicBody2D_MoveAndCollide_Godot_Vector2_System_Boolean_System_Boolean_System_Boolean_">MoveAndCollide(Vector2, Boolean, Boolean, Boolean)</a> instead for detecting collision with touching bodies.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

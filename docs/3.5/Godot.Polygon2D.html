@@ -83,7 +83,9 @@
   
   <h1 id="Godot_Polygon2D" data-uid="Godot.Polygon2D" class="text-break">Class Polygon2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A Polygon2D is defined by a set of points. Each point is connected to the next, with the final point being connected to the first, resulting in a closed polygon. Polygon2Ds can be filled with color (solid or gradient) or filled with a given texture.</p>
+<p>Note: By default, Godot can only draw up to 4,096 polygon points at a time. To increase this limit, open the Project Settings and increase  and .</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1114,9 @@
   
   <a id="Godot_Polygon2D_Antialiased_" data-uid="Godot.Polygon2D.Antialiased*"></a>
   <h4 id="Godot_Polygon2D_Antialiased" data-uid="Godot.Polygon2D.Antialiased">Antialiased</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, attempts to perform antialiasing for polygon edges by drawing a thin OpenGL smooth line on the edges.</p>
+<p>Note: Due to how it works, built-in antialiasing will not look correct for translucent polygons and may not work on certain platforms. As a workaround, install the <a href="https://github.com/godot-extended-libraries/godot-antialiased-line2d">Antialiased Line2D</a> add-on then create an AntialiasedPolygon2D node. That node relies on a texture with custom mipmaps to perform antialiasing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1162,7 +1166,8 @@
   
   <a id="Godot_Polygon2D_Color_" data-uid="Godot.Polygon2D.Color*"></a>
   <h4 id="Godot_Polygon2D_Color" data-uid="Godot.Polygon2D.Color">Color</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The polygon&apos;s fill color. If <code>texture</code> is defined, it will be multiplied by this color. It will also be the default color for vertices not set in <code>vertex_colors</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1212,7 +1217,8 @@
   
   <a id="Godot_Polygon2D_InvertBorder_" data-uid="Godot.Polygon2D.InvertBorder*"></a>
   <h4 id="Godot_Polygon2D_InvertBorder" data-uid="Godot.Polygon2D.InvertBorder">InvertBorder</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Added padding applied to the bounding box when using <code>invert</code>. Setting this value too small may result in a &quot;Bad Polygon&quot; error.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1237,7 +1243,8 @@
   
   <a id="Godot_Polygon2D_InvertEnable_" data-uid="Godot.Polygon2D.InvertEnable*"></a>
   <h4 id="Godot_Polygon2D_InvertEnable" data-uid="Godot.Polygon2D.InvertEnable">InvertEnable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, polygon will be inverted, containing the area outside the defined points and extending to the <code>invert_border</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1262,7 +1269,8 @@
   
   <a id="Godot_Polygon2D_Offset_" data-uid="Godot.Polygon2D.Offset*"></a>
   <h4 id="Godot_Polygon2D_Offset" data-uid="Godot.Polygon2D.Offset">Offset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The offset applied to each vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1287,7 +1295,9 @@
   
   <a id="Godot_Polygon2D_Polygon_" data-uid="Godot.Polygon2D.Polygon*"></a>
   <h4 id="Godot_Polygon2D_Polygon" data-uid="Godot.Polygon2D.Polygon">Polygon</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The polygon&apos;s list of vertices. The final point will be connected to the first.</p>
+<p>Note: This returns a copy of the <a class="xref" href="Godot.Vector2.html">Vector2</a> rather than a reference.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1362,7 +1372,8 @@
   
   <a id="Godot_Polygon2D_Texture_" data-uid="Godot.Polygon2D.Texture*"></a>
   <h4 id="Godot_Polygon2D_Texture" data-uid="Godot.Polygon2D.Texture">Texture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The polygon&apos;s fill texture. Use <code>uv</code> to set texture coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1387,7 +1398,8 @@
   
   <a id="Godot_Polygon2D_TextureOffset_" data-uid="Godot.Polygon2D.TextureOffset*"></a>
   <h4 id="Godot_Polygon2D_TextureOffset" data-uid="Godot.Polygon2D.TextureOffset">TextureOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount to offset the polygon&apos;s <code>texture</code>. If <code>(0, 0)</code> the texture&apos;s origin (its top-left corner) will be placed at the polygon&apos;s <code>position</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1412,7 +1424,8 @@
   
   <a id="Godot_Polygon2D_TextureRotation_" data-uid="Godot.Polygon2D.TextureRotation*"></a>
   <h4 id="Godot_Polygon2D_TextureRotation" data-uid="Godot.Polygon2D.TextureRotation">TextureRotation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The texture&apos;s rotation in radians.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1437,7 +1450,8 @@
   
   <a id="Godot_Polygon2D_TextureRotationDegrees_" data-uid="Godot.Polygon2D.TextureRotationDegrees*"></a>
   <h4 id="Godot_Polygon2D_TextureRotationDegrees" data-uid="Godot.Polygon2D.TextureRotationDegrees">TextureRotationDegrees</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The texture&apos;s rotation in degrees.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1462,7 +1476,8 @@
   
   <a id="Godot_Polygon2D_TextureScale_" data-uid="Godot.Polygon2D.TextureScale*"></a>
   <h4 id="Godot_Polygon2D_TextureScale" data-uid="Godot.Polygon2D.TextureScale">TextureScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount to multiply the <code>uv</code> coordinates when using a <code>texture</code>. Larger values make the texture smaller, and vice versa.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1487,7 +1502,8 @@
   
   <a id="Godot_Polygon2D_Uv_" data-uid="Godot.Polygon2D.Uv*"></a>
   <h4 id="Godot_Polygon2D_Uv" data-uid="Godot.Polygon2D.Uv">Uv</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture coordinates for each vertex of the polygon. There should be one <code>uv</code> per polygon vertex. If there are fewer, undefined vertices will use <code>(0, 0)</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1512,7 +1528,8 @@
   
   <a id="Godot_Polygon2D_VertexColors_" data-uid="Godot.Polygon2D.VertexColors*"></a>
   <h4 id="Godot_Polygon2D_VertexColors" data-uid="Godot.Polygon2D.VertexColors">VertexColors</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Color for each vertex. Colors are interpolated between vertices, resulting in smooth gradients. There should be one per polygon vertex. If there are fewer, undefined vertices will use <code>color</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1539,7 +1556,8 @@
   
   <a id="Godot_Polygon2D_AddBone_" data-uid="Godot.Polygon2D.AddBone*"></a>
   <h4 id="Godot_Polygon2D_AddBone_Godot_NodePath_System_Single___" data-uid="Godot.Polygon2D.AddBone(Godot.NodePath,System.Single[])">AddBone(NodePath, Single[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a bone with the specified <code>path</code> and <code>weights</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1571,7 +1589,8 @@
   
   <a id="Godot_Polygon2D_ClearBones_" data-uid="Godot.Polygon2D.ClearBones*"></a>
   <h4 id="Godot_Polygon2D_ClearBones" data-uid="Godot.Polygon2D.ClearBones">ClearBones()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all bones from this <a class="xref" href="Godot.Polygon2D.html">Polygon2D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1581,7 +1600,8 @@
   
   <a id="Godot_Polygon2D_EraseBone_" data-uid="Godot.Polygon2D.EraseBone*"></a>
   <h4 id="Godot_Polygon2D_EraseBone_System_Int32_" data-uid="Godot.Polygon2D.EraseBone(System.Int32)">EraseBone(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the specified bone from this <a class="xref" href="Godot.Polygon2D.html">Polygon2D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1633,7 +1653,8 @@
   
   <a id="Godot_Polygon2D_GetBoneCount_" data-uid="Godot.Polygon2D.GetBoneCount*"></a>
   <h4 id="Godot_Polygon2D_GetBoneCount" data-uid="Godot.Polygon2D.GetBoneCount">GetBoneCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of bones in this <a class="xref" href="Godot.Polygon2D.html">Polygon2D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1658,7 +1679,8 @@
   
   <a id="Godot_Polygon2D_GetBonePath_" data-uid="Godot.Polygon2D.GetBonePath*"></a>
   <h4 id="Godot_Polygon2D_GetBonePath_System_Int32_" data-uid="Godot.Polygon2D.GetBonePath(System.Int32)">GetBonePath(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the path to the node associated with the specified bone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1700,7 +1722,8 @@
   
   <a id="Godot_Polygon2D_GetBoneWeights_" data-uid="Godot.Polygon2D.GetBoneWeights*"></a>
   <h4 id="Godot_Polygon2D_GetBoneWeights_System_Int32_" data-uid="Godot.Polygon2D.GetBoneWeights(System.Int32)">GetBoneWeights(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the height values of the specified bone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2144,7 +2167,8 @@
   
   <a id="Godot_Polygon2D_SetBonePath_" data-uid="Godot.Polygon2D.SetBonePath*"></a>
   <h4 id="Godot_Polygon2D_SetBonePath_System_Int32_Godot_NodePath_" data-uid="Godot.Polygon2D.SetBonePath(System.Int32,Godot.NodePath)">SetBonePath(Int32, NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the path to the node associated with the specified bone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2176,7 +2200,8 @@
   
   <a id="Godot_Polygon2D_SetBoneWeights_" data-uid="Godot.Polygon2D.SetBoneWeights*"></a>
   <h4 id="Godot_Polygon2D_SetBoneWeights_System_Int32_System_Single___" data-uid="Godot.Polygon2D.SetBoneWeights(System.Int32,System.Single[])">SetBoneWeights(Int32, Single[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the weight values for the specified bone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

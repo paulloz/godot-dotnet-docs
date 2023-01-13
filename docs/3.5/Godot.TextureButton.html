@@ -83,7 +83,10 @@
   
   <h1 id="Godot_TextureButton" data-uid="Godot.TextureButton" class="text-break">Class TextureButton
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.TextureButton.html">TextureButton</a> has the same functionality as <a class="xref" href="Godot.Button.html">Button</a>, except it uses sprites instead of Godot&apos;s <a class="xref" href="Godot.Theme.html">Theme</a> resource. It is faster to create, but it doesn&apos;t support localization like more complex <a class="xref" href="Godot.Control.html">Control</a>s.</p>
+<p>The &quot;normal&quot; state must contain a texture (<a class="xref" href="Godot.TextureButton.html#Godot_TextureButton_TextureNormal">TextureNormal</a>); other textures are optional.</p>
+<p>See also <a class="xref" href="Godot.BaseButton.html">BaseButton</a> which contains common properties and methods associated with this node.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1569,7 +1572,8 @@
   
   <a id="Godot_TextureButton_Expand_" data-uid="Godot.TextureButton.Expand*"></a>
   <h4 id="Godot_TextureButton_Expand" data-uid="Godot.TextureButton.Expand">Expand</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the texture stretches to the edges of the node&apos;s bounding rectangle using the <a class="xref" href="Godot.TextureButton.html#Godot_TextureButton_StretchMode">StretchMode</a>. If <code>false</code>, the texture will not scale with the node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1594,7 +1598,8 @@
   
   <a id="Godot_TextureButton_FlipH_" data-uid="Godot.TextureButton.FlipH*"></a>
   <h4 id="Godot_TextureButton_FlipH" data-uid="Godot.TextureButton.FlipH">FlipH</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, texture is flipped horizontally.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1619,7 +1624,8 @@
   
   <a id="Godot_TextureButton_FlipV_" data-uid="Godot.TextureButton.FlipV*"></a>
   <h4 id="Godot_TextureButton_FlipV" data-uid="Godot.TextureButton.FlipV">FlipV</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, texture is flipped vertically.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1644,7 +1650,8 @@
   
   <a id="Godot_TextureButton_StretchMode_" data-uid="Godot.TextureButton.StretchMode*"></a>
   <h4 id="Godot_TextureButton_StretchMode" data-uid="Godot.TextureButton.StretchMode">StretchMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls the texture&apos;s behavior when you resize the node&apos;s bounding rectangle, only if <a class="xref" href="Godot.TextureButton.html#Godot_TextureButton_Expand">Expand</a> is <code>true</code>. Set it to one of the <a class="xref" href="Godot.TextureButton.StretchModeEnum.html">TextureButton.StretchModeEnum</a> constants. See the constants to learn more.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1669,7 +1676,8 @@
   
   <a id="Godot_TextureButton_TextureClickMask_" data-uid="Godot.TextureButton.TextureClickMask*"></a>
   <h4 id="Godot_TextureButton_TextureClickMask" data-uid="Godot.TextureButton.TextureClickMask">TextureClickMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pure black and white <a class="xref" href="Godot.BitMap.html">BitMap</a> image to use for click detection. On the mask, white pixels represent the button&apos;s clickable area. Use it to create buttons with curved shapes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1694,7 +1702,8 @@
   
   <a id="Godot_TextureButton_TextureDisabled_" data-uid="Godot.TextureButton.TextureDisabled*"></a>
   <h4 id="Godot_TextureButton_TextureDisabled" data-uid="Godot.TextureButton.TextureDisabled">TextureDisabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture to display when the node is disabled. See <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_Disabled">Disabled</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1719,7 +1728,8 @@
   
   <a id="Godot_TextureButton_TextureFocused_" data-uid="Godot.TextureButton.TextureFocused*"></a>
   <h4 id="Godot_TextureButton_TextureFocused" data-uid="Godot.TextureButton.TextureFocused">TextureFocused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture to display when the node has mouse or keyboard focus.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1744,7 +1754,8 @@
   
   <a id="Godot_TextureButton_TextureHover_" data-uid="Godot.TextureButton.TextureHover*"></a>
   <h4 id="Godot_TextureButton_TextureHover" data-uid="Godot.TextureButton.TextureHover">TextureHover</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture to display when the mouse hovers the node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1769,7 +1780,8 @@
   
   <a id="Godot_TextureButton_TextureNormal_" data-uid="Godot.TextureButton.TextureNormal*"></a>
   <h4 id="Godot_TextureButton_TextureNormal" data-uid="Godot.TextureButton.TextureNormal">TextureNormal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture to display by default, when the node is not in the disabled, focused, hover or pressed state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1794,7 +1806,8 @@
   
   <a id="Godot_TextureButton_TexturePressed_" data-uid="Godot.TextureButton.TexturePressed*"></a>
   <h4 id="Godot_TextureButton_TexturePressed" data-uid="Godot.TextureButton.TexturePressed">TexturePressed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture to display on mouse down over the node, if the node has keyboard focus and the player presses the Enter key or if the player presses the <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_Shortcut">Shortcut</a> key.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

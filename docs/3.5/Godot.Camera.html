@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Camera" data-uid="Godot.Camera" class="text-break">Class Camera
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Camera is a special node that displays what is visible from its current location. Cameras register themselves in the nearest <a class="xref" href="Godot.Viewport.html">Viewport</a> node (when ascending the tree). Only one camera can be active per viewport. If no viewport is available ascending the tree, the camera will register in the global viewport. In other words, a camera just provides 3D display capabilities to a <a class="xref" href="Godot.Viewport.html">Viewport</a>, and, without one, a scene registered in that <a class="xref" href="Godot.Viewport.html">Viewport</a> (or higher viewports) can&apos;t be displayed.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -967,7 +968,8 @@
   
   <a id="Godot_Camera_CullMask_" data-uid="Godot.Camera.CullMask*"></a>
   <h4 id="Godot_Camera_CullMask" data-uid="Godot.Camera.CullMask">CullMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The culling mask that describes which 3D render layers are rendered by this camera.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -992,7 +994,9 @@
   
   <a id="Godot_Camera_Current_" data-uid="Godot.Camera.Current*"></a>
   <h4 id="Godot_Camera_Current" data-uid="Godot.Camera.Current">Current</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the ancestor <a class="xref" href="Godot.Viewport.html">Viewport</a> is currently using this camera.</p>
+<p>If multiple cameras are in the scene, one will always be made current. For example, if two <a class="xref" href="Godot.Camera.html">Camera</a> nodes are present in the scene and only one is current, setting one camera&apos;s <a class="xref" href="Godot.Camera.html#Godot_Camera_Current">Current</a> to <code>false</code> will cause the other camera to be made current.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1017,7 +1021,9 @@
   
   <a id="Godot_Camera_DopplerTracking_" data-uid="Godot.Camera.DopplerTracking*"></a>
   <h4 id="Godot_Camera_DopplerTracking" data-uid="Godot.Camera.DopplerTracking">DopplerTracking</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If not <a class="xref" href="Godot.Camera.DopplerTrackingEnum.html#Godot_Camera_DopplerTrackingEnum_Disabled">Disabled</a>, this camera will simulate the <a href="https://en.wikipedia.org/wiki/Doppler_effect">Doppler effect</a> for objects changed in particular <code>_process</code> methods. The Doppler effect is only simulated for <a class="xref" href="Godot.AudioStreamPlayer3D.html">AudioStreamPlayer3D</a> nodes that have <a class="xref" href="Godot.AudioStreamPlayer3D.html#Godot_AudioStreamPlayer3D_DopplerTracking">DopplerTracking</a> set to a value other than <a class="xref" href="Godot.AudioStreamPlayer3D.DopplerTrackingEnum.html#Godot_AudioStreamPlayer3D_DopplerTrackingEnum_Disabled">Disabled</a>.</p>
+<p>Note: To toggle the Doppler effect preview in the editor, use the Perspective menu in the top-left corner of the 3D viewport and toggle Enable Doppler.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1042,7 +1048,8 @@
   
   <a id="Godot_Camera_Environment_" data-uid="Godot.Camera.Environment*"></a>
   <h4 id="Godot_Camera_Environment" data-uid="Godot.Camera.Environment">Environment</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Environment.html">Environment</a> to use for this camera.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1067,7 +1074,8 @@
   
   <a id="Godot_Camera_Far_" data-uid="Godot.Camera.Far*"></a>
   <h4 id="Godot_Camera_Far" data-uid="Godot.Camera.Far">Far</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The distance to the far culling boundary for this camera relative to its local Z axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1092,7 +1100,13 @@
   
   <a id="Godot_Camera_Fov_" data-uid="Godot.Camera.Fov*"></a>
   <h4 id="Godot_Camera_Fov" data-uid="Godot.Camera.Fov">Fov</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The camera&apos;s field of view angle (in degrees). Only applicable in perspective mode. Since <a class="xref" href="Godot.Camera.html#Godot_Camera_KeepAspect">KeepAspect</a> locks one axis, <code>fov</code> sets the other axis&apos; field of view angle.</p>
+<p>For reference, the default vertical field of view value (<code>70.0</code>) is equivalent to a horizontal FOV of:</p>
+<p>- ~86.07 degrees in a 4:3 viewport</p>
+<p>- ~96.50 degrees in a 16:10 viewport</p>
+<p>- ~102.45 degrees in a 16:9 viewport</p>
+<p>- ~117.06 degrees in a 21:9 viewport</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1117,7 +1131,9 @@
   
   <a id="Godot_Camera_FrustumOffset_" data-uid="Godot.Camera.FrustumOffset*"></a>
   <h4 id="Godot_Camera_FrustumOffset" data-uid="Godot.Camera.FrustumOffset">FrustumOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The camera&apos;s frustum offset. This can be changed from the default to create &quot;tilted frustum&quot; effects such as <a href="https://zdoom.org/wiki/Y-shearing">Y-shearing</a>.</p>
+<p>Note: Only effective if <a class="xref" href="Godot.Camera.html#Godot_Camera_Projection">Projection</a> is <a class="xref" href="Godot.Camera.ProjectionEnum.html#Godot_Camera_ProjectionEnum_Frustum">Frustum</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1142,7 +1158,8 @@
   
   <a id="Godot_Camera_HOffset_" data-uid="Godot.Camera.HOffset*"></a>
   <h4 id="Godot_Camera_HOffset" data-uid="Godot.Camera.HOffset">HOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The horizontal (X) offset of the camera viewport.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1167,7 +1184,8 @@
   
   <a id="Godot_Camera_KeepAspect_" data-uid="Godot.Camera.KeepAspect*"></a>
   <h4 id="Godot_Camera_KeepAspect" data-uid="Godot.Camera.KeepAspect">KeepAspect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The axis to lock during <a class="xref" href="Godot.Camera.html#Godot_Camera_Fov">Fov</a>/<a class="xref" href="Godot.Camera.html#Godot_Camera_Size">Size</a> adjustments. Can be either <a class="xref" href="Godot.Camera.KeepAspectEnum.html#Godot_Camera_KeepAspectEnum_Width">Width</a> or <a class="xref" href="Godot.Camera.KeepAspectEnum.html#Godot_Camera_KeepAspectEnum_Height">Height</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1192,7 +1210,8 @@
   
   <a id="Godot_Camera_Near_" data-uid="Godot.Camera.Near*"></a>
   <h4 id="Godot_Camera_Near" data-uid="Godot.Camera.Near">Near</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The distance to the near culling boundary for this camera relative to its local Z axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1217,7 +1236,8 @@
   
   <a id="Godot_Camera_Projection_" data-uid="Godot.Camera.Projection*"></a>
   <h4 id="Godot_Camera_Projection" data-uid="Godot.Camera.Projection">Projection</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The camera&apos;s projection mode. In <a class="xref" href="Godot.Camera.ProjectionEnum.html#Godot_Camera_ProjectionEnum_Perspective">Perspective</a> mode, objects&apos; Z distance from the camera&apos;s local space scales their perceived size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1242,7 +1262,8 @@
   
   <a id="Godot_Camera_Size_" data-uid="Godot.Camera.Size*"></a>
   <h4 id="Godot_Camera_Size" data-uid="Godot.Camera.Size">Size</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The camera&apos;s size in meters measured as the diameter of the width or height, depending on <a class="xref" href="Godot.Camera.html#Godot_Camera_KeepAspect">KeepAspect</a>. Only applicable in orthogonal and frustum modes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1267,7 +1288,8 @@
   
   <a id="Godot_Camera_VOffset_" data-uid="Godot.Camera.VOffset*"></a>
   <h4 id="Godot_Camera_VOffset" data-uid="Godot.Camera.VOffset">VOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The vertical (Y) offset of the camera viewport.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1294,7 +1316,8 @@
   
   <a id="Godot_Camera_ClearCurrent_" data-uid="Godot.Camera.ClearCurrent*"></a>
   <h4 id="Godot_Camera_ClearCurrent_System_Boolean_" data-uid="Godot.Camera.ClearCurrent(System.Boolean)">ClearCurrent(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If this is the current camera, remove it from being current. If <code>enable_next</code> is <code>true</code>, request to make the next camera current, if any.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1321,7 +1344,8 @@
   
   <a id="Godot_Camera_GetCameraRid_" data-uid="Godot.Camera.GetCameraRid*"></a>
   <h4 id="Godot_Camera_GetCameraRid" data-uid="Godot.Camera.GetCameraRid">GetCameraRid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the camera&apos;s RID from the <a class="xref" href="Godot.VisualServer.html">VisualServer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1346,7 +1370,8 @@
   
   <a id="Godot_Camera_GetCameraTransform_" data-uid="Godot.Camera.GetCameraTransform*"></a>
   <h4 id="Godot_Camera_GetCameraTransform" data-uid="Godot.Camera.GetCameraTransform">GetCameraTransform()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the transform of the camera plus the vertical (<a class="xref" href="Godot.Camera.html#Godot_Camera_VOffset">VOffset</a>) and horizontal (<a class="xref" href="Godot.Camera.html#Godot_Camera_HOffset">HOffset</a>) offsets; and any other adjustments made to the position and orientation of the camera by subclassed cameras such as <a class="xref" href="Godot.ClippedCamera.html">ClippedCamera</a>, <a class="xref" href="Godot.InterpolatedCamera.html">InterpolatedCamera</a> and <a class="xref" href="Godot.ARVRCamera.html">ARVRCamera</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1396,7 +1421,8 @@
   
   <a id="Godot_Camera_GetCullMaskBit_" data-uid="Godot.Camera.GetCullMaskBit*"></a>
   <h4 id="Godot_Camera_GetCullMaskBit_System_Int32_" data-uid="Godot.Camera.GetCullMaskBit(System.Int32)">GetCullMaskBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given <code>layer</code> in the <a class="xref" href="Godot.Camera.html#Godot_Camera_CullMask">CullMask</a> is enabled, <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1513,7 +1539,8 @@
   
   <a id="Godot_Camera_GetFrustum_" data-uid="Godot.Camera.GetFrustum*"></a>
   <h4 id="Godot_Camera_GetFrustum" data-uid="Godot.Camera.GetFrustum">GetFrustum()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the camera&apos;s frustum planes in world space units as an array of <a class="xref" href="Godot.Plane.html">Plane</a>s in the following order: near, far, left, top, right, bottom. Not to be confused with <a class="xref" href="Godot.Camera.html#Godot_Camera_FrustumOffset">FrustumOffset</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1763,7 +1790,9 @@
   
   <a id="Godot_Camera_IsPositionBehind_" data-uid="Godot.Camera.IsPositionBehind*"></a>
   <h4 id="Godot_Camera_IsPositionBehind_Godot_Vector3_" data-uid="Godot.Camera.IsPositionBehind(Godot.Vector3)">IsPositionBehind(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given position is behind the camera.</p>
+<p>Note: A position which returns <code>false</code> may still be outside the camera&apos;s field of view.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1805,7 +1834,8 @@
   
   <a id="Godot_Camera_MakeCurrent_" data-uid="Godot.Camera.MakeCurrent*"></a>
   <h4 id="Godot_Camera_MakeCurrent" data-uid="Godot.Camera.MakeCurrent">MakeCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes this camera the current camera for the <a class="xref" href="Godot.Viewport.html">Viewport</a> (see class description). If the camera node is outside the scene tree, it will attempt to become current once it&apos;s added.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1815,7 +1845,8 @@
   
   <a id="Godot_Camera_ProjectLocalRayNormal_" data-uid="Godot.Camera.ProjectLocalRayNormal*"></a>
   <h4 id="Godot_Camera_ProjectLocalRayNormal_Godot_Vector2_" data-uid="Godot.Camera.ProjectLocalRayNormal(Godot.Vector2)">ProjectLocalRayNormal(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a normal vector from the screen point location directed along the camera. Orthogonal cameras are normalized. Perspective cameras account for perspective, screen width/height, etc.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1857,7 +1888,8 @@
   
   <a id="Godot_Camera_ProjectPosition_" data-uid="Godot.Camera.ProjectPosition*"></a>
   <h4 id="Godot_Camera_ProjectPosition_Godot_Vector2_System_Single_" data-uid="Godot.Camera.ProjectPosition(Godot.Vector2,System.Single)">ProjectPosition(Vector2, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the 3D point in world space that maps to the given 2D coordinate in the <a class="xref" href="Godot.Viewport.html">Viewport</a> rectangle on a plane that is the given <code>z_depth</code> distance into the scene away from the camera.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1904,7 +1936,8 @@
   
   <a id="Godot_Camera_ProjectRayNormal_" data-uid="Godot.Camera.ProjectRayNormal*"></a>
   <h4 id="Godot_Camera_ProjectRayNormal_Godot_Vector2_" data-uid="Godot.Camera.ProjectRayNormal(Godot.Vector2)">ProjectRayNormal(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a normal vector in world space, that is the result of projecting a point on the <a class="xref" href="Godot.Viewport.html">Viewport</a> rectangle by the inverse camera projection. This is useful for casting rays in the form of (origin, normal) for object intersection or picking.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1946,7 +1979,8 @@
   
   <a id="Godot_Camera_ProjectRayOrigin_" data-uid="Godot.Camera.ProjectRayOrigin*"></a>
   <h4 id="Godot_Camera_ProjectRayOrigin_Godot_Vector2_" data-uid="Godot.Camera.ProjectRayOrigin(Godot.Vector2)">ProjectRayOrigin(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a 3D position in world space, that is the result of projecting a point on the <a class="xref" href="Godot.Viewport.html">Viewport</a> rectangle by the inverse camera projection. This is useful for casting rays in the form of (origin, normal) for object intersection or picking.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2015,7 +2049,8 @@
   
   <a id="Godot_Camera_SetCullMaskBit_" data-uid="Godot.Camera.SetCullMaskBit*"></a>
   <h4 id="Godot_Camera_SetCullMaskBit_System_Int32_System_Boolean_" data-uid="Godot.Camera.SetCullMaskBit(System.Int32,System.Boolean)">SetCullMaskBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables or disables the given <code>layer</code> in the <a class="xref" href="Godot.Camera.html#Godot_Camera_CullMask">CullMask</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2155,7 +2190,8 @@
   
   <a id="Godot_Camera_SetFrustum_" data-uid="Godot.Camera.SetFrustum*"></a>
   <h4 id="Godot_Camera_SetFrustum_System_Single_Godot_Vector2_System_Single_System_Single_" data-uid="Godot.Camera.SetFrustum(System.Single,Godot.Vector2,System.Single,System.Single)">SetFrustum(Single, Vector2, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the camera projection to frustum mode (see <a class="xref" href="Godot.Camera.ProjectionEnum.html#Godot_Camera_ProjectionEnum_Frustum">Frustum</a>), by specifying a <code>size</code>, an <code>offset</code>, and the <code>z_near</code> and <code>z_far</code> clip planes in world space units. See also <a class="xref" href="Godot.Camera.html#Godot_Camera_FrustumOffset">FrustumOffset</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2278,7 +2314,8 @@
   
   <a id="Godot_Camera_SetOrthogonal_" data-uid="Godot.Camera.SetOrthogonal*"></a>
   <h4 id="Godot_Camera_SetOrthogonal_System_Single_System_Single_System_Single_" data-uid="Godot.Camera.SetOrthogonal(System.Single,System.Single,System.Single)">SetOrthogonal(Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the camera projection to orthogonal mode (see <a class="xref" href="Godot.Camera.ProjectionEnum.html#Godot_Camera_ProjectionEnum_Orthogonal">Orthogonal</a>), by specifying a <code>size</code>, and the <code>z_near</code> and <code>z_far</code> clip planes in world space units. (As a hint, 2D games often use this projection, with values specified in pixels.)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2315,7 +2352,8 @@
   
   <a id="Godot_Camera_SetPerspective_" data-uid="Godot.Camera.SetPerspective*"></a>
   <h4 id="Godot_Camera_SetPerspective_System_Single_System_Single_System_Single_" data-uid="Godot.Camera.SetPerspective(System.Single,System.Single,System.Single)">SetPerspective(Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the camera projection to perspective mode (see <a class="xref" href="Godot.Camera.ProjectionEnum.html#Godot_Camera_ProjectionEnum_Perspective">Perspective</a>), by specifying a <code>fov</code> (field of view) angle in degrees, and the <code>z_near</code> and <code>z_far</code> clip planes in world space units.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2487,7 +2525,13 @@
   
   <a id="Godot_Camera_UnprojectPosition_" data-uid="Godot.Camera.UnprojectPosition*"></a>
   <h4 id="Godot_Camera_UnprojectPosition_Godot_Vector3_" data-uid="Godot.Camera.UnprojectPosition(Godot.Vector3)">UnprojectPosition(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the 2D coordinate in the <a class="xref" href="Godot.Viewport.html">Viewport</a> rectangle that maps to the given 3D point in world space.</p>
+<p>Note: When using this to position GUI elements over a 3D viewport, use <a class="xref" href="Godot.Camera.html#Godot_Camera_IsPositionBehind_Godot_Vector3_">IsPositionBehind(Vector3)</a> to prevent them from appearing if the 3D point is behind the camera:</p>
+<p><pre><code># This code block is part of a script that inherits from Spatial.
+# `control` is a reference to a node inheriting from Control.
+control.visible = not get_viewport().get_camera().is_position_behind(global_transform.origin)
+control.rect_position = get_viewport().get_camera().unproject_position(global_transform.origin)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

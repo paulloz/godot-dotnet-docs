@@ -83,7 +83,10 @@
   
   <h1 id="Godot_Spatial" data-uid="Godot.Spatial" class="text-break">Class Spatial
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Most basic 3D game object, with a 3D <a class="xref" href="Godot.Transform.html">Transform</a> and visibility settings. All other 3D game objects inherit from Spatial. Use <a class="xref" href="Godot.Spatial.html">Spatial</a> as a parent node to move, scale, rotate and show/hide children in a 3D project.</p>
+<p>Affine operations (rotate, scale, translate) happen in parent&apos;s local coordinate system, unless the <a class="xref" href="Godot.Spatial.html">Spatial</a> object is set as top-level. Affine operations in this coordinate system correspond to direct affine operations on the <a class="xref" href="Godot.Spatial.html">Spatial</a>&apos;s transform. The word local below refers to this coordinate system. The coordinate system that is attached to the <a class="xref" href="Godot.Spatial.html">Spatial</a> object itself is referred to as object-local coordinate system.</p>
+<p>Note: Unless otherwise specified, all methods that have angle parameters must have angles specified as radians. To convert degrees to radians, use <code>@GDScript.deg2rad</code>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -781,7 +784,8 @@
   
   
   <h4 id="Godot_Spatial_NotificationEnterGameplay" data-uid="Godot.Spatial.NotificationEnterGameplay">NotificationEnterGameplay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Spatial nodes receives this notification if the portal system gameplay monitor detects they have entered the gameplay area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -805,7 +809,8 @@
   
   
   <h4 id="Godot_Spatial_NotificationEnterWorld" data-uid="Godot.Spatial.NotificationEnterWorld">NotificationEnterWorld</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Spatial nodes receives this notification when they are registered to new <a class="xref" href="Godot.World.html">World</a> resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -829,7 +834,8 @@
   
   
   <h4 id="Godot_Spatial_NotificationExitGameplay" data-uid="Godot.Spatial.NotificationExitGameplay">NotificationExitGameplay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Spatial nodes receives this notification if the portal system gameplay monitor detects they have exited the gameplay area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -853,7 +859,8 @@
   
   
   <h4 id="Godot_Spatial_NotificationExitWorld" data-uid="Godot.Spatial.NotificationExitWorld">NotificationExitWorld</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Spatial nodes receives this notification when they are unregistered from current <a class="xref" href="Godot.World.html">World</a> resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -877,7 +884,9 @@
   
   
   <h4 id="Godot_Spatial_NotificationTransformChanged" data-uid="Godot.Spatial.NotificationTransformChanged">NotificationTransformChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Spatial nodes receives this notification when their global transform changes. This means that either the current or a parent node changed its transform.</p>
+<p>In order for <a class="xref" href="Godot.Spatial.html#Godot_Spatial_NotificationTransformChanged">NotificationTransformChanged</a> to work, users first need to ask for it, with <a class="xref" href="Godot.Spatial.html#Godot_Spatial_SetNotifyTransform_System_Boolean_">SetNotifyTransform(Boolean)</a>. The notification is also sent if the node is in the editor context and it has a valid gizmo.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -901,7 +910,8 @@
   
   
   <h4 id="Godot_Spatial_NotificationVisibilityChanged" data-uid="Godot.Spatial.NotificationVisibilityChanged">NotificationVisibilityChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Spatial nodes receives this notification when their visibility changes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -928,7 +938,8 @@
   
   <a id="Godot_Spatial_Gizmo_" data-uid="Godot.Spatial.Gizmo*"></a>
   <h4 id="Godot_Spatial_Gizmo" data-uid="Godot.Spatial.Gizmo">Gizmo</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.SpatialGizmo.html">SpatialGizmo</a> for this node. Used for example in <see cref="!:Godot.EditorSpatialGizmo"></see> as custom visualization and editing handles in Editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -953,7 +964,9 @@
   
   <a id="Godot_Spatial_GlobalRotation_" data-uid="Godot.Spatial.GlobalRotation*"></a>
   <h4 id="Godot_Spatial_GlobalRotation" data-uid="Godot.Spatial.GlobalRotation">GlobalRotation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotation part of the global transformation in radians, specified in terms of YXZ-Euler angles in the format (X angle, Y angle, Z angle).</p>
+<p>Note: In the mathematical sense, rotation is a matrix and not a vector. The three Euler angles, which are the three independent parameters of the Euler-angle parametrization of the rotation matrix, are stored in a <a class="xref" href="Godot.Vector3.html">Vector3</a> data structure not because the rotation is a vector, but only because <a class="xref" href="Godot.Vector3.html">Vector3</a> exists as a convenient data-structure to store 3 floating-point numbers. Therefore, applying affine operations on the rotation &quot;vector&quot; is not meaningful.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -978,7 +991,8 @@
   
   <a id="Godot_Spatial_GlobalTransform_" data-uid="Godot.Spatial.GlobalTransform*"></a>
   <h4 id="Godot_Spatial_GlobalTransform" data-uid="Godot.Spatial.GlobalTransform">GlobalTransform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>World space (global) <a class="xref" href="Godot.Transform.html">Transform</a> of this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1003,7 +1017,8 @@
   
   <a id="Godot_Spatial_GlobalTranslation_" data-uid="Godot.Spatial.GlobalTranslation*"></a>
   <h4 id="Godot_Spatial_GlobalTranslation" data-uid="Godot.Spatial.GlobalTranslation">GlobalTranslation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Global position of this node. This is equivalent to <code>global_transform.origin</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1028,7 +1043,9 @@
   
   <a id="Godot_Spatial_Rotation_" data-uid="Godot.Spatial.Rotation*"></a>
   <h4 id="Godot_Spatial_Rotation" data-uid="Godot.Spatial.Rotation">Rotation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotation part of the local transformation in radians, specified in terms of YXZ-Euler angles in the format (X angle, Y angle, Z angle).</p>
+<p>Note: In the mathematical sense, rotation is a matrix and not a vector. The three Euler angles, which are the three independent parameters of the Euler-angle parametrization of the rotation matrix, are stored in a <a class="xref" href="Godot.Vector3.html">Vector3</a> data structure not because the rotation is a vector, but only because <a class="xref" href="Godot.Vector3.html">Vector3</a> exists as a convenient data-structure to store 3 floating-point numbers. Therefore, applying affine operations on the rotation &quot;vector&quot; is not meaningful.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1053,7 +1070,8 @@
   
   <a id="Godot_Spatial_RotationDegrees_" data-uid="Godot.Spatial.RotationDegrees*"></a>
   <h4 id="Godot_Spatial_RotationDegrees" data-uid="Godot.Spatial.RotationDegrees">RotationDegrees</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotation part of the local transformation in degrees, specified in terms of YXZ-Euler angles in the format (X angle, Y angle, Z angle).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1078,7 +1096,9 @@
   
   <a id="Godot_Spatial_Scale_" data-uid="Godot.Spatial.Scale*"></a>
   <h4 id="Godot_Spatial_Scale" data-uid="Godot.Spatial.Scale">Scale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scale part of the local transformation.</p>
+<p>Note: Mixed negative scales in 3D are not decomposable from the transformation matrix. Due to the way scale is represented with transformation matrices in Godot, the scale values will either be all positive or all negative.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1103,7 +1123,8 @@
   
   <a id="Godot_Spatial_Transform_" data-uid="Godot.Spatial.Transform*"></a>
   <h4 id="Godot_Spatial_Transform" data-uid="Godot.Spatial.Transform">Transform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Local space <a class="xref" href="Godot.Transform.html">Transform</a> of this node, with respect to the parent node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1128,7 +1149,8 @@
   
   <a id="Godot_Spatial_Translation_" data-uid="Godot.Spatial.Translation*"></a>
   <h4 id="Godot_Spatial_Translation" data-uid="Godot.Spatial.Translation">Translation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Local translation of this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1153,7 +1175,8 @@
   
   <a id="Godot_Spatial_Visible_" data-uid="Godot.Spatial.Visible*"></a>
   <h4 id="Godot_Spatial_Visible" data-uid="Godot.Spatial.Visible">Visible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this node is drawn. The node is only visible if all of its antecedents are visible as well (in other words, <a class="xref" href="Godot.Spatial.html#Godot_Spatial_IsVisibleInTree">IsVisibleInTree()</a> must return <code>true</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1180,7 +1203,8 @@
   
   <a id="Godot_Spatial_ForceUpdateTransform_" data-uid="Godot.Spatial.ForceUpdateTransform*"></a>
   <h4 id="Godot_Spatial_ForceUpdateTransform" data-uid="Godot.Spatial.ForceUpdateTransform">ForceUpdateTransform()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Forces the transform to update. Transform changes in physics are not instant for performance reasons. Transforms are accumulated and then set. Use this if you need an up-to-date transform when doing physics operations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1265,7 +1289,9 @@
   
   <a id="Godot_Spatial_GetGlobalTransformInterpolated_" data-uid="Godot.Spatial.GetGlobalTransformInterpolated*"></a>
   <h4 id="Godot_Spatial_GetGlobalTransformInterpolated" data-uid="Godot.Spatial.GetGlobalTransformInterpolated">GetGlobalTransformInterpolated()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When using physics interpolation, there will be circumstances in which you want to know the interpolated (displayed) transform of a node rather than the standard transform (which may only be accurate to the most recent physics tick).</p>
+<p>This is particularly important for frame-based operations that take place in <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>, rather than <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a>. Examples include <a class="xref" href="Godot.Camera.html">Camera</a>s focusing on a node, or finding where to fire lasers from on a frame rather than physics tick.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1315,7 +1341,8 @@
   
   <a id="Godot_Spatial_GetParentSpatial_" data-uid="Godot.Spatial.GetParentSpatial*"></a>
   <h4 id="Godot_Spatial_GetParentSpatial" data-uid="Godot.Spatial.GetParentSpatial">GetParentSpatial()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the parent <a class="xref" href="Godot.Spatial.html">Spatial</a>, or an empty <a class="xref" href="Godot.Object.html">Object</a> if no parent exists or parent is not of type <a class="xref" href="Godot.Spatial.html">Spatial</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1465,7 +1492,8 @@
   
   <a id="Godot_Spatial_GetWorld_" data-uid="Godot.Spatial.GetWorld*"></a>
   <h4 id="Godot_Spatial_GetWorld" data-uid="Godot.Spatial.GetWorld">GetWorld()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current <a class="xref" href="Godot.World.html">World</a> resource this <a class="xref" href="Godot.Spatial.html">Spatial</a> node is registered to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1490,7 +1518,8 @@
   
   <a id="Godot_Spatial_GlobalRotate_" data-uid="Godot.Spatial.GlobalRotate*"></a>
   <h4 id="Godot_Spatial_GlobalRotate_Godot_Vector3_System_Single_" data-uid="Godot.Spatial.GlobalRotate(Godot.Vector3,System.Single)">GlobalRotate(Vector3, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotates the global (world) transformation around axis, a unit <a class="xref" href="Godot.Vector3.html">Vector3</a>, by specified angle in radians. The rotation axis is in global coordinate system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1522,7 +1551,8 @@
   
   <a id="Godot_Spatial_GlobalScale_" data-uid="Godot.Spatial.GlobalScale*"></a>
   <h4 id="Godot_Spatial_GlobalScale_Godot_Vector3_" data-uid="Godot.Spatial.GlobalScale(Godot.Vector3)">GlobalScale(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scales the global (world) transformation by the given <a class="xref" href="Godot.Vector3.html">Vector3</a> scale factors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1549,7 +1579,8 @@
   
   <a id="Godot_Spatial_GlobalTranslate_" data-uid="Godot.Spatial.GlobalTranslate*"></a>
   <h4 id="Godot_Spatial_GlobalTranslate_Godot_Vector3_" data-uid="Godot.Spatial.GlobalTranslate(Godot.Vector3)">GlobalTranslate(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the global (world) transformation by <a class="xref" href="Godot.Vector3.html">Vector3</a> offset. The offset is in global coordinate system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1576,7 +1607,8 @@
   
   <a id="Godot_Spatial_Hide_" data-uid="Godot.Spatial.Hide*"></a>
   <h4 id="Godot_Spatial_Hide" data-uid="Godot.Spatial.Hide">Hide()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables rendering of this node. Changes <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Visible">Visible</a> to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1586,7 +1618,8 @@
   
   <a id="Godot_Spatial_IsLocalTransformNotificationEnabled_" data-uid="Godot.Spatial.IsLocalTransformNotificationEnabled*"></a>
   <h4 id="Godot_Spatial_IsLocalTransformNotificationEnabled" data-uid="Godot.Spatial.IsLocalTransformNotificationEnabled">IsLocalTransformNotificationEnabled()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether node notifies about its local transformation changes. <a class="xref" href="Godot.Spatial.html">Spatial</a> will not propagate this by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1611,7 +1644,8 @@
   
   <a id="Godot_Spatial_IsScaleDisabled_" data-uid="Godot.Spatial.IsScaleDisabled*"></a>
   <h4 id="Godot_Spatial_IsScaleDisabled" data-uid="Godot.Spatial.IsScaleDisabled">IsScaleDisabled()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether this node uses a scale of <code>(1, 1, 1)</code> or its local transformation scale.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1636,7 +1670,8 @@
   
   <a id="Godot_Spatial_IsSetAsToplevel_" data-uid="Godot.Spatial.IsSetAsToplevel*"></a>
   <h4 id="Godot_Spatial_IsSetAsToplevel" data-uid="Godot.Spatial.IsSetAsToplevel">IsSetAsToplevel()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether this node is set as Toplevel, that is whether it ignores its parent nodes transformations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1661,7 +1696,8 @@
   
   <a id="Godot_Spatial_IsTransformNotificationEnabled_" data-uid="Godot.Spatial.IsTransformNotificationEnabled*"></a>
   <h4 id="Godot_Spatial_IsTransformNotificationEnabled" data-uid="Godot.Spatial.IsTransformNotificationEnabled">IsTransformNotificationEnabled()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the node notifies about its global and local transformation changes. <a class="xref" href="Godot.Spatial.html">Spatial</a> will not propagate this by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1711,7 +1747,8 @@
   
   <a id="Godot_Spatial_IsVisibleInTree_" data-uid="Godot.Spatial.IsVisibleInTree*"></a>
   <h4 id="Godot_Spatial_IsVisibleInTree" data-uid="Godot.Spatial.IsVisibleInTree">IsVisibleInTree()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the node is present in the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>, its <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Visible">Visible</a> property is <code>true</code> and all its antecedents are also visible. If any antecedent is hidden, this node will not be visible in the scene tree.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1736,7 +1773,11 @@
   
   <a id="Godot_Spatial_LookAt_" data-uid="Godot.Spatial.LookAt*"></a>
   <h4 id="Godot_Spatial_LookAt_Godot_Vector3_Godot_Vector3_" data-uid="Godot.Spatial.LookAt(Godot.Vector3,Godot.Vector3)">LookAt(Vector3, Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotates the node so that the local forward axis (-Z) points toward the <code>target</code> position.</p>
+<p>The local up axis (+Y) points as close to the <code>up</code> vector as possible while staying perpendicular to the local forward axis. The resulting transform is orthogonal, and the scale is preserved. Non-uniform scaling may not work correctly.</p>
+<p>The <code>target</code> position cannot be the same as the node&apos;s position, the <code>up</code> vector cannot be zero, and the direction from the node&apos;s position to the <code>target</code> vector cannot be parallel to the <code>up</code> vector.</p>
+<p>Operations take place in global space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1768,7 +1809,8 @@
   
   <a id="Godot_Spatial_LookAtFromPosition_" data-uid="Godot.Spatial.LookAtFromPosition*"></a>
   <h4 id="Godot_Spatial_LookAtFromPosition_Godot_Vector3_Godot_Vector3_Godot_Vector3_" data-uid="Godot.Spatial.LookAtFromPosition(Godot.Vector3,Godot.Vector3,Godot.Vector3)">LookAtFromPosition(Vector3, Vector3, Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the node to the specified <code>position</code>, and then rotates itself to point toward the <code>target</code> as per <a class="xref" href="Godot.Spatial.html#Godot_Spatial_LookAt_Godot_Vector3_Godot_Vector3_">LookAt(Vector3, Vector3)</a>. Operations take place in global space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1805,7 +1847,8 @@
   
   <a id="Godot_Spatial_Orthonormalize_" data-uid="Godot.Spatial.Orthonormalize*"></a>
   <h4 id="Godot_Spatial_Orthonormalize" data-uid="Godot.Spatial.Orthonormalize">Orthonormalize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resets this node&apos;s transformations (like scale, skew and taper) preserving its rotation and translation by performing Gram-Schmidt orthonormalization on this node&apos;s <a class="xref" href="Godot.Transform.html">Transform</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1815,7 +1858,8 @@
   
   <a id="Godot_Spatial_Rotate_" data-uid="Godot.Spatial.Rotate*"></a>
   <h4 id="Godot_Spatial_Rotate_Godot_Vector3_System_Single_" data-uid="Godot.Spatial.Rotate(Godot.Vector3,System.Single)">Rotate(Vector3, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotates the local transformation around axis, a unit <a class="xref" href="Godot.Vector3.html">Vector3</a>, by specified angle in radians.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1847,7 +1891,8 @@
   
   <a id="Godot_Spatial_RotateObjectLocal_" data-uid="Godot.Spatial.RotateObjectLocal*"></a>
   <h4 id="Godot_Spatial_RotateObjectLocal_Godot_Vector3_System_Single_" data-uid="Godot.Spatial.RotateObjectLocal(Godot.Vector3,System.Single)">RotateObjectLocal(Vector3, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotates the local transformation around axis, a unit <a class="xref" href="Godot.Vector3.html">Vector3</a>, by specified angle in radians. The rotation axis is in object-local coordinate system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1879,7 +1924,8 @@
   
   <a id="Godot_Spatial_RotateX_" data-uid="Godot.Spatial.RotateX*"></a>
   <h4 id="Godot_Spatial_RotateX_System_Single_" data-uid="Godot.Spatial.RotateX(System.Single)">RotateX(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotates the local transformation around the X axis by angle in radians.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1906,7 +1952,8 @@
   
   <a id="Godot_Spatial_RotateY_" data-uid="Godot.Spatial.RotateY*"></a>
   <h4 id="Godot_Spatial_RotateY_System_Single_" data-uid="Godot.Spatial.RotateY(System.Single)">RotateY(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotates the local transformation around the Y axis by angle in radians.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1933,7 +1980,8 @@
   
   <a id="Godot_Spatial_RotateZ_" data-uid="Godot.Spatial.RotateZ*"></a>
   <h4 id="Godot_Spatial_RotateZ_System_Single_" data-uid="Godot.Spatial.RotateZ(System.Single)">RotateZ(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotates the local transformation around the Z axis by angle in radians.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1960,7 +2008,8 @@
   
   <a id="Godot_Spatial_ScaleObjectLocal_" data-uid="Godot.Spatial.ScaleObjectLocal*"></a>
   <h4 id="Godot_Spatial_ScaleObjectLocal_Godot_Vector3_" data-uid="Godot.Spatial.ScaleObjectLocal(Godot.Vector3)">ScaleObjectLocal(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scales the local transformation by given 3D scale factors in object-local coordinate system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1987,7 +2036,8 @@
   
   <a id="Godot_Spatial_SetAsToplevel_" data-uid="Godot.Spatial.SetAsToplevel*"></a>
   <h4 id="Godot_Spatial_SetAsToplevel_System_Boolean_" data-uid="Godot.Spatial.SetAsToplevel(System.Boolean)">SetAsToplevel(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes the node ignore its parents transformations. Node transformations are only in global space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2014,7 +2064,8 @@
   
   <a id="Godot_Spatial_SetDisableScale_" data-uid="Godot.Spatial.SetDisableScale*"></a>
   <h4 id="Godot_Spatial_SetDisableScale_System_Boolean_" data-uid="Godot.Spatial.SetDisableScale(System.Boolean)">SetDisableScale(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets whether the node uses a scale of <code>(1, 1, 1)</code> or its local transformation scale. Changes to the local transformation scale are preserved.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2149,7 +2200,8 @@
   
   <a id="Godot_Spatial_SetIdentity_" data-uid="Godot.Spatial.SetIdentity*"></a>
   <h4 id="Godot_Spatial_SetIdentity" data-uid="Godot.Spatial.SetIdentity">SetIdentity()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reset all transformations for this node (sets its <a class="xref" href="Godot.Transform.html">Transform</a> to the identity matrix).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2159,7 +2211,8 @@
   
   <a id="Godot_Spatial_SetIgnoreTransformNotification_" data-uid="Godot.Spatial.SetIgnoreTransformNotification*"></a>
   <h4 id="Godot_Spatial_SetIgnoreTransformNotification_System_Boolean_" data-uid="Godot.Spatial.SetIgnoreTransformNotification(System.Boolean)">SetIgnoreTransformNotification(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets whether the node ignores notification that its transformation (global or local) changed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2186,7 +2239,8 @@
   
   <a id="Godot_Spatial_SetNotifyLocalTransform_" data-uid="Godot.Spatial.SetNotifyLocalTransform*"></a>
   <h4 id="Godot_Spatial_SetNotifyLocalTransform_System_Boolean_" data-uid="Godot.Spatial.SetNotifyLocalTransform(System.Boolean)">SetNotifyLocalTransform(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets whether the node notifies about its local transformation changes. <a class="xref" href="Godot.Spatial.html">Spatial</a> will not propagate this by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2213,7 +2267,8 @@
   
   <a id="Godot_Spatial_SetNotifyTransform_" data-uid="Godot.Spatial.SetNotifyTransform*"></a>
   <h4 id="Godot_Spatial_SetNotifyTransform_System_Boolean_" data-uid="Godot.Spatial.SetNotifyTransform(System.Boolean)">SetNotifyTransform(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets whether the node notifies about its global and local transformation changes. <a class="xref" href="Godot.Spatial.html">Spatial</a> will not propagate this by default, unless it is in the editor context and it has a valid gizmo.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2402,7 +2457,8 @@
   
   <a id="Godot_Spatial_Show_" data-uid="Godot.Spatial.Show*"></a>
   <h4 id="Godot_Spatial_Show" data-uid="Godot.Spatial.Show">Show()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables rendering of this node. Changes <a class="xref" href="Godot.Spatial.html#Godot_Spatial_Visible">Visible</a> to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2412,7 +2468,8 @@
   
   <a id="Godot_Spatial_ToGlobal_" data-uid="Godot.Spatial.ToGlobal*"></a>
   <h4 id="Godot_Spatial_ToGlobal_Godot_Vector3_" data-uid="Godot.Spatial.ToGlobal(Godot.Vector3)">ToGlobal(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Transforms <code>local_point</code> from this node&apos;s local space to world space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2454,7 +2511,8 @@
   
   <a id="Godot_Spatial_ToLocal_" data-uid="Godot.Spatial.ToLocal*"></a>
   <h4 id="Godot_Spatial_ToLocal_Godot_Vector3_" data-uid="Godot.Spatial.ToLocal(Godot.Vector3)">ToLocal(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Transforms <code>global_point</code> from world space to this node&apos;s local space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2496,7 +2554,9 @@
   
   <a id="Godot_Spatial_Translate_" data-uid="Godot.Spatial.Translate*"></a>
   <h4 id="Godot_Spatial_Translate_Godot_Vector3_" data-uid="Godot.Spatial.Translate(Godot.Vector3)">Translate(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the node&apos;s position by the given offset <a class="xref" href="Godot.Vector3.html">Vector3</a>.</p>
+<p>Note that the translation <code>offset</code> is affected by the node&apos;s scale, so if scaled by e.g. <code>(10, 1, 1)</code>, a translation by an offset of <code>(2, 0, 0)</code> would actually add 20 (<code>2 * 10</code>) to the X coordinate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2523,7 +2583,8 @@
   
   <a id="Godot_Spatial_TranslateObjectLocal_" data-uid="Godot.Spatial.TranslateObjectLocal*"></a>
   <h4 id="Godot_Spatial_TranslateObjectLocal_Godot_Vector3_" data-uid="Godot.Spatial.TranslateObjectLocal(Godot.Vector3)">TranslateObjectLocal(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the node&apos;s position by the given offset <a class="xref" href="Godot.Vector3.html">Vector3</a> in local space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2550,7 +2611,8 @@
   
   <a id="Godot_Spatial_UpdateGizmo_" data-uid="Godot.Spatial.UpdateGizmo*"></a>
   <h4 id="Godot_Spatial_UpdateGizmo" data-uid="Godot.Spatial.UpdateGizmo">UpdateGizmo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the <a class="xref" href="Godot.SpatialGizmo.html">SpatialGizmo</a> of this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,16 @@
   
   <h1 id="Godot_EditorSettings" data-uid="Godot.EditorSettings" class="text-break">Class EditorSettings
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Object that holds the project-independent editor settings. These settings are generally visible in the Editor > Editor Settings menu.</p>
+<p>Property names use slash delimiters to distinguish sections. Setting values can be of any <code>Variant</code> type. It&apos;s recommended to use <code>snake_case</code> for editor settings to be consistent with the Godot editor itself.</p>
+<p>Accessing the settings can be done using the following methods, such as:</p>
+<p><pre><code># `settings.set(&quot;some/property&quot;, value)` also works as this class overrides `_set()` internally.
+settings.set_setting(&quot;some/property&quot;,value)
+<h1 id="settingsgetquotsomepropertyquot-value-also-works-as-this-class-overrides-_get-internally"><code>settings.get(&amp;quot;some/property&amp;quot;, value)</code> also works as this class overrides <code>_get()</code> internally.</h1>
+<p>settings.get_setting(&quot;some/property&quot;)</p>
+<p>var list_of_settings = settings.get_property_list()</code></pre></p><p>
+<p>Note: This class shouldn&apos;t be instantiated directly. Instead, access the singleton using <a class="xref" href="Godot.EditorInterface.html#Godot_EditorInterface_GetEditorSettings">GetEditorSettings()</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -333,7 +342,8 @@
   
   
   <h4 id="Godot_EditorSettings_NotificationEditorSettingsChanged" data-uid="Godot.EditorSettings.NotificationEditorSettingsChanged">NotificationEditorSettingsChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Emitted after any editor setting has changed. It&apos;s used by various editor plugins to update their visuals on theme changes or logic on configuration changes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -360,7 +370,20 @@
   
   <a id="Godot_EditorSettings_AddPropertyInfo_" data-uid="Godot.EditorSettings.AddPropertyInfo*"></a>
   <h4 id="Godot_EditorSettings_AddPropertyInfo_Godot_Collections_Dictionary_" data-uid="Godot.EditorSettings.AddPropertyInfo(Godot.Collections.Dictionary)">AddPropertyInfo(Dictionary)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a custom property info to a property. The dictionary must contain:</p>
+<p>- <code>name</code>: <span class="xref">System.String</span> (the name of the property)</p>
+<p>- <code>type</code>: <span class="xref">System.Int32</span> (see <a class="xref" href="Godot.Variant.Type.html">Variant.Type</a>)</p>
+<p>- optionally <code>hint</code>: <span class="xref">System.Int32</span> (see <a class="xref" href="Godot.PropertyHint.html">PropertyHint</a>) and <code>hint_string</code>: <span class="xref">System.String</span></p>
+<p>Example:</p>
+<p><pre><code>editor_settings.set(&quot;category/property_name&quot;, 0)
+<p>var property_info = {
+&quot;name&quot;: &quot;category/property_name&quot;,
+&quot;type&quot;: TYPE_INT,
+&quot;hint&quot;: PROPERTY_HINT_ENUM,
+&quot;hint_string&quot;: &quot;one,two,three&quot;
+}</p>
+<p>editor_settings.add_property_info(property_info)</code></pre></p><p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -387,7 +410,8 @@
   
   <a id="Godot_EditorSettings_Erase_" data-uid="Godot.EditorSettings.Erase*"></a>
   <h4 id="Godot_EditorSettings_Erase_System_String_" data-uid="Godot.EditorSettings.Erase(System.String)">Erase(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Erases the setting whose name is specified by <code>property</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -414,7 +438,8 @@
   
   <a id="Godot_EditorSettings_GetFavorites_" data-uid="Godot.EditorSettings.GetFavorites*"></a>
   <h4 id="Godot_EditorSettings_GetFavorites" data-uid="Godot.EditorSettings.GetFavorites">GetFavorites()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the list of favorite files and directories for this project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -439,7 +464,8 @@
   
   <a id="Godot_EditorSettings_GetProjectMetadata_" data-uid="Godot.EditorSettings.GetProjectMetadata*"></a>
   <h4 id="Godot_EditorSettings_GetProjectMetadata_System_String_System_String_System_Object_" data-uid="Godot.EditorSettings.GetProjectMetadata(System.String,System.String,System.Object)">GetProjectMetadata(String, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns project-specific metadata for the <code>section</code> and <code>key</code> specified. If the metadata doesn&apos;t exist, <code>default</code> will be returned instead. See also <a class="xref" href="Godot.EditorSettings.html#Godot_EditorSettings_SetProjectMetadata_System_String_System_String_System_Object_">SetProjectMetadata(String, String, Object)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -491,7 +517,8 @@
   
   <a id="Godot_EditorSettings_GetProjectSettingsDir_" data-uid="Godot.EditorSettings.GetProjectSettingsDir*"></a>
   <h4 id="Godot_EditorSettings_GetProjectSettingsDir" data-uid="Godot.EditorSettings.GetProjectSettingsDir">GetProjectSettingsDir()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the project-specific settings path. Projects all have a unique subdirectory inside the settings path where project-specific settings are saved.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -516,7 +543,8 @@
   
   <a id="Godot_EditorSettings_GetRecentDirs_" data-uid="Godot.EditorSettings.GetRecentDirs*"></a>
   <h4 id="Godot_EditorSettings_GetRecentDirs" data-uid="Godot.EditorSettings.GetRecentDirs">GetRecentDirs()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the list of recently visited folders in the file dialog for this project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -541,7 +569,8 @@
   
   <a id="Godot_EditorSettings_GetSetting_" data-uid="Godot.EditorSettings.GetSetting*"></a>
   <h4 id="Godot_EditorSettings_GetSetting_System_String_" data-uid="Godot.EditorSettings.GetSetting(System.String)">GetSetting(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of the setting specified by <code>name</code>. This is equivalent to using <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Get(String)</a> on the EditorSettings instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -583,7 +612,10 @@
   
   <a id="Godot_EditorSettings_GetSettingsDir_" data-uid="Godot.EditorSettings.GetSettingsDir*"></a>
   <h4 id="Godot_EditorSettings_GetSettingsDir" data-uid="Godot.EditorSettings.GetSettingsDir">GetSettingsDir()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the global settings path for the engine. Inside this path, you can find some standard paths such as:</p>
+<p><code>settings/tmp</code> - Used for temporary storage of files</p>
+<p><code>settings/templates</code> - Where export templates are located</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -608,7 +640,8 @@
   
   <a id="Godot_EditorSettings_HasSetting_" data-uid="Godot.EditorSettings.HasSetting*"></a>
   <h4 id="Godot_EditorSettings_HasSetting_System_String_" data-uid="Godot.EditorSettings.HasSetting(System.String)">HasSetting(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the setting specified by <code>name</code> exists, <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -650,7 +683,8 @@
   
   <a id="Godot_EditorSettings_PropertyCanRevert_" data-uid="Godot.EditorSettings.PropertyCanRevert*"></a>
   <h4 id="Godot_EditorSettings_PropertyCanRevert_System_String_" data-uid="Godot.EditorSettings.PropertyCanRevert(System.String)">PropertyCanRevert(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the setting specified by <code>name</code> can have its value reverted to the default value, <code>false</code> otherwise. When this method returns <code>true</code>, a Revert button will display next to the setting in the Editor Settings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -692,7 +726,8 @@
   
   <a id="Godot_EditorSettings_PropertyGetRevert_" data-uid="Godot.EditorSettings.PropertyGetRevert*"></a>
   <h4 id="Godot_EditorSettings_PropertyGetRevert_System_String_" data-uid="Godot.EditorSettings.PropertyGetRevert(System.String)">PropertyGetRevert(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the default value of the setting specified by <code>name</code>. This is the value that would be applied when clicking the Revert button in the Editor Settings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -734,7 +769,8 @@
   
   <a id="Godot_EditorSettings_SetFavorites_" data-uid="Godot.EditorSettings.SetFavorites*"></a>
   <h4 id="Godot_EditorSettings_SetFavorites_System_String___" data-uid="Godot.EditorSettings.SetFavorites(System.String[])">SetFavorites(String[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the list of favorite files and directories for this project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -761,7 +797,8 @@
   
   <a id="Godot_EditorSettings_SetInitialValue_" data-uid="Godot.EditorSettings.SetInitialValue*"></a>
   <h4 id="Godot_EditorSettings_SetInitialValue_System_String_System_Object_System_Boolean_" data-uid="Godot.EditorSettings.SetInitialValue(System.String,System.Object,System.Boolean)">SetInitialValue(String, Object, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the initial value of the setting specified by <code>name</code> to <code>value</code>. This is used to provide a value for the Revert button in the Editor Settings. If <code>update_current</code> is true, the current value of the setting will be set to <code>value</code> as well.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -798,7 +835,8 @@
   
   <a id="Godot_EditorSettings_SetProjectMetadata_" data-uid="Godot.EditorSettings.SetProjectMetadata*"></a>
   <h4 id="Godot_EditorSettings_SetProjectMetadata_System_String_System_String_System_Object_" data-uid="Godot.EditorSettings.SetProjectMetadata(System.String,System.String,System.Object)">SetProjectMetadata(String, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets project-specific metadata with the <code>section</code>, <code>key</code> and <code>data</code> specified. This metadata is stored outside the project folder and therefore won&apos;t be checked into version control. See also <a class="xref" href="Godot.EditorSettings.html#Godot_EditorSettings_GetProjectMetadata_System_String_System_String_System_Object_">GetProjectMetadata(String, String, Object)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -835,7 +873,8 @@
   
   <a id="Godot_EditorSettings_SetRecentDirs_" data-uid="Godot.EditorSettings.SetRecentDirs*"></a>
   <h4 id="Godot_EditorSettings_SetRecentDirs_System_String___" data-uid="Godot.EditorSettings.SetRecentDirs(System.String[])">SetRecentDirs(String[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the list of recently visited folders in the file dialog for this project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -862,7 +901,8 @@
   
   <a id="Godot_EditorSettings_SetSetting_" data-uid="Godot.EditorSettings.SetSetting*"></a>
   <h4 id="Godot_EditorSettings_SetSetting_System_String_System_Object_" data-uid="Godot.EditorSettings.SetSetting(System.String,System.Object)">SetSetting(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <code>value</code> of the setting specified by <code>name</code>. This is equivalent to using <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Set(String, Object)</a> on the EditorSettings instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

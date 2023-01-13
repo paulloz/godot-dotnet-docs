@@ -83,7 +83,19 @@
   
   <h1 id="Godot_OpenSimplexNoise" data-uid="Godot.OpenSimplexNoise" class="text-break">Class OpenSimplexNoise
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This resource allows you to configure and sample a fractal noise space. Here is a brief usage example that configures an OpenSimplexNoise and gets samples at various positions and dimensions:</p>
+<p><pre><code>var noise = OpenSimplexNoise.new()
+<h1 id="configure">Configure</h1>
+<p>noise.seed = randi()
+noise.octaves = 4
+noise.period = 20.0
+noise.persistence = 0.8</p>
+<h1 id="sample">Sample</h1>
+<p>print(&quot;Values:&quot;)
+print(noise.get_noise_2d(1.0, 1.0))
+print(noise.get_noise_3d(0.5, 3.0, 15.0))
+print(noise.get_noise_4d(0.5, 1.9, 4.7, 0.0))</code></pre></p><p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -346,7 +358,8 @@
   
   <a id="Godot_OpenSimplexNoise_Lacunarity_" data-uid="Godot.OpenSimplexNoise.Lacunarity*"></a>
   <h4 id="Godot_OpenSimplexNoise_Lacunarity" data-uid="Godot.OpenSimplexNoise.Lacunarity">Lacunarity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Difference in period between <a class="xref" href="Godot.OpenSimplexNoise.html#Godot_OpenSimplexNoise_Octaves">Octaves</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +384,9 @@
   
   <a id="Godot_OpenSimplexNoise_Octaves_" data-uid="Godot.OpenSimplexNoise.Octaves*"></a>
   <h4 id="Godot_OpenSimplexNoise_Octaves" data-uid="Godot.OpenSimplexNoise.Octaves">Octaves</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of OpenSimplex noise layers that are sampled to get the fractal noise. Higher values result in more detailed noise but take more time to generate.</p>
+<p>Note: The maximum allowed value is 9.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +411,8 @@
   
   <a id="Godot_OpenSimplexNoise_Period_" data-uid="Godot.OpenSimplexNoise.Period*"></a>
   <h4 id="Godot_OpenSimplexNoise_Period" data-uid="Godot.OpenSimplexNoise.Period">Period</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Period of the base octave. A lower period results in a higher-frequency noise (more value changes across the same distance).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +437,8 @@
   
   <a id="Godot_OpenSimplexNoise_Persistence_" data-uid="Godot.OpenSimplexNoise.Persistence*"></a>
   <h4 id="Godot_OpenSimplexNoise_Persistence" data-uid="Godot.OpenSimplexNoise.Persistence">Persistence</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Contribution factor of the different octaves. A <code>persistence</code> value of 1 means all the octaves have the same contribution, a value of 0.5 means each octave contributes half as much as the previous one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -446,7 +463,8 @@
   
   <a id="Godot_OpenSimplexNoise_Seed_" data-uid="Godot.OpenSimplexNoise.Seed*"></a>
   <h4 id="Godot_OpenSimplexNoise_Seed" data-uid="Godot.OpenSimplexNoise.Seed">Seed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Seed used to generate random values, different seeds will generate different noise maps.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -473,7 +491,8 @@
   
   <a id="Godot_OpenSimplexNoise_GetImage_" data-uid="Godot.OpenSimplexNoise.GetImage*"></a>
   <h4 id="Godot_OpenSimplexNoise_GetImage_System_Int32_System_Int32_System_Nullable_Godot_Vector2__" data-uid="Godot.OpenSimplexNoise.GetImage(System.Int32,System.Int32,System.Nullable{Godot.Vector2})">GetImage(Int32, Int32, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generate a noise image in <a class="xref" href="Godot.Image.Format.html#Godot_Image_Format_L8">L8</a> format with the requested <code>width</code> and <code>height</code>, based on the current noise parameters. If <code>noise_offset</code> is specified, then the offset value is used as the coordinates of the top-left corner of the generated noise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -502,7 +521,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">noiseOffset</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -550,7 +570,9 @@
   
   <a id="Godot_OpenSimplexNoise_GetNoise1d_" data-uid="Godot.OpenSimplexNoise.GetNoise1d*"></a>
   <h4 id="Godot_OpenSimplexNoise_GetNoise1d_System_Single_" data-uid="Godot.OpenSimplexNoise.GetNoise1d(System.Single)">GetNoise1d(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the 1D noise value <code>[-1,1]</code> at the given x-coordinate.</p>
+<p>Note: This method actually returns the 2D noise value <code>[-1,1]</code> with fixed y-coordinate value 0.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -592,7 +614,8 @@
   
   <a id="Godot_OpenSimplexNoise_GetNoise2d_" data-uid="Godot.OpenSimplexNoise.GetNoise2d*"></a>
   <h4 id="Godot_OpenSimplexNoise_GetNoise2d_System_Single_System_Single_" data-uid="Godot.OpenSimplexNoise.GetNoise2d(System.Single,System.Single)">GetNoise2d(Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the 2D noise value <code>[-1,1]</code> at the given position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -639,7 +662,8 @@
   
   <a id="Godot_OpenSimplexNoise_GetNoise2dv_" data-uid="Godot.OpenSimplexNoise.GetNoise2dv*"></a>
   <h4 id="Godot_OpenSimplexNoise_GetNoise2dv_Godot_Vector2_" data-uid="Godot.OpenSimplexNoise.GetNoise2dv(Godot.Vector2)">GetNoise2dv(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the 2D noise value <code>[-1,1]</code> at the given position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -681,7 +705,8 @@
   
   <a id="Godot_OpenSimplexNoise_GetNoise3d_" data-uid="Godot.OpenSimplexNoise.GetNoise3d*"></a>
   <h4 id="Godot_OpenSimplexNoise_GetNoise3d_System_Single_System_Single_System_Single_" data-uid="Godot.OpenSimplexNoise.GetNoise3d(System.Single,System.Single,System.Single)">GetNoise3d(Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the 3D noise value <code>[-1,1]</code> at the given position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -733,7 +758,8 @@
   
   <a id="Godot_OpenSimplexNoise_GetNoise3dv_" data-uid="Godot.OpenSimplexNoise.GetNoise3dv*"></a>
   <h4 id="Godot_OpenSimplexNoise_GetNoise3dv_Godot_Vector3_" data-uid="Godot.OpenSimplexNoise.GetNoise3dv(Godot.Vector3)">GetNoise3dv(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the 3D noise value <code>[-1,1]</code> at the given position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -775,7 +801,8 @@
   
   <a id="Godot_OpenSimplexNoise_GetNoise4d_" data-uid="Godot.OpenSimplexNoise.GetNoise4d*"></a>
   <h4 id="Godot_OpenSimplexNoise_GetNoise4d_System_Single_System_Single_System_Single_System_Single_" data-uid="Godot.OpenSimplexNoise.GetNoise4d(System.Single,System.Single,System.Single,System.Single)">GetNoise4d(Single, Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the 4D noise value <code>[-1,1]</code> at the given position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -907,7 +934,9 @@
   
   <a id="Godot_OpenSimplexNoise_GetSeamlessImage_" data-uid="Godot.OpenSimplexNoise.GetSeamlessImage*"></a>
   <h4 id="Godot_OpenSimplexNoise_GetSeamlessImage_System_Int32_" data-uid="Godot.OpenSimplexNoise.GetSeamlessImage(System.Int32)">GetSeamlessImage(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generate a tileable noise image in <a class="xref" href="Godot.Image.Format.html#Godot_Image_Format_L8">L8</a> format, based on the current noise parameters. Generated seamless images are always square (<code>size</code> × <code>size</code>).</p>
+<p>Note: Seamless noise has a lower contrast compared to non-seamless noise. This is due to the way noise uses higher dimensions for generating seamless noise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

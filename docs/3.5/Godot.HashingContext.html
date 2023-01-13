@@ -83,7 +83,27 @@
   
   <h1 id="Godot_HashingContext" data-uid="Godot.HashingContext" class="text-break">Class HashingContext
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The HashingContext class provides an interface for computing cryptographic hashes over multiple iterations. This is useful for example when computing hashes of big files (so you don&apos;t have to load them all in memory), network streams, and data streams in general (so you don&apos;t have to hold buffers).</p>
+<p>The <a class="xref" href="Godot.HashingContext.HashType.html">HashingContext.HashType</a> enum shows the supported hashing algorithms.</p>
+<p><pre><code>const CHUNK_SIZE = 1024
+<p>func hash_file(path):
+var ctx = HashingContext.new()
+var file = File.new()
+# Start a SHA-256 context.
+ctx.start(HashingContext.HASH_SHA256)
+# Check that file exists.
+if not file.file_exists(path):
+return
+# Open the file to hash.
+file.open(path, File.READ)
+# Update the context after reading each chunk.
+while not file.eof_reached():
+ctx.update(file.get_buffer(CHUNK_SIZE))
+# Get the computed hash.
+var res = ctx.finish()
+# Print the result as hex string and array.
+printt(res.hex_encode(), Array(res))</code></pre></p><p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +317,8 @@
   
   <a id="Godot_HashingContext_Finish_" data-uid="Godot.HashingContext.Finish*"></a>
   <h4 id="Godot_HashingContext_Finish" data-uid="Godot.HashingContext.Finish">Finish()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Closes the current context, and return the computed hash.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +343,8 @@
   
   <a id="Godot_HashingContext_Start_" data-uid="Godot.HashingContext.Start*"></a>
   <h4 id="Godot_HashingContext_Start_Godot_HashingContext_HashType_" data-uid="Godot.HashingContext.Start(Godot.HashingContext.HashType)">Start(HashingContext.HashType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Starts a new hash computation of the given <code>type</code> (e.g. <a class="xref" href="Godot.HashingContext.HashType.html#Godot_HashingContext_HashType_Sha256">Sha256</a> to start computation of a SHA-256).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -364,7 +386,8 @@
   
   <a id="Godot_HashingContext_Update_" data-uid="Godot.HashingContext.Update*"></a>
   <h4 id="Godot_HashingContext_Update_System_Byte___" data-uid="Godot.HashingContext.Update(System.Byte[])">Update(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the computation with the given <code>chunk</code> of data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

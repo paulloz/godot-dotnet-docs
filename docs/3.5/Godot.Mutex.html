@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Mutex" data-uid="Godot.Mutex" class="text-break">Class Mutex
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A synchronization mutex (mutual exclusion). This is used to synchronize multiple <a class="xref" href="Godot.Thread.html">Thread</a>s, and is equivalent to a binary <a class="xref" href="Godot.Semaphore.html">Semaphore</a>. It guarantees that only one thread can ever acquire the lock at a time. A mutex can be used to protect a critical section; however, be careful to avoid deadlocks.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +298,9 @@
   
   <a id="Godot_Mutex_Lock_" data-uid="Godot.Mutex.Lock*"></a>
   <h4 id="Godot_Mutex_Lock" data-uid="Godot.Mutex.Lock">Lock()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Locks this <a class="xref" href="Godot.Mutex.html">Mutex</a>, blocks until it is unlocked by the current owner.</p>
+<p>Note: This function returns without blocking if the thread already has ownership of the mutex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -307,7 +310,9 @@
   
   <a id="Godot_Mutex_TryLock_" data-uid="Godot.Mutex.TryLock*"></a>
   <h4 id="Godot_Mutex_TryLock" data-uid="Godot.Mutex.TryLock">TryLock()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tries locking this <a class="xref" href="Godot.Mutex.html">Mutex</a>, but does not block. Returns <code>OK</code> on success, <code>ERR_BUSY</code> otherwise.</p>
+<p>Note: This function returns <code>OK</code> if the thread already has ownership of the mutex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -332,7 +337,9 @@
   
   <a id="Godot_Mutex_Unlock_" data-uid="Godot.Mutex.Unlock*"></a>
   <h4 id="Godot_Mutex_Unlock" data-uid="Godot.Mutex.Unlock">Unlock()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unlocks this <a class="xref" href="Godot.Mutex.html">Mutex</a>, leaving it to other threads.</p>
+<p>Note: If a thread called <a class="xref" href="Godot.Mutex.html#Godot_Mutex_Lock">Lock()</a> or <a class="xref" href="Godot.Mutex.html#Godot_Mutex_TryLock">TryLock()</a> multiple times while already having ownership of the mutex, it must also call <a class="xref" href="Godot.Mutex.html#Godot_Mutex_Unlock">Unlock()</a> the same number of times in order to unlock it correctly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

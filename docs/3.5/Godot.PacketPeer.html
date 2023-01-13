@@ -83,7 +83,8 @@
   
   <h1 id="Godot_PacketPeer" data-uid="Godot.PacketPeer" class="text-break">Class PacketPeer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>PacketPeer is an abstraction and base class for packet-based protocols (such as UDP). It provides an API for sending and receiving packets both as raw data or variables. This makes it easy to transfer data over a protocol, without having to encode data as low-level bytes or having to worry about network ordering.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -292,7 +293,10 @@
   
   <a id="Godot_PacketPeer_AllowObjectDecoding_" data-uid="Godot.PacketPeer.AllowObjectDecoding*"></a>
   <h4 id="Godot_PacketPeer_AllowObjectDecoding" data-uid="Godot.PacketPeer.AllowObjectDecoding">AllowObjectDecoding</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated. Use <code>get_var</code> and <code>put_var</code> parameters instead.</p>
+<p>If <code>true</code>, the PacketPeer will allow encoding and decoding of object via <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetVar_System_Boolean_">GetVar(Boolean)</a> and <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_PutVar_System_Object_System_Boolean_">PutVar(Object, Boolean)</a>.</p>
+<p>Warning: Deserialized objects can contain code which gets executed. Do not use this option if the serialized object comes from untrusted sources to avoid potential security threats such as remote code execution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -317,7 +321,9 @@
   
   <a id="Godot_PacketPeer_EncodeBufferMaxSize_" data-uid="Godot.PacketPeer.EncodeBufferMaxSize*"></a>
   <h4 id="Godot_PacketPeer_EncodeBufferMaxSize" data-uid="Godot.PacketPeer.EncodeBufferMaxSize">EncodeBufferMaxSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum buffer size allowed when encoding <code>Variant</code>s. Raise this value to support heavier memory allocations.</p>
+<p>The <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_PutVar_System_Object_System_Boolean_">PutVar(Object, Boolean)</a> method allocates memory on the stack, and the buffer used will grow automatically to the closest power of two to match the size of the <code>Variant</code>. If the <code>Variant</code> is bigger than <code>encode_buffer_max_size</code>, the method will error out with <code>ERR_OUT_OF_MEMORY</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,7 +350,8 @@
   
   <a id="Godot_PacketPeer_GetAvailablePacketCount_" data-uid="Godot.PacketPeer.GetAvailablePacketCount*"></a>
   <h4 id="Godot_PacketPeer_GetAvailablePacketCount" data-uid="Godot.PacketPeer.GetAvailablePacketCount">GetAvailablePacketCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of packets currently available in the ring-buffer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -394,7 +401,8 @@
   
   <a id="Godot_PacketPeer_GetPacket_" data-uid="Godot.PacketPeer.GetPacket*"></a>
   <h4 id="Godot_PacketPeer_GetPacket" data-uid="Godot.PacketPeer.GetPacket">GetPacket()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a raw packet.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -419,7 +427,8 @@
   
   <a id="Godot_PacketPeer_GetPacketError_" data-uid="Godot.PacketPeer.GetPacketError*"></a>
   <h4 id="Godot_PacketPeer_GetPacketError" data-uid="Godot.PacketPeer.GetPacketError">GetPacketError()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the error state of the last packet received (via <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetPacket">GetPacket()</a> and <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetVar_System_Boolean_">GetVar(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -444,7 +453,9 @@
   
   <a id="Godot_PacketPeer_GetVar_" data-uid="Godot.PacketPeer.GetVar*"></a>
   <h4 id="Godot_PacketPeer_GetVar_System_Boolean_" data-uid="Godot.PacketPeer.GetVar(System.Boolean)">GetVar(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a Variant. If <code>allow_objects</code> (or <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_AllowObjectDecoding">AllowObjectDecoding</a>) is <code>true</code>, decoding objects is allowed.</p>
+<p>Warning: Deserialized objects can contain code which gets executed. Do not use this option if the serialized object comes from untrusted sources to avoid potential security threats such as remote code execution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -511,7 +522,8 @@
   
   <a id="Godot_PacketPeer_PutPacket_" data-uid="Godot.PacketPeer.PutPacket*"></a>
   <h4 id="Godot_PacketPeer_PutPacket_System_Byte___" data-uid="Godot.PacketPeer.PutPacket(System.Byte[])">PutPacket(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a raw packet.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -553,7 +565,8 @@
   
   <a id="Godot_PacketPeer_PutVar_" data-uid="Godot.PacketPeer.PutVar*"></a>
   <h4 id="Godot_PacketPeer_PutVar_System_Object_System_Boolean_" data-uid="Godot.PacketPeer.PutVar(System.Object,System.Boolean)">PutVar(Object, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a <code>Variant</code> as a packet. If <code>full_objects</code> (or <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_AllowObjectDecoding">AllowObjectDecoding</a>) is <code>true</code>, encoding objects is allowed (and can potentially include code).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,15 @@
   
   <h1 id="Godot_EditorScript" data-uid="Godot.EditorScript" class="text-break">Class EditorScript
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Scripts extending this class and implementing its <a class="xref" href="Godot.EditorScript.html#Godot_EditorScript__Run">_Run()</a> method can be executed from the Script Editor&apos;s File > Run menu option (or by pressing <code>Ctrl+Shift+X</code>) while the editor is running. This is useful for adding custom in-editor functionality to Godot. For more complex additions, consider using <a class="xref" href="Godot.EditorPlugin.html">EditorPlugin</a>s instead.</p>
+<p>Note: Extending scripts need to have <code>tool</code> mode enabled.</p>
+<p>Example script:</p>
+<p><pre><code>tool
+extends EditorScript
+<p>func _run():
+print(&quot;Hello from the Godot Editor!&quot;)</code></pre></p><p>
+<p>Note: The script is run in the Editor context, which means the output is visible in the console window started with the Editor (stdout) instead of the usual Godot Output dock.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +305,8 @@
   
   <a id="Godot_EditorScript__Run_" data-uid="Godot.EditorScript._Run*"></a>
   <h4 id="Godot_EditorScript__Run" data-uid="Godot.EditorScript._Run">_Run()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method is executed by the Editor when File > Run is used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -307,7 +316,9 @@
   
   <a id="Godot_EditorScript_AddRootNode_" data-uid="Godot.EditorScript.AddRootNode*"></a>
   <h4 id="Godot_EditorScript_AddRootNode_Godot_Node_" data-uid="Godot.EditorScript.AddRootNode(Godot.Node)">AddRootNode(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds <code>node</code> as a child of the root node in the editor context.</p>
+<p>Warning: The implementation of this method is currently disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -334,7 +345,8 @@
   
   <a id="Godot_EditorScript_GetEditorInterface_" data-uid="Godot.EditorScript.GetEditorInterface*"></a>
   <h4 id="Godot_EditorScript_GetEditorInterface" data-uid="Godot.EditorScript.GetEditorInterface">GetEditorInterface()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.EditorInterface.html">EditorInterface</a> singleton instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -359,7 +371,8 @@
   
   <a id="Godot_EditorScript_GetScene_" data-uid="Godot.EditorScript.GetScene*"></a>
   <h4 id="Godot_EditorScript_GetScene" data-uid="Godot.EditorScript.GetScene">GetScene()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the Editor&apos;s currently active scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

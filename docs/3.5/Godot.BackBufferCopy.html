@@ -83,7 +83,9 @@
   
   <h1 id="Godot_BackBufferCopy" data-uid="Godot.BackBufferCopy" class="text-break">Class BackBufferCopy
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Node for back-buffering the currently-displayed screen. The region defined in the BackBufferCopy node is buffered with the content of the screen it covers, or the entire screen according to the copy mode set. Use the <code>texture(SCREEN_TEXTURE, ...)</code> function in your shader scripts to access the buffer.</p>
+<p>Note: Since this node inherits from <a class="xref" href="Godot.Node2D.html">Node2D</a> (and not <a class="xref" href="Godot.Control.html">Control</a>), anchors and margins won&apos;t apply to child <a class="xref" href="Godot.Control.html">Control</a>-derived nodes. This can be problematic when resizing the window. To avoid this, add <a class="xref" href="Godot.Control.html">Control</a>-derived nodes as siblings to the BackBufferCopy node instead of adding them as children.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1114,8 @@
   
   <a id="Godot_BackBufferCopy_CopyMode_" data-uid="Godot.BackBufferCopy.CopyMode*"></a>
   <h4 id="Godot_BackBufferCopy_CopyMode" data-uid="Godot.BackBufferCopy.CopyMode">CopyMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Buffer mode. See <a class="xref" href="Godot.BackBufferCopy.CopyModeEnum.html">BackBufferCopy.CopyModeEnum</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1137,7 +1140,8 @@
   
   <a id="Godot_BackBufferCopy_Rect_" data-uid="Godot.BackBufferCopy.Rect*"></a>
   <h4 id="Godot_BackBufferCopy_Rect" data-uid="Godot.BackBufferCopy.Rect">Rect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The area covered by the BackBufferCopy. Only used if <a class="xref" href="Godot.BackBufferCopy.html#Godot_BackBufferCopy_CopyMode">CopyMode</a> is <a class="xref" href="Godot.BackBufferCopy.CopyModeEnum.html#Godot_BackBufferCopy_CopyModeEnum_Rect">Rect</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

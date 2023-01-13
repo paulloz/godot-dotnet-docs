@@ -83,7 +83,10 @@
   
   <h1 id="Godot_AnimationTreePlayer" data-uid="Godot.AnimationTreePlayer" class="text-break">Class AnimationTreePlayer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Deprecated. A node graph tool for blending multiple animations bound to an <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a>. Especially useful for animating characters or other skeleton-based rigs. It can combine several animations to form a desired pose.</p>
+<p>It takes <a class="xref" href="Godot.Animation.html">Animation</a>s from an <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> node and mixes them depending on the graph.</p>
+<p>See <a class="xref" href="Godot.AnimationTree.html">AnimationTree</a> for a more full-featured replacement of this node.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -753,7 +756,8 @@
   
   <a id="Godot_AnimationTreePlayer_Active_" data-uid="Godot.AnimationTreePlayer.Active*"></a>
   <h4 id="Godot_AnimationTreePlayer_Active" data-uid="Godot.AnimationTreePlayer.Active">Active</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the <a class="xref" href="Godot.AnimationTreePlayer.html">AnimationTreePlayer</a> is able to play animations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -778,7 +782,9 @@
   
   <a id="Godot_AnimationTreePlayer_BasePath_" data-uid="Godot.AnimationTreePlayer.BasePath*"></a>
   <h4 id="Godot_AnimationTreePlayer_BasePath" data-uid="Godot.AnimationTreePlayer.BasePath">BasePath</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node from which to relatively access other nodes.</p>
+<p>It accesses the bones, so it should point to the same node the <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> would point its Root Node at.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -803,7 +809,9 @@
   
   <a id="Godot_AnimationTreePlayer_MasterPlayer_" data-uid="Godot.AnimationTreePlayer.MasterPlayer*"></a>
   <h4 id="Godot_AnimationTreePlayer_MasterPlayer" data-uid="Godot.AnimationTreePlayer.MasterPlayer">MasterPlayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The path to the <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> from which this <a class="xref" href="Godot.AnimationTreePlayer.html">AnimationTreePlayer</a> binds animations to animation nodes.</p>
+<p>Once set, <a class="xref" href="Godot.Animation.html">Animation</a> nodes can be added to the <a class="xref" href="Godot.AnimationTreePlayer.html">AnimationTreePlayer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -828,7 +836,8 @@
   
   <a id="Godot_AnimationTreePlayer_PlaybackProcessMode_" data-uid="Godot.AnimationTreePlayer.PlaybackProcessMode*"></a>
   <h4 id="Godot_AnimationTreePlayer_PlaybackProcessMode" data-uid="Godot.AnimationTreePlayer.PlaybackProcessMode">PlaybackProcessMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The thread in which to update animations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -855,7 +864,8 @@
   
   <a id="Godot_AnimationTreePlayer_AddNode_" data-uid="Godot.AnimationTreePlayer.AddNode*"></a>
   <h4 id="Godot_AnimationTreePlayer_AddNode_Godot_AnimationTreePlayer_NodeType_System_String_" data-uid="Godot.AnimationTreePlayer.AddNode(Godot.AnimationTreePlayer.NodeType,System.String)">AddNode(AnimationTreePlayer.NodeType, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>type</code> node to the graph with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -887,7 +897,8 @@
   
   <a id="Godot_AnimationTreePlayer_Advance_" data-uid="Godot.AnimationTreePlayer.Advance*"></a>
   <h4 id="Godot_AnimationTreePlayer_Advance_System_Single_" data-uid="Godot.AnimationTreePlayer.Advance(System.Single)">Advance(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Shifts position in the animation timeline. <code>delta</code> is the time in seconds to shift. Events between the current frame and <code>delta</code> are handled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -914,7 +925,8 @@
   
   <a id="Godot_AnimationTreePlayer_AnimationNodeGetAnimation_" data-uid="Godot.AnimationTreePlayer.AnimationNodeGetAnimation*"></a>
   <h4 id="Godot_AnimationTreePlayer_AnimationNodeGetAnimation_System_String_" data-uid="Godot.AnimationTreePlayer.AnimationNodeGetAnimation(System.String)">AnimationNodeGetAnimation(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a>&apos;s <a class="xref" href="Godot.Animation.html">Animation</a> bound to the <a class="xref" href="Godot.AnimationTreePlayer.html">AnimationTreePlayer</a>&apos;s animation node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -956,7 +968,8 @@
   
   <a id="Godot_AnimationTreePlayer_AnimationNodeGetMasterAnimation_" data-uid="Godot.AnimationTreePlayer.AnimationNodeGetMasterAnimation*"></a>
   <h4 id="Godot_AnimationTreePlayer_AnimationNodeGetMasterAnimation_System_String_" data-uid="Godot.AnimationTreePlayer.AnimationNodeGetMasterAnimation(System.String)">AnimationNodeGetMasterAnimation(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of the <a class="xref" href="Godot.AnimationTreePlayer.html#Godot_AnimationTreePlayer_MasterPlayer">MasterPlayer</a>&apos;s <a class="xref" href="Godot.Animation.html">Animation</a> bound to this animation node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -998,7 +1011,8 @@
   
   <a id="Godot_AnimationTreePlayer_AnimationNodeGetPosition_" data-uid="Godot.AnimationTreePlayer.AnimationNodeGetPosition*"></a>
   <h4 id="Godot_AnimationTreePlayer_AnimationNodeGetPosition_System_String_" data-uid="Godot.AnimationTreePlayer.AnimationNodeGetPosition(System.String)">AnimationNodeGetPosition(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the absolute playback timestamp of the animation node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1040,7 +1054,8 @@
   
   <a id="Godot_AnimationTreePlayer_AnimationNodeSetAnimation_" data-uid="Godot.AnimationTreePlayer.AnimationNodeSetAnimation*"></a>
   <h4 id="Godot_AnimationTreePlayer_AnimationNodeSetAnimation_System_String_Godot_Animation_" data-uid="Godot.AnimationTreePlayer.AnimationNodeSetAnimation(System.String,Godot.Animation)">AnimationNodeSetAnimation(String, Animation)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Binds a new <a class="xref" href="Godot.Animation.html">Animation</a> from the <a class="xref" href="Godot.AnimationTreePlayer.html#Godot_AnimationTreePlayer_MasterPlayer">MasterPlayer</a> to the <a class="xref" href="Godot.AnimationTreePlayer.html">AnimationTreePlayer</a>&apos;s animation node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1072,7 +1087,8 @@
   
   <a id="Godot_AnimationTreePlayer_AnimationNodeSetFilterPath_" data-uid="Godot.AnimationTreePlayer.AnimationNodeSetFilterPath*"></a>
   <h4 id="Godot_AnimationTreePlayer_AnimationNodeSetFilterPath_System_String_Godot_NodePath_System_Boolean_" data-uid="Godot.AnimationTreePlayer.AnimationNodeSetFilterPath(System.String,Godot.NodePath,System.Boolean)">AnimationNodeSetFilterPath(String, NodePath, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>enable</code> is <code>true</code>, the animation node with ID <code>id</code> turns off the track modifying the property at <code>path</code>. The modified node&apos;s children continue to animate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1109,7 +1125,8 @@
   
   <a id="Godot_AnimationTreePlayer_AnimationNodeSetMasterAnimation_" data-uid="Godot.AnimationTreePlayer.AnimationNodeSetMasterAnimation*"></a>
   <h4 id="Godot_AnimationTreePlayer_AnimationNodeSetMasterAnimation_System_String_System_String_" data-uid="Godot.AnimationTreePlayer.AnimationNodeSetMasterAnimation(System.String,System.String)">AnimationNodeSetMasterAnimation(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Binds the <a class="xref" href="Godot.Animation.html">Animation</a> named <code>source</code> from <a class="xref" href="Godot.AnimationTreePlayer.html#Godot_AnimationTreePlayer_MasterPlayer">MasterPlayer</a> to the animation node <code>id</code>. Recalculates caches.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1141,7 +1158,8 @@
   
   <a id="Godot_AnimationTreePlayer_AreNodesConnected_" data-uid="Godot.AnimationTreePlayer.AreNodesConnected*"></a>
   <h4 id="Godot_AnimationTreePlayer_AreNodesConnected_System_String_System_String_System_Int32_" data-uid="Godot.AnimationTreePlayer.AreNodesConnected(System.String,System.String,System.Int32)">AreNodesConnected(String, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether node <code>id</code> and <code>dst_id</code> are connected at the specified slot.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1193,7 +1211,8 @@
   
   <a id="Godot_AnimationTreePlayer_Blend2NodeGetAmount_" data-uid="Godot.AnimationTreePlayer.Blend2NodeGetAmount*"></a>
   <h4 id="Godot_AnimationTreePlayer_Blend2NodeGetAmount_System_String_" data-uid="Godot.AnimationTreePlayer.Blend2NodeGetAmount(System.String)">Blend2NodeGetAmount(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the blend amount of a Blend2 node given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1235,7 +1254,10 @@
   
   <a id="Godot_AnimationTreePlayer_Blend2NodeSetAmount_" data-uid="Godot.AnimationTreePlayer.Blend2NodeSetAmount*"></a>
   <h4 id="Godot_AnimationTreePlayer_Blend2NodeSetAmount_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.Blend2NodeSetAmount(System.String,System.Single)">Blend2NodeSetAmount(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the blend amount of a Blend2 node given its name and value.</p>
+<p>A Blend2 node blends two animations (A and B) with the amount between 0 and 1.</p>
+<p>At 0, output is input A. Towards 1, the influence of A gets lessened, the influence of B gets raised. At 1, output is input B.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1267,7 +1289,8 @@
   
   <a id="Godot_AnimationTreePlayer_Blend2NodeSetFilterPath_" data-uid="Godot.AnimationTreePlayer.Blend2NodeSetFilterPath*"></a>
   <h4 id="Godot_AnimationTreePlayer_Blend2NodeSetFilterPath_System_String_Godot_NodePath_System_Boolean_" data-uid="Godot.AnimationTreePlayer.Blend2NodeSetFilterPath(System.String,Godot.NodePath,System.Boolean)">Blend2NodeSetFilterPath(String, NodePath, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>enable</code> is <code>true</code>, the Blend2 node with name <code>id</code> turns off the track modifying the property at <code>path</code>. The modified node&apos;s children continue to animate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1304,7 +1327,8 @@
   
   <a id="Godot_AnimationTreePlayer_Blend3NodeGetAmount_" data-uid="Godot.AnimationTreePlayer.Blend3NodeGetAmount*"></a>
   <h4 id="Godot_AnimationTreePlayer_Blend3NodeGetAmount_System_String_" data-uid="Godot.AnimationTreePlayer.Blend3NodeGetAmount(System.String)">Blend3NodeGetAmount(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the blend amount of a Blend3 node given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1346,7 +1370,10 @@
   
   <a id="Godot_AnimationTreePlayer_Blend3NodeSetAmount_" data-uid="Godot.AnimationTreePlayer.Blend3NodeSetAmount*"></a>
   <h4 id="Godot_AnimationTreePlayer_Blend3NodeSetAmount_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.Blend3NodeSetAmount(System.String,System.Single)">Blend3NodeSetAmount(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the blend amount of a Blend3 node given its name and value.</p>
+<p>A Blend3 Node blends three animations (A, B-, B+) with the amount between -1 and 1.</p>
+<p>At -1, output is input B-. From -1 to 0, the influence of B- gets lessened, the influence of A gets raised and the influence of B+ is 0. At 0, output is input A. From 0 to 1, the influence of A gets lessened, the influence of B+ gets raised and the influence of B+ is 0. At 1, output is input B+.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1378,7 +1405,8 @@
   
   <a id="Godot_AnimationTreePlayer_Blend4NodeGetAmount_" data-uid="Godot.AnimationTreePlayer.Blend4NodeGetAmount*"></a>
   <h4 id="Godot_AnimationTreePlayer_Blend4NodeGetAmount_System_String_" data-uid="Godot.AnimationTreePlayer.Blend4NodeGetAmount(System.String)">Blend4NodeGetAmount(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the blend amount of a Blend4 node given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1420,7 +1448,10 @@
   
   <a id="Godot_AnimationTreePlayer_Blend4NodeSetAmount_" data-uid="Godot.AnimationTreePlayer.Blend4NodeSetAmount*"></a>
   <h4 id="Godot_AnimationTreePlayer_Blend4NodeSetAmount_System_String_Godot_Vector2_" data-uid="Godot.AnimationTreePlayer.Blend4NodeSetAmount(System.String,Godot.Vector2)">Blend4NodeSetAmount(String, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the blend amount of a Blend4 node given its name and value.</p>
+<p>A Blend4 Node blends two pairs of animations.</p>
+<p>The two pairs are blended like Blend2 and then added together.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1452,7 +1483,8 @@
   
   <a id="Godot_AnimationTreePlayer_ConnectNodes_" data-uid="Godot.AnimationTreePlayer.ConnectNodes*"></a>
   <h4 id="Godot_AnimationTreePlayer_ConnectNodes_System_String_System_String_System_Int32_" data-uid="Godot.AnimationTreePlayer.ConnectNodes(System.String,System.String,System.Int32)">ConnectNodes(String, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connects node <code>id</code> to <code>dst_id</code> at the specified input slot.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1504,7 +1536,8 @@
   
   <a id="Godot_AnimationTreePlayer_DisconnectNodes_" data-uid="Godot.AnimationTreePlayer.DisconnectNodes*"></a>
   <h4 id="Godot_AnimationTreePlayer_DisconnectNodes_System_String_System_Int32_" data-uid="Godot.AnimationTreePlayer.DisconnectNodes(System.String,System.Int32)">DisconnectNodes(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnects nodes connected to <code>id</code> at the specified input slot.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1611,7 +1644,8 @@
   
   <a id="Godot_AnimationTreePlayer_GetNodeList_" data-uid="Godot.AnimationTreePlayer.GetNodeList*"></a>
   <h4 id="Godot_AnimationTreePlayer_GetNodeList" data-uid="Godot.AnimationTreePlayer.GetNodeList">GetNodeList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.String</span> containing the name of all nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1661,7 +1695,8 @@
   
   <a id="Godot_AnimationTreePlayer_MixNodeGetAmount_" data-uid="Godot.AnimationTreePlayer.MixNodeGetAmount*"></a>
   <h4 id="Godot_AnimationTreePlayer_MixNodeGetAmount_System_String_" data-uid="Godot.AnimationTreePlayer.MixNodeGetAmount(System.String)">MixNodeGetAmount(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the mix amount of a Mix node given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1703,7 +1738,9 @@
   
   <a id="Godot_AnimationTreePlayer_MixNodeSetAmount_" data-uid="Godot.AnimationTreePlayer.MixNodeSetAmount*"></a>
   <h4 id="Godot_AnimationTreePlayer_MixNodeSetAmount_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.MixNodeSetAmount(System.String,System.Single)">MixNodeSetAmount(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the mix amount of a Mix node given its name and value.</p>
+<p>A Mix node adds input b to input a by the amount given by ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1735,7 +1772,8 @@
   
   <a id="Godot_AnimationTreePlayer_NodeExists_" data-uid="Godot.AnimationTreePlayer.NodeExists*"></a>
   <h4 id="Godot_AnimationTreePlayer_NodeExists_System_String_" data-uid="Godot.AnimationTreePlayer.NodeExists(System.String)">NodeExists(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check if a node exists (by name).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1777,7 +1815,8 @@
   
   <a id="Godot_AnimationTreePlayer_NodeGetInputCount_" data-uid="Godot.AnimationTreePlayer.NodeGetInputCount*"></a>
   <h4 id="Godot_AnimationTreePlayer_NodeGetInputCount_System_String_" data-uid="Godot.AnimationTreePlayer.NodeGetInputCount(System.String)">NodeGetInputCount(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the input count for a given node. Different types of nodes have different amount of inputs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1819,7 +1858,8 @@
   
   <a id="Godot_AnimationTreePlayer_NodeGetInputSource_" data-uid="Godot.AnimationTreePlayer.NodeGetInputSource*"></a>
   <h4 id="Godot_AnimationTreePlayer_NodeGetInputSource_System_String_System_Int32_" data-uid="Godot.AnimationTreePlayer.NodeGetInputSource(System.String,System.Int32)">NodeGetInputSource(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the input source for a given node input.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1866,7 +1906,8 @@
   
   <a id="Godot_AnimationTreePlayer_NodeGetPosition_" data-uid="Godot.AnimationTreePlayer.NodeGetPosition*"></a>
   <h4 id="Godot_AnimationTreePlayer_NodeGetPosition_System_String_" data-uid="Godot.AnimationTreePlayer.NodeGetPosition(System.String)">NodeGetPosition(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns position of a node in the graph given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1908,7 +1949,8 @@
   
   <a id="Godot_AnimationTreePlayer_NodeGetType_" data-uid="Godot.AnimationTreePlayer.NodeGetType*"></a>
   <h4 id="Godot_AnimationTreePlayer_NodeGetType_System_String_" data-uid="Godot.AnimationTreePlayer.NodeGetType(System.String)">NodeGetType(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the node type, will return from <a class="xref" href="Godot.AnimationTreePlayer.NodeType.html">AnimationTreePlayer.NodeType</a> enum.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1950,7 +1992,8 @@
   
   <a id="Godot_AnimationTreePlayer_NodeRename_" data-uid="Godot.AnimationTreePlayer.NodeRename*"></a>
   <h4 id="Godot_AnimationTreePlayer_NodeRename_System_String_System_String_" data-uid="Godot.AnimationTreePlayer.NodeRename(System.String,System.String)">NodeRename(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Renames a node in the graph.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1997,7 +2040,8 @@
   
   <a id="Godot_AnimationTreePlayer_NodeSetPosition_" data-uid="Godot.AnimationTreePlayer.NodeSetPosition*"></a>
   <h4 id="Godot_AnimationTreePlayer_NodeSetPosition_System_String_Godot_Vector2_" data-uid="Godot.AnimationTreePlayer.NodeSetPosition(System.String,Godot.Vector2)">NodeSetPosition(String, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the position of a node in the graph given its name and position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2029,7 +2073,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeGetAutorestartDelay_" data-uid="Godot.AnimationTreePlayer.OneshotNodeGetAutorestartDelay*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeGetAutorestartDelay_System_String_" data-uid="Godot.AnimationTreePlayer.OneshotNodeGetAutorestartDelay(System.String)">OneshotNodeGetAutorestartDelay(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the autostart delay of a OneShot node given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2071,7 +2116,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeGetAutorestartRandomDelay_" data-uid="Godot.AnimationTreePlayer.OneshotNodeGetAutorestartRandomDelay*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeGetAutorestartRandomDelay_System_String_" data-uid="Godot.AnimationTreePlayer.OneshotNodeGetAutorestartRandomDelay(System.String)">OneshotNodeGetAutorestartRandomDelay(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the autostart random delay of a OneShot node given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2113,7 +2159,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeGetFadeinTime_" data-uid="Godot.AnimationTreePlayer.OneshotNodeGetFadeinTime*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeGetFadeinTime_System_String_" data-uid="Godot.AnimationTreePlayer.OneshotNodeGetFadeinTime(System.String)">OneshotNodeGetFadeinTime(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the fade in time of a OneShot node given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2155,7 +2202,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeGetFadeoutTime_" data-uid="Godot.AnimationTreePlayer.OneshotNodeGetFadeoutTime*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeGetFadeoutTime_System_String_" data-uid="Godot.AnimationTreePlayer.OneshotNodeGetFadeoutTime(System.String)">OneshotNodeGetFadeoutTime(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the fade out time of a OneShot node given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2197,7 +2245,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeHasAutorestart_" data-uid="Godot.AnimationTreePlayer.OneshotNodeHasAutorestart*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeHasAutorestart_System_String_" data-uid="Godot.AnimationTreePlayer.OneshotNodeHasAutorestart(System.String)">OneshotNodeHasAutorestart(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a OneShot node will auto restart given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2239,7 +2288,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeIsActive_" data-uid="Godot.AnimationTreePlayer.OneshotNodeIsActive*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeIsActive_System_String_" data-uid="Godot.AnimationTreePlayer.OneshotNodeIsActive(System.String)">OneshotNodeIsActive(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a OneShot node is active given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2281,7 +2331,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeSetAutorestart_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetAutorestart*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeSetAutorestart_System_String_System_Boolean_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetAutorestart(System.String,System.Boolean)">OneshotNodeSetAutorestart(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the autorestart property of a OneShot node given its name and value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2313,7 +2364,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeSetAutorestartDelay_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetAutorestartDelay*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeSetAutorestartDelay_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetAutorestartDelay(System.String,System.Single)">OneshotNodeSetAutorestartDelay(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the autorestart delay of a OneShot node given its name and value in seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2345,7 +2397,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeSetAutorestartRandomDelay_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetAutorestartRandomDelay*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeSetAutorestartRandomDelay_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetAutorestartRandomDelay(System.String,System.Single)">OneshotNodeSetAutorestartRandomDelay(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the autorestart random delay of a OneShot node given its name and value in seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2377,7 +2430,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeSetFadeinTime_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetFadeinTime*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeSetFadeinTime_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetFadeinTime(System.String,System.Single)">OneshotNodeSetFadeinTime(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the fade in time of a OneShot node given its name and value in seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2409,7 +2463,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeSetFadeoutTime_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetFadeoutTime*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeSetFadeoutTime_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetFadeoutTime(System.String,System.Single)">OneshotNodeSetFadeoutTime(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the fade out time of a OneShot node given its name and value in seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2441,7 +2496,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeSetFilterPath_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetFilterPath*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeSetFilterPath_System_String_Godot_NodePath_System_Boolean_" data-uid="Godot.AnimationTreePlayer.OneshotNodeSetFilterPath(System.String,Godot.NodePath,System.Boolean)">OneshotNodeSetFilterPath(String, NodePath, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>enable</code> is <code>true</code>, the OneShot node with ID <code>id</code> turns off the track modifying the property at <code>path</code>. The modified node&apos;s children continue to animate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2478,7 +2534,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeStart_" data-uid="Godot.AnimationTreePlayer.OneshotNodeStart*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeStart_System_String_" data-uid="Godot.AnimationTreePlayer.OneshotNodeStart(System.String)">OneshotNodeStart(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Starts a OneShot node given its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2505,7 +2562,8 @@
   
   <a id="Godot_AnimationTreePlayer_OneshotNodeStop_" data-uid="Godot.AnimationTreePlayer.OneshotNodeStop*"></a>
   <h4 id="Godot_AnimationTreePlayer_OneshotNodeStop_System_String_" data-uid="Godot.AnimationTreePlayer.OneshotNodeStop(System.String)">OneshotNodeStop(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the OneShot node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2532,7 +2590,8 @@
   
   <a id="Godot_AnimationTreePlayer_RecomputeCaches_" data-uid="Godot.AnimationTreePlayer.RecomputeCaches*"></a>
   <h4 id="Godot_AnimationTreePlayer_RecomputeCaches" data-uid="Godot.AnimationTreePlayer.RecomputeCaches">RecomputeCaches()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Manually recalculates the cache of track information generated from animation nodes. Needed when external sources modify the animation nodes&apos; state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2542,7 +2601,8 @@
   
   <a id="Godot_AnimationTreePlayer_RemoveNode_" data-uid="Godot.AnimationTreePlayer.RemoveNode*"></a>
   <h4 id="Godot_AnimationTreePlayer_RemoveNode_System_String_" data-uid="Godot.AnimationTreePlayer.RemoveNode(System.String)">RemoveNode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the animation node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2569,7 +2629,8 @@
   
   <a id="Godot_AnimationTreePlayer_Reset_" data-uid="Godot.AnimationTreePlayer.Reset*"></a>
   <h4 id="Godot_AnimationTreePlayer_Reset" data-uid="Godot.AnimationTreePlayer.Reset">Reset()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resets this <a class="xref" href="Godot.AnimationTreePlayer.html">AnimationTreePlayer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2687,7 +2748,8 @@
   
   <a id="Godot_AnimationTreePlayer_TimescaleNodeGetScale_" data-uid="Godot.AnimationTreePlayer.TimescaleNodeGetScale*"></a>
   <h4 id="Godot_AnimationTreePlayer_TimescaleNodeGetScale_System_String_" data-uid="Godot.AnimationTreePlayer.TimescaleNodeGetScale(System.String)">TimescaleNodeGetScale(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the time scale value of the TimeScale node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2729,7 +2791,10 @@
   
   <a id="Godot_AnimationTreePlayer_TimescaleNodeSetScale_" data-uid="Godot.AnimationTreePlayer.TimescaleNodeSetScale*"></a>
   <h4 id="Godot_AnimationTreePlayer_TimescaleNodeSetScale_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.TimescaleNodeSetScale(System.String,System.Single)">TimescaleNodeSetScale(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the time scale of the TimeScale node with name <code>id</code> to <code>scale</code>.</p>
+<p>The TimeScale node is used to speed <a class="xref" href="Godot.Animation.html">Animation</a>s up if the scale is above 1 or slow them down if it is below 1.</p>
+<p>If applied after a blend or mix, affects all input animations to that blend or mix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2761,7 +2826,9 @@
   
   <a id="Godot_AnimationTreePlayer_TimeseekNodeSeek_" data-uid="Godot.AnimationTreePlayer.TimeseekNodeSeek*"></a>
   <h4 id="Godot_AnimationTreePlayer_TimeseekNodeSeek_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.TimeseekNodeSeek(System.String,System.Single)">TimeseekNodeSeek(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the time seek value of the TimeSeek node with name <code>id</code> to <code>seconds</code>.</p>
+<p>This functions as a seek in the <a class="xref" href="Godot.Animation.html">Animation</a> or the blend or mix of <a class="xref" href="Godot.Animation.html">Animation</a>s input in it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2793,7 +2860,8 @@
   
   <a id="Godot_AnimationTreePlayer_TransitionNodeDeleteInput_" data-uid="Godot.AnimationTreePlayer.TransitionNodeDeleteInput*"></a>
   <h4 id="Godot_AnimationTreePlayer_TransitionNodeDeleteInput_System_String_System_Int32_" data-uid="Godot.AnimationTreePlayer.TransitionNodeDeleteInput(System.String,System.Int32)">TransitionNodeDeleteInput(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deletes the input at <code>input_idx</code> for the transition node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2825,7 +2893,8 @@
   
   <a id="Godot_AnimationTreePlayer_TransitionNodeGetCurrent_" data-uid="Godot.AnimationTreePlayer.TransitionNodeGetCurrent*"></a>
   <h4 id="Godot_AnimationTreePlayer_TransitionNodeGetCurrent_System_String_" data-uid="Godot.AnimationTreePlayer.TransitionNodeGetCurrent(System.String)">TransitionNodeGetCurrent(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the index of the currently evaluated input for the transition node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2867,7 +2936,8 @@
   
   <a id="Godot_AnimationTreePlayer_TransitionNodeGetInputCount_" data-uid="Godot.AnimationTreePlayer.TransitionNodeGetInputCount*"></a>
   <h4 id="Godot_AnimationTreePlayer_TransitionNodeGetInputCount_System_String_" data-uid="Godot.AnimationTreePlayer.TransitionNodeGetInputCount(System.String)">TransitionNodeGetInputCount(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of inputs for the transition node with name <code>id</code>. You can add inputs by right-clicking on the transition node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2909,7 +2979,8 @@
   
   <a id="Godot_AnimationTreePlayer_TransitionNodeGetXfadeTime_" data-uid="Godot.AnimationTreePlayer.TransitionNodeGetXfadeTime*"></a>
   <h4 id="Godot_AnimationTreePlayer_TransitionNodeGetXfadeTime_System_String_" data-uid="Godot.AnimationTreePlayer.TransitionNodeGetXfadeTime(System.String)">TransitionNodeGetXfadeTime(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the cross fade time for the transition node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2951,7 +3022,8 @@
   
   <a id="Godot_AnimationTreePlayer_TransitionNodeHasInputAutoAdvance_" data-uid="Godot.AnimationTreePlayer.TransitionNodeHasInputAutoAdvance*"></a>
   <h4 id="Godot_AnimationTreePlayer_TransitionNodeHasInputAutoAdvance_System_String_System_Int32_" data-uid="Godot.AnimationTreePlayer.TransitionNodeHasInputAutoAdvance(System.String,System.Int32)">TransitionNodeHasInputAutoAdvance(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the input at <code>input_idx</code> on the transition node with name <code>id</code> is set to automatically advance to the next input upon completion.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2998,7 +3070,8 @@
   
   <a id="Godot_AnimationTreePlayer_TransitionNodeSetCurrent_" data-uid="Godot.AnimationTreePlayer.TransitionNodeSetCurrent*"></a>
   <h4 id="Godot_AnimationTreePlayer_TransitionNodeSetCurrent_System_String_System_Int32_" data-uid="Godot.AnimationTreePlayer.TransitionNodeSetCurrent(System.String,System.Int32)">TransitionNodeSetCurrent(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The transition node with name <code>id</code> sets its current input at <code>input_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3030,7 +3103,8 @@
   
   <a id="Godot_AnimationTreePlayer_TransitionNodeSetInputAutoAdvance_" data-uid="Godot.AnimationTreePlayer.TransitionNodeSetInputAutoAdvance*"></a>
   <h4 id="Godot_AnimationTreePlayer_TransitionNodeSetInputAutoAdvance_System_String_System_Int32_System_Boolean_" data-uid="Godot.AnimationTreePlayer.TransitionNodeSetInputAutoAdvance(System.String,System.Int32,System.Boolean)">TransitionNodeSetInputAutoAdvance(String, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The transition node with name <code>id</code> advances to its next input automatically when the input at <code>input_idx</code> completes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3067,7 +3141,8 @@
   
   <a id="Godot_AnimationTreePlayer_TransitionNodeSetInputCount_" data-uid="Godot.AnimationTreePlayer.TransitionNodeSetInputCount*"></a>
   <h4 id="Godot_AnimationTreePlayer_TransitionNodeSetInputCount_System_String_System_Int32_" data-uid="Godot.AnimationTreePlayer.TransitionNodeSetInputCount(System.String,System.Int32)">TransitionNodeSetInputCount(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resizes the number of inputs available for the transition node with name <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3099,7 +3174,8 @@
   
   <a id="Godot_AnimationTreePlayer_TransitionNodeSetXfadeTime_" data-uid="Godot.AnimationTreePlayer.TransitionNodeSetXfadeTime*"></a>
   <h4 id="Godot_AnimationTreePlayer_TransitionNodeSetXfadeTime_System_String_System_Single_" data-uid="Godot.AnimationTreePlayer.TransitionNodeSetXfadeTime(System.String,System.Single)">TransitionNodeSetXfadeTime(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The transition node with name <code>id</code> sets its cross fade time to <code>time_sec</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

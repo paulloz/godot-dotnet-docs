@@ -83,7 +83,16 @@
   
   <h1 id="Godot_AnimationNodeTimeSeek" data-uid="Godot.AnimationNodeTimeSeek" class="text-break">Class AnimationNodeTimeSeek
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This node can be used to cause a seek command to happen to any sub-children of the animation graph. Use this node type to play an <a class="xref" href="Godot.Animation.html">Animation</a> from the start or a certain playback position inside the <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>. After setting the time and changing the animation playback, the seek node automatically goes into sleep mode on the next process frame by setting its <code>seek_position</code> value to <code>-1.0</code>.</p>
+<p><pre><code># Play child animation from the start.
+animation_tree.set(&quot;parameters/Seek/seek_position&quot;, 0.0)
+# Alternative syntax (same result as above).
+animation_tree[&quot;parameters/Seek/seek_position&quot;] = 0.0
+<h1 id="play-child-animation-from-12-second-timestamp">Play child animation from 12 second timestamp.</h1>
+<p>animation_tree.set(&quot;parameters/Seek/seek_position&quot;, 12.0)</p>
+<h1 id="alternative-syntax-same-result-as-above">Alternative syntax (same result as above).</h1>
+<p>animation_tree[&quot;parameters/Seek/seek_position&quot;] = 12.0</code></pre></p><p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>

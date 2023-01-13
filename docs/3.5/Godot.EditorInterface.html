@@ -83,7 +83,9 @@
   
   <h1 id="Godot_EditorInterface" data-uid="Godot.EditorInterface" class="text-break">Class EditorInterface
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>EditorInterface gives you control over Godot editor&apos;s window. It allows customizing the window, saving and (re-)loading scenes, rendering mesh previews, inspecting and editing resources and objects, and provides access to <a class="xref" href="Godot.EditorSettings.html">EditorSettings</a>, <a class="xref" href="Godot.EditorFileSystem.html">EditorFileSystem</a>, <a class="xref" href="Godot.EditorResourcePreview.html">EditorResourcePreview</a>, <a class="xref" href="Godot.ScriptEditor.html">ScriptEditor</a>, the editor viewport, and information about scenes.</p>
+<p>Note: This class shouldn&apos;t be instantiated directly. Instead, access the singleton using <a class="xref" href="Godot.EditorPlugin.html#Godot_EditorPlugin_GetEditorInterface">GetEditorInterface()</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -741,7 +743,8 @@
   
   <a id="Godot_EditorInterface_DistractionFreeMode_" data-uid="Godot.EditorInterface.DistractionFreeMode*"></a>
   <h4 id="Godot_EditorInterface_DistractionFreeMode" data-uid="Godot.EditorInterface.DistractionFreeMode">DistractionFreeMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables distraction-free mode which hides side docks to increase the space available for the main view.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -768,7 +771,8 @@
   
   <a id="Godot_EditorInterface_EditNode_" data-uid="Godot.EditorInterface.EditNode*"></a>
   <h4 id="Godot_EditorInterface_EditNode_Godot_Node_" data-uid="Godot.EditorInterface.EditNode(Godot.Node)">EditNode(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Edits the given <a class="xref" href="Godot.Node.html">Node</a>. The node will be also selected if it&apos;s inside the scene tree.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -795,7 +799,8 @@
   
   <a id="Godot_EditorInterface_EditResource_" data-uid="Godot.EditorInterface.EditResource*"></a>
   <h4 id="Godot_EditorInterface_EditResource_Godot_Resource_" data-uid="Godot.EditorInterface.EditResource(Godot.Resource)">EditResource(Resource)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Edits the given <a class="xref" href="Godot.Resource.html">Resource</a>. If the resource is a <a class="xref" href="Godot.Script.html">Script</a> you can also edit it with <a class="xref" href="Godot.EditorInterface.html#Godot_EditorInterface_EditScript_Godot_Script_System_Int32_System_Int32_System_Boolean_">EditScript(Script, Int32, Int32, Boolean)</a> to specify the line and column position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -822,7 +827,8 @@
   
   <a id="Godot_EditorInterface_EditScript_" data-uid="Godot.EditorInterface.EditScript*"></a>
   <h4 id="Godot_EditorInterface_EditScript_Godot_Script_System_Int32_System_Int32_System_Boolean_" data-uid="Godot.EditorInterface.EditScript(Godot.Script,System.Int32,System.Int32,System.Boolean)">EditScript(Script, Int32, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Edits the given <a class="xref" href="Godot.Script.html">Script</a>. The line and column on which to open the script can also be specified. The script will be open with the user-configured editor for the script&apos;s language which may be an external editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -864,7 +870,9 @@
   
   <a id="Godot_EditorInterface_GetBaseControl_" data-uid="Godot.EditorInterface.GetBaseControl*"></a>
   <h4 id="Godot_EditorInterface_GetBaseControl" data-uid="Godot.EditorInterface.GetBaseControl">GetBaseControl()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the main container of Godot editor&apos;s window. For example, you can use it to retrieve the size of the container and place your controls accordingly.</p>
+<p>Warning: Removing and freeing this node will render the editor useless and may cause a crash.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -889,7 +897,8 @@
   
   <a id="Godot_EditorInterface_GetCurrentPath_" data-uid="Godot.EditorInterface.GetCurrentPath*"></a>
   <h4 id="Godot_EditorInterface_GetCurrentPath" data-uid="Godot.EditorInterface.GetCurrentPath">GetCurrentPath()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current path being viewed in the <a class="xref" href="Godot.FileSystemDock.html">FileSystemDock</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -914,7 +923,8 @@
   
   <a id="Godot_EditorInterface_GetEditedSceneRoot_" data-uid="Godot.EditorInterface.GetEditedSceneRoot*"></a>
   <h4 id="Godot_EditorInterface_GetEditedSceneRoot" data-uid="Godot.EditorInterface.GetEditedSceneRoot">GetEditedSceneRoot()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the edited (current) scene&apos;s root <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -939,7 +949,9 @@
   
   <a id="Godot_EditorInterface_GetEditorScale_" data-uid="Godot.EditorInterface.GetEditorScale*"></a>
   <h4 id="Godot_EditorInterface_GetEditorScale" data-uid="Godot.EditorInterface.GetEditorScale">GetEditorScale()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the actual scale of the editor UI (<code>1.0</code> being 100% scale). This can be used to adjust position and dimensions of the UI added by plugins.</p>
+<p>Note: This value is set via the <code>interface/editor/display_scale</code> and <code>interface/editor/custom_display_scale</code> editor settings. Editor must be restarted for changes to be properly applied.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -964,7 +976,8 @@
   
   <a id="Godot_EditorInterface_GetEditorSettings_" data-uid="Godot.EditorInterface.GetEditorSettings*"></a>
   <h4 id="Godot_EditorInterface_GetEditorSettings" data-uid="Godot.EditorInterface.GetEditorSettings">GetEditorSettings()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the editor&apos;s <a class="xref" href="Godot.EditorSettings.html">EditorSettings</a> instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +1002,10 @@
   
   <a id="Godot_EditorInterface_GetEditorViewport_" data-uid="Godot.EditorInterface.GetEditorViewport*"></a>
   <h4 id="Godot_EditorInterface_GetEditorViewport" data-uid="Godot.EditorInterface.GetEditorViewport">GetEditorViewport()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the main editor control. Use this as a parent for main screens.</p>
+<p>Note: This returns the main editor control containing the whole editor, not the 2D or 3D viewports specifically.</p>
+<p>Warning: Removing and freeing this node will render a part of the editor useless and may cause a crash.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1030,9 @@
   
   <a id="Godot_EditorInterface_GetFileSystemDock_" data-uid="Godot.EditorInterface.GetFileSystemDock*"></a>
   <h4 id="Godot_EditorInterface_GetFileSystemDock" data-uid="Godot.EditorInterface.GetFileSystemDock">GetFileSystemDock()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the editor&apos;s <a class="xref" href="Godot.FileSystemDock.html">FileSystemDock</a> instance.</p>
+<p>Warning: Removing and freeing this node will render a part of the editor useless and may cause a crash.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1039,7 +1057,9 @@
   
   <a id="Godot_EditorInterface_GetInspector_" data-uid="Godot.EditorInterface.GetInspector*"></a>
   <h4 id="Godot_EditorInterface_GetInspector" data-uid="Godot.EditorInterface.GetInspector">GetInspector()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the editor&apos;s <a class="xref" href="Godot.EditorInspector.html">EditorInspector</a> instance.</p>
+<p>Warning: Removing and freeing this node will render a part of the editor useless and may cause a crash.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1064,7 +1084,8 @@
   
   <a id="Godot_EditorInterface_GetOpenScenes_" data-uid="Godot.EditorInterface.GetOpenScenes*"></a>
   <h4 id="Godot_EditorInterface_GetOpenScenes" data-uid="Godot.EditorInterface.GetOpenScenes">GetOpenScenes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an <a class="xref" href="Godot.Collections.Array.html">Array</a> with the file paths of the currently opened scenes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1089,7 +1110,8 @@
   
   <a id="Godot_EditorInterface_GetPlayingScene_" data-uid="Godot.EditorInterface.GetPlayingScene*"></a>
   <h4 id="Godot_EditorInterface_GetPlayingScene" data-uid="Godot.EditorInterface.GetPlayingScene">GetPlayingScene()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of the scene that is being played. If no scene is currently being played, returns an empty string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1114,7 +1136,8 @@
   
   <a id="Godot_EditorInterface_GetResourceFilesystem_" data-uid="Godot.EditorInterface.GetResourceFilesystem*"></a>
   <h4 id="Godot_EditorInterface_GetResourceFilesystem" data-uid="Godot.EditorInterface.GetResourceFilesystem">GetResourceFilesystem()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the editor&apos;s <a class="xref" href="Godot.EditorFileSystem.html">EditorFileSystem</a> instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1139,7 +1162,8 @@
   
   <a id="Godot_EditorInterface_GetResourcePreviewer_" data-uid="Godot.EditorInterface.GetResourcePreviewer*"></a>
   <h4 id="Godot_EditorInterface_GetResourcePreviewer" data-uid="Godot.EditorInterface.GetResourcePreviewer">GetResourcePreviewer()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the editor&apos;s <a class="xref" href="Godot.EditorResourcePreview.html">EditorResourcePreview</a> instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1164,7 +1188,9 @@
   
   <a id="Godot_EditorInterface_GetScriptEditor_" data-uid="Godot.EditorInterface.GetScriptEditor*"></a>
   <h4 id="Godot_EditorInterface_GetScriptEditor" data-uid="Godot.EditorInterface.GetScriptEditor">GetScriptEditor()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the editor&apos;s <a class="xref" href="Godot.ScriptEditor.html">ScriptEditor</a> instance.</p>
+<p>Warning: Removing and freeing this node will render a part of the editor useless and may cause a crash.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1189,7 +1215,8 @@
   
   <a id="Godot_EditorInterface_GetSelectedPath_" data-uid="Godot.EditorInterface.GetSelectedPath*"></a>
   <h4 id="Godot_EditorInterface_GetSelectedPath" data-uid="Godot.EditorInterface.GetSelectedPath">GetSelectedPath()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the path of the directory currently selected in the <a class="xref" href="Godot.FileSystemDock.html">FileSystemDock</a>. If a file is selected, its base directory will be returned using <code>String.get_base_dir</code> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1214,7 +1241,8 @@
   
   <a id="Godot_EditorInterface_GetSelection_" data-uid="Godot.EditorInterface.GetSelection*"></a>
   <h4 id="Godot_EditorInterface_GetSelection" data-uid="Godot.EditorInterface.GetSelection">GetSelection()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the editor&apos;s <a class="xref" href="Godot.EditorSelection.html">EditorSelection</a> instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1239,7 +1267,8 @@
   
   <a id="Godot_EditorInterface_InspectObject_" data-uid="Godot.EditorInterface.InspectObject*"></a>
   <h4 id="Godot_EditorInterface_InspectObject_Godot_Object_System_String_System_Boolean_" data-uid="Godot.EditorInterface.InspectObject(Godot.Object,System.String,System.Boolean)">InspectObject(Object, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Shows the given property on the given <code>object</code> in the editor&apos;s Inspector dock. If <code>inspector_only</code> is <code>true</code>, plugins will not attempt to edit <code>object</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1301,7 +1330,8 @@
   
   <a id="Godot_EditorInterface_IsPlayingScene_" data-uid="Godot.EditorInterface.IsPlayingScene*"></a>
   <h4 id="Godot_EditorInterface_IsPlayingScene" data-uid="Godot.EditorInterface.IsPlayingScene">IsPlayingScene()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a scene is currently being played, <code>false</code> otherwise. Paused scenes are considered as being played.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1326,7 +1356,8 @@
   
   <a id="Godot_EditorInterface_IsPluginEnabled_" data-uid="Godot.EditorInterface.IsPluginEnabled*"></a>
   <h4 id="Godot_EditorInterface_IsPluginEnabled_System_String_" data-uid="Godot.EditorInterface.IsPluginEnabled(System.String)">IsPluginEnabled(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the specified <code>plugin</code> is enabled. The plugin name is the same as its directory name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1368,7 +1399,8 @@
   
   <a id="Godot_EditorInterface_MakeMeshPreviews_" data-uid="Godot.EditorInterface.MakeMeshPreviews*"></a>
   <h4 id="Godot_EditorInterface_MakeMeshPreviews_Godot_Collections_Array_System_Int32_" data-uid="Godot.EditorInterface.MakeMeshPreviews(Godot.Collections.Array,System.Int32)">MakeMeshPreviews(Array, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns mesh previews rendered at the given size as an <a class="xref" href="Godot.Collections.Array.html">Array</a> of <a class="xref" href="Godot.Texture.html">Texture</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1415,7 +1447,8 @@
   
   <a id="Godot_EditorInterface_OpenSceneFromPath_" data-uid="Godot.EditorInterface.OpenSceneFromPath*"></a>
   <h4 id="Godot_EditorInterface_OpenSceneFromPath_System_String_" data-uid="Godot.EditorInterface.OpenSceneFromPath(System.String)">OpenSceneFromPath(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opens the scene at the given path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1442,7 +1475,8 @@
   
   <a id="Godot_EditorInterface_PlayCurrentScene_" data-uid="Godot.EditorInterface.PlayCurrentScene*"></a>
   <h4 id="Godot_EditorInterface_PlayCurrentScene" data-uid="Godot.EditorInterface.PlayCurrentScene">PlayCurrentScene()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plays the currently active scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1452,7 +1486,8 @@
   
   <a id="Godot_EditorInterface_PlayCustomScene_" data-uid="Godot.EditorInterface.PlayCustomScene*"></a>
   <h4 id="Godot_EditorInterface_PlayCustomScene_System_String_" data-uid="Godot.EditorInterface.PlayCustomScene(System.String)">PlayCustomScene(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plays the scene specified by its filepath.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1479,7 +1514,8 @@
   
   <a id="Godot_EditorInterface_PlayMainScene_" data-uid="Godot.EditorInterface.PlayMainScene*"></a>
   <h4 id="Godot_EditorInterface_PlayMainScene" data-uid="Godot.EditorInterface.PlayMainScene">PlayMainScene()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plays the main scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1489,7 +1525,8 @@
   
   <a id="Godot_EditorInterface_ReloadSceneFromPath_" data-uid="Godot.EditorInterface.ReloadSceneFromPath*"></a>
   <h4 id="Godot_EditorInterface_ReloadSceneFromPath_System_String_" data-uid="Godot.EditorInterface.ReloadSceneFromPath(System.String)">ReloadSceneFromPath(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reloads the scene at the given path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1516,7 +1553,8 @@
   
   <a id="Godot_EditorInterface_SaveScene_" data-uid="Godot.EditorInterface.SaveScene*"></a>
   <h4 id="Godot_EditorInterface_SaveScene" data-uid="Godot.EditorInterface.SaveScene">SaveScene()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves the scene. Returns either <code>OK</code> or <code>ERR_CANT_CREATE</code> (see <code>@GlobalScope</code> constants).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1541,7 +1579,8 @@
   
   <a id="Godot_EditorInterface_SaveSceneAs_" data-uid="Godot.EditorInterface.SaveSceneAs*"></a>
   <h4 id="Godot_EditorInterface_SaveSceneAs_System_String_System_Boolean_" data-uid="Godot.EditorInterface.SaveSceneAs(System.String,System.Boolean)">SaveSceneAs(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves the scene as a file at <code>path</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1573,7 +1612,8 @@
   
   <a id="Godot_EditorInterface_SelectFile_" data-uid="Godot.EditorInterface.SelectFile*"></a>
   <h4 id="Godot_EditorInterface_SelectFile_System_String_" data-uid="Godot.EditorInterface.SelectFile(System.String)">SelectFile(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Selects the file, with the path provided by <code>file</code>, in the FileSystem dock.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1627,7 +1667,8 @@
   
   <a id="Godot_EditorInterface_SetMainScreenEditor_" data-uid="Godot.EditorInterface.SetMainScreenEditor*"></a>
   <h4 id="Godot_EditorInterface_SetMainScreenEditor_System_String_" data-uid="Godot.EditorInterface.SetMainScreenEditor(System.String)">SetMainScreenEditor(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the editor&apos;s current main screen to the one specified in <code>name</code>. <code>name</code> must match the text of the tab in question exactly (<code>2D</code>, <code>3D</code>, <code>Script</code>, <code>AssetLib</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1654,7 +1695,8 @@
   
   <a id="Godot_EditorInterface_SetPluginEnabled_" data-uid="Godot.EditorInterface.SetPluginEnabled*"></a>
   <h4 id="Godot_EditorInterface_SetPluginEnabled_System_String_System_Boolean_" data-uid="Godot.EditorInterface.SetPluginEnabled(System.String,System.Boolean)">SetPluginEnabled(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the enabled status of a plugin. The plugin name is the same as its directory name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1686,7 +1728,8 @@
   
   <a id="Godot_EditorInterface_StopPlayingScene_" data-uid="Godot.EditorInterface.StopPlayingScene*"></a>
   <h4 id="Godot_EditorInterface_StopPlayingScene" data-uid="Godot.EditorInterface.StopPlayingScene">StopPlayingScene()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the scene that is currently playing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

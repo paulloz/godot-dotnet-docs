@@ -83,7 +83,9 @@
   
   <h1 id="Godot_VisualShaderNodeExpression" data-uid="Godot.VisualShaderNodeExpression" class="text-break">Class VisualShaderNodeExpression
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Custom Godot Shading Language expression, with a custom amount of input and output ports.</p>
+<p>The provided code is directly injected into the graph&apos;s matching shader function (<code>vertex</code>, <code>fragment</code>, or <code>light</code>), so it cannot be used to declare functions, varyings, uniforms, or global constants. See <a class="xref" href="Godot.VisualShaderNodeGlobalExpression.html">VisualShaderNodeGlobalExpression</a> for such global definitions.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -445,7 +447,8 @@
   
   <a id="Godot_VisualShaderNodeExpression_Expression_" data-uid="Godot.VisualShaderNodeExpression.Expression*"></a>
   <h4 id="Godot_VisualShaderNodeExpression_Expression" data-uid="Godot.VisualShaderNodeExpression.Expression">Expression</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An expression in Godot Shading Language, which will be injected at the start of the graph&apos;s matching shader function (<code>vertex</code>, <code>fragment</code>, or <code>light</code>), and thus cannot be used to declare functions, varyings, uniforms, or global constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -101,7 +101,9 @@
   
   
   <h4 id="Godot_SpatialMaterial_AsyncModeEnum_Hidden" data-uid="Godot.SpatialMaterial.AsyncModeEnum.Hidden">Hidden</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Anything with this material applied won&apos;t be rendered while this material&apos;s shader is being compiled.</p>
+<p>This is useful for optimization, in cases where the visuals won&apos;t suffer from having certain non-essential elements missing during the short time their shaders are being compiled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +151,8 @@
   
   
   <h4 id="Godot_SpatialMaterial_AsyncModeEnum_Visible" data-uid="Godot.SpatialMaterial.AsyncModeEnum.Visible">Visible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The real conditioned shader needed on each situation will be sent for background compilation. In the meantime, a very complex shader that adapts to every situation will be used (&quot;ubershader&quot;). This ubershader is much slower to render, but will keep the game running without stalling to compile. Once shader compilation is done, the ubershader is replaced by the traditional optimized shader.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

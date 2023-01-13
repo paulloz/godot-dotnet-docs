@@ -101,7 +101,9 @@
   
   
   <h4 id="Godot_Tree_DropModeFlagsEnum_Disabled" data-uid="Godot.Tree.DropModeFlagsEnum.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables all drop sections, but still allows to detect the &quot;on item&quot; drop section by <a class="xref" href="Godot.Tree.html#Godot_Tree_GetDropSectionAtPosition_Godot_Vector2_">GetDropSectionAtPosition(Vector2)</a>.</p>
+<p>Note: This is the default flag, it has no effect when combined with other flags.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +127,9 @@
   
   
   <h4 id="Godot_Tree_DropModeFlagsEnum_Inbetween" data-uid="Godot.Tree.DropModeFlagsEnum.Inbetween">Inbetween</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables &quot;above item&quot; and &quot;below item&quot; drop sections. The &quot;above item&quot; drop section covers the top half of the item, and the &quot;below item&quot; drop section covers the bottom half.</p>
+<p>When combined with <a class="xref" href="Godot.Tree.DropModeFlagsEnum.html#Godot_Tree_DropModeFlagsEnum_OnItem">OnItem</a>, these drop sections halves the height and stays on top / bottom accordingly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +153,9 @@
   
   
   <h4 id="Godot_Tree_DropModeFlagsEnum_OnItem" data-uid="Godot.Tree.DropModeFlagsEnum.OnItem">OnItem</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables the &quot;on item&quot; drop section. This drop section covers the entire item.</p>
+<p>When combined with <a class="xref" href="Godot.Tree.DropModeFlagsEnum.html#Godot_Tree_DropModeFlagsEnum_Inbetween">Inbetween</a>, this drop section halves the height and stays centered vertically.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

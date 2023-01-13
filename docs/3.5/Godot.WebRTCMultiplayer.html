@@ -83,7 +83,10 @@
   
   <h1 id="Godot_WebRTCMultiplayer" data-uid="Godot.WebRTCMultiplayer" class="text-break">Class WebRTCMultiplayer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class constructs a full mesh of <a class="xref" href="Godot.WebRTCPeerConnection.html">WebRTCPeerConnection</a> (one connection for each peer) that can be used as a <a class="xref" href="Godot.MultiplayerAPI.html#Godot_MultiplayerAPI_NetworkPeer">NetworkPeer</a>.</p>
+<p>You can add each <a class="xref" href="Godot.WebRTCPeerConnection.html">WebRTCPeerConnection</a> via <a class="xref" href="Godot.WebRTCMultiplayer.html#Godot_WebRTCMultiplayer_AddPeer_Godot_WebRTCPeerConnection_System_Int32_System_Int32_">AddPeer(WebRTCPeerConnection, Int32, Int32)</a> or remove them via <a class="xref" href="Godot.WebRTCMultiplayer.html#Godot_WebRTCMultiplayer_RemovePeer_System_Int32_">RemovePeer(Int32)</a>. Peers must be added in <a class="xref" href="Godot.WebRTCPeerConnection.ConnectionState.html#Godot_WebRTCPeerConnection_ConnectionState_New">New</a> state to allow it to create the appropriate channels. This class will not create offers nor set descriptions, it will only poll them, and notify connections and disconnections.</p>
+<p><code>NetworkedMultiplayerPeer.connection_succeeded</code> and <code>NetworkedMultiplayerPeer.server_disconnected</code> will not be emitted unless <code>server_compatibility</code> is <code>true</code> in <a class="xref" href="Godot.WebRTCMultiplayer.html#Godot_WebRTCMultiplayer_Initialize_System_Int32_System_Boolean_">Initialize(Int32, Boolean)</a>. Beside that data transfer works like in a <a class="xref" href="Godot.NetworkedMultiplayerPeer.html">NetworkedMultiplayerPeer</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -374,7 +377,9 @@
   
   <a id="Godot_WebRTCMultiplayer_AddPeer_" data-uid="Godot.WebRTCMultiplayer.AddPeer*"></a>
   <h4 id="Godot_WebRTCMultiplayer_AddPeer_Godot_WebRTCPeerConnection_System_Int32_System_Int32_" data-uid="Godot.WebRTCMultiplayer.AddPeer(Godot.WebRTCPeerConnection,System.Int32,System.Int32)">AddPeer(WebRTCPeerConnection, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Add a new peer to the mesh with the given <code>peer_id</code>. The <a class="xref" href="Godot.WebRTCPeerConnection.html">WebRTCPeerConnection</a> must be in state <a class="xref" href="Godot.WebRTCPeerConnection.ConnectionState.html#Godot_WebRTCPeerConnection_ConnectionState_New">New</a>.</p>
+<p>Three channels will be created for reliable, unreliable, and ordered transport. The value of <code>unreliable_lifetime</code> will be passed to the <code>maxPacketLifetime</code> option when creating unreliable and ordered channels (see <a class="xref" href="Godot.WebRTCPeerConnection.html#Godot_WebRTCPeerConnection_CreateDataChannel_System_String_Godot_Collections_Dictionary_">CreateDataChannel(String, Dictionary)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -426,7 +431,8 @@
   
   <a id="Godot_WebRTCMultiplayer_Close_" data-uid="Godot.WebRTCMultiplayer.Close*"></a>
   <h4 id="Godot_WebRTCMultiplayer_Close" data-uid="Godot.WebRTCMultiplayer.Close">Close()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Close all the add peer connections and channels, freeing all resources.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -436,7 +442,8 @@
   
   <a id="Godot_WebRTCMultiplayer_GetPeer_" data-uid="Godot.WebRTCMultiplayer.GetPeer*"></a>
   <h4 id="Godot_WebRTCMultiplayer_GetPeer_System_Int32_" data-uid="Godot.WebRTCMultiplayer.GetPeer(System.Int32)">GetPeer(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return a dictionary representation of the peer with given <code>peer_id</code> with three keys. <code>connection</code> containing the <a class="xref" href="Godot.WebRTCPeerConnection.html">WebRTCPeerConnection</a> to this peer, <code>channels</code> an array of three <a class="xref" href="Godot.WebRTCDataChannel.html">WebRTCDataChannel</a>, and <code>connected</code> a boolean representing if the peer connection is currently connected (all three channels are open).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -478,7 +485,8 @@
   
   <a id="Godot_WebRTCMultiplayer_GetPeers_" data-uid="Godot.WebRTCMultiplayer.GetPeers*"></a>
   <h4 id="Godot_WebRTCMultiplayer_GetPeers" data-uid="Godot.WebRTCMultiplayer.GetPeers">GetPeers()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a dictionary which keys are the peer ids and values the peer representation as in <a class="xref" href="Godot.WebRTCMultiplayer.html#Godot_WebRTCMultiplayer_GetPeer_System_Int32_">GetPeer(Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -503,7 +511,8 @@
   
   <a id="Godot_WebRTCMultiplayer_HasPeer_" data-uid="Godot.WebRTCMultiplayer.HasPeer*"></a>
   <h4 id="Godot_WebRTCMultiplayer_HasPeer_System_Int32_" data-uid="Godot.WebRTCMultiplayer.HasPeer(System.Int32)">HasPeer(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given <code>peer_id</code> is in the peers map (it might not be connected though).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -545,7 +554,10 @@
   
   <a id="Godot_WebRTCMultiplayer_Initialize_" data-uid="Godot.WebRTCMultiplayer.Initialize*"></a>
   <h4 id="Godot_WebRTCMultiplayer_Initialize_System_Int32_System_Boolean_" data-uid="Godot.WebRTCMultiplayer.Initialize(System.Int32,System.Boolean)">Initialize(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initialize the multiplayer peer with the given <code>peer_id</code> (must be between 1 and 2147483647).</p>
+<p>If <code>server_compatibilty</code> is <code>false</code> (default), the multiplayer peer will be immediately in state <a class="xref" href="Godot.NetworkedMultiplayerPeer.ConnectionStatus.html#Godot_NetworkedMultiplayerPeer_ConnectionStatus_Connected">Connected</a> and <code>NetworkedMultiplayerPeer.connection_succeeded</code> will not be emitted.</p>
+<p>If <code>server_compatibilty</code> is <code>true</code> the peer will suppress all <code>NetworkedMultiplayerPeer.peer_connected</code> signals until a peer with id <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_TargetPeerServer">TargetPeerServer</a> connects and then emit <code>NetworkedMultiplayerPeer.connection_succeeded</code>. After that the signal <code>NetworkedMultiplayerPeer.peer_connected</code> will be emitted for every already connected peer, and any new peer that might connect. If the server peer disconnects after that, signal <code>NetworkedMultiplayerPeer.server_disconnected</code> will be emitted and state will become <a class="xref" href="Godot.NetworkedMultiplayerPeer.ConnectionStatus.html#Godot_NetworkedMultiplayerPeer_ConnectionStatus_Connected">Connected</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -592,7 +604,8 @@
   
   <a id="Godot_WebRTCMultiplayer_RemovePeer_" data-uid="Godot.WebRTCMultiplayer.RemovePeer*"></a>
   <h4 id="Godot_WebRTCMultiplayer_RemovePeer_System_Int32_" data-uid="Godot.WebRTCMultiplayer.RemovePeer(System.Int32)">RemovePeer(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remove the peer with given <code>peer_id</code> from the mesh. If the peer was connected, and <code>NetworkedMultiplayerPeer.peer_connected</code> was emitted for it, then <code>NetworkedMultiplayerPeer.peer_disconnected</code> will be emitted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

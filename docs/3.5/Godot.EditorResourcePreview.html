@@ -83,7 +83,9 @@
   
   <h1 id="Godot_EditorResourcePreview" data-uid="Godot.EditorResourcePreview" class="text-break">Class EditorResourcePreview
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This object is used to generate previews for resources of files.</p>
+<p>Note: This class shouldn&apos;t be instantiated directly. Instead, access the singleton using <a class="xref" href="Godot.EditorInterface.html#Godot_EditorInterface_GetResourcePreviewer">GetResourcePreviewer()</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -741,7 +743,8 @@
   
   <a id="Godot_EditorResourcePreview_AddPreviewGenerator_" data-uid="Godot.EditorResourcePreview.AddPreviewGenerator*"></a>
   <h4 id="Godot_EditorResourcePreview_AddPreviewGenerator_Godot_EditorResourcePreviewGenerator_" data-uid="Godot.EditorResourcePreview.AddPreviewGenerator(Godot.EditorResourcePreviewGenerator)">AddPreviewGenerator(EditorResourcePreviewGenerator)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create an own, custom preview generator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -768,7 +771,8 @@
   
   <a id="Godot_EditorResourcePreview_CheckForInvalidation_" data-uid="Godot.EditorResourcePreview.CheckForInvalidation*"></a>
   <h4 id="Godot_EditorResourcePreview_CheckForInvalidation_System_String_" data-uid="Godot.EditorResourcePreview.CheckForInvalidation(System.String)">CheckForInvalidation(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check if the resource changed, if so, it will be invalidated and the corresponding signal emitted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -795,7 +799,9 @@
   
   <a id="Godot_EditorResourcePreview_QueueEditedResourcePreview_" data-uid="Godot.EditorResourcePreview.QueueEditedResourcePreview*"></a>
   <h4 id="Godot_EditorResourcePreview_QueueEditedResourcePreview_Godot_Resource_Godot_Object_System_String_System_Object_" data-uid="Godot.EditorResourcePreview.QueueEditedResourcePreview(Godot.Resource,Godot.Object,System.String,System.Object)">QueueEditedResourcePreview(Resource, Object, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Queue the <code>resource</code> being edited for preview. Once the preview is ready, the <code>receiver</code>&apos;s <code>receiver_func</code> will be called. The <code>receiver_func</code> must take the following four arguments: <span class="xref">System.String</span> path, <a class="xref" href="Godot.Texture.html">Texture</a> preview, <a class="xref" href="Godot.Texture.html">Texture</a> thumbnail_preview, <code>Variant</code> userdata. <code>userdata</code> can be anything, and will be returned when <code>receiver_func</code> is called.</p>
+<p>Note: If it was not possible to create the preview the <code>receiver_func</code> will still be called, but the preview will be null.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -837,7 +843,9 @@
   
   <a id="Godot_EditorResourcePreview_QueueResourcePreview_" data-uid="Godot.EditorResourcePreview.QueueResourcePreview*"></a>
   <h4 id="Godot_EditorResourcePreview_QueueResourcePreview_System_String_Godot_Object_System_String_System_Object_" data-uid="Godot.EditorResourcePreview.QueueResourcePreview(System.String,Godot.Object,System.String,System.Object)">QueueResourcePreview(String, Object, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Queue a resource file located at <code>path</code> for preview. Once the preview is ready, the <code>receiver</code>&apos;s <code>receiver_func</code> will be called. The <code>receiver_func</code> must take the following four arguments: <span class="xref">System.String</span> path, <a class="xref" href="Godot.Texture.html">Texture</a> preview, <a class="xref" href="Godot.Texture.html">Texture</a> thumbnail_preview, <code>Variant</code> userdata. <code>userdata</code> can be anything, and will be returned when <code>receiver_func</code> is called.</p>
+<p>Note: If it was not possible to create the preview the <code>receiver_func</code> will still be called, but the preview will be null.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -879,7 +887,8 @@
   
   <a id="Godot_EditorResourcePreview_RemovePreviewGenerator_" data-uid="Godot.EditorResourcePreview.RemovePreviewGenerator*"></a>
   <h4 id="Godot_EditorResourcePreview_RemovePreviewGenerator_Godot_EditorResourcePreviewGenerator_" data-uid="Godot.EditorResourcePreview.RemovePreviewGenerator(Godot.EditorResourcePreviewGenerator)">RemovePreviewGenerator(EditorResourcePreviewGenerator)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a custom preview generator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

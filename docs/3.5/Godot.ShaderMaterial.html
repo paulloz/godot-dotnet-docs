@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ShaderMaterial" data-uid="Godot.ShaderMaterial" class="text-break">Class ShaderMaterial
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A material that uses a custom <a class="xref" href="Godot.Shader.html">Shader</a> program to render either items to screen or process particles. You can create multiple materials for the same shader but configure different values for the uniforms defined in the shader.</p>
+<p>Note: Due to a renderer limitation, emissive <a class="xref" href="Godot.ShaderMaterial.html">ShaderMaterial</a>s cannot emit light when used in a <a class="xref" href="Godot.GIProbe.html">GIProbe</a>. Only emissive <a class="xref" href="Godot.SpatialMaterial.html">SpatialMaterial</a>s can emit light in a <a class="xref" href="Godot.GIProbe.html">GIProbe</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -371,7 +373,8 @@
   
   <a id="Godot_ShaderMaterial_Shader_" data-uid="Godot.ShaderMaterial.Shader*"></a>
   <h4 id="Godot_ShaderMaterial_Shader" data-uid="Godot.ShaderMaterial.Shader">Shader</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Shader.html">Shader</a> program used to render this material.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -423,7 +426,8 @@
   
   <a id="Godot_ShaderMaterial_GetShaderParam_" data-uid="Godot.ShaderMaterial.GetShaderParam*"></a>
   <h4 id="Godot_ShaderMaterial_GetShaderParam_System_String_" data-uid="Godot.ShaderMaterial.GetShaderParam(System.String)">GetShaderParam(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current value set for this material of a uniform in the shader.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -465,7 +469,8 @@
   
   <a id="Godot_ShaderMaterial_PropertyCanRevert_" data-uid="Godot.ShaderMaterial.PropertyCanRevert*"></a>
   <h4 id="Godot_ShaderMaterial_PropertyCanRevert_System_String_" data-uid="Godot.ShaderMaterial.PropertyCanRevert(System.String)">PropertyCanRevert(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the property identified by <code>name</code> can be reverted to a default value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -507,7 +512,8 @@
   
   <a id="Godot_ShaderMaterial_PropertyGetRevert_" data-uid="Godot.ShaderMaterial.PropertyGetRevert*"></a>
   <h4 id="Godot_ShaderMaterial_PropertyGetRevert_System_String_" data-uid="Godot.ShaderMaterial.PropertyGetRevert(System.String)">PropertyGetRevert(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the default value of the material property with given <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -576,7 +582,9 @@
   
   <a id="Godot_ShaderMaterial_SetShaderParam_" data-uid="Godot.ShaderMaterial.SetShaderParam*"></a>
   <h4 id="Godot_ShaderMaterial_SetShaderParam_System_String_System_Object_" data-uid="Godot.ShaderMaterial.SetShaderParam(System.String,System.Object)">SetShaderParam(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the value set for this material of a uniform in the shader.</p>
+<p>Note: <code>param</code> must match the name of the uniform in the code exactly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

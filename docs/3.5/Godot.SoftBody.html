@@ -83,7 +83,9 @@
   
   <h1 id="Godot_SoftBody" data-uid="Godot.SoftBody" class="text-break">Class SoftBody
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A deformable physics body. Used to create elastic or deformable objects such as cloth, rubber, or other flexible materials.</p>
+<p>Note: There are many known bugs in <a class="xref" href="Godot.SoftBody.html">SoftBody</a>. Therefore, it&apos;s not recommended to use them for things that can affect gameplay (such as a player character made entirely out of soft bodies).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1227,7 +1229,10 @@
   
   <a id="Godot_SoftBody_CollisionLayer_" data-uid="Godot.SoftBody.CollisionLayer*"></a>
   <h4 id="Godot_SoftBody_CollisionLayer" data-uid="Godot.SoftBody.CollisionLayer">CollisionLayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics layers this SoftBody is in.</p>
+<p>Collidable objects can exist in any of 32 different layers. These layers work like a tagging system, and are not visual. A collidable can use these layers to select with which objects it can collide, using the collision_mask property.</p>
+<p>A contact is detected if object A is in any of the layers that object B scans, or object B is in any layer scanned by object A. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1252,7 +1257,8 @@
   
   <a id="Godot_SoftBody_CollisionMask_" data-uid="Godot.SoftBody.CollisionMask*"></a>
   <h4 id="Godot_SoftBody_CollisionMask" data-uid="Godot.SoftBody.CollisionMask">CollisionMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics layers this SoftBody scans for collisions. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1352,7 +1358,8 @@
   
   <a id="Godot_SoftBody_ParentCollisionIgnore_" data-uid="Godot.SoftBody.ParentCollisionIgnore*"></a>
   <h4 id="Godot_SoftBody_ParentCollisionIgnore" data-uid="Godot.SoftBody.ParentCollisionIgnore">ParentCollisionIgnore</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a class="xref" href="Godot.NodePath.html">NodePath</a> to a <a class="xref" href="Godot.CollisionObject.html">CollisionObject</a> this SoftBody should avoid clipping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1377,7 +1384,8 @@
   
   <a id="Godot_SoftBody_PhysicsEnabled_" data-uid="Godot.SoftBody.PhysicsEnabled*"></a>
   <h4 id="Godot_SoftBody_PhysicsEnabled" data-uid="Godot.SoftBody.PhysicsEnabled">PhysicsEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the <a class="xref" href="Godot.SoftBody.html">SoftBody</a> is simulated in physics. Can be set to <code>false</code> to pause the physics simulation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1452,7 +1460,8 @@
   
   <a id="Godot_SoftBody_RayPickable_" data-uid="Godot.SoftBody.RayPickable*"></a>
   <h4 id="Godot_SoftBody_RayPickable" data-uid="Godot.SoftBody.RayPickable">RayPickable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the <a class="xref" href="Godot.SoftBody.html">SoftBody</a> will respond to <a class="xref" href="Godot.RayCast.html">RayCast</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1477,7 +1486,8 @@
   
   <a id="Godot_SoftBody_SimulationPrecision_" data-uid="Godot.SoftBody.SimulationPrecision*"></a>
   <h4 id="Godot_SoftBody_SimulationPrecision" data-uid="Godot.SoftBody.SimulationPrecision">SimulationPrecision</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Increasing this value will improve the resulting simulation, but can affect performance. Use with care.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1502,7 +1512,8 @@
   
   <a id="Godot_SoftBody_TotalMass_" data-uid="Godot.SoftBody.TotalMass*"></a>
   <h4 id="Godot_SoftBody_TotalMass" data-uid="Godot.SoftBody.TotalMass">TotalMass</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The SoftBody&apos;s mass.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1554,7 +1565,8 @@
   
   <a id="Godot_SoftBody_AddCollisionExceptionWith_" data-uid="Godot.SoftBody.AddCollisionExceptionWith*"></a>
   <h4 id="Godot_SoftBody_AddCollisionExceptionWith_Godot_Node_" data-uid="Godot.SoftBody.AddCollisionExceptionWith(Godot.Node)">AddCollisionExceptionWith(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a body to the list of bodies that this body can&apos;t collide with.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1606,7 +1618,8 @@
   
   <a id="Godot_SoftBody_GetCollisionExceptions_" data-uid="Godot.SoftBody.GetCollisionExceptions*"></a>
   <h4 id="Godot_SoftBody_GetCollisionExceptions" data-uid="Godot.SoftBody.GetCollisionExceptions">GetCollisionExceptions()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of nodes that were added as collision exceptions for this body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1656,7 +1669,8 @@
   
   <a id="Godot_SoftBody_GetCollisionLayerBit_" data-uid="Godot.SoftBody.GetCollisionLayerBit*"></a>
   <h4 id="Godot_SoftBody_GetCollisionLayerBit_System_Int32_" data-uid="Godot.SoftBody.GetCollisionLayerBit(System.Int32)">GetCollisionLayerBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an individual bit on the collision mask.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1723,7 +1737,8 @@
   
   <a id="Godot_SoftBody_GetCollisionMaskBit_" data-uid="Godot.SoftBody.GetCollisionMaskBit*"></a>
   <h4 id="Godot_SoftBody_GetCollisionMaskBit_System_Int32_" data-uid="Godot.SoftBody.GetCollisionMaskBit(System.Int32)">GetCollisionMaskBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an individual bit on the collision mask.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1865,7 +1880,8 @@
   
   <a id="Godot_SoftBody_GetPointTransform_" data-uid="Godot.SoftBody.GetPointTransform*"></a>
   <h4 id="Godot_SoftBody_GetPointTransform_System_Int32_" data-uid="Godot.SoftBody.GetPointTransform(System.Int32)">GetPointTransform(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns local translation of a vertex in the surface array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2057,7 +2073,8 @@
   
   <a id="Godot_SoftBody_IsPointPinned_" data-uid="Godot.SoftBody.IsPointPinned*"></a>
   <h4 id="Godot_SoftBody_IsPointPinned_System_Int32_" data-uid="Godot.SoftBody.IsPointPinned(System.Int32)">IsPointPinned(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if vertex is set to pinned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2124,7 +2141,8 @@
   
   <a id="Godot_SoftBody_RemoveCollisionExceptionWith_" data-uid="Godot.SoftBody.RemoveCollisionExceptionWith*"></a>
   <h4 id="Godot_SoftBody_RemoveCollisionExceptionWith_Godot_Node_" data-uid="Godot.SoftBody.RemoveCollisionExceptionWith(Godot.Node)">RemoveCollisionExceptionWith(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a body from the list of bodies that this body can&apos;t collide with.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2205,7 +2223,8 @@
   
   <a id="Godot_SoftBody_SetCollisionLayerBit_" data-uid="Godot.SoftBody.SetCollisionLayerBit*"></a>
   <h4 id="Godot_SoftBody_SetCollisionLayerBit_System_Int32_System_Boolean_" data-uid="Godot.SoftBody.SetCollisionLayerBit(System.Int32,System.Boolean)">SetCollisionLayerBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets individual bits on the layer mask. Use this if you only need to change one layer&apos;s value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2264,7 +2283,8 @@
   
   <a id="Godot_SoftBody_SetCollisionMaskBit_" data-uid="Godot.SoftBody.SetCollisionMaskBit*"></a>
   <h4 id="Godot_SoftBody_SetCollisionMaskBit_System_Int32_System_Boolean_" data-uid="Godot.SoftBody.SetCollisionMaskBit(System.Int32,System.Boolean)">SetCollisionMaskBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets individual bits on the collision mask. Use this if you only need to change one layer&apos;s value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2431,7 +2451,8 @@
   
   <a id="Godot_SoftBody_SetPointPinned_" data-uid="Godot.SoftBody.SetPointPinned*"></a>
   <h4 id="Godot_SoftBody_SetPointPinned_System_Int32_System_Boolean_Godot_NodePath_" data-uid="Godot.SoftBody.SetPointPinned(System.Int32,System.Boolean,Godot.NodePath)">SetPointPinned(Int32, Boolean, NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the pinned state of a surface vertex. When set to <code>true</code>, the optional <code>attachment_path</code> can define a <a class="xref" href="Godot.Spatial.html">Spatial</a> the pinned vertex will be attached to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2460,7 +2481,8 @@
       <tr>
         <td><a class="xref" href="Godot.NodePath.html">NodePath</a></td>
         <td><span class="parametername">attachmentPath</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is (NodePath)&quot;&quot;</p>
+</td>
       </tr>
     </tbody>
   </table>

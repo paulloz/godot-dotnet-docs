@@ -83,7 +83,10 @@
   
   <h1 id="Godot_VisibilityNotifier" data-uid="Godot.VisibilityNotifier" class="text-break">Class VisibilityNotifier
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The VisibilityNotifier detects when it is visible on the screen. It also notifies when its bounding rectangle enters or exits the screen or a <a class="xref" href="Godot.Camera.html">Camera</a>&apos;s view.</p>
+<p>If you want nodes to be disabled automatically when they exit the screen, use <a class="xref" href="Godot.VisibilityEnabler.html">VisibilityEnabler</a> instead.</p>
+<p>Note: VisibilityNotifier uses an approximate heuristic for performance reasons. It doesn&apos;t take walls and other occlusion into account (unless you are using <a class="xref" href="Godot.Portal.html">Portal</a>s). The heuristic is an implementation detail and may change in future versions. If you need precise visibility checking, use another method such as adding an <a class="xref" href="Godot.Area.html">Area</a> node as a child of a <a class="xref" href="Godot.Camera.html">Camera</a> node and/or <code>Vector3.dot</code>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1002,7 +1005,8 @@
   
   <a id="Godot_VisibilityNotifier_Aabb_" data-uid="Godot.VisibilityNotifier.Aabb*"></a>
   <h4 id="Godot_VisibilityNotifier_Aabb" data-uid="Godot.VisibilityNotifier.Aabb">Aabb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The VisibilityNotifier&apos;s bounding box.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1027,7 +1031,9 @@
   
   <a id="Godot_VisibilityNotifier_MaxDistance_" data-uid="Godot.VisibilityNotifier.MaxDistance*"></a>
   <h4 id="Godot_VisibilityNotifier_MaxDistance" data-uid="Godot.VisibilityNotifier.MaxDistance">MaxDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>In addition to checking whether a node is on screen or within a <a class="xref" href="Godot.Camera.html">Camera</a>&apos;s view, VisibilityNotifier can also optionally check whether a node is within a specified maximum distance when using a <a class="xref" href="Godot.Camera.html">Camera</a> with perspective projection. This is useful for throttling the performance requirements of nodes that are far away.</p>
+<p>Note: This feature will be disabled if set to 0.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1104,7 +1110,9 @@
   
   <a id="Godot_VisibilityNotifier_IsOnScreen_" data-uid="Godot.VisibilityNotifier.IsOnScreen*"></a>
   <h4 id="Godot_VisibilityNotifier_IsOnScreen" data-uid="Godot.VisibilityNotifier.IsOnScreen">IsOnScreen()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the bounding box is on the screen.</p>
+<p>Note: It takes one frame for the node&apos;s visibility to be assessed once added to the scene tree, so this method will return <code>false</code> right after it is instantiated, even if it will be on screen in the draw pass.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

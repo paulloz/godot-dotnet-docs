@@ -83,7 +83,60 @@
   
   <h1 id="Godot_HTTPRequest" data-uid="Godot.HTTPRequest" class="text-break">Class HTTPRequest
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A node with the ability to send HTTP requests. Uses <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a> internally.</p>
+<p>Can be used to make HTTP requests, i.e. download or upload files or web content via HTTP.</p>
+<p>Warning: See the notes and warnings on <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a> for limitations, especially regarding SSL security.</p>
+<p>Example of contacting a REST API and printing one of its returned fields:</p>
+<p><pre><code>func _ready():
+    # Create an HTTP request node and connect its completion signal.
+    var http_request = HTTPRequest.new()
+    add_child(http_request)
+    http_request.connect(&quot;request_completed&quot;, self, &quot;_http_request_completed&quot;)
+<pre><code># Perform a GET request. The URL below returns JSON as of writing.
+var error = http_request.request(&amp;quot;https://httpbin.org/get&amp;quot;)
+if error != OK:
+    push_error(&amp;quot;An error occurred in the HTTP request.&amp;quot;)
+
+# Perform a POST request. The URL below returns JSON as of writing.
+# Note: Don&amp;apos;t make simultaneous requests using a single HTTPRequest node.
+# The snippet below is provided for reference only.
+var body = to_json({&amp;quot;name&amp;quot;: &amp;quot;Godette&amp;quot;})
+error = http_request.request(&amp;quot;https://httpbin.org/post&amp;quot;, [], true, HTTPClient.METHOD_POST, body)
+if error != OK:
+    push_error(&amp;quot;An error occurred in the HTTP request.&amp;quot;)
+</code></pre>
+<h1 id="called-when-the-http-request-is-completed">Called when the HTTP request is completed.</h1>
+<p>func _http_request_completed(result, response_code, headers, body):
+var response = parse_json(body.get_string_from_utf8())</p>
+<pre><code># Will print the user agent string used by the HTTPRequest node (as recognized by httpbin.org).
+print(response.headers[&amp;quot;User-Agent&amp;quot;])&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+</code></pre>
+<p>Example of loading and displaying an image using HTTPRequest:</p>
+<p><pre><code>func _ready():
+    # Create an HTTP request node and connect its completion signal.
+    var http_request = HTTPRequest.new()
+    add_child(http_request)
+    http_request.connect(&quot;request_completed&quot;, self, &quot;_http_request_completed&quot;)
+<pre><code># Perform the HTTP request. The URL below returns a PNG image as of writing.
+var error = http_request.request(&amp;quot;https://via.placeholder.com/512&amp;quot;)
+if error != OK:
+    push_error(&amp;quot;An error occurred in the HTTP request.&amp;quot;)
+</code></pre>
+<h1 id="called-when-the-http-request-is-completed-1">Called when the HTTP request is completed.</h1>
+<p>func _http_request_completed(result, response_code, headers, body):
+var image = Image.new()
+var error = image.load_png_from_buffer(body)
+if error != OK:
+push_error(&quot;Couldn't load the image.&quot;)</p>
+<pre><code>var texture = ImageTexture.new()
+texture.create_from_image(image)
+
+# Display the image in a TextureRect node.
+var texture_rect = TextureRect.new()
+add_child(texture_rect)
+texture_rect.texture = texture&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+</code></pre>
+</code></pre></code></pre></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -753,7 +806,8 @@
   
   <a id="Godot_HTTPRequest_BodySizeLimit_" data-uid="Godot.HTTPRequest.BodySizeLimit*"></a>
   <h4 id="Godot_HTTPRequest_BodySizeLimit" data-uid="Godot.HTTPRequest.BodySizeLimit">BodySizeLimit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum allowed size for response bodies (<code>-1</code> means no limit). When only small files are expected, this can be used to prevent disallow receiving files that are too large, preventing potential denial of service attacks.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -778,7 +832,9 @@
   
   <a id="Godot_HTTPRequest_DownloadChunkSize_" data-uid="Godot.HTTPRequest.DownloadChunkSize*"></a>
   <h4 id="Godot_HTTPRequest_DownloadChunkSize" data-uid="Godot.HTTPRequest.DownloadChunkSize">DownloadChunkSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size of the buffer used and maximum bytes to read per iteration. See <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_ReadChunkSize">ReadChunkSize</a>.</p>
+<p>Set this to a lower value (e.g. 4096 for 4 KiB) when downloading small files to decrease memory usage at the cost of download speeds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -803,7 +859,9 @@
   
   <a id="Godot_HTTPRequest_DownloadFile_" data-uid="Godot.HTTPRequest.DownloadFile*"></a>
   <h4 id="Godot_HTTPRequest_DownloadFile" data-uid="Godot.HTTPRequest.DownloadFile">DownloadFile</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The file to download into. If set to a non-empty string, the request output will be written to the file located at the path. If a file already exists at the specified location, it will be overwritten as soon as body data begins to be received.</p>
+<p>Note: Folders are not automatically created when the file is created. If <a class="xref" href="Godot.HTTPRequest.html#Godot_HTTPRequest_DownloadFile">DownloadFile</a> points to a subfolder, it&apos;s recommended to create the necessary folders beforehand using <a class="xref" href="Godot.Directory.html#Godot_Directory_MakeDirRecursive_System_String_">MakeDirRecursive(String)</a> to ensure the file can be written.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -828,7 +886,8 @@
   
   <a id="Godot_HTTPRequest_MaxRedirects_" data-uid="Godot.HTTPRequest.MaxRedirects*"></a>
   <h4 id="Godot_HTTPRequest_MaxRedirects" data-uid="Godot.HTTPRequest.MaxRedirects">MaxRedirects</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum number of allowed redirects. This is used to prevent endless redirect loops.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -853,7 +912,8 @@
   
   <a id="Godot_HTTPRequest_Timeout_" data-uid="Godot.HTTPRequest.Timeout*"></a>
   <h4 id="Godot_HTTPRequest_Timeout" data-uid="Godot.HTTPRequest.Timeout">Timeout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set to a value greater than <code>0.0</code> before the request starts, the HTTP request will time out after <code>timeout</code> seconds have passed and the request is not completed yet. For small HTTP requests such as REST API usage, set <a class="xref" href="Godot.HTTPRequest.html#Godot_HTTPRequest_Timeout">Timeout</a> to a value between <code>10.0</code> and <code>30.0</code> to prevent the application from getting stuck if the request fails to get a response in a timely manner. For file downloads, leave this to <code>0.0</code> to prevent the download from failing if it takes too much time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -878,7 +938,8 @@
   
   <a id="Godot_HTTPRequest_UseThreads_" data-uid="Godot.HTTPRequest.UseThreads*"></a>
   <h4 id="Godot_HTTPRequest_UseThreads" data-uid="Godot.HTTPRequest.UseThreads">UseThreads</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, multithreading is used to improve performance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -905,7 +966,8 @@
   
   <a id="Godot_HTTPRequest_CancelRequest_" data-uid="Godot.HTTPRequest.CancelRequest*"></a>
   <h4 id="Godot_HTTPRequest_CancelRequest" data-uid="Godot.HTTPRequest.CancelRequest">CancelRequest()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Cancels the current request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -915,7 +977,9 @@
   
   <a id="Godot_HTTPRequest_GetBodySize_" data-uid="Godot.HTTPRequest.GetBodySize*"></a>
   <h4 id="Godot_HTTPRequest_GetBodySize" data-uid="Godot.HTTPRequest.GetBodySize">GetBodySize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the response body length.</p>
+<p>Note: Some Web servers may not send a body length. In this case, the value returned will be <code>-1</code>. If using chunked transfer encoding, the body length will also be <code>-1</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -990,7 +1054,8 @@
   
   <a id="Godot_HTTPRequest_GetDownloadedBytes_" data-uid="Godot.HTTPRequest.GetDownloadedBytes*"></a>
   <h4 id="Godot_HTTPRequest_GetDownloadedBytes" data-uid="Godot.HTTPRequest.GetDownloadedBytes">GetDownloadedBytes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of bytes this HTTPRequest downloaded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1040,7 +1105,8 @@
   
   <a id="Godot_HTTPRequest_GetHttpClientStatus_" data-uid="Godot.HTTPRequest.GetHttpClientStatus*"></a>
   <h4 id="Godot_HTTPRequest_GetHttpClientStatus" data-uid="Godot.HTTPRequest.GetHttpClientStatus">GetHttpClientStatus()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current status of the underlying <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a>. See <a class="xref" href="Godot.HTTPClient.Status.html">HTTPClient.Status</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1140,7 +1206,10 @@
   
   <a id="Godot_HTTPRequest_Request_" data-uid="Godot.HTTPRequest.Request*"></a>
   <h4 id="Godot_HTTPRequest_Request_System_String_System_String___System_Boolean_Godot_HTTPClient_Method_System_String_" data-uid="Godot.HTTPRequest.Request(System.String,System.String[],System.Boolean,Godot.HTTPClient.Method,System.String)">Request(String, String[], Boolean, HTTPClient.Method, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates request on the underlying <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a>. If there is no configuration errors, it tries to connect using <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_ConnectToHost_System_String_System_Int32_System_Boolean_System_Boolean_">ConnectToHost(String, Int32, Boolean, Boolean)</a> and passes parameters onto <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_Request_Godot_HTTPClient_Method_System_String_System_String___System_String_">Request(HTTPClient.Method, String, String[], String)</a>.</p>
+<p>Returns <code>OK</code> if request is successfully created. (Does not imply that the server has responded), <code>ERR_UNCONFIGURED</code> if not in the tree, <code>ERR_BUSY</code> if still processing previous request, <code>ERR_INVALID_PARAMETER</code> if given string is not a valid URL format, or <code>ERR_CANT_CONNECT</code> if not using thread and the <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a> cannot connect to host.</p>
+<p>Note: When <code>method</code> is <a class="xref" href="Godot.HTTPClient.Method.html#Godot_HTTPClient_Method_Get">Get</a>, the payload sent via <code>request_data</code> might be ignored by the server or even cause the server to reject the request (check <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-4.3.1">RFC 7231 section 4.3.1</a> for more details). As a workaround, you can send data as a query string in the URL. See <code>String.http_escape</code> for an example.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1164,7 +1233,8 @@
       <tr>
         <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">customHeaders</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;string&gt;()</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -1202,7 +1272,9 @@
   
   <a id="Godot_HTTPRequest_RequestRaw_" data-uid="Godot.HTTPRequest.RequestRaw*"></a>
   <h4 id="Godot_HTTPRequest_RequestRaw_System_String_System_String___System_Boolean_Godot_HTTPClient_Method_System_Byte___" data-uid="Godot.HTTPRequest.RequestRaw(System.String,System.String[],System.Boolean,Godot.HTTPClient.Method,System.Byte[])">RequestRaw(String, String[], Boolean, HTTPClient.Method, Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates request on the underlying <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a> using a raw array of bytes for the request body. If there is no configuration errors, it tries to connect using <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_ConnectToHost_System_String_System_Int32_System_Boolean_System_Boolean_">ConnectToHost(String, Int32, Boolean, Boolean)</a> and passes parameters onto <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_Request_Godot_HTTPClient_Method_System_String_System_String___System_String_">Request(HTTPClient.Method, String, String[], String)</a>.</p>
+<p>Returns <code>OK</code> if request is successfully created. (Does not imply that the server has responded), <code>ERR_UNCONFIGURED</code> if not in the tree, <code>ERR_BUSY</code> if still processing previous request, <code>ERR_INVALID_PARAMETER</code> if given string is not a valid URL format, or <code>ERR_CANT_CONNECT</code> if not using thread and the <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a> cannot connect to host.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1226,7 +1298,8 @@
       <tr>
         <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">customHeaders</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;string&gt;()</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -1241,7 +1314,8 @@
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">requestDataRaw</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;byte&gt;()</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1345,7 +1419,9 @@
   
   <a id="Godot_HTTPRequest_SetHttpProxy_" data-uid="Godot.HTTPRequest.SetHttpProxy*"></a>
   <h4 id="Godot_HTTPRequest_SetHttpProxy_System_String_System_Int32_" data-uid="Godot.HTTPRequest.SetHttpProxy(System.String,System.Int32)">SetHttpProxy(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the proxy server for HTTP requests.</p>
+<p>The proxy server is unset if <code>host</code> is empty or <code>port</code> is -1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1377,7 +1453,9 @@
   
   <a id="Godot_HTTPRequest_SetHttpsProxy_" data-uid="Godot.HTTPRequest.SetHttpsProxy*"></a>
   <h4 id="Godot_HTTPRequest_SetHttpsProxy_System_String_System_Int32_" data-uid="Godot.HTTPRequest.SetHttpsProxy(System.String,System.Int32)">SetHttpsProxy(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the proxy server for HTTPS requests.</p>
+<p>The proxy server is unset if <code>host</code> is empty or <code>port</code> is -1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

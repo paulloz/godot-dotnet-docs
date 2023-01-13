@@ -83,7 +83,8 @@
   
   <h1 id="Godot_GDScriptFunctionState" data-uid="Godot.GDScriptFunctionState" class="text-break">Class GDScriptFunctionState
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Calling <code>@GDScript.yield</code> within a function will cause that function to yield and return its current state as an object of this type. The yielded function call can then be resumed later by calling <a class="xref" href="Godot.GDScriptFunctionState.html#Godot_GDScriptFunctionState_Resume_System_Object_">Resume(Object)</a> on this state object.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -285,7 +286,9 @@
   
   <a id="Godot_GDScriptFunctionState_IsValid_" data-uid="Godot.GDScriptFunctionState.IsValid*"></a>
   <h4 id="Godot_GDScriptFunctionState_IsValid_System_Boolean_" data-uid="Godot.GDScriptFunctionState.IsValid(System.Boolean)">IsValid(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether the function call may be resumed. This is not the case if the function state was already resumed.</p>
+<p>If <code>extended_check</code> is enabled, it also checks if the associated script and object still exist. The extended check is done in debug mode as part of <a class="xref" href="Godot.GDScriptFunctionState.html#Godot_GDScriptFunctionState_Resume_System_Object_">Resume(Object)</a>, but you can use this if you know you may be trying to resume without knowing for sure the object and/or script have survived up to that point.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -327,7 +330,10 @@
   
   <a id="Godot_GDScriptFunctionState_Resume_" data-uid="Godot.GDScriptFunctionState.Resume*"></a>
   <h4 id="Godot_GDScriptFunctionState_Resume_System_Object_" data-uid="Godot.GDScriptFunctionState.Resume(System.Object)">Resume(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resume execution of the yielded function call.</p>
+<p>If handed an argument, return the argument from the <code>@GDScript.yield</code> call in the yielded function call. You can pass e.g. an <a class="xref" href="Godot.Collections.Array.html">Array</a> to hand multiple arguments.</p>
+<p>This function returns what the resumed function call returns, possibly another function state if yielded again.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

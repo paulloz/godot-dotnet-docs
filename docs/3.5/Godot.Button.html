@@ -83,7 +83,19 @@
   
   <h1 id="Godot_Button" data-uid="Godot.Button" class="text-break">Class Button
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Button is the standard themed button. It can contain text and an icon, and will display them according to the current <a class="xref" href="Godot.Theme.html">Theme</a>.</p>
+<p>Example of creating a button and assigning an action when pressed by code:</p>
+<p><pre><code>func _ready():
+    var button = Button.new()
+    button.text = &quot;Click me&quot;
+    button.connect(&quot;pressed&quot;, self, &quot;_button_pressed&quot;)
+    add_child(button)
+<p>func _button_pressed():
+print(&quot;Hello world!&quot;)</code></pre></p><p>
+<p>Buttons (like all Control nodes) can also be created in the editor, but some situations may require creating them from code.</p>
+<p>See also <a class="xref" href="Godot.BaseButton.html">BaseButton</a> which contains common properties and methods associated with this node.</p>
+<p>Note: Buttons do not interpret touch input and therefore don&apos;t support multitouch, since mouse emulation can only press one button at a given time. Use <a class="xref" href="Godot.TouchScreenButton.html">TouchScreenButton</a> for buttons that trigger gameplay movement or actions, as <a class="xref" href="Godot.TouchScreenButton.html">TouchScreenButton</a> supports multitouch.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1575,7 +1587,8 @@
   
   <a id="Godot_Button_Align_" data-uid="Godot.Button.Align*"></a>
   <h4 id="Godot_Button_Align" data-uid="Godot.Button.Align">Align</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Text alignment policy for the button&apos;s text, use one of the <a class="xref" href="Godot.Button.TextAlign.html">Button.TextAlign</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1600,7 +1613,8 @@
   
   <a id="Godot_Button_ClipText_" data-uid="Godot.Button.ClipText*"></a>
   <h4 id="Godot_Button_ClipText" data-uid="Godot.Button.ClipText">ClipText</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When this property is enabled, text that is too large to fit the button is clipped, when disabled the Button will always be wide enough to hold the text.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1625,7 +1639,8 @@
   
   <a id="Godot_Button_ExpandIcon_" data-uid="Godot.Button.ExpandIcon*"></a>
   <h4 id="Godot_Button_ExpandIcon" data-uid="Godot.Button.ExpandIcon">ExpandIcon</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When enabled, the button&apos;s icon will expand/shrink to fit the button&apos;s size while keeping its aspect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1650,7 +1665,8 @@
   
   <a id="Godot_Button_Flat_" data-uid="Godot.Button.Flat*"></a>
   <h4 id="Godot_Button_Flat" data-uid="Godot.Button.Flat">Flat</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flat buttons don&apos;t display decoration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1675,7 +1691,9 @@
   
   <a id="Godot_Button_Icon_" data-uid="Godot.Button.Icon*"></a>
   <h4 id="Godot_Button_Icon" data-uid="Godot.Button.Icon">Icon</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Button&apos;s icon, if text is present the icon will be placed before the text.</p>
+<p>To edit margin and spacing of the icon, use <code>hseparation</code> theme property of <a class="xref" href="Godot.Button.html">Button</a> and <code>content_margin_*</code> properties of the used <a class="xref" href="Godot.StyleBox.html">StyleBox</a>es.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1700,7 +1718,8 @@
   
   <a id="Godot_Button_IconAlign_" data-uid="Godot.Button.IconAlign*"></a>
   <h4 id="Godot_Button_IconAlign" data-uid="Godot.Button.IconAlign">IconAlign</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies if the icon should be aligned to the left, right, or center of a button. Uses the same <a class="xref" href="Godot.Button.TextAlign.html">Button.TextAlign</a> constants as the text alignment. If centered, text will draw on top of the icon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1725,7 +1744,8 @@
   
   <a id="Godot_Button_Text_" data-uid="Godot.Button.Text*"></a>
   <h4 id="Godot_Button_Text" data-uid="Godot.Button.Text">Text</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The button&apos;s text that will be displayed inside the button&apos;s area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

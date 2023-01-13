@@ -83,7 +83,9 @@
   
   <h1 id="Godot_CryptoKey" data-uid="Godot.CryptoKey" class="text-break">Class CryptoKey
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The CryptoKey class represents a cryptographic key. Keys can be loaded and saved like any other <a class="xref" href="Godot.Resource.html">Resource</a>.</p>
+<p>They can be used to generate a self-signed <a class="xref" href="Godot.X509Certificate.html">X509Certificate</a> via <a class="xref" href="Godot.Crypto.html#Godot_Crypto_GenerateSelfSignedCertificate_Godot_CryptoKey_System_String_System_String_System_String_">GenerateSelfSignedCertificate(CryptoKey, String, String, String)</a> and as private key in <a class="xref" href="Godot.StreamPeerSSL.html#Godot_StreamPeerSSL_AcceptStream_Godot_StreamPeer_Godot_CryptoKey_Godot_X509Certificate_Godot_X509Certificate_">AcceptStream(StreamPeer, CryptoKey, X509Certificate, X509Certificate)</a> along with the appropriate certificate.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -346,7 +348,8 @@
   
   <a id="Godot_CryptoKey_IsPublicOnly_" data-uid="Godot.CryptoKey.IsPublicOnly*"></a>
   <h4 id="Godot_CryptoKey_IsPublicOnly" data-uid="Godot.CryptoKey.IsPublicOnly">IsPublicOnly()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return <code>true</code> if this CryptoKey only has the public part, and not the private one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +374,9 @@
   
   <a id="Godot_CryptoKey_Load_" data-uid="Godot.CryptoKey.Load*"></a>
   <h4 id="Godot_CryptoKey_Load_System_String_System_Boolean_" data-uid="Godot.CryptoKey.Load(System.String,System.Boolean)">Load(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads a key from <code>path</code>. If <code>public_only</code> is <code>true</code>, only the public key will be loaded.</p>
+<p>Note: <code>path</code> should be a &quot;*.pub&quot; file if <code>public_only</code> is <code>true</code>, a &quot;*.key&quot; file otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -418,7 +423,8 @@
   
   <a id="Godot_CryptoKey_LoadFromString_" data-uid="Godot.CryptoKey.LoadFromString*"></a>
   <h4 id="Godot_CryptoKey_LoadFromString_System_String_System_Boolean_" data-uid="Godot.CryptoKey.LoadFromString(System.String,System.Boolean)">LoadFromString(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads a key from the given <code>string</code>. If <code>public_only</code> is <code>true</code>, only the public key will be loaded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -465,7 +471,9 @@
   
   <a id="Godot_CryptoKey_Save_" data-uid="Godot.CryptoKey.Save*"></a>
   <h4 id="Godot_CryptoKey_Save_System_String_System_Boolean_" data-uid="Godot.CryptoKey.Save(System.String,System.Boolean)">Save(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves a key to the given <code>path</code>. If <code>public_only</code> is <code>true</code>, only the public key will be saved.</p>
+<p>Note: <code>path</code> should be a &quot;*.pub&quot; file if <code>public_only</code> is <code>true</code>, a &quot;*.key&quot; file otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -512,7 +520,8 @@
   
   <a id="Godot_CryptoKey_SaveToString_" data-uid="Godot.CryptoKey.SaveToString*"></a>
   <h4 id="Godot_CryptoKey_SaveToString_System_Boolean_" data-uid="Godot.CryptoKey.SaveToString(System.Boolean)">SaveToString(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a string containing the key in PEM format. If <code>public_only</code> is <code>true</code>, only the public key will be included.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

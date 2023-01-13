@@ -83,7 +83,11 @@
   
   <h1 id="Godot_AnimationNodeStateMachine" data-uid="Godot.AnimationNodeStateMachine" class="text-break">Class AnimationNodeStateMachine
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Contains multiple nodes representing animation states, connected in a graph. Node transitions can be configured to happen automatically or via code, using a shortest-path algorithm. Retrieve the <a class="xref" href="Godot.AnimationNodeStateMachinePlayback.html">AnimationNodeStateMachinePlayback</a> object from the <a class="xref" href="Godot.AnimationTree.html">AnimationTree</a> node to control it programmatically.</p>
+<p>Example:</p>
+<p><pre><code>var state_machine = $AnimationTree.get(&quot;parameters/playback&quot;)
+state_machine.travel(&quot;some_state&quot;)</code></pre></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -414,7 +418,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_AddNode_" data-uid="Godot.AnimationNodeStateMachine.AddNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_AddNode_System_String_Godot_AnimationNode_System_Nullable_Godot_Vector2__" data-uid="Godot.AnimationNodeStateMachine.AddNode(System.String,Godot.AnimationNode,System.Nullable{Godot.Vector2})">AddNode(String, AnimationNode, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new node to the graph. The <code>position</code> is used for display in the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -443,7 +448,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">position</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -451,7 +457,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_AddTransition_" data-uid="Godot.AnimationNodeStateMachine.AddTransition*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_AddTransition_System_String_System_String_Godot_AnimationNodeStateMachineTransition_" data-uid="Godot.AnimationNodeStateMachine.AddTransition(System.String,System.String,Godot.AnimationNodeStateMachineTransition)">AddTransition(String, String, AnimationNodeStateMachineTransition)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a transition between the given nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -488,7 +495,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetEndNode_" data-uid="Godot.AnimationNodeStateMachine.GetEndNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetEndNode" data-uid="Godot.AnimationNodeStateMachine.GetEndNode">GetEndNode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the graph&apos;s end node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -513,7 +521,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetGraphOffset_" data-uid="Godot.AnimationNodeStateMachine.GetGraphOffset*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetGraphOffset" data-uid="Godot.AnimationNodeStateMachine.GetGraphOffset">GetGraphOffset()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the draw offset of the graph. Used for display in the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -538,7 +547,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetNode_" data-uid="Godot.AnimationNodeStateMachine.GetNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetNode_System_String_" data-uid="Godot.AnimationNodeStateMachine.GetNode(System.String)">GetNode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the animation node with the given name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -580,7 +590,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetNodeName_" data-uid="Godot.AnimationNodeStateMachine.GetNodeName*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetNodeName_Godot_AnimationNode_" data-uid="Godot.AnimationNodeStateMachine.GetNodeName(Godot.AnimationNode)">GetNodeName(AnimationNode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the given animation node&apos;s name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -622,7 +633,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetNodePosition_" data-uid="Godot.AnimationNodeStateMachine.GetNodePosition*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetNodePosition_System_String_" data-uid="Godot.AnimationNodeStateMachine.GetNodePosition(System.String)">GetNodePosition(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the given node&apos;s coordinates. Used for display in the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -664,7 +676,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetStartNode_" data-uid="Godot.AnimationNodeStateMachine.GetStartNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetStartNode" data-uid="Godot.AnimationNodeStateMachine.GetStartNode">GetStartNode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the graph&apos;s end node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -689,7 +702,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetTransition_" data-uid="Godot.AnimationNodeStateMachine.GetTransition*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetTransition_System_Int32_" data-uid="Godot.AnimationNodeStateMachine.GetTransition(System.Int32)">GetTransition(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the given transition.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -731,7 +745,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetTransitionCount_" data-uid="Godot.AnimationNodeStateMachine.GetTransitionCount*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetTransitionCount" data-uid="Godot.AnimationNodeStateMachine.GetTransitionCount">GetTransitionCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of connections in the graph.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -756,7 +771,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetTransitionFrom_" data-uid="Godot.AnimationNodeStateMachine.GetTransitionFrom*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetTransitionFrom_System_Int32_" data-uid="Godot.AnimationNodeStateMachine.GetTransitionFrom(System.Int32)">GetTransitionFrom(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the given transition&apos;s start node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -798,7 +814,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_GetTransitionTo_" data-uid="Godot.AnimationNodeStateMachine.GetTransitionTo*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_GetTransitionTo_System_Int32_" data-uid="Godot.AnimationNodeStateMachine.GetTransitionTo(System.Int32)">GetTransitionTo(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the given transition&apos;s end node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -840,7 +857,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_HasNode_" data-uid="Godot.AnimationNodeStateMachine.HasNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_HasNode_System_String_" data-uid="Godot.AnimationNodeStateMachine.HasNode(System.String)">HasNode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the graph contains the given node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -882,7 +900,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_HasTransition_" data-uid="Godot.AnimationNodeStateMachine.HasTransition*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_HasTransition_System_String_System_String_" data-uid="Godot.AnimationNodeStateMachine.HasTransition(System.String,System.String)">HasTransition(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if there is a transition between the given nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -929,7 +948,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_RemoveNode_" data-uid="Godot.AnimationNodeStateMachine.RemoveNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_RemoveNode_System_String_" data-uid="Godot.AnimationNodeStateMachine.RemoveNode(System.String)">RemoveNode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deletes the given node from the graph.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -956,7 +976,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_RemoveTransition_" data-uid="Godot.AnimationNodeStateMachine.RemoveTransition*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_RemoveTransition_System_String_System_String_" data-uid="Godot.AnimationNodeStateMachine.RemoveTransition(System.String,System.String)">RemoveTransition(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deletes the transition between the two specified nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -988,7 +1009,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_RemoveTransitionByIndex_" data-uid="Godot.AnimationNodeStateMachine.RemoveTransitionByIndex*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_RemoveTransitionByIndex_System_Int32_" data-uid="Godot.AnimationNodeStateMachine.RemoveTransitionByIndex(System.Int32)">RemoveTransitionByIndex(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deletes the given transition by index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1015,7 +1037,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_RenameNode_" data-uid="Godot.AnimationNodeStateMachine.RenameNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_RenameNode_System_String_System_String_" data-uid="Godot.AnimationNodeStateMachine.RenameNode(System.String,System.String)">RenameNode(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Renames the given node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1047,7 +1070,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_ReplaceNode_" data-uid="Godot.AnimationNodeStateMachine.ReplaceNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_ReplaceNode_System_String_Godot_AnimationNode_" data-uid="Godot.AnimationNodeStateMachine.ReplaceNode(System.String,Godot.AnimationNode)">ReplaceNode(String, AnimationNode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Replaces the node and keeps its transitions unchanged.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1079,7 +1103,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_SetEndNode_" data-uid="Godot.AnimationNodeStateMachine.SetEndNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_SetEndNode_System_String_" data-uid="Godot.AnimationNodeStateMachine.SetEndNode(System.String)">SetEndNode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the given node as the graph end point.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1106,7 +1131,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_SetGraphOffset_" data-uid="Godot.AnimationNodeStateMachine.SetGraphOffset*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_SetGraphOffset_Godot_Vector2_" data-uid="Godot.AnimationNodeStateMachine.SetGraphOffset(Godot.Vector2)">SetGraphOffset(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the draw offset of the graph. Used for display in the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1133,7 +1159,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_SetNodePosition_" data-uid="Godot.AnimationNodeStateMachine.SetNodePosition*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_SetNodePosition_System_String_Godot_Vector2_" data-uid="Godot.AnimationNodeStateMachine.SetNodePosition(System.String,Godot.Vector2)">SetNodePosition(String, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the node&apos;s coordinates. Used for display in the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1165,7 +1192,8 @@
   
   <a id="Godot_AnimationNodeStateMachine_SetStartNode_" data-uid="Godot.AnimationNodeStateMachine.SetStartNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachine_SetStartNode_System_String_" data-uid="Godot.AnimationNodeStateMachine.SetStartNode(System.String)">SetStartNode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the given node as the graph start point.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

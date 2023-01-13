@@ -83,7 +83,9 @@
   
   <h1 id="Godot_CollisionShape" data-uid="Godot.CollisionShape" class="text-break">Class CollisionShape
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Editor facility for creating and editing collision shapes in 3D space. Set the <a class="xref" href="Godot.CollisionShape.html#Godot_CollisionShape_Shape">Shape</a> property to configure the shape. IMPORTANT: this is an Editor-only helper to create shapes, use <a class="xref" href="Godot.CollisionObject.html#Godot_CollisionObject_ShapeOwnerGetShape_System_UInt32_System_Int32_">ShapeOwnerGetShape(UInt32, Int32)</a> to get the actual shape.</p>
+<p>You can use this node to represent all sorts of collision shapes, for example, add this to an <a class="xref" href="Godot.Area.html">Area</a> to give it a detection shape, or add it to a <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a> to create a solid object.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +966,8 @@
   
   <a id="Godot_CollisionShape_Disabled_" data-uid="Godot.CollisionShape.Disabled*"></a>
   <h4 id="Godot_CollisionShape_Disabled" data-uid="Godot.CollisionShape.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A disabled collision shape has no effect in the world.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +992,8 @@
   
   <a id="Godot_CollisionShape_Shape_" data-uid="Godot.CollisionShape.Shape*"></a>
   <h4 id="Godot_CollisionShape_Shape" data-uid="Godot.CollisionShape.Shape">Shape</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The actual shape owned by this collision shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1066,7 +1070,8 @@
   
   <a id="Godot_CollisionShape_MakeConvexFromBrothers_" data-uid="Godot.CollisionShape.MakeConvexFromBrothers*"></a>
   <h4 id="Godot_CollisionShape_MakeConvexFromBrothers" data-uid="Godot.CollisionShape.MakeConvexFromBrothers">MakeConvexFromBrothers()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the collision shape&apos;s shape to the addition of all its convexed <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> siblings geometry.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1076,7 +1081,8 @@
   
   <a id="Godot_CollisionShape_ResourceChanged_" data-uid="Godot.CollisionShape.ResourceChanged*"></a>
   <h4 id="Godot_CollisionShape_ResourceChanged_Godot_Resource_" data-uid="Godot.CollisionShape.ResourceChanged(Godot.Resource)">ResourceChanged(Resource)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If this method exists within a script it will be called whenever the shape resource has been modified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

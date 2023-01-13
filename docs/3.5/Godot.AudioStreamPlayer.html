@@ -83,7 +83,9 @@
   
   <h1 id="Godot_AudioStreamPlayer" data-uid="Godot.AudioStreamPlayer" class="text-break">Class AudioStreamPlayer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Plays an audio stream non-positionally.</p>
+<p>To play audio positionally, use <a class="xref" href="Godot.AudioStreamPlayer2D.html">AudioStreamPlayer2D</a> or <a class="xref" href="Godot.AudioStreamPlayer3D.html">AudioStreamPlayer3D</a> instead of <a class="xref" href="Godot.AudioStreamPlayer.html">AudioStreamPlayer</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -753,7 +755,8 @@
   
   <a id="Godot_AudioStreamPlayer_Autoplay_" data-uid="Godot.AudioStreamPlayer.Autoplay*"></a>
   <h4 id="Godot_AudioStreamPlayer_Autoplay" data-uid="Godot.AudioStreamPlayer.Autoplay">Autoplay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, audio plays when added to scene tree.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -778,7 +781,9 @@
   
   <a id="Godot_AudioStreamPlayer_Bus_" data-uid="Godot.AudioStreamPlayer.Bus*"></a>
   <h4 id="Godot_AudioStreamPlayer_Bus" data-uid="Godot.AudioStreamPlayer.Bus">Bus</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bus on which this audio is playing.</p>
+<p>Note: When setting this property, keep in mind that no validation is performed to see if the given name matches an existing bus. This is because audio bus layouts might be loaded after this property is set. If this given name can&apos;t be resolved at runtime, it will fall back to <code>&quot;Master&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -803,7 +808,8 @@
   
   <a id="Godot_AudioStreamPlayer_MixTarget_" data-uid="Godot.AudioStreamPlayer.MixTarget*"></a>
   <h4 id="Godot_AudioStreamPlayer_MixTarget" data-uid="Godot.AudioStreamPlayer.MixTarget">MixTarget</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If the audio configuration has more than two speakers, this sets the target channels. See <a class="xref" href="Godot.AudioStreamPlayer.MixTargetEnum.html">AudioStreamPlayer.MixTargetEnum</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -828,7 +834,8 @@
   
   <a id="Godot_AudioStreamPlayer_PitchScale_" data-uid="Godot.AudioStreamPlayer.PitchScale*"></a>
   <h4 id="Godot_AudioStreamPlayer_PitchScale" data-uid="Godot.AudioStreamPlayer.PitchScale">PitchScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The pitch and the tempo of the audio, as a multiplier of the audio sample&apos;s sample rate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -853,7 +860,8 @@
   
   <a id="Godot_AudioStreamPlayer_Playing_" data-uid="Godot.AudioStreamPlayer.Playing*"></a>
   <h4 id="Godot_AudioStreamPlayer_Playing" data-uid="Godot.AudioStreamPlayer.Playing">Playing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, audio is playing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -878,7 +886,8 @@
   
   <a id="Godot_AudioStreamPlayer_Stream_" data-uid="Godot.AudioStreamPlayer.Stream*"></a>
   <h4 id="Godot_AudioStreamPlayer_Stream" data-uid="Godot.AudioStreamPlayer.Stream">Stream</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.AudioStream.html">AudioStream</a> object to be played.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -903,7 +912,8 @@
   
   <a id="Godot_AudioStreamPlayer_StreamPaused_" data-uid="Godot.AudioStreamPlayer.StreamPaused*"></a>
   <h4 id="Godot_AudioStreamPlayer_StreamPaused" data-uid="Godot.AudioStreamPlayer.StreamPaused">StreamPaused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the playback is paused. You can resume it by setting <code>stream_paused</code> to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -928,7 +938,8 @@
   
   <a id="Godot_AudioStreamPlayer_VolumeDb_" data-uid="Godot.AudioStreamPlayer.VolumeDb*"></a>
   <h4 id="Godot_AudioStreamPlayer_VolumeDb" data-uid="Godot.AudioStreamPlayer.VolumeDb">VolumeDb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Volume of sound, in dB.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1030,7 +1041,8 @@
   
   <a id="Godot_AudioStreamPlayer_GetPlaybackPosition_" data-uid="Godot.AudioStreamPlayer.GetPlaybackPosition*"></a>
   <h4 id="Godot_AudioStreamPlayer_GetPlaybackPosition" data-uid="Godot.AudioStreamPlayer.GetPlaybackPosition">GetPlaybackPosition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position in the <a class="xref" href="Godot.AudioStream.html">AudioStream</a> in seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1105,7 +1117,8 @@
   
   <a id="Godot_AudioStreamPlayer_GetStreamPlayback_" data-uid="Godot.AudioStreamPlayer.GetStreamPlayback*"></a>
   <h4 id="Godot_AudioStreamPlayer_GetStreamPlayback" data-uid="Godot.AudioStreamPlayer.GetStreamPlayback">GetStreamPlayback()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.AudioStreamPlayback.html">AudioStreamPlayback</a> object associated with this <a class="xref" href="Godot.AudioStreamPlayer.html">AudioStreamPlayer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1205,7 +1218,8 @@
   
   <a id="Godot_AudioStreamPlayer_Play_" data-uid="Godot.AudioStreamPlayer.Play*"></a>
   <h4 id="Godot_AudioStreamPlayer_Play_System_Single_" data-uid="Godot.AudioStreamPlayer.Play(System.Single)">Play(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plays the audio from the given <code>from_position</code>, in seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1232,7 +1246,8 @@
   
   <a id="Godot_AudioStreamPlayer_Seek_" data-uid="Godot.AudioStreamPlayer.Seek*"></a>
   <h4 id="Godot_AudioStreamPlayer_Seek_System_Single_" data-uid="Godot.AudioStreamPlayer.Seek(System.Single)">Seek(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the position from which audio will be played, in seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1448,7 +1463,8 @@
   
   <a id="Godot_AudioStreamPlayer_Stop_" data-uid="Godot.AudioStreamPlayer.Stop*"></a>
   <h4 id="Godot_AudioStreamPlayer_Stop" data-uid="Godot.AudioStreamPlayer.Stop">Stop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the audio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

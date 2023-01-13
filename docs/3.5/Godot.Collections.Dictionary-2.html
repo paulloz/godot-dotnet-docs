@@ -83,7 +83,11 @@
   
   <h1 id="Godot_Collections_Dictionary_2" data-uid="Godot.Collections.Dictionary`2" class="text-break">Class Dictionary&lt;TKey, TValue&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Typed wrapper around Godot's Dictionary class, a dictionary of Variant
+typed elements allocated in the engine in C++. Useful when
+interfacing with the engine. Otherwise prefer .NET collections
+such as <span class="xref">System.Collections.Generic.Dictionary`2</span>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -114,11 +118,13 @@
     <tbody>
       <tr>
         <td><span class="parametername">TKey</span></td>
-        <td></td>
+        <td><p>The type of the dictionary's keys.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TValue</span></td>
-        <td></td>
+        <td><p>The type of the dictionary's values.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -128,7 +134,8 @@
   
   <a id="Godot_Collections_Dictionary_2__ctor_" data-uid="Godot.Collections.Dictionary`2.#ctor*"></a>
   <h4 id="Godot_Collections_Dictionary_2__ctor" data-uid="Godot.Collections.Dictionary`2.#ctor">Dictionary()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a new empty <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -138,7 +145,8 @@
   
   <a id="Godot_Collections_Dictionary_2__ctor_" data-uid="Godot.Collections.Dictionary`2.#ctor*"></a>
   <h4 id="Godot_Collections_Dictionary_2__ctor_Godot_Collections_Dictionary_" data-uid="Godot.Collections.Dictionary`2.#ctor(Godot.Collections.Dictionary)">Dictionary(Dictionary)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a> from the given dictionary's elements.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -157,7 +165,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a></td>
         <td><span class="parametername">dictionary</span></td>
-        <td></td>
+        <td><p>The dictionary to construct from.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -165,7 +174,8 @@
   
   <a id="Godot_Collections_Dictionary_2__ctor_" data-uid="Godot.Collections.Dictionary`2.#ctor*"></a>
   <h4 id="Godot_Collections_Dictionary_2__ctor_System_Collections_Generic_IDictionary__0__1__" data-uid="Godot.Collections.Dictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})">Dictionary(IDictionary&lt;TKey, TValue&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a> from the given dictionary's elements.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -184,7 +194,8 @@
       <tr>
         <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TKey, TValue&gt;</td>
         <td><span class="parametername">dictionary</span></td>
-        <td></td>
+        <td><p>The dictionary to construct from.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -194,7 +205,9 @@
   
   <a id="Godot_Collections_Dictionary_2_Count_" data-uid="Godot.Collections.Dictionary`2.Count*"></a>
   <h4 id="Godot_Collections_Dictionary_2_Count" data-uid="Godot.Collections.Dictionary`2.Count">Count</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of elements in this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a>.
+This is also known as the size or length of the dictionary.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -211,7 +224,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The number of elements.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -219,7 +233,8 @@
   
   <a id="Godot_Collections_Dictionary_2_Item_" data-uid="Godot.Collections.Dictionary`2.Item*"></a>
   <h4 id="Godot_Collections_Dictionary_2_Item__0_" data-uid="Godot.Collections.Dictionary`2.Item(`0)">Item[TKey]</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value at the given <code data-dev-comment-type="paramref" class="paramref">key</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,7 +268,8 @@
     <tbody>
       <tr>
         <td><span class="xref">TValue</span></td>
-        <td></td>
+        <td><p>The value at the given <code data-dev-comment-type="paramref" class="paramref">key</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -261,7 +277,8 @@
   
   <a id="Godot_Collections_Dictionary_2_Keys_" data-uid="Godot.Collections.Dictionary`2.Keys*"></a>
   <h4 id="Godot_Collections_Dictionary_2_Keys" data-uid="Godot.Collections.Dictionary`2.Keys">Keys</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the collection of keys in this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -286,7 +303,8 @@
   
   <a id="Godot_Collections_Dictionary_2_Values_" data-uid="Godot.Collections.Dictionary`2.Values*"></a>
   <h4 id="Godot_Collections_Dictionary_2_Values" data-uid="Godot.Collections.Dictionary`2.Values">Values</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the collection of elements in this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -313,7 +331,9 @@
   
   <a id="Godot_Collections_Dictionary_2_Add_" data-uid="Godot.Collections.Dictionary`2.Add*"></a>
   <h4 id="Godot_Collections_Dictionary_2_Add__0__1_" data-uid="Godot.Collections.Dictionary`2.Add(`0,`1)">Add(TKey, TValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an object <code data-dev-comment-type="paramref" class="paramref">value</code> at key <code data-dev-comment-type="paramref" class="paramref">key</code>
+to this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -332,12 +352,14 @@
       <tr>
         <td><span class="xref">TKey</span></td>
         <td><span class="parametername">key</span></td>
-        <td></td>
+        <td><p>The key at which to add the object.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">TValue</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The object to add.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -345,7 +367,8 @@
   
   <a id="Godot_Collections_Dictionary_2_Clear_" data-uid="Godot.Collections.Dictionary`2.Clear*"></a>
   <h4 id="Godot_Collections_Dictionary_2_Clear" data-uid="Godot.Collections.Dictionary`2.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Erases all the items from this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -355,7 +378,8 @@
   
   <a id="Godot_Collections_Dictionary_2_ContainsKey_" data-uid="Godot.Collections.Dictionary`2.ContainsKey*"></a>
   <h4 id="Godot_Collections_Dictionary_2_ContainsKey__0_" data-uid="Godot.Collections.Dictionary`2.ContainsKey(`0)">ContainsKey(TKey)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a> contains the given key.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +398,8 @@
       <tr>
         <td><span class="xref">TKey</span></td>
         <td><span class="parametername">key</span></td>
-        <td></td>
+        <td><p>The key to look for.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -389,7 +414,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not this dictionary contains the given key.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -397,7 +423,9 @@
   
   <a id="Godot_Collections_Dictionary_2_CopyTo_" data-uid="Godot.Collections.Dictionary`2.CopyTo*"></a>
   <h4 id="Godot_Collections_Dictionary_2_CopyTo_System_Collections_Generic_KeyValuePair__0__1____System_Int32_" data-uid="Godot.Collections.Dictionary`2.CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">CopyTo(KeyValuePair&lt;TKey, TValue&gt;[], Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Copies the elements of this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a> to the given
+untyped C# array, starting at the given index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -416,12 +444,14 @@
       <tr>
         <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;[]</td>
         <td><span class="parametername">array</span></td>
-        <td></td>
+        <td><p>The array to copy to.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">arrayIndex</span></td>
-        <td></td>
+        <td><p>The index to start at.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -429,7 +459,8 @@
   
   <a id="Godot_Collections_Dictionary_2_Duplicate_" data-uid="Godot.Collections.Dictionary`2.Duplicate*"></a>
   <h4 id="Godot_Collections_Dictionary_2_Duplicate_System_Boolean_" data-uid="Godot.Collections.Dictionary`2.Duplicate(System.Boolean)">Duplicate(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Duplicates this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -448,7 +479,8 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">deep</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, performs a deep copy.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -463,7 +495,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary</a>&lt;TKey, TValue&gt;</td>
-        <td></td>
+        <td><p>A new Godot Dictionary.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -471,7 +504,8 @@
   
   <a id="Godot_Collections_Dictionary_2_GetEnumerator_" data-uid="Godot.Collections.Dictionary`2.GetEnumerator*"></a>
   <h4 id="Godot_Collections_Dictionary_2_GetEnumerator" data-uid="Godot.Collections.Dictionary`2.GetEnumerator">GetEnumerator()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets an enumerator for this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -488,7 +522,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</td>
-        <td></td>
+        <td><p>An enumerator.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -496,7 +531,8 @@
   
   <a id="Godot_Collections_Dictionary_2_Remove_" data-uid="Godot.Collections.Dictionary`2.Remove*"></a>
   <h4 id="Godot_Collections_Dictionary_2_Remove__0_" data-uid="Godot.Collections.Dictionary`2.Remove(`0)">Remove(TKey)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes an element from this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a> by key.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -515,7 +551,8 @@
       <tr>
         <td><span class="xref">TKey</span></td>
         <td><span class="parametername">key</span></td>
-        <td></td>
+        <td><p>The key of the element to remove.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -538,7 +575,8 @@
   
   <a id="Godot_Collections_Dictionary_2_ToString_" data-uid="Godot.Collections.Dictionary`2.ToString*"></a>
   <h4 id="Godot_Collections_Dictionary_2_ToString" data-uid="Godot.Collections.Dictionary`2.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a> to a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -555,7 +593,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string representation of this dictionary.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -563,7 +602,8 @@
   
   <a id="Godot_Collections_Dictionary_2_TryGetValue_" data-uid="Godot.Collections.Dictionary`2.TryGetValue*"></a>
   <h4 id="Godot_Collections_Dictionary_2_TryGetValue__0__1__" data-uid="Godot.Collections.Dictionary`2.TryGetValue(`0,`1@)">TryGetValue(TKey, out TValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the object at the given <code data-dev-comment-type="paramref" class="paramref">key</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -582,12 +622,14 @@
       <tr>
         <td><span class="xref">TKey</span></td>
         <td><span class="parametername">key</span></td>
-        <td></td>
+        <td><p>The key of the element to get.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">TValue</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The value at the given <code data-dev-comment-type="paramref" class="paramref">key</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -602,7 +644,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If an object was found for the given <code data-dev-comment-type="paramref" class="paramref">key</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -612,7 +655,8 @@
   
   <a id="Godot_Collections_Dictionary_2_op_Explicit_" data-uid="Godot.Collections.Dictionary`2.op_Explicit*"></a>
   <h4 id="Godot_Collections_Dictionary_2_op_Explicit_Godot_Collections_Dictionary__0__1___Godot_Collections_Dictionary" data-uid="Godot.Collections.Dictionary`2.op_Explicit(Godot.Collections.Dictionary{`0,`1})~Godot.Collections.Dictionary">Explicit(Dictionary&lt;TKey, TValue&gt; to Dictionary)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this typed <a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary&lt;TKey, TValue&gt;</a> to an untyped <a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -631,7 +675,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Dictionary-2.html">Dictionary</a>&lt;TKey, TValue&gt;</td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The typed dictionary to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>

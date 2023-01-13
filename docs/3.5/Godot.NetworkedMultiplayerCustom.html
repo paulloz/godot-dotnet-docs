@@ -83,7 +83,9 @@
   
   <h1 id="Godot_NetworkedMultiplayerCustom" data-uid="Godot.NetworkedMultiplayerCustom" class="text-break">Class NetworkedMultiplayerCustom
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="Godot.NetworkedMultiplayerPeer.html">NetworkedMultiplayerPeer</a> implementation that can be used as a <a class="xref" href="Godot.MultiplayerAPI.html#Godot_MultiplayerAPI_NetworkPeer">NetworkPeer</a> and controlled from a script.</p>
+<p>Its purpose is to allow adding a new backend for the high-Level multiplayer API without needing to use GDNative.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -374,7 +376,9 @@
   
   <a id="Godot_NetworkedMultiplayerCustom_DeliverPacket_" data-uid="Godot.NetworkedMultiplayerCustom.DeliverPacket*"></a>
   <h4 id="Godot_NetworkedMultiplayerCustom_DeliverPacket_System_Byte___System_Int32_" data-uid="Godot.NetworkedMultiplayerCustom.DeliverPacket(System.Byte[],System.Int32)">DeliverPacket(Byte[], Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deliver a packet to the local <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a>.</p>
+<p>When your script receives a packet from other peers over the network (originating from the <code>packet_generated</code> signal on the sending peer), passing it to this method will deliver it locally.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -406,7 +410,9 @@
   
   <a id="Godot_NetworkedMultiplayerCustom_Initialize_" data-uid="Godot.NetworkedMultiplayerCustom.Initialize*"></a>
   <h4 id="Godot_NetworkedMultiplayerCustom_Initialize_System_Int32_" data-uid="Godot.NetworkedMultiplayerCustom.Initialize(System.Int32)">Initialize(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initialize the peer with the given <code>peer_id</code> (must be between 1 and 2147483647).</p>
+<p>Can only be called if the connection status is <a class="xref" href="Godot.NetworkedMultiplayerPeer.ConnectionStatus.html#Godot_NetworkedMultiplayerPeer_ConnectionStatus_Connecting">Connecting</a>. See <a class="xref" href="Godot.NetworkedMultiplayerCustom.html#Godot_NetworkedMultiplayerCustom_SetConnectionStatus_Godot_NetworkedMultiplayerPeer_ConnectionStatus_">SetConnectionStatus(NetworkedMultiplayerPeer.ConnectionStatus)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -433,7 +439,10 @@
   
   <a id="Godot_NetworkedMultiplayerCustom_SetConnectionStatus_" data-uid="Godot.NetworkedMultiplayerCustom.SetConnectionStatus*"></a>
   <h4 id="Godot_NetworkedMultiplayerCustom_SetConnectionStatus_Godot_NetworkedMultiplayerPeer_ConnectionStatus_" data-uid="Godot.NetworkedMultiplayerCustom.SetConnectionStatus(Godot.NetworkedMultiplayerPeer.ConnectionStatus)">SetConnectionStatus(NetworkedMultiplayerPeer.ConnectionStatus)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set the state of the connection. See <a class="xref" href="Godot.NetworkedMultiplayerPeer.ConnectionStatus.html">NetworkedMultiplayerPeer.ConnectionStatus</a>.</p>
+<p>This will emit the <code>NetworkedMultiplayerPeer.connection_succeeded</code>, <code>NetworkedMultiplayerPeer.connection_failed</code> or <code>NetworkedMultiplayerPeer.server_disconnected</code> signals depending on the status and if the peer has the unique network id of <code>1</code>.</p>
+<p>You can only change to <a class="xref" href="Godot.NetworkedMultiplayerPeer.ConnectionStatus.html#Godot_NetworkedMultiplayerPeer_ConnectionStatus_Connecting">Connecting</a> from <a class="xref" href="Godot.NetworkedMultiplayerPeer.ConnectionStatus.html#Godot_NetworkedMultiplayerPeer_ConnectionStatus_Disconnected">Disconnected</a> and to <a class="xref" href="Godot.NetworkedMultiplayerPeer.ConnectionStatus.html#Godot_NetworkedMultiplayerPeer_ConnectionStatus_Connected">Connected</a> from <a class="xref" href="Godot.NetworkedMultiplayerPeer.ConnectionStatus.html#Godot_NetworkedMultiplayerPeer_ConnectionStatus_Connecting">Connecting</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -460,7 +469,8 @@
   
   <a id="Godot_NetworkedMultiplayerCustom_SetMaxPacketSize_" data-uid="Godot.NetworkedMultiplayerCustom.SetMaxPacketSize*"></a>
   <h4 id="Godot_NetworkedMultiplayerCustom_SetMaxPacketSize_System_Int32_" data-uid="Godot.NetworkedMultiplayerCustom.SetMaxPacketSize(System.Int32)">SetMaxPacketSize(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set the max packet size that this peer can handle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

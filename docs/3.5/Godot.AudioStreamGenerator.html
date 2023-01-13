@@ -83,7 +83,10 @@
   
   <h1 id="Godot_AudioStreamGenerator" data-uid="Godot.AudioStreamGenerator" class="text-break">Class AudioStreamGenerator
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This audio stream does not play back sounds, but expects a script to generate audio data for it instead. See also <a class="xref" href="Godot.AudioStreamGeneratorPlayback.html">AudioStreamGeneratorPlayback</a>.</p>
+<p>See also <a class="xref" href="Godot.AudioEffectSpectrumAnalyzer.html">AudioEffectSpectrumAnalyzer</a> for performing real-time audio spectrum analysis.</p>
+<p>Note: Due to performance constraints, this class is best used from C# or from a compiled language via GDNative. If you still want to use this class from GDScript, consider using a lower <a class="xref" href="Godot.AudioStreamGenerator.html#Godot_AudioStreamGenerator_MixRate">MixRate</a> such as 11,025 Hz or 22,050 Hz.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -350,7 +353,8 @@
   
   <a id="Godot_AudioStreamGenerator_BufferLength_" data-uid="Godot.AudioStreamGenerator.BufferLength*"></a>
   <h4 id="Godot_AudioStreamGenerator_BufferLength" data-uid="Godot.AudioStreamGenerator.BufferLength">BufferLength</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The length of the buffer to generate (in seconds). Lower values result in less latency, but require the script to generate audio data faster, resulting in increased CPU usage and more risk for audio cracking if the CPU can&apos;t keep up.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -375,7 +379,10 @@
   
   <a id="Godot_AudioStreamGenerator_MixRate_" data-uid="Godot.AudioStreamGenerator.MixRate*"></a>
   <h4 id="Godot_AudioStreamGenerator_MixRate" data-uid="Godot.AudioStreamGenerator.MixRate">MixRate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The sample rate to use (in Hz). Higher values are more demanding for the CPU to generate, but result in better quality.</p>
+<p>In games, common sample rates in use are <code>11025</code>, <code>16000</code>, <code>22050</code>, <code>32000</code>, <code>44100</code>, and <code>48000</code>.</p>
+<p>According to the <a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem">Nyquist-Shannon sampling theorem</a>, there is no quality difference to human hearing when going past 40,000 Hz (since most humans can only hear up to ~20,000 Hz, often less). If you are generating lower-pitched sounds such as voices, lower sample rates such as <code>32000</code> or <code>22050</code> may be usable with no loss in quality.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

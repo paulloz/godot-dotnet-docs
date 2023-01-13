@@ -83,7 +83,9 @@
   
   <h1 id="Godot_AnimationNode" data-uid="Godot.AnimationNode" class="text-break">Class AnimationNode
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Base resource for <a class="xref" href="Godot.AnimationTree.html">AnimationTree</a> nodes. In general, it&apos;s not used directly, but you can create custom ones with custom blending formulas.</p>
+<p>Inherit this when creating nodes mainly for use in <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>, otherwise <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a> should be used instead.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -356,7 +358,8 @@
   
   <a id="Godot_AnimationNode_FilterEnabled_" data-uid="Godot.AnimationNode.FilterEnabled*"></a>
   <h4 id="Godot_AnimationNode_FilterEnabled" data-uid="Godot.AnimationNode.FilterEnabled">FilterEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, filtering is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -408,7 +411,8 @@
   
   <a id="Godot_AnimationNode_AddInput_" data-uid="Godot.AnimationNode.AddInput*"></a>
   <h4 id="Godot_AnimationNode_AddInput_System_String_" data-uid="Godot.AnimationNode.AddInput(System.String)">AddInput(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an input to the node. This is only useful for nodes created for use in an <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -435,7 +439,8 @@
   
   <a id="Godot_AnimationNode_BlendAnimation_" data-uid="Godot.AnimationNode.BlendAnimation*"></a>
   <h4 id="Godot_AnimationNode_BlendAnimation_System_String_System_Single_System_Single_System_Boolean_System_Single_" data-uid="Godot.AnimationNode.BlendAnimation(System.String,System.Single,System.Single,System.Boolean,System.Single)">BlendAnimation(String, Single, Single, Boolean, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blend an animation by <code>blend</code> amount (name must be valid in the linked <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a>). A <code>time</code> and <code>delta</code> may be passed, as well as whether <code>seek</code> happened.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -482,7 +487,8 @@
   
   <a id="Godot_AnimationNode_BlendInput_" data-uid="Godot.AnimationNode.BlendInput*"></a>
   <h4 id="Godot_AnimationNode_BlendInput_System_Int32_System_Single_System_Boolean_System_Single_Godot_AnimationNode_FilterAction_System_Boolean_" data-uid="Godot.AnimationNode.BlendInput(System.Int32,System.Single,System.Boolean,System.Single,Godot.AnimationNode.FilterAction,System.Boolean)">BlendInput(Int32, Single, Boolean, Single, AnimationNode.FilterAction, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blend an input. This is only useful for nodes created for an <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>. The <code>time</code> parameter is a relative delta, unless <code>seek</code> is <code>true</code>, in which case it is absolute. A filter mode may be optionally passed (see <a class="xref" href="Godot.AnimationNode.FilterAction.html">AnimationNode.FilterAction</a> for options).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -549,7 +555,8 @@
   
   <a id="Godot_AnimationNode_BlendNode_" data-uid="Godot.AnimationNode.BlendNode*"></a>
   <h4 id="Godot_AnimationNode_BlendNode_System_String_Godot_AnimationNode_System_Single_System_Boolean_System_Single_Godot_AnimationNode_FilterAction_System_Boolean_" data-uid="Godot.AnimationNode.BlendNode(System.String,Godot.AnimationNode,System.Single,System.Boolean,System.Single,Godot.AnimationNode.FilterAction,System.Boolean)">BlendNode(String, AnimationNode, Single, Boolean, Single, AnimationNode.FilterAction, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blend another animation node (in case this node contains children animation nodes). This function is only useful if you inherit from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a> instead, else editors will not display your node for addition.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -621,7 +628,8 @@
   
   <a id="Godot_AnimationNode_GetCaption_" data-uid="Godot.AnimationNode.GetCaption*"></a>
   <h4 id="Godot_AnimationNode_GetCaption" data-uid="Godot.AnimationNode.GetCaption">GetCaption()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When inheriting from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a>, implement this virtual method to override the text caption for this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -646,7 +654,8 @@
   
   <a id="Godot_AnimationNode_GetChildByName_" data-uid="Godot.AnimationNode.GetChildByName*"></a>
   <h4 id="Godot_AnimationNode_GetChildByName_System_String_" data-uid="Godot.AnimationNode.GetChildByName(System.String)">GetChildByName(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When inheriting from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a>, implement this virtual method to return a child node by its <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -688,7 +697,8 @@
   
   <a id="Godot_AnimationNode_GetChildNodes_" data-uid="Godot.AnimationNode.GetChildNodes*"></a>
   <h4 id="Godot_AnimationNode_GetChildNodes" data-uid="Godot.AnimationNode.GetChildNodes">GetChildNodes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When inheriting from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a>, implement this virtual method to return all children nodes in order as a <code>name: node</code> dictionary.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -713,7 +723,8 @@
   
   <a id="Godot_AnimationNode_GetInputCount_" data-uid="Godot.AnimationNode.GetInputCount*"></a>
   <h4 id="Godot_AnimationNode_GetInputCount" data-uid="Godot.AnimationNode.GetInputCount">GetInputCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount of inputs in this node, only useful for nodes that go into <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -738,7 +749,8 @@
   
   <a id="Godot_AnimationNode_GetInputName_" data-uid="Godot.AnimationNode.GetInputName*"></a>
   <h4 id="Godot_AnimationNode_GetInputName_System_Int32_" data-uid="Godot.AnimationNode.GetInputName(System.Int32)">GetInputName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name of an input by index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -780,7 +792,8 @@
   
   <a id="Godot_AnimationNode_GetParameter_" data-uid="Godot.AnimationNode.GetParameter*"></a>
   <h4 id="Godot_AnimationNode_GetParameter_System_String_" data-uid="Godot.AnimationNode.GetParameter(System.String)">GetParameter(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the value of a parameter. Parameters are custom local memory used for your nodes, given a resource can be reused in multiple trees.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -822,7 +835,8 @@
   
   <a id="Godot_AnimationNode_GetParameterDefaultValue_" data-uid="Godot.AnimationNode.GetParameterDefaultValue*"></a>
   <h4 id="Godot_AnimationNode_GetParameterDefaultValue_System_String_" data-uid="Godot.AnimationNode.GetParameterDefaultValue(System.String)">GetParameterDefaultValue(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When inheriting from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a>, implement this virtual method to return the default value of parameter &quot;<code>name</code>&quot;. Parameters are custom local memory used for your nodes, given a resource can be reused in multiple trees.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -864,7 +878,8 @@
   
   <a id="Godot_AnimationNode_GetParameterList_" data-uid="Godot.AnimationNode.GetParameterList*"></a>
   <h4 id="Godot_AnimationNode_GetParameterList" data-uid="Godot.AnimationNode.GetParameterList">GetParameterList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When inheriting from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a>, implement this virtual method to return a list of the properties on this node. Parameters are custom local memory used for your nodes, given a resource can be reused in multiple trees. Format is similar to <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">GetPropertyList()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -889,7 +904,8 @@
   
   <a id="Godot_AnimationNode_HasFilter_" data-uid="Godot.AnimationNode.HasFilter*"></a>
   <h4 id="Godot_AnimationNode_HasFilter" data-uid="Godot.AnimationNode.HasFilter">HasFilter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When inheriting from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a>, implement this virtual method to return whether the blend tree editor should display filter editing on this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -939,7 +955,8 @@
   
   <a id="Godot_AnimationNode_IsPathFiltered_" data-uid="Godot.AnimationNode.IsPathFiltered*"></a>
   <h4 id="Godot_AnimationNode_IsPathFiltered_Godot_NodePath_" data-uid="Godot.AnimationNode.IsPathFiltered(Godot.NodePath)">IsPathFiltered(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the given path is filtered.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -981,7 +998,10 @@
   
   <a id="Godot_AnimationNode_Process_" data-uid="Godot.AnimationNode.Process*"></a>
   <h4 id="Godot_AnimationNode_Process_System_Single_System_Boolean_" data-uid="Godot.AnimationNode.Process(System.Single,System.Boolean)">Process(Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When inheriting from <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a>, implement this virtual method to run some code when this node is processed. The <code>time</code> parameter is a relative delta, unless <code>seek</code> is <code>true</code>, in which case it is absolute.</p>
+<p>Here, call the <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_BlendInput_System_Int32_System_Single_System_Boolean_System_Single_Godot_AnimationNode_FilterAction_System_Boolean_">BlendInput(Int32, Single, Boolean, Single, AnimationNode.FilterAction, Boolean)</a>, <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_BlendNode_System_String_Godot_AnimationNode_System_Single_System_Boolean_System_Single_Godot_AnimationNode_FilterAction_System_Boolean_">BlendNode(String, AnimationNode, Single, Boolean, Single, AnimationNode.FilterAction, Boolean)</a> or <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_BlendAnimation_System_String_System_Single_System_Single_System_Boolean_System_Single_">BlendAnimation(String, Single, Single, Boolean, Single)</a> functions. You can also use <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_GetParameter_System_String_">GetParameter(String)</a> and <a class="xref" href="Godot.AnimationNode.html#Godot_AnimationNode_SetParameter_System_String_System_Object_">SetParameter(String, Object)</a> to modify local memory.</p>
+<p>This function should return the time left for the current animation to finish (if unsure, pass the value from the main blend being called).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1013,7 +1033,8 @@
   
   <a id="Godot_AnimationNode_RemoveInput_" data-uid="Godot.AnimationNode.RemoveInput*"></a>
   <h4 id="Godot_AnimationNode_RemoveInput_System_Int32_" data-uid="Godot.AnimationNode.RemoveInput(System.Int32)">RemoveInput(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes an input, call this only when inactive.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1067,7 +1088,8 @@
   
   <a id="Godot_AnimationNode_SetFilterPath_" data-uid="Godot.AnimationNode.SetFilterPath*"></a>
   <h4 id="Godot_AnimationNode_SetFilterPath_Godot_NodePath_System_Boolean_" data-uid="Godot.AnimationNode.SetFilterPath(Godot.NodePath,System.Boolean)">SetFilterPath(NodePath, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds or removes a path for the filter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1099,7 +1121,8 @@
   
   <a id="Godot_AnimationNode_SetParameter_" data-uid="Godot.AnimationNode.SetParameter*"></a>
   <h4 id="Godot_AnimationNode_SetParameter_System_String_System_Object_" data-uid="Godot.AnimationNode.SetParameter(System.String,System.Object)">SetParameter(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a custom parameter. These are used as local memory, because resources can be reused across the tree or scenes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

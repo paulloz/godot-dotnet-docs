@@ -101,7 +101,8 @@
   
   
   <h4 id="Godot_MultiMesh_CustomDataFormatEnum_Data8bit" data-uid="Godot.MultiMesh.CustomDataFormatEnum.Data8bit">Data8bit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compress custom_data into 8 bits when passing to shader. This uses less memory and can be faster, but loses precision and range. Floats packed into 8 bits can only represent values between 0 and 1, numbers outside that range will be clamped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +126,8 @@
   
   
   <h4 id="Godot_MultiMesh_CustomDataFormatEnum_Float" data-uid="Godot.MultiMesh.CustomDataFormatEnum.Float">Float</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Color.html">Color</a> passed into <a class="xref" href="Godot.MultiMesh.html#Godot_MultiMesh_SetInstanceCustomData_System_Int32_Godot_Color_">SetInstanceCustomData(Int32, Color)</a> will use 4 floats. Use this for highest precision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +151,8 @@
   
   
   <h4 id="Godot_MultiMesh_CustomDataFormatEnum_None" data-uid="Godot.MultiMesh.CustomDataFormatEnum.None">None</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Use when you are not using per-instance custom data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

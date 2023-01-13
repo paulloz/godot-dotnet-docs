@@ -83,7 +83,9 @@
   
   <h1 id="Godot_AudioStreamSample" data-uid="Godot.AudioStreamSample" class="text-break">Class AudioStreamSample
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>AudioStreamSample stores sound samples loaded from WAV files. To play the stored sound, use an <a class="xref" href="Godot.AudioStreamPlayer.html">AudioStreamPlayer</a> (for non-positional audio) or <a class="xref" href="Godot.AudioStreamPlayer2D.html">AudioStreamPlayer2D</a>/<a class="xref" href="Godot.AudioStreamPlayer3D.html">AudioStreamPlayer3D</a> (for positional audio). The sound can be looped.</p>
+<p>This class can also be used to store dynamically-generated PCM audio data. See also <a class="xref" href="Godot.AudioStreamGenerator.html">AudioStreamGenerator</a> for procedural audio generation.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -350,7 +352,9 @@
   
   <a id="Godot_AudioStreamSample_Data_" data-uid="Godot.AudioStreamSample.Data*"></a>
   <h4 id="Godot_AudioStreamSample_Data" data-uid="Godot.AudioStreamSample.Data">Data</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Contains the audio data in bytes.</p>
+<p>Note: This property expects signed PCM8 data. To convert unsigned PCM8 to signed PCM8, subtract 128 from each byte.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -375,7 +379,8 @@
   
   <a id="Godot_AudioStreamSample_Format_" data-uid="Godot.AudioStreamSample.Format*"></a>
   <h4 id="Godot_AudioStreamSample_Format" data-uid="Godot.AudioStreamSample.Format">Format</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Audio format. See <a class="xref" href="Godot.AudioStreamSample.FormatEnum.html">AudioStreamSample.FormatEnum</a> constants for values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -400,7 +405,8 @@
   
   <a id="Godot_AudioStreamSample_LoopBegin_" data-uid="Godot.AudioStreamSample.LoopBegin*"></a>
   <h4 id="Godot_AudioStreamSample_LoopBegin" data-uid="Godot.AudioStreamSample.LoopBegin">LoopBegin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The loop start point (in number of samples, relative to the beginning of the sample). This information will be imported automatically from the WAV file if present.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -425,7 +431,8 @@
   
   <a id="Godot_AudioStreamSample_LoopEnd_" data-uid="Godot.AudioStreamSample.LoopEnd*"></a>
   <h4 id="Godot_AudioStreamSample_LoopEnd" data-uid="Godot.AudioStreamSample.LoopEnd">LoopEnd</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The loop end point (in number of samples, relative to the beginning of the sample). This information will be imported automatically from the WAV file if present.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -450,7 +457,8 @@
   
   <a id="Godot_AudioStreamSample_LoopMode_" data-uid="Godot.AudioStreamSample.LoopMode*"></a>
   <h4 id="Godot_AudioStreamSample_LoopMode" data-uid="Godot.AudioStreamSample.LoopMode">LoopMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The loop mode. This information will be imported automatically from the WAV file if present. See <a class="xref" href="Godot.AudioStreamSample.LoopModeEnum.html">AudioStreamSample.LoopModeEnum</a> constants for values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -475,7 +483,10 @@
   
   <a id="Godot_AudioStreamSample_MixRate_" data-uid="Godot.AudioStreamSample.MixRate*"></a>
   <h4 id="Godot_AudioStreamSample_MixRate" data-uid="Godot.AudioStreamSample.MixRate">MixRate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The sample rate for mixing this audio. Higher values require more storage space, but result in better quality.</p>
+<p>In games, common sample rates in use are <code>11025</code>, <code>16000</code>, <code>22050</code>, <code>32000</code>, <code>44100</code>, and <code>48000</code>.</p>
+<p>According to the <a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem">Nyquist-Shannon sampling theorem</a>, there is no quality difference to human hearing when going past 40,000 Hz (since most humans can only hear up to ~20,000 Hz, often less). If you are using lower-pitched sounds such as voices, lower sample rates such as <code>32000</code> or <code>22050</code> may be usable with no loss in quality.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -500,7 +511,8 @@
   
   <a id="Godot_AudioStreamSample_Stereo_" data-uid="Godot.AudioStreamSample.Stereo*"></a>
   <h4 id="Godot_AudioStreamSample_Stereo" data-uid="Godot.AudioStreamSample.Stereo">Stereo</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, audio is stereo.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -702,7 +714,9 @@
   
   <a id="Godot_AudioStreamSample_SaveToWav_" data-uid="Godot.AudioStreamSample.SaveToWav*"></a>
   <h4 id="Godot_AudioStreamSample_SaveToWav_System_String_" data-uid="Godot.AudioStreamSample.SaveToWav(System.String)">SaveToWav(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves the AudioStreamSample as a WAV file to <code>path</code>. Samples with IMA ADPCM format can&apos;t be saved.</p>
+<p>Note: A <code>.wav</code> extension is automatically appended to <code>path</code> if it is missing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

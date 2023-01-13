@@ -83,7 +83,11 @@
   
   <h1 id="Godot_VideoPlayer" data-uid="Godot.VideoPlayer" class="text-break">Class VideoPlayer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Control node for playing video streams using <a class="xref" href="Godot.VideoStream.html">VideoStream</a> resources.</p>
+<p>Supported video formats are <a href="https://www.webmproject.org/">WebM</a> (<code>.webm</code>, <a class="xref" href="Godot.VideoStreamWebm.html">VideoStreamWebm</a>), <a href="https://www.theora.org/">Ogg Theora</a> (<code>.ogv</code>, <a class="xref" href="Godot.VideoStreamTheora.html">VideoStreamTheora</a>), and any format exposed via a GDNative plugin using <a class="xref" href="Godot.VideoStreamGDNative.html">VideoStreamGDNative</a>.</p>
+<p>Note: Due to a bug, VideoPlayer does not support localization remapping yet.</p>
+<p>Warning: On HTML5, video playback will perform poorly due to missing architecture-specific assembly optimizations, especially for VP8/VP9.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1463,7 +1467,8 @@
   
   <a id="Godot_VideoPlayer_AudioTrack_" data-uid="Godot.VideoPlayer.AudioTrack*"></a>
   <h4 id="Godot_VideoPlayer_AudioTrack" data-uid="Godot.VideoPlayer.AudioTrack">AudioTrack</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The embedded audio track to play.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1488,7 +1493,8 @@
   
   <a id="Godot_VideoPlayer_Autoplay_" data-uid="Godot.VideoPlayer.Autoplay*"></a>
   <h4 id="Godot_VideoPlayer_Autoplay" data-uid="Godot.VideoPlayer.Autoplay">Autoplay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, playback starts when the scene loads.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1513,7 +1519,8 @@
   
   <a id="Godot_VideoPlayer_BufferingMsec_" data-uid="Godot.VideoPlayer.BufferingMsec*"></a>
   <h4 id="Godot_VideoPlayer_BufferingMsec" data-uid="Godot.VideoPlayer.BufferingMsec">BufferingMsec</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount of time in milliseconds to store in buffer while playing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1538,7 +1545,8 @@
   
   <a id="Godot_VideoPlayer_Bus_" data-uid="Godot.VideoPlayer.Bus*"></a>
   <h4 id="Godot_VideoPlayer_Bus" data-uid="Godot.VideoPlayer.Bus">Bus</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Audio bus to use for sound playback.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1563,7 +1571,8 @@
   
   <a id="Godot_VideoPlayer_Expand_" data-uid="Godot.VideoPlayer.Expand*"></a>
   <h4 id="Godot_VideoPlayer_Expand" data-uid="Godot.VideoPlayer.Expand">Expand</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the video scales to the control size. Otherwise, the control minimum size will be automatically adjusted to match the video stream&apos;s dimensions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1588,7 +1597,8 @@
   
   <a id="Godot_VideoPlayer_Paused_" data-uid="Godot.VideoPlayer.Paused*"></a>
   <h4 id="Godot_VideoPlayer_Paused" data-uid="Godot.VideoPlayer.Paused">Paused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the video is paused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1613,7 +1623,8 @@
   
   <a id="Godot_VideoPlayer_Stream_" data-uid="Godot.VideoPlayer.Stream*"></a>
   <h4 id="Godot_VideoPlayer_Stream" data-uid="Godot.VideoPlayer.Stream">Stream</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The assigned video stream. See description for supported formats.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1638,7 +1649,9 @@
   
   <a id="Godot_VideoPlayer_StreamPosition_" data-uid="Godot.VideoPlayer.StreamPosition*"></a>
   <h4 id="Godot_VideoPlayer_StreamPosition" data-uid="Godot.VideoPlayer.StreamPosition">StreamPosition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current position of the stream, in seconds.</p>
+<p>Note: Changing this value won&apos;t have any effect as seeking is not implemented yet, except in video formats implemented by a GDNative add-on.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1663,7 +1676,8 @@
   
   <a id="Godot_VideoPlayer_Volume_" data-uid="Godot.VideoPlayer.Volume*"></a>
   <h4 id="Godot_VideoPlayer_Volume" data-uid="Godot.VideoPlayer.Volume">Volume</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Audio volume as a linear value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1688,7 +1702,8 @@
   
   <a id="Godot_VideoPlayer_VolumeDb_" data-uid="Godot.VideoPlayer.VolumeDb*"></a>
   <h4 id="Godot_VideoPlayer_VolumeDb" data-uid="Godot.VideoPlayer.VolumeDb">VolumeDb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Audio volume in dB.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1815,7 +1830,8 @@
   
   <a id="Godot_VideoPlayer_GetStreamName_" data-uid="Godot.VideoPlayer.GetStreamName*"></a>
   <h4 id="Godot_VideoPlayer_GetStreamName" data-uid="Godot.VideoPlayer.GetStreamName">GetStreamName()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the video stream&apos;s name, or <code>&quot;&lt;No Stream>&quot;</code> if no video stream is assigned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1865,7 +1881,8 @@
   
   <a id="Godot_VideoPlayer_GetVideoTexture_" data-uid="Godot.VideoPlayer.GetVideoTexture*"></a>
   <h4 id="Godot_VideoPlayer_GetVideoTexture" data-uid="Godot.VideoPlayer.GetVideoTexture">GetVideoTexture()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current frame as a <a class="xref" href="Godot.Texture.html">Texture</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2015,7 +2032,9 @@
   
   <a id="Godot_VideoPlayer_IsPlaying_" data-uid="Godot.VideoPlayer.IsPlaying*"></a>
   <h4 id="Godot_VideoPlayer_IsPlaying" data-uid="Godot.VideoPlayer.IsPlaying">IsPlaying()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the video is playing.</p>
+<p>Note: The video is still considered playing if paused during playback.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2040,7 +2059,8 @@
   
   <a id="Godot_VideoPlayer_Play_" data-uid="Godot.VideoPlayer.Play*"></a>
   <h4 id="Godot_VideoPlayer_Play" data-uid="Godot.VideoPlayer.Play">Play()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Starts the video playback from the beginning. If the video is paused, this will not unpause the video.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2320,7 +2340,9 @@
   
   <a id="Godot_VideoPlayer_Stop_" data-uid="Godot.VideoPlayer.Stop*"></a>
   <h4 id="Godot_VideoPlayer_Stop" data-uid="Godot.VideoPlayer.Stop">Stop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the video playback and sets the stream position to 0.</p>
+<p>Note: Although the stream position will be set to 0, the first frame of the video stream won&apos;t become the current frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

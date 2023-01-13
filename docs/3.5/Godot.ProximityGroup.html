@@ -83,7 +83,27 @@
   
   <h1 id="Godot_ProximityGroup" data-uid="Godot.ProximityGroup" class="text-break">Class ProximityGroup
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>General-purpose proximity detection node. <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> can be used for approximate distance checks, which are faster than exact distance checks using <code>Vector3.distance_to</code> or <code>Vector3.distance_squared_to</code>.</p>
+<p><a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> nodes are automatically grouped together, as long as they share the same <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GroupName">GroupName</a> and intersect with each other. By calling the <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_Broadcast_System_String_System_Object_">Broadcast(String, Object)</a>, you can invoke a specified method with various parameters to all intersecting members.</p>
+<p><a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> is cuboid-shaped and consists of a cluster of <a class="xref" href="Godot.Vector3.html">Vector3</a> coordinates. The coordinates are automatically calculated by calling <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GridRadius">GridRadius</a>. To allow <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> to find its peers (and perform automatic grouping), you need to define its <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GroupName">GroupName</a> to a non-empty <span class="xref">System.String</span>. As soon as this object&apos;s shape intersects with another <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> object&apos; shape, and both share the same <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GroupName">GroupName</a>, they will belong together for as long as they intersect.</p>
+<p>Since <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> doesn&apos;t rely the physics engine, you don&apos;t need to add any other node as a child (unlike <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a>).</p>
+<p>The <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> uses the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> groups in the background by calling the method <a class="xref" href="Godot.Node.html#Godot_Node_AddToGroup_System_String_System_Boolean_">AddToGroup(String, Boolean)</a> internally. The <a class="xref" href="Godot.SceneTree.html">SceneTree</a> group names are constructed by combining the <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GroupName">GroupName</a> with its coordinates, which are calculated using the <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GridRadius">GridRadius</a> you defined beforehand.</p>
+<p>Example: A <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> node named <code>&quot;PlanetEarth&quot;</code> at position <code>Vector3(6, 6, 6)</code> with a <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GroupName">GroupName</a> set to <code>&quot;planets&quot;</code> and a <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GridRadius">GridRadius</a> of <code>Vector3(1, 2, 3)</code> will create the following <a class="xref" href="Godot.SceneTree.html">SceneTree</a> group names:</p>
+<p><pre><code>- &quot;planets|5|4|3&quot;
+- &quot;planets|5|4|4&quot;
+- &quot;planets|5|4|5&quot;
+- &quot;planets|5|4|6&quot;
+- &quot;planets|5|4|7&quot;
+- &quot;planets|5|4|8&quot;
+- &quot;planets|5|4|9&quot;
+- ...</code></pre></p>
+<p>If there is another <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> named <code>&quot;PlanetMars&quot;</code> with group name <code>&quot;planets&quot;</code>, and one of its coordinates is <code>Vector3(5, 4, 7)</code>, it would normally create the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> group called <code>&quot;planets|5|4|7&quot;</code>. However, since this group name already exists, this <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> object will be added to the existing one. <code>&quot;PlanetEarth&quot;</code> is already in this group. As long as both nodes don&apos;t change their transform and stop intersecting (or exit the scene tree), they are grouped together. As long as this intersection exists, any call to <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_Broadcast_System_String_System_Object_">Broadcast(String, Object)</a> will affect both <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> nodes.</p>
+<p>There are 3 caveats to keep in mind when using <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a>:</p>
+<p>- The larger the grid radius, the more coordinates and the more <a class="xref" href="Godot.SceneTree.html">SceneTree</a> groups are created. This can have a performance impact if too many groups are created.</p>
+<p>- If the <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> node is transformed in any way (or is removed from the scene tree), the groupings will have to be recalculated. This can also have a performance impact.</p>
+<p>- If your <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GridRadius">GridRadius</a> is smaller than <code>Vector3(1, 1, 1)</code>, it will be rounded up to <code>Vector3(1, 1, 1)</code>. Therefore, small grid radius values may lead to unwanted groupings.</p>
+<p>Note: <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> will be removed in Godot 4.0 in favor of more effective and faster <a class="xref" href="Godot.VisibilityNotifier.html">VisibilityNotifier</a> functionality. For most use cases, <code>Vector3.distance_to</code> or <code>Vector3.distance_squared_to</code> are fast enough too, especially if you call them less often using a <a class="xref" href="Godot.Timer.html">Timer</a> node.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +984,8 @@
   
   <a id="Godot_ProximityGroup_DispatchMode_" data-uid="Godot.ProximityGroup.DispatchMode*"></a>
   <h4 id="Godot_ProximityGroup_DispatchMode" data-uid="Godot.ProximityGroup.DispatchMode">DispatchMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies which node gets contacted on a call of method <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_Broadcast_System_String_System_Object_">Broadcast(String, Object)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +1010,8 @@
   
   <a id="Godot_ProximityGroup_GridRadius_" data-uid="Godot.ProximityGroup.GridRadius*"></a>
   <h4 id="Godot_ProximityGroup_GridRadius" data-uid="Godot.ProximityGroup.GridRadius">GridRadius</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size of the space in 3D units. This also sets the amount of coordinates required to calculate whether two <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> nodes are intersecting or not. Smaller <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GridRadius">GridRadius</a> values can be used for more precise proximity checks at the cost of performance, since more groups will be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1036,9 @@
   
   <a id="Godot_ProximityGroup_GroupName_" data-uid="Godot.ProximityGroup.GroupName*"></a>
   <h4 id="Godot_ProximityGroup_GroupName" data-uid="Godot.ProximityGroup.GroupName">GroupName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specify the common group name, to let other <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> nodes know, if they should be auto-grouped with this node in case they intersect with each other.</p>
+<p>For example, if you have a <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> node named <code>&quot;Earth&quot;</code> and another called <code>&quot;Mars&quot;</code>, with both nodes having <code>&quot;planet&quot;</code> as their <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GroupName">GroupName</a>. Give both planets a significantly larger <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_GridRadius">GridRadius</a> than their actual radius, position them close enough and they&apos;ll be automatically grouped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1041,7 +1065,9 @@
   
   <a id="Godot_ProximityGroup_Broadcast_" data-uid="Godot.ProximityGroup.Broadcast*"></a>
   <h4 id="Godot_ProximityGroup_Broadcast_System_String_System_Object_" data-uid="Godot.ProximityGroup.Broadcast(System.String,System.Object)">Broadcast(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls on all intersecting <a class="xref" href="Godot.ProximityGroup.html">ProximityGroup</a> the given method and parameters.</p>
+<p>If the <a class="xref" href="Godot.ProximityGroup.html#Godot_ProximityGroup_DispatchMode">DispatchMode</a> is set to <a class="xref" href="Godot.ProximityGroup.DispatchModeEnum.html#Godot_ProximityGroup_DispatchModeEnum_Proxy">Proxy</a> (the default), all calls are delegated to their respective parent <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ARVRInterface" data-uid="Godot.ARVRInterface" class="text-break">Class ARVRInterface
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class needs to be implemented to make an AR or VR platform available to Godot and these should be implemented as C++ modules or GDNative modules (note that for GDNative the subclass ARVRScriptInterface should be used). Part of the interface is exposed to GDScript so you can detect, enable and configure an AR or VR platform.</p>
+<p>Interfaces should be written in such a way that simply enabling them will give us a working setup. You can query the available interfaces through <a class="xref" href="Godot.ARVRServer.html">ARVRServer</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -288,7 +290,8 @@
   
   <a id="Godot_ARVRInterface_ArIsAnchorDetectionEnabled_" data-uid="Godot.ARVRInterface.ArIsAnchorDetectionEnabled*"></a>
   <h4 id="Godot_ARVRInterface_ArIsAnchorDetectionEnabled" data-uid="Godot.ARVRInterface.ArIsAnchorDetectionEnabled">ArIsAnchorDetectionEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>On an AR interface, <code>true</code> if anchor detection is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -313,7 +316,8 @@
   
   <a id="Godot_ARVRInterface_InterfaceIsInitialized_" data-uid="Godot.ARVRInterface.InterfaceIsInitialized*"></a>
   <h4 id="Godot_ARVRInterface_InterfaceIsInitialized" data-uid="Godot.ARVRInterface.InterfaceIsInitialized">InterfaceIsInitialized</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><code>true</code> if this interface been initialized.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -338,7 +342,8 @@
   
   <a id="Godot_ARVRInterface_InterfaceIsPrimary_" data-uid="Godot.ARVRInterface.InterfaceIsPrimary*"></a>
   <h4 id="Godot_ARVRInterface_InterfaceIsPrimary" data-uid="Godot.ARVRInterface.InterfaceIsPrimary">InterfaceIsPrimary</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><code>true</code> if this is the primary interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -390,7 +395,8 @@
   
   <a id="Godot_ARVRInterface_GetCameraFeedId_" data-uid="Godot.ARVRInterface.GetCameraFeedId*"></a>
   <h4 id="Godot_ARVRInterface_GetCameraFeedId" data-uid="Godot.ARVRInterface.GetCameraFeedId">GetCameraFeedId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If this is an AR interface that requires displaying a camera feed as the background, this method returns the feed ID in the <a class="xref" href="Godot.CameraServer.html">CameraServer</a> for this interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -415,7 +421,8 @@
   
   <a id="Godot_ARVRInterface_GetCapabilities_" data-uid="Godot.ARVRInterface.GetCapabilities*"></a>
   <h4 id="Godot_ARVRInterface_GetCapabilities" data-uid="Godot.ARVRInterface.GetCapabilities">GetCapabilities()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a combination of <a class="xref" href="Godot.ARVRInterface.Capabilities.html">ARVRInterface.Capabilities</a> flags providing information about the capabilities of this interface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -440,7 +447,8 @@
   
   <a id="Godot_ARVRInterface_GetName_" data-uid="Godot.ARVRInterface.GetName*"></a>
   <h4 id="Godot_ARVRInterface_GetName" data-uid="Godot.ARVRInterface.GetName">GetName()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of this interface (OpenVR, OpenHMD, ARKit, etc).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -465,7 +473,8 @@
   
   <a id="Godot_ARVRInterface_GetRenderTargetsize_" data-uid="Godot.ARVRInterface.GetRenderTargetsize*"></a>
   <h4 id="Godot_ARVRInterface_GetRenderTargetsize" data-uid="Godot.ARVRInterface.GetRenderTargetsize">GetRenderTargetsize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the resolution at which we should render our intermediate results before things like lens distortion are applied by the VR platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -490,7 +499,8 @@
   
   <a id="Godot_ARVRInterface_GetTrackingStatus_" data-uid="Godot.ARVRInterface.GetTrackingStatus*"></a>
   <h4 id="Godot_ARVRInterface_GetTrackingStatus" data-uid="Godot.ARVRInterface.GetTrackingStatus">GetTrackingStatus()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If supported, returns the status of our tracking. This will allow you to provide feedback to the user whether there are issues with positional tracking.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -515,7 +525,12 @@
   
   <a id="Godot_ARVRInterface_Initialize_" data-uid="Godot.ARVRInterface.Initialize*"></a>
   <h4 id="Godot_ARVRInterface_Initialize" data-uid="Godot.ARVRInterface.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Call this to initialize this interface. The first interface that is initialized is identified as the primary interface and it will be used for rendering output.</p>
+<p>After initializing the interface you want to use you then need to enable the AR/VR mode of a viewport and rendering should commence.</p>
+<p>Note: You must enable the AR/VR mode on the main viewport for any device that uses the main output of Godot, such as for mobile VR.</p>
+<p>If you do this for a platform that handles its own output (such as OpenVR) Godot will show just one eye without distortion on screen. Alternatively, you can add a separate viewport node to your scene and enable AR/VR on that viewport. It will be used to output to the HMD, leaving you free to do anything you like in the main window, such as using a separate camera as a spectator camera or rendering something completely different.</p>
+<p>While currently not used, you can activate additional interfaces. You may wish to do this if you want to track controllers from other platforms. However, at this point in time only one interface can render to an HMD.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -590,7 +605,8 @@
   
   <a id="Godot_ARVRInterface_IsStereo_" data-uid="Godot.ARVRInterface.IsStereo*"></a>
   <h4 id="Godot_ARVRInterface_IsStereo" data-uid="Godot.ARVRInterface.IsStereo">IsStereo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the current output of this interface is in stereo.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -696,7 +712,8 @@
   
   <a id="Godot_ARVRInterface_Uninitialize_" data-uid="Godot.ARVRInterface.Uninitialize*"></a>
   <h4 id="Godot_ARVRInterface_Uninitialize" data-uid="Godot.ARVRInterface.Uninitialize">Uninitialize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Turns the interface off.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

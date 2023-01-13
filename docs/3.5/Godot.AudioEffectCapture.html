@@ -83,7 +83,10 @@
   
   <h1 id="Godot_AudioEffectCapture" data-uid="Godot.AudioEffectCapture" class="text-break">Class AudioEffectCapture
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>AudioEffectCapture is an AudioEffect which copies all audio frames from the attached audio effect bus into its internal ring buffer.</p>
+<p>Application code should consume these audio frames from this ring buffer using <a class="xref" href="Godot.AudioEffectCapture.html#Godot_AudioEffectCapture_GetBuffer_System_Int32_">GetBuffer(Int32)</a> and process it as needed, for example to capture data from an <a class="xref" href="Godot.AudioStreamMicrophone.html">AudioStreamMicrophone</a>, implement application-defined effects, or to transmit audio over the network. When capturing audio data from a microphone, the format of the samples will be stereo 32-bit floating point PCM.</p>
+<p>Note:  must be <code>true</code> for audio input to work. See also that setting&apos;s description for caveats related to permissions and operating system privacy settings.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -347,7 +350,8 @@
   
   <a id="Godot_AudioEffectCapture_BufferLength_" data-uid="Godot.AudioEffectCapture.BufferLength*"></a>
   <h4 id="Godot_AudioEffectCapture_BufferLength" data-uid="Godot.AudioEffectCapture.BufferLength">BufferLength</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Length of the internal ring buffer, in seconds. Setting the buffer length will have no effect if already initialized.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +378,8 @@
   
   <a id="Godot_AudioEffectCapture_CanGetBuffer_" data-uid="Godot.AudioEffectCapture.CanGetBuffer*"></a>
   <h4 id="Godot_AudioEffectCapture_CanGetBuffer_System_Int32_" data-uid="Godot.AudioEffectCapture.CanGetBuffer(System.Int32)">CanGetBuffer(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if at least <code>frames</code> audio frames are available to read in the internal ring buffer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -416,7 +421,8 @@
   
   <a id="Godot_AudioEffectCapture_ClearBuffer_" data-uid="Godot.AudioEffectCapture.ClearBuffer*"></a>
   <h4 id="Godot_AudioEffectCapture_ClearBuffer" data-uid="Godot.AudioEffectCapture.ClearBuffer">ClearBuffer()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the internal ring buffer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -426,7 +432,9 @@
   
   <a id="Godot_AudioEffectCapture_GetBuffer_" data-uid="Godot.AudioEffectCapture.GetBuffer*"></a>
   <h4 id="Godot_AudioEffectCapture_GetBuffer_System_Int32_" data-uid="Godot.AudioEffectCapture.GetBuffer(System.Int32)">GetBuffer(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the next <code>frames</code> audio samples from the internal ring buffer.</p>
+<p>Returns a <a class="xref" href="Godot.Vector2.html">Vector2</a> containing exactly <code>frames</code> audio samples if available, or an empty <a class="xref" href="Godot.Vector2.html">Vector2</a> if insufficient data was available.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -493,7 +501,8 @@
   
   <a id="Godot_AudioEffectCapture_GetBufferLengthFrames_" data-uid="Godot.AudioEffectCapture.GetBufferLengthFrames*"></a>
   <h4 id="Godot_AudioEffectCapture_GetBufferLengthFrames" data-uid="Godot.AudioEffectCapture.GetBufferLengthFrames">GetBufferLengthFrames()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total size of the internal ring buffer in frames.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -518,7 +527,8 @@
   
   <a id="Godot_AudioEffectCapture_GetDiscardedFrames_" data-uid="Godot.AudioEffectCapture.GetDiscardedFrames*"></a>
   <h4 id="Godot_AudioEffectCapture_GetDiscardedFrames" data-uid="Godot.AudioEffectCapture.GetDiscardedFrames">GetDiscardedFrames()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of audio frames discarded from the audio bus due to full buffer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -543,7 +553,8 @@
   
   <a id="Godot_AudioEffectCapture_GetFramesAvailable_" data-uid="Godot.AudioEffectCapture.GetFramesAvailable*"></a>
   <h4 id="Godot_AudioEffectCapture_GetFramesAvailable" data-uid="Godot.AudioEffectCapture.GetFramesAvailable">GetFramesAvailable()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of frames available to read using <a class="xref" href="Godot.AudioEffectCapture.html#Godot_AudioEffectCapture_GetBuffer_System_Int32_">GetBuffer(Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -568,7 +579,8 @@
   
   <a id="Godot_AudioEffectCapture_GetPushedFrames_" data-uid="Godot.AudioEffectCapture.GetPushedFrames*"></a>
   <h4 id="Godot_AudioEffectCapture_GetPushedFrames" data-uid="Godot.AudioEffectCapture.GetPushedFrames">GetPushedFrames()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of audio frames inserted from the audio bus.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

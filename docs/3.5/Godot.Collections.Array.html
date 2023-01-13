@@ -83,7 +83,11 @@
   
   <h1 id="Godot_Collections_Array" data-uid="Godot.Collections.Array" class="text-break">Class Array
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Wrapper around Godot's Array class, an array of Variant
+typed elements allocated in the engine in C++. Useful when
+interfacing with the engine. Otherwise prefer .NET collections
+such as <span class="xref">System.Array</span> or <span class="xref">System.Collections.Generic.List`1</span>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -109,7 +113,8 @@
   
   <a id="Godot_Collections_Array__ctor_" data-uid="Godot.Collections.Array.#ctor*"></a>
   <h4 id="Godot_Collections_Array__ctor" data-uid="Godot.Collections.Array.#ctor">Array()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a new empty <a class="xref" href="Godot.Collections.Array.html">Array</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -119,7 +124,8 @@
   
   <a id="Godot_Collections_Array__ctor_" data-uid="Godot.Collections.Array.#ctor*"></a>
   <h4 id="Godot_Collections_Array__ctor_System_Collections_IEnumerable_" data-uid="Godot.Collections.Array.#ctor(System.Collections.IEnumerable)">Array(IEnumerable)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Godot.Collections.Array.html">Array</a> from the given collection's elements.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -138,7 +144,8 @@
       <tr>
         <td><span class="xref">System.Collections.IEnumerable</span></td>
         <td><span class="parametername">collection</span></td>
-        <td></td>
+        <td><p>The collection of elements to construct from.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -146,7 +153,8 @@
   
   <a id="Godot_Collections_Array__ctor_" data-uid="Godot.Collections.Array.#ctor*"></a>
   <h4 id="Godot_Collections_Array__ctor_System_Object___" data-uid="Godot.Collections.Array.#ctor(System.Object[])">Array(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Godot.Collections.Array.html">Array</a> from the given objects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -165,7 +173,8 @@
       <tr>
         <td><span class="xref">System.Object</span>[]</td>
         <td><span class="parametername">array</span></td>
-        <td></td>
+        <td><p>The objects to put in the new array.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -175,7 +184,9 @@
   
   <a id="Godot_Collections_Array_Count_" data-uid="Godot.Collections.Array.Count*"></a>
   <h4 id="Godot_Collections_Array_Count" data-uid="Godot.Collections.Array.Count">Count</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of elements in this <a class="xref" href="Godot.Collections.Array.html">Array</a>.
+This is also known as the size or length of the array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -192,7 +203,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The number of elements.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -200,7 +212,8 @@
   
   <a id="Godot_Collections_Array_Item_" data-uid="Godot.Collections.Array.Item*"></a>
   <h4 id="Godot_Collections_Array_Item_System_Int32_" data-uid="Godot.Collections.Array.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the object at the given <code data-dev-comment-type="paramref" class="paramref">index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -234,7 +247,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td></td>
+        <td><p>The object at the given <code data-dev-comment-type="paramref" class="paramref">index</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -244,7 +258,9 @@
   
   <a id="Godot_Collections_Array_Add_" data-uid="Godot.Collections.Array.Add*"></a>
   <h4 id="Godot_Collections_Array_Add_System_Object_" data-uid="Godot.Collections.Array.Add(System.Object)">Add(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an object to the end of this <a class="xref" href="Godot.Collections.Array.html">Array</a>.
+This is the same as <code>append</code> or <code>push_back</code> in GDScript.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -263,7 +279,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The object to add.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -278,7 +295,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The new size after adding the object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -286,7 +304,8 @@
   
   <a id="Godot_Collections_Array_Clear_" data-uid="Godot.Collections.Array.Clear*"></a>
   <h4 id="Godot_Collections_Array_Clear" data-uid="Godot.Collections.Array.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Erases all items from this <a class="xref" href="Godot.Collections.Array.html">Array</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -296,7 +315,8 @@
   
   <a id="Godot_Collections_Array_Contains_" data-uid="Godot.Collections.Array.Contains*"></a>
   <h4 id="Godot_Collections_Array_Contains_System_Object_" data-uid="Godot.Collections.Array.Contains(System.Object)">Contains(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if this <a class="xref" href="Godot.Collections.Array.html">Array</a> contains the given object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -315,7 +335,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The item to look for.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -330,7 +351,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not this array contains the given object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -338,7 +360,9 @@
   
   <a id="Godot_Collections_Array_CopyTo_" data-uid="Godot.Collections.Array.CopyTo*"></a>
   <h4 id="Godot_Collections_Array_CopyTo_System_Array_System_Int32_" data-uid="Godot.Collections.Array.CopyTo(System.Array,System.Int32)">CopyTo(Array, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Copies the elements of this <a class="xref" href="Godot.Collections.Array.html">Array</a> to the given
+untyped C# array, starting at the given index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -357,12 +381,14 @@
       <tr>
         <td><span class="xref">System.Array</span></td>
         <td><span class="parametername">array</span></td>
-        <td></td>
+        <td><p>The array to copy to.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><p>The index to start at.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -370,7 +396,8 @@
   
   <a id="Godot_Collections_Array_Dispose_" data-uid="Godot.Collections.Array.Dispose*"></a>
   <h4 id="Godot_Collections_Array_Dispose" data-uid="Godot.Collections.Array.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disposes of this <a class="xref" href="Godot.Collections.Array.html">Array</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -380,7 +407,8 @@
   
   <a id="Godot_Collections_Array_Duplicate_" data-uid="Godot.Collections.Array.Duplicate*"></a>
   <h4 id="Godot_Collections_Array_Duplicate_System_Boolean_" data-uid="Godot.Collections.Array.Duplicate(System.Boolean)">Duplicate(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Duplicates this <a class="xref" href="Godot.Collections.Array.html">Array</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -399,7 +427,8 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">deep</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, performs a deep copy.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -414,7 +443,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
-        <td></td>
+        <td><p>A new Godot Array.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -422,7 +452,8 @@
   
   <a id="Godot_Collections_Array_GetEnumerator_" data-uid="Godot.Collections.Array.GetEnumerator*"></a>
   <h4 id="Godot_Collections_Array_GetEnumerator" data-uid="Godot.Collections.Array.GetEnumerator">GetEnumerator()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets an enumerator for this <a class="xref" href="Godot.Collections.Array.html">Array</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -439,7 +470,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.IEnumerator</span></td>
-        <td></td>
+        <td><p>An enumerator.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -447,7 +479,9 @@
   
   <a id="Godot_Collections_Array_IndexOf_" data-uid="Godot.Collections.Array.IndexOf*"></a>
   <h4 id="Godot_Collections_Array_IndexOf_System_Object_" data-uid="Godot.Collections.Array.IndexOf(System.Object)">IndexOf(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Searches this <a class="xref" href="Godot.Collections.Array.html">Array</a> for an object
+and returns its index or -1 if not found.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -466,7 +500,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The object to search for.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -481,7 +516,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The index of the object, or -1 if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -489,7 +525,11 @@
   
   <a id="Godot_Collections_Array_Insert_" data-uid="Godot.Collections.Array.Insert*"></a>
   <h4 id="Godot_Collections_Array_Insert_System_Int32_System_Object_" data-uid="Godot.Collections.Array.Insert(System.Int32,System.Object)">Insert(Int32, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts a new object at a given position in the array.
+The position must be a valid position of an existing item,
+or the position at the end of the array.
+Existing items will be moved to the right.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -508,12 +548,14 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><p>The index to insert at.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The object to insert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -521,7 +563,9 @@
   
   <a id="Godot_Collections_Array_Remove_" data-uid="Godot.Collections.Array.Remove*"></a>
   <h4 id="Godot_Collections_Array_Remove_System_Object_" data-uid="Godot.Collections.Array.Remove(System.Object)">Remove(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the first occurrence of the specified <code data-dev-comment-type="paramref" class="paramref">value</code>
+from this <a class="xref" href="Godot.Collections.Array.html">Array</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -540,7 +584,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The value to remove.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -548,7 +593,8 @@
   
   <a id="Godot_Collections_Array_RemoveAt_" data-uid="Godot.Collections.Array.RemoveAt*"></a>
   <h4 id="Godot_Collections_Array_RemoveAt_System_Int32_" data-uid="Godot.Collections.Array.RemoveAt(System.Int32)">RemoveAt(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes an element from this <a class="xref" href="Godot.Collections.Array.html">Array</a> by index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -567,7 +613,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><p>The index of the element to remove.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -575,7 +622,8 @@
   
   <a id="Godot_Collections_Array_Resize_" data-uid="Godot.Collections.Array.Resize*"></a>
   <h4 id="Godot_Collections_Array_Resize_System_Int32_" data-uid="Godot.Collections.Array.Resize(System.Int32)">Resize(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resizes this <a class="xref" href="Godot.Collections.Array.html">Array</a> to the given size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -594,7 +642,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">newSize</span></td>
-        <td></td>
+        <td><p>The new size of the array.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -609,7 +658,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Error.html">Error</a></td>
-        <td></td>
+        <td><p><a class="xref" href="Godot.Error.html#Godot_Error_Ok">Ok</a> if successful, or an error code.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -617,7 +667,8 @@
   
   <a id="Godot_Collections_Array_Shuffle_" data-uid="Godot.Collections.Array.Shuffle*"></a>
   <h4 id="Godot_Collections_Array_Shuffle" data-uid="Godot.Collections.Array.Shuffle">Shuffle()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Shuffles the contents of this <a class="xref" href="Godot.Collections.Array.html">Array</a> into a random order.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -627,7 +678,8 @@
   
   <a id="Godot_Collections_Array_ToString_" data-uid="Godot.Collections.Array.ToString*"></a>
   <h4 id="Godot_Collections_Array_ToString" data-uid="Godot.Collections.Array.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.Collections.Array.html">Array</a> to a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -644,7 +696,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string representation of this array.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -654,7 +707,8 @@
   
   <a id="Godot_Collections_Array_op_Addition_" data-uid="Godot.Collections.Array.op_Addition*"></a>
   <h4 id="Godot_Collections_Array_op_Addition_Godot_Collections_Array_Godot_Collections_Array_" data-uid="Godot.Collections.Array.op_Addition(Godot.Collections.Array,Godot.Collections.Array)">Addition(Array, Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Concatenates these two <a class="xref" href="Godot.Collections.Array.html">Array</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -673,12 +727,14 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The first array.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The second array.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -693,7 +749,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
-        <td></td>
+        <td><p>A new Godot Array with the contents of both arrays.</p>
+</td>
       </tr>
     </tbody>
   </table>

@@ -83,7 +83,10 @@
   
   <h1 id="Godot_AnimationPlayer" data-uid="Godot.AnimationPlayer" class="text-break">Class AnimationPlayer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An animation player is used for general-purpose playback of <a class="xref" href="Godot.Animation.html">Animation</a> resources. It contains a dictionary of animations (referenced by name) and custom blend times between their transitions. Additionally, animations can be played and blended in different channels.</p>
+<p><a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> is more suited than <a class="xref" href="Godot.Tween.html">Tween</a> for animations where you know the final values in advance. For example, fading a screen in and out is more easily done with an <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> node thanks to the animation tools provided by the editor. That particular example can also be implemented with a <a class="xref" href="Godot.Tween.html">Tween</a> node, but it requires doing everything by code.</p>
+<p>Updating the target properties of animations occurs at process time.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -753,7 +756,8 @@
   
   <a id="Godot_AnimationPlayer_AssignedAnimation_" data-uid="Godot.AnimationPlayer.AssignedAnimation*"></a>
   <h4 id="Godot_AnimationPlayer_AssignedAnimation" data-uid="Godot.AnimationPlayer.AssignedAnimation">AssignedAnimation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If playing, the current animation; otherwise, the animation last played. When set, would change the animation, but would not play it unless currently playing. See also <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_CurrentAnimation">CurrentAnimation</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -778,7 +782,8 @@
   
   <a id="Godot_AnimationPlayer_Autoplay_" data-uid="Godot.AnimationPlayer.Autoplay*"></a>
   <h4 id="Godot_AnimationPlayer_Autoplay" data-uid="Godot.AnimationPlayer.Autoplay">Autoplay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the animation to play when the scene loads.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -803,7 +808,9 @@
   
   <a id="Godot_AnimationPlayer_CurrentAnimation_" data-uid="Godot.AnimationPlayer.CurrentAnimation*"></a>
   <h4 id="Godot_AnimationPlayer_CurrentAnimation" data-uid="Godot.AnimationPlayer.CurrentAnimation">CurrentAnimation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the currently playing animation. If no animation is playing, the property&apos;s value is an empty string. Changing this value does not restart the animation. See <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_Play_System_String_System_Single_System_Single_System_Boolean_">Play(String, Single, Single, Boolean)</a> for more information on playing animations.</p>
+<p>Note: While this property appears in the inspector, it&apos;s not meant to be edited, and it&apos;s not saved in the scene. This property is mainly used to get the currently playing animation, and internally for animation playback tracks. For more information, see <a class="xref" href="Godot.Animation.html">Animation</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -828,7 +835,8 @@
   
   <a id="Godot_AnimationPlayer_CurrentAnimationLength_" data-uid="Godot.AnimationPlayer.CurrentAnimationLength*"></a>
   <h4 id="Godot_AnimationPlayer_CurrentAnimationLength" data-uid="Godot.AnimationPlayer.CurrentAnimationLength">CurrentAnimationLength</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The length (in seconds) of the currently being played animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -853,7 +861,8 @@
   
   <a id="Godot_AnimationPlayer_CurrentAnimationPosition_" data-uid="Godot.AnimationPlayer.CurrentAnimationPosition*"></a>
   <h4 id="Godot_AnimationPlayer_CurrentAnimationPosition" data-uid="Godot.AnimationPlayer.CurrentAnimationPosition">CurrentAnimationPosition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The position (in seconds) of the currently playing animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -878,7 +887,8 @@
   
   <a id="Godot_AnimationPlayer_MethodCallMode_" data-uid="Godot.AnimationPlayer.MethodCallMode*"></a>
   <h4 id="Godot_AnimationPlayer_MethodCallMode" data-uid="Godot.AnimationPlayer.MethodCallMode">MethodCallMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The call mode to use for Call Method tracks.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -903,7 +913,8 @@
   
   <a id="Godot_AnimationPlayer_PlaybackActive_" data-uid="Godot.AnimationPlayer.PlaybackActive*"></a>
   <h4 id="Godot_AnimationPlayer_PlaybackActive" data-uid="Godot.AnimationPlayer.PlaybackActive">PlaybackActive</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, updates animations in response to process-related notifications.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -928,7 +939,8 @@
   
   <a id="Godot_AnimationPlayer_PlaybackDefaultBlendTime_" data-uid="Godot.AnimationPlayer.PlaybackDefaultBlendTime*"></a>
   <h4 id="Godot_AnimationPlayer_PlaybackDefaultBlendTime" data-uid="Godot.AnimationPlayer.PlaybackDefaultBlendTime">PlaybackDefaultBlendTime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The default time in which to blend animations. Ranges from 0 to 4096 with 0.01 precision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -953,7 +965,8 @@
   
   <a id="Godot_AnimationPlayer_PlaybackProcessMode_" data-uid="Godot.AnimationPlayer.PlaybackProcessMode*"></a>
   <h4 id="Godot_AnimationPlayer_PlaybackProcessMode" data-uid="Godot.AnimationPlayer.PlaybackProcessMode">PlaybackProcessMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The process notification in which to update animations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -978,7 +991,8 @@
   
   <a id="Godot_AnimationPlayer_PlaybackSpeed_" data-uid="Godot.AnimationPlayer.PlaybackSpeed*"></a>
   <h4 id="Godot_AnimationPlayer_PlaybackSpeed" data-uid="Godot.AnimationPlayer.PlaybackSpeed">PlaybackSpeed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The speed scaling ratio. For instance, if this value is 1, then the animation plays at normal speed. If it&apos;s 0.5, then it plays at half speed. If it&apos;s 2, then it plays at double speed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1003,7 +1017,9 @@
   
   <a id="Godot_AnimationPlayer_ResetOnSave_" data-uid="Godot.AnimationPlayer.ResetOnSave*"></a>
   <h4 id="Godot_AnimationPlayer_ResetOnSave" data-uid="Godot.AnimationPlayer.ResetOnSave">ResetOnSave</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This is used by the editor. If set to <code>true</code>, the scene will be saved with the effects of the reset animation applied (as if it had been seeked to time 0), then reverted after saving.</p>
+<p>In other words, the saved scene file will contain the &quot;default pose&quot;, as defined by the reset animation, if any, with the editor keeping the values that the nodes had before saving.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1028,7 +1044,8 @@
   
   <a id="Godot_AnimationPlayer_RootNode_" data-uid="Godot.AnimationPlayer.RootNode*"></a>
   <h4 id="Godot_AnimationPlayer_RootNode" data-uid="Godot.AnimationPlayer.RootNode">RootNode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node from which node path references will travel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1055,7 +1072,8 @@
   
   <a id="Godot_AnimationPlayer_AddAnimation_" data-uid="Godot.AnimationPlayer.AddAnimation*"></a>
   <h4 id="Godot_AnimationPlayer_AddAnimation_System_String_Godot_Animation_" data-uid="Godot.AnimationPlayer.AddAnimation(System.String,Godot.Animation)">AddAnimation(String, Animation)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds <code>animation</code> to the player accessible with the key <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1102,7 +1120,8 @@
   
   <a id="Godot_AnimationPlayer_Advance_" data-uid="Godot.AnimationPlayer.Advance*"></a>
   <h4 id="Godot_AnimationPlayer_Advance_System_Single_" data-uid="Godot.AnimationPlayer.Advance(System.Single)">Advance(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Shifts position in the animation timeline and immediately updates the animation. <code>delta</code> is the time in seconds to shift. Events between the current frame and <code>delta</code> are handled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1129,7 +1148,8 @@
   
   <a id="Godot_AnimationPlayer_AnimationGetNext_" data-uid="Godot.AnimationPlayer.AnimationGetNext*"></a>
   <h4 id="Godot_AnimationPlayer_AnimationGetNext_System_String_" data-uid="Godot.AnimationPlayer.AnimationGetNext(System.String)">AnimationGetNext(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of the next animation in the queue.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1171,7 +1191,8 @@
   
   <a id="Godot_AnimationPlayer_AnimationSetNext_" data-uid="Godot.AnimationPlayer.AnimationSetNext*"></a>
   <h4 id="Godot_AnimationPlayer_AnimationSetNext_System_String_System_String_" data-uid="Godot.AnimationPlayer.AnimationSetNext(System.String,System.String)">AnimationSetNext(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Triggers the <code>anim_to</code> animation when the <code>anim_from</code> animation completes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1203,7 +1224,8 @@
   
   <a id="Godot_AnimationPlayer_ClearCaches_" data-uid="Godot.AnimationPlayer.ClearCaches*"></a>
   <h4 id="Godot_AnimationPlayer_ClearCaches" data-uid="Godot.AnimationPlayer.ClearCaches">ClearCaches()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> caches animated nodes. It may not notice if a node disappears; <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_ClearCaches">ClearCaches()</a> forces it to update the cache again.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1213,7 +1235,8 @@
   
   <a id="Godot_AnimationPlayer_ClearQueue_" data-uid="Godot.AnimationPlayer.ClearQueue*"></a>
   <h4 id="Godot_AnimationPlayer_ClearQueue" data-uid="Godot.AnimationPlayer.ClearQueue">ClearQueue()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears all queued, unplayed animations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1223,7 +1246,8 @@
   
   <a id="Godot_AnimationPlayer_FindAnimation_" data-uid="Godot.AnimationPlayer.FindAnimation*"></a>
   <h4 id="Godot_AnimationPlayer_FindAnimation_Godot_Animation_" data-uid="Godot.AnimationPlayer.FindAnimation(Godot.Animation)">FindAnimation(Animation)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of <code>animation</code> or an empty string if not found.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1265,7 +1289,8 @@
   
   <a id="Godot_AnimationPlayer_GetAnimation_" data-uid="Godot.AnimationPlayer.GetAnimation*"></a>
   <h4 id="Godot_AnimationPlayer_GetAnimation_System_String_" data-uid="Godot.AnimationPlayer.GetAnimation(System.String)">GetAnimation(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Animation.html">Animation</a> with the key <code>name</code>. If the animation does not exist, <code>null</code> is returned and an error is logged.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1307,7 +1332,8 @@
   
   <a id="Godot_AnimationPlayer_GetAnimationList_" data-uid="Godot.AnimationPlayer.GetAnimationList*"></a>
   <h4 id="Godot_AnimationPlayer_GetAnimationList" data-uid="Godot.AnimationPlayer.GetAnimationList">GetAnimationList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the list of stored animation names.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1407,7 +1433,8 @@
   
   <a id="Godot_AnimationPlayer_GetBlendTime_" data-uid="Godot.AnimationPlayer.GetBlendTime*"></a>
   <h4 id="Godot_AnimationPlayer_GetBlendTime_System_String_System_String_" data-uid="Godot.AnimationPlayer.GetBlendTime(System.String,System.String)">GetBlendTime(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the blend time (in seconds) between two animations, referenced by their names.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1579,7 +1606,8 @@
   
   <a id="Godot_AnimationPlayer_GetPlayingSpeed_" data-uid="Godot.AnimationPlayer.GetPlayingSpeed*"></a>
   <h4 id="Godot_AnimationPlayer_GetPlayingSpeed" data-uid="Godot.AnimationPlayer.GetPlayingSpeed">GetPlayingSpeed()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the actual playing speed of current animation or 0 if not playing. This speed is the <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_PlaybackSpeed">PlaybackSpeed</a> property multiplied by <code>custom_speed</code> argument specified when calling the <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_Play_System_String_System_Single_System_Single_System_Boolean_">Play(String, Single, Single, Boolean)</a> method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1604,7 +1632,8 @@
   
   <a id="Godot_AnimationPlayer_GetQueue_" data-uid="Godot.AnimationPlayer.GetQueue*"></a>
   <h4 id="Godot_AnimationPlayer_GetQueue" data-uid="Godot.AnimationPlayer.GetQueue">GetQueue()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of the animation names that are currently queued to play.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1679,7 +1708,8 @@
   
   <a id="Godot_AnimationPlayer_HasAnimation_" data-uid="Godot.AnimationPlayer.HasAnimation*"></a>
   <h4 id="Godot_AnimationPlayer_HasAnimation_System_String_" data-uid="Godot.AnimationPlayer.HasAnimation(System.String)">HasAnimation(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> stores an <a class="xref" href="Godot.Animation.html">Animation</a> with key <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1746,7 +1776,8 @@
   
   <a id="Godot_AnimationPlayer_IsPlaying_" data-uid="Godot.AnimationPlayer.IsPlaying*"></a>
   <h4 id="Godot_AnimationPlayer_IsPlaying" data-uid="Godot.AnimationPlayer.IsPlaying">IsPlaying()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if playing an animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1796,7 +1827,10 @@
   
   <a id="Godot_AnimationPlayer_Play_" data-uid="Godot.AnimationPlayer.Play*"></a>
   <h4 id="Godot_AnimationPlayer_Play_System_String_System_Single_System_Single_System_Boolean_" data-uid="Godot.AnimationPlayer.Play(System.String,System.Single,System.Single,System.Boolean)">Play(String, Single, Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plays the animation with key <code>name</code>. Custom blend times and speed can be set. If <code>custom_speed</code> is negative and <code>from_end</code> is <code>true</code>, the animation will play backwards (which is equivalent to calling <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_PlayBackwards_System_String_System_Single_">PlayBackwards(String, Single)</a>).</p>
+<p>The <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> keeps track of its current or last played animation with <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_AssignedAnimation">AssignedAnimation</a>. If this method is called with that same animation <code>name</code>, or with no <code>name</code> parameter, the assigned animation will resume playing if it was paused, or restart if it was stopped (see <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_Stop_System_Boolean_">Stop(Boolean)</a> for both pause and stop). If the animation was already playing, it will keep playing.</p>
+<p>Note: The animation will be updated the next time the <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> is processed. If other variables are updated at the same time this is called, they may be updated too early. To perform the update immediately, call <code>advance(0)</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1838,7 +1872,9 @@
   
   <a id="Godot_AnimationPlayer_PlayBackwards_" data-uid="Godot.AnimationPlayer.PlayBackwards*"></a>
   <h4 id="Godot_AnimationPlayer_PlayBackwards_System_String_System_Single_" data-uid="Godot.AnimationPlayer.PlayBackwards(System.String,System.Single)">PlayBackwards(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plays the animation with key <code>name</code> in reverse.</p>
+<p>This method is a shorthand for <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_Play_System_String_System_Single_System_Single_System_Boolean_">Play(String, Single, Single, Boolean)</a> with <code>custom_speed = -1.0</code> and <code>from_end = true</code>, so see its description for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1870,7 +1906,9 @@
   
   <a id="Godot_AnimationPlayer_Queue_" data-uid="Godot.AnimationPlayer.Queue*"></a>
   <h4 id="Godot_AnimationPlayer_Queue_System_String_" data-uid="Godot.AnimationPlayer.Queue(System.String)">Queue(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Queues an animation for playback once the current one is done.</p>
+<p>Note: If a looped animation is currently playing, the queued animation will never play unless the looped animation is stopped somehow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1897,7 +1935,8 @@
   
   <a id="Godot_AnimationPlayer_RemoveAnimation_" data-uid="Godot.AnimationPlayer.RemoveAnimation*"></a>
   <h4 id="Godot_AnimationPlayer_RemoveAnimation_System_String_" data-uid="Godot.AnimationPlayer.RemoveAnimation(System.String)">RemoveAnimation(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the animation with key <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1924,7 +1963,8 @@
   
   <a id="Godot_AnimationPlayer_RenameAnimation_" data-uid="Godot.AnimationPlayer.RenameAnimation*"></a>
   <h4 id="Godot_AnimationPlayer_RenameAnimation_System_String_System_String_" data-uid="Godot.AnimationPlayer.RenameAnimation(System.String,System.String)">RenameAnimation(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Renames an existing animation with key <code>name</code> to <code>newname</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1956,7 +1996,9 @@
   
   <a id="Godot_AnimationPlayer_Seek_" data-uid="Godot.AnimationPlayer.Seek*"></a>
   <h4 id="Godot_AnimationPlayer_Seek_System_Single_System_Boolean_" data-uid="Godot.AnimationPlayer.Seek(System.Single,System.Boolean)">Seek(Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Seeks the animation to the <code>seconds</code> point in time (in seconds). If <code>update</code> is <code>true</code>, the animation updates too, otherwise it updates at process time. Events between the current frame and <code>seconds</code> are skipped.</p>
+<p>Note: Seeking to the end of the animation doesn&apos;t emit <code>animation_finished</code>. If you want to skip animation and emit the signal, use <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_Advance_System_Single_">Advance(Single)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2096,7 +2138,8 @@
   
   <a id="Godot_AnimationPlayer_SetBlendTime_" data-uid="Godot.AnimationPlayer.SetBlendTime*"></a>
   <h4 id="Godot_AnimationPlayer_SetBlendTime_System_String_System_String_System_Single_" data-uid="Godot.AnimationPlayer.SetBlendTime(System.String,System.String,System.Single)">SetBlendTime(String, String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies a blend time (in seconds) between two animations, referenced by their names.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2295,7 +2338,9 @@
   
   <a id="Godot_AnimationPlayer_Stop_" data-uid="Godot.AnimationPlayer.Stop*"></a>
   <h4 id="Godot_AnimationPlayer_Stop_System_Boolean_" data-uid="Godot.AnimationPlayer.Stop(System.Boolean)">Stop(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops or pauses the currently playing animation. If <code>reset</code> is <code>true</code>, the animation position is reset to <code>0</code> and the playback speed is reset to <code>1.0</code>.</p>
+<p>If <code>reset</code> is <code>false</code>, the <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_CurrentAnimationPosition">CurrentAnimationPosition</a> will be kept and calling <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_Play_System_String_System_Single_System_Single_System_Boolean_">Play(String, Single, Single, Boolean)</a> or <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_PlayBackwards_System_String_System_Single_">PlayBackwards(String, Single)</a> without arguments or with the same animation name as <a class="xref" href="Godot.AnimationPlayer.html#Godot_AnimationPlayer_AssignedAnimation">AssignedAnimation</a> will resume the animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

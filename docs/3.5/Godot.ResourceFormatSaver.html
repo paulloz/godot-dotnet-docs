@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ResourceFormatSaver" data-uid="Godot.ResourceFormatSaver" class="text-break">Class ResourceFormatSaver
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The engine can save resources when you do it from the editor, or when you use the <a class="xref" href="Godot.ResourceSaver.html">ResourceSaver</a> singleton. This is accomplished thanks to multiple <a class="xref" href="Godot.ResourceFormatSaver.html">ResourceFormatSaver</a>s, each handling its own format and called automatically by the engine.</p>
+<p>By default, Godot saves resources as <code>.tres</code> (text-based), <code>.res</code> (binary) or another built-in format, but you can choose to create your own format by extending this class. Be sure to respect the documented return types and values. You should give it a global class name with <code>class_name</code> for it to be registered. Like built-in ResourceFormatSavers, it will be called automatically when saving resources of its recognized type(s). You may also implement a <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +299,8 @@
   
   <a id="Godot_ResourceFormatSaver_GetRecognizedExtensions_" data-uid="Godot.ResourceFormatSaver.GetRecognizedExtensions*"></a>
   <h4 id="Godot_ResourceFormatSaver_GetRecognizedExtensions_Godot_Resource_" data-uid="Godot.ResourceFormatSaver.GetRecognizedExtensions(Godot.Resource)">GetRecognizedExtensions(Resource)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the list of extensions available for saving the resource object, provided it is recognized (see <a class="xref" href="Godot.ResourceFormatSaver.html#Godot_ResourceFormatSaver_Recognize_Godot_Resource_">Recognize(Resource)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -339,7 +342,8 @@
   
   <a id="Godot_ResourceFormatSaver_Recognize_" data-uid="Godot.ResourceFormatSaver.Recognize*"></a>
   <h4 id="Godot_ResourceFormatSaver_Recognize_Godot_Resource_" data-uid="Godot.ResourceFormatSaver.Recognize(Godot.Resource)">Recognize(Resource)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the given resource object can be saved by this saver.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -381,7 +385,9 @@
   
   <a id="Godot_ResourceFormatSaver_Save_" data-uid="Godot.ResourceFormatSaver.Save*"></a>
   <h4 id="Godot_ResourceFormatSaver_Save_System_String_Godot_Resource_System_Int32_" data-uid="Godot.ResourceFormatSaver.Save(System.String,Godot.Resource,System.Int32)">Save(String, Resource, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves the given resource object to a file at the target <code>path</code>. <code>flags</code> is a bitmask composed with <a class="xref" href="Godot.ResourceSaver.SaverFlags.html">ResourceSaver.SaverFlags</a> constants.</p>
+<p>Returns <code>OK</code> on success, or an <a class="xref" href="Godot.Error.html">Error</a> constant in case of failure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

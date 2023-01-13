@@ -83,7 +83,10 @@
   
   <h1 id="Godot_TouchScreenButton" data-uid="Godot.TouchScreenButton" class="text-break">Class TouchScreenButton
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>TouchScreenButton allows you to create on-screen buttons for touch devices. It&apos;s intended for gameplay use, such as a unit you have to touch to move. Unlike <a class="xref" href="Godot.Button.html">Button</a>, TouchScreenButton supports multitouch out of the box. Several TouchScreenButtons can be pressed at the same time with touch input.</p>
+<p>This node inherits from <a class="xref" href="Godot.Node2D.html">Node2D</a>. Unlike with <a class="xref" href="Godot.Control.html">Control</a> nodes, you cannot set anchors on it. If you want to create menus or user interfaces, you may want to use <a class="xref" href="Godot.Button.html">Button</a> nodes instead. To make button nodes react to touch events, you can enable the Emulate Mouse option in the Project Settings.</p>
+<p>You can configure TouchScreenButton to be visible only on touch devices, helping you develop your game both for desktop and mobile devices.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1115,8 @@
   
   <a id="Godot_TouchScreenButton_Action_" data-uid="Godot.TouchScreenButton.Action*"></a>
   <h4 id="Godot_TouchScreenButton_Action" data-uid="Godot.TouchScreenButton.Action">Action</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The button&apos;s action. Actions can be handled with <a class="xref" href="Godot.InputEventAction.html">InputEventAction</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1137,7 +1141,8 @@
   
   <a id="Godot_TouchScreenButton_Bitmask_" data-uid="Godot.TouchScreenButton.Bitmask*"></a>
   <h4 id="Godot_TouchScreenButton_Bitmask" data-uid="Godot.TouchScreenButton.Bitmask">Bitmask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The button&apos;s bitmask.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1162,7 +1167,8 @@
   
   <a id="Godot_TouchScreenButton_Normal_" data-uid="Godot.TouchScreenButton.Normal*"></a>
   <h4 id="Godot_TouchScreenButton_Normal" data-uid="Godot.TouchScreenButton.Normal">Normal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The button&apos;s texture for the normal state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1187,7 +1193,9 @@
   
   <a id="Godot_TouchScreenButton_PassbyPress_" data-uid="Godot.TouchScreenButton.PassbyPress*"></a>
   <h4 id="Godot_TouchScreenButton_PassbyPress" data-uid="Godot.TouchScreenButton.PassbyPress">PassbyPress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the <code>pressed</code> and <code>released</code> signals are emitted whenever a pressed finger goes in and out of the button, even if the pressure started outside the active area of the button.</p>
+<p>Note: This is a &quot;pass-by&quot; (not &quot;bypass&quot;) press mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1212,7 +1220,8 @@
   
   <a id="Godot_TouchScreenButton_Pressed_" data-uid="Godot.TouchScreenButton.Pressed*"></a>
   <h4 id="Godot_TouchScreenButton_Pressed" data-uid="Godot.TouchScreenButton.Pressed">Pressed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The button&apos;s texture for the pressed state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1237,7 +1246,8 @@
   
   <a id="Godot_TouchScreenButton_Shape_" data-uid="Godot.TouchScreenButton.Shape*"></a>
   <h4 id="Godot_TouchScreenButton_Shape" data-uid="Godot.TouchScreenButton.Shape">Shape</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The button&apos;s shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1262,7 +1272,8 @@
   
   <a id="Godot_TouchScreenButton_ShapeCentered_" data-uid="Godot.TouchScreenButton.ShapeCentered*"></a>
   <h4 id="Godot_TouchScreenButton_ShapeCentered" data-uid="Godot.TouchScreenButton.ShapeCentered">ShapeCentered</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the button&apos;s shape is centered in the provided texture. If no texture is used, this property has no effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1287,7 +1298,8 @@
   
   <a id="Godot_TouchScreenButton_ShapeVisible_" data-uid="Godot.TouchScreenButton.ShapeVisible*"></a>
   <h4 id="Godot_TouchScreenButton_ShapeVisible" data-uid="Godot.TouchScreenButton.ShapeVisible">ShapeVisible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the button&apos;s shape is visible.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1312,7 +1324,8 @@
   
   <a id="Godot_TouchScreenButton_VisibilityMode_" data-uid="Godot.TouchScreenButton.VisibilityMode*"></a>
   <h4 id="Godot_TouchScreenButton_VisibilityMode" data-uid="Godot.TouchScreenButton.VisibilityMode">VisibilityMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The button&apos;s visibility mode. See <a class="xref" href="Godot.TouchScreenButton.VisibilityModeEnum.html">TouchScreenButton.VisibilityModeEnum</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1514,7 +1527,8 @@
   
   <a id="Godot_TouchScreenButton_IsPressed_" data-uid="Godot.TouchScreenButton.IsPressed*"></a>
   <h4 id="Godot_TouchScreenButton_IsPressed" data-uid="Godot.TouchScreenButton.IsPressed">IsPressed()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this button is currently pressed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

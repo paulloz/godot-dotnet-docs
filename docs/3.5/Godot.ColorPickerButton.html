@@ -83,7 +83,10 @@
   
   <h1 id="Godot_ColorPickerButton" data-uid="Godot.ColorPickerButton" class="text-break">Class ColorPickerButton
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Encapsulates a <a class="xref" href="Godot.ColorPicker.html">ColorPicker</a> making it accessible by pressing a button. Pressing the button will toggle the <a class="xref" href="Godot.ColorPicker.html">ColorPicker</a> visibility.</p>
+<p>See also <a class="xref" href="Godot.BaseButton.html">BaseButton</a> which contains common properties and methods associated with this node.</p>
+<p>Note: By default, the button may not be wide enough for the color preview swatch to be visible. Make sure to set <a class="xref" href="Godot.Control.html#Godot_Control_RectMinSize">RectMinSize</a> to a big enough value to give the button enough space.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1633,7 +1636,8 @@
   
   <a id="Godot_ColorPickerButton_Color_" data-uid="Godot.ColorPickerButton.Color*"></a>
   <h4 id="Godot_ColorPickerButton_Color" data-uid="Godot.ColorPickerButton.Color">Color</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The currently selected color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1658,7 +1662,8 @@
   
   <a id="Godot_ColorPickerButton_EditAlpha_" data-uid="Godot.ColorPickerButton.EditAlpha*"></a>
   <h4 id="Godot_ColorPickerButton_EditAlpha" data-uid="Godot.ColorPickerButton.EditAlpha">EditAlpha</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the alpha channel in the displayed <a class="xref" href="Godot.ColorPicker.html">ColorPicker</a> will be visible.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1710,7 +1715,9 @@
   
   <a id="Godot_ColorPickerButton_GetPicker_" data-uid="Godot.ColorPickerButton.GetPicker*"></a>
   <h4 id="Godot_ColorPickerButton_GetPicker" data-uid="Godot.ColorPickerButton.GetPicker">GetPicker()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.ColorPicker.html">ColorPicker</a> that this node toggles.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1735,7 +1742,9 @@
   
   <a id="Godot_ColorPickerButton_GetPopup_" data-uid="Godot.ColorPickerButton.GetPopup*"></a>
   <h4 id="Godot_ColorPickerButton_GetPopup" data-uid="Godot.ColorPickerButton.GetPopup">GetPopup()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the control&apos;s <a class="xref" href="Godot.PopupPanel.html">PopupPanel</a> which allows you to connect to popup signals. This allows you to handle events when the ColorPicker is shown or hidden.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

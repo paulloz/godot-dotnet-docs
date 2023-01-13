@@ -83,7 +83,12 @@
   
   <h1 id="Godot_CullInstance" data-uid="Godot.CullInstance" class="text-break">Class CullInstance
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides common functionality to nodes that can be culled by the <a class="xref" href="Godot.Portal.html">Portal</a> system.</p>
+<p><code>Static</code> and <code>Dynamic</code> objects are the most efficiently managed objects in the system, but there are some caveats. They are expected to be present initially when <a class="xref" href="Godot.Room.html">Room</a>s are converted using the <a class="xref" href="Godot.RoomManager.html">RoomManager</a> <code>rooms_convert</code> function, and their lifetime should be the same as the game level (i.e. present until you call <code>rooms_clear</code> on the <a class="xref" href="Godot.RoomManager.html">RoomManager</a>. Although you shouldn&apos;t create / delete these objects during gameplay, you can manage their visibility with the standard <code>hide</code> and <code>show</code> commands.</p>
+<p><code>Roaming</code> objects on the other hand, require extra processing to keep track of which <a class="xref" href="Godot.Room.html">Room</a> they are within. This enables them to be culled effectively, wherever they are.</p>
+<p><code>Global</code> objects are not culled by the portal system, and use view frustum culling only.</p>
+<p>Objects that are not <code>Static</code> or <code>Dynamic</code> can be freely created and deleted during the lifetime of the game level.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -954,7 +959,9 @@
   
   <a id="Godot_CullInstance_AllowMerging_" data-uid="Godot.CullInstance.AllowMerging*"></a>
   <h4 id="Godot_CullInstance_AllowMerging" data-uid="Godot.CullInstance.AllowMerging">AllowMerging</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This allows fine control over the mesh merging feature in the <a class="xref" href="Godot.RoomManager.html">RoomManager</a>.</p>
+<p>Setting this option to <code>false</code> can be used to prevent an instance being merged.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -979,7 +986,10 @@
   
   <a id="Godot_CullInstance_AutoplacePriority_" data-uid="Godot.CullInstance.AutoplacePriority*"></a>
   <h4 id="Godot_CullInstance_AutoplacePriority" data-uid="Godot.CullInstance.AutoplacePriority">AutoplacePriority</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When set to <code>0</code>, <a class="xref" href="Godot.CullInstance.html">CullInstance</a>s will be autoplaced in the <a class="xref" href="Godot.Room.html">Room</a> with the highest priority.</p>
+<p>When set to a value other than <code>0</code>, the system will attempt to autoplace in a <a class="xref" href="Godot.Room.html">Room</a> with the <code>autoplace_priority</code>, if it is present.</p>
+<p>This can be used to control autoplacement of building exteriors in an outer <a class="xref" href="Godot.RoomGroup.html">RoomGroup</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1004,7 +1014,9 @@
   
   <a id="Godot_CullInstance_IncludeInBound_" data-uid="Godot.CullInstance.IncludeInBound*"></a>
   <h4 id="Godot_CullInstance_IncludeInBound" data-uid="Godot.CullInstance.IncludeInBound">IncludeInBound</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When a manual bound has not been explicitly specified for a <a class="xref" href="Godot.Room.html">Room</a>, the convex hull bound will be estimated from the geometry of the objects within the room. This setting determines whether the geometry of an object is included in this estimate of the room bound.</p>
+<p>Note: This setting is only relevant when the object is set to <code>PORTAL_MODE_STATIC</code> or <code>PORTAL_MODE_DYNAMIC</code>, and for <a class="xref" href="Godot.Portal.html">Portal</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1029,7 +1041,8 @@
   
   <a id="Godot_CullInstance_PortalMode_" data-uid="Godot.CullInstance.PortalMode*"></a>
   <h4 id="Godot_CullInstance_PortalMode" data-uid="Godot.CullInstance.PortalMode">PortalMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When using <a class="xref" href="Godot.Room.html">Room</a>s and <a class="xref" href="Godot.Portal.html">Portal</a>s, this specifies how the <a class="xref" href="Godot.CullInstance.html">CullInstance</a> is processed in the system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

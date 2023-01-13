@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ViewportContainer" data-uid="Godot.ViewportContainer" class="text-break">Class ViewportContainer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="Godot.Container.html">Container</a> node that holds a <a class="xref" href="Godot.Viewport.html">Viewport</a>, automatically setting its size.</p>
+<p>Note: Changing a ViewportContainer&apos;s <a class="xref" href="Godot.Control.html#Godot_Control_RectScale">RectScale</a> will cause its contents to appear distorted. To change its visual size without causing distortion, adjust the node&apos;s margins instead (if it&apos;s not already in a container).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1473,7 +1475,8 @@
   
   <a id="Godot_ViewportContainer_Stretch_" data-uid="Godot.ViewportContainer.Stretch*"></a>
   <h4 id="Godot_ViewportContainer_Stretch" data-uid="Godot.ViewportContainer.Stretch">Stretch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the viewport will be scaled to the control&apos;s size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1498,7 +1501,10 @@
   
   <a id="Godot_ViewportContainer_StretchShrink_" data-uid="Godot.ViewportContainer.StretchShrink*"></a>
   <h4 id="Godot_ViewportContainer_StretchShrink" data-uid="Godot.ViewportContainer.StretchShrink">StretchShrink</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Divides the viewport&apos;s effective resolution by this value while preserving its scale. This can be used to speed up rendering.</p>
+<p>For example, a 1280×720 viewport with <a class="xref" href="Godot.ViewportContainer.html#Godot_ViewportContainer_StretchShrink">StretchShrink</a> set to <code>2</code> will be rendered at 640×360 while occupying the same size in the container.</p>
+<p>Note: <a class="xref" href="Godot.ViewportContainer.html#Godot_ViewportContainer_Stretch">Stretch</a> must be <code>true</code> for this property to work.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

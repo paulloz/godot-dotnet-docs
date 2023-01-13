@@ -83,7 +83,9 @@
   
   <h1 id="Godot_TileMap" data-uid="Godot.TileMap" class="text-break">Class TileMap
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Node for 2D tile-based maps. Tilemaps use a <a class="xref" href="Godot.TileSet.html">TileSet</a> which contain a list of tiles (textures plus optional collision, navigation, and/or occluder shapes) which are used to create grid-based maps.</p>
+<p>When doing physics queries against the tilemap, the cell coordinates are encoded as <code>metadata</code> for each detected collision shape returned by methods such as <a class="xref" href="Godot.Physics2DDirectSpaceState.html#Godot_Physics2DDirectSpaceState_IntersectShape_Godot_Physics2DShapeQueryParameters_System_Int32_">IntersectShape(Physics2DShapeQueryParameters, Int32)</a>, <a class="xref" href="Godot.Physics2DDirectBodyState.html#Godot_Physics2DDirectBodyState_GetContactColliderShapeMetadata_System_Int32_">GetContactColliderShapeMetadata(Int32)</a>, etc.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1111,7 +1113,8 @@
   
   
   <h4 id="Godot_TileMap_InvalidCell" data-uid="Godot.TileMap.InvalidCell">InvalidCell</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returned when a cell doesn&apos;t exist.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1138,7 +1141,8 @@
   
   <a id="Godot_TileMap_BakeNavigation_" data-uid="Godot.TileMap.BakeNavigation*"></a>
   <h4 id="Godot_TileMap_BakeNavigation" data-uid="Godot.TileMap.BakeNavigation">BakeNavigation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this TileMap bakes a navigation region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1163,7 +1167,8 @@
   
   <a id="Godot_TileMap_CellClipUv_" data-uid="Godot.TileMap.CellClipUv*"></a>
   <h4 id="Godot_TileMap_CellClipUv" data-uid="Godot.TileMap.CellClipUv">CellClipUv</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the cell&apos;s UVs will be clipped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1188,7 +1193,8 @@
   
   <a id="Godot_TileMap_CellCustomTransform_" data-uid="Godot.TileMap.CellCustomTransform*"></a>
   <h4 id="Godot_TileMap_CellCustomTransform" data-uid="Godot.TileMap.CellCustomTransform">CellCustomTransform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The custom <a class="xref" href="Godot.Transform2D.html">Transform2D</a> to be applied to the TileMap&apos;s cells.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1213,7 +1219,8 @@
   
   <a id="Godot_TileMap_CellHalfOffset_" data-uid="Godot.TileMap.CellHalfOffset*"></a>
   <h4 id="Godot_TileMap_CellHalfOffset" data-uid="Godot.TileMap.CellHalfOffset">CellHalfOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount to offset alternating tiles. See <a class="xref" href="Godot.TileMap.HalfOffset.html">TileMap.HalfOffset</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1238,7 +1245,8 @@
   
   <a id="Godot_TileMap_CellQuadrantSize_" data-uid="Godot.TileMap.CellQuadrantSize*"></a>
   <h4 id="Godot_TileMap_CellQuadrantSize" data-uid="Godot.TileMap.CellQuadrantSize">CellQuadrantSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The TileMap&apos;s quadrant size. Optimizes drawing by batching, using chunks of this size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1263,7 +1271,8 @@
   
   <a id="Godot_TileMap_CellSize_" data-uid="Godot.TileMap.CellSize*"></a>
   <h4 id="Godot_TileMap_CellSize" data-uid="Godot.TileMap.CellSize">CellSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The TileMap&apos;s cell size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1288,7 +1297,8 @@
   
   <a id="Godot_TileMap_CellTileOrigin_" data-uid="Godot.TileMap.CellTileOrigin*"></a>
   <h4 id="Godot_TileMap_CellTileOrigin" data-uid="Godot.TileMap.CellTileOrigin">CellTileOrigin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Position for tile origin. See <a class="xref" href="Godot.TileMap.TileOrigin.html">TileMap.TileOrigin</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1313,7 +1323,8 @@
   
   <a id="Godot_TileMap_CellYSort_" data-uid="Godot.TileMap.CellYSort*"></a>
   <h4 id="Godot_TileMap_CellYSort" data-uid="Godot.TileMap.CellYSort">CellYSort</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the TileMap&apos;s direct children will be drawn in order of their Y coordinate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1338,7 +1349,9 @@
   
   <a id="Godot_TileMap_CenteredTextures_" data-uid="Godot.TileMap.CenteredTextures*"></a>
   <h4 id="Godot_TileMap_CenteredTextures" data-uid="Godot.TileMap.CenteredTextures">CenteredTextures</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the textures will be centered in the middle of each tile. This is useful for certain isometric or top-down modes when textures are made larger or smaller than the tiles (e.g. to avoid flickering on tile edges). The offset is still applied, but from the center of the tile. If used, <a class="xref" href="Godot.TileMap.html#Godot_TileMap_CompatibilityMode">CompatibilityMode</a> is ignored.</p>
+<p>If <code>false</code>, the texture position start in the top-left corner unless <a class="xref" href="Godot.TileMap.html#Godot_TileMap_CompatibilityMode">CompatibilityMode</a> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1363,7 +1376,8 @@
   
   <a id="Godot_TileMap_CollisionBounce_" data-uid="Godot.TileMap.CollisionBounce*"></a>
   <h4 id="Godot_TileMap_CollisionBounce" data-uid="Godot.TileMap.CollisionBounce">CollisionBounce</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bounce value for static body collisions (see <code>collision_use_kinematic</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1388,7 +1402,8 @@
   
   <a id="Godot_TileMap_CollisionFriction_" data-uid="Godot.TileMap.CollisionFriction*"></a>
   <h4 id="Godot_TileMap_CollisionFriction" data-uid="Godot.TileMap.CollisionFriction">CollisionFriction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Friction value for static body collisions (see <code>collision_use_kinematic</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1413,7 +1428,8 @@
   
   <a id="Godot_TileMap_CollisionLayer_" data-uid="Godot.TileMap.CollisionLayer*"></a>
   <h4 id="Godot_TileMap_CollisionLayer" data-uid="Godot.TileMap.CollisionLayer">CollisionLayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The collision layer(s) for all colliders in the TileMap. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1438,7 +1454,8 @@
   
   <a id="Godot_TileMap_CollisionMask_" data-uid="Godot.TileMap.CollisionMask*"></a>
   <h4 id="Godot_TileMap_CollisionMask" data-uid="Godot.TileMap.CollisionMask">CollisionMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The collision mask(s) for all colliders in the TileMap. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1463,7 +1480,8 @@
   
   <a id="Godot_TileMap_CollisionUseKinematic_" data-uid="Godot.TileMap.CollisionUseKinematic*"></a>
   <h4 id="Godot_TileMap_CollisionUseKinematic" data-uid="Godot.TileMap.CollisionUseKinematic">CollisionUseKinematic</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, TileMap collisions will be handled as a kinematic body. If <code>false</code>, collisions will be handled as static body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1488,7 +1506,8 @@
   
   <a id="Godot_TileMap_CollisionUseParent_" data-uid="Godot.TileMap.CollisionUseParent*"></a>
   <h4 id="Godot_TileMap_CollisionUseParent" data-uid="Godot.TileMap.CollisionUseParent">CollisionUseParent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this tilemap&apos;s collision shape will be added to the collision shape of the parent. The parent has to be a <a class="xref" href="Godot.CollisionObject2D.html">CollisionObject2D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1513,7 +1532,10 @@
   
   <a id="Godot_TileMap_CompatibilityMode_" data-uid="Godot.TileMap.CompatibilityMode*"></a>
   <h4 id="Godot_TileMap_CompatibilityMode" data-uid="Godot.TileMap.CompatibilityMode">CompatibilityMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the compatibility with the tilemaps made in Godot 3.1 or earlier is maintained (textures move when the tile origin changes and rotate if the texture size is not homogeneous). This mode presents problems when doing <code>flip_h</code>, <code>flip_v</code> and <code>transpose</code> tile operations on non-homogeneous isometric tiles (e.g. 2:1), in which the texture could not coincide with the collision, thus it is not recommended for isometric or non-square tiles.</p>
+<p>If <code>false</code>, the textures do not move when doing <code>flip_h</code>, <code>flip_v</code> operations if no offset is used, nor when changing the tile origin.</p>
+<p>The compatibility mode doesn&apos;t work with the <a class="xref" href="Godot.TileMap.html#Godot_TileMap_CenteredTextures">CenteredTextures</a> option, because displacing textures with the <a class="xref" href="Godot.TileMap.html#Godot_TileMap_CellTileOrigin">CellTileOrigin</a> option or in irregular tiles is not relevant when centering those textures.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1538,7 +1560,8 @@
   
   <a id="Godot_TileMap_Mode_" data-uid="Godot.TileMap.Mode*"></a>
   <h4 id="Godot_TileMap_Mode" data-uid="Godot.TileMap.Mode">Mode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The TileMap orientation mode. See <a class="xref" href="Godot.TileMap.ModeEnum.html">TileMap.ModeEnum</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1563,7 +1586,8 @@
   
   <a id="Godot_TileMap_NavigationLayers_" data-uid="Godot.TileMap.NavigationLayers*"></a>
   <h4 id="Godot_TileMap_NavigationLayers" data-uid="Godot.TileMap.NavigationLayers">NavigationLayers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The navigation layers the TileMap generates its navigation regions in.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1588,7 +1612,8 @@
   
   <a id="Godot_TileMap_OccluderLightMask_" data-uid="Godot.TileMap.OccluderLightMask*"></a>
   <h4 id="Godot_TileMap_OccluderLightMask" data-uid="Godot.TileMap.OccluderLightMask">OccluderLightMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The light mask assigned to all light occluders in the TileMap. The TileSet&apos;s light occluders will cast shadows only from Light2D(s) that have the same light mask(s).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1613,7 +1638,8 @@
   
   <a id="Godot_TileMap_ShowCollision_" data-uid="Godot.TileMap.ShowCollision*"></a>
   <h4 id="Godot_TileMap_ShowCollision" data-uid="Godot.TileMap.ShowCollision">ShowCollision</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, collision shapes are visible in the editor. Doesn&apos;t affect collision shapes visibility at runtime. To show collision shapes at runtime, enable Visible Collision Shapes in the Debug menu instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1638,7 +1664,8 @@
   
   <a id="Godot_TileMap_TileSet_" data-uid="Godot.TileMap.TileSet*"></a>
   <h4 id="Godot_TileMap_TileSet" data-uid="Godot.TileMap.TileSet">TileSet</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The assigned <a class="xref" href="Godot.TileSet.html">TileSet</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1665,7 +1692,8 @@
   
   <a id="Godot_TileMap_Clear_" data-uid="Godot.TileMap.Clear*"></a>
   <h4 id="Godot_TileMap_Clear" data-uid="Godot.TileMap.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears all cells.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1675,7 +1703,8 @@
   
   <a id="Godot_TileMap_FixInvalidTiles_" data-uid="Godot.TileMap.FixInvalidTiles*"></a>
   <h4 id="Godot_TileMap_FixInvalidTiles" data-uid="Godot.TileMap.FixInvalidTiles">FixInvalidTiles()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears cells that do not exist in the tileset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1685,7 +1714,8 @@
   
   <a id="Godot_TileMap_GetCell_" data-uid="Godot.TileMap.GetCell*"></a>
   <h4 id="Godot_TileMap_GetCell_System_Int32_System_Int32_" data-uid="Godot.TileMap.GetCell(System.Int32,System.Int32)">GetCell(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile index of the given cell. If no tile exists in the cell, returns <a class="xref" href="Godot.TileMap.html#Godot_TileMap_InvalidCell">InvalidCell</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1732,7 +1762,8 @@
   
   <a id="Godot_TileMap_GetCellAutotileCoord_" data-uid="Godot.TileMap.GetCellAutotileCoord*"></a>
   <h4 id="Godot_TileMap_GetCellAutotileCoord_System_Int32_System_Int32_" data-uid="Godot.TileMap.GetCellAutotileCoord(System.Int32,System.Int32)">GetCellAutotileCoord(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the coordinate (subtile column and row) of the autotile variation in the tileset. Returns a zero vector if the cell doesn&apos;t have autotiling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1804,7 +1835,8 @@
   
   <a id="Godot_TileMap_GetCellv_" data-uid="Godot.TileMap.GetCellv*"></a>
   <h4 id="Godot_TileMap_GetCellv_Godot_Vector2_" data-uid="Godot.TileMap.GetCellv(Godot.Vector2)">GetCellv(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile index of the cell given by a Vector2. If no tile exists in the cell, returns <a class="xref" href="Godot.TileMap.html#Godot_TileMap_InvalidCell">InvalidCell</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1946,7 +1978,8 @@
   
   <a id="Godot_TileMap_GetCollisionLayerBit_" data-uid="Godot.TileMap.GetCollisionLayerBit*"></a>
   <h4 id="Godot_TileMap_GetCollisionLayerBit_System_Int32_" data-uid="Godot.TileMap.GetCollisionLayerBit(System.Int32)">GetCollisionLayerBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given collision layer bit is set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2013,7 +2046,8 @@
   
   <a id="Godot_TileMap_GetCollisionMaskBit_" data-uid="Godot.TileMap.GetCollisionMaskBit*"></a>
   <h4 id="Godot_TileMap_GetCollisionMaskBit_System_Int32_" data-uid="Godot.TileMap.GetCollisionMaskBit(System.Int32)">GetCollisionMaskBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given collision mask bit is set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2305,7 +2339,8 @@
   
   <a id="Godot_TileMap_GetUsedCells_" data-uid="Godot.TileMap.GetUsedCells*"></a>
   <h4 id="Godot_TileMap_GetUsedCells" data-uid="Godot.TileMap.GetUsedCells">GetUsedCells()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.Vector2.html">Vector2</a> array with the positions of all cells containing a tile from the tileset (i.e. a tile index different from <code>-1</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2330,7 +2365,8 @@
   
   <a id="Godot_TileMap_GetUsedCellsById_" data-uid="Godot.TileMap.GetUsedCellsById*"></a>
   <h4 id="Godot_TileMap_GetUsedCellsById_System_Int32_" data-uid="Godot.TileMap.GetUsedCellsById(System.Int32)">GetUsedCellsById(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of all cells with the given tile index specified in <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2372,7 +2408,8 @@
   
   <a id="Godot_TileMap_GetUsedRect_" data-uid="Godot.TileMap.GetUsedRect*"></a>
   <h4 id="Godot_TileMap_GetUsedRect" data-uid="Godot.TileMap.GetUsedRect">GetUsedRect()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a rectangle enclosing the used (non-empty) tiles of the map.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2422,7 +2459,8 @@
   
   <a id="Godot_TileMap_IsCellTransposed_" data-uid="Godot.TileMap.IsCellTransposed*"></a>
   <h4 id="Godot_TileMap_IsCellTransposed_System_Int32_System_Int32_" data-uid="Godot.TileMap.IsCellTransposed(System.Int32,System.Int32)">IsCellTransposed(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given cell is transposed, i.e. the X and Y axes are swapped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2469,7 +2507,8 @@
   
   <a id="Godot_TileMap_IsCellXFlipped_" data-uid="Godot.TileMap.IsCellXFlipped*"></a>
   <h4 id="Godot_TileMap_IsCellXFlipped_System_Int32_System_Int32_" data-uid="Godot.TileMap.IsCellXFlipped(System.Int32,System.Int32)">IsCellXFlipped(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given cell is flipped in the X axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2516,7 +2555,8 @@
   
   <a id="Godot_TileMap_IsCellYFlipped_" data-uid="Godot.TileMap.IsCellYFlipped*"></a>
   <h4 id="Godot_TileMap_IsCellYFlipped_System_Int32_System_Int32_" data-uid="Godot.TileMap.IsCellYFlipped(System.Int32,System.Int32)">IsCellYFlipped(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given cell is flipped in the Y axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2663,7 +2703,12 @@
   
   <a id="Godot_TileMap_MapToWorld_" data-uid="Godot.TileMap.MapToWorld*"></a>
   <h4 id="Godot_TileMap_MapToWorld_Godot_Vector2_System_Boolean_" data-uid="Godot.TileMap.MapToWorld(Godot.Vector2,System.Boolean)">MapToWorld(Vector2, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the local position of the top left corner of the cell corresponding to the given tilemap (grid-based) coordinates.</p>
+<p>To get the global position, use <a class="xref" href="Godot.Node2D.html#Godot_Node2D_ToGlobal_Godot_Vector2_">ToGlobal(Vector2)</a>:</p>
+<p><pre><code>var local_position = my_tilemap.map_to_world(map_position)
+var global_position = my_tilemap.to_global(local_position)</code></pre></p>
+<p>Optionally, the tilemap&apos;s half offset can be ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2737,7 +2782,17 @@
   
   <a id="Godot_TileMap_SetCell_" data-uid="Godot.TileMap.SetCell*"></a>
   <h4 id="Godot_TileMap_SetCell_System_Int32_System_Int32_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Nullable_Godot_Vector2__" data-uid="Godot.TileMap.SetCell(System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Nullable{Godot.Vector2})">SetCell(Int32, Int32, Int32, Boolean, Boolean, Boolean, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile index for the given cell.</p>
+<p>An index of <code>-1</code> clears the cell.</p>
+<p>Optionally, the tile can also be flipped, transposed, or given autotile coordinates. The autotile coordinate refers to the column and row of the subtile.</p>
+<p>Note: Data such as navigation polygons and collision shapes are not immediately updated for performance reasons.</p>
+<p>If you need these to be immediately updated, you can call <a class="xref" href="Godot.TileMap.html#Godot_TileMap_UpdateDirtyQuadrants">UpdateDirtyQuadrants()</a>.</p>
+<p>Overriding this method also overrides it internally, allowing custom logic to be implemented when tiles are placed/removed:</p>
+<p><pre><code>func set_cell(x, y, tile, flip_x=false, flip_y=false, transpose=false, autotile_coord=Vector2()):
+    # Write your custom logic here.
+    # To call the default method:
+    .set_cell(x, y, tile, flip_x, flip_y, transpose, autotile_coord)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2786,7 +2841,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">autotileCoord</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2821,7 +2877,12 @@
   
   <a id="Godot_TileMap_SetCellv_" data-uid="Godot.TileMap.SetCellv*"></a>
   <h4 id="Godot_TileMap_SetCellv_Godot_Vector2_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Nullable_Godot_Vector2__" data-uid="Godot.TileMap.SetCellv(Godot.Vector2,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Nullable{Godot.Vector2})">SetCellv(Vector2, Int32, Boolean, Boolean, Boolean, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile index for the cell given by a Vector2.</p>
+<p>An index of <code>-1</code> clears the cell.</p>
+<p>Optionally, the tile can also be flipped, transposed, or given autotile coordinates. The autotile coordinate refers to the column and row of the subtile.</p>
+<p>Note: Data such as navigation polygons and collision shapes are not immediately updated for performance reasons.</p>
+<p>If you need these to be immediately updated, you can call <a class="xref" href="Godot.TileMap.html#Godot_TileMap_UpdateDirtyQuadrants">UpdateDirtyQuadrants()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2865,7 +2926,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">autotileCoord</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3008,7 +3070,8 @@
   
   <a id="Godot_TileMap_SetCollisionLayerBit_" data-uid="Godot.TileMap.SetCollisionLayerBit*"></a>
   <h4 id="Godot_TileMap_SetCollisionLayerBit_System_Int32_System_Boolean_" data-uid="Godot.TileMap.SetCollisionLayerBit(System.Int32,System.Boolean)">SetCollisionLayerBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the given collision layer bit.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3067,7 +3130,8 @@
   
   <a id="Godot_TileMap_SetCollisionMaskBit_" data-uid="Godot.TileMap.SetCollisionMaskBit*"></a>
   <h4 id="Godot_TileMap_SetCollisionMaskBit_System_Int32_System_Boolean_" data-uid="Godot.TileMap.SetCollisionMaskBit(System.Int32,System.Boolean)">SetCollisionMaskBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the given collision mask bit.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3450,7 +3514,8 @@
   
   <a id="Godot_TileMap_UpdateBitmaskArea_" data-uid="Godot.TileMap.UpdateBitmaskArea*"></a>
   <h4 id="Godot_TileMap_UpdateBitmaskArea_Godot_Vector2_" data-uid="Godot.TileMap.UpdateBitmaskArea(Godot.Vector2)">UpdateBitmaskArea(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies autotiling rules to the cell (and its adjacent cells) referenced by its grid-based X and Y coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3477,7 +3542,9 @@
   
   <a id="Godot_TileMap_UpdateBitmaskRegion_" data-uid="Godot.TileMap.UpdateBitmaskRegion*"></a>
   <h4 id="Godot_TileMap_UpdateBitmaskRegion_System_Nullable_Godot_Vector2__System_Nullable_Godot_Vector2__" data-uid="Godot.TileMap.UpdateBitmaskRegion(System.Nullable{Godot.Vector2},System.Nullable{Godot.Vector2})">UpdateBitmaskRegion(Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies autotiling rules to the cells in the given region (specified by grid-based X and Y coordinates).</p>
+<p>Calling with invalid (or missing) parameters applies autotiling rules for the entire tilemap.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3496,12 +3563,14 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">start</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">end</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3509,7 +3578,8 @@
   
   <a id="Godot_TileMap_UpdateDirtyQuadrants_" data-uid="Godot.TileMap.UpdateDirtyQuadrants*"></a>
   <h4 id="Godot_TileMap_UpdateDirtyQuadrants" data-uid="Godot.TileMap.UpdateDirtyQuadrants">UpdateDirtyQuadrants()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the tile map&apos;s quadrants, allowing things such as navigation and collision shapes to be immediately used if modified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3519,7 +3589,11 @@
   
   <a id="Godot_TileMap_WorldToMap_" data-uid="Godot.TileMap.WorldToMap*"></a>
   <h4 id="Godot_TileMap_WorldToMap_Godot_Vector2_" data-uid="Godot.TileMap.WorldToMap(Godot.Vector2)">WorldToMap(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tilemap (grid-based) coordinates corresponding to the given local position.</p>
+<p>To use this with a global position, first determine the local position with <a class="xref" href="Godot.Node2D.html#Godot_Node2D_ToLocal_Godot_Vector2_">ToLocal(Vector2)</a>:</p>
+<p><pre><code>var local_position = my_tilemap.to_local(global_position)
+var map_position = my_tilemap.world_to_map(local_position)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

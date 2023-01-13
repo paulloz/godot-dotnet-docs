@@ -83,7 +83,9 @@
   
   <h1 id="Godot_TileSet" data-uid="Godot.TileSet" class="text-break">Class TileSet
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A TileSet is a library of tiles for a <a class="xref" href="Godot.TileMap.html">TileMap</a>. It contains a list of tiles, each consisting of a sprite and optional collision shapes.</p>
+<p>Tiles are referenced by a unique integer ID.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -455,7 +457,9 @@
   
   <a id="Godot_TileSet__IsTileBound_" data-uid="Godot.TileSet._IsTileBound*"></a>
   <h4 id="Godot_TileSet__IsTileBound_System_Int32_System_Int32_" data-uid="Godot.TileSet._IsTileBound(System.Int32,System.Int32)">_IsTileBound(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines when the auto-tiler should consider two different auto-tile IDs to be bound together.</p>
+<p>Note: <code>neighbor_id</code> will be <code>-1</code> (<a class="xref" href="Godot.TileMap.html#Godot_TileMap_InvalidCell">InvalidCell</a>) when checking a tile against an empty neighbor tile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -502,7 +506,8 @@
   
   <a id="Godot_TileSet_AutotileClearBitmaskMap_" data-uid="Godot.TileSet.AutotileClearBitmaskMap*"></a>
   <h4 id="Godot_TileSet_AutotileClearBitmaskMap_System_Int32_" data-uid="Godot.TileSet.AutotileClearBitmaskMap(System.Int32)">AutotileClearBitmaskMap(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears all bitmask information of the autotile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -529,7 +534,9 @@
   
   <a id="Godot_TileSet_AutotileGetBitmask_" data-uid="Godot.TileSet.AutotileGetBitmask*"></a>
   <h4 id="Godot_TileSet_AutotileGetBitmask_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.AutotileGetBitmask(System.Int32,Godot.Vector2)">AutotileGetBitmask(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the bitmask of the subtile from an autotile given its coordinates.</p>
+<p>The value is the sum of the values in <a class="xref" href="Godot.TileSet.AutotileBindings.html">TileSet.AutotileBindings</a> present in the subtile (e.g. a value of 5 means the bitmask has bindings in both the top left and top right).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -576,7 +583,8 @@
   
   <a id="Godot_TileSet_AutotileGetBitmaskMode_" data-uid="Godot.TileSet.AutotileGetBitmaskMode*"></a>
   <h4 id="Godot_TileSet_AutotileGetBitmaskMode_System_Int32_" data-uid="Godot.TileSet.AutotileGetBitmaskMode(System.Int32)">AutotileGetBitmaskMode(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.TileSet.BitmaskMode.html">TileSet.BitmaskMode</a> of the autotile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -618,7 +626,9 @@
   
   <a id="Godot_TileSet_AutotileGetIconCoordinate_" data-uid="Godot.TileSet.AutotileGetIconCoordinate*"></a>
   <h4 id="Godot_TileSet_AutotileGetIconCoordinate_System_Int32_" data-uid="Godot.TileSet.AutotileGetIconCoordinate(System.Int32)">AutotileGetIconCoordinate(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the subtile that&apos;s being used as an icon in an atlas/autotile given its coordinates.</p>
+<p>The subtile defined as the icon will be used as a fallback when the atlas/autotile&apos;s bitmask information is incomplete. It will also be used to represent it in the TileSet editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -660,7 +670,8 @@
   
   <a id="Godot_TileSet_AutotileGetLightOccluder_" data-uid="Godot.TileSet.AutotileGetLightOccluder*"></a>
   <h4 id="Godot_TileSet_AutotileGetLightOccluder_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.AutotileGetLightOccluder(System.Int32,Godot.Vector2)">AutotileGetLightOccluder(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the light occluder of the subtile from an atlas/autotile given its coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -707,7 +718,8 @@
   
   <a id="Godot_TileSet_AutotileGetNavigationPolygon_" data-uid="Godot.TileSet.AutotileGetNavigationPolygon*"></a>
   <h4 id="Godot_TileSet_AutotileGetNavigationPolygon_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.AutotileGetNavigationPolygon(System.Int32,Godot.Vector2)">AutotileGetNavigationPolygon(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the navigation polygon of the subtile from an atlas/autotile given its coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -754,7 +766,8 @@
   
   <a id="Godot_TileSet_AutotileGetSize_" data-uid="Godot.TileSet.AutotileGetSize*"></a>
   <h4 id="Godot_TileSet_AutotileGetSize_System_Int32_" data-uid="Godot.TileSet.AutotileGetSize(System.Int32)">AutotileGetSize(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size of the subtiles in an atlas/autotile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -796,7 +809,8 @@
   
   <a id="Godot_TileSet_AutotileGetSpacing_" data-uid="Godot.TileSet.AutotileGetSpacing*"></a>
   <h4 id="Godot_TileSet_AutotileGetSpacing_System_Int32_" data-uid="Godot.TileSet.AutotileGetSpacing(System.Int32)">AutotileGetSpacing(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the spacing between subtiles of the atlas/autotile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -838,7 +852,9 @@
   
   <a id="Godot_TileSet_AutotileGetSubtilePriority_" data-uid="Godot.TileSet.AutotileGetSubtilePriority*"></a>
   <h4 id="Godot_TileSet_AutotileGetSubtilePriority_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.AutotileGetSubtilePriority(System.Int32,Godot.Vector2)">AutotileGetSubtilePriority(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the priority of the subtile from an autotile given its coordinates.</p>
+<p>When more than one subtile has the same bitmask value, one of them will be picked randomly for drawing. Its priority will define how often it will be picked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -885,7 +901,8 @@
   
   <a id="Godot_TileSet_AutotileGetZIndex_" data-uid="Godot.TileSet.AutotileGetZIndex*"></a>
   <h4 id="Godot_TileSet_AutotileGetZIndex_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.AutotileGetZIndex(System.Int32,Godot.Vector2)">AutotileGetZIndex(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the drawing index of the subtile from an atlas/autotile given its coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -932,7 +949,9 @@
   
   <a id="Godot_TileSet_AutotileSetBitmask_" data-uid="Godot.TileSet.AutotileSetBitmask*"></a>
   <h4 id="Godot_TileSet_AutotileSetBitmask_System_Int32_Godot_Vector2_System_UInt32_" data-uid="Godot.TileSet.AutotileSetBitmask(System.Int32,Godot.Vector2,System.UInt32)">AutotileSetBitmask(Int32, Vector2, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the bitmask of the subtile from an autotile given its coordinates.</p>
+<p>The value is the sum of the values in <a class="xref" href="Godot.TileSet.AutotileBindings.html">TileSet.AutotileBindings</a> present in the subtile (e.g. a value of 5 means the bitmask has bindings in both the top left and top right).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -969,7 +988,8 @@
   
   <a id="Godot_TileSet_AutotileSetBitmaskMode_" data-uid="Godot.TileSet.AutotileSetBitmaskMode*"></a>
   <h4 id="Godot_TileSet_AutotileSetBitmaskMode_System_Int32_Godot_TileSet_BitmaskMode_" data-uid="Godot.TileSet.AutotileSetBitmaskMode(System.Int32,Godot.TileSet.BitmaskMode)">AutotileSetBitmaskMode(Int32, TileSet.BitmaskMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.TileSet.BitmaskMode.html">TileSet.BitmaskMode</a> of the autotile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1001,7 +1021,9 @@
   
   <a id="Godot_TileSet_AutotileSetIconCoordinate_" data-uid="Godot.TileSet.AutotileSetIconCoordinate*"></a>
   <h4 id="Godot_TileSet_AutotileSetIconCoordinate_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.AutotileSetIconCoordinate(System.Int32,Godot.Vector2)">AutotileSetIconCoordinate(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the subtile that will be used as an icon in an atlas/autotile given its coordinates.</p>
+<p>The subtile defined as the icon will be used as a fallback when the atlas/autotile&apos;s bitmask information is incomplete. It will also be used to represent it in the TileSet editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1033,7 +1055,8 @@
   
   <a id="Godot_TileSet_AutotileSetLightOccluder_" data-uid="Godot.TileSet.AutotileSetLightOccluder*"></a>
   <h4 id="Godot_TileSet_AutotileSetLightOccluder_System_Int32_Godot_OccluderPolygon2D_Godot_Vector2_" data-uid="Godot.TileSet.AutotileSetLightOccluder(System.Int32,Godot.OccluderPolygon2D,Godot.Vector2)">AutotileSetLightOccluder(Int32, OccluderPolygon2D, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the light occluder of the subtile from an atlas/autotile given its coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1070,7 +1093,8 @@
   
   <a id="Godot_TileSet_AutotileSetNavigationPolygon_" data-uid="Godot.TileSet.AutotileSetNavigationPolygon*"></a>
   <h4 id="Godot_TileSet_AutotileSetNavigationPolygon_System_Int32_Godot_NavigationPolygon_Godot_Vector2_" data-uid="Godot.TileSet.AutotileSetNavigationPolygon(System.Int32,Godot.NavigationPolygon,Godot.Vector2)">AutotileSetNavigationPolygon(Int32, NavigationPolygon, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the navigation polygon of the subtile from an atlas/autotile given its coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1107,7 +1131,8 @@
   
   <a id="Godot_TileSet_AutotileSetSize_" data-uid="Godot.TileSet.AutotileSetSize*"></a>
   <h4 id="Godot_TileSet_AutotileSetSize_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.AutotileSetSize(System.Int32,Godot.Vector2)">AutotileSetSize(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the size of the subtiles in an atlas/autotile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1139,7 +1164,8 @@
   
   <a id="Godot_TileSet_AutotileSetSpacing_" data-uid="Godot.TileSet.AutotileSetSpacing*"></a>
   <h4 id="Godot_TileSet_AutotileSetSpacing_System_Int32_System_Int32_" data-uid="Godot.TileSet.AutotileSetSpacing(System.Int32,System.Int32)">AutotileSetSpacing(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the spacing between subtiles of the atlas/autotile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1171,7 +1197,9 @@
   
   <a id="Godot_TileSet_AutotileSetSubtilePriority_" data-uid="Godot.TileSet.AutotileSetSubtilePriority*"></a>
   <h4 id="Godot_TileSet_AutotileSetSubtilePriority_System_Int32_Godot_Vector2_System_Int32_" data-uid="Godot.TileSet.AutotileSetSubtilePriority(System.Int32,Godot.Vector2,System.Int32)">AutotileSetSubtilePriority(Int32, Vector2, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the priority of the subtile from an autotile given its coordinates.</p>
+<p>When more than one subtile has the same bitmask value, one of them will be picked randomly for drawing. Its priority will define how often it will be picked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1208,7 +1236,8 @@
   
   <a id="Godot_TileSet_AutotileSetZIndex_" data-uid="Godot.TileSet.AutotileSetZIndex*"></a>
   <h4 id="Godot_TileSet_AutotileSetZIndex_System_Int32_Godot_Vector2_System_Int32_" data-uid="Godot.TileSet.AutotileSetZIndex(System.Int32,Godot.Vector2,System.Int32)">AutotileSetZIndex(Int32, Vector2, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the drawing index of the subtile from an atlas/autotile given its coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1245,7 +1274,8 @@
   
   <a id="Godot_TileSet_Clear_" data-uid="Godot.TileSet.Clear*"></a>
   <h4 id="Godot_TileSet_Clear" data-uid="Godot.TileSet.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears all tiles.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1255,7 +1285,8 @@
   
   <a id="Godot_TileSet_CreateTile_" data-uid="Godot.TileSet.CreateTile*"></a>
   <h4 id="Godot_TileSet_CreateTile_System_Int32_" data-uid="Godot.TileSet.CreateTile(System.Int32)">CreateTile(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new tile with the given ID.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1282,7 +1313,8 @@
   
   <a id="Godot_TileSet_FindTileByName_" data-uid="Godot.TileSet.FindTileByName*"></a>
   <h4 id="Godot_TileSet_FindTileByName_System_String_" data-uid="Godot.TileSet.FindTileByName(System.String)">FindTileByName(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the first tile matching the given name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1324,7 +1356,8 @@
   
   <a id="Godot_TileSet_GetLastUnusedTileId_" data-uid="Godot.TileSet.GetLastUnusedTileId*"></a>
   <h4 id="Godot_TileSet_GetLastUnusedTileId" data-uid="Godot.TileSet.GetLastUnusedTileId">GetLastUnusedTileId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the ID following the last currently used ID, useful when creating a new tile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1349,7 +1382,8 @@
   
   <a id="Godot_TileSet_GetTilesIds_" data-uid="Godot.TileSet.GetTilesIds*"></a>
   <h4 id="Godot_TileSet_GetTilesIds" data-uid="Godot.TileSet.GetTilesIds">GetTilesIds()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of all currently used tile IDs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1374,7 +1408,8 @@
   
   <a id="Godot_TileSet_RemoveTile_" data-uid="Godot.TileSet.RemoveTile*"></a>
   <h4 id="Godot_TileSet_RemoveTile_System_Int32_" data-uid="Godot.TileSet.RemoveTile(System.Int32)">RemoveTile(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the given tile ID.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1401,7 +1436,8 @@
   
   <a id="Godot_TileSet_TileAddShape_" data-uid="Godot.TileSet.TileAddShape*"></a>
   <h4 id="Godot_TileSet_TileAddShape_System_Int32_Godot_Shape2D_Godot_Transform2D_System_Boolean_System_Nullable_Godot_Vector2__" data-uid="Godot.TileSet.TileAddShape(System.Int32,Godot.Shape2D,Godot.Transform2D,System.Boolean,System.Nullable{Godot.Vector2})">TileAddShape(Int32, Shape2D, Transform2D, Boolean, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a shape to the tile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1440,7 +1476,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">autotileCoord</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1448,7 +1485,8 @@
   
   <a id="Godot_TileSet_TileGetLightOccluder_" data-uid="Godot.TileSet.TileGetLightOccluder*"></a>
   <h4 id="Godot_TileSet_TileGetLightOccluder_System_Int32_" data-uid="Godot.TileSet.TileGetLightOccluder(System.Int32)">TileGetLightOccluder(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile&apos;s light occluder.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1490,7 +1528,8 @@
   
   <a id="Godot_TileSet_TileGetMaterial_" data-uid="Godot.TileSet.TileGetMaterial*"></a>
   <h4 id="Godot_TileSet_TileGetMaterial_System_Int32_" data-uid="Godot.TileSet.TileGetMaterial(System.Int32)">TileGetMaterial(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile&apos;s material.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1532,7 +1571,8 @@
   
   <a id="Godot_TileSet_TileGetModulate_" data-uid="Godot.TileSet.TileGetModulate*"></a>
   <h4 id="Godot_TileSet_TileGetModulate_System_Int32_" data-uid="Godot.TileSet.TileGetModulate(System.Int32)">TileGetModulate(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile&apos;s modulation color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1574,7 +1614,8 @@
   
   <a id="Godot_TileSet_TileGetName_" data-uid="Godot.TileSet.TileGetName*"></a>
   <h4 id="Godot_TileSet_TileGetName_System_Int32_" data-uid="Godot.TileSet.TileGetName(System.Int32)">TileGetName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile&apos;s name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1616,7 +1657,8 @@
   
   <a id="Godot_TileSet_TileGetNavigationPolygon_" data-uid="Godot.TileSet.TileGetNavigationPolygon*"></a>
   <h4 id="Godot_TileSet_TileGetNavigationPolygon_System_Int32_" data-uid="Godot.TileSet.TileGetNavigationPolygon(System.Int32)">TileGetNavigationPolygon(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the navigation polygon of the tile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1658,7 +1700,8 @@
   
   <a id="Godot_TileSet_TileGetNavigationPolygonOffset_" data-uid="Godot.TileSet.TileGetNavigationPolygonOffset*"></a>
   <h4 id="Godot_TileSet_TileGetNavigationPolygonOffset_System_Int32_" data-uid="Godot.TileSet.TileGetNavigationPolygonOffset(System.Int32)">TileGetNavigationPolygonOffset(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the offset of the tile&apos;s navigation polygon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1700,7 +1743,8 @@
   
   <a id="Godot_TileSet_TileGetNormalMap_" data-uid="Godot.TileSet.TileGetNormalMap*"></a>
   <h4 id="Godot_TileSet_TileGetNormalMap_System_Int32_" data-uid="Godot.TileSet.TileGetNormalMap(System.Int32)">TileGetNormalMap(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile&apos;s normal map texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1742,7 +1786,8 @@
   
   <a id="Godot_TileSet_TileGetOccluderOffset_" data-uid="Godot.TileSet.TileGetOccluderOffset*"></a>
   <h4 id="Godot_TileSet_TileGetOccluderOffset_System_Int32_" data-uid="Godot.TileSet.TileGetOccluderOffset(System.Int32)">TileGetOccluderOffset(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the offset of the tile&apos;s light occluder.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1784,7 +1829,8 @@
   
   <a id="Godot_TileSet_TileGetRegion_" data-uid="Godot.TileSet.TileGetRegion*"></a>
   <h4 id="Godot_TileSet_TileGetRegion_System_Int32_" data-uid="Godot.TileSet.TileGetRegion(System.Int32)">TileGetRegion(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile sub-region in the texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1826,7 +1872,8 @@
   
   <a id="Godot_TileSet_TileGetShape_" data-uid="Godot.TileSet.TileGetShape*"></a>
   <h4 id="Godot_TileSet_TileGetShape_System_Int32_System_Int32_" data-uid="Godot.TileSet.TileGetShape(System.Int32,System.Int32)">TileGetShape(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a tile&apos;s given shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1873,7 +1920,8 @@
   
   <a id="Godot_TileSet_TileGetShapeCount_" data-uid="Godot.TileSet.TileGetShapeCount*"></a>
   <h4 id="Godot_TileSet_TileGetShapeCount_System_Int32_" data-uid="Godot.TileSet.TileGetShapeCount(System.Int32)">TileGetShapeCount(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of shapes assigned to a tile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1915,7 +1963,8 @@
   
   <a id="Godot_TileSet_TileGetShapeOffset_" data-uid="Godot.TileSet.TileGetShapeOffset*"></a>
   <h4 id="Godot_TileSet_TileGetShapeOffset_System_Int32_System_Int32_" data-uid="Godot.TileSet.TileGetShapeOffset(System.Int32,System.Int32)">TileGetShapeOffset(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the offset of a tile&apos;s shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1962,7 +2011,8 @@
   
   <a id="Godot_TileSet_TileGetShapeOneWay_" data-uid="Godot.TileSet.TileGetShapeOneWay*"></a>
   <h4 id="Godot_TileSet_TileGetShapeOneWay_System_Int32_System_Int32_" data-uid="Godot.TileSet.TileGetShapeOneWay(System.Int32,System.Int32)">TileGetShapeOneWay(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the one-way collision value of a tile&apos;s shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2056,7 +2106,16 @@
   
   <a id="Godot_TileSet_TileGetShapes_" data-uid="Godot.TileSet.TileGetShapes*"></a>
   <h4 id="Godot_TileSet_TileGetShapes_System_Int32_" data-uid="Godot.TileSet.TileGetShapes(System.Int32)">TileGetShapes(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of dictionaries describing the tile&apos;s shapes.</p>
+<p>Dictionary structure in the array returned by this method:</p>
+<p><pre><code>{
+    &quot;autotile_coord&quot;: Vector2,
+    &quot;one_way&quot;: bool,
+    &quot;one_way_margin&quot;: int,
+    &quot;shape&quot;: CollisionShape2D,
+    &quot;shape_transform&quot;: Transform2D,
+}</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2098,7 +2157,8 @@
   
   <a id="Godot_TileSet_TileGetShapeTransform_" data-uid="Godot.TileSet.TileGetShapeTransform*"></a>
   <h4 id="Godot_TileSet_TileGetShapeTransform_System_Int32_System_Int32_" data-uid="Godot.TileSet.TileGetShapeTransform(System.Int32,System.Int32)">TileGetShapeTransform(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Transform2D.html">Transform2D</a> of a tile&apos;s shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2145,7 +2205,8 @@
   
   <a id="Godot_TileSet_TileGetTexture_" data-uid="Godot.TileSet.TileGetTexture*"></a>
   <h4 id="Godot_TileSet_TileGetTexture_System_Int32_" data-uid="Godot.TileSet.TileGetTexture(System.Int32)">TileGetTexture(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile&apos;s texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2187,7 +2248,8 @@
   
   <a id="Godot_TileSet_TileGetTextureOffset_" data-uid="Godot.TileSet.TileGetTextureOffset*"></a>
   <h4 id="Godot_TileSet_TileGetTextureOffset_System_Int32_" data-uid="Godot.TileSet.TileGetTextureOffset(System.Int32)">TileGetTextureOffset(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the texture offset of the tile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2229,7 +2291,8 @@
   
   <a id="Godot_TileSet_TileGetTileMode_" data-uid="Godot.TileSet.TileGetTileMode*"></a>
   <h4 id="Godot_TileSet_TileGetTileMode_System_Int32_" data-uid="Godot.TileSet.TileGetTileMode(System.Int32)">TileGetTileMode(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile&apos;s <a class="xref" href="Godot.TileSet.TileMode.html">TileSet.TileMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2271,7 +2334,8 @@
   
   <a id="Godot_TileSet_TileGetZIndex_" data-uid="Godot.TileSet.TileGetZIndex*"></a>
   <h4 id="Godot_TileSet_TileGetZIndex_System_Int32_" data-uid="Godot.TileSet.TileGetZIndex(System.Int32)">TileGetZIndex(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tile&apos;s Z index (drawing layer).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2313,7 +2377,8 @@
   
   <a id="Godot_TileSet_TileSetLightOccluder_" data-uid="Godot.TileSet.TileSetLightOccluder*"></a>
   <h4 id="Godot_TileSet_TileSetLightOccluder_System_Int32_Godot_OccluderPolygon2D_" data-uid="Godot.TileSet.TileSetLightOccluder(System.Int32,Godot.OccluderPolygon2D)">TileSetLightOccluder(Int32, OccluderPolygon2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a light occluder for the tile.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2345,7 +2410,8 @@
   
   <a id="Godot_TileSet_TileSetMaterial_" data-uid="Godot.TileSet.TileSetMaterial*"></a>
   <h4 id="Godot_TileSet_TileSetMaterial_System_Int32_Godot_ShaderMaterial_" data-uid="Godot.TileSet.TileSetMaterial(System.Int32,Godot.ShaderMaterial)">TileSetMaterial(Int32, ShaderMaterial)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s material.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2377,7 +2443,9 @@
   
   <a id="Godot_TileSet_TileSetModulate_" data-uid="Godot.TileSet.TileSetModulate*"></a>
   <h4 id="Godot_TileSet_TileSetModulate_System_Int32_Godot_Color_" data-uid="Godot.TileSet.TileSetModulate(System.Int32,Godot.Color)">TileSetModulate(Int32, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s modulation color.</p>
+<p>Note: Modulation is performed by setting the tile&apos;s vertex color. To access this in a shader, use <code>COLOR</code> rather than <code>MODULATE</code> (which instead accesses the <a class="xref" href="Godot.TileMap.html">TileMap</a>&apos;s <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Modulate">Modulate</a> property).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2409,7 +2477,8 @@
   
   <a id="Godot_TileSet_TileSetName_" data-uid="Godot.TileSet.TileSetName*"></a>
   <h4 id="Godot_TileSet_TileSetName_System_Int32_System_String_" data-uid="Godot.TileSet.TileSetName(System.Int32,System.String)">TileSetName(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2441,7 +2510,8 @@
   
   <a id="Godot_TileSet_TileSetNavigationPolygon_" data-uid="Godot.TileSet.TileSetNavigationPolygon*"></a>
   <h4 id="Godot_TileSet_TileSetNavigationPolygon_System_Int32_Godot_NavigationPolygon_" data-uid="Godot.TileSet.TileSetNavigationPolygon(System.Int32,Godot.NavigationPolygon)">TileSetNavigationPolygon(Int32, NavigationPolygon)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s navigation polygon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2473,7 +2543,8 @@
   
   <a id="Godot_TileSet_TileSetNavigationPolygonOffset_" data-uid="Godot.TileSet.TileSetNavigationPolygonOffset*"></a>
   <h4 id="Godot_TileSet_TileSetNavigationPolygonOffset_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.TileSetNavigationPolygonOffset(System.Int32,Godot.Vector2)">TileSetNavigationPolygonOffset(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an offset for the tile&apos;s navigation polygon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2505,7 +2576,9 @@
   
   <a id="Godot_TileSet_TileSetNormalMap_" data-uid="Godot.TileSet.TileSetNormalMap*"></a>
   <h4 id="Godot_TileSet_TileSetNormalMap_System_Int32_Godot_Texture_" data-uid="Godot.TileSet.TileSetNormalMap(System.Int32,Godot.Texture)">TileSetNormalMap(Int32, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s normal map texture.</p>
+<p>Note: Godot expects the normal map to use X+, Y-, and Z+ coordinates. See <a href="http://wiki.polycount.com/wiki/Normal_Map_Technical_Details#Common_Swizzle_Coordinates">this page</a> for a comparison of normal map coordinates expected by popular engines.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2537,7 +2610,8 @@
   
   <a id="Godot_TileSet_TileSetOccluderOffset_" data-uid="Godot.TileSet.TileSetOccluderOffset*"></a>
   <h4 id="Godot_TileSet_TileSetOccluderOffset_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.TileSetOccluderOffset(System.Int32,Godot.Vector2)">TileSetOccluderOffset(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an offset for the tile&apos;s light occluder.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2569,7 +2643,8 @@
   
   <a id="Godot_TileSet_TileSetRegion_" data-uid="Godot.TileSet.TileSetRegion*"></a>
   <h4 id="Godot_TileSet_TileSetRegion_System_Int32_Godot_Rect2_" data-uid="Godot.TileSet.TileSetRegion(System.Int32,Godot.Rect2)">TileSetRegion(Int32, Rect2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s sub-region in the texture. This is common in texture atlases.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2601,7 +2676,8 @@
   
   <a id="Godot_TileSet_TileSetShape_" data-uid="Godot.TileSet.TileSetShape*"></a>
   <h4 id="Godot_TileSet_TileSetShape_System_Int32_System_Int32_Godot_Shape2D_" data-uid="Godot.TileSet.TileSetShape(System.Int32,System.Int32,Godot.Shape2D)">TileSetShape(Int32, Int32, Shape2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a shape for the tile, enabling collision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2638,7 +2714,8 @@
   
   <a id="Godot_TileSet_TileSetShapeOffset_" data-uid="Godot.TileSet.TileSetShapeOffset*"></a>
   <h4 id="Godot_TileSet_TileSetShapeOffset_System_Int32_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.TileSetShapeOffset(System.Int32,System.Int32,Godot.Vector2)">TileSetShapeOffset(Int32, Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the offset of a tile&apos;s shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2675,7 +2752,8 @@
   
   <a id="Godot_TileSet_TileSetShapeOneWay_" data-uid="Godot.TileSet.TileSetShapeOneWay*"></a>
   <h4 id="Godot_TileSet_TileSetShapeOneWay_System_Int32_System_Int32_System_Boolean_" data-uid="Godot.TileSet.TileSetShapeOneWay(System.Int32,System.Int32,System.Boolean)">TileSetShapeOneWay(Int32, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables one-way collision on a tile&apos;s shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2749,7 +2827,8 @@
   
   <a id="Godot_TileSet_TileSetShapes_" data-uid="Godot.TileSet.TileSetShapes*"></a>
   <h4 id="Godot_TileSet_TileSetShapes_System_Int32_Godot_Collections_Array_" data-uid="Godot.TileSet.TileSetShapes(System.Int32,Godot.Collections.Array)">TileSetShapes(Int32, Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an array of shapes for the tile, enabling collision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2781,7 +2860,8 @@
   
   <a id="Godot_TileSet_TileSetShapeTransform_" data-uid="Godot.TileSet.TileSetShapeTransform*"></a>
   <h4 id="Godot_TileSet_TileSetShapeTransform_System_Int32_System_Int32_Godot_Transform2D_" data-uid="Godot.TileSet.TileSetShapeTransform(System.Int32,System.Int32,Godot.Transform2D)">TileSetShapeTransform(Int32, Int32, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a <a class="xref" href="Godot.Transform2D.html">Transform2D</a> on a tile&apos;s shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2818,7 +2898,8 @@
   
   <a id="Godot_TileSet_TileSetTexture_" data-uid="Godot.TileSet.TileSetTexture*"></a>
   <h4 id="Godot_TileSet_TileSetTexture_System_Int32_Godot_Texture_" data-uid="Godot.TileSet.TileSetTexture(System.Int32,Godot.Texture)">TileSetTexture(Int32, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2850,7 +2931,8 @@
   
   <a id="Godot_TileSet_TileSetTextureOffset_" data-uid="Godot.TileSet.TileSetTextureOffset*"></a>
   <h4 id="Godot_TileSet_TileSetTextureOffset_System_Int32_Godot_Vector2_" data-uid="Godot.TileSet.TileSetTextureOffset(System.Int32,Godot.Vector2)">TileSetTextureOffset(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s texture offset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2882,7 +2964,8 @@
   
   <a id="Godot_TileSet_TileSetTileMode_" data-uid="Godot.TileSet.TileSetTileMode*"></a>
   <h4 id="Godot_TileSet_TileSetTileMode_System_Int32_Godot_TileSet_TileMode_" data-uid="Godot.TileSet.TileSetTileMode(System.Int32,Godot.TileSet.TileMode)">TileSetTileMode(Int32, TileSet.TileMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s <a class="xref" href="Godot.TileSet.TileMode.html">TileSet.TileMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2914,7 +2997,8 @@
   
   <a id="Godot_TileSet_TileSetZIndex_" data-uid="Godot.TileSet.TileSetZIndex*"></a>
   <h4 id="Godot_TileSet_TileSetZIndex_System_Int32_System_Int32_" data-uid="Godot.TileSet.TileSetZIndex(System.Int32,System.Int32)">TileSetZIndex(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tile&apos;s drawing index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

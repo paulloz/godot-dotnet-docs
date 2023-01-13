@@ -83,7 +83,8 @@
   
   <h1 id="Godot_BitMap" data-uid="Godot.BitMap" class="text-break">Class BitMap
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A two-dimensional array of boolean values, can be used to efficiently store a binary matrix (every matrix element takes only one bit) and query the values using natural cartesian coordinates.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -373,7 +374,8 @@
   
   <a id="Godot_BitMap_ConvertToImage_" data-uid="Godot.BitMap.ConvertToImage*"></a>
   <h4 id="Godot_BitMap_ConvertToImage" data-uid="Godot.BitMap.ConvertToImage">ConvertToImage()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an image of the same size as the bitmap and with a <a class="xref" href="Godot.Image.Format.html">Image.Format</a> of type <code>FORMAT_L8</code>. <code>true</code> bits of the bitmap are being converted into white pixels, and <code>false</code> bits into black.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -398,7 +400,8 @@
   
   <a id="Godot_BitMap_Create_" data-uid="Godot.BitMap.Create*"></a>
   <h4 id="Godot_BitMap_Create_Godot_Vector2_" data-uid="Godot.BitMap.Create(Godot.Vector2)">Create(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a bitmap with the specified size, filled with <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -425,7 +428,8 @@
   
   <a id="Godot_BitMap_CreateFromImageAlpha_" data-uid="Godot.BitMap.CreateFromImageAlpha*"></a>
   <h4 id="Godot_BitMap_CreateFromImageAlpha_Godot_Image_System_Single_" data-uid="Godot.BitMap.CreateFromImageAlpha(Godot.Image,System.Single)">CreateFromImageAlpha(Image, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a bitmap that matches the given image dimensions, every element of the bitmap is set to <code>false</code> if the alpha value of the image at that position is equal to <code>threshold</code> or less, and <code>true</code> in other case.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -457,7 +461,8 @@
   
   <a id="Godot_BitMap_GetBit_" data-uid="Godot.BitMap.GetBit*"></a>
   <h4 id="Godot_BitMap_GetBit_Godot_Vector2_" data-uid="Godot.BitMap.GetBit(Godot.Vector2)">GetBit(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns bitmap&apos;s value at the specified position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -499,7 +504,8 @@
   
   <a id="Godot_BitMap_GetSize_" data-uid="Godot.BitMap.GetSize*"></a>
   <h4 id="Godot_BitMap_GetSize" data-uid="Godot.BitMap.GetSize">GetSize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns bitmap&apos;s dimensions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -524,7 +530,8 @@
   
   <a id="Godot_BitMap_GetTrueBitCount_" data-uid="Godot.BitMap.GetTrueBitCount*"></a>
   <h4 id="Godot_BitMap_GetTrueBitCount" data-uid="Godot.BitMap.GetTrueBitCount">GetTrueBitCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of bitmap elements that are set to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -549,7 +556,8 @@
   
   <a id="Godot_BitMap_GrowMask_" data-uid="Godot.BitMap.GrowMask*"></a>
   <h4 id="Godot_BitMap_GrowMask_System_Int32_Godot_Rect2_" data-uid="Godot.BitMap.GrowMask(System.Int32,Godot.Rect2)">GrowMask(Int32, Rect2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies morphological dilation or erosion to the bitmap. If <code>pixels</code> is positive, dilation is applied to the bitmap. If <code>pixels</code> is negative, erosion is applied to the bitmap. <code>rect</code> defines the area where the morphological operation is applied. Pixels located outside the <code>rect</code> are unaffected by <a class="xref" href="Godot.BitMap.html#Godot_BitMap_GrowMask_System_Int32_Godot_Rect2_">GrowMask(Int32, Rect2)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -628,7 +636,8 @@
   
   <a id="Godot_BitMap_Resize_" data-uid="Godot.BitMap.Resize*"></a>
   <h4 id="Godot_BitMap_Resize_Godot_Vector2_" data-uid="Godot.BitMap.Resize(Godot.Vector2)">Resize(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resizes the image to <code>new_size</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -655,7 +664,8 @@
   
   <a id="Godot_BitMap_SetBit_" data-uid="Godot.BitMap.SetBit*"></a>
   <h4 id="Godot_BitMap_SetBit_Godot_Vector2_System_Boolean_" data-uid="Godot.BitMap.SetBit(Godot.Vector2,System.Boolean)">SetBit(Vector2, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the bitmap&apos;s element at the specified position, to the specified value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -687,7 +697,8 @@
   
   <a id="Godot_BitMap_SetBitRect_" data-uid="Godot.BitMap.SetBitRect*"></a>
   <h4 id="Godot_BitMap_SetBitRect_Godot_Rect2_System_Boolean_" data-uid="Godot.BitMap.SetBitRect(Godot.Rect2,System.Boolean)">SetBitRect(Rect2, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a rectangular portion of the bitmap to the specified value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,11 @@
   
   <h1 id="Godot_Bone2D" data-uid="Godot.Bone2D" class="text-break">Class Bone2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Use a hierarchy of <code>Bone2D</code> bound to a <a class="xref" href="Godot.Skeleton2D.html">Skeleton2D</a> to control, and animate other <a class="xref" href="Godot.Node2D.html">Node2D</a> nodes.</p>
+<p>You can use <code>Bone2D</code> and <code>Skeleton2D</code> nodes to animate 2D meshes created with the Polygon 2D UV editor.</p>
+<p>Each bone has a <a class="xref" href="Godot.Bone2D.html#Godot_Bone2D_Rest">Rest</a> transform that you can reset to with <a class="xref" href="Godot.Bone2D.html#Godot_Bone2D_ApplyRest">ApplyRest()</a>. These rest poses are relative to the bone&apos;s parent.</p>
+<p>If in the editor, you can set the rest pose of an entire skeleton using a menu option, from the code, you need to iterate over the bones to set their individual rest poses.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1116,8 @@
   
   <a id="Godot_Bone2D_DefaultLength_" data-uid="Godot.Bone2D.DefaultLength*"></a>
   <h4 id="Godot_Bone2D_DefaultLength" data-uid="Godot.Bone2D.DefaultLength">DefaultLength</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Length of the bone&apos;s representation drawn in the editor&apos;s viewport in pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1137,7 +1142,8 @@
   
   <a id="Godot_Bone2D_Rest_" data-uid="Godot.Bone2D.Rest*"></a>
   <h4 id="Godot_Bone2D_Rest" data-uid="Godot.Bone2D.Rest">Rest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rest transform of the bone. You can reset the node&apos;s transforms to this value using <a class="xref" href="Godot.Bone2D.html#Godot_Bone2D_ApplyRest">ApplyRest()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1164,7 +1170,8 @@
   
   <a id="Godot_Bone2D_ApplyRest_" data-uid="Godot.Bone2D.ApplyRest*"></a>
   <h4 id="Godot_Bone2D_ApplyRest" data-uid="Godot.Bone2D.ApplyRest">ApplyRest()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores the node&apos;s current transforms in <a class="xref" href="Godot.Bone2D.html#Godot_Bone2D_Rest">Rest</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1199,7 +1206,8 @@
   
   <a id="Godot_Bone2D_GetIndexInSkeleton_" data-uid="Godot.Bone2D.GetIndexInSkeleton*"></a>
   <h4 id="Godot_Bone2D_GetIndexInSkeleton" data-uid="Godot.Bone2D.GetIndexInSkeleton">GetIndexInSkeleton()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the node&apos;s index as part of the entire skeleton. See <a class="xref" href="Godot.Skeleton2D.html">Skeleton2D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1249,7 +1257,8 @@
   
   <a id="Godot_Bone2D_GetSkeletonRest_" data-uid="Godot.Bone2D.GetSkeletonRest*"></a>
   <h4 id="Godot_Bone2D_GetSkeletonRest" data-uid="Godot.Bone2D.GetSkeletonRest">GetSkeletonRest()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the node&apos;s <a class="xref" href="Godot.Bone2D.html#Godot_Bone2D_Rest">Rest</a> <code>Transform2D</code> if it doesn&apos;t have a parent, or its rest pose relative to its parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,10 @@
   
   <h1 id="Godot_PointMesh" data-uid="Godot.PointMesh" class="text-break">Class PointMesh
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The PointMesh is made from a single point. Instead of relying on triangles, points are rendered as a single rectangle on the screen with a constant size. They are intended to be used with Particle systems, but can be used as a cheap way to render constant size billboarded sprites (for example in a point cloud).</p>
+<p>PointMeshes, must be used with a material that has a point size. Point size can be accessed in a shader with <code>POINT_SIZE</code>, or in a <a class="xref" href="Godot.SpatialMaterial.html">SpatialMaterial</a> by setting <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_FlagsUsePointSize">FlagsUsePointSize</a> and the variable <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsPointSize">ParamsPointSize</a>.</p>
+<p>When using PointMeshes, properties that normally alter vertices will be ignored, including billboard mode, grow, and cull face.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>

@@ -83,7 +83,12 @@
   
   <h1 id="Godot_NavigationMeshGenerator" data-uid="Godot.NavigationMeshGenerator" class="text-break">Class NavigationMeshGenerator
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class is responsible for creating and clearing 3D navigation meshes used as <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> resources inside <a class="xref" href="Godot.NavigationMeshInstance.html">NavigationMeshInstance</a>. The <a class="xref" href="Godot.NavigationMeshGenerator.html">NavigationMeshGenerator</a> has very limited to no use for 2D as the navigation mesh baking process expects 3D node types and 3D source geometry to parse.</p>
+<p>The entire navigation mesh baking is best done in a separate thread as the voxelization, collision tests and mesh optimization steps involved are very performance and time hungry operations.</p>
+<p>Navigation mesh baking happens in multiple steps and the result depends on 3D source geometry and properties of the <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> resource. In the first step, starting from a root node and depending on <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> properties all valid 3D source geometry nodes are collected from the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>. Second, all collected nodes are parsed for their relevant 3D geometry data and a combined 3D mesh is build. Due to the many different types of parsable objects, from normal <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a>s to <a class="xref" href="Godot.CSGShape.html">CSGShape</a>s or various <a class="xref" href="Godot.CollisionObject.html">CollisionObject</a>s, some operations to collect geometry data can trigger <a class="xref" href="Godot.VisualServer.html">VisualServer</a> and <a class="xref" href="Godot.PhysicsServer.html">PhysicsServer</a> synchronizations. Server synchronization can have a negative effect on baking time or framerate as it often involves <a class="xref" href="Godot.Mutex.html">Mutex</a> locking for thread security. Many parsable objects and the continuous synchronization with other threaded Servers can increase the baking time significantly. On the other hand only a few but very large and complex objects will take some time to prepare for the Servers which can noticeably stall the next frame render. As a general rule the total amount of parsable objects and their individual size and complexity should be balanced to avoid framerate issues or very long baking times. The combined mesh is then passed to the Recast Navigation Object to test the source geometry for walkable terrain suitable to <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> agent properties by creating a voxel world around the meshes bounding area.</p>
+<p>The finalized navigation mesh is then returned and stored inside the <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> for use as a resource inside <a class="xref" href="Godot.NavigationMeshInstance.html">NavigationMeshInstance</a> nodes.</p>
+<p>Note: Using meshes to not only define walkable surfaces but also obstruct navigation baking does not always work. The navigation baking has no concept of what is a geometry &quot;inside&quot; when dealing with mesh source geometry and this is intentional. Depending on current baking parameters, as soon as the obstructing mesh is large enough to fit a navigation mesh area inside, the baking will generate navigation mesh areas that are inside the obstructing source geometry mesh.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +134,8 @@
   
   <a id="Godot_NavigationMeshGenerator_Bake_" data-uid="Godot.NavigationMeshGenerator.Bake*"></a>
   <h4 id="Godot_NavigationMeshGenerator_Bake_Godot_NavigationMesh_Godot_Node_" data-uid="Godot.NavigationMeshGenerator.Bake(Godot.NavigationMesh,Godot.Node)">Bake(NavigationMesh, Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bakes navigation data to the provided <code>nav_mesh</code> by parsing child nodes under the provided <code>root_node</code> or a specific group of nodes for potential source geometry. The parse behavior can be controlled with the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_GeometryParsedGeometryType">GeometryParsedGeometryType</a> and <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_GeometrySourceGeometryMode">GeometrySourceGeometryMode</a> properties on the <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -161,7 +167,8 @@
   
   <a id="Godot_NavigationMeshGenerator_Clear_" data-uid="Godot.NavigationMeshGenerator.Clear*"></a>
   <h4 id="Godot_NavigationMeshGenerator_Clear_Godot_NavigationMesh_" data-uid="Godot.NavigationMeshGenerator.Clear(Godot.NavigationMesh)">Clear(NavigationMesh)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all polygons and vertices from the provided <code>nav_mesh</code> resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,9 @@
   
   <h1 id="Godot_AnimationNodeBlendTree" data-uid="Godot.AnimationNodeBlendTree" class="text-break">Class AnimationNodeBlendTree
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This node may contain a sub-tree of any other blend type nodes, such as <a class="xref" href="Godot.AnimationNodeTransition.html">AnimationNodeTransition</a>, <a class="xref" href="Godot.AnimationNodeBlend2.html">AnimationNodeBlend2</a>, <a class="xref" href="Godot.AnimationNodeBlend3.html">AnimationNodeBlend3</a>, <a class="xref" href="Godot.AnimationNodeOneShot.html">AnimationNodeOneShot</a>, etc. This is one of the most commonly used roots.</p>
+<p>An <a class="xref" href="Godot.AnimationNodeOutput.html">AnimationNodeOutput</a> node named <code>output</code> is created by default.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -413,7 +415,8 @@
   
   
   <h4 id="Godot_AnimationNodeBlendTree_ConnectionErrorConnectionExists" data-uid="Godot.AnimationNodeBlendTree.ConnectionErrorConnectionExists">ConnectionErrorConnectionExists</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The specified connection already exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -437,7 +440,8 @@
   
   
   <h4 id="Godot_AnimationNodeBlendTree_ConnectionErrorNoInput" data-uid="Godot.AnimationNodeBlendTree.ConnectionErrorNoInput">ConnectionErrorNoInput</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The input node is <code>null</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -461,7 +465,8 @@
   
   
   <h4 id="Godot_AnimationNodeBlendTree_ConnectionErrorNoInputIndex" data-uid="Godot.AnimationNodeBlendTree.ConnectionErrorNoInputIndex">ConnectionErrorNoInputIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The specified input port is out of range.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,7 +490,8 @@
   
   
   <h4 id="Godot_AnimationNodeBlendTree_ConnectionErrorNoOutput" data-uid="Godot.AnimationNodeBlendTree.ConnectionErrorNoOutput">ConnectionErrorNoOutput</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The output node is <code>null</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -509,7 +515,8 @@
   
   
   <h4 id="Godot_AnimationNodeBlendTree_ConnectionErrorSameNode" data-uid="Godot.AnimationNodeBlendTree.ConnectionErrorSameNode">ConnectionErrorSameNode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Input and output nodes are the same.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -533,7 +540,8 @@
   
   
   <h4 id="Godot_AnimationNodeBlendTree_ConnectionOk" data-uid="Godot.AnimationNodeBlendTree.ConnectionOk">ConnectionOk</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The connection was successful.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -560,7 +568,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_GraphOffset_" data-uid="Godot.AnimationNodeBlendTree.GraphOffset*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_GraphOffset" data-uid="Godot.AnimationNodeBlendTree.GraphOffset">GraphOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The global offset of all sub-nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -587,7 +596,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_AddNode_" data-uid="Godot.AnimationNodeBlendTree.AddNode*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_AddNode_System_String_Godot_AnimationNode_System_Nullable_Godot_Vector2__" data-uid="Godot.AnimationNodeBlendTree.AddNode(System.String,Godot.AnimationNode,System.Nullable{Godot.Vector2})">AddNode(String, AnimationNode, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an <a class="xref" href="Godot.AnimationNode.html">AnimationNode</a> at the given <code>position</code>. The <code>name</code> is used to identify the created sub-node later.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -616,7 +626,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">position</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -624,7 +635,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_ConnectNode_" data-uid="Godot.AnimationNodeBlendTree.ConnectNode*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_ConnectNode_System_String_System_Int32_System_String_" data-uid="Godot.AnimationNodeBlendTree.ConnectNode(System.String,System.Int32,System.String)">ConnectNode(String, Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connects the output of an <a class="xref" href="Godot.AnimationNode.html">AnimationNode</a> as input for another <a class="xref" href="Godot.AnimationNode.html">AnimationNode</a>, at the input port specified by <code>input_index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -661,7 +673,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_DisconnectNode_" data-uid="Godot.AnimationNodeBlendTree.DisconnectNode*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_DisconnectNode_System_String_System_Int32_" data-uid="Godot.AnimationNodeBlendTree.DisconnectNode(System.String,System.Int32)">DisconnectNode(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnects the node connected to the specified input.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -718,7 +731,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_GetNode_" data-uid="Godot.AnimationNodeBlendTree.GetNode*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_GetNode_System_String_" data-uid="Godot.AnimationNodeBlendTree.GetNode(System.String)">GetNode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the sub-node with the specified <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -760,7 +774,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_GetNodePosition_" data-uid="Godot.AnimationNodeBlendTree.GetNodePosition*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_GetNodePosition_System_String_" data-uid="Godot.AnimationNodeBlendTree.GetNodePosition(System.String)">GetNodePosition(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the sub-node with the specified <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -802,7 +817,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_HasNode_" data-uid="Godot.AnimationNodeBlendTree.HasNode*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_HasNode_System_String_" data-uid="Godot.AnimationNodeBlendTree.HasNode(System.String)">HasNode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a sub-node with specified <code>name</code> exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -844,7 +860,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_RemoveNode_" data-uid="Godot.AnimationNodeBlendTree.RemoveNode*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_RemoveNode_System_String_" data-uid="Godot.AnimationNodeBlendTree.RemoveNode(System.String)">RemoveNode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a sub-node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -871,7 +888,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_RenameNode_" data-uid="Godot.AnimationNodeBlendTree.RenameNode*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_RenameNode_System_String_System_String_" data-uid="Godot.AnimationNodeBlendTree.RenameNode(System.String,System.String)">RenameNode(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the name of a sub-node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -930,7 +948,8 @@
   
   <a id="Godot_AnimationNodeBlendTree_SetNodePosition_" data-uid="Godot.AnimationNodeBlendTree.SetNodePosition*"></a>
   <h4 id="Godot_AnimationNodeBlendTree_SetNodePosition_System_String_Godot_Vector2_" data-uid="Godot.AnimationNodeBlendTree.SetNodePosition(System.String,Godot.Vector2)">SetNodePosition(String, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Modifies the position of a sub-node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

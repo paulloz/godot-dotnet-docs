@@ -83,7 +83,10 @@
   
   <h1 id="Godot_MenuButton" data-uid="Godot.MenuButton" class="text-break">Class MenuButton
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Special button that brings up a <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> when clicked.</p>
+<p>New items can be created inside this <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> using <code>get_popup().add_item(&quot;My Item Name&quot;)</code>. You can also create them directly from the editor. To do so, select the <a class="xref" href="Godot.MenuButton.html">MenuButton</a> node, then in the toolbar at the top of the 2D editor, click Items then click Add in the popup. You will be able to give each item new properties.</p>
+<p>See also <a class="xref" href="Godot.BaseButton.html">BaseButton</a> which contains common properties and methods associated with this node.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1658,7 +1661,8 @@
   
   <a id="Godot_MenuButton_SwitchOnHover_" data-uid="Godot.MenuButton.SwitchOnHover*"></a>
   <h4 id="Godot_MenuButton_SwitchOnHover" data-uid="Godot.MenuButton.SwitchOnHover">SwitchOnHover</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, when the cursor hovers above another <a class="xref" href="Godot.MenuButton.html">MenuButton</a> within the same parent which also has <code>switch_on_hover</code> enabled, it will close the current <a class="xref" href="Godot.MenuButton.html">MenuButton</a> and open the other one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1685,7 +1689,9 @@
   
   <a id="Godot_MenuButton_GetPopup_" data-uid="Godot.MenuButton.GetPopup*"></a>
   <h4 id="Godot_MenuButton_GetPopup" data-uid="Godot.MenuButton.GetPopup">GetPopup()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> contained in this button.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1735,7 +1741,8 @@
   
   <a id="Godot_MenuButton_SetDisableShortcuts_" data-uid="Godot.MenuButton.SetDisableShortcuts*"></a>
   <h4 id="Godot_MenuButton_SetDisableShortcuts_System_Boolean_" data-uid="Godot.MenuButton.SetDisableShortcuts(System.Boolean)">SetDisableShortcuts(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, shortcuts are disabled and cannot be used to trigger the button.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

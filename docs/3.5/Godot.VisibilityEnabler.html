@@ -83,7 +83,11 @@
   
   <h1 id="Godot_VisibilityEnabler" data-uid="Godot.VisibilityEnabler" class="text-break">Class VisibilityEnabler
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The VisibilityEnabler will disable <a class="xref" href="Godot.RigidBody.html">RigidBody</a> and <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> nodes when they are not visible. It will only affect other nodes within the same scene as the VisibilityEnabler itself.</p>
+<p>If you just want to receive notifications, use <a class="xref" href="Godot.VisibilityNotifier.html">VisibilityNotifier</a> instead.</p>
+<p>Note: VisibilityEnabler uses an approximate heuristic for performance reasons. It doesn&apos;t take walls and other occlusion into account (unless you are using <a class="xref" href="Godot.Portal.html">Portal</a>s). The heuristic is an implementation detail and may change in future versions. If you need precise visibility checking, use another method such as adding an <a class="xref" href="Godot.Area.html">Area</a> node as a child of a <a class="xref" href="Godot.Camera.html">Camera</a> node and/or <code>Vector3.dot</code>.</p>
+<p>Note: VisibilityEnabler will not affect nodes added after scene initialization.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1023,7 +1027,8 @@
   
   <a id="Godot_VisibilityEnabler_FreezeBodies_" data-uid="Godot.VisibilityEnabler.FreezeBodies*"></a>
   <h4 id="Godot_VisibilityEnabler_FreezeBodies" data-uid="Godot.VisibilityEnabler.FreezeBodies">FreezeBodies</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, <a class="xref" href="Godot.RigidBody.html">RigidBody</a> nodes will be paused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1048,7 +1053,8 @@
   
   <a id="Godot_VisibilityEnabler_PauseAnimations_" data-uid="Godot.VisibilityEnabler.PauseAnimations*"></a>
   <h4 id="Godot_VisibilityEnabler_PauseAnimations" data-uid="Godot.VisibilityEnabler.PauseAnimations">PauseAnimations</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> nodes will be paused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1075,7 +1081,8 @@
   
   <a id="Godot_VisibilityEnabler_IsEnablerEnabled_" data-uid="Godot.VisibilityEnabler.IsEnablerEnabled*"></a>
   <h4 id="Godot_VisibilityEnabler_IsEnablerEnabled_Godot_VisibilityEnabler_Enabler_" data-uid="Godot.VisibilityEnabler.IsEnablerEnabled(Godot.VisibilityEnabler.Enabler)">IsEnablerEnabled(VisibilityEnabler.Enabler)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the enabler identified by given <a class="xref" href="Godot.VisibilityEnabler.Enabler.html">VisibilityEnabler.Enabler</a> constant is active.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1117,7 +1124,8 @@
   
   <a id="Godot_VisibilityEnabler_SetEnabler_" data-uid="Godot.VisibilityEnabler.SetEnabler*"></a>
   <h4 id="Godot_VisibilityEnabler_SetEnabler_Godot_VisibilityEnabler_Enabler_System_Boolean_" data-uid="Godot.VisibilityEnabler.SetEnabler(Godot.VisibilityEnabler.Enabler,System.Boolean)">SetEnabler(VisibilityEnabler.Enabler, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets active state of the enabler identified by given <a class="xref" href="Godot.VisibilityEnabler.Enabler.html">VisibilityEnabler.Enabler</a> constant.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

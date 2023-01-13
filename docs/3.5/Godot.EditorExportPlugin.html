@@ -83,7 +83,9 @@
   
   <h1 id="Godot_EditorExportPlugin" data-uid="Godot.EditorExportPlugin" class="text-break">Class EditorExportPlugin
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.EditorExportPlugin.html">EditorExportPlugin</a>s are automatically invoked whenever the user exports the project. Their most common use is to determine what files are being included in the exported project. For each plugin, <a class="xref" href="Godot.EditorExportPlugin.html#Godot_EditorExportPlugin__ExportBegin_System_String___System_Boolean_System_String_System_Int32_">_ExportBegin(String[], Boolean, String, Int32)</a> is called at the beginning of the export process and then <a class="xref" href="Godot.EditorExportPlugin.html#Godot_EditorExportPlugin__ExportFile_System_String_System_String_System_String___">_ExportFile(String, String, String[])</a> is called for each exported file.</p>
+<p>To use <a class="xref" href="Godot.EditorExportPlugin.html">EditorExportPlugin</a>, register it using the <a class="xref" href="Godot.EditorPlugin.html#Godot_EditorPlugin_AddExportPlugin_Godot_EditorExportPlugin_">AddExportPlugin(EditorExportPlugin)</a> method first.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +299,8 @@
   
   <a id="Godot_EditorExportPlugin__ExportBegin_" data-uid="Godot.EditorExportPlugin._ExportBegin*"></a>
   <h4 id="Godot_EditorExportPlugin__ExportBegin_System_String___System_Boolean_System_String_System_Int32_" data-uid="Godot.EditorExportPlugin._ExportBegin(System.String[],System.Boolean,System.String,System.Int32)">_ExportBegin(String[], Boolean, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Virtual method to be overridden by the user. It is called when the export starts and provides all information about the export. <code>features</code> is the list of features for the export, <code>is_debug</code> is <code>true</code> for debug builds, <code>path</code> is the target path for the exported project. <code>flags</code> is only used when running a runnable profile, e.g. when using native run on Android.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -339,7 +342,8 @@
   
   <a id="Godot_EditorExportPlugin__ExportEnd_" data-uid="Godot.EditorExportPlugin._ExportEnd*"></a>
   <h4 id="Godot_EditorExportPlugin__ExportEnd" data-uid="Godot.EditorExportPlugin._ExportEnd">_ExportEnd()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Virtual method to be overridden by the user. Called when the export is finished.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -349,7 +353,9 @@
   
   <a id="Godot_EditorExportPlugin__ExportFile_" data-uid="Godot.EditorExportPlugin._ExportFile*"></a>
   <h4 id="Godot_EditorExportPlugin__ExportFile_System_String_System_String_System_String___" data-uid="Godot.EditorExportPlugin._ExportFile(System.String,System.String,System.String[])">_ExportFile(String, String, String[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Virtual method to be overridden by the user. Called for each exported file, providing arguments that can be used to identify the file. <code>path</code> is the path of the file, <code>type</code> is the <a class="xref" href="Godot.Resource.html">Resource</a> represented by the file (e.g. <a class="xref" href="Godot.PackedScene.html">PackedScene</a>) and <code>features</code> is the list of features for the export.</p>
+<p>Calling <a class="xref" href="Godot.EditorExportPlugin.html#Godot_EditorExportPlugin_Skip">Skip()</a> inside this callback will make the file not included in the export.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -386,7 +392,8 @@
   
   <a id="Godot_EditorExportPlugin_AddFile_" data-uid="Godot.EditorExportPlugin.AddFile*"></a>
   <h4 id="Godot_EditorExportPlugin_AddFile_System_String_System_Byte___System_Boolean_" data-uid="Godot.EditorExportPlugin.AddFile(System.String,System.Byte[],System.Boolean)">AddFile(String, Byte[], Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a custom file to be exported. <code>path</code> is the virtual path that can be used to load the file, <code>file</code> is the binary data of the file. If <code>remap</code> is <code>true</code>, file will not be exported, but instead remapped to the given <code>path</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -423,7 +430,8 @@
   
   <a id="Godot_EditorExportPlugin_AddIosBundleFile_" data-uid="Godot.EditorExportPlugin.AddIosBundleFile*"></a>
   <h4 id="Godot_EditorExportPlugin_AddIosBundleFile_System_String_" data-uid="Godot.EditorExportPlugin.AddIosBundleFile(System.String)">AddIosBundleFile(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an iOS bundle file from the given <code>path</code> to the exported project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -450,7 +458,8 @@
   
   <a id="Godot_EditorExportPlugin_AddIosCppCode_" data-uid="Godot.EditorExportPlugin.AddIosCppCode*"></a>
   <h4 id="Godot_EditorExportPlugin_AddIosCppCode_System_String_" data-uid="Godot.EditorExportPlugin.AddIosCppCode(System.String)">AddIosCppCode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a C++ code to the iOS export. The final code is created from the code appended by each active export plugin.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -477,7 +486,10 @@
   
   <a id="Godot_EditorExportPlugin_AddIosEmbeddedFramework_" data-uid="Godot.EditorExportPlugin.AddIosEmbeddedFramework*"></a>
   <h4 id="Godot_EditorExportPlugin_AddIosEmbeddedFramework_System_String_" data-uid="Godot.EditorExportPlugin.AddIosEmbeddedFramework(System.String)">AddIosEmbeddedFramework(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a dynamic library (*.dylib, *.framework) to Linking Phase in iOS&apos;s Xcode project and embeds it into resulting binary.</p>
+<p>Note: For static libraries (*.a) works in same way as <a class="xref" href="Godot.EditorExportPlugin.html#Godot_EditorExportPlugin_AddIosFramework_System_String_">AddIosFramework(String)</a>.</p>
+<p>This method should not be used for System libraries as they are already present on the device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -504,7 +516,8 @@
   
   <a id="Godot_EditorExportPlugin_AddIosFramework_" data-uid="Godot.EditorExportPlugin.AddIosFramework*"></a>
   <h4 id="Godot_EditorExportPlugin_AddIosFramework_System_String_" data-uid="Godot.EditorExportPlugin.AddIosFramework(System.String)">AddIosFramework(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a static library (*.a) or dynamic library (*.dylib, *.framework) to Linking Phase in iOS&apos;s Xcode project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -531,7 +544,8 @@
   
   <a id="Godot_EditorExportPlugin_AddIosLinkerFlags_" data-uid="Godot.EditorExportPlugin.AddIosLinkerFlags*"></a>
   <h4 id="Godot_EditorExportPlugin_AddIosLinkerFlags_System_String_" data-uid="Godot.EditorExportPlugin.AddIosLinkerFlags(System.String)">AddIosLinkerFlags(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds linker flags for the iOS export.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -558,7 +572,8 @@
   
   <a id="Godot_EditorExportPlugin_AddIosPlistContent_" data-uid="Godot.EditorExportPlugin.AddIosPlistContent*"></a>
   <h4 id="Godot_EditorExportPlugin_AddIosPlistContent_System_String_" data-uid="Godot.EditorExportPlugin.AddIosPlistContent(System.String)">AddIosPlistContent(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds content for iOS Property List files.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -585,7 +600,8 @@
   
   <a id="Godot_EditorExportPlugin_AddIosProjectStaticLib_" data-uid="Godot.EditorExportPlugin.AddIosProjectStaticLib*"></a>
   <h4 id="Godot_EditorExportPlugin_AddIosProjectStaticLib_System_String_" data-uid="Godot.EditorExportPlugin.AddIosProjectStaticLib(System.String)">AddIosProjectStaticLib(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a static lib from the given <code>path</code> to the iOS project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -612,7 +628,9 @@
   
   <a id="Godot_EditorExportPlugin_AddOsxPluginFile_" data-uid="Godot.EditorExportPlugin.AddOsxPluginFile*"></a>
   <h4 id="Godot_EditorExportPlugin_AddOsxPluginFile_System_String_" data-uid="Godot.EditorExportPlugin.AddOsxPluginFile(System.String)">AddOsxPluginFile(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds file or directory matching <code>path</code> to <code>PlugIns</code> directory of macOS app bundle.</p>
+<p>Note: This is useful only for macOS exports.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -639,7 +657,10 @@
   
   <a id="Godot_EditorExportPlugin_AddSharedObject_" data-uid="Godot.EditorExportPlugin.AddSharedObject*"></a>
   <h4 id="Godot_EditorExportPlugin_AddSharedObject_System_String_System_String___" data-uid="Godot.EditorExportPlugin.AddSharedObject(System.String,System.String[])">AddSharedObject(String, String[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a shared object or a directory containing only shared objects with the given <code>tags</code> and destination <code>path</code>.</p>
+<p>Note: In case of macOS exports, those shared objects will be added to <code>Frameworks</code> directory of app bundle.</p>
+<p>In case of a directory code-sign will error if you place non code object in directory.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -671,7 +692,8 @@
   
   <a id="Godot_EditorExportPlugin_Skip_" data-uid="Godot.EditorExportPlugin.Skip*"></a>
   <h4 id="Godot_EditorExportPlugin_Skip" data-uid="Godot.EditorExportPlugin.Skip">Skip()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>To be called inside <a class="xref" href="Godot.EditorExportPlugin.html#Godot_EditorExportPlugin__ExportFile_System_String_System_String_System_String___">_ExportFile(String, String, String[])</a>. Skips the current file, so it&apos;s not included in the export.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

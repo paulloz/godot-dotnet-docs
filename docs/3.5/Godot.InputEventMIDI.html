@@ -83,7 +83,11 @@
   
   <h1 id="Godot_InputEventMIDI" data-uid="Godot.InputEventMIDI" class="text-break">Class InputEventMIDI
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>InputEventMIDI allows receiving input events from MIDI devices such as a piano. MIDI stands for Musical Instrument Digital Interface.</p>
+<p>MIDI signals can be sent over a 5-pin MIDI connector or over USB, if your device supports both be sure to check the settings in the device to see which output it&apos;s using.</p>
+<p>To receive input events from MIDI devices, you need to call <a class="xref" href="Godot.OS.html#Godot_OS_OpenMidiInputs">OpenMidiInputs()</a>. You can check which devices are detected using <a class="xref" href="Godot.OS.html#Godot_OS_GetConnectedMidiInputs">GetConnectedMidiInputs()</a>.</p>
+<p>Note that Godot does not currently support MIDI output, so there is no way to emit MIDI signals from Godot. Only MIDI input works.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -389,7 +393,8 @@
   
   <a id="Godot_InputEventMIDI_Channel_" data-uid="Godot.InputEventMIDI.Channel*"></a>
   <h4 id="Godot_InputEventMIDI_Channel" data-uid="Godot.InputEventMIDI.Channel">Channel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The MIDI channel of this input event. There are 16 channels, so this value ranges from 0 to 15. MIDI channel 9 is reserved for the use with percussion instruments, the rest of the channels are for non-percussion instruments.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -414,7 +419,8 @@
   
   <a id="Godot_InputEventMIDI_ControllerNumber_" data-uid="Godot.InputEventMIDI.ControllerNumber*"></a>
   <h4 id="Godot_InputEventMIDI_ControllerNumber" data-uid="Godot.InputEventMIDI.ControllerNumber">ControllerNumber</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If the message is <code>MIDI_MESSAGE_CONTROL_CHANGE</code>, this indicates the controller number, otherwise this is zero. Controllers include devices such as pedals and levers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -439,7 +445,8 @@
   
   <a id="Godot_InputEventMIDI_ControllerValue_" data-uid="Godot.InputEventMIDI.ControllerValue*"></a>
   <h4 id="Godot_InputEventMIDI_ControllerValue" data-uid="Godot.InputEventMIDI.ControllerValue">ControllerValue</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If the message is <code>MIDI_MESSAGE_CONTROL_CHANGE</code>, this indicates the controller value, otherwise this is zero. Controllers include devices such as pedals and levers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -464,7 +471,8 @@
   
   <a id="Godot_InputEventMIDI_Instrument_" data-uid="Godot.InputEventMIDI.Instrument*"></a>
   <h4 id="Godot_InputEventMIDI_Instrument" data-uid="Godot.InputEventMIDI.Instrument">Instrument</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The instrument of this input event. This value ranges from 0 to 127. Refer to the instrument list on the General MIDI wikipedia article to see a list of instruments, except that this value is 0-index, so subtract one from every number on that chart. A standard piano will have an instrument number of 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -489,7 +497,11 @@
   
   <a id="Godot_InputEventMIDI_Message_" data-uid="Godot.InputEventMIDI.Message*"></a>
   <h4 id="Godot_InputEventMIDI_Message" data-uid="Godot.InputEventMIDI.Message">Message</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a value indicating the type of message for this MIDI signal. This is a member of the <a class="xref" href="Godot.MidiMessageList.html">MidiMessageList</a> enum.</p>
+<p>For MIDI messages between 0x80 and 0xEF, only the left half of the bits are returned as this value, as the other part is the channel (ex: 0x94 becomes 0x9). For MIDI messages from 0xF0 to 0xFF, the value is returned as-is.</p>
+<p>Notes will return <code>MIDI_MESSAGE_NOTE_ON</code> when activated, but they might not always return <code>MIDI_MESSAGE_NOTE_OFF</code> when deactivated, therefore your code should treat the input as stopped if some period of time has passed.</p>
+<p>For more information, see the MIDI message status byte list chart linked above.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -514,7 +526,8 @@
   
   <a id="Godot_InputEventMIDI_Pitch_" data-uid="Godot.InputEventMIDI.Pitch*"></a>
   <h4 id="Godot_InputEventMIDI_Pitch" data-uid="Godot.InputEventMIDI.Pitch">Pitch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The pitch index number of this MIDI signal. This value ranges from 0 to 127. On a piano, middle C is 60, and A440 is 69, see the &quot;MIDI note&quot; column of the piano key frequency chart on Wikipedia for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -539,7 +552,8 @@
   
   <a id="Godot_InputEventMIDI_Pressure_" data-uid="Godot.InputEventMIDI.Pressure*"></a>
   <h4 id="Godot_InputEventMIDI_Pressure" data-uid="Godot.InputEventMIDI.Pressure">Pressure</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The pressure of the MIDI signal. This value ranges from 0 to 127. For many devices, this value is always zero.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -564,7 +578,8 @@
   
   <a id="Godot_InputEventMIDI_Velocity_" data-uid="Godot.InputEventMIDI.Velocity*"></a>
   <h4 id="Godot_InputEventMIDI_Velocity" data-uid="Godot.InputEventMIDI.Velocity">Velocity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The velocity of the MIDI signal. This value ranges from 0 to 127. For a piano, this corresponds to how quickly the key was pressed, and is rarely above about 110 in practice.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

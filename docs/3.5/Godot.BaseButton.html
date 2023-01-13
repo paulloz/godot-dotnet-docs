@@ -83,7 +83,8 @@
   
   <h1 id="Godot_BaseButton" data-uid="Godot.BaseButton" class="text-break">Class BaseButton
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>BaseButton is the abstract base class for buttons, so it shouldn&apos;t be used directly (it doesn&apos;t display anything). Other types of buttons inherit from it.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1454,7 +1455,8 @@
   
   <a id="Godot_BaseButton_ActionMode_" data-uid="Godot.BaseButton.ActionMode*"></a>
   <h4 id="Godot_BaseButton_ActionMode" data-uid="Godot.BaseButton.ActionMode">ActionMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines when the button is considered clicked, one of the <a class="xref" href="Godot.BaseButton.ActionModeEnum.html">BaseButton.ActionModeEnum</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1479,7 +1481,9 @@
   
   <a id="Godot_BaseButton_ButtonMask_" data-uid="Godot.BaseButton.ButtonMask*"></a>
   <h4 id="Godot_BaseButton_ButtonMask" data-uid="Godot.BaseButton.ButtonMask">ButtonMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Binary mask to choose which mouse buttons this button will respond to.</p>
+<p>To allow both left-click and right-click, use <code>BUTTON_MASK_LEFT | BUTTON_MASK_RIGHT</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1504,7 +1508,8 @@
   
   <a id="Godot_BaseButton_Disabled_" data-uid="Godot.BaseButton.Disabled*"></a>
   <h4 id="Godot_BaseButton_Disabled" data-uid="Godot.BaseButton.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the button is in disabled state and can&apos;t be clicked or toggled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1529,7 +1534,8 @@
   
   <a id="Godot_BaseButton_EnabledFocusMode_" data-uid="Godot.BaseButton.EnabledFocusMode*"></a>
   <h4 id="Godot_BaseButton_EnabledFocusMode" data-uid="Godot.BaseButton.EnabledFocusMode">EnabledFocusMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated. This property has been deprecated due to redundancy and will be removed in Godot 4.0. This property no longer has any effect when set. Please use <a class="xref" href="Godot.Control.html#Godot_Control_FocusMode">FocusMode</a> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1554,7 +1560,8 @@
   
   <a id="Godot_BaseButton_Group_" data-uid="Godot.BaseButton.Group*"></a>
   <h4 id="Godot_BaseButton_Group" data-uid="Godot.BaseButton.Group">Group</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a class="xref" href="Godot.ButtonGroup.html">ButtonGroup</a> associated to the button.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1579,7 +1586,9 @@
   
   <a id="Godot_BaseButton_KeepPressedOutside_" data-uid="Godot.BaseButton.KeepPressedOutside*"></a>
   <h4 id="Godot_BaseButton_KeepPressedOutside" data-uid="Godot.BaseButton.KeepPressedOutside">KeepPressedOutside</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the button stays pressed when moving the cursor outside the button while pressing it.</p>
+<p>Note: This property only affects the button&apos;s visual appearance. Signals will be emitted at the same moment regardless of this property&apos;s value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1604,7 +1613,9 @@
   
   <a id="Godot_BaseButton_Pressed_" data-uid="Godot.BaseButton.Pressed*"></a>
   <h4 id="Godot_BaseButton_Pressed" data-uid="Godot.BaseButton.Pressed">Pressed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the button&apos;s state is pressed. Means the button is pressed down or toggled (if <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_ToggleMode">ToggleMode</a> is active). Only works if <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_ToggleMode">ToggleMode</a> is <code>true</code>.</p>
+<p>Note: Setting <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_Pressed">Pressed</a> will result in <code>toggled</code> to be emitted. If you want to change the pressed state without emitting that signal, use <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_SetPressedNoSignal_System_Boolean_">SetPressedNoSignal(Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1629,7 +1640,8 @@
   
   <a id="Godot_BaseButton_Shortcut_" data-uid="Godot.BaseButton.Shortcut*"></a>
   <h4 id="Godot_BaseButton_Shortcut" data-uid="Godot.BaseButton.Shortcut">Shortcut</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a class="xref" href="Godot.ShortCut.html">ShortCut</a> associated to the button.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1654,7 +1666,8 @@
   
   <a id="Godot_BaseButton_ShortcutInTooltip_" data-uid="Godot.BaseButton.ShortcutInTooltip*"></a>
   <h4 id="Godot_BaseButton_ShortcutInTooltip" data-uid="Godot.BaseButton.ShortcutInTooltip">ShortcutInTooltip</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the button will add information about its shortcut in the tooltip.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1679,7 +1692,8 @@
   
   <a id="Godot_BaseButton_ToggleMode_" data-uid="Godot.BaseButton.ToggleMode*"></a>
   <h4 id="Godot_BaseButton_ToggleMode" data-uid="Godot.BaseButton.ToggleMode">ToggleMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the button is in toggle mode. Makes the button flip state between pressed and unpressed each time its area is clicked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1706,7 +1720,8 @@
   
   <a id="Godot_BaseButton__Pressed_" data-uid="Godot.BaseButton._Pressed*"></a>
   <h4 id="Godot_BaseButton__Pressed" data-uid="Godot.BaseButton._Pressed">_Pressed()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when the button is pressed. If you need to know the button&apos;s pressed state (and <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_ToggleMode">ToggleMode</a> is active), use <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton__Toggled_System_Boolean_">_Toggled(Boolean)</a> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1716,7 +1731,8 @@
   
   <a id="Godot_BaseButton__Toggled_" data-uid="Godot.BaseButton._Toggled*"></a>
   <h4 id="Godot_BaseButton__Toggled_System_Boolean_" data-uid="Godot.BaseButton._Toggled(System.Boolean)">_Toggled(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when the button is toggled (only if <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_ToggleMode">ToggleMode</a> is active).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1818,7 +1834,8 @@
   
   <a id="Godot_BaseButton_GetDrawMode_" data-uid="Godot.BaseButton.GetDrawMode*"></a>
   <h4 id="Godot_BaseButton_GetDrawMode" data-uid="Godot.BaseButton.GetDrawMode">GetDrawMode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the visual state used to draw the button. This is useful mainly when implementing your own draw code by either overriding _draw() or connecting to &quot;draw&quot; signal. The visual state of the button is defined by the <a class="xref" href="Godot.BaseButton.DrawMode.html">BaseButton.DrawMode</a> enum.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1918,7 +1935,8 @@
   
   <a id="Godot_BaseButton_IsHovered_" data-uid="Godot.BaseButton.IsHovered*"></a>
   <h4 id="Godot_BaseButton_IsHovered" data-uid="Godot.BaseButton.IsHovered">IsHovered()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the mouse has entered the button and has not left it yet.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2232,7 +2250,9 @@
   
   <a id="Godot_BaseButton_SetPressedNoSignal_" data-uid="Godot.BaseButton.SetPressedNoSignal*"></a>
   <h4 id="Godot_BaseButton_SetPressedNoSignal_System_Boolean_" data-uid="Godot.BaseButton.SetPressedNoSignal(System.Boolean)">SetPressedNoSignal(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_Pressed">Pressed</a> state of the button, without emitting <code>toggled</code>. Use when you just want to change the state of the button without sending the pressed event (e.g. when initializing scene). Only works if <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_ToggleMode">ToggleMode</a> is <code>true</code>.</p>
+<p>Note: This method doesn&apos;t unpress other buttons in its button <a class="xref" href="Godot.BaseButton.html#Godot_BaseButton_Group">Group</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

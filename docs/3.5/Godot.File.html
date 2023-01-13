@@ -83,7 +83,23 @@
   
   <h1 id="Godot_File" data-uid="Godot.File" class="text-break">Class File
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>File type. This is used to permanently store data into the user device&apos;s file system and to read from it. This can be used to store game save data or player configuration files, for example.</p>
+<p>Here&apos;s a sample on how to write and read from a file:</p>
+<p><pre><code>func save(content):
+    var file = File.new()
+    file.open(&quot;user://save_game.dat&quot;, File.WRITE)
+    file.store_string(content)
+    file.close()
+<p>func load():
+var file = File.new()
+file.open(&quot;user://save_game.dat&quot;, File.READ)
+var content = file.get_as_text()
+file.close()
+return content</code></pre></p><p>
+<p>In the example above, the file will be saved in the user data folder as specified in the <a href="$DOCS_URL/tutorials/io/data_paths.html">Data paths</a> documentation.</p>
+<p>Note: To access project resources once exported, it is recommended to use <a class="xref" href="Godot.ResourceLoader.html">ResourceLoader</a> instead of the <a class="xref" href="Godot.File.html">File</a> API, as some files are converted to engine-specific formats and their original source files might not be present in the exported PCK package.</p>
+<p>Note: Files are automatically closed only if the process exits &quot;normally&quot; (such as by clicking the window manager&apos;s close button or pressing Alt + F4). If you stop the project execution by pressing F8 while the project is running, the file won&apos;t be closed as the game process will be killed. You can work around this by calling <a class="xref" href="Godot.File.html#Godot_File_Flush">Flush()</a> at regular intervals.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +313,10 @@
   
   <a id="Godot_File_EndianSwap_" data-uid="Godot.File.EndianSwap*"></a>
   <h4 id="Godot_File_EndianSwap" data-uid="Godot.File.EndianSwap">EndianSwap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the file is read with big-endian <a href="https://en.wikipedia.org/wiki/Endianness">endianness</a>. If <code>false</code>, the file is read with little-endian endianness. If in doubt, leave this to <code>false</code> as most files are written with little-endian endianness.</p>
+<p>Note: <a class="xref" href="Godot.File.html#Godot_File_EndianSwap">EndianSwap</a> is only about the file format, not the CPU type. The CPU endianness doesn&apos;t affect the default endianness for files written.</p>
+<p>Note: This is always reset to <code>false</code> whenever you open the file. Therefore, you must set <a class="xref" href="Godot.File.html#Godot_File_EndianSwap">EndianSwap</a> after opening the file, not before.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -324,7 +343,8 @@
   
   <a id="Godot_File_Close_" data-uid="Godot.File.Close*"></a>
   <h4 id="Godot_File_Close" data-uid="Godot.File.Close">Close()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Closes the currently opened file and prevents subsequent read/write operations. Use <a class="xref" href="Godot.File.html#Godot_File_Flush">Flush()</a> to persist the data to disk without closing the file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -334,7 +354,11 @@
   
   <a id="Godot_File_EofReached_" data-uid="Godot.File.EofReached*"></a>
   <h4 id="Godot_File_EofReached" data-uid="Godot.File.EofReached">EofReached()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the file cursor has already read past the end of the file.</p>
+<p>Note: <code>eof_reached() == false</code> cannot be used to check whether there is more data available. To loop while there is more data available, use:</p>
+<p><pre><code>while file.get_position() &lt; file.get_len():
+    # Read data</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -359,7 +383,9 @@
   
   <a id="Godot_File_FileExists_" data-uid="Godot.File.FileExists*"></a>
   <h4 id="Godot_File_FileExists_System_String_" data-uid="Godot.File.FileExists(System.String)">FileExists(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the file exists in the given path.</p>
+<p>Note: Many resources types are imported (e.g. textures or sound files), and their source asset will not be included in the exported game, as only the imported version is used. See <a class="xref" href="Godot.ResourceLoader.html#Godot_ResourceLoader_Exists_System_String_System_String_">Exists(String, String)</a> for an alternative approach that takes resource remapping into account.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -401,7 +427,9 @@
   
   <a id="Godot_File_Flush_" data-uid="Godot.File.Flush*"></a>
   <h4 id="Godot_File_Flush" data-uid="Godot.File.Flush">Flush()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Writes the file&apos;s buffer to disk. Flushing is automatically performed when the file is closed. This means you don&apos;t need to call <a class="xref" href="Godot.File.html#Godot_File_Flush">Flush()</a> manually before closing a file using <a class="xref" href="Godot.File.html#Godot_File_Close">Close()</a>. Still, calling <a class="xref" href="Godot.File.html#Godot_File_Flush">Flush()</a> can be used to ensure the data is safe even if the project crashes instead of being closed gracefully.</p>
+<p>Note: Only call <a class="xref" href="Godot.File.html#Godot_File_Flush">Flush()</a> when you actually need it. Otherwise, it will decrease performance due to constant disk writes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -411,7 +439,8 @@
   
   <a id="Godot_File_Get16_" data-uid="Godot.File.Get16*"></a>
   <h4 id="Godot_File_Get16" data-uid="Godot.File.Get16">Get16()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next 16 bits from the file as an integer. See <a class="xref" href="Godot.File.html#Godot_File_Store16_System_UInt16_">Store16(UInt16)</a> for details on what values can be stored and retrieved this way.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -436,7 +465,8 @@
   
   <a id="Godot_File_Get32_" data-uid="Godot.File.Get32*"></a>
   <h4 id="Godot_File_Get32" data-uid="Godot.File.Get32">Get32()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next 32 bits from the file as an integer. See <a class="xref" href="Godot.File.html#Godot_File_Store32_System_UInt32_">Store32(UInt32)</a> for details on what values can be stored and retrieved this way.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -461,7 +491,8 @@
   
   <a id="Godot_File_Get64_" data-uid="Godot.File.Get64*"></a>
   <h4 id="Godot_File_Get64" data-uid="Godot.File.Get64">Get64()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next 64 bits from the file as an integer. See <a class="xref" href="Godot.File.html#Godot_File_Store64_System_UInt64_">Store64(UInt64)</a> for details on what values can be stored and retrieved this way.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -486,7 +517,8 @@
   
   <a id="Godot_File_Get8_" data-uid="Godot.File.Get8*"></a>
   <h4 id="Godot_File_Get8" data-uid="Godot.File.Get8">Get8()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next 8 bits from the file as an integer. See <a class="xref" href="Godot.File.html#Godot_File_Store8_System_Byte_">Store8(Byte)</a> for details on what values can be stored and retrieved this way.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -511,7 +543,9 @@
   
   <a id="Godot_File_GetAsText_" data-uid="Godot.File.GetAsText*"></a>
   <h4 id="Godot_File_GetAsText_System_Boolean_" data-uid="Godot.File.GetAsText(System.Boolean)">GetAsText(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the whole file as a <span class="xref">System.String</span>. Text is interpreted as being UTF-8 encoded.</p>
+<p>If <code>skip_cr</code> is <code>true</code>, carriage return characters (<code>\r</code>, CR) will be ignored when parsing the UTF-8, so that only line feed characters (<code>\n</code>, LF) represent a new line (Unix convention).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -553,7 +587,8 @@
   
   <a id="Godot_File_GetBuffer_" data-uid="Godot.File.GetBuffer*"></a>
   <h4 id="Godot_File_GetBuffer_System_Int64_" data-uid="Godot.File.GetBuffer(System.Int64)">GetBuffer(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns next <code>len</code> bytes of the file as a <span class="xref">System.Byte</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -595,7 +630,14 @@
   
   <a id="Godot_File_GetCsvLine_" data-uid="Godot.File.GetCsvLine*"></a>
   <h4 id="Godot_File_GetCsvLine_System_String_" data-uid="Godot.File.GetCsvLine(System.String)">GetCsvLine(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next value of the file in CSV (Comma-Separated Values) format. You can pass a different delimiter <code>delim</code> to use other than the default <code>&quot;,&quot;</code> (comma). This delimiter must be one-character long, and cannot be a double quotation mark.</p>
+<p>Text is interpreted as being UTF-8 encoded. Text values must be enclosed in double quotes if they include the delimiter character. Double quotes within a text value can be escaped by doubling their occurrence.</p>
+<p>For example, the following CSV lines are valid and will be properly parsed as two strings each:</p>
+<p><pre><code>Alice,&quot;Hello, Bob!&quot;
+Bob,Alice! What a surprise!
+Alice,&quot;I thought you&apos;d reply with &quot;&quot;Hello, world&quot;&quot;.&quot;</code></pre></p>
+<p>Note how the second line can omit the enclosing quotes as it does not include the delimiter. However it could very well use quotes, it was only written without for demonstration purposes. The third line must use <code>&quot;&quot;</code> for each quotation mark that needs to be interpreted as such instead of the end of a text value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -637,7 +679,8 @@
   
   <a id="Godot_File_GetDouble_" data-uid="Godot.File.GetDouble*"></a>
   <h4 id="Godot_File_GetDouble" data-uid="Godot.File.GetDouble">GetDouble()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next 64 bits from the file as a floating-point number.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -687,7 +730,8 @@
   
   <a id="Godot_File_GetError_" data-uid="Godot.File.GetError*"></a>
   <h4 id="Godot_File_GetError" data-uid="Godot.File.GetError">GetError()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the last error that happened when trying to perform operations. Compare with the <code>ERR_FILE_*</code> constants from <a class="xref" href="Godot.Error.html">Error</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -712,7 +756,8 @@
   
   <a id="Godot_File_GetFloat_" data-uid="Godot.File.GetFloat*"></a>
   <h4 id="Godot_File_GetFloat" data-uid="Godot.File.GetFloat">GetFloat()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next 32 bits from the file as a floating-point number.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -737,7 +782,8 @@
   
   <a id="Godot_File_GetLen_" data-uid="Godot.File.GetLen*"></a>
   <h4 id="Godot_File_GetLen" data-uid="Godot.File.GetLen">GetLen()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size of the file in bytes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -762,7 +808,9 @@
   
   <a id="Godot_File_GetLine_" data-uid="Godot.File.GetLine*"></a>
   <h4 id="Godot_File_GetLine" data-uid="Godot.File.GetLine">GetLine()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next line of the file as a <span class="xref">System.String</span>.</p>
+<p>Text is interpreted as being UTF-8 encoded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -787,7 +835,8 @@
   
   <a id="Godot_File_GetMd5_" data-uid="Godot.File.GetMd5*"></a>
   <h4 id="Godot_File_GetMd5_System_String_" data-uid="Godot.File.GetMd5(System.String)">GetMd5(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an MD5 String representing the file at the given path or an empty <span class="xref">System.String</span> on failure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -829,7 +878,8 @@
   
   <a id="Godot_File_GetModifiedTime_" data-uid="Godot.File.GetModifiedTime*"></a>
   <h4 id="Godot_File_GetModifiedTime_System_String_" data-uid="Godot.File.GetModifiedTime(System.String)">GetModifiedTime(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the last time the <code>file</code> was modified in unix timestamp format or returns a <span class="xref">System.String</span> &quot;ERROR IN <code>file</code>&quot;. This unix timestamp can be converted to datetime by using <a class="xref" href="Godot.OS.html#Godot_OS_GetDatetimeFromUnixTime_System_Int64_">GetDatetimeFromUnixTime(Int64)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -871,7 +921,9 @@
   
   <a id="Godot_File_GetPascalString_" data-uid="Godot.File.GetPascalString*"></a>
   <h4 id="Godot_File_GetPascalString" data-uid="Godot.File.GetPascalString">GetPascalString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.String</span> saved in Pascal format from the file.</p>
+<p>Text is interpreted as being UTF-8 encoded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -896,7 +948,8 @@
   
   <a id="Godot_File_GetPath_" data-uid="Godot.File.GetPath*"></a>
   <h4 id="Godot_File_GetPath" data-uid="Godot.File.GetPath">GetPath()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the path as a <span class="xref">System.String</span> for the current open file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -921,7 +974,8 @@
   
   <a id="Godot_File_GetPathAbsolute_" data-uid="Godot.File.GetPathAbsolute*"></a>
   <h4 id="Godot_File_GetPathAbsolute" data-uid="Godot.File.GetPathAbsolute">GetPathAbsolute()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the absolute path as a <span class="xref">System.String</span> for the current open file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -946,7 +1000,8 @@
   
   <a id="Godot_File_GetPosition_" data-uid="Godot.File.GetPosition*"></a>
   <h4 id="Godot_File_GetPosition" data-uid="Godot.File.GetPosition">GetPosition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the file cursor&apos;s position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -971,7 +1026,8 @@
   
   <a id="Godot_File_GetReal_" data-uid="Godot.File.GetReal*"></a>
   <h4 id="Godot_File_GetReal" data-uid="Godot.File.GetReal">GetReal()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next bits from the file as a floating-point number.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -996,7 +1052,8 @@
   
   <a id="Godot_File_GetSha256_" data-uid="Godot.File.GetSha256*"></a>
   <h4 id="Godot_File_GetSha256_System_String_" data-uid="Godot.File.GetSha256(System.String)">GetSha256(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a SHA-256 <span class="xref">System.String</span> representing the file at the given path or an empty <span class="xref">System.String</span> on failure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1038,7 +1095,9 @@
   
   <a id="Godot_File_GetVar_" data-uid="Godot.File.GetVar*"></a>
   <h4 id="Godot_File_GetVar_System_Boolean_" data-uid="Godot.File.GetVar(System.Boolean)">GetVar(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next <code>Variant</code> value from the file. If <code>allow_objects</code> is <code>true</code>, decoding objects is allowed.</p>
+<p>Warning: Deserialized objects can contain code which gets executed. Do not use this option if the serialized object comes from untrusted sources to avoid potential security threats such as remote code execution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1080,7 +1139,8 @@
   
   <a id="Godot_File_IsOpen_" data-uid="Godot.File.IsOpen*"></a>
   <h4 id="Godot_File_IsOpen" data-uid="Godot.File.IsOpen">IsOpen()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the file is currently opened.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1105,7 +1165,8 @@
   
   <a id="Godot_File_Open_" data-uid="Godot.File.Open*"></a>
   <h4 id="Godot_File_Open_System_String_Godot_File_ModeFlags_" data-uid="Godot.File.Open(System.String,Godot.File.ModeFlags)">Open(String, File.ModeFlags)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opens the file for writing or reading, depending on the flags.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1152,7 +1213,9 @@
   
   <a id="Godot_File_OpenCompressed_" data-uid="Godot.File.OpenCompressed*"></a>
   <h4 id="Godot_File_OpenCompressed_System_String_Godot_File_ModeFlags_Godot_File_CompressionMode_" data-uid="Godot.File.OpenCompressed(System.String,Godot.File.ModeFlags,Godot.File.CompressionMode)">OpenCompressed(String, File.ModeFlags, File.CompressionMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opens a compressed file for reading or writing.</p>
+<p>Note: <a class="xref" href="Godot.File.html#Godot_File_OpenCompressed_System_String_Godot_File_ModeFlags_Godot_File_CompressionMode_">OpenCompressed(String, File.ModeFlags, File.CompressionMode)</a> can only read files that were saved by Godot, not third-party compression formats. See <a href="https://github.com/godotengine/godot/issues/28999">GitHub issue #28999</a> for a workaround.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1204,7 +1267,9 @@
   
   <a id="Godot_File_OpenEncrypted_" data-uid="Godot.File.OpenEncrypted*"></a>
   <h4 id="Godot_File_OpenEncrypted_System_String_Godot_File_ModeFlags_System_Byte___" data-uid="Godot.File.OpenEncrypted(System.String,Godot.File.ModeFlags,System.Byte[])">OpenEncrypted(String, File.ModeFlags, Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opens an encrypted file in write or read mode. You need to pass a binary key to encrypt/decrypt it.</p>
+<p>Note: The provided key must be 32 bytes long.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1256,7 +1321,8 @@
   
   <a id="Godot_File_OpenEncryptedWithPass_" data-uid="Godot.File.OpenEncryptedWithPass*"></a>
   <h4 id="Godot_File_OpenEncryptedWithPass_System_String_Godot_File_ModeFlags_System_String_" data-uid="Godot.File.OpenEncryptedWithPass(System.String,Godot.File.ModeFlags,System.String)">OpenEncryptedWithPass(String, File.ModeFlags, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opens an encrypted file in write or read mode. You need to pass a password to encrypt/decrypt it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1308,7 +1374,8 @@
   
   <a id="Godot_File_Seek_" data-uid="Godot.File.Seek*"></a>
   <h4 id="Godot_File_Seek_System_Int64_" data-uid="Godot.File.Seek(System.Int64)">Seek(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the file reading/writing cursor to the specified position (in bytes from the beginning of the file).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1335,7 +1402,9 @@
   
   <a id="Godot_File_SeekEnd_" data-uid="Godot.File.SeekEnd*"></a>
   <h4 id="Godot_File_SeekEnd_System_Int64_" data-uid="Godot.File.SeekEnd(System.Int64)">SeekEnd(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the file reading/writing cursor to the specified position (in bytes from the end of the file).</p>
+<p>Note: This is an offset, so you should use negative numbers or the cursor will be at the end of the file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1389,7 +1458,24 @@
   
   <a id="Godot_File_Store16_" data-uid="Godot.File.Store16*"></a>
   <h4 id="Godot_File_Store16_System_UInt16_" data-uid="Godot.File.Store16(System.UInt16)">Store16(UInt16)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores an integer as 16 bits in the file.</p>
+<p>Note: The <code>value</code> should lie in the interval <code>[0, 2^16 - 1]</code>. Any other value will overflow and wrap around.</p>
+<p>To store a signed integer, use <a class="xref" href="Godot.File.html#Godot_File_Store64_System_UInt64_">Store64(UInt64)</a> or store a signed integer from the interval <code>[-2^15, 2^15 - 1]</code> (i.e. keeping one bit for the signedness) and compute its sign manually when reading. For example:</p>
+<p><pre><code>const MAX_15B = 1 &lt;&lt; 15
+const MAX_16B = 1 &lt;&lt; 16
+<p>func unsigned16_to_signed(unsigned):
+return (unsigned + MAX_15B) % MAX_16B - MAX_15B</p>
+<p>func _ready():
+var f = File.new()
+f.open(&quot;user://file.dat&quot;, File.WRITE_READ)
+f.store_16(-42) # This wraps around and stores 65494 (2^16 - 42).
+f.store_16(121) # In bounds, will store 121.
+f.seek(0) # Go back to start to read the stored value.
+var read1 = f.get_16() # 65494
+var read2 = f.get_16() # 121
+var converted1 = unsigned16_to_signed(read1) # -42
+var converted2 = unsigned16_to_signed(read2) # 121</code></pre></p><p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1416,7 +1502,10 @@
   
   <a id="Godot_File_Store32_" data-uid="Godot.File.Store32*"></a>
   <h4 id="Godot_File_Store32_System_UInt32_" data-uid="Godot.File.Store32(System.UInt32)">Store32(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores an integer as 32 bits in the file.</p>
+<p>Note: The <code>value</code> should lie in the interval <code>[0, 2^32 - 1]</code>. Any other value will overflow and wrap around.</p>
+<p>To store a signed integer, use <a class="xref" href="Godot.File.html#Godot_File_Store64_System_UInt64_">Store64(UInt64)</a>, or convert it manually (see <a class="xref" href="Godot.File.html#Godot_File_Store16_System_UInt16_">Store16(UInt16)</a> for an example).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1443,7 +1532,9 @@
   
   <a id="Godot_File_Store64_" data-uid="Godot.File.Store64*"></a>
   <h4 id="Godot_File_Store64_System_UInt64_" data-uid="Godot.File.Store64(System.UInt64)">Store64(UInt64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores an integer as 64 bits in the file.</p>
+<p>Note: The <code>value</code> must lie in the interval <code>[-2^63, 2^63 - 1]</code> (i.e. be a valid <span class="xref">System.Int32</span> value).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1470,7 +1561,10 @@
   
   <a id="Godot_File_Store8_" data-uid="Godot.File.Store8*"></a>
   <h4 id="Godot_File_Store8_System_Byte_" data-uid="Godot.File.Store8(System.Byte)">Store8(Byte)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores an integer as 8 bits in the file.</p>
+<p>Note: The <code>value</code> should lie in the interval <code>[0, 255]</code>. Any other value will overflow and wrap around.</p>
+<p>To store a signed integer, use <a class="xref" href="Godot.File.html#Godot_File_Store64_System_UInt64_">Store64(UInt64)</a>, or convert it manually (see <a class="xref" href="Godot.File.html#Godot_File_Store16_System_UInt16_">Store16(UInt16)</a> for an example).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1497,7 +1591,8 @@
   
   <a id="Godot_File_StoreBuffer_" data-uid="Godot.File.StoreBuffer*"></a>
   <h4 id="Godot_File_StoreBuffer_System_Byte___" data-uid="Godot.File.StoreBuffer(System.Byte[])">StoreBuffer(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores the given array of bytes in the file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1524,7 +1619,9 @@
   
   <a id="Godot_File_StoreCsvLine_" data-uid="Godot.File.StoreCsvLine*"></a>
   <h4 id="Godot_File_StoreCsvLine_System_String___System_String_" data-uid="Godot.File.StoreCsvLine(System.String[],System.String)">StoreCsvLine(String[], String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Store the given <span class="xref">System.String</span> in the file as a line formatted in the CSV (Comma-Separated Values) format. You can pass a different delimiter <code>delim</code> to use other than the default <code>&quot;,&quot;</code> (comma). This delimiter must be one-character long.</p>
+<p>Text will be encoded as UTF-8.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1556,7 +1653,8 @@
   
   <a id="Godot_File_StoreDouble_" data-uid="Godot.File.StoreDouble*"></a>
   <h4 id="Godot_File_StoreDouble_System_Double_" data-uid="Godot.File.StoreDouble(System.Double)">StoreDouble(Double)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores a floating-point number as 64 bits in the file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1583,7 +1681,8 @@
   
   <a id="Godot_File_StoreFloat_" data-uid="Godot.File.StoreFloat*"></a>
   <h4 id="Godot_File_StoreFloat_System_Single_" data-uid="Godot.File.StoreFloat(System.Single)">StoreFloat(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores a floating-point number as 32 bits in the file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1610,7 +1709,8 @@
   
   <a id="Godot_File_StoreLine_" data-uid="Godot.File.StoreLine*"></a>
   <h4 id="Godot_File_StoreLine_System_String_" data-uid="Godot.File.StoreLine(System.String)">StoreLine(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Appends <code>line</code> to the file followed by a line return character (<code>\n</code>), encoding the text as UTF-8.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1637,7 +1737,9 @@
   
   <a id="Godot_File_StorePascalString_" data-uid="Godot.File.StorePascalString*"></a>
   <h4 id="Godot_File_StorePascalString_System_String_" data-uid="Godot.File.StorePascalString(System.String)">StorePascalString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores the given <span class="xref">System.String</span> as a line in the file in Pascal format (i.e. also store the length of the string).</p>
+<p>Text will be encoded as UTF-8.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1664,7 +1766,8 @@
   
   <a id="Godot_File_StoreReal_" data-uid="Godot.File.StoreReal*"></a>
   <h4 id="Godot_File_StoreReal_System_Single_" data-uid="Godot.File.StoreReal(System.Single)">StoreReal(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores a floating-point number in the file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1691,7 +1794,9 @@
   
   <a id="Godot_File_StoreString_" data-uid="Godot.File.StoreString*"></a>
   <h4 id="Godot_File_StoreString_System_String_" data-uid="Godot.File.StoreString(System.String)">StoreString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Appends <code>string</code> to the file without a line return, encoding the text as UTF-8.</p>
+<p>Note: This method is intended to be used to write text files. The string is stored as a UTF-8 encoded buffer without string length or terminating zero, which means that it can&apos;t be loaded back easily. If you want to store a retrievable string in a binary file, consider using <a class="xref" href="Godot.File.html#Godot_File_StorePascalString_System_String_">StorePascalString(String)</a> instead. For retrieving strings from a text file, you can use <code>get_buffer(length).get_string_from_utf8()</code> (if you know the length) or <a class="xref" href="Godot.File.html#Godot_File_GetAsText_System_Boolean_">GetAsText(Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1718,7 +1823,9 @@
   
   <a id="Godot_File_StoreVar_" data-uid="Godot.File.StoreVar*"></a>
   <h4 id="Godot_File_StoreVar_System_Object_System_Boolean_" data-uid="Godot.File.StoreVar(System.Object,System.Boolean)">StoreVar(Object, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stores any Variant value in the file. If <code>full_objects</code> is <code>true</code>, encoding objects is allowed (and can potentially include code).</p>
+<p>Note: Not all properties are included. Only properties that are configured with the <code>PROPERTY_USAGE_STORAGE</code> flag set will be serialized. You can add a new usage flag to a property by overriding the <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">_GetPropertyList()</a> method in your class. You can also check how property usage is configured by calling <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">_GetPropertyList()</a>. See <a class="xref" href="Godot.PropertyUsageFlags.html">PropertyUsageFlags</a> for the possible usage flags.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

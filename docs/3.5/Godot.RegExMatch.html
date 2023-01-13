@@ -83,7 +83,8 @@
   
   <h1 id="Godot_RegExMatch" data-uid="Godot.RegExMatch" class="text-break">Class RegExMatch
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Contains the results of a single <a class="xref" href="Godot.RegEx.html">RegEx</a> match returned by <a class="xref" href="Godot.RegEx.html#Godot_RegEx_Search_System_String_System_Int32_System_Int32_">Search(String, Int32, Int32)</a> and <a class="xref" href="Godot.RegEx.html#Godot_RegEx_SearchAll_System_String_System_Int32_System_Int32_">SearchAll(String, Int32, Int32)</a>. It can be used to find the position and range of the match and its capturing groups, and it can extract its substring for you.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +298,8 @@
   
   <a id="Godot_RegExMatch_Names_" data-uid="Godot.RegExMatch.Names*"></a>
   <h4 id="Godot_RegExMatch_Names" data-uid="Godot.RegExMatch.Names">Names</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A dictionary of named groups and its corresponding group number. Only groups that were matched are included. If multiple groups have the same name, that name would refer to the first matching one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +324,8 @@
   
   <a id="Godot_RegExMatch_Strings_" data-uid="Godot.RegExMatch.Strings*"></a>
   <h4 id="Godot_RegExMatch_Strings" data-uid="Godot.RegExMatch.Strings">Strings</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An <a class="xref" href="Godot.Collections.Array.html">Array</a> of the match and its capturing groups.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -347,7 +350,8 @@
   
   <a id="Godot_RegExMatch_Subject_" data-uid="Godot.RegExMatch.Subject*"></a>
   <h4 id="Godot_RegExMatch_Subject" data-uid="Godot.RegExMatch.Subject">Subject</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The source string used with the search pattern to find this matching result.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +378,9 @@
   
   <a id="Godot_RegExMatch_GetEnd_" data-uid="Godot.RegExMatch.GetEnd*"></a>
   <h4 id="Godot_RegExMatch_GetEnd_System_Object_" data-uid="Godot.RegExMatch.GetEnd(System.Object)">GetEnd(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the end position of the match within the source string. The end position of capturing groups can be retrieved by providing its group number as an integer or its string name (if it&apos;s a named group). The default value of 0 refers to the whole pattern.</p>
+<p>Returns -1 if the group did not match or doesn&apos;t exist.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -393,7 +399,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is (object)0</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -416,7 +423,8 @@
   
   <a id="Godot_RegExMatch_GetGroupCount_" data-uid="Godot.RegExMatch.GetGroupCount*"></a>
   <h4 id="Godot_RegExMatch_GetGroupCount" data-uid="Godot.RegExMatch.GetGroupCount">GetGroupCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of capturing groups.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -466,7 +474,9 @@
   
   <a id="Godot_RegExMatch_GetStart_" data-uid="Godot.RegExMatch.GetStart*"></a>
   <h4 id="Godot_RegExMatch_GetStart_System_Object_" data-uid="Godot.RegExMatch.GetStart(System.Object)">GetStart(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the starting position of the match within the source string. The starting position of capturing groups can be retrieved by providing its group number as an integer or its string name (if it&apos;s a named group). The default value of 0 refers to the whole pattern.</p>
+<p>Returns -1 if the group did not match or doesn&apos;t exist.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,7 +495,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is (object)0</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -508,7 +519,9 @@
   
   <a id="Godot_RegExMatch_GetString_" data-uid="Godot.RegExMatch.GetString*"></a>
   <h4 id="Godot_RegExMatch_GetString_System_Object_" data-uid="Godot.RegExMatch.GetString(System.Object)">GetString(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the substring of the match from the source string. Capturing groups can be retrieved by providing its group number as an integer or its string name (if it&apos;s a named group). The default value of 0 refers to the whole pattern.</p>
+<p>Returns an empty string if the group did not match or doesn&apos;t exist.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -527,7 +540,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is (object)0</p>
+</td>
       </tr>
     </tbody>
   </table>

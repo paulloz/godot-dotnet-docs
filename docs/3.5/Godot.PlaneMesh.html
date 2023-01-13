@@ -83,7 +83,9 @@
   
   <h1 id="Godot_PlaneMesh" data-uid="Godot.PlaneMesh" class="text-break">Class PlaneMesh
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Class representing a planar <a class="xref" href="Godot.PrimitiveMesh.html">PrimitiveMesh</a>. This flat mesh does not have a thickness. By default, this mesh is aligned on the X and Z axes; this default rotation isn&apos;t suited for use with billboarded materials. For billboarded materials, use <a class="xref" href="Godot.QuadMesh.html">QuadMesh</a> instead.</p>
+<p>Note: When using a large textured <a class="xref" href="Godot.PlaneMesh.html">PlaneMesh</a> (e.g. as a floor), you may stumble upon UV jittering issues depending on the camera angle. To solve this, increase <a class="xref" href="Godot.PlaneMesh.html#Godot_PlaneMesh_SubdivideDepth">SubdivideDepth</a> and <a class="xref" href="Godot.PlaneMesh.html#Godot_PlaneMesh_SubdivideWidth">SubdivideWidth</a> until you no longer notice UV jittering.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -420,7 +422,8 @@
   
   <a id="Godot_PlaneMesh_CenterOffset_" data-uid="Godot.PlaneMesh.CenterOffset*"></a>
   <h4 id="Godot_PlaneMesh_CenterOffset" data-uid="Godot.PlaneMesh.CenterOffset">CenterOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Offset from the origin of the generated plane. Useful for particles.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -445,7 +448,8 @@
   
   <a id="Godot_PlaneMesh_Size_" data-uid="Godot.PlaneMesh.Size*"></a>
   <h4 id="Godot_PlaneMesh_Size" data-uid="Godot.PlaneMesh.Size">Size</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Size of the generated plane.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -470,7 +474,8 @@
   
   <a id="Godot_PlaneMesh_SubdivideDepth_" data-uid="Godot.PlaneMesh.SubdivideDepth*"></a>
   <h4 id="Godot_PlaneMesh_SubdivideDepth" data-uid="Godot.PlaneMesh.SubdivideDepth">SubdivideDepth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of subdivision along the Z axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -495,7 +500,8 @@
   
   <a id="Godot_PlaneMesh_SubdivideWidth_" data-uid="Godot.PlaneMesh.SubdivideWidth*"></a>
   <h4 id="Godot_PlaneMesh_SubdivideWidth" data-uid="Godot.PlaneMesh.SubdivideWidth">SubdivideWidth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of subdivision along the X axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

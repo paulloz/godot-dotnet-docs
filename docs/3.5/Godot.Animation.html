@@ -83,7 +83,16 @@
   
   <h1 id="Godot_Animation" data-uid="Godot.Animation" class="text-break">Class Animation
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An Animation resource contains data used to animate everything in the engine. Animations are divided into tracks, and each track must be linked to a node. The state of that node can be changed through time, by adding timed keys (events) to the track.</p>
+<p><pre><code># This creates an animation that makes the node &quot;Enemy&quot; move to the right by
+# 100 pixels in 0.5 seconds.
+var animation = Animation.new()
+var track_index = animation.add_track(Animation.TYPE_VALUE)
+animation.track_set_path(track_index, &quot;Enemy:position:x&quot;)
+animation.track_insert_key(track_index, 0.0, 0)
+animation.track_insert_key(track_index, 0.5, 100)</code></pre></p>
+<p>Animations are just data containers, and must be added to nodes such as an <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> or <a class="xref" href="Godot.AnimationTreePlayer.html">AnimationTreePlayer</a> to be played back. Animation tracks have different types, each with its own set of dedicated methods. Check <a class="xref" href="Godot.Animation.TrackType.html">Animation.TrackType</a> to see available types.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -346,7 +355,9 @@
   
   <a id="Godot_Animation_Length_" data-uid="Godot.Animation.Length*"></a>
   <h4 id="Godot_Animation_Length" data-uid="Godot.Animation.Length">Length</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The total length of the animation (in seconds).</p>
+<p>Note: Length is not delimited by the last key, as this one may be before or after the end to ensure correct interpolation and looping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +382,8 @@
   
   <a id="Godot_Animation_Loop_" data-uid="Godot.Animation.Loop*"></a>
   <h4 id="Godot_Animation_Loop" data-uid="Godot.Animation.Loop">Loop</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A flag indicating that the animation must loop. This is used for correct interpolation of animation cycles, and for hinting the player that it must restart the animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +408,8 @@
   
   <a id="Godot_Animation_Step_" data-uid="Godot.Animation.Step*"></a>
   <h4 id="Godot_Animation_Step" data-uid="Godot.Animation.Step">Step</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The animation step value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -423,7 +436,8 @@
   
   <a id="Godot_Animation_AddTrack_" data-uid="Godot.Animation.AddTrack*"></a>
   <h4 id="Godot_Animation_AddTrack_Godot_Animation_TrackType_System_Int32_" data-uid="Godot.Animation.AddTrack(Godot.Animation.TrackType,System.Int32)">AddTrack(Animation.TrackType, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a track to the Animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -470,7 +484,8 @@
   
   <a id="Godot_Animation_AnimationTrackGetKeyAnimation_" data-uid="Godot.Animation.AnimationTrackGetKeyAnimation*"></a>
   <h4 id="Godot_Animation_AnimationTrackGetKeyAnimation_System_Int32_System_Int32_" data-uid="Godot.Animation.AnimationTrackGetKeyAnimation(System.Int32,System.Int32)">AnimationTrackGetKeyAnimation(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the animation name at the key identified by <code>key_idx</code>. The <code>track_idx</code> must be the index of an Animation Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -517,7 +532,8 @@
   
   <a id="Godot_Animation_AnimationTrackInsertKey_" data-uid="Godot.Animation.AnimationTrackInsertKey*"></a>
   <h4 id="Godot_Animation_AnimationTrackInsertKey_System_Int32_System_Single_System_String_" data-uid="Godot.Animation.AnimationTrackInsertKey(System.Int32,System.Single,System.String)">AnimationTrackInsertKey(Int32, Single, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts a key with value <code>animation</code> at the given <code>time</code> (in seconds). The <code>track_idx</code> must be the index of an Animation Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -569,7 +585,8 @@
   
   <a id="Godot_Animation_AnimationTrackSetKeyAnimation_" data-uid="Godot.Animation.AnimationTrackSetKeyAnimation*"></a>
   <h4 id="Godot_Animation_AnimationTrackSetKeyAnimation_System_Int32_System_Int32_System_String_" data-uid="Godot.Animation.AnimationTrackSetKeyAnimation(System.Int32,System.Int32,System.String)">AnimationTrackSetKeyAnimation(Int32, Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the key identified by <code>key_idx</code> to value <code>animation</code>. The <code>track_idx</code> must be the index of an Animation Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -606,7 +623,9 @@
   
   <a id="Godot_Animation_AudioTrackGetKeyEndOffset_" data-uid="Godot.Animation.AudioTrackGetKeyEndOffset*"></a>
   <h4 id="Godot_Animation_AudioTrackGetKeyEndOffset_System_Int32_System_Int32_" data-uid="Godot.Animation.AudioTrackGetKeyEndOffset(System.Int32,System.Int32)">AudioTrackGetKeyEndOffset(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the end offset of the key identified by <code>key_idx</code>. The <code>track_idx</code> must be the index of an Audio Track.</p>
+<p>End offset is the number of seconds cut off at the ending of the audio stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -653,7 +672,9 @@
   
   <a id="Godot_Animation_AudioTrackGetKeyStartOffset_" data-uid="Godot.Animation.AudioTrackGetKeyStartOffset*"></a>
   <h4 id="Godot_Animation_AudioTrackGetKeyStartOffset_System_Int32_System_Int32_" data-uid="Godot.Animation.AudioTrackGetKeyStartOffset(System.Int32,System.Int32)">AudioTrackGetKeyStartOffset(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the start offset of the key identified by <code>key_idx</code>. The <code>track_idx</code> must be the index of an Audio Track.</p>
+<p>Start offset is the number of seconds cut off at the beginning of the audio stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -700,7 +721,8 @@
   
   <a id="Godot_Animation_AudioTrackGetKeyStream_" data-uid="Godot.Animation.AudioTrackGetKeyStream*"></a>
   <h4 id="Godot_Animation_AudioTrackGetKeyStream_System_Int32_System_Int32_" data-uid="Godot.Animation.AudioTrackGetKeyStream(System.Int32,System.Int32)">AudioTrackGetKeyStream(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the audio stream of the key identified by <code>key_idx</code>. The <code>track_idx</code> must be the index of an Audio Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -747,7 +769,9 @@
   
   <a id="Godot_Animation_AudioTrackInsertKey_" data-uid="Godot.Animation.AudioTrackInsertKey*"></a>
   <h4 id="Godot_Animation_AudioTrackInsertKey_System_Int32_System_Single_Godot_Resource_System_Single_System_Single_" data-uid="Godot.Animation.AudioTrackInsertKey(System.Int32,System.Single,Godot.Resource,System.Single,System.Single)">AudioTrackInsertKey(Int32, Single, Resource, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts an Audio Track key at the given <code>time</code> in seconds. The <code>track_idx</code> must be the index of an Audio Track.</p>
+<p><code>stream</code> is the <a class="xref" href="Godot.AudioStream.html">AudioStream</a> resource to play. <code>start_offset</code> is the number of seconds cut off at the beginning of the audio stream, while <code>end_offset</code> is at the ending.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -809,7 +833,8 @@
   
   <a id="Godot_Animation_AudioTrackSetKeyEndOffset_" data-uid="Godot.Animation.AudioTrackSetKeyEndOffset*"></a>
   <h4 id="Godot_Animation_AudioTrackSetKeyEndOffset_System_Int32_System_Int32_System_Single_" data-uid="Godot.Animation.AudioTrackSetKeyEndOffset(System.Int32,System.Int32,System.Single)">AudioTrackSetKeyEndOffset(Int32, Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the end offset of the key identified by <code>key_idx</code> to value <code>offset</code>. The <code>track_idx</code> must be the index of an Audio Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -846,7 +871,8 @@
   
   <a id="Godot_Animation_AudioTrackSetKeyStartOffset_" data-uid="Godot.Animation.AudioTrackSetKeyStartOffset*"></a>
   <h4 id="Godot_Animation_AudioTrackSetKeyStartOffset_System_Int32_System_Int32_System_Single_" data-uid="Godot.Animation.AudioTrackSetKeyStartOffset(System.Int32,System.Int32,System.Single)">AudioTrackSetKeyStartOffset(Int32, Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the start offset of the key identified by <code>key_idx</code> to value <code>offset</code>. The <code>track_idx</code> must be the index of an Audio Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -883,7 +909,8 @@
   
   <a id="Godot_Animation_AudioTrackSetKeyStream_" data-uid="Godot.Animation.AudioTrackSetKeyStream*"></a>
   <h4 id="Godot_Animation_AudioTrackSetKeyStream_System_Int32_System_Int32_Godot_Resource_" data-uid="Godot.Animation.AudioTrackSetKeyStream(System.Int32,System.Int32,Godot.Resource)">AudioTrackSetKeyStream(Int32, Int32, Resource)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the stream of the key identified by <code>key_idx</code> to value <code>stream</code>. The <code>track_idx</code> must be the index of an Audio Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -920,7 +947,8 @@
   
   <a id="Godot_Animation_BezierTrackGetKeyInHandle_" data-uid="Godot.Animation.BezierTrackGetKeyInHandle*"></a>
   <h4 id="Godot_Animation_BezierTrackGetKeyInHandle_System_Int32_System_Int32_" data-uid="Godot.Animation.BezierTrackGetKeyInHandle(System.Int32,System.Int32)">BezierTrackGetKeyInHandle(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the in handle of the key identified by <code>key_idx</code>. The <code>track_idx</code> must be the index of a Bezier Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -967,7 +995,8 @@
   
   <a id="Godot_Animation_BezierTrackGetKeyOutHandle_" data-uid="Godot.Animation.BezierTrackGetKeyOutHandle*"></a>
   <h4 id="Godot_Animation_BezierTrackGetKeyOutHandle_System_Int32_System_Int32_" data-uid="Godot.Animation.BezierTrackGetKeyOutHandle(System.Int32,System.Int32)">BezierTrackGetKeyOutHandle(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the out handle of the key identified by <code>key_idx</code>. The <code>track_idx</code> must be the index of a Bezier Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1043,8 @@
   
   <a id="Godot_Animation_BezierTrackGetKeyValue_" data-uid="Godot.Animation.BezierTrackGetKeyValue*"></a>
   <h4 id="Godot_Animation_BezierTrackGetKeyValue_System_Int32_System_Int32_" data-uid="Godot.Animation.BezierTrackGetKeyValue(System.Int32,System.Int32)">BezierTrackGetKeyValue(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of the key identified by <code>key_idx</code>. The <code>track_idx</code> must be the index of a Bezier Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1061,7 +1091,9 @@
   
   <a id="Godot_Animation_BezierTrackInsertKey_" data-uid="Godot.Animation.BezierTrackInsertKey*"></a>
   <h4 id="Godot_Animation_BezierTrackInsertKey_System_Int32_System_Single_System_Single_System_Nullable_Godot_Vector2__System_Nullable_Godot_Vector2__" data-uid="Godot.Animation.BezierTrackInsertKey(System.Int32,System.Single,System.Single,System.Nullable{Godot.Vector2},System.Nullable{Godot.Vector2})">BezierTrackInsertKey(Int32, Single, Single, Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts a Bezier Track key at the given <code>time</code> in seconds. The <code>track_idx</code> must be the index of a Bezier Track.</p>
+<p><code>in_handle</code> is the left-side weight of the added Bezier curve point, <code>out_handle</code> is the right-side one, while <code>value</code> is the actual value at this point.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1095,12 +1127,14 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">inHandle</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">outHandle</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1123,7 +1157,8 @@
   
   <a id="Godot_Animation_BezierTrackInterpolate_" data-uid="Godot.Animation.BezierTrackInterpolate*"></a>
   <h4 id="Godot_Animation_BezierTrackInterpolate_System_Int32_System_Single_" data-uid="Godot.Animation.BezierTrackInterpolate(System.Int32,System.Single)">BezierTrackInterpolate(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the interpolated value at the given <code>time</code> (in seconds). The <code>track_idx</code> must be the index of a Bezier Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1170,7 +1205,8 @@
   
   <a id="Godot_Animation_BezierTrackSetKeyInHandle_" data-uid="Godot.Animation.BezierTrackSetKeyInHandle*"></a>
   <h4 id="Godot_Animation_BezierTrackSetKeyInHandle_System_Int32_System_Int32_Godot_Vector2_" data-uid="Godot.Animation.BezierTrackSetKeyInHandle(System.Int32,System.Int32,Godot.Vector2)">BezierTrackSetKeyInHandle(Int32, Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the in handle of the key identified by <code>key_idx</code> to value <code>in_handle</code>. The <code>track_idx</code> must be the index of a Bezier Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1207,7 +1243,8 @@
   
   <a id="Godot_Animation_BezierTrackSetKeyOutHandle_" data-uid="Godot.Animation.BezierTrackSetKeyOutHandle*"></a>
   <h4 id="Godot_Animation_BezierTrackSetKeyOutHandle_System_Int32_System_Int32_Godot_Vector2_" data-uid="Godot.Animation.BezierTrackSetKeyOutHandle(System.Int32,System.Int32,Godot.Vector2)">BezierTrackSetKeyOutHandle(Int32, Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the out handle of the key identified by <code>key_idx</code> to value <code>out_handle</code>. The <code>track_idx</code> must be the index of a Bezier Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1244,7 +1281,8 @@
   
   <a id="Godot_Animation_BezierTrackSetKeyValue_" data-uid="Godot.Animation.BezierTrackSetKeyValue*"></a>
   <h4 id="Godot_Animation_BezierTrackSetKeyValue_System_Int32_System_Int32_System_Single_" data-uid="Godot.Animation.BezierTrackSetKeyValue(System.Int32,System.Int32,System.Single)">BezierTrackSetKeyValue(Int32, Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the value of the key identified by <code>key_idx</code> to the given value. The <code>track_idx</code> must be the index of a Bezier Track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1281,7 +1319,8 @@
   
   <a id="Godot_Animation_Clear_" data-uid="Godot.Animation.Clear*"></a>
   <h4 id="Godot_Animation_Clear" data-uid="Godot.Animation.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clear the animation (clear all tracks and reset all).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1291,7 +1330,8 @@
   
   <a id="Godot_Animation_CopyTrack_" data-uid="Godot.Animation.CopyTrack*"></a>
   <h4 id="Godot_Animation_CopyTrack_System_Int32_Godot_Animation_" data-uid="Godot.Animation.CopyTrack(System.Int32,Godot.Animation)">CopyTrack(Int32, Animation)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new track that is a copy of the given track from <code>to_animation</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1323,7 +1363,8 @@
   
   <a id="Godot_Animation_FindTrack_" data-uid="Godot.Animation.FindTrack*"></a>
   <h4 id="Godot_Animation_FindTrack_Godot_NodePath_" data-uid="Godot.Animation.FindTrack(Godot.NodePath)">FindTrack(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the index of the specified track. If the track is not found, return -1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1415,7 +1456,8 @@
   
   <a id="Godot_Animation_GetTrackCount_" data-uid="Godot.Animation.GetTrackCount*"></a>
   <h4 id="Godot_Animation_GetTrackCount" data-uid="Godot.Animation.GetTrackCount">GetTrackCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of tracks in the animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1465,7 +1507,8 @@
   
   <a id="Godot_Animation_MethodTrackGetKeyIndices_" data-uid="Godot.Animation.MethodTrackGetKeyIndices*"></a>
   <h4 id="Godot_Animation_MethodTrackGetKeyIndices_System_Int32_System_Single_System_Single_" data-uid="Godot.Animation.MethodTrackGetKeyIndices(System.Int32,System.Single,System.Single)">MethodTrackGetKeyIndices(Int32, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all the key indices of a method track, given a position and delta time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1517,7 +1560,8 @@
   
   <a id="Godot_Animation_MethodTrackGetName_" data-uid="Godot.Animation.MethodTrackGetName*"></a>
   <h4 id="Godot_Animation_MethodTrackGetName_System_Int32_System_Int32_" data-uid="Godot.Animation.MethodTrackGetName(System.Int32,System.Int32)">MethodTrackGetName(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the method name of a method track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1564,7 +1608,8 @@
   
   <a id="Godot_Animation_MethodTrackGetParams_" data-uid="Godot.Animation.MethodTrackGetParams*"></a>
   <h4 id="Godot_Animation_MethodTrackGetParams_System_Int32_System_Int32_" data-uid="Godot.Animation.MethodTrackGetParams(System.Int32,System.Int32)">MethodTrackGetParams(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the arguments values to be called on a method track for a given key in a given track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1611,7 +1656,8 @@
   
   <a id="Godot_Animation_RemoveTrack_" data-uid="Godot.Animation.RemoveTrack*"></a>
   <h4 id="Godot_Animation_RemoveTrack_System_Int32_" data-uid="Godot.Animation.RemoveTrack(System.Int32)">RemoveTrack(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a track by specifying the track index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1719,7 +1765,8 @@
   
   <a id="Godot_Animation_TrackFindKey_" data-uid="Godot.Animation.TrackFindKey*"></a>
   <h4 id="Godot_Animation_TrackFindKey_System_Int32_System_Single_System_Boolean_" data-uid="Godot.Animation.TrackFindKey(System.Int32,System.Single,System.Boolean)">TrackFindKey(Int32, Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Finds the key index by time in a given track. Optionally, only find it if the exact time is given.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1771,7 +1818,8 @@
   
   <a id="Godot_Animation_TrackGetInterpolationLoopWrap_" data-uid="Godot.Animation.TrackGetInterpolationLoopWrap*"></a>
   <h4 id="Godot_Animation_TrackGetInterpolationLoopWrap_System_Int32_" data-uid="Godot.Animation.TrackGetInterpolationLoopWrap(System.Int32)">TrackGetInterpolationLoopWrap(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the track at <code>idx</code> wraps the interpolation loop. New tracks wrap the interpolation loop by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1813,7 +1861,8 @@
   
   <a id="Godot_Animation_TrackGetInterpolationType_" data-uid="Godot.Animation.TrackGetInterpolationType*"></a>
   <h4 id="Godot_Animation_TrackGetInterpolationType_System_Int32_" data-uid="Godot.Animation.TrackGetInterpolationType(System.Int32)">TrackGetInterpolationType(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the interpolation type of a given track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1855,7 +1904,8 @@
   
   <a id="Godot_Animation_TrackGetKeyCount_" data-uid="Godot.Animation.TrackGetKeyCount*"></a>
   <h4 id="Godot_Animation_TrackGetKeyCount_System_Int32_" data-uid="Godot.Animation.TrackGetKeyCount(System.Int32)">TrackGetKeyCount(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of keys in a given track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1897,7 +1947,8 @@
   
   <a id="Godot_Animation_TrackGetKeyTime_" data-uid="Godot.Animation.TrackGetKeyTime*"></a>
   <h4 id="Godot_Animation_TrackGetKeyTime_System_Int32_System_Int32_" data-uid="Godot.Animation.TrackGetKeyTime(System.Int32,System.Int32)">TrackGetKeyTime(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the time at which the key is located.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1944,7 +1995,8 @@
   
   <a id="Godot_Animation_TrackGetKeyTransition_" data-uid="Godot.Animation.TrackGetKeyTransition*"></a>
   <h4 id="Godot_Animation_TrackGetKeyTransition_System_Int32_System_Int32_" data-uid="Godot.Animation.TrackGetKeyTransition(System.Int32,System.Int32)">TrackGetKeyTransition(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the transition curve (easing) for a specific key (see the built-in math function <code>@GDScript.ease</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1991,7 +2043,8 @@
   
   <a id="Godot_Animation_TrackGetKeyValue_" data-uid="Godot.Animation.TrackGetKeyValue*"></a>
   <h4 id="Godot_Animation_TrackGetKeyValue_System_Int32_System_Int32_" data-uid="Godot.Animation.TrackGetKeyValue(System.Int32,System.Int32)">TrackGetKeyValue(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of a given key in a given track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2038,7 +2091,8 @@
   
   <a id="Godot_Animation_TrackGetPath_" data-uid="Godot.Animation.TrackGetPath*"></a>
   <h4 id="Godot_Animation_TrackGetPath_System_Int32_" data-uid="Godot.Animation.TrackGetPath(System.Int32)">TrackGetPath(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the path of a track. For more information on the path format, see <a class="xref" href="Godot.Animation.html#Godot_Animation_TrackSetPath_System_Int32_Godot_NodePath_">TrackSetPath(Int32, NodePath)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2080,7 +2134,8 @@
   
   <a id="Godot_Animation_TrackGetType_" data-uid="Godot.Animation.TrackGetType*"></a>
   <h4 id="Godot_Animation_TrackGetType_System_Int32_" data-uid="Godot.Animation.TrackGetType(System.Int32)">TrackGetType(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the type of a track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2122,7 +2177,8 @@
   
   <a id="Godot_Animation_TrackInsertKey_" data-uid="Godot.Animation.TrackInsertKey*"></a>
   <h4 id="Godot_Animation_TrackInsertKey_System_Int32_System_Single_System_Object_System_Single_" data-uid="Godot.Animation.TrackInsertKey(System.Int32,System.Single,System.Object,System.Single)">TrackInsertKey(Int32, Single, Object, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Insert a generic key in a given track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2164,7 +2220,8 @@
   
   <a id="Godot_Animation_TrackIsEnabled_" data-uid="Godot.Animation.TrackIsEnabled*"></a>
   <h4 id="Godot_Animation_TrackIsEnabled_System_Int32_" data-uid="Godot.Animation.TrackIsEnabled(System.Int32)">TrackIsEnabled(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the track at index <code>idx</code> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2206,7 +2263,8 @@
   
   <a id="Godot_Animation_TrackIsImported_" data-uid="Godot.Animation.TrackIsImported*"></a>
   <h4 id="Godot_Animation_TrackIsImported_System_Int32_" data-uid="Godot.Animation.TrackIsImported(System.Int32)">TrackIsImported(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given track is imported. Else, return <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2248,7 +2306,8 @@
   
   <a id="Godot_Animation_TrackMoveDown_" data-uid="Godot.Animation.TrackMoveDown*"></a>
   <h4 id="Godot_Animation_TrackMoveDown_System_Int32_" data-uid="Godot.Animation.TrackMoveDown(System.Int32)">TrackMoveDown(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves a track down.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2275,7 +2334,8 @@
   
   <a id="Godot_Animation_TrackMoveTo_" data-uid="Godot.Animation.TrackMoveTo*"></a>
   <h4 id="Godot_Animation_TrackMoveTo_System_Int32_System_Int32_" data-uid="Godot.Animation.TrackMoveTo(System.Int32,System.Int32)">TrackMoveTo(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the index position of track <code>idx</code> to the one defined in <code>to_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2307,7 +2367,8 @@
   
   <a id="Godot_Animation_TrackMoveUp_" data-uid="Godot.Animation.TrackMoveUp*"></a>
   <h4 id="Godot_Animation_TrackMoveUp_System_Int32_" data-uid="Godot.Animation.TrackMoveUp(System.Int32)">TrackMoveUp(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves a track up.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2334,7 +2395,8 @@
   
   <a id="Godot_Animation_TrackRemoveKey_" data-uid="Godot.Animation.TrackRemoveKey*"></a>
   <h4 id="Godot_Animation_TrackRemoveKey_System_Int32_System_Int32_" data-uid="Godot.Animation.TrackRemoveKey(System.Int32,System.Int32)">TrackRemoveKey(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a key by index in a given track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2366,7 +2428,8 @@
   
   <a id="Godot_Animation_TrackRemoveKeyAtPosition_" data-uid="Godot.Animation.TrackRemoveKeyAtPosition*"></a>
   <h4 id="Godot_Animation_TrackRemoveKeyAtPosition_System_Int32_System_Single_" data-uid="Godot.Animation.TrackRemoveKeyAtPosition(System.Int32,System.Single)">TrackRemoveKeyAtPosition(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a key by position (seconds) in a given track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2398,7 +2461,8 @@
   
   <a id="Godot_Animation_TrackSetEnabled_" data-uid="Godot.Animation.TrackSetEnabled*"></a>
   <h4 id="Godot_Animation_TrackSetEnabled_System_Int32_System_Boolean_" data-uid="Godot.Animation.TrackSetEnabled(System.Int32,System.Boolean)">TrackSetEnabled(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables/disables the given track. Tracks are enabled by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2430,7 +2494,8 @@
   
   <a id="Godot_Animation_TrackSetImported_" data-uid="Godot.Animation.TrackSetImported*"></a>
   <h4 id="Godot_Animation_TrackSetImported_System_Int32_System_Boolean_" data-uid="Godot.Animation.TrackSetImported(System.Int32,System.Boolean)">TrackSetImported(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the given track as imported or not.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2462,7 +2527,8 @@
   
   <a id="Godot_Animation_TrackSetInterpolationLoopWrap_" data-uid="Godot.Animation.TrackSetInterpolationLoopWrap*"></a>
   <h4 id="Godot_Animation_TrackSetInterpolationLoopWrap_System_Int32_System_Boolean_" data-uid="Godot.Animation.TrackSetInterpolationLoopWrap(System.Int32,System.Boolean)">TrackSetInterpolationLoopWrap(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the track at <code>idx</code> wraps the interpolation loop.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2494,7 +2560,8 @@
   
   <a id="Godot_Animation_TrackSetInterpolationType_" data-uid="Godot.Animation.TrackSetInterpolationType*"></a>
   <h4 id="Godot_Animation_TrackSetInterpolationType_System_Int32_Godot_Animation_InterpolationType_" data-uid="Godot.Animation.TrackSetInterpolationType(System.Int32,Godot.Animation.InterpolationType)">TrackSetInterpolationType(Int32, Animation.InterpolationType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the interpolation type of a given track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2526,7 +2593,8 @@
   
   <a id="Godot_Animation_TrackSetKeyTime_" data-uid="Godot.Animation.TrackSetKeyTime*"></a>
   <h4 id="Godot_Animation_TrackSetKeyTime_System_Int32_System_Int32_System_Single_" data-uid="Godot.Animation.TrackSetKeyTime(System.Int32,System.Int32,System.Single)">TrackSetKeyTime(Int32, Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the time of an existing key.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2563,7 +2631,8 @@
   
   <a id="Godot_Animation_TrackSetKeyTransition_" data-uid="Godot.Animation.TrackSetKeyTransition*"></a>
   <h4 id="Godot_Animation_TrackSetKeyTransition_System_Int32_System_Int32_System_Single_" data-uid="Godot.Animation.TrackSetKeyTransition(System.Int32,System.Int32,System.Single)">TrackSetKeyTransition(Int32, Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the transition curve (easing) for a specific key (see the built-in math function <code>@GDScript.ease</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2600,7 +2669,8 @@
   
   <a id="Godot_Animation_TrackSetKeyValue_" data-uid="Godot.Animation.TrackSetKeyValue*"></a>
   <h4 id="Godot_Animation_TrackSetKeyValue_System_Int32_System_Int32_System_Object_" data-uid="Godot.Animation.TrackSetKeyValue(System.Int32,System.Int32,System.Object)">TrackSetKeyValue(Int32, Int32, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the value of an existing key.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2637,7 +2707,9 @@
   
   <a id="Godot_Animation_TrackSetPath_" data-uid="Godot.Animation.TrackSetPath*"></a>
   <h4 id="Godot_Animation_TrackSetPath_System_Int32_Godot_NodePath_" data-uid="Godot.Animation.TrackSetPath(System.Int32,Godot.NodePath)">TrackSetPath(Int32, NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the path of a track. Paths must be valid scene-tree paths to a node and must be specified starting from the parent node of the node that will reproduce the animation. Tracks that control properties or bones must append their name after the path, separated by <code>&quot;:&quot;</code>.</p>
+<p>For example, <code>&quot;character/skeleton:ankle&quot;</code> or <code>&quot;character/mesh:transform/local&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2669,7 +2741,8 @@
   
   <a id="Godot_Animation_TrackSwap_" data-uid="Godot.Animation.TrackSwap*"></a>
   <h4 id="Godot_Animation_TrackSwap_System_Int32_System_Int32_" data-uid="Godot.Animation.TrackSwap(System.Int32,System.Int32)">TrackSwap(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Swaps the track <code>idx</code>&apos;s index position with the track <code>with_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2701,7 +2774,8 @@
   
   <a id="Godot_Animation_TransformTrackInsertKey_" data-uid="Godot.Animation.TransformTrackInsertKey*"></a>
   <h4 id="Godot_Animation_TransformTrackInsertKey_System_Int32_System_Single_Godot_Vector3_Godot_Quat_Godot_Vector3_" data-uid="Godot.Animation.TransformTrackInsertKey(System.Int32,System.Single,Godot.Vector3,Godot.Quat,Godot.Vector3)">TransformTrackInsertKey(Int32, Single, Vector3, Quat, Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Insert a transform key for a transform track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2763,7 +2837,8 @@
   
   <a id="Godot_Animation_TransformTrackInterpolate_" data-uid="Godot.Animation.TransformTrackInterpolate*"></a>
   <h4 id="Godot_Animation_TransformTrackInterpolate_System_Int32_System_Single_" data-uid="Godot.Animation.TransformTrackInterpolate(System.Int32,System.Single)">TransformTrackInterpolate(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the interpolated value of a transform track at a given time (in seconds). An array consisting of 3 elements: position (<a class="xref" href="Godot.Vector3.html">Vector3</a>), rotation (<a class="xref" href="Godot.Quat.html">Quat</a>) and scale (<a class="xref" href="Godot.Vector3.html">Vector3</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2810,7 +2885,8 @@
   
   <a id="Godot_Animation_ValueTrackGetKeyIndices_" data-uid="Godot.Animation.ValueTrackGetKeyIndices*"></a>
   <h4 id="Godot_Animation_ValueTrackGetKeyIndices_System_Int32_System_Single_System_Single_" data-uid="Godot.Animation.ValueTrackGetKeyIndices(System.Int32,System.Single,System.Single)">ValueTrackGetKeyIndices(Int32, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all the key indices of a value track, given a position and delta time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2862,7 +2938,8 @@
   
   <a id="Godot_Animation_ValueTrackGetUpdateMode_" data-uid="Godot.Animation.ValueTrackGetUpdateMode*"></a>
   <h4 id="Godot_Animation_ValueTrackGetUpdateMode_System_Int32_" data-uid="Godot.Animation.ValueTrackGetUpdateMode(System.Int32)">ValueTrackGetUpdateMode(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the update mode of a value track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2904,7 +2981,8 @@
   
   <a id="Godot_Animation_ValueTrackInterpolate_" data-uid="Godot.Animation.ValueTrackInterpolate*"></a>
   <h4 id="Godot_Animation_ValueTrackInterpolate_System_Int32_System_Single_" data-uid="Godot.Animation.ValueTrackInterpolate(System.Int32,System.Single)">ValueTrackInterpolate(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the interpolated value at the given time (in seconds). The <code>track_idx</code> must be the index of a value track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2951,7 +3029,8 @@
   
   <a id="Godot_Animation_ValueTrackSetUpdateMode_" data-uid="Godot.Animation.ValueTrackSetUpdateMode*"></a>
   <h4 id="Godot_Animation_ValueTrackSetUpdateMode_System_Int32_Godot_Animation_UpdateMode_" data-uid="Godot.Animation.ValueTrackSetUpdateMode(System.Int32,Godot.Animation.UpdateMode)">ValueTrackSetUpdateMode(Int32, Animation.UpdateMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the update mode (see <a class="xref" href="Godot.Animation.UpdateMode.html">Animation.UpdateMode</a>) of a value track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

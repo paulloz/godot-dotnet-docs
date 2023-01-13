@@ -83,7 +83,12 @@
   
   <h1 id="Godot_RayCast2D" data-uid="Godot.RayCast2D" class="text-break">Class RayCast2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A RayCast represents a line from its origin to its destination position, <code>cast_to</code>. It is used to query the 2D space in order to find the closest object along the path of the ray.</p>
+<p>RayCast2D can ignore some objects by adding them to the exception list via <code>add_exception</code>, by setting proper filtering with collision layers, or by filtering object types with type masks.</p>
+<p>RayCast2D can be configured to report collisions with <a class="xref" href="Godot.Area2D.html">Area2D</a>s (<a class="xref" href="Godot.RayCast2D.html#Godot_RayCast2D_CollideWithAreas">CollideWithAreas</a>) and/or <a class="xref" href="Godot.PhysicsBody2D.html">PhysicsBody2D</a>s (<a class="xref" href="Godot.RayCast2D.html#Godot_RayCast2D_CollideWithBodies">CollideWithBodies</a>).</p>
+<p>Only enabled raycasts will be able to query the space and report collisions.</p>
+<p>RayCast2D calculates intersection every physics frame (see <a class="xref" href="Godot.Node.html">Node</a>), and the result is cached so it can be used later until the next frame. If multiple queries are required between physics frames (or during the same frame) use <a class="xref" href="Godot.RayCast2D.html#Godot_RayCast2D_ForceRaycastUpdate">ForceRaycastUpdate()</a> after adjusting the raycast.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1117,8 @@
   
   <a id="Godot_RayCast2D_CastTo_" data-uid="Godot.RayCast2D.CastTo*"></a>
   <h4 id="Godot_RayCast2D_CastTo" data-uid="Godot.RayCast2D.CastTo">CastTo</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ray&apos;s destination point, relative to the RayCast&apos;s <code>position</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1137,7 +1143,8 @@
   
   <a id="Godot_RayCast2D_CollideWithAreas_" data-uid="Godot.RayCast2D.CollideWithAreas*"></a>
   <h4 id="Godot_RayCast2D_CollideWithAreas" data-uid="Godot.RayCast2D.CollideWithAreas">CollideWithAreas</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, collision with <a class="xref" href="Godot.Area2D.html">Area2D</a>s will be reported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1162,7 +1169,8 @@
   
   <a id="Godot_RayCast2D_CollideWithBodies_" data-uid="Godot.RayCast2D.CollideWithBodies*"></a>
   <h4 id="Godot_RayCast2D_CollideWithBodies" data-uid="Godot.RayCast2D.CollideWithBodies">CollideWithBodies</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, collision with <a class="xref" href="Godot.PhysicsBody2D.html">PhysicsBody2D</a>s will be reported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1187,7 +1195,8 @@
   
   <a id="Godot_RayCast2D_CollisionMask_" data-uid="Godot.RayCast2D.CollisionMask*"></a>
   <h4 id="Godot_RayCast2D_CollisionMask" data-uid="Godot.RayCast2D.CollisionMask">CollisionMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ray&apos;s collision mask. Only objects in at least one collision layer enabled in the mask will be detected. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1212,7 +1221,8 @@
   
   <a id="Godot_RayCast2D_Enabled_" data-uid="Godot.RayCast2D.Enabled*"></a>
   <h4 id="Godot_RayCast2D_Enabled" data-uid="Godot.RayCast2D.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, collisions will be reported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1237,7 +1247,8 @@
   
   <a id="Godot_RayCast2D_ExcludeParent_" data-uid="Godot.RayCast2D.ExcludeParent*"></a>
   <h4 id="Godot_RayCast2D_ExcludeParent" data-uid="Godot.RayCast2D.ExcludeParent">ExcludeParent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the parent node will be excluded from collision detection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1264,7 +1275,8 @@
   
   <a id="Godot_RayCast2D_AddException_" data-uid="Godot.RayCast2D.AddException*"></a>
   <h4 id="Godot_RayCast2D_AddException_Godot_Object_" data-uid="Godot.RayCast2D.AddException(Godot.Object)">AddException(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a collision exception so the ray does not report collisions with the specified node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1291,7 +1303,8 @@
   
   <a id="Godot_RayCast2D_AddExceptionRid_" data-uid="Godot.RayCast2D.AddExceptionRid*"></a>
   <h4 id="Godot_RayCast2D_AddExceptionRid_Godot_RID_" data-uid="Godot.RayCast2D.AddExceptionRid(Godot.RID)">AddExceptionRid(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a collision exception so the ray does not report collisions with the specified <a class="xref" href="Godot.RID.html">RID</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1318,7 +1331,8 @@
   
   <a id="Godot_RayCast2D_ClearExceptions_" data-uid="Godot.RayCast2D.ClearExceptions*"></a>
   <h4 id="Godot_RayCast2D_ClearExceptions" data-uid="Godot.RayCast2D.ClearExceptions">ClearExceptions()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all collision exceptions for this ray.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1328,7 +1342,9 @@
   
   <a id="Godot_RayCast2D_ForceRaycastUpdate_" data-uid="Godot.RayCast2D.ForceRaycastUpdate*"></a>
   <h4 id="Godot_RayCast2D_ForceRaycastUpdate" data-uid="Godot.RayCast2D.ForceRaycastUpdate">ForceRaycastUpdate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the collision information for the ray. Use this method to update the collision information immediately instead of waiting for the next <code>_physics_process</code> call, for example if the ray or its parent has changed state.</p>
+<p>Note: <code>enabled</code> is not required for this to work.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1363,7 +1379,8 @@
   
   <a id="Godot_RayCast2D_GetCollider_" data-uid="Godot.RayCast2D.GetCollider*"></a>
   <h4 id="Godot_RayCast2D_GetCollider" data-uid="Godot.RayCast2D.GetCollider">GetCollider()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the first object that the ray intersects, or <code>null</code> if no object is intersecting the ray (i.e. <a class="xref" href="Godot.RayCast2D.html#Godot_RayCast2D_IsColliding">IsColliding()</a> returns <code>false</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1388,7 +1405,8 @@
   
   <a id="Godot_RayCast2D_GetColliderShape_" data-uid="Godot.RayCast2D.GetColliderShape*"></a>
   <h4 id="Godot_RayCast2D_GetColliderShape" data-uid="Godot.RayCast2D.GetColliderShape">GetColliderShape()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the shape ID of the first object that the ray intersects, or <code>0</code> if no object is intersecting the ray (i.e. <a class="xref" href="Godot.RayCast2D.html#Godot_RayCast2D_IsColliding">IsColliding()</a> returns <code>false</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1438,7 +1456,8 @@
   
   <a id="Godot_RayCast2D_GetCollisionMaskBit_" data-uid="Godot.RayCast2D.GetCollisionMaskBit*"></a>
   <h4 id="Godot_RayCast2D_GetCollisionMaskBit_System_Int32_" data-uid="Godot.RayCast2D.GetCollisionMaskBit(System.Int32)">GetCollisionMaskBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an individual bit on the collision mask.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1480,7 +1499,8 @@
   
   <a id="Godot_RayCast2D_GetCollisionNormal_" data-uid="Godot.RayCast2D.GetCollisionNormal*"></a>
   <h4 id="Godot_RayCast2D_GetCollisionNormal" data-uid="Godot.RayCast2D.GetCollisionNormal">GetCollisionNormal()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the normal of the intersecting object&apos;s shape at the collision point.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1505,7 +1525,9 @@
   
   <a id="Godot_RayCast2D_GetCollisionPoint_" data-uid="Godot.RayCast2D.GetCollisionPoint*"></a>
   <h4 id="Godot_RayCast2D_GetCollisionPoint" data-uid="Godot.RayCast2D.GetCollisionPoint">GetCollisionPoint()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the collision point at which the ray intersects the closest object.</p>
+<p>Note: This point is in the global coordinate system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1605,7 +1627,8 @@
   
   <a id="Godot_RayCast2D_IsColliding_" data-uid="Godot.RayCast2D.IsColliding*"></a>
   <h4 id="Godot_RayCast2D_IsColliding" data-uid="Godot.RayCast2D.IsColliding">IsColliding()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether any object is intersecting with the ray&apos;s vector (considering the vector length).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1655,7 +1678,8 @@
   
   <a id="Godot_RayCast2D_RemoveException_" data-uid="Godot.RayCast2D.RemoveException*"></a>
   <h4 id="Godot_RayCast2D_RemoveException_Godot_Object_" data-uid="Godot.RayCast2D.RemoveException(Godot.Object)">RemoveException(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a collision exception so the ray does report collisions with the specified node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1682,7 +1706,8 @@
   
   <a id="Godot_RayCast2D_RemoveExceptionRid_" data-uid="Godot.RayCast2D.RemoveExceptionRid*"></a>
   <h4 id="Godot_RayCast2D_RemoveExceptionRid_Godot_RID_" data-uid="Godot.RayCast2D.RemoveExceptionRid(Godot.RID)">RemoveExceptionRid(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a collision exception so the ray does report collisions with the specified <a class="xref" href="Godot.RID.html">RID</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1817,7 +1842,8 @@
   
   <a id="Godot_RayCast2D_SetCollisionMaskBit_" data-uid="Godot.RayCast2D.SetCollisionMaskBit*"></a>
   <h4 id="Godot_RayCast2D_SetCollisionMaskBit_System_Int32_System_Boolean_" data-uid="Godot.RayCast2D.SetCollisionMaskBit(System.Int32,System.Boolean)">SetCollisionMaskBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets or clears individual bits on the collision mask. This makes selecting the areas scanned easier.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

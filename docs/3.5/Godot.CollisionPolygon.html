@@ -83,7 +83,8 @@
   
   <h1 id="Godot_CollisionPolygon" data-uid="Godot.CollisionPolygon" class="text-break">Class CollisionPolygon
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Allows editing a collision polygon&apos;s vertices on a selected plane. Can also set a depth perpendicular to that plane. This class is only available in the editor. It will not appear in the scene tree at run-time. Creates a <a class="xref" href="Godot.Shape.html">Shape</a> for gameplay. Properties modified during gameplay will have no effect.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +965,8 @@
   
   <a id="Godot_CollisionPolygon_Depth_" data-uid="Godot.CollisionPolygon.Depth*"></a>
   <h4 id="Godot_CollisionPolygon_Depth" data-uid="Godot.CollisionPolygon.Depth">Depth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Length that the resulting collision extends in either direction perpendicular to its polygon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +991,8 @@
   
   <a id="Godot_CollisionPolygon_Disabled_" data-uid="Godot.CollisionPolygon.Disabled*"></a>
   <h4 id="Godot_CollisionPolygon_Disabled" data-uid="Godot.CollisionPolygon.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, no collision will be produced.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1017,8 @@
   
   <a id="Godot_CollisionPolygon_Margin_" data-uid="Godot.CollisionPolygon.Margin*"></a>
   <h4 id="Godot_CollisionPolygon_Margin" data-uid="Godot.CollisionPolygon.Margin">Margin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The collision margin for the generated <a class="xref" href="Godot.Shape.html">Shape</a>. See <a class="xref" href="Godot.Shape.html#Godot_Shape_Margin">Margin</a> for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1039,7 +1043,9 @@
   
   <a id="Godot_CollisionPolygon_Polygon_" data-uid="Godot.CollisionPolygon.Polygon*"></a>
   <h4 id="Godot_CollisionPolygon_Polygon" data-uid="Godot.CollisionPolygon.Polygon">Polygon</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Array of vertices which define the polygon.</p>
+<p>Note: The returned value is a copy of the original. Methods which mutate the size or properties of the return value will not impact the original polygon. To change properties of the polygon, assign it to a temporary variable and make changes before reassigning the <code>polygon</code> member.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

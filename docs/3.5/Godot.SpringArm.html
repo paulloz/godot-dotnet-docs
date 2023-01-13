@@ -83,7 +83,11 @@
   
   <h1 id="Godot_SpringArm" data-uid="Godot.SpringArm" class="text-break">Class SpringArm
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The SpringArm node is a node that casts a ray (or collision shape) along its z axis and moves all its direct children to the collision point, minus a margin.</p>
+<p>The most common use case for this is to make a 3rd person camera that reacts to collisions in the environment.</p>
+<p>The SpringArm will either cast a ray, or if a shape is given, it will cast the shape in the direction of its z axis.</p>
+<p>If you use the SpringArm as a camera controller for your player, you might need to exclude the player&apos;s collider from the SpringArm&apos;s collision check.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +968,8 @@
   
   <a id="Godot_SpringArm_CollisionMask_" data-uid="Godot.SpringArm.CollisionMask*"></a>
   <h4 id="Godot_SpringArm_CollisionMask" data-uid="Godot.SpringArm.CollisionMask">CollisionMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The layers against which the collision check shall be done. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +994,10 @@
   
   <a id="Godot_SpringArm_Margin_" data-uid="Godot.SpringArm.Margin*"></a>
   <h4 id="Godot_SpringArm_Margin" data-uid="Godot.SpringArm.Margin">Margin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When the collision check is made, a candidate length for the SpringArm is given.</p>
+<p>The margin is then subtracted to this length and the translation is applied to the child objects of the SpringArm.</p>
+<p>This margin is useful for when the SpringArm has a <a class="xref" href="Godot.Camera.html">Camera</a> as a child node: without the margin, the <a class="xref" href="Godot.Camera.html">Camera</a> would be placed on the exact point of collision, while with the margin the <a class="xref" href="Godot.Camera.html">Camera</a> would be placed close to the point of collision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1022,9 @@
   
   <a id="Godot_SpringArm_Shape_" data-uid="Godot.SpringArm.Shape*"></a>
   <h4 id="Godot_SpringArm_Shape" data-uid="Godot.SpringArm.Shape">Shape</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Shape.html">Shape</a> to use for the SpringArm.</p>
+<p>When the shape is set, the SpringArm will cast the <a class="xref" href="Godot.Shape.html">Shape</a> on its z axis instead of performing a ray cast.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1039,7 +1049,9 @@
   
   <a id="Godot_SpringArm_SpringLength_" data-uid="Godot.SpringArm.SpringLength*"></a>
   <h4 id="Godot_SpringArm_SpringLength" data-uid="Godot.SpringArm.SpringLength">SpringLength</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum extent of the SpringArm. This is used as a length for both the ray and the shape cast used internally to calculate the desired position of the SpringArm&apos;s child nodes.</p>
+<p>To know more about how to perform a shape cast or a ray cast, please consult the <a class="xref" href="Godot.PhysicsDirectSpaceState.html">PhysicsDirectSpaceState</a> documentation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1066,7 +1078,8 @@
   
   <a id="Godot_SpringArm_AddExcludedObject_" data-uid="Godot.SpringArm.AddExcludedObject*"></a>
   <h4 id="Godot_SpringArm_AddExcludedObject_Godot_RID_" data-uid="Godot.SpringArm.AddExcludedObject(Godot.RID)">AddExcludedObject(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a> object with the given <a class="xref" href="Godot.RID.html">RID</a> to the list of <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a> objects excluded from the collision check.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1093,7 +1106,8 @@
   
   <a id="Godot_SpringArm_ClearExcludedObjects_" data-uid="Godot.SpringArm.ClearExcludedObjects*"></a>
   <h4 id="Godot_SpringArm_ClearExcludedObjects" data-uid="Godot.SpringArm.ClearExcludedObjects">ClearExcludedObjects()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the list of <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a> objects excluded from the collision check.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1128,7 +1142,8 @@
   
   <a id="Godot_SpringArm_GetHitLength_" data-uid="Godot.SpringArm.GetHitLength*"></a>
   <h4 id="Godot_SpringArm_GetHitLength" data-uid="Godot.SpringArm.GetHitLength">GetHitLength()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the spring arm&apos;s current length.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1228,7 +1243,8 @@
   
   <a id="Godot_SpringArm_RemoveExcludedObject_" data-uid="Godot.SpringArm.RemoveExcludedObject*"></a>
   <h4 id="Godot_SpringArm_RemoveExcludedObject_Godot_RID_" data-uid="Godot.SpringArm.RemoveExcludedObject(Godot.RID)">RemoveExcludedObject(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the given <a class="xref" href="Godot.RID.html">RID</a> from the list of <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a> objects excluded from the collision check.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

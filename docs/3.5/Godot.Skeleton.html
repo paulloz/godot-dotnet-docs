@@ -83,7 +83,10 @@
   
   <h1 id="Godot_Skeleton" data-uid="Godot.Skeleton" class="text-break">Class Skeleton
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Skeleton provides a hierarchical interface for managing bones, including pose, rest and animation (see <a class="xref" href="Godot.Animation.html">Animation</a>). It can also use ragdoll physics.</p>
+<p>The overall transform of a bone with respect to the skeleton is determined by the following hierarchical order: rest pose, custom pose and pose.</p>
+<p>Note that &quot;global pose&quot; below refers to the overall transform of the bone with respect to skeleton, so it not the actual global/world transform of the bone.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -990,7 +993,8 @@
   
   <a id="Godot_Skeleton_AddBone_" data-uid="Godot.Skeleton.AddBone*"></a>
   <h4 id="Godot_Skeleton_AddBone_System_String_" data-uid="Godot.Skeleton.AddBone(System.String)">AddBone(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a bone, with name <code>name</code>. <a class="xref" href="Godot.Skeleton.html#Godot_Skeleton_GetBoneCount">GetBoneCount()</a> will become the bone index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1017,7 +1021,8 @@
   
   <a id="Godot_Skeleton_BindChildNodeToBone_" data-uid="Godot.Skeleton.BindChildNodeToBone*"></a>
   <h4 id="Godot_Skeleton_BindChildNodeToBone_System_Int32_Godot_Node_" data-uid="Godot.Skeleton.BindChildNodeToBone(System.Int32,Godot.Node)">BindChildNodeToBone(Int32, Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated soon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1049,7 +1054,8 @@
   
   <a id="Godot_Skeleton_ClearBones_" data-uid="Godot.Skeleton.ClearBones*"></a>
   <h4 id="Godot_Skeleton_ClearBones" data-uid="Godot.Skeleton.ClearBones">ClearBones()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clear all the bones in this skeleton.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1069,7 +1075,8 @@
   
   <a id="Godot_Skeleton_FindBone_" data-uid="Godot.Skeleton.FindBone*"></a>
   <h4 id="Godot_Skeleton_FindBone_System_String_" data-uid="Godot.Skeleton.FindBone(System.String)">FindBone(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the bone index that matches <code>name</code> as its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1111,7 +1118,8 @@
   
   <a id="Godot_Skeleton_GetBoneCount_" data-uid="Godot.Skeleton.GetBoneCount*"></a>
   <h4 id="Godot_Skeleton_GetBoneCount" data-uid="Godot.Skeleton.GetBoneCount">GetBoneCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of bones in the skeleton.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1136,7 +1144,8 @@
   
   <a id="Godot_Skeleton_GetBoneCustomPose_" data-uid="Godot.Skeleton.GetBoneCustomPose*"></a>
   <h4 id="Godot_Skeleton_GetBoneCustomPose_System_Int32_" data-uid="Godot.Skeleton.GetBoneCustomPose(System.Int32)">GetBoneCustomPose(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the custom pose of the specified bone. Custom pose is applied on top of the rest pose.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1178,7 +1187,8 @@
   
   <a id="Godot_Skeleton_GetBoneGlobalPose_" data-uid="Godot.Skeleton.GetBoneGlobalPose*"></a>
   <h4 id="Godot_Skeleton_GetBoneGlobalPose_System_Int32_" data-uid="Godot.Skeleton.GetBoneGlobalPose(System.Int32)">GetBoneGlobalPose(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the overall transform of the specified bone, with respect to the skeleton. Being relative to the skeleton frame, this is not the actual &quot;global&quot; transform of the bone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1220,7 +1230,8 @@
   
   <a id="Godot_Skeleton_GetBoneGlobalPoseNoOverride_" data-uid="Godot.Skeleton.GetBoneGlobalPoseNoOverride*"></a>
   <h4 id="Godot_Skeleton_GetBoneGlobalPoseNoOverride_System_Int32_" data-uid="Godot.Skeleton.GetBoneGlobalPoseNoOverride(System.Int32)">GetBoneGlobalPoseNoOverride(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the overall transform of the specified bone, with respect to the skeleton, but without any global pose overrides. Being relative to the skeleton frame, this is not the actual &quot;global&quot; transform of the bone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1262,7 +1273,8 @@
   
   <a id="Godot_Skeleton_GetBoneName_" data-uid="Godot.Skeleton.GetBoneName*"></a>
   <h4 id="Godot_Skeleton_GetBoneName_System_Int32_" data-uid="Godot.Skeleton.GetBoneName(System.Int32)">GetBoneName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of the bone at index <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1304,7 +1316,9 @@
   
   <a id="Godot_Skeleton_GetBoneParent_" data-uid="Godot.Skeleton.GetBoneParent*"></a>
   <h4 id="Godot_Skeleton_GetBoneParent_System_Int32_" data-uid="Godot.Skeleton.GetBoneParent(System.Int32)">GetBoneParent(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the bone index which is the parent of the bone at <code>bone_idx</code>. If -1, then bone has no parent.</p>
+<p>Note: The parent bone returned will always be less than <code>bone_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1346,7 +1360,8 @@
   
   <a id="Godot_Skeleton_GetBonePose_" data-uid="Godot.Skeleton.GetBonePose*"></a>
   <h4 id="Godot_Skeleton_GetBonePose_System_Int32_" data-uid="Godot.Skeleton.GetBonePose(System.Int32)">GetBonePose(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the pose transform of the specified bone. Pose is applied on top of the custom pose, which is applied on top the rest pose.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1388,7 +1403,8 @@
   
   <a id="Godot_Skeleton_GetBoneRest_" data-uid="Godot.Skeleton.GetBoneRest*"></a>
   <h4 id="Godot_Skeleton_GetBoneRest_System_Int32_" data-uid="Godot.Skeleton.GetBoneRest(System.Int32)">GetBoneRest(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the rest transform for a bone <code>bone_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1430,7 +1446,8 @@
   
   <a id="Godot_Skeleton_GetBoundChildNodesToBone_" data-uid="Godot.Skeleton.GetBoundChildNodesToBone*"></a>
   <h4 id="Godot_Skeleton_GetBoundChildNodesToBone_System_Int32_" data-uid="Godot.Skeleton.GetBoundChildNodesToBone(System.Int32)">GetBoundChildNodesToBone(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated soon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1597,7 +1614,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">bones</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1795,7 +1813,9 @@
   
   <a id="Godot_Skeleton_SetBoneParent_" data-uid="Godot.Skeleton.SetBoneParent*"></a>
   <h4 id="Godot_Skeleton_SetBoneParent_System_Int32_System_Int32_" data-uid="Godot.Skeleton.SetBoneParent(System.Int32,System.Int32)">SetBoneParent(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the bone index <code>parent_idx</code> as the parent of the bone at <code>bone_idx</code>. If -1, then bone has no parent.</p>
+<p>Note: <code>parent_idx</code> must be less than <code>bone_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1827,7 +1847,8 @@
   
   <a id="Godot_Skeleton_SetBonePose_" data-uid="Godot.Skeleton.SetBonePose*"></a>
   <h4 id="Godot_Skeleton_SetBonePose_System_Int32_Godot_Transform_" data-uid="Godot.Skeleton.SetBonePose(System.Int32,Godot.Transform)">SetBonePose(Int32, Transform)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the pose transform for bone <code>bone_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1859,7 +1880,8 @@
   
   <a id="Godot_Skeleton_SetBoneRest_" data-uid="Godot.Skeleton.SetBoneRest*"></a>
   <h4 id="Godot_Skeleton_SetBoneRest_System_Int32_Godot_Transform_" data-uid="Godot.Skeleton.SetBoneRest(System.Int32,Godot.Transform)">SetBoneRest(Int32, Transform)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the rest transform for bone <code>bone_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1891,7 +1913,8 @@
   
   <a id="Godot_Skeleton_UnbindChildNodeFromBone_" data-uid="Godot.Skeleton.UnbindChildNodeFromBone*"></a>
   <h4 id="Godot_Skeleton_UnbindChildNodeFromBone_System_Int32_Godot_Node_" data-uid="Godot.Skeleton.UnbindChildNodeFromBone(System.Int32,Godot.Node)">UnbindChildNodeFromBone(Int32, Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated soon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,8 @@
   
   <h1 id="Godot_TextureLayered" data-uid="Godot.TextureLayered" class="text-break">Class TextureLayered
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Base class for <a class="xref" href="Godot.Texture3D.html">Texture3D</a> and <a class="xref" href="Godot.TextureArray.html">TextureArray</a>. Cannot be used directly, but contains all the functions necessary for accessing and using <a class="xref" href="Godot.Texture3D.html">Texture3D</a> and <a class="xref" href="Godot.TextureArray.html">TextureArray</a>. Data is set on a per-layer basis. For <a class="xref" href="Godot.Texture3D.html">Texture3D</a>s, the layer specifies the depth or Z-index, they can be treated as a bunch of 2D slices. Similarly, for <a class="xref" href="Godot.TextureArray.html">TextureArray</a>s, the layer specifies the array layer.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -336,7 +337,8 @@
   
   <a id="Godot_TextureLayered_Data_" data-uid="Godot.TextureLayered.Data*"></a>
   <h4 id="Godot_TextureLayered_Data" data-uid="Godot.TextureLayered.Data">Data</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a dictionary with all the data used by this texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -361,7 +363,8 @@
   
   <a id="Godot_TextureLayered_Flags_" data-uid="Godot.TextureLayered.Flags*"></a>
   <h4 id="Godot_TextureLayered_Flags" data-uid="Godot.TextureLayered.Flags">Flags</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies which <a class="xref" href="Godot.TextureLayered.FlagsEnum.html">TextureLayered.FlagsEnum</a> apply to this texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -388,7 +391,8 @@
   
   <a id="Godot_TextureLayered_GetDepth_" data-uid="Godot.TextureLayered.GetDepth*"></a>
   <h4 id="Godot_TextureLayered_GetDepth" data-uid="Godot.TextureLayered.GetDepth">GetDepth()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the depth of the texture. Depth is the 3rd dimension (typically Z-axis).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -438,7 +442,8 @@
   
   <a id="Godot_TextureLayered_GetFormat_" data-uid="Godot.TextureLayered.GetFormat*"></a>
   <h4 id="Godot_TextureLayered_GetFormat" data-uid="Godot.TextureLayered.GetFormat">GetFormat()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current format being used by this texture. See <a class="xref" href="Godot.Image.Format.html">Image.Format</a> for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -463,7 +468,8 @@
   
   <a id="Godot_TextureLayered_GetHeight_" data-uid="Godot.TextureLayered.GetHeight*"></a>
   <h4 id="Godot_TextureLayered_GetHeight" data-uid="Godot.TextureLayered.GetHeight">GetHeight()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the height of the texture. Height is typically represented by the Y-axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -488,7 +494,8 @@
   
   <a id="Godot_TextureLayered_GetLayerData_" data-uid="Godot.TextureLayered.GetLayerData*"></a>
   <h4 id="Godot_TextureLayered_GetLayerData_System_Int32_" data-uid="Godot.TextureLayered.GetLayerData(System.Int32)">GetLayerData(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an <a class="xref" href="Godot.Image.html">Image</a> resource with the data from specified <code>layer</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -530,7 +537,8 @@
   
   <a id="Godot_TextureLayered_GetWidth_" data-uid="Godot.TextureLayered.GetWidth*"></a>
   <h4 id="Godot_TextureLayered_GetWidth" data-uid="Godot.TextureLayered.GetWidth">GetWidth()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the width of the texture. Width is typically represented by the X-axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -555,7 +563,8 @@
   
   <a id="Godot_TextureLayered_SetDataPartial_" data-uid="Godot.TextureLayered.SetDataPartial*"></a>
   <h4 id="Godot_TextureLayered_SetDataPartial_Godot_Image_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.TextureLayered.SetDataPartial(Godot.Image,System.Int32,System.Int32,System.Int32,System.Int32)">SetDataPartial(Image, Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Partially sets the data for a specified <code>layer</code> by overwriting using the data of the specified <code>image</code>. <code>x_offset</code> and <code>y_offset</code> determine where the <a class="xref" href="Godot.Image.html">Image</a> is &quot;stamped&quot; over the texture. The <code>image</code> must fit within the texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -629,7 +638,8 @@
   
   <a id="Godot_TextureLayered_SetLayerData_" data-uid="Godot.TextureLayered.SetLayerData*"></a>
   <h4 id="Godot_TextureLayered_SetLayerData_Godot_Image_System_Int32_" data-uid="Godot.TextureLayered.SetLayerData(Godot.Image,System.Int32)">SetLayerData(Image, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the data for the specified layer. Data takes the form of a 2-dimensional <a class="xref" href="Godot.Image.html">Image</a> resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

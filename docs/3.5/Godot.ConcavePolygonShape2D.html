@@ -83,7 +83,10 @@
   
   <h1 id="Godot_ConcavePolygonShape2D" data-uid="Godot.ConcavePolygonShape2D" class="text-break">Class ConcavePolygonShape2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Concave polygon 2D shape resource for physics. It is made out of segments and is optimal for complex polygonal concave collisions. However, it is not advised to use for <a class="xref" href="Godot.RigidBody2D.html">RigidBody2D</a> nodes. A CollisionPolygon2D in convex decomposition mode (solids) or several convex objects are advised for that instead. Otherwise, a concave polygon 2D shape is better for static collisions.</p>
+<p>The main difference between a <a class="xref" href="Godot.ConvexPolygonShape2D.html">ConvexPolygonShape2D</a> and a <a class="xref" href="Godot.ConcavePolygonShape2D.html">ConcavePolygonShape2D</a> is that a concave polygon assumes it is concave and uses a more complex method of collision detection, and a convex one forces itself to be convex in order to speed up collision detection.</p>
+<p>Warning: Using this shape for an <a class="xref" href="Godot.Area2D.html">Area2D</a> (via a <a class="xref" href="Godot.CollisionShape2D.html">CollisionShape2D</a> node) may give unexpected results: the area will only detect collisions with the segments in the <a class="xref" href="Godot.ConcavePolygonShape2D.html">ConcavePolygonShape2D</a> (and not with any &quot;inside&quot; of the shape, for example).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -371,7 +374,8 @@
   
   <a id="Godot_ConcavePolygonShape2D_Segments_" data-uid="Godot.ConcavePolygonShape2D.Segments*"></a>
   <h4 id="Godot_ConcavePolygonShape2D_Segments" data-uid="Godot.ConcavePolygonShape2D.Segments">Segments</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The array of points that make up the <a class="xref" href="Godot.ConcavePolygonShape2D.html">ConcavePolygonShape2D</a>&apos;s line segments.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

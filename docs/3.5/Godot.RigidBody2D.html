@@ -83,7 +83,13 @@
   
   <h1 id="Godot_RigidBody2D" data-uid="Godot.RigidBody2D" class="text-break">Class RigidBody2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This node implements simulated 2D physics. You do not control a RigidBody2D directly. Instead, you apply forces to it (gravity, impulses, etc.) and the physics simulation calculates the resulting movement based on its mass, friction, and other physical properties.</p>
+<p>A RigidBody2D has 4 behavior <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_Mode">Mode</a>s: Rigid, Static, Character, and Kinematic.</p>
+<p>Note: You should not change a RigidBody2D&apos;s <code>position</code> or <code>linear_velocity</code> every frame or even very often. If you need to directly affect the body&apos;s state, use <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D__IntegrateForces_Godot_Physics2DDirectBodyState_">_IntegrateForces(Physics2DDirectBodyState)</a>, which allows you to directly access the physics state.</p>
+<p>Please also keep in mind that physics bodies manage their own transform which overwrites the ones you set. So any direct or indirect transformation (including scaling of the node or its parent) will be visible in the editor only, and immediately reset at runtime.</p>
+<p>If you need to override the default physics behavior or add a transformation at runtime, you can write a custom force integration. See <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_CustomIntegrator">CustomIntegrator</a>.</p>
+<p>The center of mass is always located at the node&apos;s origin without taking into account the <a class="xref" href="Godot.CollisionShape2D.html">CollisionShape2D</a> centroid offsets.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1228,7 +1234,9 @@
   
   <a id="Godot_RigidBody2D_AngularDamp_" data-uid="Godot.RigidBody2D.AngularDamp*"></a>
   <h4 id="Godot_RigidBody2D_AngularDamp" data-uid="Godot.RigidBody2D.AngularDamp">AngularDamp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Damps the body&apos;s <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_AngularVelocity">AngularVelocity</a>. If <code>-1</code>, the body will use the Default Angular Damp defined in Project > Project Settings > Physics > 2d. If greater than <code>-1</code> it will be added to the default project value.</p>
+<p>See  for more details about damping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1253,7 +1261,8 @@
   
   <a id="Godot_RigidBody2D_AngularVelocity_" data-uid="Godot.RigidBody2D.AngularVelocity*"></a>
   <h4 id="Godot_RigidBody2D_AngularVelocity" data-uid="Godot.RigidBody2D.AngularVelocity">AngularVelocity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s rotational velocity in radians per second.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1278,7 +1287,8 @@
   
   <a id="Godot_RigidBody2D_AppliedForce_" data-uid="Godot.RigidBody2D.AppliedForce*"></a>
   <h4 id="Godot_RigidBody2D_AppliedForce" data-uid="Godot.RigidBody2D.AppliedForce">AppliedForce</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s total applied force.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1303,7 +1313,8 @@
   
   <a id="Godot_RigidBody2D_AppliedTorque_" data-uid="Godot.RigidBody2D.AppliedTorque*"></a>
   <h4 id="Godot_RigidBody2D_AppliedTorque" data-uid="Godot.RigidBody2D.AppliedTorque">AppliedTorque</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s total applied torque.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1328,7 +1339,9 @@
   
   <a id="Godot_RigidBody2D_Bounce_" data-uid="Godot.RigidBody2D.Bounce*"></a>
   <h4 id="Godot_RigidBody2D_Bounce" data-uid="Godot.RigidBody2D.Bounce">Bounce</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s bounciness. Values range from <code>0</code> (no bounce) to <code>1</code> (full bounciness).</p>
+<p>Deprecated, use <a class="xref" href="Godot.PhysicsMaterial.html#Godot_PhysicsMaterial_Bounce">Bounce</a> instead via <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_PhysicsMaterialOverride">PhysicsMaterialOverride</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1353,7 +1366,9 @@
   
   <a id="Godot_RigidBody2D_CanSleep_" data-uid="Godot.RigidBody2D.CanSleep*"></a>
   <h4 id="Godot_RigidBody2D_CanSleep" data-uid="Godot.RigidBody2D.CanSleep">CanSleep</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the body can enter sleep mode when there is no movement. See <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_Sleeping">Sleeping</a>.</p>
+<p>Note: A RigidBody2D will never enter sleep mode automatically if its <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_Mode">Mode</a> is <a class="xref" href="Godot.RigidBody2D.ModeEnum.html#Godot_RigidBody2D_ModeEnum_Character">Character</a>. It can still be put to sleep manually by setting its <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_Sleeping">Sleeping</a> property to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1378,7 +1393,8 @@
   
   <a id="Godot_RigidBody2D_ContactMonitor_" data-uid="Godot.RigidBody2D.ContactMonitor*"></a>
   <h4 id="Godot_RigidBody2D_ContactMonitor" data-uid="Godot.RigidBody2D.ContactMonitor">ContactMonitor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the body will emit signals when it collides with another RigidBody2D. See also <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_ContactsReported">ContactsReported</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1403,7 +1419,9 @@
   
   <a id="Godot_RigidBody2D_ContactsReported_" data-uid="Godot.RigidBody2D.ContactsReported*"></a>
   <h4 id="Godot_RigidBody2D_ContactsReported" data-uid="Godot.RigidBody2D.ContactsReported">ContactsReported</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of contacts that will be recorded. Requires <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_ContactMonitor">ContactMonitor</a> to be set to <code>true</code>.</p>
+<p>Note: The number of contacts is different from the number of collisions. Collisions between parallel edges will result in two contacts (one at each end).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1428,7 +1446,9 @@
   
   <a id="Godot_RigidBody2D_ContinuousCd_" data-uid="Godot.RigidBody2D.ContinuousCd*"></a>
   <h4 id="Godot_RigidBody2D_ContinuousCd" data-uid="Godot.RigidBody2D.ContinuousCd">ContinuousCd</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Continuous collision detection mode.</p>
+<p>Continuous collision detection tries to predict where a moving body will collide instead of moving it and correcting its movement after collision. Continuous collision detection is slower, but more precise and misses fewer collisions with small, fast-moving objects. Raycasting and shapecasting methods are available. See <a class="xref" href="Godot.RigidBody2D.CCDMode.html">RigidBody2D.CCDMode</a> for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1453,7 +1473,8 @@
   
   <a id="Godot_RigidBody2D_CustomIntegrator_" data-uid="Godot.RigidBody2D.CustomIntegrator*"></a>
   <h4 id="Godot_RigidBody2D_CustomIntegrator" data-uid="Godot.RigidBody2D.CustomIntegrator">CustomIntegrator</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, internal force integration is disabled for this body. Aside from collision response, the body will only move as determined by the <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D__IntegrateForces_Godot_Physics2DDirectBodyState_">_IntegrateForces(Physics2DDirectBodyState)</a> function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1478,7 +1499,9 @@
   
   <a id="Godot_RigidBody2D_Friction_" data-uid="Godot.RigidBody2D.Friction*"></a>
   <h4 id="Godot_RigidBody2D_Friction" data-uid="Godot.RigidBody2D.Friction">Friction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s friction. Values range from <code>0</code> (frictionless) to <code>1</code> (maximum friction).</p>
+<p>Deprecated, use <a class="xref" href="Godot.PhysicsMaterial.html#Godot_PhysicsMaterial_Friction">Friction</a> instead via <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_PhysicsMaterialOverride">PhysicsMaterialOverride</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1503,7 +1526,8 @@
   
   <a id="Godot_RigidBody2D_GravityScale_" data-uid="Godot.RigidBody2D.GravityScale*"></a>
   <h4 id="Godot_RigidBody2D_GravityScale" data-uid="Godot.RigidBody2D.GravityScale">GravityScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Multiplies the gravity applied to the body. The body&apos;s gravity is calculated from the Default Gravity value in Project > Project Settings > Physics > 2d and/or any additional gravity vector applied by <a class="xref" href="Godot.Area2D.html">Area2D</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1528,7 +1552,8 @@
   
   <a id="Godot_RigidBody2D_Inertia_" data-uid="Godot.RigidBody2D.Inertia*"></a>
   <h4 id="Godot_RigidBody2D_Inertia" data-uid="Godot.RigidBody2D.Inertia">Inertia</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s moment of inertia. This is like mass, but for rotation: it determines how much torque it takes to rotate the body. The moment of inertia is usually computed automatically from the mass and the shapes, but this function allows you to set a custom value. Set 0 inertia to return to automatically computing it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1553,7 +1578,9 @@
   
   <a id="Godot_RigidBody2D_LinearDamp_" data-uid="Godot.RigidBody2D.LinearDamp*"></a>
   <h4 id="Godot_RigidBody2D_LinearDamp" data-uid="Godot.RigidBody2D.LinearDamp">LinearDamp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Damps the body&apos;s <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_LinearVelocity">LinearVelocity</a>. If <code>-1</code>, the body will use the Default Linear Damp in Project > Project Settings > Physics > 2d. If greater than <code>-1</code> it will be added to the default project value.</p>
+<p>See  for more details about damping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1578,7 +1605,8 @@
   
   <a id="Godot_RigidBody2D_LinearVelocity_" data-uid="Godot.RigidBody2D.LinearVelocity*"></a>
   <h4 id="Godot_RigidBody2D_LinearVelocity" data-uid="Godot.RigidBody2D.LinearVelocity">LinearVelocity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s linear velocity in pixels per second. Can be used sporadically, but don&apos;t set this every frame, because physics may run in another thread and runs at a different granularity. Use <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D__IntegrateForces_Godot_Physics2DDirectBodyState_">_IntegrateForces(Physics2DDirectBodyState)</a> as your process loop for precise control of the body state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1603,7 +1631,8 @@
   
   <a id="Godot_RigidBody2D_Mass_" data-uid="Godot.RigidBody2D.Mass*"></a>
   <h4 id="Godot_RigidBody2D_Mass" data-uid="Godot.RigidBody2D.Mass">Mass</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s mass.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1628,7 +1657,8 @@
   
   <a id="Godot_RigidBody2D_Mode_" data-uid="Godot.RigidBody2D.Mode*"></a>
   <h4 id="Godot_RigidBody2D_Mode" data-uid="Godot.RigidBody2D.Mode">Mode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s mode. See <a class="xref" href="Godot.RigidBody2D.ModeEnum.html">RigidBody2D.ModeEnum</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1653,7 +1683,9 @@
   
   <a id="Godot_RigidBody2D_PhysicsMaterialOverride_" data-uid="Godot.RigidBody2D.PhysicsMaterialOverride*"></a>
   <h4 id="Godot_RigidBody2D_PhysicsMaterialOverride" data-uid="Godot.RigidBody2D.PhysicsMaterialOverride">PhysicsMaterialOverride</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics material override for the body.</p>
+<p>If a material is assigned to this property, it will be used instead of any other physics material, such as an inherited one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1678,7 +1710,8 @@
   
   <a id="Godot_RigidBody2D_Sleeping_" data-uid="Godot.RigidBody2D.Sleeping*"></a>
   <h4 id="Godot_RigidBody2D_Sleeping" data-uid="Godot.RigidBody2D.Sleeping">Sleeping</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the body will not move and will not calculate forces until woken up by another body through, for example, a collision, or by using the <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_ApplyImpulse_Godot_Vector2_Godot_Vector2_">ApplyImpulse(Vector2, Vector2)</a> or <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_AddForce_Godot_Vector2_Godot_Vector2_">AddForce(Vector2, Vector2)</a> methods.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1703,7 +1736,8 @@
   
   <a id="Godot_RigidBody2D_Weight_" data-uid="Godot.RigidBody2D.Weight*"></a>
   <h4 id="Godot_RigidBody2D_Weight" data-uid="Godot.RigidBody2D.Weight">Weight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The body&apos;s weight based on its mass and the Default Gravity value in Project > Project Settings > Physics > 2d.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1730,7 +1764,8 @@
   
   <a id="Godot_RigidBody2D__IntegrateForces_" data-uid="Godot.RigidBody2D._IntegrateForces*"></a>
   <h4 id="Godot_RigidBody2D__IntegrateForces_Godot_Physics2DDirectBodyState_" data-uid="Godot.RigidBody2D._IntegrateForces(Godot.Physics2DDirectBodyState)">_IntegrateForces(Physics2DDirectBodyState)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allows you to read and safely modify the simulation state for the object. Use this instead of <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> if you need to directly change the body&apos;s <code>position</code> or other physics properties. By default, it works in addition to the usual physics behavior, but <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_CustomIntegrator">CustomIntegrator</a> allows you to disable the default behavior and write custom force integration for a body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1757,7 +1792,8 @@
   
   <a id="Godot_RigidBody2D_AddCentralForce_" data-uid="Godot.RigidBody2D.AddCentralForce*"></a>
   <h4 id="Godot_RigidBody2D_AddCentralForce_Godot_Vector2_" data-uid="Godot.RigidBody2D.AddCentralForce(Godot.Vector2)">AddCentralForce(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a constant directional force without affecting rotation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1784,7 +1820,8 @@
   
   <a id="Godot_RigidBody2D_AddForce_" data-uid="Godot.RigidBody2D.AddForce*"></a>
   <h4 id="Godot_RigidBody2D_AddForce_Godot_Vector2_Godot_Vector2_" data-uid="Godot.RigidBody2D.AddForce(Godot.Vector2,Godot.Vector2)">AddForce(Vector2, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a positioned force to the body. Both the force and the offset from the body origin are in global coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1816,7 +1853,8 @@
   
   <a id="Godot_RigidBody2D_AddTorque_" data-uid="Godot.RigidBody2D.AddTorque*"></a>
   <h4 id="Godot_RigidBody2D_AddTorque_System_Single_" data-uid="Godot.RigidBody2D.AddTorque(System.Single)">AddTorque(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a constant rotational force.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1843,7 +1881,8 @@
   
   <a id="Godot_RigidBody2D_ApplyCentralImpulse_" data-uid="Godot.RigidBody2D.ApplyCentralImpulse*"></a>
   <h4 id="Godot_RigidBody2D_ApplyCentralImpulse_Godot_Vector2_" data-uid="Godot.RigidBody2D.ApplyCentralImpulse(Godot.Vector2)">ApplyCentralImpulse(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies a directional impulse without affecting rotation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1870,7 +1909,8 @@
   
   <a id="Godot_RigidBody2D_ApplyImpulse_" data-uid="Godot.RigidBody2D.ApplyImpulse*"></a>
   <h4 id="Godot_RigidBody2D_ApplyImpulse_Godot_Vector2_Godot_Vector2_" data-uid="Godot.RigidBody2D.ApplyImpulse(Godot.Vector2,Godot.Vector2)">ApplyImpulse(Vector2, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies a positioned impulse to the body. An impulse is time-independent! Applying an impulse every frame would result in a framerate-dependent force. For this reason it should only be used when simulating one-time impacts (use the &quot;_force&quot; functions otherwise). The position uses the rotation of the global coordinate system, but is centered at the object&apos;s origin.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1902,7 +1942,8 @@
   
   <a id="Godot_RigidBody2D_ApplyTorqueImpulse_" data-uid="Godot.RigidBody2D.ApplyTorqueImpulse*"></a>
   <h4 id="Godot_RigidBody2D_ApplyTorqueImpulse_System_Single_" data-uid="Godot.RigidBody2D.ApplyTorqueImpulse(System.Single)">ApplyTorqueImpulse(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies a rotational impulse to the body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2054,7 +2095,9 @@
   
   <a id="Godot_RigidBody2D_GetCollidingBodies_" data-uid="Godot.RigidBody2D.GetCollidingBodies*"></a>
   <h4 id="Godot_RigidBody2D_GetCollidingBodies" data-uid="Godot.RigidBody2D.GetCollidingBodies">GetCollidingBodies()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of the bodies colliding with this one. Requires <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_ContactMonitor">ContactMonitor</a> to be set to <code>true</code> and <a class="xref" href="Godot.RigidBody2D.html#Godot_RigidBody2D_ContactsReported">ContactsReported</a> to be set high enough to detect all the collisions.</p>
+<p>Note: The result of this test is not immediate after moving objects. For performance, list of collisions is updated once per frame and before the physics step. Consider using signals instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2562,7 +2605,8 @@
   
   <a id="Godot_RigidBody2D_SetAxisVelocity_" data-uid="Godot.RigidBody2D.SetAxisVelocity*"></a>
   <h4 id="Godot_RigidBody2D_SetAxisVelocity_Godot_Vector2_" data-uid="Godot.RigidBody2D.SetAxisVelocity(Godot.Vector2)">SetAxisVelocity(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the body&apos;s velocity on the given axis. The velocity in the given vector axis will be set as the given vector length. This is useful for jumping behavior.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3021,7 +3065,8 @@
   
   <a id="Godot_RigidBody2D_TestMotion_" data-uid="Godot.RigidBody2D.TestMotion*"></a>
   <h4 id="Godot_RigidBody2D_TestMotion_Godot_Vector2_System_Boolean_System_Single_Godot_Physics2DTestMotionResult_" data-uid="Godot.RigidBody2D.TestMotion(Godot.Vector2,System.Boolean,System.Single,Godot.Physics2DTestMotionResult)">TestMotion(Vector2, Boolean, Single, Physics2DTestMotionResult)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a collision would result from moving in the given vector. <code>margin</code> increases the size of the shapes involved in the collision detection, and <code>result</code> is an object of type <a class="xref" href="Godot.Physics2DTestMotionResult.html">Physics2DTestMotionResult</a>, which contains additional information about the collision (should there be one).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

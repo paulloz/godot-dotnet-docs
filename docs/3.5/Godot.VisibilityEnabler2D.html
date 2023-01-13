@@ -83,7 +83,11 @@
   
   <h1 id="Godot_VisibilityEnabler2D" data-uid="Godot.VisibilityEnabler2D" class="text-break">Class VisibilityEnabler2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The VisibilityEnabler2D will disable <a class="xref" href="Godot.RigidBody2D.html">RigidBody2D</a>, <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a>, and other nodes when they are not visible. It will only affect nodes with the same root node as the VisibilityEnabler2D, and the root node itself.</p>
+<p>If you just want to receive notifications, use <a class="xref" href="Godot.VisibilityNotifier2D.html">VisibilityNotifier2D</a> instead.</p>
+<p>Note: For performance reasons, VisibilityEnabler2D uses an approximate heuristic with precision determined by . If you need precise visibility checking, use another method such as adding an <a class="xref" href="Godot.Area2D.html">Area2D</a> node as a child of a <a class="xref" href="Godot.Camera2D.html">Camera2D</a> node.</p>
+<p>Note: VisibilityEnabler2D will not affect nodes added after scene initialization.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1125,7 +1129,8 @@
   
   <a id="Godot_VisibilityEnabler2D_FreezeBodies_" data-uid="Godot.VisibilityEnabler2D.FreezeBodies*"></a>
   <h4 id="Godot_VisibilityEnabler2D_FreezeBodies" data-uid="Godot.VisibilityEnabler2D.FreezeBodies">FreezeBodies</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, <a class="xref" href="Godot.RigidBody2D.html">RigidBody2D</a> nodes will be paused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1150,7 +1155,8 @@
   
   <a id="Godot_VisibilityEnabler2D_PauseAnimatedSprites_" data-uid="Godot.VisibilityEnabler2D.PauseAnimatedSprites*"></a>
   <h4 id="Godot_VisibilityEnabler2D_PauseAnimatedSprites" data-uid="Godot.VisibilityEnabler2D.PauseAnimatedSprites">PauseAnimatedSprites</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, <a class="xref" href="Godot.AnimatedSprite.html">AnimatedSprite</a> nodes will be paused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1175,7 +1181,8 @@
   
   <a id="Godot_VisibilityEnabler2D_PauseAnimations_" data-uid="Godot.VisibilityEnabler2D.PauseAnimations*"></a>
   <h4 id="Godot_VisibilityEnabler2D_PauseAnimations" data-uid="Godot.VisibilityEnabler2D.PauseAnimations">PauseAnimations</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a> nodes will be paused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1200,7 +1207,8 @@
   
   <a id="Godot_VisibilityEnabler2D_PauseParticles_" data-uid="Godot.VisibilityEnabler2D.PauseParticles*"></a>
   <h4 id="Godot_VisibilityEnabler2D_PauseParticles" data-uid="Godot.VisibilityEnabler2D.PauseParticles">PauseParticles</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, <a class="xref" href="Godot.Particles2D.html">Particles2D</a> nodes will be paused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1225,7 +1233,8 @@
   
   <a id="Godot_VisibilityEnabler2D_PhysicsProcessParent_" data-uid="Godot.VisibilityEnabler2D.PhysicsProcessParent*"></a>
   <h4 id="Godot_VisibilityEnabler2D_PhysicsProcessParent" data-uid="Godot.VisibilityEnabler2D.PhysicsProcessParent">PhysicsProcessParent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the parent&apos;s <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> will be stopped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1250,7 +1259,8 @@
   
   <a id="Godot_VisibilityEnabler2D_ProcessParent_" data-uid="Godot.VisibilityEnabler2D.ProcessParent*"></a>
   <h4 id="Godot_VisibilityEnabler2D_ProcessParent" data-uid="Godot.VisibilityEnabler2D.ProcessParent">ProcessParent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the parent&apos;s <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a> will be stopped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1277,7 +1287,8 @@
   
   <a id="Godot_VisibilityEnabler2D_IsEnablerEnabled_" data-uid="Godot.VisibilityEnabler2D.IsEnablerEnabled*"></a>
   <h4 id="Godot_VisibilityEnabler2D_IsEnablerEnabled_Godot_VisibilityEnabler2D_Enabler_" data-uid="Godot.VisibilityEnabler2D.IsEnablerEnabled(Godot.VisibilityEnabler2D.Enabler)">IsEnablerEnabled(VisibilityEnabler2D.Enabler)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the enabler identified by given <a class="xref" href="Godot.VisibilityEnabler2D.Enabler.html">VisibilityEnabler2D.Enabler</a> constant is active.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1319,7 +1330,8 @@
   
   <a id="Godot_VisibilityEnabler2D_SetEnabler_" data-uid="Godot.VisibilityEnabler2D.SetEnabler*"></a>
   <h4 id="Godot_VisibilityEnabler2D_SetEnabler_Godot_VisibilityEnabler2D_Enabler_System_Boolean_" data-uid="Godot.VisibilityEnabler2D.SetEnabler(Godot.VisibilityEnabler2D.Enabler,System.Boolean)">SetEnabler(VisibilityEnabler2D.Enabler, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets active state of the enabler identified by given <a class="xref" href="Godot.VisibilityEnabler2D.Enabler.html">VisibilityEnabler2D.Enabler</a> constant.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

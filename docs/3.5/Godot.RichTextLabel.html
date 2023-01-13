@@ -83,7 +83,13 @@
   
   <h1 id="Godot_RichTextLabel" data-uid="Godot.RichTextLabel" class="text-break">Class RichTextLabel
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Rich text can contain custom text, fonts, images and some basic formatting. The label manages these as an internal tag stack. It also adapts itself to given width/heights.</p>
+<p>Note: Assignments to <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_BbcodeText">BbcodeText</a> clear the tag stack and reconstruct it from the property&apos;s contents. Any edits made to <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_BbcodeText">BbcodeText</a> will erase previous edits made from other manual sources such as <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_AppendBbcode_System_String_">AppendBbcode(String)</a> and the <code>push_*</code> / <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_Pop">Pop()</a> methods.</p>
+<p>Note: RichTextLabel doesn&apos;t support entangled BBCode tags. For example, instead of using <code>[b]bold[i]bold italic[/b]italic[/i]</code>, use <code>[b]bold[i]bold italic[/i][/b][i]italic[/i]</code>.</p>
+<p>Note: <code>push_*/pop</code> functions won&apos;t affect BBCode.</p>
+<p>Note: Unlike <a class="xref" href="Godot.Label.html">Label</a>, RichTextLabel doesn&apos;t have a property to horizontally align text to the center. Instead, enable <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_BbcodeEnabled">BbcodeEnabled</a> and surround the text in a <code>[center]</code> tag as follows: <code>[center]Example[/center]</code>. There is currently no built-in way to vertically align text either, but this can be emulated by relying on anchors/containers and the <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_FitContentHeight">FitContentHeight</a> property.</p>
+<p>Note: Unicode characters after <code>0xffff</code> (such as most emoji) are not supported on Windows. They will display as unknown characters instead. This will be resolved in Godot 4.0.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1463,7 +1469,9 @@
   
   <a id="Godot_RichTextLabel_BbcodeEnabled_" data-uid="Godot.RichTextLabel.BbcodeEnabled*"></a>
   <h4 id="Godot_RichTextLabel_BbcodeEnabled" data-uid="Godot.RichTextLabel.BbcodeEnabled">BbcodeEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the label uses BBCode formatting.</p>
+<p>Note: Trying to alter the <a class="xref" href="Godot.RichTextLabel.html">RichTextLabel</a>&apos;s text with <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_AddText_System_String_">AddText(String)</a> will reset this to <code>false</code>. Use instead <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_AppendBbcode_System_String_">AppendBbcode(String)</a> to preserve BBCode formatting.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1488,7 +1496,9 @@
   
   <a id="Godot_RichTextLabel_BbcodeText_" data-uid="Godot.RichTextLabel.BbcodeText*"></a>
   <h4 id="Godot_RichTextLabel_BbcodeText" data-uid="Godot.RichTextLabel.BbcodeText">BbcodeText</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The label&apos;s text in BBCode format. Is not representative of manual modifications to the internal tag stack. Erases changes made by other methods when edited.</p>
+<p>Note: It is unadvised to use the <code>+=</code> operator with <code>bbcode_text</code> (e.g. <code>bbcode_text += &quot;some string&quot;</code>) as it replaces the whole text and can cause slowdowns. It will also erase all BBCode that was added to stack using <code>push_*</code> methods. Use <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_AppendBbcode_System_String_">AppendBbcode(String)</a> for adding text instead, unless you absolutely need to close a tag that was opened in an earlier method call.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1513,7 +1523,9 @@
   
   <a id="Godot_RichTextLabel_CustomEffects_" data-uid="Godot.RichTextLabel.CustomEffects*"></a>
   <h4 id="Godot_RichTextLabel_CustomEffects" data-uid="Godot.RichTextLabel.CustomEffects">CustomEffects</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The currently installed custom effects. This is an array of <a class="xref" href="Godot.RichTextEffect.html">RichTextEffect</a>s.</p>
+<p>To add a custom effect, it&apos;s more convenient to use <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_InstallEffect_System_Object_">InstallEffect(Object)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1538,7 +1550,8 @@
   
   <a id="Godot_RichTextLabel_DeselectOnFocusLossEnabled_" data-uid="Godot.RichTextLabel.DeselectOnFocusLossEnabled*"></a>
   <h4 id="Godot_RichTextLabel_DeselectOnFocusLossEnabled" data-uid="Godot.RichTextLabel.DeselectOnFocusLossEnabled">DeselectOnFocusLossEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the selected text will be deselected when focus is lost.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1563,7 +1576,9 @@
   
   <a id="Godot_RichTextLabel_FitContentHeight_" data-uid="Godot.RichTextLabel.FitContentHeight*"></a>
   <h4 id="Godot_RichTextLabel_FitContentHeight" data-uid="Godot.RichTextLabel.FitContentHeight">FitContentHeight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the label&apos;s height will be automatically updated to fit its content.</p>
+<p>Note: This property is used as a workaround to fix issues with <a class="xref" href="Godot.RichTextLabel.html">RichTextLabel</a> in <a class="xref" href="Godot.Container.html">Container</a>s, but it&apos;s unreliable in some cases and will be removed in future versions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1588,7 +1603,8 @@
   
   <a id="Godot_RichTextLabel_MetaUnderlined_" data-uid="Godot.RichTextLabel.MetaUnderlined*"></a>
   <h4 id="Godot_RichTextLabel_MetaUnderlined" data-uid="Godot.RichTextLabel.MetaUnderlined">MetaUnderlined</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the label underlines meta tags such as <code>[url]{text}[/url]</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1613,7 +1629,8 @@
   
   <a id="Godot_RichTextLabel_OverrideSelectedFontColor_" data-uid="Godot.RichTextLabel.OverrideSelectedFontColor*"></a>
   <h4 id="Godot_RichTextLabel_OverrideSelectedFontColor" data-uid="Godot.RichTextLabel.OverrideSelectedFontColor">OverrideSelectedFontColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the label uses the custom font color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1638,7 +1655,9 @@
   
   <a id="Godot_RichTextLabel_PercentVisible_" data-uid="Godot.RichTextLabel.PercentVisible*"></a>
   <h4 id="Godot_RichTextLabel_PercentVisible" data-uid="Godot.RichTextLabel.PercentVisible">PercentVisible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The range of characters to display, as a <span class="xref">System.Single</span> between 0.0 and 1.0. When assigned an out of range value, it&apos;s the same as assigning 1.0.</p>
+<p>Note: Setting this property updates <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_VisibleCharacters">VisibleCharacters</a> based on current <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_GetTotalCharacterCount">GetTotalCharacterCount()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1663,7 +1682,8 @@
   
   <a id="Godot_RichTextLabel_ScrollActive_" data-uid="Godot.RichTextLabel.ScrollActive*"></a>
   <h4 id="Godot_RichTextLabel_ScrollActive" data-uid="Godot.RichTextLabel.ScrollActive">ScrollActive</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the scrollbar is visible. Setting this to <code>false</code> does not block scrolling completely. See <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_ScrollToLine_System_Int32_">ScrollToLine(Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1688,7 +1708,8 @@
   
   <a id="Godot_RichTextLabel_ScrollFollowing_" data-uid="Godot.RichTextLabel.ScrollFollowing*"></a>
   <h4 id="Godot_RichTextLabel_ScrollFollowing" data-uid="Godot.RichTextLabel.ScrollFollowing">ScrollFollowing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the window scrolls down to display new content automatically.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1713,7 +1734,8 @@
   
   <a id="Godot_RichTextLabel_SelectionEnabled_" data-uid="Godot.RichTextLabel.SelectionEnabled*"></a>
   <h4 id="Godot_RichTextLabel_SelectionEnabled" data-uid="Godot.RichTextLabel.SelectionEnabled">SelectionEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the label allows text selection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1738,7 +1760,8 @@
   
   <a id="Godot_RichTextLabel_TabSize_" data-uid="Godot.RichTextLabel.TabSize*"></a>
   <h4 id="Godot_RichTextLabel_TabSize" data-uid="Godot.RichTextLabel.TabSize">TabSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of spaces associated with a single tab length. Does not affect <code>\t</code> in text tags, only indent tags.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1763,7 +1786,9 @@
   
   <a id="Godot_RichTextLabel_Text_" data-uid="Godot.RichTextLabel.Text*"></a>
   <h4 id="Godot_RichTextLabel_Text" data-uid="Godot.RichTextLabel.Text">Text</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The raw text of the label.</p>
+<p>When set, clears the tag stack and adds a raw text tag to the top of it. Does not parse BBCodes. Does not modify <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_BbcodeText">BbcodeText</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1788,7 +1813,9 @@
   
   <a id="Godot_RichTextLabel_VisibleCharacters_" data-uid="Godot.RichTextLabel.VisibleCharacters*"></a>
   <h4 id="Godot_RichTextLabel_VisibleCharacters" data-uid="Godot.RichTextLabel.VisibleCharacters">VisibleCharacters</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The restricted number of characters to display in the label. If <code>-1</code>, all characters will be displayed.</p>
+<p>Note: Setting this property updates <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_PercentVisible">PercentVisible</a> based on current <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_GetTotalCharacterCount">GetTotalCharacterCount()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1815,7 +1842,9 @@
   
   <a id="Godot_RichTextLabel_AddImage_" data-uid="Godot.RichTextLabel.AddImage*"></a>
   <h4 id="Godot_RichTextLabel_AddImage_Godot_Texture_System_Int32_System_Int32_Godot_RichTextLabel_InlineAlign_" data-uid="Godot.RichTextLabel.AddImage(Godot.Texture,System.Int32,System.Int32,Godot.RichTextLabel.InlineAlign)">AddImage(Texture, Int32, Int32, RichTextLabel.InlineAlign)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an image&apos;s opening and closing tags to the tag stack, optionally providing a <code>width</code> and <code>height</code> to resize the image.</p>
+<p>If <code>width</code> or <code>height</code> is set to 0, the image size will be adjusted in order to keep the original aspect ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1857,7 +1886,8 @@
   
   <a id="Godot_RichTextLabel_AddText_" data-uid="Godot.RichTextLabel.AddText*"></a>
   <h4 id="Godot_RichTextLabel_AddText_System_String_" data-uid="Godot.RichTextLabel.AddText(System.String)">AddText(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds raw non-BBCode-parsed text to the tag stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1884,7 +1914,10 @@
   
   <a id="Godot_RichTextLabel_AppendBbcode_" data-uid="Godot.RichTextLabel.AppendBbcode*"></a>
   <h4 id="Godot_RichTextLabel_AppendBbcode_System_String_" data-uid="Godot.RichTextLabel.AppendBbcode(System.String)">AppendBbcode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Parses <code>bbcode</code> and adds tags to the tag stack as needed.</p>
+<p>Note: Using this method, you can&apos;t close a tag that was opened in a previous <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_AppendBbcode_System_String_">AppendBbcode(String)</a> call. This is done to improve performance, especially when updating large RichTextLabels since rebuilding the whole BBCode every time would be slower. If you absolutely need to close a tag in a future method call, append the <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_BbcodeText">BbcodeText</a> instead of using <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_AppendBbcode_System_String_">AppendBbcode(String)</a>.</p>
+<p>Note: This method internals&apos; can&apos;t possibly fail, but an error code is returned for backwards compatibility, which will always be <code>OK</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1926,7 +1959,8 @@
   
   <a id="Godot_RichTextLabel_Clear_" data-uid="Godot.RichTextLabel.Clear*"></a>
   <h4 id="Godot_RichTextLabel_Clear" data-uid="Godot.RichTextLabel.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the tag stack and sets <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_BbcodeText">BbcodeText</a> to an empty string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1936,7 +1970,8 @@
   
   <a id="Godot_RichTextLabel_Deselect_" data-uid="Godot.RichTextLabel.Deselect*"></a>
   <h4 id="Godot_RichTextLabel_Deselect" data-uid="Godot.RichTextLabel.Deselect">Deselect()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the current selection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1971,7 +2006,8 @@
   
   <a id="Godot_RichTextLabel_GetContentHeight_" data-uid="Godot.RichTextLabel.GetContentHeight*"></a>
   <h4 id="Godot_RichTextLabel_GetContentHeight" data-uid="Godot.RichTextLabel.GetContentHeight">GetContentHeight()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the height of the content.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2021,7 +2057,8 @@
   
   <a id="Godot_RichTextLabel_GetLineCount_" data-uid="Godot.RichTextLabel.GetLineCount*"></a>
   <h4 id="Godot_RichTextLabel_GetLineCount" data-uid="Godot.RichTextLabel.GetLineCount">GetLineCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total number of newlines in the tag stack&apos;s text tags. Considers wrapped text as one line.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2071,7 +2108,8 @@
   
   <a id="Godot_RichTextLabel_GetSelectedText_" data-uid="Godot.RichTextLabel.GetSelectedText*"></a>
   <h4 id="Godot_RichTextLabel_GetSelectedText" data-uid="Godot.RichTextLabel.GetSelectedText">GetSelectedText()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current selection text. Does not include BBCodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2146,7 +2184,8 @@
   
   <a id="Godot_RichTextLabel_GetTotalCharacterCount_" data-uid="Godot.RichTextLabel.GetTotalCharacterCount*"></a>
   <h4 id="Godot_RichTextLabel_GetTotalCharacterCount" data-uid="Godot.RichTextLabel.GetTotalCharacterCount">GetTotalCharacterCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total number of characters from text tags. Does not include BBCodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2196,7 +2235,8 @@
   
   <a id="Godot_RichTextLabel_GetVisibleLineCount_" data-uid="Godot.RichTextLabel.GetVisibleLineCount*"></a>
   <h4 id="Godot_RichTextLabel_GetVisibleLineCount" data-uid="Godot.RichTextLabel.GetVisibleLineCount">GetVisibleLineCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of visible lines.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2221,7 +2261,9 @@
   
   <a id="Godot_RichTextLabel_GetVScroll_" data-uid="Godot.RichTextLabel.GetVScroll*"></a>
   <h4 id="Godot_RichTextLabel_GetVScroll" data-uid="Godot.RichTextLabel.GetVScroll">GetVScroll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the vertical scrollbar.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2246,7 +2288,8 @@
   
   <a id="Godot_RichTextLabel_InstallEffect_" data-uid="Godot.RichTextLabel.InstallEffect*"></a>
   <h4 id="Godot_RichTextLabel_InstallEffect_System_Object_" data-uid="Godot.RichTextLabel.InstallEffect(System.Object)">InstallEffect(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Installs a custom effect. <code>effect</code> should be a valid <a class="xref" href="Godot.RichTextEffect.html">RichTextEffect</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2473,7 +2516,8 @@
   
   <a id="Godot_RichTextLabel_Newline_" data-uid="Godot.RichTextLabel.Newline*"></a>
   <h4 id="Godot_RichTextLabel_Newline" data-uid="Godot.RichTextLabel.Newline">Newline()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a newline tag to the tag stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2483,7 +2527,9 @@
   
   <a id="Godot_RichTextLabel_ParseBbcode_" data-uid="Godot.RichTextLabel.ParseBbcode*"></a>
   <h4 id="Godot_RichTextLabel_ParseBbcode_System_String_" data-uid="Godot.RichTextLabel.ParseBbcode(System.String)">ParseBbcode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The assignment version of <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_AppendBbcode_System_String_">AppendBbcode(String)</a>. Clears the tag stack and inserts the new content.</p>
+<p>Note: This method internals&apos; can&apos;t possibly fail, but an error code is returned for backwards compatibility, which will always be <code>OK</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2525,7 +2571,8 @@
   
   <a id="Godot_RichTextLabel_ParseExpressionsForValues_" data-uid="Godot.RichTextLabel.ParseExpressionsForValues*"></a>
   <h4 id="Godot_RichTextLabel_ParseExpressionsForValues_System_String___" data-uid="Godot.RichTextLabel.ParseExpressionsForValues(System.String[])">ParseExpressionsForValues(String[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Parses BBCode parameter <code>expressions</code> into a dictionary.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2567,7 +2614,8 @@
   
   <a id="Godot_RichTextLabel_Pop_" data-uid="Godot.RichTextLabel.Pop*"></a>
   <h4 id="Godot_RichTextLabel_Pop" data-uid="Godot.RichTextLabel.Pop">Pop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Terminates the current tag. Use after <code>push_*</code> methods to close BBCodes manually. Does not need to follow <code>add_*</code> methods.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2577,7 +2625,8 @@
   
   <a id="Godot_RichTextLabel_PushAlign_" data-uid="Godot.RichTextLabel.PushAlign*"></a>
   <h4 id="Godot_RichTextLabel_PushAlign_Godot_RichTextLabel_Align_" data-uid="Godot.RichTextLabel.PushAlign(Godot.RichTextLabel.Align)">PushAlign(RichTextLabel.Align)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an <code>[align]</code> tag based on the given <code>align</code> value. See <a class="xref" href="Godot.RichTextLabel.Align.html">RichTextLabel.Align</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2604,7 +2653,8 @@
   
   <a id="Godot_RichTextLabel_PushBold_" data-uid="Godot.RichTextLabel.PushBold*"></a>
   <h4 id="Godot_RichTextLabel_PushBold" data-uid="Godot.RichTextLabel.PushBold">PushBold()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[font]</code> tag with a bold font to the tag stack. This is the same as adding a <code>[b]</code> tag if not currently in a <code>[i]</code> tag.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2614,7 +2664,8 @@
   
   <a id="Godot_RichTextLabel_PushBoldItalics_" data-uid="Godot.RichTextLabel.PushBoldItalics*"></a>
   <h4 id="Godot_RichTextLabel_PushBoldItalics" data-uid="Godot.RichTextLabel.PushBoldItalics">PushBoldItalics()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[font]</code> tag with a bold italics font to the tag stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2624,7 +2675,8 @@
   
   <a id="Godot_RichTextLabel_PushCell_" data-uid="Godot.RichTextLabel.PushCell*"></a>
   <h4 id="Godot_RichTextLabel_PushCell" data-uid="Godot.RichTextLabel.PushCell">PushCell()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[cell]</code> tag to the tag stack. Must be inside a <code>[table]</code> tag. See <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_PushTable_System_Int32_">PushTable(Int32)</a> for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2634,7 +2686,8 @@
   
   <a id="Godot_RichTextLabel_PushColor_" data-uid="Godot.RichTextLabel.PushColor*"></a>
   <h4 id="Godot_RichTextLabel_PushColor_Godot_Color_" data-uid="Godot.RichTextLabel.PushColor(Godot.Color)">PushColor(Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[color]</code> tag to the tag stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2661,7 +2714,8 @@
   
   <a id="Godot_RichTextLabel_PushFont_" data-uid="Godot.RichTextLabel.PushFont*"></a>
   <h4 id="Godot_RichTextLabel_PushFont_Godot_Font_" data-uid="Godot.RichTextLabel.PushFont(Godot.Font)">PushFont(Font)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[font]</code> tag to the tag stack. Overrides default fonts for its duration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2688,7 +2742,8 @@
   
   <a id="Godot_RichTextLabel_PushIndent_" data-uid="Godot.RichTextLabel.PushIndent*"></a>
   <h4 id="Godot_RichTextLabel_PushIndent_System_Int32_" data-uid="Godot.RichTextLabel.PushIndent(System.Int32)">PushIndent(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an <code>[indent]</code> tag to the tag stack. Multiplies <code>level</code> by current <a class="xref" href="Godot.RichTextLabel.html#Godot_RichTextLabel_TabSize">TabSize</a> to determine new margin length.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2715,7 +2770,8 @@
   
   <a id="Godot_RichTextLabel_PushItalics_" data-uid="Godot.RichTextLabel.PushItalics*"></a>
   <h4 id="Godot_RichTextLabel_PushItalics" data-uid="Godot.RichTextLabel.PushItalics">PushItalics()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[font]</code> tag with a italics font to the tag stack. This is the same as adding a <code>[i]</code> tag if not currently in a <code>[b]</code> tag.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2725,7 +2781,8 @@
   
   <a id="Godot_RichTextLabel_PushList_" data-uid="Godot.RichTextLabel.PushList*"></a>
   <h4 id="Godot_RichTextLabel_PushList_Godot_RichTextLabel_ListType_" data-uid="Godot.RichTextLabel.PushList(Godot.RichTextLabel.ListType)">PushList(RichTextLabel.ListType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[list]</code> tag to the tag stack. Similar to the BBCodes <code>[ol]</code> or <code>[ul]</code>, but supports more list types. Not fully implemented!</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2752,7 +2809,8 @@
   
   <a id="Godot_RichTextLabel_PushMeta_" data-uid="Godot.RichTextLabel.PushMeta*"></a>
   <h4 id="Godot_RichTextLabel_PushMeta_System_Object_" data-uid="Godot.RichTextLabel.PushMeta(System.Object)">PushMeta(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[meta]</code> tag to the tag stack. Similar to the BBCode <code>[url=something]{text}[/url]</code>, but supports non-<span class="xref">System.String</span> metadata types.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2779,7 +2837,8 @@
   
   <a id="Godot_RichTextLabel_PushMono_" data-uid="Godot.RichTextLabel.PushMono*"></a>
   <h4 id="Godot_RichTextLabel_PushMono" data-uid="Godot.RichTextLabel.PushMono">PushMono()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[font]</code> tag with a monospace font to the tag stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2789,7 +2848,8 @@
   
   <a id="Godot_RichTextLabel_PushNormal_" data-uid="Godot.RichTextLabel.PushNormal*"></a>
   <h4 id="Godot_RichTextLabel_PushNormal" data-uid="Godot.RichTextLabel.PushNormal">PushNormal()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[font]</code> tag with a normal font to the tag stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2799,7 +2859,8 @@
   
   <a id="Godot_RichTextLabel_PushStrikethrough_" data-uid="Godot.RichTextLabel.PushStrikethrough*"></a>
   <h4 id="Godot_RichTextLabel_PushStrikethrough" data-uid="Godot.RichTextLabel.PushStrikethrough">PushStrikethrough()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[s]</code> tag to the tag stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2809,7 +2870,8 @@
   
   <a id="Godot_RichTextLabel_PushTable_" data-uid="Godot.RichTextLabel.PushTable*"></a>
   <h4 id="Godot_RichTextLabel_PushTable_System_Int32_" data-uid="Godot.RichTextLabel.PushTable(System.Int32)">PushTable(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[table=columns]</code> tag to the tag stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2836,7 +2898,8 @@
   
   <a id="Godot_RichTextLabel_PushUnderline_" data-uid="Godot.RichTextLabel.PushUnderline*"></a>
   <h4 id="Godot_RichTextLabel_PushUnderline" data-uid="Godot.RichTextLabel.PushUnderline">PushUnderline()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <code>[u]</code> tag to the tag stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2846,7 +2909,9 @@
   
   <a id="Godot_RichTextLabel_RemoveLine_" data-uid="Godot.RichTextLabel.RemoveLine*"></a>
   <h4 id="Godot_RichTextLabel_RemoveLine_System_Int32_" data-uid="Godot.RichTextLabel.RemoveLine(System.Int32)">RemoveLine(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a line of content from the label. Returns <code>true</code> if the line exists.</p>
+<p>The <code>line</code> argument is the index of the line to remove, it can take values in the interval <code>[0, get_line_count() - 1]</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2888,7 +2953,8 @@
   
   <a id="Godot_RichTextLabel_ScrollToLine_" data-uid="Godot.RichTextLabel.ScrollToLine*"></a>
   <h4 id="Godot_RichTextLabel_ScrollToLine_System_Int32_" data-uid="Godot.RichTextLabel.ScrollToLine(System.Int32)">ScrollToLine(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scrolls the window&apos;s top line to match <code>line</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3185,7 +3251,10 @@
   
   <a id="Godot_RichTextLabel_SetTableColumnExpand_" data-uid="Godot.RichTextLabel.SetTableColumnExpand*"></a>
   <h4 id="Godot_RichTextLabel_SetTableColumnExpand_System_Int32_System_Boolean_System_Int32_" data-uid="Godot.RichTextLabel.SetTableColumnExpand(System.Int32,System.Boolean,System.Int32)">SetTableColumnExpand(Int32, Boolean, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Edits the selected column&apos;s expansion options. If <code>expand</code> is <code>true</code>, the column expands in proportion to its expansion ratio versus the other columns&apos; ratios.</p>
+<p>For example, 2 columns with ratios 3 and 4 plus 70 pixels in available width would expand 30 and 40 pixels, respectively.</p>
+<p>If <code>expand</code> is <code>false</code>, the column will not contribute to the total ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,8 @@
   
   <h1 id="Godot_VisualScriptCustomNode" data-uid="Godot.VisualScriptCustomNode" class="text-break">Class VisualScriptCustomNode
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A custom Visual Script node which can be scripted in powerful ways.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -361,7 +362,8 @@
   
   
   <h4 id="Godot_VisualScriptCustomNode_StepExitFunctionBit" data-uid="Godot.VisualScriptCustomNode.StepExitFunctionBit">StepExitFunctionBit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hint used by <a class="xref" href="Godot.VisualScriptCustomNode.html#Godot_VisualScriptCustomNode__Step_Godot_Collections_Array_Godot_Collections_Array_System_Int32_Godot_Collections_Array_">_Step(Array, Array, Int32, Array)</a> to tell that control should stop and exit the function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -385,7 +387,8 @@
   
   
   <h4 id="Godot_VisualScriptCustomNode_StepGoBackBit" data-uid="Godot.VisualScriptCustomNode.StepGoBackBit">StepGoBackBit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hint used by <a class="xref" href="Godot.VisualScriptCustomNode.html#Godot_VisualScriptCustomNode__Step_Godot_Collections_Array_Godot_Collections_Array_System_Int32_Godot_Collections_Array_">_Step(Array, Array, Int32, Array)</a> to tell that control should return back, either hitting a previous <a class="xref" href="Godot.VisualScriptCustomNode.html#Godot_VisualScriptCustomNode_StepPushStackBit">StepPushStackBit</a> or exiting the function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -433,7 +436,9 @@
   
   
   <h4 id="Godot_VisualScriptCustomNode_StepPushStackBit" data-uid="Godot.VisualScriptCustomNode.StepPushStackBit">StepPushStackBit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hint used by <a class="xref" href="Godot.VisualScriptCustomNode.html#Godot_VisualScriptCustomNode__Step_Godot_Collections_Array_Godot_Collections_Array_System_Int32_Godot_Collections_Array_">_Step(Array, Array, Int32, Array)</a> to tell that control should return to it when there is no other node left to execute.</p>
+<p>This is used by <a class="xref" href="Godot.VisualScriptCondition.html">VisualScriptCondition</a> to redirect the sequence to the &quot;Done&quot; port after the <code>true</code>/<code>false</code> branch has finished execution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -457,7 +462,9 @@
   
   
   <h4 id="Godot_VisualScriptCustomNode_StepYieldBit" data-uid="Godot.VisualScriptCustomNode.StepYieldBit">StepYieldBit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hint used by <a class="xref" href="Godot.VisualScriptCustomNode.html#Godot_VisualScriptCustomNode__Step_Godot_Collections_Array_Godot_Collections_Array_System_Int32_Godot_Collections_Array_">_Step(Array, Array, Int32, Array)</a> to tell that the function should be yielded.</p>
+<p>Using this requires you to have at least one working memory slot, which is used for the <a class="xref" href="Godot.VisualScriptFunctionState.html">VisualScriptFunctionState</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -484,7 +491,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetCaption_" data-uid="Godot.VisualScriptCustomNode._GetCaption*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetCaption" data-uid="Godot.VisualScriptCustomNode._GetCaption">_GetCaption()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the node&apos;s title.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -509,7 +517,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetCategory_" data-uid="Godot.VisualScriptCustomNode._GetCategory*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetCategory" data-uid="Godot.VisualScriptCustomNode._GetCategory">_GetCategory()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the node&apos;s category.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -534,7 +543,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetInputValuePortCount_" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortCount*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetInputValuePortCount" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortCount">_GetInputValuePortCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the count of input value ports.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -559,7 +569,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetInputValuePortHint_" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortHint*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetInputValuePortHint_System_Int32_" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortHint(System.Int32)">_GetInputValuePortHint(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the specified input port&apos;s hint. See the <a class="xref" href="Godot.PropertyHint.html">PropertyHint</a> hints.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -601,7 +612,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetInputValuePortHintString_" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortHintString*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetInputValuePortHintString_System_Int32_" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortHintString(System.Int32)">_GetInputValuePortHintString(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the specified input port&apos;s hint string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -643,7 +655,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetInputValuePortName_" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortName*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetInputValuePortName_System_Int32_" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortName(System.Int32)">_GetInputValuePortName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the specified input port&apos;s name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -685,7 +698,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetInputValuePortType_" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortType*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetInputValuePortType_System_Int32_" data-uid="Godot.VisualScriptCustomNode._GetInputValuePortType(System.Int32)">_GetInputValuePortType(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the specified input port&apos;s type. See the <a class="xref" href="Godot.Variant.Type.html">Variant.Type</a> values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -727,7 +741,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetOutputSequencePortCount_" data-uid="Godot.VisualScriptCustomNode._GetOutputSequencePortCount*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetOutputSequencePortCount" data-uid="Godot.VisualScriptCustomNode._GetOutputSequencePortCount">_GetOutputSequencePortCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the amount of output sequence ports.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -752,7 +767,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetOutputSequencePortText_" data-uid="Godot.VisualScriptCustomNode._GetOutputSequencePortText*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetOutputSequencePortText_System_Int32_" data-uid="Godot.VisualScriptCustomNode._GetOutputSequencePortText(System.Int32)">_GetOutputSequencePortText(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the specified sequence output&apos;s name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -794,7 +810,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetOutputValuePortCount_" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortCount*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetOutputValuePortCount" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortCount">_GetOutputValuePortCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the amount of output value ports.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -819,7 +836,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetOutputValuePortHint_" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortHint*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetOutputValuePortHint_System_Int32_" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortHint(System.Int32)">_GetOutputValuePortHint(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the specified output port&apos;s hint. See the <a class="xref" href="Godot.PropertyHint.html">PropertyHint</a> hints.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -861,7 +879,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetOutputValuePortHintString_" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortHintString*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetOutputValuePortHintString_System_Int32_" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortHintString(System.Int32)">_GetOutputValuePortHintString(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the specified output port&apos;s hint string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -903,7 +922,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetOutputValuePortName_" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortName*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetOutputValuePortName_System_Int32_" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortName(System.Int32)">_GetOutputValuePortName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the specified output port&apos;s name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -945,7 +965,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetOutputValuePortType_" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortType*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetOutputValuePortType_System_Int32_" data-uid="Godot.VisualScriptCustomNode._GetOutputValuePortType(System.Int32)">_GetOutputValuePortType(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the specified output port&apos;s type. See the <a class="xref" href="Godot.Variant.Type.html">Variant.Type</a> values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -987,7 +1008,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetText_" data-uid="Godot.VisualScriptCustomNode._GetText*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetText" data-uid="Godot.VisualScriptCustomNode._GetText">_GetText()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the custom node&apos;s text, which is shown right next to the input sequence port (if there is none, on the place that is usually taken by it).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1012,7 +1034,8 @@
   
   <a id="Godot_VisualScriptCustomNode__GetWorkingMemorySize_" data-uid="Godot.VisualScriptCustomNode._GetWorkingMemorySize*"></a>
   <h4 id="Godot_VisualScriptCustomNode__GetWorkingMemorySize" data-uid="Godot.VisualScriptCustomNode._GetWorkingMemorySize">_GetWorkingMemorySize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return the size of the custom node&apos;s working memory. See <a class="xref" href="Godot.VisualScriptCustomNode.html#Godot_VisualScriptCustomNode__Step_Godot_Collections_Array_Godot_Collections_Array_System_Int32_Godot_Collections_Array_">_Step(Array, Array, Int32, Array)</a> for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1037,7 +1060,8 @@
   
   <a id="Godot_VisualScriptCustomNode__HasInputSequencePort_" data-uid="Godot.VisualScriptCustomNode._HasInputSequencePort*"></a>
   <h4 id="Godot_VisualScriptCustomNode__HasInputSequencePort" data-uid="Godot.VisualScriptCustomNode._HasInputSequencePort">_HasInputSequencePort()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return whether the custom node has an input sequence port.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1062,7 +1086,13 @@
   
   <a id="Godot_VisualScriptCustomNode__Step_" data-uid="Godot.VisualScriptCustomNode._Step*"></a>
   <h4 id="Godot_VisualScriptCustomNode__Step_Godot_Collections_Array_Godot_Collections_Array_System_Int32_Godot_Collections_Array_" data-uid="Godot.VisualScriptCustomNode._Step(Godot.Collections.Array,Godot.Collections.Array,System.Int32,Godot.Collections.Array)">_Step(Array, Array, Int32, Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Execute the custom node&apos;s logic, returning the index of the output sequence port to use or a <span class="xref">System.String</span> when there is an error.</p>
+<p>The <code>inputs</code> array contains the values of the input ports.</p>
+<p><code>outputs</code> is an array whose indices should be set to the respective outputs.</p>
+<p>The <code>start_mode</code> is usually <a class="xref" href="Godot.VisualScriptCustomNode.StartMode.html#Godot_VisualScriptCustomNode_StartMode_BeginSequence">BeginSequence</a>, unless you have used the <code>STEP_*</code> constants.</p>
+<p><code>working_mem</code> is an array which can be used to persist information between runs of the custom node. The size needs to be predefined using <a class="xref" href="Godot.VisualScriptCustomNode.html#Godot_VisualScriptCustomNode__GetWorkingMemorySize">_GetWorkingMemorySize()</a>.</p>
+<p>When returning, you can mask the returned value with one of the <code>STEP_*</code> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

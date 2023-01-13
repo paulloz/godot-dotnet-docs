@@ -83,7 +83,9 @@
   
   <h1 id="Godot_Navigation" data-uid="Godot.Navigation" class="text-break">Class Navigation
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Deprecated. <a class="xref" href="Godot.Navigation.html">Navigation</a> node and <a class="xref" href="Godot.Navigation.html#Godot_Navigation_GetSimplePath_Godot_Vector3_Godot_Vector3_System_Boolean_">GetSimplePath(Vector3, Vector3, Boolean)</a> are deprecated and will be removed in a future version. Use <a class="xref" href="Godot.NavigationServer.html#Godot_NavigationServer_MapGetPath_Godot_RID_Godot_Vector3_Godot_Vector3_System_Boolean_System_UInt32_">MapGetPath(RID, Vector3, Vector3, Boolean, UInt32)</a> instead.</p>
+<p>Provides navigation and pathfinding within a collection of <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a>es. By default, these will be automatically collected from child <a class="xref" href="Godot.NavigationMeshInstance.html">NavigationMeshInstance</a> nodes. In addition to basic pathfinding, this class also assists with aligning navigation agents with the meshes they are navigating on.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +966,8 @@
   
   <a id="Godot_Navigation_CellHeight_" data-uid="Godot.Navigation.CellHeight*"></a>
   <h4 id="Godot_Navigation_CellHeight" data-uid="Godot.Navigation.CellHeight">CellHeight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The cell height to use for fields.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +992,8 @@
   
   <a id="Godot_Navigation_CellSize_" data-uid="Godot.Navigation.CellSize*"></a>
   <h4 id="Godot_Navigation_CellSize" data-uid="Godot.Navigation.CellSize">CellSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The XZ plane cell size to use for fields.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1018,8 @@
   
   <a id="Godot_Navigation_EdgeConnectionMargin_" data-uid="Godot.Navigation.EdgeConnectionMargin*"></a>
   <h4 id="Godot_Navigation_EdgeConnectionMargin" data-uid="Godot.Navigation.EdgeConnectionMargin">EdgeConnectionMargin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This value is used to detect the near edges to connect compatible regions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1039,7 +1044,8 @@
   
   <a id="Godot_Navigation_NavigationLayers_" data-uid="Godot.Navigation.NavigationLayers*"></a>
   <h4 id="Godot_Navigation_NavigationLayers" data-uid="Godot.Navigation.NavigationLayers">NavigationLayers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A bitfield determining all navigation map layers the navigation can use on a <a class="xref" href="Godot.Navigation.html#Godot_Navigation_GetSimplePath_Godot_Vector3_Godot_Vector3_System_Boolean_">GetSimplePath(Vector3, Vector3, Boolean)</a> path query.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1064,7 +1070,8 @@
   
   <a id="Godot_Navigation_UpVector_" data-uid="Godot.Navigation.UpVector*"></a>
   <h4 id="Godot_Navigation_UpVector" data-uid="Godot.Navigation.UpVector">UpVector</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines which direction is up. By default, this is <code>(0, 1, 0)</code>, which is the world&apos;s &quot;up&quot; direction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1141,7 +1148,8 @@
   
   <a id="Godot_Navigation_GetClosestPoint_" data-uid="Godot.Navigation.GetClosestPoint*"></a>
   <h4 id="Godot_Navigation_GetClosestPoint_Godot_Vector3_" data-uid="Godot.Navigation.GetClosestPoint(Godot.Vector3)">GetClosestPoint(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the navigation point closest to the point given. Points are in local coordinate space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1183,7 +1191,8 @@
   
   <a id="Godot_Navigation_GetClosestPointNormal_" data-uid="Godot.Navigation.GetClosestPointNormal*"></a>
   <h4 id="Godot_Navigation_GetClosestPointNormal_Godot_Vector3_" data-uid="Godot.Navigation.GetClosestPointNormal(Godot.Vector3)">GetClosestPointNormal(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the surface normal at the navigation point closest to the point given. Useful for rotating a navigation agent according to the navigation mesh it moves on.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1225,7 +1234,8 @@
   
   <a id="Godot_Navigation_GetClosestPointOwner_" data-uid="Godot.Navigation.GetClosestPointOwner*"></a>
   <h4 id="Godot_Navigation_GetClosestPointOwner_Godot_Vector3_" data-uid="Godot.Navigation.GetClosestPointOwner(Godot.Vector3)">GetClosestPointOwner(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the owner of the <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> which contains the navigation point closest to the point given. This is usually a <a class="xref" href="Godot.NavigationMeshInstance.html">NavigationMeshInstance</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1267,7 +1277,8 @@
   
   <a id="Godot_Navigation_GetClosestPointToSegment_" data-uid="Godot.Navigation.GetClosestPointToSegment*"></a>
   <h4 id="Godot_Navigation_GetClosestPointToSegment_Godot_Vector3_Godot_Vector3_System_Boolean_" data-uid="Godot.Navigation.GetClosestPointToSegment(Godot.Vector3,Godot.Vector3,System.Boolean)">GetClosestPointToSegment(Vector3, Vector3, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the navigation point closest to the given line segment. When enabling <code>use_collision</code>, only considers intersection points between segment and navigation meshes. If multiple intersection points are found, the one closest to the segment start point is returned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1369,7 +1380,8 @@
   
   <a id="Godot_Navigation_GetRid_" data-uid="Godot.Navigation.GetRid*"></a>
   <h4 id="Godot_Navigation_GetRid" data-uid="Godot.Navigation.GetRid">GetRid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.RID.html">RID</a> of the navigation map on the <a class="xref" href="Godot.NavigationServer.html">NavigationServer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1394,7 +1406,9 @@
   
   <a id="Godot_Navigation_GetSimplePath_" data-uid="Godot.Navigation.GetSimplePath*"></a>
   <h4 id="Godot_Navigation_GetSimplePath_Godot_Vector3_Godot_Vector3_System_Boolean_" data-uid="Godot.Navigation.GetSimplePath(Godot.Vector3,Godot.Vector3,System.Boolean)">GetSimplePath(Vector3, Vector3, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated. <a class="xref" href="Godot.Navigation.html">Navigation</a> node and <a class="xref" href="Godot.Navigation.html#Godot_Navigation_GetSimplePath_Godot_Vector3_Godot_Vector3_System_Boolean_">GetSimplePath(Vector3, Vector3, Boolean)</a> are deprecated and will be removed in a future version. Use <a class="xref" href="Godot.NavigationServer.html#Godot_NavigationServer_MapGetPath_Godot_RID_Godot_Vector3_Godot_Vector3_System_Boolean_System_UInt32_">MapGetPath(RID, Vector3, Vector3, Boolean, UInt32)</a> instead.</p>
+<p>Returns the path between two given points. Points are in local coordinate space. If <code>optimize</code> is <code>true</code> (the default), the agent properties associated with each <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> (radius, height, etc.) are considered in the path calculation, otherwise they are ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

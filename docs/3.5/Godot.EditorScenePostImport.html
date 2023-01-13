@@ -83,7 +83,22 @@
   
   <h1 id="Godot_EditorScenePostImport" data-uid="Godot.EditorScenePostImport" class="text-break">Class EditorScenePostImport
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Imported scenes can be automatically modified right after import by setting their Custom Script Import property to a <code>tool</code> script that inherits from this class.</p>
+<p>The <a class="xref" href="Godot.EditorScenePostImport.html#Godot_EditorScenePostImport_PostImport_Godot_Object_">PostImport(Object)</a> callback receives the imported scene&apos;s root node and returns the modified version of the scene. Usage example:</p>
+<p><pre><code>tool # Needed so it runs in editor
+extends EditorScenePostImport
+<h1 id="this-sample-changes-all-node-names">This sample changes all node names</h1>
+<h1 id="called-right-after-the-scene-is-imported-and-gets-the-root-node">Called right after the scene is imported and gets the root node</h1>
+<p>func post_import(scene):
+# Change all node names to &quot;modified_[oldnodename]&quot;
+iterate(scene)
+return scene # Remember to return the imported scene</p>
+<p>func iterate(node):
+if node != null:
+node.name = &quot;modified_&quot; + node.name
+for child in node.get_children():
+iterate(child)</code></pre></p><p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +312,8 @@
   
   <a id="Godot_EditorScenePostImport_GetSourceFile_" data-uid="Godot.EditorScenePostImport.GetSourceFile*"></a>
   <h4 id="Godot_EditorScenePostImport_GetSourceFile" data-uid="Godot.EditorScenePostImport.GetSourceFile">GetSourceFile()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the source file path which got imported (e.g. <code>res://scene.dae</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +338,8 @@
   
   <a id="Godot_EditorScenePostImport_GetSourceFolder_" data-uid="Godot.EditorScenePostImport.GetSourceFolder*"></a>
   <h4 id="Godot_EditorScenePostImport_GetSourceFolder" data-uid="Godot.EditorScenePostImport.GetSourceFolder">GetSourceFolder()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the resource folder the imported scene file is located in.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -347,7 +364,8 @@
   
   <a id="Godot_EditorScenePostImport_PostImport_" data-uid="Godot.EditorScenePostImport.PostImport*"></a>
   <h4 id="Godot_EditorScenePostImport_PostImport_Godot_Object_" data-uid="Godot.EditorScenePostImport.PostImport(Godot.Object)">PostImport(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called after the scene was imported. This method must return the modified version of the scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

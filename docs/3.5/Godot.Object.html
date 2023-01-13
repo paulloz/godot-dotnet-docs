@@ -83,7 +83,20 @@
   
   <h1 id="Godot_Object" data-uid="Godot.Object" class="text-break">Class Object
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Every class which is not a built-in type inherits from this class.</p>
+<p>You can construct Objects from scripting languages, using <code>Object.new()</code> in GDScript, <code>new Object</code> in C#, or the &quot;Construct Object&quot; node in VisualScript.</p>
+<p>Objects do not manage memory. If a class inherits from Object, you will have to delete instances of it manually. To do so, call the <a class="xref" href="Godot.Object.html#Godot_Object_Free">Free()</a> method from your script or delete the instance from C++.</p>
+<p>Some classes that extend Object add memory management. This is the case of <a class="xref" href="Godot.Reference.html">Reference</a>, which counts references and deletes itself automatically when no longer referenced. <a class="xref" href="Godot.Node.html">Node</a>, another fundamental type, deletes all its children when freed from memory.</p>
+<p>Objects export properties, which are mainly useful for storage and editing, but not really so much in programming. Properties are exported in <a class="xref" href="Godot.Object.html#Godot_Object__GetPropertyList">_GetPropertyList()</a> and handled in <a class="xref" href="Godot.Object.html#Godot_Object__Get_System_String_">_Get(String)</a> and <a class="xref" href="Godot.Object.html#Godot_Object__Set_System_String_System_Object_">_Set(String, Object)</a>. However, scripting languages and C++ have simpler means to export them.</p>
+<p>Property membership can be tested directly in GDScript using <code>in</code>:</p>
+<p><pre><code>var n = Node2D.new()
+print(&quot;position&quot; in n) # Prints &quot;True&quot;.
+print(&quot;other_property&quot; in n) # Prints &quot;False&quot;.</code></pre></p>
+<p>The <code>in</code> operator will evaluate to <code>true</code> as long as the key exists, even if the value is <code>null</code>.</p>
+<p>Objects also receive notifications. Notifications are a simple way to notify the object about different events, so they can all be handled together. See <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">_Notification(Int32)</a>.</p>
+<p>Note: Unlike references to a <a class="xref" href="Godot.Reference.html">Reference</a>, references to an Object stored in a variable can become invalid without warning. Therefore, it&apos;s recommended to use <a class="xref" href="Godot.Reference.html">Reference</a> for data classes instead of <a class="xref" href="Godot.Object.html">Object</a>.</p>
+<p>Note: Due to a bug, you can&apos;t create a &quot;plain&quot; Object using <code>Object.new()</code>. Instead, use <code>ClassDB.instance(&quot;Object&quot;)</code>. This bug only applies to Object itself, not any of its descendents like <a class="xref" href="Godot.Reference.html">Reference</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -120,7 +133,8 @@
   
   <a id="Godot_Object__ctor_" data-uid="Godot.Object.#ctor*"></a>
   <h4 id="Godot_Object__ctor" data-uid="Godot.Object.#ctor">Object()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Godot.Object.html">Object</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -131,7 +145,8 @@
   
   
   <h4 id="Godot_Object_NotificationPostinitialize" data-uid="Godot.Object.NotificationPostinitialize">NotificationPostinitialize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called right when the object is initialized. Not available in script.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -155,7 +170,8 @@
   
   
   <h4 id="Godot_Object_NotificationPredelete" data-uid="Godot.Object.NotificationPredelete">NotificationPredelete</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called before the object is about to be deleted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -182,7 +198,8 @@
   
   <a id="Godot_Object_DynamicObject_" data-uid="Godot.Object.DynamicObject*"></a>
   <h4 id="Godot_Object_DynamicObject" data-uid="Godot.Object.DynamicObject">DynamicObject</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a new <a class="xref" href="Godot.DynamicGodotObject.html">DynamicGodotObject</a> associated with this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -207,7 +224,8 @@
   
   <a id="Godot_Object_NativeInstance_" data-uid="Godot.Object.NativeInstance*"></a>
   <h4 id="Godot_Object_NativeInstance" data-uid="Godot.Object.NativeInstance">NativeInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The pointer to the native instance of this <a class="xref" href="Godot.Object.html">Object</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -234,7 +252,9 @@
   
   <a id="Godot_Object__Get_" data-uid="Godot.Object._Get*"></a>
   <h4 id="Godot_Object__Get_System_String_" data-uid="Godot.Object._Get(System.String)">_Get(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Virtual method which can be overridden to customize the return value of <a class="xref" href="Godot.Object.html#Godot_Object_Get_System_String_">Get(String)</a>.</p>
+<p>Returns the given property. Returns <code>null</code> if the <code>property</code> does not exist.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -276,7 +296,10 @@
   
   <a id="Godot_Object__GetPropertyList_" data-uid="Godot.Object._GetPropertyList*"></a>
   <h4 id="Godot_Object__GetPropertyList" data-uid="Godot.Object._GetPropertyList">_GetPropertyList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Virtual method which can be overridden to customize the return value of <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">GetPropertyList()</a>.</p>
+<p>Returns the object&apos;s property list as an <a class="xref" href="Godot.Collections.Array.html">Array</a> of dictionaries.</p>
+<p>Each property&apos;s <a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a> must contain at least <code>name: String</code> and <code>type: int</code> (see <a class="xref" href="Godot.Variant.Type.html">Variant.Type</a>) entries. Optionally, it can also include <code>hint: int</code> (see <a class="xref" href="Godot.PropertyHint.html">PropertyHint</a>), <code>hint_string: String</code>, and <code>usage: int</code> (see <a class="xref" href="Godot.PropertyUsageFlags.html">PropertyUsageFlags</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -301,7 +324,8 @@
   
   <a id="Godot_Object__Notification_" data-uid="Godot.Object._Notification*"></a>
   <h4 id="Godot_Object__Notification_System_Int32_" data-uid="Godot.Object._Notification(System.Int32)">_Notification(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called whenever the object receives a notification, which is identified in <code>what</code> by a constant. The base <a class="xref" href="Godot.Object.html">Object</a> has two constants <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPostinitialize">NotificationPostinitialize</a> and <a class="xref" href="Godot.Object.html#Godot_Object_NotificationPredelete">NotificationPredelete</a>, but subclasses such as <a class="xref" href="Godot.Node.html">Node</a> define a lot more notifications which are also received by this method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -328,7 +352,9 @@
   
   <a id="Godot_Object__Set_" data-uid="Godot.Object._Set*"></a>
   <h4 id="Godot_Object__Set_System_String_System_Object_" data-uid="Godot.Object._Set(System.String,System.Object)">_Set(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Virtual method which can be overridden to customize the return value of <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Set(String, Object)</a>.</p>
+<p>Sets a property. Returns <code>true</code> if the <code>property</code> exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -375,7 +401,8 @@
   
   <a id="Godot_Object_AddUserSignal_" data-uid="Godot.Object.AddUserSignal*"></a>
   <h4 id="Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_" data-uid="Godot.Object.AddUserSignal(System.String,Godot.Collections.Array)">AddUserSignal(String, Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a user-defined <code>signal</code>. Arguments are optional, but can be added as an <a class="xref" href="Godot.Collections.Array.html">Array</a> of dictionaries, each containing <code>name: String</code> and <code>type: int</code> (see <a class="xref" href="Godot.Variant.Type.html">Variant.Type</a>) entries.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -399,7 +426,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">arguments</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -407,7 +435,10 @@
   
   <a id="Godot_Object_Call_" data-uid="Godot.Object.Call*"></a>
   <h4 id="Godot_Object_Call_System_String_System_Object___" data-uid="Godot.Object.Call(System.String,System.Object[])">Call(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls the <code>method</code> on the object and returns the result. This method supports a variable number of arguments, so parameters are passed as a comma separated list. Example:</p>
+<p><pre><code>call(&quot;set&quot;, &quot;position&quot;, Vector2(42.0, 0.0))</code></pre></p>
+<p>Note: In C#, the method name must be specified as snake_case if it is defined by a built-in Godot node. This doesn&apos;t apply to user-defined methods where you should use the same convention as in the C# source (typically PascalCase).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -454,7 +485,10 @@
   
   <a id="Godot_Object_CallDeferred_" data-uid="Godot.Object.CallDeferred*"></a>
   <h4 id="Godot_Object_CallDeferred_System_String_System_Object___" data-uid="Godot.Object.CallDeferred(System.String,System.Object[])">CallDeferred(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls the <code>method</code> on the object during idle time. This method supports a variable number of arguments, so parameters are passed as a comma separated list. Example:</p>
+<p><pre><code>call_deferred(&quot;set&quot;, &quot;position&quot;, Vector2(42.0, 0.0))</code></pre></p>
+<p>Note: In C#, the method name must be specified as snake_case if it is defined by a built-in Godot node. This doesn&apos;t apply to user-defined methods where you should use the same convention as in the C# source (typically PascalCase).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -486,7 +520,9 @@
   
   <a id="Godot_Object_Callv_" data-uid="Godot.Object.Callv*"></a>
   <h4 id="Godot_Object_Callv_System_String_Godot_Collections_Array_" data-uid="Godot.Object.Callv(System.String,Godot.Collections.Array)">Callv(String, Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls the <code>method</code> on the object and returns the result. Contrarily to <a class="xref" href="Godot.Object.html#Godot_Object_Call_System_String_System_Object___">Call(String, Object[])</a>, this method does not support a variable number of arguments but expects all parameters to be via a single <a class="xref" href="Godot.Collections.Array.html">Array</a>.</p>
+<p><pre><code>callv(&quot;set&quot;, [ &quot;position&quot;, Vector2(42.0, 0.0) ])</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -533,7 +569,8 @@
   
   <a id="Godot_Object_CanTranslateMessages_" data-uid="Godot.Object.CanTranslateMessages*"></a>
   <h4 id="Godot_Object_CanTranslateMessages" data-uid="Godot.Object.CanTranslateMessages">CanTranslateMessages()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the object can translate strings. See <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">SetMessageTranslation(Boolean)</a> and <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Tr(String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -558,7 +595,19 @@
   
   <a id="Godot_Object_Connect_" data-uid="Godot.Object.Connect*"></a>
   <h4 id="Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_" data-uid="Godot.Object.Connect(System.String,Godot.Object,System.String,Godot.Collections.Array,System.UInt32)">Connect(String, Object, String, Array, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connects a <code>signal</code> to a <code>method</code> on a <code>target</code> object. Pass optional <code>binds</code> to the call as an <a class="xref" href="Godot.Collections.Array.html">Array</a> of parameters. These parameters will be passed to the method after any parameter used in the call to <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">EmitSignal(String, Object[])</a>. Use <code>flags</code> to set deferred or one-shot connections. See <a class="xref" href="Godot.Object.ConnectFlags.html">Object.ConnectFlags</a> constants.</p>
+<p>A <code>signal</code> can only be connected once to a <code>method</code>. It will print an error if already connected, unless the signal was connected with <a class="xref" href="Godot.Object.ConnectFlags.html#Godot_Object_ConnectFlags_ReferenceCounted">ReferenceCounted</a>. To avoid this, first, use <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">IsConnected(String, Object, String)</a> to check for existing connections.</p>
+<p>If the <code>target</code> is destroyed in the game&apos;s lifecycle, the connection will be lost.</p>
+<p>Examples:</p>
+<p><pre><code>connect(&quot;pressed&quot;, self, &quot;_on_Button_pressed&quot;) # BaseButton signal
+connect(&quot;text_entered&quot;, self, &quot;_on_LineEdit_text_entered&quot;) # LineEdit signal
+connect(&quot;hit&quot;, self, &quot;_on_Player_hit&quot;, [ weapon_type, damage ]) # User-defined signal</code></pre></p>
+<p>An example of the relationship between <code>binds</code> passed to <a class="xref" href="Godot.Object.html#Godot_Object_Connect_System_String_Godot_Object_System_String_Godot_Collections_Array_System_UInt32_">Connect(String, Object, String, Array, UInt32)</a> and parameters used when calling <a class="xref" href="Godot.Object.html#Godot_Object_EmitSignal_System_String_System_Object___">EmitSignal(String, Object[])</a>:</p>
+<p><pre><code>connect(&quot;hit&quot;, self, &quot;_on_Player_hit&quot;, [ weapon_type, damage ]) # weapon_type and damage are passed last
+emit_signal(&quot;hit&quot;, &quot;Dark lord&quot;, 5) # &quot;Dark lord&quot; and 5 are passed first
+func _on_Player_hit(hit_by, level, weapon_type, damage):
+    print(&quot;Hit by %s (lvl %d) with weapon %s for %d damage&quot; % [hit_by, level, weapon_type, damage])</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -592,7 +641,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">binds</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
@@ -620,7 +670,9 @@
   
   <a id="Godot_Object_Disconnect_" data-uid="Godot.Object.Disconnect*"></a>
   <h4 id="Godot_Object_Disconnect_System_String_Godot_Object_System_String_" data-uid="Godot.Object.Disconnect(System.String,Godot.Object,System.String)">Disconnect(String, Object, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnects a <code>signal</code> from a <code>method</code> on the given <code>target</code>.</p>
+<p>If you try to disconnect a connection that does not exist, the method will print an error. Use <a class="xref" href="Godot.Object.html#Godot_Object_IsConnected_System_String_Godot_Object_System_String_">IsConnected(String, Object, String)</a> to ensure that the connection exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -657,7 +709,8 @@
   
   <a id="Godot_Object_Dispose_" data-uid="Godot.Object.Dispose*"></a>
   <h4 id="Godot_Object_Dispose" data-uid="Godot.Object.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disposes of this <a class="xref" href="Godot.Object.html">Object</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -667,7 +720,8 @@
   
   <a id="Godot_Object_Dispose_" data-uid="Godot.Object.Dispose*"></a>
   <h4 id="Godot_Object_Dispose_System_Boolean_" data-uid="Godot.Object.Dispose(System.Boolean)">Dispose(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disposes implementation of this <a class="xref" href="Godot.Object.html">Object</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -694,7 +748,10 @@
   
   <a id="Godot_Object_EmitSignal_" data-uid="Godot.Object.EmitSignal*"></a>
   <h4 id="Godot_Object_EmitSignal_System_String_System_Object___" data-uid="Godot.Object.EmitSignal(System.String,System.Object[])">EmitSignal(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Emits the given <code>signal</code>. The signal must exist, so it should be a built-in signal of this class or one of its parent classes, or a user-defined signal. This method supports a variable number of arguments, so parameters are passed as a comma separated list. Example:</p>
+<p><pre><code>emit_signal(&quot;hit&quot;, weapon_type, damage)
+emit_signal(&quot;game_over&quot;)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -736,7 +793,9 @@
   
   <a id="Godot_Object_Free_" data-uid="Godot.Object.Free*"></a>
   <h4 id="Godot_Object_Free" data-uid="Godot.Object.Free">Free()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deletes the object from memory immediately. For <a class="xref" href="Godot.Node.html">Node</a>s, you may want to use <a class="xref" href="Godot.Node.html#Godot_Node_QueueFree">QueueFree()</a> to queue the node for safe deletion at the end of the current frame.</p>
+<p>Important: If you have a variable pointing to an object, it will not be assigned to <code>null</code> once the object is freed. Instead, it will point to a previously freed instance and you should validate it with <code>@GDScript.is_instance_valid</code> before attempting to call its methods or access its properties.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -746,7 +805,9 @@
   
   <a id="Godot_Object_Get_" data-uid="Godot.Object.Get*"></a>
   <h4 id="Godot_Object_Get_System_String_" data-uid="Godot.Object.Get(System.String)">Get(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <code>Variant</code> value of the given <code>property</code>. If the <code>property</code> doesn&apos;t exist, this will return <code>null</code>.</p>
+<p>Note: In C#, the property name must be specified as snake_case if it is defined by a built-in Godot node. This doesn&apos;t apply to user-defined properties where you should use the same convention as in the C# source (typically PascalCase).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -788,7 +849,9 @@
   
   <a id="Godot_Object_GetClass_" data-uid="Godot.Object.GetClass*"></a>
   <h4 id="Godot_Object_GetClass" data-uid="Godot.Object.GetClass">GetClass()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the object&apos;s class as a <span class="xref">System.String</span>. See also <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">IsClass(String)</a>.</p>
+<p>Note: <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">GetClass()</a> does not take <code>class_name</code> declarations into account. If the object has a <code>class_name</code> defined, the base class name will be returned instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -813,7 +876,12 @@
   
   <a id="Godot_Object_GetIncomingConnections_" data-uid="Godot.Object.GetIncomingConnections*"></a>
   <h4 id="Godot_Object_GetIncomingConnections" data-uid="Godot.Object.GetIncomingConnections">GetIncomingConnections()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an <a class="xref" href="Godot.Collections.Array.html">Array</a> of dictionaries with information about signals that are connected to the object.</p>
+<p>Each <a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a> contains three String entries:</p>
+<p>- <code>source</code> is a reference to the signal emitter.</p>
+<p>- <code>signal_name</code> is the name of the connected signal.</p>
+<p>- <code>method_name</code> is the name of the method to which the signal is connected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -838,7 +906,9 @@
   
   <a id="Godot_Object_GetIndexed_" data-uid="Godot.Object.GetIndexed*"></a>
   <h4 id="Godot_Object_GetIndexed_Godot_NodePath_" data-uid="Godot.Object.GetIndexed(Godot.NodePath)">GetIndexed(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the object&apos;s property indexed by the given <a class="xref" href="Godot.NodePath.html">NodePath</a>. The node path should be relative to the current object and can use the colon character (<code>:</code>) to access nested properties. Examples: <code>&quot;position:x&quot;</code> or <code>&quot;material:next_pass:blend_mode&quot;</code>.</p>
+<p>Note: Even though the method takes <a class="xref" href="Godot.NodePath.html">NodePath</a> argument, it doesn&apos;t support actual paths to <a class="xref" href="Godot.Node.html">Node</a>s in the scene tree, only colon-separated sub-property paths. For the purpose of nodes, use <a class="xref" href="Godot.Node.html#Godot_Node_GetNodeAndResource_Godot_NodePath_">GetNodeAndResource(NodePath)</a> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -880,7 +950,9 @@
   
   <a id="Godot_Object_GetInstanceId_" data-uid="Godot.Object.GetInstanceId*"></a>
   <h4 id="Godot_Object_GetInstanceId" data-uid="Godot.Object.GetInstanceId">GetInstanceId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the object&apos;s unique instance ID.</p>
+<p>This ID can be saved in <a class="xref" href="Godot.EncodedObjectAsID.html">EncodedObjectAsID</a>, and can be used to retrieve the object instance with <code>@GDScript.instance_from_id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -905,7 +977,9 @@
   
   <a id="Godot_Object_GetMeta_" data-uid="Godot.Object.GetMeta*"></a>
   <h4 id="Godot_Object_GetMeta_System_String_System_Object_" data-uid="Godot.Object.GetMeta(System.String,System.Object)">GetMeta(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the object&apos;s metadata entry for the given <code>name</code>.</p>
+<p>Throws error if the entry does not exist, unless <code>default</code> is not <code>null</code> (in which case the default value will be returned).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -952,7 +1026,8 @@
   
   <a id="Godot_Object_GetMetaList_" data-uid="Godot.Object.GetMetaList*"></a>
   <h4 id="Godot_Object_GetMetaList" data-uid="Godot.Object.GetMetaList">GetMetaList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the object&apos;s metadata as a <span class="xref">System.String</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -977,7 +1052,8 @@
   
   <a id="Godot_Object_GetMethodList_" data-uid="Godot.Object.GetMethodList*"></a>
   <h4 id="Godot_Object_GetMethodList" data-uid="Godot.Object.GetMethodList">GetMethodList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the object&apos;s methods and their signatures as an <a class="xref" href="Godot.Collections.Array.html">Array</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1002,7 +1078,9 @@
   
   <a id="Godot_Object_GetPropertyList_" data-uid="Godot.Object.GetPropertyList*"></a>
   <h4 id="Godot_Object_GetPropertyList" data-uid="Godot.Object.GetPropertyList">GetPropertyList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the object&apos;s property list as an <a class="xref" href="Godot.Collections.Array.html">Array</a> of dictionaries.</p>
+<p>Each property&apos;s <a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a> contain at least <code>name: String</code> and <code>type: int</code> (see <a class="xref" href="Godot.Variant.Type.html">Variant.Type</a>) entries. Optionally, it can also include <code>hint: int</code> (see <a class="xref" href="Godot.PropertyHint.html">PropertyHint</a>), <code>hint_string: String</code>, and <code>usage: int</code> (see <a class="xref" href="Godot.PropertyUsageFlags.html">PropertyUsageFlags</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1027,7 +1105,8 @@
   
   <a id="Godot_Object_GetScript_" data-uid="Godot.Object.GetScript*"></a>
   <h4 id="Godot_Object_GetScript" data-uid="Godot.Object.GetScript">GetScript()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the object&apos;s <a class="xref" href="Godot.Script.html">Script</a> instance, or <code>null</code> if none is assigned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1052,7 +1131,8 @@
   
   <a id="Godot_Object_GetSignalConnectionList_" data-uid="Godot.Object.GetSignalConnectionList*"></a>
   <h4 id="Godot_Object_GetSignalConnectionList_System_String_" data-uid="Godot.Object.GetSignalConnectionList(System.String)">GetSignalConnectionList(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an <a class="xref" href="Godot.Collections.Array.html">Array</a> of connections for the given <code>signal</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1094,7 +1174,8 @@
   
   <a id="Godot_Object_GetSignalList_" data-uid="Godot.Object.GetSignalList*"></a>
   <h4 id="Godot_Object_GetSignalList" data-uid="Godot.Object.GetSignalList">GetSignalList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the list of signals as an <a class="xref" href="Godot.Collections.Array.html">Array</a> of dictionaries.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1119,7 +1200,8 @@
   
   <a id="Godot_Object_HasMeta_" data-uid="Godot.Object.HasMeta*"></a>
   <h4 id="Godot_Object_HasMeta_System_String_" data-uid="Godot.Object.HasMeta(System.String)">HasMeta(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a metadata entry is found with the given <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1161,7 +1243,8 @@
   
   <a id="Godot_Object_HasMethod_" data-uid="Godot.Object.HasMethod*"></a>
   <h4 id="Godot_Object_HasMethod_System_String_" data-uid="Godot.Object.HasMethod(System.String)">HasMethod(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the object contains the given <code>method</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1203,7 +1286,8 @@
   
   <a id="Godot_Object_HasSignal_" data-uid="Godot.Object.HasSignal*"></a>
   <h4 id="Godot_Object_HasSignal_System_String_" data-uid="Godot.Object.HasSignal(System.String)">HasSignal(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given <code>signal</code> exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1245,7 +1329,8 @@
   
   <a id="Godot_Object_HasUserSignal_" data-uid="Godot.Object.HasUserSignal*"></a>
   <h4 id="Godot_Object_HasUserSignal_System_String_" data-uid="Godot.Object.HasUserSignal(System.String)">HasUserSignal(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given user-defined <code>signal</code> exists. Only signals added using <a class="xref" href="Godot.Object.html#Godot_Object_AddUserSignal_System_String_Godot_Collections_Array_">AddUserSignal(String, Array)</a> are taken into account.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1287,7 +1372,8 @@
   
   <a id="Godot_Object_IsBlockingSignals_" data-uid="Godot.Object.IsBlockingSignals*"></a>
   <h4 id="Godot_Object_IsBlockingSignals" data-uid="Godot.Object.IsBlockingSignals">IsBlockingSignals()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if signal emission blocking is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1312,7 +1398,9 @@
   
   <a id="Godot_Object_IsClass_" data-uid="Godot.Object.IsClass*"></a>
   <h4 id="Godot_Object_IsClass_System_String_" data-uid="Godot.Object.IsClass(System.String)">IsClass(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the object inherits from the given <code>class</code>. See also <a class="xref" href="Godot.Object.html#Godot_Object_GetClass">GetClass()</a>.</p>
+<p>Note: <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">IsClass(String)</a> does not take <code>class_name</code> declarations into account. If the object has a <code>class_name</code> defined, <a class="xref" href="Godot.Object.html#Godot_Object_IsClass_System_String_">IsClass(String)</a> will return <code>false</code> for that name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1354,7 +1442,8 @@
   
   <a id="Godot_Object_IsConnected_" data-uid="Godot.Object.IsConnected*"></a>
   <h4 id="Godot_Object_IsConnected_System_String_Godot_Object_System_String_" data-uid="Godot.Object.IsConnected(System.String,Godot.Object,System.String)">IsConnected(String, Object, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a connection exists for a given <code>signal</code>, <code>target</code>, and <code>method</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1406,7 +1495,9 @@
   
   <a id="Godot_Object_IsInstanceValid_" data-uid="Godot.Object.IsInstanceValid*"></a>
   <h4 id="Godot_Object_IsInstanceValid_Godot_Object_" data-uid="Godot.Object.IsInstanceValid(Godot.Object)">IsInstanceValid(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether <code data-dev-comment-type="paramref" class="paramref">instance</code> is a valid object
+(e.g. has not been deleted from memory).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1425,7 +1516,8 @@
       <tr>
         <td><a class="xref" href="Godot.Object.html">Object</a></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The instance to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1440,7 +1532,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the instance is a valid object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1448,7 +1541,8 @@
   
   <a id="Godot_Object_IsQueuedForDeletion_" data-uid="Godot.Object.IsQueuedForDeletion*"></a>
   <h4 id="Godot_Object_IsQueuedForDeletion" data-uid="Godot.Object.IsQueuedForDeletion">IsQueuedForDeletion()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the <a class="xref" href="Godot.Node.html#Godot_Node_QueueFree">QueueFree()</a> method was called for the object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1473,7 +1567,9 @@
   
   <a id="Godot_Object_Notification_" data-uid="Godot.Object.Notification*"></a>
   <h4 id="Godot_Object_Notification_System_Int32_System_Boolean_" data-uid="Godot.Object.Notification(System.Int32,System.Boolean)">Notification(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Send a given notification to the object, which will also trigger a call to the <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">_Notification(Int32)</a> method of all classes that the object inherits from.</p>
+<p>If <code>reversed</code> is <code>true</code>, <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">_Notification(Int32)</a> is called first on the object&apos;s own class, and then up to its successive parent classes. If <code>reversed</code> is <code>false</code>, <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">_Notification(Int32)</a> is called first on the highest ancestor (<a class="xref" href="Godot.Object.html">Object</a> itself), and then down to its successive inheriting classes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1505,7 +1601,8 @@
   
   <a id="Godot_Object_PropertyListChangedNotify_" data-uid="Godot.Object.PropertyListChangedNotify*"></a>
   <h4 id="Godot_Object_PropertyListChangedNotify" data-uid="Godot.Object.PropertyListChangedNotify">PropertyListChangedNotify()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notify the editor that the property list has changed, so that editor plugins can take the new values into account. Does nothing on export builds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1515,7 +1612,8 @@
   
   <a id="Godot_Object_RemoveMeta_" data-uid="Godot.Object.RemoveMeta*"></a>
   <h4 id="Godot_Object_RemoveMeta_System_String_" data-uid="Godot.Object.RemoveMeta(System.String)">RemoveMeta(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a given entry from the object&apos;s metadata. See also <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">SetMeta(String, Object)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1542,7 +1640,9 @@
   
   <a id="Godot_Object_Set_" data-uid="Godot.Object.Set*"></a>
   <h4 id="Godot_Object_Set_System_String_System_Object_" data-uid="Godot.Object.Set(System.String,System.Object)">Set(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns a new value to the given property. If the <code>property</code> does not exist or the given value&apos;s type doesn&apos;t match, nothing will happen.</p>
+<p>Note: In C#, the property name must be specified as snake_case if it is defined by a built-in Godot node. This doesn&apos;t apply to user-defined properties where you should use the same convention as in the C# source (typically PascalCase).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1574,7 +1674,8 @@
   
   <a id="Godot_Object_SetBlockSignals_" data-uid="Godot.Object.SetBlockSignals*"></a>
   <h4 id="Godot_Object_SetBlockSignals_System_Boolean_" data-uid="Godot.Object.SetBlockSignals(System.Boolean)">SetBlockSignals(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, signal emission is blocked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1601,7 +1702,9 @@
   
   <a id="Godot_Object_SetDeferred_" data-uid="Godot.Object.SetDeferred*"></a>
   <h4 id="Godot_Object_SetDeferred_System_String_System_Object_" data-uid="Godot.Object.SetDeferred(System.String,System.Object)">SetDeferred(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns a new value to the given property, after the current frame&apos;s physics step. This is equivalent to calling <a class="xref" href="Godot.Object.html#Godot_Object_Set_System_String_System_Object_">Set(String, Object)</a> via <a class="xref" href="Godot.Object.html#Godot_Object_CallDeferred_System_String_System_Object___">CallDeferred(String, Object[])</a>, i.e. <code>call_deferred(&quot;set&quot;, property, value)</code>.</p>
+<p>Note: In C#, the property name must be specified as snake_case if it is defined by a built-in Godot node. This doesn&apos;t apply to user-defined properties where you should use the same convention as in the C# source (typically PascalCase).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1633,7 +1736,11 @@
   
   <a id="Godot_Object_SetIndexed_" data-uid="Godot.Object.SetIndexed*"></a>
   <h4 id="Godot_Object_SetIndexed_Godot_NodePath_System_Object_" data-uid="Godot.Object.SetIndexed(Godot.NodePath,System.Object)">SetIndexed(NodePath, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns a new value to the property identified by the <a class="xref" href="Godot.NodePath.html">NodePath</a>. The node path should be relative to the current object and can use the colon character (<code>:</code>) to access nested properties. Example:</p>
+<p><pre><code>set_indexed(&quot;position&quot;, Vector2(42, 0))
+set_indexed(&quot;position:y&quot;, -10)
+print(position) # (42, -10)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1665,7 +1772,8 @@
   
   <a id="Godot_Object_SetMessageTranslation_" data-uid="Godot.Object.SetMessageTranslation*"></a>
   <h4 id="Godot_Object_SetMessageTranslation_System_Boolean_" data-uid="Godot.Object.SetMessageTranslation(System.Boolean)">SetMessageTranslation(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines whether the object can translate strings (with calls to <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Tr(String)</a>). Enabled by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1692,7 +1800,9 @@
   
   <a id="Godot_Object_SetMeta_" data-uid="Godot.Object.SetMeta*"></a>
   <h4 id="Godot_Object_SetMeta_System_String_System_Object_" data-uid="Godot.Object.SetMeta(System.String,System.Object)">SetMeta(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds, changes or removes a given entry in the object&apos;s metadata. Metadata are serialized and can take any <code>Variant</code> value.</p>
+<p>To remove a given entry from the object&apos;s metadata, use <a class="xref" href="Godot.Object.html#Godot_Object_RemoveMeta_System_String_">RemoveMeta(String)</a>. Metadata is also removed if its value is set to <code>null</code>. This means you can also use <code>set_meta(&quot;name&quot;, null)</code> to remove metadata for <code>&quot;name&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1724,7 +1834,9 @@
   
   <a id="Godot_Object_SetScript_" data-uid="Godot.Object.SetScript*"></a>
   <h4 id="Godot_Object_SetScript_Godot_Reference_" data-uid="Godot.Object.SetScript(Godot.Reference)">SetScript(Reference)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns a script to the object. Each object can have a single script assigned to it, which are used to extend its functionality.</p>
+<p>If the object already had a script, the previous script instance will be freed and its variables and state will be lost. The new script&apos;s  method will be called.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1751,7 +1863,9 @@
   
   <a id="Godot_Object_ToSignal_" data-uid="Godot.Object.ToSignal*"></a>
   <h4 id="Godot_Object_ToSignal_Godot_Object_System_String_" data-uid="Godot.Object.ToSignal(Godot.Object,System.String)">ToSignal(Object, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="Godot.SignalAwaiter.html">SignalAwaiter</a> awaiter configured to complete when the instance
+<code data-dev-comment-type="paramref" class="paramref">source</code> emits the signal specified by the <code data-dev-comment-type="paramref" class="paramref">signal</code> parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1770,12 +1884,14 @@
       <tr>
         <td><a class="xref" href="Godot.Object.html">Object</a></td>
         <td><span class="parametername">source</span></td>
-        <td></td>
+        <td><p>The instance the awaiter will be listening to.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">signal</span></td>
-        <td></td>
+        <td><p>The signal the awaiter will be waiting for.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1790,15 +1906,29 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.SignalAwaiter.html">SignalAwaiter</a></td>
-        <td></td>
+        <td><p>A <a class="xref" href="Godot.SignalAwaiter.html">SignalAwaiter</a> that completes when
+<code data-dev-comment-type="paramref" class="paramref">source</code> emits the <code data-dev-comment-type="paramref" class="paramref">signal</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Object_ToSignal_Godot_Object_System_String__examples">Examples</h5>
+  <p>This sample prints a message once every frame up to 100 times.</p>
+<pre><code>public override void _Ready()
+{
+    for (int i = 0; i &lt; 100; i++)
+    {
+        await ToSignal(GetTree(), &quot;idle_frame&quot;);
+        GD.Print($&quot;Frame {i}&quot;);
+    }
+}</code></pre>
+
   
   
   <a id="Godot_Object_ToString_" data-uid="Godot.Object.ToString*"></a>
   <h4 id="Godot_Object_ToString" data-uid="Godot.Object.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.Object.html">Object</a> to a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1815,7 +1945,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string representation of this object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1823,7 +1954,9 @@
   
   <a id="Godot_Object_Tr_" data-uid="Godot.Object.Tr*"></a>
   <h4 id="Godot_Object_Tr_System_String_" data-uid="Godot.Object.Tr(System.String)">Tr(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Translates a message using translation catalogs configured in the Project Settings.</p>
+<p>Only works if message translation is enabled (which it is by default), otherwise it returns the <code>message</code> unchanged. See <a class="xref" href="Godot.Object.html#Godot_Object_SetMessageTranslation_System_Boolean_">SetMessageTranslation(Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1865,7 +1998,15 @@
   
   <a id="Godot_Object_WeakRef_" data-uid="Godot.Object.WeakRef*"></a>
   <h4 id="Godot_Object_WeakRef_Godot_Object_" data-uid="Godot.Object.WeakRef(Godot.Object)">WeakRef(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a weak reference to an object, or <span class="xref">null</span>
+if the argument is invalid.
+A weak reference to an object is not enough to keep the object alive:
+when the only remaining references to a referent are weak references,
+garbage collection is free to destroy the referent and reuse its memory
+for something else. However, until the object is actually destroyed the
+weak reference may return the object even if there are no strong references
+to it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1884,7 +2025,8 @@
       <tr>
         <td><a class="xref" href="Godot.Object.html">Object</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>The object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1899,7 +2041,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.WeakRef.html">WeakRef</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Godot.Object.html#Godot_Object_WeakRef_Godot_Object_">WeakRef(Object)</a> reference to the object or <span class="xref">null</span>.</p>
+</td>
       </tr>
     </tbody>
   </table>

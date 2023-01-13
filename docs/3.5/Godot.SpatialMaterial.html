@@ -83,7 +83,8 @@
   
   <h1 id="Godot_SpatialMaterial" data-uid="Godot.SpatialMaterial" class="text-break">Class SpatialMaterial
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This provides a default material with a wide variety of rendering features and properties without the need to write shader code. See the tutorial below for details.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -371,7 +372,8 @@
   
   <a id="Godot_SpatialMaterial_AlbedoColor_" data-uid="Godot.SpatialMaterial.AlbedoColor*"></a>
   <h4 id="Godot_SpatialMaterial_AlbedoColor" data-uid="Godot.SpatialMaterial.AlbedoColor">AlbedoColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The material&apos;s base color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +398,8 @@
   
   <a id="Godot_SpatialMaterial_AlbedoTexture_" data-uid="Godot.SpatialMaterial.AlbedoTexture*"></a>
   <h4 id="Godot_SpatialMaterial_AlbedoTexture" data-uid="Godot.SpatialMaterial.AlbedoTexture">AlbedoTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture to multiply by <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_AlbedoColor">AlbedoColor</a>. Used for basic texturing of objects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +424,8 @@
   
   <a id="Godot_SpatialMaterial_Anisotropy_" data-uid="Godot.SpatialMaterial.Anisotropy*"></a>
   <h4 id="Godot_SpatialMaterial_Anisotropy" data-uid="Godot.SpatialMaterial.Anisotropy">Anisotropy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The strength of the anisotropy effect. This is multiplied by <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_AnisotropyFlowmap">AnisotropyFlowmap</a>&apos;s alpha channel if a texture is defined there and the texture contains an alpha channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -446,7 +450,10 @@
   
   <a id="Godot_SpatialMaterial_AnisotropyEnabled_" data-uid="Godot.SpatialMaterial.AnisotropyEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_AnisotropyEnabled" data-uid="Godot.SpatialMaterial.AnisotropyEnabled">AnisotropyEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, anisotropy is enabled. Anisotropy changes the shape of the specular blob and aligns it to tangent space. This is useful for brushed aluminium and hair reflections.</p>
+<p>Note: Mesh tangents are needed for anisotropy to work. If the mesh does not contain tangents, the anisotropy effect will appear broken.</p>
+<p>Note: Material anisotropy should not to be confused with anisotropic texture filtering. Anisotropic texture filtering can be enabled by selecting a texture in the FileSystem dock, going to the Import dock, checking the Anisotropic checkbox then clicking Reimport. The anisotropic filtering level can be changed by adjusting .</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,7 +478,9 @@
   
   <a id="Godot_SpatialMaterial_AnisotropyFlowmap_" data-uid="Godot.SpatialMaterial.AnisotropyFlowmap*"></a>
   <h4 id="Godot_SpatialMaterial_AnisotropyFlowmap" data-uid="Godot.SpatialMaterial.AnisotropyFlowmap">AnisotropyFlowmap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture that offsets the tangent map for anisotropy calculations and optionally controls the anisotropy effect (if an alpha channel is present). The flowmap texture is expected to be a derivative map, with the red channel representing distortion on the X axis and green channel representing distortion on the Y axis. Values below 0.5 will result in negative distortion, whereas values above 0.5 will result in positive distortion.</p>
+<p>If present, the texture&apos;s alpha channel will be used to multiply the strength of the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Anisotropy">Anisotropy</a> effect. Fully opaque pixels will keep the anisotropy effect&apos;s original strength while fully transparent pixels will disable the anisotropy effect entirely. The flowmap texture&apos;s blue channel is ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -496,7 +505,8 @@
   
   <a id="Godot_SpatialMaterial_AoEnabled_" data-uid="Godot.SpatialMaterial.AoEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_AoEnabled" data-uid="Godot.SpatialMaterial.AoEnabled">AoEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, ambient occlusion is enabled. Ambient occlusion darkens areas based on the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_AoTexture">AoTexture</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -521,7 +531,8 @@
   
   <a id="Godot_SpatialMaterial_AoLightAffect_" data-uid="Godot.SpatialMaterial.AoLightAffect*"></a>
   <h4 id="Godot_SpatialMaterial_AoLightAffect" data-uid="Godot.SpatialMaterial.AoLightAffect">AoLightAffect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount that ambient occlusion affects lighting from lights. If <code>0</code>, ambient occlusion only affects ambient light. If <code>1</code>, ambient occlusion affects lights just as much as it affects ambient light. This can be used to impact the strength of the ambient occlusion effect, but typically looks unrealistic.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -546,7 +557,8 @@
   
   <a id="Godot_SpatialMaterial_AoOnUv2_" data-uid="Godot.SpatialMaterial.AoOnUv2*"></a>
   <h4 id="Godot_SpatialMaterial_AoOnUv2" data-uid="Godot.SpatialMaterial.AoOnUv2">AoOnUv2</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, use <code>UV2</code> coordinates to look up from the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_AoTexture">AoTexture</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -571,7 +583,8 @@
   
   <a id="Godot_SpatialMaterial_AoTexture_" data-uid="Godot.SpatialMaterial.AoTexture*"></a>
   <h4 id="Godot_SpatialMaterial_AoTexture" data-uid="Godot.SpatialMaterial.AoTexture">AoTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture that defines the amount of ambient occlusion for a given point on the object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -596,7 +609,8 @@
   
   <a id="Godot_SpatialMaterial_AoTextureChannel_" data-uid="Godot.SpatialMaterial.AoTextureChannel*"></a>
   <h4 id="Godot_SpatialMaterial_AoTextureChannel" data-uid="Godot.SpatialMaterial.AoTextureChannel">AoTextureChannel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the channel of the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_AoTexture">AoTexture</a> in which the ambient occlusion information is stored. This is useful when you store the information for multiple effects in a single texture. For example if you stored metallic in the red channel, roughness in the blue, and ambient occlusion in the green you could reduce the number of textures you use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -621,7 +635,9 @@
   
   <a id="Godot_SpatialMaterial_AsyncMode_" data-uid="Godot.SpatialMaterial.AsyncMode*"></a>
   <h4 id="Godot_SpatialMaterial_AsyncMode" data-uid="Godot.SpatialMaterial.AsyncMode">AsyncMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If  is <code>Synchronous</code> (with or without cache), this determines how this material must behave in regards to asynchronous shader compilation.</p>
+<p><a class="xref" href="Godot.SpatialMaterial.AsyncModeEnum.html#Godot_SpatialMaterial_AsyncModeEnum_Visible">Visible</a> is the default and the best for most cases.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -646,7 +662,8 @@
   
   <a id="Godot_SpatialMaterial_Clearcoat_" data-uid="Godot.SpatialMaterial.Clearcoat*"></a>
   <h4 id="Godot_SpatialMaterial_Clearcoat" data-uid="Godot.SpatialMaterial.Clearcoat">Clearcoat</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the strength of the clearcoat effect. Setting to <code>0</code> looks the same as disabling the clearcoat effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -671,7 +688,9 @@
   
   <a id="Godot_SpatialMaterial_ClearcoatEnabled_" data-uid="Godot.SpatialMaterial.ClearcoatEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_ClearcoatEnabled" data-uid="Godot.SpatialMaterial.ClearcoatEnabled">ClearcoatEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, clearcoat rendering is enabled. Adds a secondary transparent pass to the lighting calculation resulting in an added specular blob. This makes materials appear as if they have a clear layer on them that can be either glossy or rough.</p>
+<p>Note: Clearcoat rendering is not visible if the material has <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_FlagsUnshaded">FlagsUnshaded</a> set to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -696,7 +715,8 @@
   
   <a id="Godot_SpatialMaterial_ClearcoatGloss_" data-uid="Godot.SpatialMaterial.ClearcoatGloss*"></a>
   <h4 id="Godot_SpatialMaterial_ClearcoatGloss" data-uid="Godot.SpatialMaterial.ClearcoatGloss">ClearcoatGloss</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the roughness of the clearcoat pass. A higher value results in a smoother clearcoat while a lower value results in a rougher clearcoat.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -721,7 +741,8 @@
   
   <a id="Godot_SpatialMaterial_ClearcoatTexture_" data-uid="Godot.SpatialMaterial.ClearcoatTexture*"></a>
   <h4 id="Godot_SpatialMaterial_ClearcoatTexture" data-uid="Godot.SpatialMaterial.ClearcoatTexture">ClearcoatTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture that defines the strength of the clearcoat effect and the glossiness of the clearcoat. Strength is specified in the red channel while glossiness is specified in the green channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -746,7 +767,8 @@
   
   <a id="Godot_SpatialMaterial_DepthDeepParallax_" data-uid="Godot.SpatialMaterial.DepthDeepParallax*"></a>
   <h4 id="Godot_SpatialMaterial_DepthDeepParallax" data-uid="Godot.SpatialMaterial.DepthDeepParallax">DepthDeepParallax</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the shader will read depth texture at multiple points along the view ray to determine occlusion and parrallax. This can be very performance demanding, but results in more realistic looking depth mapping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -771,7 +793,9 @@
   
   <a id="Godot_SpatialMaterial_DepthEnabled_" data-uid="Godot.SpatialMaterial.DepthEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_DepthEnabled" data-uid="Godot.SpatialMaterial.DepthEnabled">DepthEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, depth mapping is enabled (also called &quot;parallax mapping&quot; or &quot;height mapping&quot;). See also <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_NormalEnabled">NormalEnabled</a>.</p>
+<p>Note: Depth mapping is not supported if triplanar mapping is used on the same material. The value of <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_DepthEnabled">DepthEnabled</a> will be ignored if <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Uv1Triplanar">Uv1Triplanar</a> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -796,7 +820,8 @@
   
   <a id="Godot_SpatialMaterial_DepthFlipBinormal_" data-uid="Godot.SpatialMaterial.DepthFlipBinormal*"></a>
   <h4 id="Godot_SpatialMaterial_DepthFlipBinormal" data-uid="Godot.SpatialMaterial.DepthFlipBinormal">DepthFlipBinormal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, direction of the binormal is flipped before using in the depth effect. This may be necessary if you have encoded your binormals in a way that is conflicting with the depth effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -821,7 +846,8 @@
   
   <a id="Godot_SpatialMaterial_DepthFlipTangent_" data-uid="Godot.SpatialMaterial.DepthFlipTangent*"></a>
   <h4 id="Godot_SpatialMaterial_DepthFlipTangent" data-uid="Godot.SpatialMaterial.DepthFlipTangent">DepthFlipTangent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, direction of the tangent is flipped before using in the depth effect. This may be necessary if you have encoded your tangents in a way that is conflicting with the depth effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -846,7 +872,8 @@
   
   <a id="Godot_SpatialMaterial_DepthMaxLayers_" data-uid="Godot.SpatialMaterial.DepthMaxLayers*"></a>
   <h4 id="Godot_SpatialMaterial_DepthMaxLayers" data-uid="Godot.SpatialMaterial.DepthMaxLayers">DepthMaxLayers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of layers to use when using <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_DepthDeepParallax">DepthDeepParallax</a> and the view direction is perpendicular to the surface of the object. A higher number will be more performance demanding while a lower number may not look as crisp.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -871,7 +898,8 @@
   
   <a id="Godot_SpatialMaterial_DepthMinLayers_" data-uid="Godot.SpatialMaterial.DepthMinLayers*"></a>
   <h4 id="Godot_SpatialMaterial_DepthMinLayers" data-uid="Godot.SpatialMaterial.DepthMinLayers">DepthMinLayers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of layers to use when using <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_DepthDeepParallax">DepthDeepParallax</a> and the view direction is parallel to the surface of the object. A higher number will be more performance demanding while a lower number may not look as crisp.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -896,7 +924,8 @@
   
   <a id="Godot_SpatialMaterial_DepthScale_" data-uid="Godot.SpatialMaterial.DepthScale*"></a>
   <h4 id="Godot_SpatialMaterial_DepthScale" data-uid="Godot.SpatialMaterial.DepthScale">DepthScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scales the depth offset effect. A higher number will create a larger depth.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -921,7 +950,8 @@
   
   <a id="Godot_SpatialMaterial_DepthTexture_" data-uid="Godot.SpatialMaterial.DepthTexture*"></a>
   <h4 id="Godot_SpatialMaterial_DepthTexture" data-uid="Godot.SpatialMaterial.DepthTexture">DepthTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture used to determine depth at a given pixel. Depth is always stored in the red channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -946,7 +976,8 @@
   
   <a id="Godot_SpatialMaterial_DetailAlbedo_" data-uid="Godot.SpatialMaterial.DetailAlbedo*"></a>
   <h4 id="Godot_SpatialMaterial_DetailAlbedo" data-uid="Godot.SpatialMaterial.DetailAlbedo">DetailAlbedo</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture that specifies the color of the detail overlay.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -971,7 +1002,8 @@
   
   <a id="Godot_SpatialMaterial_DetailBlendMode_" data-uid="Godot.SpatialMaterial.DetailBlendMode*"></a>
   <h4 id="Godot_SpatialMaterial_DetailBlendMode" data-uid="Godot.SpatialMaterial.DetailBlendMode">DetailBlendMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies how the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_DetailAlbedo">DetailAlbedo</a> should blend with the current <code>ALBEDO</code>. See <a class="xref" href="Godot.SpatialMaterial.BlendMode.html">SpatialMaterial.BlendMode</a> for options.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -996,7 +1028,8 @@
   
   <a id="Godot_SpatialMaterial_DetailEnabled_" data-uid="Godot.SpatialMaterial.DetailEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_DetailEnabled" data-uid="Godot.SpatialMaterial.DetailEnabled">DetailEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables the detail overlay. Detail is a second texture that gets mixed over the surface of the object based on <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_DetailMask">DetailMask</a>. This can be used to add variation to objects, or to blend between two different albedo/normal textures.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1021,7 +1054,8 @@
   
   <a id="Godot_SpatialMaterial_DetailMask_" data-uid="Godot.SpatialMaterial.DetailMask*"></a>
   <h4 id="Godot_SpatialMaterial_DetailMask" data-uid="Godot.SpatialMaterial.DetailMask">DetailMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture used to specify how the detail textures get blended with the base textures.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1046,7 +1080,9 @@
   
   <a id="Godot_SpatialMaterial_DetailNormal_" data-uid="Godot.SpatialMaterial.DetailNormal*"></a>
   <h4 id="Godot_SpatialMaterial_DetailNormal" data-uid="Godot.SpatialMaterial.DetailNormal">DetailNormal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture that specifies the per-pixel normal of the detail overlay.</p>
+<p>Note: Godot expects the normal map to use X+, Y+, and Z+ coordinates. See <a href="http://wiki.polycount.com/wiki/Normal_Map_Technical_Details#Common_Swizzle_Coordinates">this page</a> for a comparison of normal map coordinates expected by popular engines.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1071,7 +1107,8 @@
   
   <a id="Godot_SpatialMaterial_DetailUvLayer_" data-uid="Godot.SpatialMaterial.DetailUvLayer*"></a>
   <h4 id="Godot_SpatialMaterial_DetailUvLayer" data-uid="Godot.SpatialMaterial.DetailUvLayer">DetailUvLayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies whether to use <code>UV</code> or <code>UV2</code> for the detail layer. See <a class="xref" href="Godot.SpatialMaterial.DetailUV.html">SpatialMaterial.DetailUV</a> for options.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1096,7 +1133,9 @@
   
   <a id="Godot_SpatialMaterial_DistanceFadeMaxDistance_" data-uid="Godot.SpatialMaterial.DistanceFadeMaxDistance*"></a>
   <h4 id="Godot_SpatialMaterial_DistanceFadeMaxDistance" data-uid="Godot.SpatialMaterial.DistanceFadeMaxDistance">DistanceFadeMaxDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Distance at which the object appears fully opaque.</p>
+<p>Note: If <code>distance_fade_max_distance</code> is less than <code>distance_fade_min_distance</code>, the behavior will be reversed. The object will start to fade away at <code>distance_fade_max_distance</code> and will fully disappear once it reaches <code>distance_fade_min_distance</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1121,7 +1160,9 @@
   
   <a id="Godot_SpatialMaterial_DistanceFadeMinDistance_" data-uid="Godot.SpatialMaterial.DistanceFadeMinDistance*"></a>
   <h4 id="Godot_SpatialMaterial_DistanceFadeMinDistance" data-uid="Godot.SpatialMaterial.DistanceFadeMinDistance">DistanceFadeMinDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Distance at which the object starts to become visible. If the object is less than this distance away, it will be invisible.</p>
+<p>Note: If <code>distance_fade_min_distance</code> is greater than <code>distance_fade_max_distance</code>, the behavior will be reversed. The object will start to fade away at <code>distance_fade_max_distance</code> and will fully disappear once it reaches <code>distance_fade_min_distance</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1146,7 +1187,8 @@
   
   <a id="Godot_SpatialMaterial_DistanceFadeMode_" data-uid="Godot.SpatialMaterial.DistanceFadeMode*"></a>
   <h4 id="Godot_SpatialMaterial_DistanceFadeMode" data-uid="Godot.SpatialMaterial.DistanceFadeMode">DistanceFadeMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies which type of fade to use. Can be any of the <a class="xref" href="Godot.SpatialMaterial.DistanceFadeModeEnum.html">SpatialMaterial.DistanceFadeModeEnum</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1171,7 +1213,8 @@
   
   <a id="Godot_SpatialMaterial_Emission_" data-uid="Godot.SpatialMaterial.Emission*"></a>
   <h4 id="Godot_SpatialMaterial_Emission" data-uid="Godot.SpatialMaterial.Emission">Emission</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The emitted light&apos;s color. See <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_EmissionEnabled">EmissionEnabled</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1196,7 +1239,8 @@
   
   <a id="Godot_SpatialMaterial_EmissionEnabled_" data-uid="Godot.SpatialMaterial.EmissionEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_EmissionEnabled" data-uid="Godot.SpatialMaterial.EmissionEnabled">EmissionEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the body emits light. Emitting light makes the object appear brighter. The object can also cast light on other objects if a <a class="xref" href="Godot.GIProbe.html">GIProbe</a> or <a class="xref" href="Godot.BakedLightmap.html">BakedLightmap</a> is used and this object is used in baked lighting.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1221,7 +1265,8 @@
   
   <a id="Godot_SpatialMaterial_EmissionEnergy_" data-uid="Godot.SpatialMaterial.EmissionEnergy*"></a>
   <h4 id="Godot_SpatialMaterial_EmissionEnergy" data-uid="Godot.SpatialMaterial.EmissionEnergy">EmissionEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The emitted light&apos;s strength. See <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_EmissionEnabled">EmissionEnabled</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1246,7 +1291,8 @@
   
   <a id="Godot_SpatialMaterial_EmissionOnUv2_" data-uid="Godot.SpatialMaterial.EmissionOnUv2*"></a>
   <h4 id="Godot_SpatialMaterial_EmissionOnUv2" data-uid="Godot.SpatialMaterial.EmissionOnUv2">EmissionOnUv2</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Use <code>UV2</code> to read from the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_EmissionTexture">EmissionTexture</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1271,7 +1317,8 @@
   
   <a id="Godot_SpatialMaterial_EmissionOperator_" data-uid="Godot.SpatialMaterial.EmissionOperator*"></a>
   <h4 id="Godot_SpatialMaterial_EmissionOperator" data-uid="Godot.SpatialMaterial.EmissionOperator">EmissionOperator</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets how <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Emission">Emission</a> interacts with <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_EmissionTexture">EmissionTexture</a>. Can either add or multiply. See <a class="xref" href="Godot.SpatialMaterial.EmissionOperatorEnum.html">SpatialMaterial.EmissionOperatorEnum</a> for options.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1296,7 +1343,8 @@
   
   <a id="Godot_SpatialMaterial_EmissionTexture_" data-uid="Godot.SpatialMaterial.EmissionTexture*"></a>
   <h4 id="Godot_SpatialMaterial_EmissionTexture" data-uid="Godot.SpatialMaterial.EmissionTexture">EmissionTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture that specifies how much surface emits light at a given point.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1321,7 +1369,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsAlbedoTexForceSrgb_" data-uid="Godot.SpatialMaterial.FlagsAlbedoTexForceSrgb*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsAlbedoTexForceSrgb" data-uid="Godot.SpatialMaterial.FlagsAlbedoTexForceSrgb">FlagsAlbedoTexForceSrgb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Forces a conversion of the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_AlbedoTexture">AlbedoTexture</a> from sRGB space to linear space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1346,7 +1395,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsAlbedoTexMsdf_" data-uid="Godot.SpatialMaterial.FlagsAlbedoTexMsdf*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsAlbedoTexMsdf" data-uid="Godot.SpatialMaterial.FlagsAlbedoTexMsdf">FlagsAlbedoTexMsdf</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables signed distance field rendering shader.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1371,7 +1421,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsDisableAmbientLight_" data-uid="Godot.SpatialMaterial.FlagsDisableAmbientLight*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsDisableAmbientLight" data-uid="Godot.SpatialMaterial.FlagsDisableAmbientLight">FlagsDisableAmbientLight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the object receives no ambient light.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1396,7 +1447,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsDoNotReceiveShadows_" data-uid="Godot.SpatialMaterial.FlagsDoNotReceiveShadows*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsDoNotReceiveShadows" data-uid="Godot.SpatialMaterial.FlagsDoNotReceiveShadows">FlagsDoNotReceiveShadows</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the object receives no shadow that would otherwise be cast onto it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1421,7 +1473,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsEnsureCorrectNormals_" data-uid="Godot.SpatialMaterial.FlagsEnsureCorrectNormals*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsEnsureCorrectNormals" data-uid="Godot.SpatialMaterial.FlagsEnsureCorrectNormals">FlagsEnsureCorrectNormals</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the shader will compute extra operations to make sure the normal stays correct when using a non-uniform scale. Only enable if using non-uniform scaling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1446,7 +1499,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsFixedSize_" data-uid="Godot.SpatialMaterial.FlagsFixedSize*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsFixedSize" data-uid="Godot.SpatialMaterial.FlagsFixedSize">FlagsFixedSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the object is rendered at the same size regardless of distance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1471,7 +1525,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsNoDepthTest_" data-uid="Godot.SpatialMaterial.FlagsNoDepthTest*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsNoDepthTest" data-uid="Godot.SpatialMaterial.FlagsNoDepthTest">FlagsNoDepthTest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, depth testing is disabled and the object will be drawn in render order.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1496,7 +1551,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsTransparent_" data-uid="Godot.SpatialMaterial.FlagsTransparent*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsTransparent" data-uid="Godot.SpatialMaterial.FlagsTransparent">FlagsTransparent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, transparency is enabled on the body. See also <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsBlendMode">ParamsBlendMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1521,7 +1577,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsUnshaded_" data-uid="Godot.SpatialMaterial.FlagsUnshaded*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsUnshaded" data-uid="Godot.SpatialMaterial.FlagsUnshaded">FlagsUnshaded</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the object is unaffected by lighting.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1546,7 +1603,9 @@
   
   <a id="Godot_SpatialMaterial_FlagsUsePointSize_" data-uid="Godot.SpatialMaterial.FlagsUsePointSize*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsUsePointSize" data-uid="Godot.SpatialMaterial.FlagsUsePointSize">FlagsUsePointSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, render point size can be changed.</p>
+<p>Note: This is only effective for objects whose geometry is point-based rather than triangle-based. See also <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsPointSize">ParamsPointSize</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1571,7 +1630,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsUseShadowToOpacity_" data-uid="Godot.SpatialMaterial.FlagsUseShadowToOpacity*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsUseShadowToOpacity" data-uid="Godot.SpatialMaterial.FlagsUseShadowToOpacity">FlagsUseShadowToOpacity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables the &quot;shadow to opacity&quot; render mode where lighting modifies the alpha so shadowed areas are opaque and non-shadowed areas are transparent. Useful for overlaying shadows onto a camera feed in AR.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1596,7 +1656,11 @@
   
   <a id="Godot_SpatialMaterial_FlagsVertexLighting_" data-uid="Godot.SpatialMaterial.FlagsVertexLighting*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsVertexLighting" data-uid="Godot.SpatialMaterial.FlagsVertexLighting">FlagsVertexLighting</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, lighting is calculated per vertex rather than per pixel. This may increase performance on low-end devices, especially for meshes with a lower polygon count. The downside is that shading becomes much less accurate, with visible linear interpolation between vertices that are joined together. This can be compensated by ensuring meshes have a sufficient level of subdivision (but not too much, to avoid reducing performance). Some material features are also not supported when vertex shading is enabled.</p>
+<p>See also  which can globally enable vertex shading on all materials.</p>
+<p>Note: By default, vertex shading is enforced on mobile platforms by &apos;s <code>mobile</code> override.</p>
+<p>Note: <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_FlagsVertexLighting">FlagsVertexLighting</a> has no effect if <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_FlagsUnshaded">FlagsUnshaded</a> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1621,7 +1685,8 @@
   
   <a id="Godot_SpatialMaterial_FlagsWorldTriplanar_" data-uid="Godot.SpatialMaterial.FlagsWorldTriplanar*"></a>
   <h4 id="Godot_SpatialMaterial_FlagsWorldTriplanar" data-uid="Godot.SpatialMaterial.FlagsWorldTriplanar">FlagsWorldTriplanar</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, triplanar mapping is calculated in world space rather than object local space. See also <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Uv1Triplanar">Uv1Triplanar</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1646,7 +1711,8 @@
   
   <a id="Godot_SpatialMaterial_Metallic_" data-uid="Godot.SpatialMaterial.Metallic*"></a>
   <h4 id="Godot_SpatialMaterial_Metallic" data-uid="Godot.SpatialMaterial.Metallic">Metallic</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A high value makes the material appear more like a metal. Non-metals use their albedo as the diffuse color and add diffuse to the specular reflection. With non-metals, the reflection appears on top of the albedo color. Metals use their albedo as a multiplier to the specular reflection and set the diffuse color to black resulting in a tinted reflection. Materials work better when fully metal or fully non-metal, values between <code>0</code> and <code>1</code> should only be used for blending between metal and non-metal sections. To alter the amount of reflection use <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Roughness">Roughness</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1671,7 +1737,9 @@
   
   <a id="Godot_SpatialMaterial_MetallicSpecular_" data-uid="Godot.SpatialMaterial.MetallicSpecular*"></a>
   <h4 id="Godot_SpatialMaterial_MetallicSpecular" data-uid="Godot.SpatialMaterial.MetallicSpecular">MetallicSpecular</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the size of the specular lobe. The specular lobe is the bright spot that is reflected from light sources.</p>
+<p>Note: Unlike <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Metallic">Metallic</a>, this is not energy-conserving, so it should be left at <code>0.5</code> in most cases. See also <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Roughness">Roughness</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1696,7 +1764,8 @@
   
   <a id="Godot_SpatialMaterial_MetallicTexture_" data-uid="Godot.SpatialMaterial.MetallicTexture*"></a>
   <h4 id="Godot_SpatialMaterial_MetallicTexture" data-uid="Godot.SpatialMaterial.MetallicTexture">MetallicTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture used to specify metallic for an object. This is multiplied by <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Metallic">Metallic</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1721,7 +1790,8 @@
   
   <a id="Godot_SpatialMaterial_MetallicTextureChannel_" data-uid="Godot.SpatialMaterial.MetallicTextureChannel*"></a>
   <h4 id="Godot_SpatialMaterial_MetallicTextureChannel" data-uid="Godot.SpatialMaterial.MetallicTextureChannel">MetallicTextureChannel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the channel of the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_MetallicTexture">MetallicTexture</a> in which the metallic information is stored. This is useful when you store the information for multiple effects in a single texture. For example if you stored metallic in the red channel, roughness in the blue, and ambient occlusion in the green you could reduce the number of textures you use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1746,7 +1816,8 @@
   
   <a id="Godot_SpatialMaterial_NormalEnabled_" data-uid="Godot.SpatialMaterial.NormalEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_NormalEnabled" data-uid="Godot.SpatialMaterial.NormalEnabled">NormalEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, normal mapping is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1771,7 +1842,8 @@
   
   <a id="Godot_SpatialMaterial_NormalScale_" data-uid="Godot.SpatialMaterial.NormalScale*"></a>
   <h4 id="Godot_SpatialMaterial_NormalScale" data-uid="Godot.SpatialMaterial.NormalScale">NormalScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The strength of the normal map&apos;s effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1796,7 +1868,10 @@
   
   <a id="Godot_SpatialMaterial_NormalTexture_" data-uid="Godot.SpatialMaterial.NormalTexture*"></a>
   <h4 id="Godot_SpatialMaterial_NormalTexture" data-uid="Godot.SpatialMaterial.NormalTexture">NormalTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture used to specify the normal at a given pixel. The <code>normal_texture</code> only uses the red and green channels; the blue and alpha channels are ignored. The normal read from <code>normal_texture</code> is oriented around the surface normal provided by the <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+<p>Note: The mesh must have both normals and tangents defined in its vertex data. Otherwise, the normal map won&apos;t render correctly and will only appear to darken the whole surface. If creating geometry with <a class="xref" href="Godot.SurfaceTool.html">SurfaceTool</a>, you can use <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_GenerateNormals_System_Boolean_">GenerateNormals(Boolean)</a> and <a class="xref" href="Godot.SurfaceTool.html#Godot_SurfaceTool_GenerateTangents">GenerateTangents()</a> to automatically generate normals and tangents respectively.</p>
+<p>Note: Godot expects the normal map to use X+, Y+, and Z+ coordinates. See <a href="http://wiki.polycount.com/wiki/Normal_Map_Technical_Details#Common_Swizzle_Coordinates">this page</a> for a comparison of normal map coordinates expected by popular engines.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1821,7 +1896,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsAlphaScissorThreshold_" data-uid="Godot.SpatialMaterial.ParamsAlphaScissorThreshold*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsAlphaScissorThreshold" data-uid="Godot.SpatialMaterial.ParamsAlphaScissorThreshold">ParamsAlphaScissorThreshold</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Threshold at which the alpha scissor will discard values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1846,7 +1922,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsBillboardKeepScale_" data-uid="Godot.SpatialMaterial.ParamsBillboardKeepScale*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsBillboardKeepScale" data-uid="Godot.SpatialMaterial.ParamsBillboardKeepScale">ParamsBillboardKeepScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the shader will keep the scale set for the mesh. Otherwise the scale is lost when billboarding. Only applies when <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsBillboardMode">ParamsBillboardMode</a> is <a class="xref" href="Godot.SpatialMaterial.BillboardMode.html#Godot_SpatialMaterial_BillboardMode_Enabled">Enabled</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1871,7 +1948,9 @@
   
   <a id="Godot_SpatialMaterial_ParamsBillboardMode_" data-uid="Godot.SpatialMaterial.ParamsBillboardMode*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsBillboardMode" data-uid="Godot.SpatialMaterial.ParamsBillboardMode">ParamsBillboardMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls how the object faces the camera. See <a class="xref" href="Godot.SpatialMaterial.BillboardMode.html">SpatialMaterial.BillboardMode</a>.</p>
+<p>Note: Billboard mode is not suitable for VR because the left-right vector of the camera is not horizontal when the screen is attached to your head instead of on the table. See <a href="https://github.com/godotengine/godot/issues/41567">GitHub issue #41567</a> for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1896,7 +1975,9 @@
   
   <a id="Godot_SpatialMaterial_ParamsBlendMode_" data-uid="Godot.SpatialMaterial.ParamsBlendMode*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsBlendMode" data-uid="Godot.SpatialMaterial.ParamsBlendMode">ParamsBlendMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The material&apos;s blend mode.</p>
+<p>Note: Values other than <code>Mix</code> force the object into the transparent pipeline. See <a class="xref" href="Godot.SpatialMaterial.BlendMode.html">SpatialMaterial.BlendMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1921,7 +2002,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsCullMode_" data-uid="Godot.SpatialMaterial.ParamsCullMode*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsCullMode" data-uid="Godot.SpatialMaterial.ParamsCullMode">ParamsCullMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Which side of the object is not drawn when backfaces are rendered. See <a class="xref" href="Godot.SpatialMaterial.CullMode.html">SpatialMaterial.CullMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1946,7 +2028,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsDepthDrawMode_" data-uid="Godot.SpatialMaterial.ParamsDepthDrawMode*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsDepthDrawMode" data-uid="Godot.SpatialMaterial.ParamsDepthDrawMode">ParamsDepthDrawMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines when depth rendering takes place. See <a class="xref" href="Godot.SpatialMaterial.DepthDrawMode.html">SpatialMaterial.DepthDrawMode</a>. See also <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_FlagsTransparent">FlagsTransparent</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1971,7 +2054,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsDiffuseMode_" data-uid="Godot.SpatialMaterial.ParamsDiffuseMode*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsDiffuseMode" data-uid="Godot.SpatialMaterial.ParamsDiffuseMode">ParamsDiffuseMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The algorithm used for diffuse light scattering. See <a class="xref" href="Godot.SpatialMaterial.DiffuseMode.html">SpatialMaterial.DiffuseMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1996,7 +2080,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsGrow_" data-uid="Godot.SpatialMaterial.ParamsGrow*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsGrow" data-uid="Godot.SpatialMaterial.ParamsGrow">ParamsGrow</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables the vertex grow setting. See <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsGrowAmount">ParamsGrowAmount</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2021,7 +2106,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsGrowAmount_" data-uid="Godot.SpatialMaterial.ParamsGrowAmount*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsGrowAmount" data-uid="Godot.SpatialMaterial.ParamsGrowAmount">ParamsGrowAmount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Grows object vertices in the direction of their normals.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2046,7 +2132,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsLineWidth_" data-uid="Godot.SpatialMaterial.ParamsLineWidth*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsLineWidth" data-uid="Godot.SpatialMaterial.ParamsLineWidth">ParamsLineWidth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Currently unimplemented in Godot.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2071,7 +2158,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsPointSize_" data-uid="Godot.SpatialMaterial.ParamsPointSize*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsPointSize" data-uid="Godot.SpatialMaterial.ParamsPointSize">ParamsPointSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The point size in pixels. See <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_FlagsUsePointSize">FlagsUsePointSize</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2096,7 +2184,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsSpecularMode_" data-uid="Godot.SpatialMaterial.ParamsSpecularMode*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsSpecularMode" data-uid="Godot.SpatialMaterial.ParamsSpecularMode">ParamsSpecularMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The method for rendering the specular blob. See <a class="xref" href="Godot.SpatialMaterial.SpecularMode.html">SpatialMaterial.SpecularMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2121,7 +2210,8 @@
   
   <a id="Godot_SpatialMaterial_ParamsUseAlphaScissor_" data-uid="Godot.SpatialMaterial.ParamsUseAlphaScissor*"></a>
   <h4 id="Godot_SpatialMaterial_ParamsUseAlphaScissor" data-uid="Godot.SpatialMaterial.ParamsUseAlphaScissor">ParamsUseAlphaScissor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the shader will discard all pixels that have an alpha value less than <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsAlphaScissorThreshold">ParamsAlphaScissorThreshold</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2146,7 +2236,8 @@
   
   <a id="Godot_SpatialMaterial_ParticlesAnimHFrames_" data-uid="Godot.SpatialMaterial.ParticlesAnimHFrames*"></a>
   <h4 id="Godot_SpatialMaterial_ParticlesAnimHFrames" data-uid="Godot.SpatialMaterial.ParticlesAnimHFrames">ParticlesAnimHFrames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of horizontal frames in the particle sprite sheet. Only enabled when using <a class="xref" href="Godot.SpatialMaterial.BillboardMode.html#Godot_SpatialMaterial_BillboardMode_Particles">Particles</a>. See <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsBillboardMode">ParamsBillboardMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2171,7 +2262,8 @@
   
   <a id="Godot_SpatialMaterial_ParticlesAnimLoop_" data-uid="Godot.SpatialMaterial.ParticlesAnimLoop*"></a>
   <h4 id="Godot_SpatialMaterial_ParticlesAnimLoop" data-uid="Godot.SpatialMaterial.ParticlesAnimLoop">ParticlesAnimLoop</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, particle animations are looped. Only enabled when using <a class="xref" href="Godot.SpatialMaterial.BillboardMode.html#Godot_SpatialMaterial_BillboardMode_Particles">Particles</a>. See <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsBillboardMode">ParamsBillboardMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2196,7 +2288,8 @@
   
   <a id="Godot_SpatialMaterial_ParticlesAnimVFrames_" data-uid="Godot.SpatialMaterial.ParticlesAnimVFrames*"></a>
   <h4 id="Godot_SpatialMaterial_ParticlesAnimVFrames" data-uid="Godot.SpatialMaterial.ParticlesAnimVFrames">ParticlesAnimVFrames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of vertical frames in the particle sprite sheet. Only enabled when using <a class="xref" href="Godot.SpatialMaterial.BillboardMode.html#Godot_SpatialMaterial_BillboardMode_Particles">Particles</a>. See <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsBillboardMode">ParamsBillboardMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2221,7 +2314,8 @@
   
   <a id="Godot_SpatialMaterial_ProximityFadeDistance_" data-uid="Godot.SpatialMaterial.ProximityFadeDistance*"></a>
   <h4 id="Godot_SpatialMaterial_ProximityFadeDistance" data-uid="Godot.SpatialMaterial.ProximityFadeDistance">ProximityFadeDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Distance over which the fade effect takes place. The larger the distance the longer it takes for an object to fade.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2246,7 +2340,8 @@
   
   <a id="Godot_SpatialMaterial_ProximityFadeEnable_" data-uid="Godot.SpatialMaterial.ProximityFadeEnable*"></a>
   <h4 id="Godot_SpatialMaterial_ProximityFadeEnable" data-uid="Godot.SpatialMaterial.ProximityFadeEnable">ProximityFadeEnable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the proximity fade effect is enabled. The proximity fade effect fades out each pixel based on its distance to another object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2271,7 +2366,8 @@
   
   <a id="Godot_SpatialMaterial_RefractionEnabled_" data-uid="Godot.SpatialMaterial.RefractionEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_RefractionEnabled" data-uid="Godot.SpatialMaterial.RefractionEnabled">RefractionEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the refraction effect is enabled. Refraction distorts transparency based on light from behind the object. When using the GLES3 backend, the material&apos;s roughness value will affect the blurriness of the refraction. Higher roughness values will make the refraction look blurrier.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2296,7 +2392,8 @@
   
   <a id="Godot_SpatialMaterial_RefractionScale_" data-uid="Godot.SpatialMaterial.RefractionScale*"></a>
   <h4 id="Godot_SpatialMaterial_RefractionScale" data-uid="Godot.SpatialMaterial.RefractionScale">RefractionScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The strength of the refraction effect. Higher values result in a more distorted appearance for the refraction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2321,7 +2418,8 @@
   
   <a id="Godot_SpatialMaterial_RefractionTexture_" data-uid="Godot.SpatialMaterial.RefractionTexture*"></a>
   <h4 id="Godot_SpatialMaterial_RefractionTexture" data-uid="Godot.SpatialMaterial.RefractionTexture">RefractionTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture that controls the strength of the refraction per-pixel. Multiplied by <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_RefractionScale">RefractionScale</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2346,7 +2444,8 @@
   
   <a id="Godot_SpatialMaterial_RefractionTextureChannel_" data-uid="Godot.SpatialMaterial.RefractionTextureChannel*"></a>
   <h4 id="Godot_SpatialMaterial_RefractionTextureChannel" data-uid="Godot.SpatialMaterial.RefractionTextureChannel">RefractionTextureChannel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the channel of the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_RefractionTexture">RefractionTexture</a> in which the refraction information is stored. This is useful when you store the information for multiple effects in a single texture. For example if you stored metallic in the red channel, roughness in the blue, and ambient occlusion in the green you could reduce the number of textures you use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2371,7 +2470,8 @@
   
   <a id="Godot_SpatialMaterial_Rim_" data-uid="Godot.SpatialMaterial.Rim*"></a>
   <h4 id="Godot_SpatialMaterial_Rim" data-uid="Godot.SpatialMaterial.Rim">Rim</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the strength of the rim lighting effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2396,7 +2496,9 @@
   
   <a id="Godot_SpatialMaterial_RimEnabled_" data-uid="Godot.SpatialMaterial.RimEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_RimEnabled" data-uid="Godot.SpatialMaterial.RimEnabled">RimEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, rim effect is enabled. Rim lighting increases the brightness at glancing angles on an object.</p>
+<p>Note: Rim lighting is not visible if the material has <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_FlagsUnshaded">FlagsUnshaded</a> set to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2421,7 +2523,8 @@
   
   <a id="Godot_SpatialMaterial_RimTexture_" data-uid="Godot.SpatialMaterial.RimTexture*"></a>
   <h4 id="Godot_SpatialMaterial_RimTexture" data-uid="Godot.SpatialMaterial.RimTexture">RimTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture used to set the strength of the rim lighting effect per-pixel. Multiplied by <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Rim">Rim</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2446,7 +2549,8 @@
   
   <a id="Godot_SpatialMaterial_RimTint_" data-uid="Godot.SpatialMaterial.RimTint*"></a>
   <h4 id="Godot_SpatialMaterial_RimTint" data-uid="Godot.SpatialMaterial.RimTint">RimTint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The amount of to blend light and albedo color when rendering rim effect. If <code>0</code> the light color is used, while <code>1</code> means albedo color is used. An intermediate value generally works best.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2471,7 +2575,8 @@
   
   <a id="Godot_SpatialMaterial_Roughness_" data-uid="Godot.SpatialMaterial.Roughness*"></a>
   <h4 id="Godot_SpatialMaterial_Roughness" data-uid="Godot.SpatialMaterial.Roughness">Roughness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Surface reflection. A value of <code>0</code> represents a perfect mirror while a value of <code>1</code> completely blurs the reflection. See also <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Metallic">Metallic</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2496,7 +2601,8 @@
   
   <a id="Godot_SpatialMaterial_RoughnessTexture_" data-uid="Godot.SpatialMaterial.RoughnessTexture*"></a>
   <h4 id="Godot_SpatialMaterial_RoughnessTexture" data-uid="Godot.SpatialMaterial.RoughnessTexture">RoughnessTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture used to control the roughness per-pixel. Multiplied by <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Roughness">Roughness</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2521,7 +2627,8 @@
   
   <a id="Godot_SpatialMaterial_RoughnessTextureChannel_" data-uid="Godot.SpatialMaterial.RoughnessTextureChannel*"></a>
   <h4 id="Godot_SpatialMaterial_RoughnessTextureChannel" data-uid="Godot.SpatialMaterial.RoughnessTextureChannel">RoughnessTextureChannel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the channel of the <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_AoTexture">AoTexture</a> in which the ambient occlusion information is stored. This is useful when you store the information for multiple effects in a single texture. For example if you stored metallic in the red channel, roughness in the blue, and ambient occlusion in the green you could reduce the number of textures you use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2546,7 +2653,8 @@
   
   <a id="Godot_SpatialMaterial_SubsurfScatterEnabled_" data-uid="Godot.SpatialMaterial.SubsurfScatterEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_SubsurfScatterEnabled" data-uid="Godot.SpatialMaterial.SubsurfScatterEnabled">SubsurfScatterEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, subsurface scattering is enabled. Emulates light that penetrates an object&apos;s surface, is scattered, and then emerges.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2571,7 +2679,8 @@
   
   <a id="Godot_SpatialMaterial_SubsurfScatterStrength_" data-uid="Godot.SpatialMaterial.SubsurfScatterStrength*"></a>
   <h4 id="Godot_SpatialMaterial_SubsurfScatterStrength" data-uid="Godot.SpatialMaterial.SubsurfScatterStrength">SubsurfScatterStrength</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The strength of the subsurface scattering effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2596,7 +2705,8 @@
   
   <a id="Godot_SpatialMaterial_SubsurfScatterTexture_" data-uid="Godot.SpatialMaterial.SubsurfScatterTexture*"></a>
   <h4 id="Godot_SpatialMaterial_SubsurfScatterTexture" data-uid="Godot.SpatialMaterial.SubsurfScatterTexture">SubsurfScatterTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture used to control the subsurface scattering strength. Stored in the red texture channel. Multiplied by <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_SubsurfScatterStrength">SubsurfScatterStrength</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2621,7 +2731,8 @@
   
   <a id="Godot_SpatialMaterial_Transmission_" data-uid="Godot.SpatialMaterial.Transmission*"></a>
   <h4 id="Godot_SpatialMaterial_Transmission" data-uid="Godot.SpatialMaterial.Transmission">Transmission</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The color used by the transmission effect. Represents the light passing through an object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2646,7 +2757,8 @@
   
   <a id="Godot_SpatialMaterial_TransmissionEnabled_" data-uid="Godot.SpatialMaterial.TransmissionEnabled*"></a>
   <h4 id="Godot_SpatialMaterial_TransmissionEnabled" data-uid="Godot.SpatialMaterial.TransmissionEnabled">TransmissionEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the transmission effect is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2671,7 +2783,8 @@
   
   <a id="Godot_SpatialMaterial_TransmissionTexture_" data-uid="Godot.SpatialMaterial.TransmissionTexture*"></a>
   <h4 id="Godot_SpatialMaterial_TransmissionTexture" data-uid="Godot.SpatialMaterial.TransmissionTexture">TransmissionTexture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture used to control the transmission effect per-pixel. Added to <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_Transmission">Transmission</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2696,7 +2809,8 @@
   
   <a id="Godot_SpatialMaterial_Uv1Offset_" data-uid="Godot.SpatialMaterial.Uv1Offset*"></a>
   <h4 id="Godot_SpatialMaterial_Uv1Offset" data-uid="Godot.SpatialMaterial.Uv1Offset">Uv1Offset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How much to offset the <code>UV</code> coordinates. This amount will be added to <code>UV</code> in the vertex function. This can be used to offset a texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2721,7 +2835,8 @@
   
   <a id="Godot_SpatialMaterial_Uv1Scale_" data-uid="Godot.SpatialMaterial.Uv1Scale*"></a>
   <h4 id="Godot_SpatialMaterial_Uv1Scale" data-uid="Godot.SpatialMaterial.Uv1Scale">Uv1Scale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How much to scale the <code>UV</code> coordinates. This is multiplied by <code>UV</code> in the vertex function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2746,7 +2861,8 @@
   
   <a id="Godot_SpatialMaterial_Uv1Triplanar_" data-uid="Godot.SpatialMaterial.Uv1Triplanar*"></a>
   <h4 id="Godot_SpatialMaterial_Uv1Triplanar" data-uid="Godot.SpatialMaterial.Uv1Triplanar">Uv1Triplanar</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, instead of using <code>UV</code> textures will use a triplanar texture lookup to determine how to apply textures. Triplanar uses the orientation of the object&apos;s surface to blend between texture coordinates. It reads from the source texture 3 times, once for each axis and then blends between the results based on how closely the pixel aligns with each axis. This is often used for natural features to get a realistic blend of materials. Because triplanar texturing requires many more texture reads per-pixel it is much slower than normal UV texturing. Additionally, because it is blending the texture between the three axes, it is unsuitable when you are trying to achieve crisp texturing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2771,7 +2887,8 @@
   
   <a id="Godot_SpatialMaterial_Uv1TriplanarSharpness_" data-uid="Godot.SpatialMaterial.Uv1TriplanarSharpness*"></a>
   <h4 id="Godot_SpatialMaterial_Uv1TriplanarSharpness" data-uid="Godot.SpatialMaterial.Uv1TriplanarSharpness">Uv1TriplanarSharpness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A lower number blends the texture more softly while a higher number blends the texture more sharply.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2796,7 +2913,8 @@
   
   <a id="Godot_SpatialMaterial_Uv2Offset_" data-uid="Godot.SpatialMaterial.Uv2Offset*"></a>
   <h4 id="Godot_SpatialMaterial_Uv2Offset" data-uid="Godot.SpatialMaterial.Uv2Offset">Uv2Offset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How much to offset the <code>UV2</code> coordinates. This amount will be added to <code>UV2</code> in the vertex function. This can be used to offset a texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2821,7 +2939,8 @@
   
   <a id="Godot_SpatialMaterial_Uv2Scale_" data-uid="Godot.SpatialMaterial.Uv2Scale*"></a>
   <h4 id="Godot_SpatialMaterial_Uv2Scale" data-uid="Godot.SpatialMaterial.Uv2Scale">Uv2Scale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How much to scale the <code>UV2</code> coordinates. This is multiplied by <code>UV2</code> in the vertex function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2846,7 +2965,8 @@
   
   <a id="Godot_SpatialMaterial_Uv2Triplanar_" data-uid="Godot.SpatialMaterial.Uv2Triplanar*"></a>
   <h4 id="Godot_SpatialMaterial_Uv2Triplanar" data-uid="Godot.SpatialMaterial.Uv2Triplanar">Uv2Triplanar</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, instead of using <code>UV2</code> textures will use a triplanar texture lookup to determine how to apply textures. Triplanar uses the orientation of the object&apos;s surface to blend between texture coordinates. It reads from the source texture 3 times, once for each axis and then blends between the results based on how closely the pixel aligns with each axis. This is often used for natural features to get a realistic blend of materials. Because triplanar texturing requires many more texture reads per-pixel it is much slower than normal UV texturing. Additionally, because it is blending the texture between the three axes, it is unsuitable when you are trying to achieve crisp texturing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2871,7 +2991,8 @@
   
   <a id="Godot_SpatialMaterial_Uv2TriplanarSharpness_" data-uid="Godot.SpatialMaterial.Uv2TriplanarSharpness*"></a>
   <h4 id="Godot_SpatialMaterial_Uv2TriplanarSharpness" data-uid="Godot.SpatialMaterial.Uv2TriplanarSharpness">Uv2TriplanarSharpness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A lower number blends the texture more softly while a higher number blends the texture more sharply.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2896,7 +3017,8 @@
   
   <a id="Godot_SpatialMaterial_VertexColorIsSrgb_" data-uid="Godot.SpatialMaterial.VertexColorIsSrgb*"></a>
   <h4 id="Godot_SpatialMaterial_VertexColorIsSrgb" data-uid="Godot.SpatialMaterial.VertexColorIsSrgb">VertexColorIsSrgb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the model&apos;s vertex colors are processed as sRGB mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2921,7 +3043,8 @@
   
   <a id="Godot_SpatialMaterial_VertexColorUseAsAlbedo_" data-uid="Godot.SpatialMaterial.VertexColorUseAsAlbedo*"></a>
   <h4 id="Godot_SpatialMaterial_VertexColorUseAsAlbedo" data-uid="Godot.SpatialMaterial.VertexColorUseAsAlbedo">VertexColorUseAsAlbedo</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the vertex color is used as albedo color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3598,7 +3721,8 @@
   
   <a id="Godot_SpatialMaterial_GetFeature_" data-uid="Godot.SpatialMaterial.GetFeature*"></a>
   <h4 id="Godot_SpatialMaterial_GetFeature_Godot_SpatialMaterial_Feature_" data-uid="Godot.SpatialMaterial.GetFeature(Godot.SpatialMaterial.Feature)">GetFeature(SpatialMaterial.Feature)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code>, if the specified <a class="xref" href="Godot.SpatialMaterial.Feature.html">SpatialMaterial.Feature</a> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3640,7 +3764,8 @@
   
   <a id="Godot_SpatialMaterial_GetFlag_" data-uid="Godot.SpatialMaterial.GetFlag*"></a>
   <h4 id="Godot_SpatialMaterial_GetFlag_Godot_SpatialMaterial_Flags_" data-uid="Godot.SpatialMaterial.GetFlag(Godot.SpatialMaterial.Flags)">GetFlag(SpatialMaterial.Flags)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code>, if the specified flag is enabled. See <a class="xref" href="Godot.SpatialMaterial.Flags.html">SpatialMaterial.Flags</a> enumerator for options.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4157,7 +4282,8 @@
   
   <a id="Godot_SpatialMaterial_GetTexture_" data-uid="Godot.SpatialMaterial.GetTexture*"></a>
   <h4 id="Godot_SpatialMaterial_GetTexture_Godot_SpatialMaterial_TextureParam_" data-uid="Godot.SpatialMaterial.GetTexture(Godot.SpatialMaterial.TextureParam)">GetTexture(SpatialMaterial.TextureParam)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Texture.html">Texture</a> associated with the specified <a class="xref" href="Godot.SpatialMaterial.TextureParam.html">SpatialMaterial.TextureParam</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -5178,7 +5304,8 @@
   
   <a id="Godot_SpatialMaterial_SetFeature_" data-uid="Godot.SpatialMaterial.SetFeature*"></a>
   <h4 id="Godot_SpatialMaterial_SetFeature_Godot_SpatialMaterial_Feature_System_Boolean_" data-uid="Godot.SpatialMaterial.SetFeature(Godot.SpatialMaterial.Feature,System.Boolean)">SetFeature(SpatialMaterial.Feature, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables the specified <a class="xref" href="Godot.SpatialMaterial.Feature.html">SpatialMaterial.Feature</a>. Many features that are available in <a class="xref" href="Godot.SpatialMaterial.html">SpatialMaterial</a>s need to be enabled before use. This way the cost for using the feature is only incurred when specified. Features can also be enabled by setting the corresponding member to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -5210,7 +5337,8 @@
   
   <a id="Godot_SpatialMaterial_SetFlag_" data-uid="Godot.SpatialMaterial.SetFlag*"></a>
   <h4 id="Godot_SpatialMaterial_SetFlag_Godot_SpatialMaterial_Flags_System_Boolean_" data-uid="Godot.SpatialMaterial.SetFlag(Godot.SpatialMaterial.Flags,System.Boolean)">SetFlag(SpatialMaterial.Flags, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables the specified flag. Flags are optional behavior that can be turned on and off. Only one flag can be enabled at a time with this function, the flag enumerators cannot be bit-masked together to enable or disable multiple flags at once. Flags can also be enabled by setting the corresponding member to <code>true</code>. See <a class="xref" href="Godot.SpatialMaterial.Flags.html">SpatialMaterial.Flags</a> enumerator for options.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -5809,7 +5937,8 @@
   
   <a id="Godot_SpatialMaterial_SetTexture_" data-uid="Godot.SpatialMaterial.SetTexture*"></a>
   <h4 id="Godot_SpatialMaterial_SetTexture_Godot_SpatialMaterial_TextureParam_Godot_Texture_" data-uid="Godot.SpatialMaterial.SetTexture(Godot.SpatialMaterial.TextureParam,Godot.Texture)">SetTexture(SpatialMaterial.TextureParam, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Texture.html">Texture</a> to be used by the specified <a class="xref" href="Godot.SpatialMaterial.TextureParam.html">SpatialMaterial.TextureParam</a>. This function is called when setting members ending in <code>*_texture</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

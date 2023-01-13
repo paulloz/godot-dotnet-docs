@@ -83,7 +83,8 @@
   
   <h1 id="Godot_VisualInstance" data-uid="Godot.VisualInstance" class="text-break">Class VisualInstance
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> is used to connect a resource to a visual representation. All visual 3D nodes inherit from the <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a>. In general, you should not access the <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> properties directly as they are accessed and managed by the nodes that inherit from <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a>. <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> is the node representation of the <a class="xref" href="Godot.VisualServer.html">VisualServer</a> instance.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -994,7 +995,9 @@
   
   <a id="Godot_VisualInstance_Layers_" data-uid="Godot.VisualInstance.Layers*"></a>
   <h4 id="Godot_VisualInstance_Layers" data-uid="Godot.VisualInstance.Layers">Layers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The render layer(s) this <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> is drawn on.</p>
+<p>This object will only be visible for <a class="xref" href="Godot.Camera.html">Camera</a>s whose cull mask includes the render object this <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> is set to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1021,7 +1024,8 @@
   
   <a id="Godot_VisualInstance_GetAabb_" data-uid="Godot.VisualInstance.GetAabb*"></a>
   <h4 id="Godot_VisualInstance_GetAabb" data-uid="Godot.VisualInstance.GetAabb">GetAabb()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.AABB.html">AABB</a> (also known as the bounding box) for this <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a>. See also <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetTransformedAabb">GetTransformedAabb()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1046,7 +1050,8 @@
   
   <a id="Godot_VisualInstance_GetBase_" data-uid="Godot.VisualInstance.GetBase*"></a>
   <h4 id="Godot_VisualInstance_GetBase" data-uid="Godot.VisualInstance.GetBase">GetBase()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the RID of the resource associated with this <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a>. For example, if the Node is a <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a>, this will return the RID of the associated <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1071,7 +1076,8 @@
   
   <a id="Godot_VisualInstance_GetInstance_" data-uid="Godot.VisualInstance.GetInstance*"></a>
   <h4 id="Godot_VisualInstance_GetInstance" data-uid="Godot.VisualInstance.GetInstance">GetInstance()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the RID of this instance. This RID is the same as the RID returned by <a class="xref" href="Godot.VisualServer.html#Godot_VisualServer_InstanceCreate">InstanceCreate()</a>. This RID is needed if you want to call <a class="xref" href="Godot.VisualServer.html">VisualServer</a> functions directly on this <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1121,7 +1127,8 @@
   
   <a id="Godot_VisualInstance_GetLayerMaskBit_" data-uid="Godot.VisualInstance.GetLayerMaskBit*"></a>
   <h4 id="Godot_VisualInstance_GetLayerMaskBit_System_Int32_" data-uid="Godot.VisualInstance.GetLayerMaskBit(System.Int32)">GetLayerMaskBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> when the specified layer is enabled in <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_Layers">Layers</a> and <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1163,7 +1170,9 @@
   
   <a id="Godot_VisualInstance_GetTransformedAabb_" data-uid="Godot.VisualInstance.GetTransformedAabb*"></a>
   <h4 id="Godot_VisualInstance_GetTransformedAabb" data-uid="Godot.VisualInstance.GetTransformedAabb">GetTransformedAabb()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the transformed <a class="xref" href="Godot.AABB.html">AABB</a> (also known as the bounding box) for this <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a>.</p>
+<p>Transformed in this case means the <a class="xref" href="Godot.AABB.html">AABB</a> plus the position, rotation, and scale of the <a class="xref" href="Godot.Spatial.html">Spatial</a>&apos;s <a class="xref" href="Godot.Transform.html">Transform</a>. See also <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetAabb">GetAabb()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1188,7 +1197,8 @@
   
   <a id="Godot_VisualInstance_SetBase_" data-uid="Godot.VisualInstance.SetBase*"></a>
   <h4 id="Godot_VisualInstance_SetBase_Godot_RID_" data-uid="Godot.VisualInstance.SetBase(Godot.RID)">SetBase(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the resource that is instantiated by this <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a>, which changes how the engine handles the <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> under the hood. Equivalent to <a class="xref" href="Godot.VisualServer.html#Godot_VisualServer_InstanceSetBase_Godot_RID_Godot_RID_">InstanceSetBase(RID, RID)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1242,7 +1252,8 @@
   
   <a id="Godot_VisualInstance_SetLayerMaskBit_" data-uid="Godot.VisualInstance.SetLayerMaskBit*"></a>
   <h4 id="Godot_VisualInstance_SetLayerMaskBit_System_Int32_System_Boolean_" data-uid="Godot.VisualInstance.SetLayerMaskBit(System.Int32,System.Boolean)">SetLayerMaskBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables a particular layer in <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_Layers">Layers</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

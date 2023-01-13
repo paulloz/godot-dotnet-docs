@@ -83,7 +83,11 @@
   
   <h1 id="Godot_AnimationNodeBlendSpace1D" data-uid="Godot.AnimationNodeBlendSpace1D" class="text-break">Class AnimationNodeBlendSpace1D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A resource to add to an <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>.</p>
+<p>This is a virtual axis on which you can add any type of <a class="xref" href="Godot.AnimationNode.html">AnimationNode</a> using <a class="xref" href="Godot.AnimationNodeBlendSpace1D.html#Godot_AnimationNodeBlendSpace1D_AddBlendPoint_Godot_AnimationRootNode_System_Single_System_Int32_">AddBlendPoint(AnimationRootNode, Single, Int32)</a>.</p>
+<p>Outputs the linear blend of the two <a class="xref" href="Godot.AnimationNode.html">AnimationNode</a>s closest to the node&apos;s current value.</p>
+<p>You can set the extents of the axis using the <a class="xref" href="Godot.AnimationNodeBlendSpace1D.html#Godot_AnimationNodeBlendSpace1D_MinSpace">MinSpace</a> and <a class="xref" href="Godot.AnimationNodeBlendSpace1D.html#Godot_AnimationNodeBlendSpace1D_MaxSpace">MaxSpace</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -3614,7 +3618,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_MaxSpace_" data-uid="Godot.AnimationNodeBlendSpace1D.MaxSpace*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_MaxSpace" data-uid="Godot.AnimationNodeBlendSpace1D.MaxSpace">MaxSpace</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The blend space&apos;s axis&apos;s upper limit for the points&apos; position. See <a class="xref" href="Godot.AnimationNodeBlendSpace1D.html#Godot_AnimationNodeBlendSpace1D_AddBlendPoint_Godot_AnimationRootNode_System_Single_System_Int32_">AddBlendPoint(AnimationRootNode, Single, Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3639,7 +3644,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_MinSpace_" data-uid="Godot.AnimationNodeBlendSpace1D.MinSpace*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_MinSpace" data-uid="Godot.AnimationNodeBlendSpace1D.MinSpace">MinSpace</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The blend space&apos;s axis&apos;s lower limit for the points&apos; position. See <a class="xref" href="Godot.AnimationNodeBlendSpace1D.html#Godot_AnimationNodeBlendSpace1D_AddBlendPoint_Godot_AnimationRootNode_System_Single_System_Int32_">AddBlendPoint(AnimationRootNode, Single, Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3664,7 +3670,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_Snap_" data-uid="Godot.AnimationNodeBlendSpace1D.Snap*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_Snap" data-uid="Godot.AnimationNodeBlendSpace1D.Snap">Snap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Position increment to snap to when moving a point on the axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3689,7 +3696,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_ValueLabel_" data-uid="Godot.AnimationNodeBlendSpace1D.ValueLabel*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_ValueLabel" data-uid="Godot.AnimationNodeBlendSpace1D.ValueLabel">ValueLabel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Label of the virtual axis of the blend space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3716,7 +3724,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_AddBlendPoint_" data-uid="Godot.AnimationNodeBlendSpace1D.AddBlendPoint*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_AddBlendPoint_Godot_AnimationRootNode_System_Single_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace1D.AddBlendPoint(Godot.AnimationRootNode,System.Single,System.Int32)">AddBlendPoint(AnimationRootNode, Single, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new point that represents a <code>node</code> on the virtual axis at a given position set by <code>pos</code>. You can insert it at a specific index using the <code>at_index</code> argument. If you use the default value for <code>at_index</code>, the point is inserted at the end of the blend points array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3753,7 +3762,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_GetBlendPointCount_" data-uid="Godot.AnimationNodeBlendSpace1D.GetBlendPointCount*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_GetBlendPointCount" data-uid="Godot.AnimationNodeBlendSpace1D.GetBlendPointCount">GetBlendPointCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of points on the blend axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3778,7 +3788,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_GetBlendPointNode_" data-uid="Godot.AnimationNodeBlendSpace1D.GetBlendPointNode*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_GetBlendPointNode_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace1D.GetBlendPointNode(System.Int32)">GetBlendPointNode(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.AnimationNode.html">AnimationNode</a> referenced by the point at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3820,7 +3831,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_GetBlendPointPosition_" data-uid="Godot.AnimationNodeBlendSpace1D.GetBlendPointPosition*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_GetBlendPointPosition_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace1D.GetBlendPointPosition(System.Int32)">GetBlendPointPosition(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the point at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3962,7 +3974,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_RemoveBlendPoint_" data-uid="Godot.AnimationNodeBlendSpace1D.RemoveBlendPoint*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_RemoveBlendPoint_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace1D.RemoveBlendPoint(System.Int32)">RemoveBlendPoint(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the point at index <code>point</code> from the blend axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3989,7 +4002,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_SetBlendPointNode_" data-uid="Godot.AnimationNodeBlendSpace1D.SetBlendPointNode*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_SetBlendPointNode_System_Int32_Godot_AnimationRootNode_" data-uid="Godot.AnimationNodeBlendSpace1D.SetBlendPointNode(System.Int32,Godot.AnimationRootNode)">SetBlendPointNode(Int32, AnimationRootNode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the <a class="xref" href="Godot.AnimationNode.html">AnimationNode</a> referenced by the point at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4021,7 +4035,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace1D_SetBlendPointPosition_" data-uid="Godot.AnimationNodeBlendSpace1D.SetBlendPointPosition*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace1D_SetBlendPointPosition_System_Int32_System_Single_" data-uid="Godot.AnimationNodeBlendSpace1D.SetBlendPointPosition(System.Int32,System.Single)">SetBlendPointPosition(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the position of the point at index <code>point</code> on the blend axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

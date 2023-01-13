@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Light" data-uid="Godot.Light" class="text-break">Class Light
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Light is the abstract base class for light nodes. As it can&apos;t be instanced, it shouldn&apos;t be used directly. Other types of light nodes inherit from it. Light contains the common variables and parameters used for lighting.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1023,7 +1024,8 @@
   
   <a id="Godot_Light_EditorOnly_" data-uid="Godot.Light.EditorOnly*"></a>
   <h4 id="Godot_Light_EditorOnly" data-uid="Godot.Light.EditorOnly">EditorOnly</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the light only appears in the editor and will not be visible at runtime.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1048,7 +1050,8 @@
   
   <a id="Godot_Light_LightBakeMode_" data-uid="Godot.Light.LightBakeMode*"></a>
   <h4 id="Godot_Light_LightBakeMode" data-uid="Godot.Light.LightBakeMode">LightBakeMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The light&apos;s bake mode. See <a class="xref" href="Godot.Light.BakeMode.html">Light.BakeMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1073,7 +1076,8 @@
   
   <a id="Godot_Light_LightColor_" data-uid="Godot.Light.LightColor*"></a>
   <h4 id="Godot_Light_LightColor" data-uid="Godot.Light.LightColor">LightColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The light&apos;s color. An overbright color can be used to achieve a result equivalent to increasing the light&apos;s <a class="xref" href="Godot.Light.html#Godot_Light_LightEnergy">LightEnergy</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1098,7 +1102,8 @@
   
   <a id="Godot_Light_LightCullMask_" data-uid="Godot.Light.LightCullMask*"></a>
   <h4 id="Godot_Light_LightCullMask" data-uid="Godot.Light.LightCullMask">LightCullMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The light will affect objects in the selected layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1123,7 +1128,8 @@
   
   <a id="Godot_Light_LightEnergy_" data-uid="Godot.Light.LightEnergy*"></a>
   <h4 id="Godot_Light_LightEnergy" data-uid="Godot.Light.LightEnergy">LightEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The light&apos;s strength multiplier (this is not a physical unit). For <a class="xref" href="Godot.OmniLight.html">OmniLight</a> and <a class="xref" href="Godot.SpotLight.html">SpotLight</a>, changing this value will only change the light color&apos;s intensity, not the light&apos;s radius.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1148,7 +1154,8 @@
   
   <a id="Godot_Light_LightIndirectEnergy_" data-uid="Godot.Light.LightIndirectEnergy*"></a>
   <h4 id="Godot_Light_LightIndirectEnergy" data-uid="Godot.Light.LightIndirectEnergy">LightIndirectEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Secondary multiplier used with indirect light (light bounces). This works on both <a class="xref" href="Godot.BakedLightmap.html">BakedLightmap</a> and <a class="xref" href="Godot.GIProbe.html">GIProbe</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1173,7 +1180,8 @@
   
   <a id="Godot_Light_LightNegative_" data-uid="Godot.Light.LightNegative*"></a>
   <h4 id="Godot_Light_LightNegative" data-uid="Godot.Light.LightNegative">LightNegative</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the light&apos;s effect is reversed, darkening areas and casting bright shadows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1198,7 +1206,8 @@
   
   <a id="Godot_Light_LightSize_" data-uid="Godot.Light.LightSize*"></a>
   <h4 id="Godot_Light_LightSize" data-uid="Godot.Light.LightSize">LightSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size of the light in Godot units. Only considered in baked lightmaps and only if <a class="xref" href="Godot.Light.html#Godot_Light_LightBakeMode">LightBakeMode</a> is set to <a class="xref" href="Godot.Light.BakeMode.html#Godot_Light_BakeMode_All">All</a>. Increasing this value will make the shadows appear blurrier. This can be used to simulate area lights to an extent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1223,7 +1232,8 @@
   
   <a id="Godot_Light_LightSpecular_" data-uid="Godot.Light.LightSpecular*"></a>
   <h4 id="Godot_Light_LightSpecular" data-uid="Godot.Light.LightSpecular">LightSpecular</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The intensity of the specular blob in objects affected by the light. At <code>0</code>, the light becomes a pure diffuse light. When not baking emission, this can be used to avoid unrealistic reflections when placing lights above an emissive surface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1248,7 +1258,8 @@
   
   <a id="Godot_Light_ShadowBias_" data-uid="Godot.Light.ShadowBias*"></a>
   <h4 id="Godot_Light_ShadowBias" data-uid="Godot.Light.ShadowBias">ShadowBias</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used to adjust shadow appearance. Too small a value results in self-shadowing (&quot;shadow acne&quot;), while too large a value causes shadows to separate from casters (&quot;peter-panning&quot;). Adjust as needed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1273,7 +1284,8 @@
   
   <a id="Godot_Light_ShadowColor_" data-uid="Godot.Light.ShadowColor*"></a>
   <h4 id="Godot_Light_ShadowColor" data-uid="Godot.Light.ShadowColor">ShadowColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The color of shadows cast by this light.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1298,7 +1310,9 @@
   
   <a id="Godot_Light_ShadowContact_" data-uid="Godot.Light.ShadowContact*"></a>
   <h4 id="Godot_Light_ShadowContact" data-uid="Godot.Light.ShadowContact">ShadowContact</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Attempts to reduce <a class="xref" href="Godot.Light.html#Godot_Light_ShadowBias">ShadowBias</a> gap by rendering screen-space contact shadows. This has a performance impact, especially at higher values.</p>
+<p>Note: Contact shadows can look broken, so leaving this property to <code>0.0</code> is recommended.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1323,7 +1337,8 @@
   
   <a id="Godot_Light_ShadowEnabled_" data-uid="Godot.Light.ShadowEnabled*"></a>
   <h4 id="Godot_Light_ShadowEnabled" data-uid="Godot.Light.ShadowEnabled">ShadowEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the light will cast shadows.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1348,7 +1363,8 @@
   
   <a id="Godot_Light_ShadowReverseCullFace_" data-uid="Godot.Light.ShadowReverseCullFace*"></a>
   <h4 id="Godot_Light_ShadowReverseCullFace" data-uid="Godot.Light.ShadowReverseCullFace">ShadowReverseCullFace</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, reverses the backface culling of the mesh. This can be useful when you have a flat mesh that has a light behind it. If you need to cast a shadow on both sides of the mesh, set the mesh to use double-sided shadows with <a class="xref" href="Godot.GeometryInstance.ShadowCastingSetting.html#Godot_GeometryInstance_ShadowCastingSetting_DoubleSided">DoubleSided</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1450,7 +1466,8 @@
   
   <a id="Godot_Light_GetParam_" data-uid="Godot.Light.GetParam*"></a>
   <h4 id="Godot_Light_GetParam_Godot_Light_Param_" data-uid="Godot.Light.GetParam(Godot.Light.Param)">GetParam(Light.Param)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of the specified <a class="xref" href="Godot.Light.Param.html">Light.Param</a> parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1752,7 +1769,8 @@
   
   <a id="Godot_Light_SetParam_" data-uid="Godot.Light.SetParam*"></a>
   <h4 id="Godot_Light_SetParam_Godot_Light_Param_System_Single_" data-uid="Godot.Light.SetParam(Godot.Light.Param,System.Single)">SetParam(Light.Param, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the value of the specified <a class="xref" href="Godot.Light.Param.html">Light.Param</a> parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

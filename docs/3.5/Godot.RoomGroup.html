@@ -83,7 +83,11 @@
   
   <h1 id="Godot_RoomGroup" data-uid="Godot.RoomGroup" class="text-break">Class RoomGroup
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Although <a class="xref" href="Godot.Room.html">Room</a> behavior can be specified individually, sometimes it is faster and more convenient to write functionality for a group of rooms.</p>
+<p><a class="xref" href="Godot.RoomGroup.html">RoomGroup</a>s should be placed as children of the room list (the parent <a class="xref" href="Godot.Node.html">Node</a> of your <a class="xref" href="Godot.Room.html">Room</a>s), and <a class="xref" href="Godot.Room.html">Room</a>s should be placed in turn as children of a <a class="xref" href="Godot.RoomGroup.html">RoomGroup</a> in order to assign them to the RoomGroup.</p>
+<p>A <a class="xref" href="Godot.RoomGroup.html">RoomGroup</a> can for example be used to specify <a class="xref" href="Godot.Room.html">Room</a>s that are outside, and switch on or off a directional light, sky, or rain effect as the player enters / exits the area.</p>
+<p><a class="xref" href="Godot.RoomGroup.html">RoomGroup</a>s receive gameplay callbacks when the <code>gameplay_monitor</code> is switched on, as <code>signal</code>s or <code>notification</code>s as they enter and exit the gameplay area (see <a class="xref" href="Godot.RoomManager.html">RoomManager</a> for details).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +968,9 @@
   
   <a id="Godot_RoomGroup_RoomgroupPriority_" data-uid="Godot.RoomGroup.RoomgroupPriority*"></a>
   <h4 id="Godot_RoomGroup_RoomgroupPriority" data-uid="Godot.RoomGroup.RoomgroupPriority">RoomgroupPriority</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This priority will be applied to <a class="xref" href="Godot.Room.html">Room</a>s within the group. The <a class="xref" href="Godot.Room.html">Room</a> priority allows the use of internal rooms, rooms within another room or rooms.</p>
+<p>When the <a class="xref" href="Godot.Camera.html">Camera</a> is within more than one room (regular and internal), the higher priority room will take precedence. So with for example, a house inside a terrain &apos;room&apos;, you would make the house higher priority, so that when the camera is within the house, the house is used as the source room, but outside the house, the terrain room would be used instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

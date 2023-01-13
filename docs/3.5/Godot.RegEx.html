@@ -83,7 +83,38 @@
   
   <h1 id="Godot_RegEx" data-uid="Godot.RegEx" class="text-break">Class RegEx
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A regular expression (or regex) is a compact language that can be used to recognise strings that follow a specific pattern, such as URLs, email addresses, complete sentences, etc. For instance, a regex of <code>ab[0-9]</code> would find any string that is <code>ab</code> followed by any number from <code>0</code> to <code>9</code>. For a more in-depth look, you can easily find various tutorials and detailed explanations on the Internet.</p>
+<p>To begin, the RegEx object needs to be compiled with the search pattern using <a class="xref" href="Godot.RegEx.html#Godot_RegEx_Compile_System_String_">Compile(String)</a> before it can be used.</p>
+<p><pre><code>var regex = RegEx.new()
+regex.compile(&quot;\\w-(\\d+)&quot;)</code></pre></p>
+<p>The search pattern must be escaped first for GDScript before it is escaped for the expression. For example, <code>compile(&quot;\\d+&quot;)</code> would be read by RegEx as <code>\d+</code>. Similarly, <code>compile(&quot;\&quot;(?:\\\\.|[^\&quot;])*\&quot;&quot;)</code> would be read as <code>&quot;(?:\\.|[^&quot;])*&quot;</code>.</p>
+<p>Using <a class="xref" href="Godot.RegEx.html#Godot_RegEx_Search_System_String_System_Int32_System_Int32_">Search(String, Int32, Int32)</a>, you can find the pattern within the given text. If a pattern is found, <a class="xref" href="Godot.RegExMatch.html">RegExMatch</a> is returned and you can retrieve details of the results using methods such as <a class="xref" href="Godot.RegExMatch.html#Godot_RegExMatch_GetString_System_Object_">GetString(Object)</a> and <a class="xref" href="Godot.RegExMatch.html#Godot_RegExMatch_GetStart_System_Object_">GetStart(Object)</a>.</p>
+<p><pre><code>var regex = RegEx.new()
+regex.compile(&quot;\\w-(\\d+)&quot;)
+var result = regex.search(&quot;abc n-0123&quot;)
+if result:
+    print(result.get_string()) # Would print n-0123</code></pre></p>
+<p>The results of capturing groups <code>()</code> can be retrieved by passing the group number to the various methods in <a class="xref" href="Godot.RegExMatch.html">RegExMatch</a>. Group 0 is the default and will always refer to the entire pattern. In the above example, calling <code>result.get_string(1)</code> would give you <code>0123</code>.</p>
+<p>This version of RegEx also supports named capturing groups, and the names can be used to retrieve the results. If two or more groups have the same name, the name would only refer to the first one with a match.</p>
+<p><pre><code>var regex = RegEx.new()
+regex.compile(&quot;d(?&lt;digit>[0-9]+)|x(?&lt;digit>[0-9a-f]+)&quot;)
+var result = regex.search(&quot;the number is x2f&quot;)
+if result:
+    print(result.get_string(&quot;digit&quot;)) # Would print 2f</code></pre></p>
+<p>If you need to process multiple results, <a class="xref" href="Godot.RegEx.html#Godot_RegEx_SearchAll_System_String_System_Int32_System_Int32_">SearchAll(String, Int32, Int32)</a> generates a list of all non-overlapping results. This can be combined with a <code>for</code> loop for convenience.</p>
+<p><pre><code>for result in regex.search_all(&quot;d01, d03, d0c, x3f and x42&quot;):
+    print(result.get_string(&quot;digit&quot;))
+# Would print 01 03 0 3f 42</code></pre></p>
+<p>Example of splitting a string using a RegEx:</p>
+<p><pre><code>var regex = RegEx.new()
+regex.compile(&quot;\\S+&quot;) # Negated whitespace character class.
+var results = []
+for result in regex.search_all(&quot;One  Two \n\tThree&quot;):
+    results.push_back(result.get_string())
+# The `results` array now contains &quot;One&quot;, &quot;Two&quot;, &quot;Three&quot;.</code></pre></p>
+<p>Note: Godot&apos;s regex implementation is based on the <a href="https://www.pcre.org/">PCRE2</a> library. You can view the full pattern reference <a href="https://www.pcre.org/current/doc/html/pcre2pattern.html">here</a>.</p>
+<p>Tip: You can use <a href="https://regexr.com/">Regexr</a> to test regular expressions online.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +328,8 @@
   
   <a id="Godot_RegEx_Clear_" data-uid="Godot.RegEx.Clear*"></a>
   <h4 id="Godot_RegEx_Clear" data-uid="Godot.RegEx.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method resets the state of the object, as if it was freshly created. Namely, it unassigns the regular expression of this object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -307,7 +339,8 @@
   
   <a id="Godot_RegEx_Compile_" data-uid="Godot.RegEx.Compile*"></a>
   <h4 id="Godot_RegEx_Compile_System_String_" data-uid="Godot.RegEx.Compile(System.String)">Compile(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compiles and assign the search pattern to use. Returns <code>OK</code> if the compilation is successful. If an error is encountered, details are printed to standard output and an error is returned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -349,7 +382,8 @@
   
   <a id="Godot_RegEx_GetGroupCount_" data-uid="Godot.RegEx.GetGroupCount*"></a>
   <h4 id="Godot_RegEx_GetGroupCount" data-uid="Godot.RegEx.GetGroupCount">GetGroupCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of capturing groups in compiled pattern.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +408,8 @@
   
   <a id="Godot_RegEx_GetNames_" data-uid="Godot.RegEx.GetNames*"></a>
   <h4 id="Godot_RegEx_GetNames" data-uid="Godot.RegEx.GetNames">GetNames()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of names of named capturing groups in the compiled pattern. They are ordered by appearance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -399,7 +434,8 @@
   
   <a id="Godot_RegEx_GetPattern_" data-uid="Godot.RegEx.GetPattern*"></a>
   <h4 id="Godot_RegEx_GetPattern" data-uid="Godot.RegEx.GetPattern">GetPattern()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the original search pattern that was compiled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -424,7 +460,8 @@
   
   <a id="Godot_RegEx_IsValid_" data-uid="Godot.RegEx.IsValid*"></a>
   <h4 id="Godot_RegEx_IsValid" data-uid="Godot.RegEx.IsValid">IsValid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether this object has a valid search pattern assigned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -449,7 +486,8 @@
   
   <a id="Godot_RegEx_Search_" data-uid="Godot.RegEx.Search*"></a>
   <h4 id="Godot_RegEx_Search_System_String_System_Int32_System_Int32_" data-uid="Godot.RegEx.Search(System.String,System.Int32,System.Int32)">Search(String, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Searches the text for the compiled pattern. Returns a <a class="xref" href="Godot.RegExMatch.html">RegExMatch</a> container of the first matching result if found, otherwise <code>null</code>. The region to search within can be specified without modifying where the start and end anchor would be.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -501,7 +539,8 @@
   
   <a id="Godot_RegEx_SearchAll_" data-uid="Godot.RegEx.SearchAll*"></a>
   <h4 id="Godot_RegEx_SearchAll_System_String_System_Int32_System_Int32_" data-uid="Godot.RegEx.SearchAll(System.String,System.Int32,System.Int32)">SearchAll(String, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Searches the text for the compiled pattern. Returns an array of <a class="xref" href="Godot.RegExMatch.html">RegExMatch</a> containers for each non-overlapping result. If no results were found, an empty array is returned instead. The region to search within can be specified without modifying where the start and end anchor would be.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -553,7 +592,8 @@
   
   <a id="Godot_RegEx_Sub_" data-uid="Godot.RegEx.Sub*"></a>
   <h4 id="Godot_RegEx_Sub_System_String_System_String_System_Boolean_System_Int32_System_Int32_" data-uid="Godot.RegEx.Sub(System.String,System.String,System.Boolean,System.Int32,System.Int32)">Sub(String, String, Boolean, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Searches the text for the compiled pattern and replaces it with the specified string. Escapes and backreferences such as <code>$1</code> and <code>$name</code> are expanded and resolved. By default, only the first instance is replaced, but it can be changed for all instances (global replacement). The region to search within can be specified without modifying where the start and end anchor would be.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

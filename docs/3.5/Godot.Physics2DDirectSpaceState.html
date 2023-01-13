@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Physics2DDirectSpaceState" data-uid="Godot.Physics2DDirectSpaceState" class="text-break">Class Physics2DDirectSpaceState
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Direct access object to a space in the <a class="xref" href="Godot.Physics2DServer.html">Physics2DServer</a>. It&apos;s used mainly to do queries against objects and areas residing in a given space.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -275,7 +276,10 @@
   
   <a id="Godot_Physics2DDirectSpaceState_CastMotion_" data-uid="Godot.Physics2DDirectSpaceState.CastMotion*"></a>
   <h4 id="Godot_Physics2DDirectSpaceState_CastMotion_Godot_Physics2DShapeQueryParameters_" data-uid="Godot.Physics2DDirectSpaceState.CastMotion(Godot.Physics2DShapeQueryParameters)">CastMotion(Physics2DShapeQueryParameters)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks how far a <a class="xref" href="Godot.Shape2D.html">Shape2D</a> can move without colliding. All the parameters for the query, including the shape and the motion, are supplied through a <a class="xref" href="Godot.Physics2DShapeQueryParameters.html">Physics2DShapeQueryParameters</a> object.</p>
+<p>Returns an array with the safe and unsafe proportions (between 0 and 1) of the motion. The safe proportion is the maximum fraction of the motion that can be made without a collision. The unsafe proportion is the minimum fraction of the distance that must be moved for a collision. If no collision is detected a result of <code>[1.0, 1.0]</code> will be returned.</p>
+<p>Note: Any <a class="xref" href="Godot.Shape2D.html">Shape2D</a>s that the shape is already colliding with e.g. inside of, will be ignored. Use <a class="xref" href="Godot.Physics2DDirectSpaceState.html#Godot_Physics2DDirectSpaceState_CollideShape_Godot_Physics2DShapeQueryParameters_System_Int32_">CollideShape(Physics2DShapeQueryParameters, Int32)</a> to determine the <a class="xref" href="Godot.Shape2D.html">Shape2D</a>s that the shape is already colliding with.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -317,7 +321,8 @@
   
   <a id="Godot_Physics2DDirectSpaceState_CollideShape_" data-uid="Godot.Physics2DDirectSpaceState.CollideShape*"></a>
   <h4 id="Godot_Physics2DDirectSpaceState_CollideShape_Godot_Physics2DShapeQueryParameters_System_Int32_" data-uid="Godot.Physics2DDirectSpaceState.CollideShape(Godot.Physics2DShapeQueryParameters,System.Int32)">CollideShape(Physics2DShapeQueryParameters, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks the intersections of a shape, given through a <a class="xref" href="Godot.Physics2DShapeQueryParameters.html">Physics2DShapeQueryParameters</a> object, against the space. The resulting array contains a list of points where the shape intersects another. Like with <a class="xref" href="Godot.Physics2DDirectSpaceState.html#Godot_Physics2DDirectSpaceState_IntersectShape_Godot_Physics2DShapeQueryParameters_System_Int32_">IntersectShape(Physics2DShapeQueryParameters, Int32)</a>, the number of returned results can be limited to save processing time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -364,7 +369,16 @@
   
   <a id="Godot_Physics2DDirectSpaceState_GetRestInfo_" data-uid="Godot.Physics2DDirectSpaceState.GetRestInfo*"></a>
   <h4 id="Godot_Physics2DDirectSpaceState_GetRestInfo_Godot_Physics2DShapeQueryParameters_" data-uid="Godot.Physics2DDirectSpaceState.GetRestInfo(Godot.Physics2DShapeQueryParameters)">GetRestInfo(Physics2DShapeQueryParameters)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks the intersections of a shape, given through a <a class="xref" href="Godot.Physics2DShapeQueryParameters.html">Physics2DShapeQueryParameters</a> object, against the space. If it collides with more than one shape, the nearest one is selected. If the shape did not intersect anything, then an empty dictionary is returned instead.</p>
+<p>Note: This method does not take into account the <code>motion</code> property of the object. The returned object is a dictionary containing the following fields:</p>
+<p><code>collider_id</code>: The colliding object&apos;s ID.</p>
+<p><code>linear_velocity</code>: The colliding object&apos;s velocity <a class="xref" href="Godot.Vector2.html">Vector2</a>. If the object is an <a class="xref" href="Godot.Area2D.html">Area2D</a>, the result is <code>(0, 0)</code>.</p>
+<p><code>metadata</code>: The intersecting shape&apos;s metadata. This metadata is different from <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_System_Object_">GetMeta(String, Object)</a>, and is set with <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_ShapeSetData_Godot_RID_System_Object_">ShapeSetData(RID, Object)</a>.</p>
+<p><code>normal</code>: The object&apos;s surface normal at the intersection point.</p>
+<p><code>point</code>: The intersection point.</p>
+<p><code>rid</code>: The intersecting object&apos;s <a class="xref" href="Godot.RID.html">RID</a>.</p>
+<p><code>shape</code>: The shape index of the colliding shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -406,7 +420,16 @@
   
   <a id="Godot_Physics2DDirectSpaceState_IntersectPoint_" data-uid="Godot.Physics2DDirectSpaceState.IntersectPoint*"></a>
   <h4 id="Godot_Physics2DDirectSpaceState_IntersectPoint_Godot_Vector2_System_Int32_Godot_Collections_Array_System_UInt32_System_Boolean_System_Boolean_" data-uid="Godot.Physics2DDirectSpaceState.IntersectPoint(Godot.Vector2,System.Int32,Godot.Collections.Array,System.UInt32,System.Boolean,System.Boolean)">IntersectPoint(Vector2, Int32, Array, UInt32, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks whether a point is inside any solid shape. The shapes the point is inside of are returned in an array containing dictionaries with the following fields:</p>
+<p><code>collider</code>: The colliding object.</p>
+<p><code>collider_id</code>: The colliding object&apos;s ID.</p>
+<p><code>metadata</code>: The intersecting shape&apos;s metadata. This metadata is different from <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_System_Object_">GetMeta(String, Object)</a>, and is set with <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_ShapeSetData_Godot_RID_System_Object_">ShapeSetData(RID, Object)</a>.</p>
+<p><code>rid</code>: The intersecting object&apos;s <a class="xref" href="Godot.RID.html">RID</a>.</p>
+<p><code>shape</code>: The shape index of the colliding shape.</p>
+<p>The number of intersections can be limited with the <code>max_results</code> parameter, to reduce the processing time.</p>
+<p>Additionally, the method can take an <code>exclude</code> array of objects or <a class="xref" href="Godot.RID.html">RID</a>s that are to be excluded from collisions, a <code>collision_mask</code> bitmask representing the physics layers to check in, or booleans to determine if the ray should collide with <a class="xref" href="Godot.PhysicsBody2D.html">PhysicsBody2D</a>s or <a class="xref" href="Godot.Area2D.html">Area2D</a>s, respectively.</p>
+<p>Note: <a class="xref" href="Godot.ConcavePolygonShape2D.html">ConcavePolygonShape2D</a>s and <a class="xref" href="Godot.CollisionPolygon2D.html">CollisionPolygon2D</a>s in <code>Segments</code> build mode are not solid shapes. Therefore, they will not be detected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -435,7 +458,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">exclude</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
@@ -473,7 +497,16 @@
   
   <a id="Godot_Physics2DDirectSpaceState_IntersectPointOnCanvas_" data-uid="Godot.Physics2DDirectSpaceState.IntersectPointOnCanvas*"></a>
   <h4 id="Godot_Physics2DDirectSpaceState_IntersectPointOnCanvas_Godot_Vector2_System_UInt64_System_Int32_Godot_Collections_Array_System_UInt32_System_Boolean_System_Boolean_" data-uid="Godot.Physics2DDirectSpaceState.IntersectPointOnCanvas(Godot.Vector2,System.UInt64,System.Int32,Godot.Collections.Array,System.UInt32,System.Boolean,System.Boolean)">IntersectPointOnCanvas(Vector2, UInt64, Int32, Array, UInt32, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks whether a point is inside any solid shape, in a specific canvas layer given by <code>canvas_instance_id</code>. The shapes the point is inside of are returned in an array containing dictionaries with the following fields:</p>
+<p><code>collider</code>: The colliding object.</p>
+<p><code>collider_id</code>: The colliding object&apos;s ID.</p>
+<p><code>metadata</code>: The intersecting shape&apos;s metadata. This metadata is different from <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_System_Object_">GetMeta(String, Object)</a>, and is set with <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_ShapeSetData_Godot_RID_System_Object_">ShapeSetData(RID, Object)</a>.</p>
+<p><code>rid</code>: The intersecting object&apos;s <a class="xref" href="Godot.RID.html">RID</a>.</p>
+<p><code>shape</code>: The shape index of the colliding shape.</p>
+<p>The number of intersections can be limited with the <code>max_results</code> parameter, to reduce the processing time.</p>
+<p>Additionally, the method can take an <code>exclude</code> array of objects or <a class="xref" href="Godot.RID.html">RID</a>s that are to be excluded from collisions, a <code>collision_mask</code> bitmask representing the physics layers to check in, or booleans to determine if the ray should collide with <a class="xref" href="Godot.PhysicsBody2D.html">PhysicsBody2D</a>s or <a class="xref" href="Godot.Area2D.html">Area2D</a>s, respectively.</p>
+<p>Note: <a class="xref" href="Godot.ConcavePolygonShape2D.html">ConcavePolygonShape2D</a>s and <a class="xref" href="Godot.CollisionPolygon2D.html">CollisionPolygon2D</a>s in <code>Segments</code> build mode are not solid shapes. Therefore, they will not be detected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -507,7 +540,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">exclude</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
@@ -545,7 +579,17 @@
   
   <a id="Godot_Physics2DDirectSpaceState_IntersectRay_" data-uid="Godot.Physics2DDirectSpaceState.IntersectRay*"></a>
   <h4 id="Godot_Physics2DDirectSpaceState_IntersectRay_Godot_Vector2_Godot_Vector2_Godot_Collections_Array_System_UInt32_System_Boolean_System_Boolean_" data-uid="Godot.Physics2DDirectSpaceState.IntersectRay(Godot.Vector2,Godot.Vector2,Godot.Collections.Array,System.UInt32,System.Boolean,System.Boolean)">IntersectRay(Vector2, Vector2, Array, UInt32, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Intersects a ray in a given space. The returned object is a dictionary with the following fields:</p>
+<p><code>collider</code>: The colliding object.</p>
+<p><code>collider_id</code>: The colliding object&apos;s ID.</p>
+<p><code>metadata</code>: The intersecting shape&apos;s metadata. This metadata is different from <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_System_Object_">GetMeta(String, Object)</a>, and is set with <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_ShapeSetData_Godot_RID_System_Object_">ShapeSetData(RID, Object)</a>.</p>
+<p><code>normal</code>: The object&apos;s surface normal at the intersection point.</p>
+<p><code>position</code>: The intersection point.</p>
+<p><code>rid</code>: The intersecting object&apos;s <a class="xref" href="Godot.RID.html">RID</a>.</p>
+<p><code>shape</code>: The shape index of the colliding shape.</p>
+<p>If the ray did not intersect anything, then an empty dictionary is returned instead.</p>
+<p>Additionally, the method can take an <code>exclude</code> array of objects or <a class="xref" href="Godot.RID.html">RID</a>s that are to be excluded from collisions, a <code>collision_mask</code> bitmask representing the physics layers to check in, or booleans to determine if the ray should collide with <a class="xref" href="Godot.PhysicsBody2D.html">PhysicsBody2D</a>s or <a class="xref" href="Godot.Area2D.html">Area2D</a>s, respectively.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -574,7 +618,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">exclude</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
@@ -612,7 +657,14 @@
   
   <a id="Godot_Physics2DDirectSpaceState_IntersectShape_" data-uid="Godot.Physics2DDirectSpaceState.IntersectShape*"></a>
   <h4 id="Godot_Physics2DDirectSpaceState_IntersectShape_Godot_Physics2DShapeQueryParameters_System_Int32_" data-uid="Godot.Physics2DDirectSpaceState.IntersectShape(Godot.Physics2DShapeQueryParameters,System.Int32)">IntersectShape(Physics2DShapeQueryParameters, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks the intersections of a shape, given through a <a class="xref" href="Godot.Physics2DShapeQueryParameters.html">Physics2DShapeQueryParameters</a> object, against the space. The intersected shapes are returned in an array containing dictionaries with the following fields:</p>
+<p><code>collider</code>: The colliding object.</p>
+<p><code>collider_id</code>: The colliding object&apos;s ID.</p>
+<p><code>metadata</code>: The intersecting shape&apos;s metadata. This metadata is different from <a class="xref" href="Godot.Object.html#Godot_Object_GetMeta_System_String_System_Object_">GetMeta(String, Object)</a>, and is set with <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_ShapeSetData_Godot_RID_System_Object_">ShapeSetData(RID, Object)</a>.</p>
+<p><code>rid</code>: The intersecting object&apos;s <a class="xref" href="Godot.RID.html">RID</a>.</p>
+<p><code>shape</code>: The shape index of the colliding shape.</p>
+<p>The number of intersections can be limited with the <code>max_results</code> parameter, to reduce the processing time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

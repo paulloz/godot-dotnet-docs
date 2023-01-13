@@ -83,7 +83,9 @@
   
   <h1 id="Godot_WebSocketPeer" data-uid="Godot.WebSocketPeer" class="text-break">Class WebSocketPeer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class represents a specific WebSocket connection, allowing you to do lower level operations with it.</p>
+<p>You can choose to write to the socket in binary or text mode, and you can recognize the mode used for writing by the other peer.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -334,7 +336,10 @@
   
   <a id="Godot_WebSocketPeer_Close_" data-uid="Godot.WebSocketPeer.Close*"></a>
   <h4 id="Godot_WebSocketPeer_Close_System_Int32_System_String_" data-uid="Godot.WebSocketPeer.Close(System.Int32,System.String)">Close(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Closes this WebSocket connection. <code>code</code> is the status code for the closure (see RFC 6455 section 7.4 for a list of valid status codes). <code>reason</code> is the human readable reason for closing the connection (can be any UTF-8 string that&apos;s smaller than 123 bytes).</p>
+<p>Note: To achieve a clean close, you will need to keep polling until either <code>WebSocketClient.connection_closed</code> or <code>WebSocketServer.client_disconnected</code> is received.</p>
+<p>Note: The HTML5 export might not support all status codes. Please refer to browser-specific documentation for more details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -366,7 +371,9 @@
   
   <a id="Godot_WebSocketPeer_GetConnectedHost_" data-uid="Godot.WebSocketPeer.GetConnectedHost*"></a>
   <h4 id="Godot_WebSocketPeer_GetConnectedHost" data-uid="Godot.WebSocketPeer.GetConnectedHost">GetConnectedHost()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the IP address of the connected peer.</p>
+<p>Note: Not available in the HTML5 export.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -391,7 +398,9 @@
   
   <a id="Godot_WebSocketPeer_GetConnectedPort_" data-uid="Godot.WebSocketPeer.GetConnectedPort*"></a>
   <h4 id="Godot_WebSocketPeer_GetConnectedPort" data-uid="Godot.WebSocketPeer.GetConnectedPort">GetConnectedPort()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the remote port of the connected peer.</p>
+<p>Note: Not available in the HTML5 export.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -416,7 +425,8 @@
   
   <a id="Godot_WebSocketPeer_GetCurrentOutboundBufferedAmount_" data-uid="Godot.WebSocketPeer.GetCurrentOutboundBufferedAmount*"></a>
   <h4 id="Godot_WebSocketPeer_GetCurrentOutboundBufferedAmount" data-uid="Godot.WebSocketPeer.GetCurrentOutboundBufferedAmount">GetCurrentOutboundBufferedAmount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current amount of data in the outbound websocket buffer. Note: HTML5 exports use WebSocket.bufferedAmount, while other platforms use an internal buffer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -441,7 +451,8 @@
   
   <a id="Godot_WebSocketPeer_GetWriteMode_" data-uid="Godot.WebSocketPeer.GetWriteMode*"></a>
   <h4 id="Godot_WebSocketPeer_GetWriteMode" data-uid="Godot.WebSocketPeer.GetWriteMode">GetWriteMode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the current selected write mode. See <a class="xref" href="Godot.WebSocketPeer.WriteMode.html">WebSocketPeer.WriteMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -466,7 +477,8 @@
   
   <a id="Godot_WebSocketPeer_IsConnectedToHost_" data-uid="Godot.WebSocketPeer.IsConnectedToHost*"></a>
   <h4 id="Godot_WebSocketPeer_IsConnectedToHost" data-uid="Godot.WebSocketPeer.IsConnectedToHost">IsConnectedToHost()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this peer is currently connected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -491,7 +503,9 @@
   
   <a id="Godot_WebSocketPeer_SetNoDelay_" data-uid="Godot.WebSocketPeer.SetNoDelay*"></a>
   <h4 id="Godot_WebSocketPeer_SetNoDelay_System_Boolean_" data-uid="Godot.WebSocketPeer.SetNoDelay(System.Boolean)">SetNoDelay(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disable Nagle&apos;s algorithm on the underling TCP socket (default). See <a class="xref" href="Godot.StreamPeerTCP.html#Godot_StreamPeerTCP_SetNoDelay_System_Boolean_">SetNoDelay(Boolean)</a> for more information.</p>
+<p>Note: Not available in the HTML5 export.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -518,7 +532,8 @@
   
   <a id="Godot_WebSocketPeer_SetWriteMode_" data-uid="Godot.WebSocketPeer.SetWriteMode*"></a>
   <h4 id="Godot_WebSocketPeer_SetWriteMode_Godot_WebSocketPeer_WriteMode_" data-uid="Godot.WebSocketPeer.SetWriteMode(Godot.WebSocketPeer.WriteMode)">SetWriteMode(WebSocketPeer.WriteMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the socket to use the given <a class="xref" href="Godot.WebSocketPeer.WriteMode.html">WebSocketPeer.WriteMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -545,7 +560,8 @@
   
   <a id="Godot_WebSocketPeer_WasStringPacket_" data-uid="Godot.WebSocketPeer.WasStringPacket*"></a>
   <h4 id="Godot_WebSocketPeer_WasStringPacket" data-uid="Godot.WebSocketPeer.WasStringPacket">WasStringPacket()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the last received packet was sent as a text payload. See <a class="xref" href="Godot.WebSocketPeer.WriteMode.html">WebSocketPeer.WriteMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

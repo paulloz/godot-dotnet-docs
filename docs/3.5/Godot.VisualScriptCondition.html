@@ -83,7 +83,15 @@
   
   <h1 id="Godot_VisualScriptCondition" data-uid="Godot.VisualScriptCondition" class="text-break">Class VisualScriptCondition
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A Visual Script node that checks a <span class="xref">System.Boolean</span> input port. If <code>true</code>, it will exit via the &quot;true&quot; sequence port. If <code>false</code>, it will exit via the &quot;false&quot; sequence port. After exiting either, it exits via the &quot;done&quot; port. Sequence ports may be left disconnected.</p>
+<p>Input Ports:</p>
+<p>- Sequence: <code>if (cond) is</code></p>
+<p>- Data (boolean): <code>cond</code></p>
+<p>Output Ports:</p>
+<p>- Sequence: <code>true</code></p>
+<p>- Sequence: <code>false</code></p>
+<p>- Sequence: <code>done</code></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>

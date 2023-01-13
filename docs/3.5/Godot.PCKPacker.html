@@ -83,7 +83,13 @@
   
   <h1 id="Godot_PCKPacker" data-uid="Godot.PCKPacker" class="text-break">Class PCKPacker
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Godot.PCKPacker.html">PCKPacker</a> is used to create packages that can be loaded into a running project using <a class="xref" href="Godot.ProjectSettings.html#Godot_ProjectSettings_LoadResourcePack_System_String_System_Boolean_System_Int32_">LoadResourcePack(String, Boolean, Int32)</a>.</p>
+<p><pre><code>var packer = PCKPacker.new()
+packer.pck_start(&quot;test.pck&quot;)
+packer.add_file(&quot;res://text.txt&quot;, &quot;text.txt&quot;)
+packer.flush()</code></pre></p>
+<p>The above <a class="xref" href="Godot.PCKPacker.html">PCKPacker</a> creates package <code>test.pck</code>, then adds a file named <code>text.txt</code> at the root of the package.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +303,8 @@
   
   <a id="Godot_PCKPacker_AddFile_" data-uid="Godot.PCKPacker.AddFile*"></a>
   <h4 id="Godot_PCKPacker_AddFile_System_String_System_String_" data-uid="Godot.PCKPacker.AddFile(System.String,System.String)">AddFile(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the <code>source_path</code> file to the current PCK package at the <code>pck_path</code> internal path (should start with <code>res://</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,7 +351,8 @@
   
   <a id="Godot_PCKPacker_Flush_" data-uid="Godot.PCKPacker.Flush*"></a>
   <h4 id="Godot_PCKPacker_Flush_System_Boolean_" data-uid="Godot.PCKPacker.Flush(System.Boolean)">Flush(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Writes the files specified using all <a class="xref" href="Godot.PCKPacker.html#Godot_PCKPacker_AddFile_System_String_System_String_">AddFile(String, String)</a> calls since the last flush. If <code>verbose</code> is <code>true</code>, a list of files added will be printed to the console for easier debugging.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -386,7 +394,8 @@
   
   <a id="Godot_PCKPacker_PckStart_" data-uid="Godot.PCKPacker.PckStart*"></a>
   <h4 id="Godot_PCKPacker_PckStart_System_String_System_Int32_" data-uid="Godot.PCKPacker.PckStart(System.String,System.Int32)">PckStart(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new PCK file with the name <code>pck_name</code>. The <code>.pck</code> file extension isn&apos;t added automatically, so it should be part of <code>pck_name</code> (even though it&apos;s not required).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

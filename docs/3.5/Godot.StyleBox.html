@@ -83,7 +83,9 @@
   
   <h1 id="Godot_StyleBox" data-uid="Godot.StyleBox" class="text-break">Class StyleBox
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>StyleBox is <a class="xref" href="Godot.Resource.html">Resource</a> that provides an abstract base class for drawing stylized boxes for the UI. StyleBoxes are used for drawing the styles of buttons, line edit backgrounds, tree backgrounds, etc. and also for testing a transparency mask for pointer signals. If mask test fails on a StyleBox assigned as mask to a control, clicks and motion signals will go through it to the one below.</p>
+<p>Note: For children of <a class="xref" href="Godot.Control.html">Control</a> that have Theme Properties, the <code>focus</code> <a class="xref" href="Godot.StyleBox.html">StyleBox</a> is displayed over the <code>normal</code>, <code>hover</code> or <code>pressed</code> <a class="xref" href="Godot.StyleBox.html">StyleBox</a>. This makes the <code>focus</code> <a class="xref" href="Godot.StyleBox.html">StyleBox</a> more reusable across different nodes.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -338,7 +340,11 @@
   
   <a id="Godot_StyleBox_ContentMarginBottom_" data-uid="Godot.StyleBox.ContentMarginBottom*"></a>
   <h4 id="Godot_StyleBox_ContentMarginBottom" data-uid="Godot.StyleBox.ContentMarginBottom">ContentMarginBottom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The bottom margin for the contents of this style box. Increasing this value reduces the space available to the contents from the bottom.</p>
+<p>If this value is negative, it is ignored and a child-specific margin is used instead. For example for <a class="xref" href="Godot.StyleBoxFlat.html">StyleBoxFlat</a> the border thickness (if any) is used instead.</p>
+<p>It is up to the code using this style box to decide what these contents are: for example, a <a class="xref" href="Godot.Button.html">Button</a> respects this content margin for the textual contents of the button.</p>
+<p><a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_GetMargin_Godot_Margin_">GetMargin(Margin)</a> should be used to fetch this value as consumer instead of reading these properties directly. This is because it correctly respects negative values and the fallback mentioned above.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -363,7 +369,9 @@
   
   <a id="Godot_StyleBox_ContentMarginLeft_" data-uid="Godot.StyleBox.ContentMarginLeft*"></a>
   <h4 id="Godot_StyleBox_ContentMarginLeft" data-uid="Godot.StyleBox.ContentMarginLeft">ContentMarginLeft</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The left margin for the contents of this style box.Increasing this value reduces the space available to the contents from the left.</p>
+<p>Refer to <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginBottom">ContentMarginBottom</a> for extra considerations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -388,7 +396,9 @@
   
   <a id="Godot_StyleBox_ContentMarginRight_" data-uid="Godot.StyleBox.ContentMarginRight*"></a>
   <h4 id="Godot_StyleBox_ContentMarginRight" data-uid="Godot.StyleBox.ContentMarginRight">ContentMarginRight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The right margin for the contents of this style box. Increasing this value reduces the space available to the contents from the right.</p>
+<p>Refer to <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginBottom">ContentMarginBottom</a> for extra considerations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -413,7 +423,9 @@
   
   <a id="Godot_StyleBox_ContentMarginTop_" data-uid="Godot.StyleBox.ContentMarginTop*"></a>
   <h4 id="Godot_StyleBox_ContentMarginTop" data-uid="Godot.StyleBox.ContentMarginTop">ContentMarginTop</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The top margin for the contents of this style box. Increasing this value reduces the space available to the contents from the top.</p>
+<p>Refer to <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginBottom">ContentMarginBottom</a> for extra considerations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -440,7 +452,9 @@
   
   <a id="Godot_StyleBox_Draw_" data-uid="Godot.StyleBox.Draw*"></a>
   <h4 id="Godot_StyleBox_Draw_Godot_RID_Godot_Rect2_" data-uid="Godot.StyleBox.Draw(Godot.RID,Godot.Rect2)">Draw(RID, Rect2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Draws this stylebox using a canvas item identified by the given <a class="xref" href="Godot.RID.html">RID</a>.</p>
+<p>The <a class="xref" href="Godot.RID.html">RID</a> value can either be the result of <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_GetCanvasItem">GetCanvasItem()</a> called on an existing <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a>-derived node, or directly from creating a canvas item in the <a class="xref" href="Godot.VisualServer.html">VisualServer</a> with <a class="xref" href="Godot.VisualServer.html#Godot_VisualServer_CanvasItemCreate">CanvasItemCreate()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -472,7 +486,8 @@
   
   <a id="Godot_StyleBox_GetCenterSize_" data-uid="Godot.StyleBox.GetCenterSize*"></a>
   <h4 id="Godot_StyleBox_GetCenterSize" data-uid="Godot.StyleBox.GetCenterSize">GetCenterSize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size of this <a class="xref" href="Godot.StyleBox.html">StyleBox</a> without the margins.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -497,7 +512,8 @@
   
   <a id="Godot_StyleBox_GetCurrentItemDrawn_" data-uid="Godot.StyleBox.GetCurrentItemDrawn*"></a>
   <h4 id="Godot_StyleBox_GetCurrentItemDrawn" data-uid="Godot.StyleBox.GetCurrentItemDrawn">GetCurrentItemDrawn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a> that handles its <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_NotificationDraw">NotificationDraw</a> or <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem__Draw">_Draw()</a> callback at this moment.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -522,7 +538,8 @@
   
   <a id="Godot_StyleBox_GetDefaultMargin_" data-uid="Godot.StyleBox.GetDefaultMargin*"></a>
   <h4 id="Godot_StyleBox_GetDefaultMargin_Godot_Margin_" data-uid="Godot.StyleBox.GetDefaultMargin(Godot.Margin)">GetDefaultMargin(Margin)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the default value of the specified <a class="xref" href="Godot.Margin.html">Margin</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -564,7 +581,9 @@
   
   <a id="Godot_StyleBox_GetMargin_" data-uid="Godot.StyleBox.GetMargin*"></a>
   <h4 id="Godot_StyleBox_GetMargin_Godot_Margin_" data-uid="Godot.StyleBox.GetMargin(Godot.Margin)">GetMargin(Margin)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the content margin offset for the specified <a class="xref" href="Godot.Margin.html">Margin</a>.</p>
+<p>Positive values reduce size inwards, unlike <a class="xref" href="Godot.Control.html">Control</a>&apos;s margin values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -606,7 +625,8 @@
   
   <a id="Godot_StyleBox_GetMinimumSize_" data-uid="Godot.StyleBox.GetMinimumSize*"></a>
   <h4 id="Godot_StyleBox_GetMinimumSize" data-uid="Godot.StyleBox.GetMinimumSize">GetMinimumSize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the minimum size that this stylebox can be shrunk to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -631,7 +651,8 @@
   
   <a id="Godot_StyleBox_GetOffset_" data-uid="Godot.StyleBox.GetOffset*"></a>
   <h4 id="Godot_StyleBox_GetOffset" data-uid="Godot.StyleBox.GetOffset">GetOffset()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the &quot;offset&quot; of a stylebox. This helper function returns a value equivalent to <code>Vector2(style.get_margin(MARGIN_LEFT), style.get_margin(MARGIN_TOP))</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -656,7 +677,8 @@
   
   <a id="Godot_StyleBox_SetDefaultMargin_" data-uid="Godot.StyleBox.SetDefaultMargin*"></a>
   <h4 id="Godot_StyleBox_SetDefaultMargin_Godot_Margin_System_Single_" data-uid="Godot.StyleBox.SetDefaultMargin(Godot.Margin,System.Single)">SetDefaultMargin(Margin, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the default value of the specified <a class="xref" href="Godot.Margin.html">Margin</a> to given <code>offset</code> in pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -688,7 +710,8 @@
   
   <a id="Godot_StyleBox_TestMask_" data-uid="Godot.StyleBox.TestMask*"></a>
   <h4 id="Godot_StyleBox_TestMask_Godot_Vector2_Godot_Rect2_" data-uid="Godot.StyleBox.TestMask(Godot.Vector2,Godot.Rect2)">TestMask(Vector2, Rect2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Test a position in a rectangle, return whether it passes the mask test.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

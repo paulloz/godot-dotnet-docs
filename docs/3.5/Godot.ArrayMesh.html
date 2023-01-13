@@ -83,7 +83,25 @@
   
   <h1 id="Godot_ArrayMesh" data-uid="Godot.ArrayMesh" class="text-break">Class ArrayMesh
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a> is used to construct a <a class="xref" href="Godot.Mesh.html">Mesh</a> by specifying the attributes as arrays.</p>
+<p>The most basic example is the creation of a single triangle:</p>
+<p><pre><code>var vertices = PoolVector3Array()
+vertices.push_back(Vector3(0, 1, 0))
+vertices.push_back(Vector3(1, 0, 0))
+vertices.push_back(Vector3(0, 0, 1))
+# Initialize the ArrayMesh.
+var arr_mesh = ArrayMesh.new()
+var arrays = []
+arrays.resize(ArrayMesh.ARRAY_MAX)
+arrays[ArrayMesh.ARRAY_VERTEX] = vertices
+# Create the Mesh.
+arr_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
+var m = MeshInstance.new()
+m.mesh = arr_mesh</code></pre></p>
+<p>The <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> is ready to be added to the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> to be shown.</p>
+<p>See also <a class="xref" href="Godot.ImmediateGeometry.html">ImmediateGeometry</a>, <a class="xref" href="Godot.MeshDataTool.html">MeshDataTool</a> and <a class="xref" href="Godot.SurfaceTool.html">SurfaceTool</a> for procedural geometry generation.</p>
+<p>Note: Godot uses clockwise <a href="https://learnopengl.com/Advanced-OpenGL/Face-culling">winding order</a> for front faces of triangle primitive modes.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -388,7 +406,8 @@
   
   
   <h4 id="Godot_ArrayMesh_ArrayWeightsSize" data-uid="Godot.ArrayMesh.ArrayWeightsSize">ArrayWeightsSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount of weights/bone indices per vertex (always 4).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -412,7 +431,8 @@
   
   
   <h4 id="Godot_ArrayMesh_NoIndexArray" data-uid="Godot.ArrayMesh.NoIndexArray">NoIndexArray</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Value used internally when no indices are present.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -439,7 +459,8 @@
   
   <a id="Godot_ArrayMesh_BlendShapeMode_" data-uid="Godot.ArrayMesh.BlendShapeMode*"></a>
   <h4 id="Godot_ArrayMesh_BlendShapeMode" data-uid="Godot.ArrayMesh.BlendShapeMode">BlendShapeMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the blend shape mode to one of <a class="xref" href="Godot.Mesh.BlendShapeMode.html">Mesh.BlendShapeMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -464,7 +485,8 @@
   
   <a id="Godot_ArrayMesh_CustomAabb_" data-uid="Godot.ArrayMesh.CustomAabb*"></a>
   <h4 id="Godot_ArrayMesh_CustomAabb" data-uid="Godot.ArrayMesh.CustomAabb">CustomAabb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Overrides the <a class="xref" href="Godot.AABB.html">AABB</a> with one defined by user for use with frustum culling. Especially useful to avoid unexpected culling when using a shader to offset vertices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -491,7 +513,8 @@
   
   <a id="Godot_ArrayMesh_AddBlendShape_" data-uid="Godot.ArrayMesh.AddBlendShape*"></a>
   <h4 id="Godot_ArrayMesh_AddBlendShape_System_String_" data-uid="Godot.ArrayMesh.AddBlendShape(System.String)">AddBlendShape(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds name for a blend shape that will be added with <a class="xref" href="Godot.ArrayMesh.html#Godot_ArrayMesh_AddSurfaceFromArrays_Godot_Mesh_PrimitiveType_Godot_Collections_Array_Godot_Collections_Array_System_UInt32_">AddSurfaceFromArrays(Mesh.PrimitiveType, Array, Array, UInt32)</a>. Must be called before surface is added.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -518,7 +541,12 @@
   
   <a id="Godot_ArrayMesh_AddSurfaceFromArrays_" data-uid="Godot.ArrayMesh.AddSurfaceFromArrays*"></a>
   <h4 id="Godot_ArrayMesh_AddSurfaceFromArrays_Godot_Mesh_PrimitiveType_Godot_Collections_Array_Godot_Collections_Array_System_UInt32_" data-uid="Godot.ArrayMesh.AddSurfaceFromArrays(Godot.Mesh.PrimitiveType,Godot.Collections.Array,Godot.Collections.Array,System.UInt32)">AddSurfaceFromArrays(Mesh.PrimitiveType, Array, Array, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new surface.</p>
+<p>Surfaces are created to be rendered using a <code>primitive</code>, which may be any of the types defined in <a class="xref" href="Godot.Mesh.PrimitiveType.html">Mesh.PrimitiveType</a>. (As a note, when using indices, it is recommended to only use points, lines, or triangles.) <a class="xref" href="Godot.Mesh.html#Godot_Mesh_GetSurfaceCount">GetSurfaceCount()</a> will become the <code>surf_idx</code> for this new surface.</p>
+<p>The <code>arrays</code> argument is an array of arrays. See <a class="xref" href="Godot.ArrayMesh.ArrayType.html">ArrayMesh.ArrayType</a> for the values used in this array. For example, <code>arrays[0]</code> is the array of vertices. That first vertex sub-array is always required; the others are optional. Adding an index array puts this function into &quot;index mode&quot; where the vertex and other arrays become the sources of data and the index array defines the vertex order. All sub-arrays must have the same length as the vertex array or be empty, except for <a class="xref" href="Godot.ArrayMesh.ArrayType.html#Godot_ArrayMesh_ArrayType_Index">Index</a> if it is used.</p>
+<p><code>compress_flags</code> is a bitfield made of <a class="xref" href="Godot.Mesh.ArrayFormat.html">Mesh.ArrayFormat</a> values. It defaults to <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressDefault">CompressDefault</a>.</p>
+<p>Note: The default <code>compress_flags</code> enable <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressColor">CompressColor</a>, which makes vertex colors stored as 8-bit unsigned integers. This will clamp overbright vertex colors to <code>Color(1, 1, 1, 1)</code> and reduce their precision. To store HDR vertex colors, remove the vertex color compression flag by passing <code>Mesh.ARRAY_COMPRESS_DEFAULT ^ Mesh.ARRAY_COMPRESS_COLOR</code> as the value of <code>compress_flags</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -547,7 +575,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">blendShapes</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
@@ -560,7 +589,8 @@
   
   <a id="Godot_ArrayMesh_ClearBlendShapes_" data-uid="Godot.ArrayMesh.ClearBlendShapes*"></a>
   <h4 id="Godot_ArrayMesh_ClearBlendShapes" data-uid="Godot.ArrayMesh.ClearBlendShapes">ClearBlendShapes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all blend shapes from this <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -570,7 +600,8 @@
   
   <a id="Godot_ArrayMesh_ClearSurfaces_" data-uid="Godot.ArrayMesh.ClearSurfaces*"></a>
   <h4 id="Godot_ArrayMesh_ClearSurfaces" data-uid="Godot.ArrayMesh.ClearSurfaces">ClearSurfaces()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all surfaces from this <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -580,7 +611,8 @@
   
   <a id="Godot_ArrayMesh_GetBlendShapeCount_" data-uid="Godot.ArrayMesh.GetBlendShapeCount*"></a>
   <h4 id="Godot_ArrayMesh_GetBlendShapeCount" data-uid="Godot.ArrayMesh.GetBlendShapeCount">GetBlendShapeCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of blend shapes that the <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a> holds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -630,7 +662,8 @@
   
   <a id="Godot_ArrayMesh_GetBlendShapeName_" data-uid="Godot.ArrayMesh.GetBlendShapeName*"></a>
   <h4 id="Godot_ArrayMesh_GetBlendShapeName_System_Int32_" data-uid="Godot.ArrayMesh.GetBlendShapeName(System.Int32)">GetBlendShapeName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of the blend shape at this index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -697,7 +730,8 @@
   
   <a id="Godot_ArrayMesh_LightmapUnwrap_" data-uid="Godot.ArrayMesh.LightmapUnwrap*"></a>
   <h4 id="Godot_ArrayMesh_LightmapUnwrap_Godot_Transform_System_Single_" data-uid="Godot.ArrayMesh.LightmapUnwrap(Godot.Transform,System.Single)">LightmapUnwrap(Transform, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will perform a UV unwrap on the <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a> to prepare the mesh for lightmapping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -744,7 +778,8 @@
   
   <a id="Godot_ArrayMesh_RegenNormalmaps_" data-uid="Godot.ArrayMesh.RegenNormalmaps*"></a>
   <h4 id="Godot_ArrayMesh_RegenNormalmaps" data-uid="Godot.ArrayMesh.RegenNormalmaps">RegenNormalmaps()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Will regenerate normal maps for the <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -840,7 +875,8 @@
   
   <a id="Godot_ArrayMesh_SurfaceFindByName_" data-uid="Godot.ArrayMesh.SurfaceFindByName*"></a>
   <h4 id="Godot_ArrayMesh_SurfaceFindByName_System_String_" data-uid="Godot.ArrayMesh.SurfaceFindByName(System.String)">SurfaceFindByName(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the index of the first surface with this name held within this <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>. If none are found, -1 is returned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -882,7 +918,8 @@
   
   <a id="Godot_ArrayMesh_SurfaceGetArrayIndexLen_" data-uid="Godot.ArrayMesh.SurfaceGetArrayIndexLen*"></a>
   <h4 id="Godot_ArrayMesh_SurfaceGetArrayIndexLen_System_Int32_" data-uid="Godot.ArrayMesh.SurfaceGetArrayIndexLen(System.Int32)">SurfaceGetArrayIndexLen(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the length in indices of the index array in the requested surface (see <a class="xref" href="Godot.ArrayMesh.html#Godot_ArrayMesh_AddSurfaceFromArrays_Godot_Mesh_PrimitiveType_Godot_Collections_Array_Godot_Collections_Array_System_UInt32_">AddSurfaceFromArrays(Mesh.PrimitiveType, Array, Array, UInt32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -924,7 +961,8 @@
   
   <a id="Godot_ArrayMesh_SurfaceGetArrayLen_" data-uid="Godot.ArrayMesh.SurfaceGetArrayLen*"></a>
   <h4 id="Godot_ArrayMesh_SurfaceGetArrayLen_System_Int32_" data-uid="Godot.ArrayMesh.SurfaceGetArrayLen(System.Int32)">SurfaceGetArrayLen(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the length in vertices of the vertex array in the requested surface (see <a class="xref" href="Godot.ArrayMesh.html#Godot_ArrayMesh_AddSurfaceFromArrays_Godot_Mesh_PrimitiveType_Godot_Collections_Array_Godot_Collections_Array_System_UInt32_">AddSurfaceFromArrays(Mesh.PrimitiveType, Array, Array, UInt32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -966,7 +1004,8 @@
   
   <a id="Godot_ArrayMesh_SurfaceGetFormat_" data-uid="Godot.ArrayMesh.SurfaceGetFormat*"></a>
   <h4 id="Godot_ArrayMesh_SurfaceGetFormat_System_Int32_" data-uid="Godot.ArrayMesh.SurfaceGetFormat(System.Int32)">SurfaceGetFormat(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the format mask of the requested surface (see <a class="xref" href="Godot.ArrayMesh.html#Godot_ArrayMesh_AddSurfaceFromArrays_Godot_Mesh_PrimitiveType_Godot_Collections_Array_Godot_Collections_Array_System_UInt32_">AddSurfaceFromArrays(Mesh.PrimitiveType, Array, Array, UInt32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1008,7 +1047,8 @@
   
   <a id="Godot_ArrayMesh_SurfaceGetName_" data-uid="Godot.ArrayMesh.SurfaceGetName*"></a>
   <h4 id="Godot_ArrayMesh_SurfaceGetName_System_Int32_" data-uid="Godot.ArrayMesh.SurfaceGetName(System.Int32)">SurfaceGetName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name assigned to this surface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1050,7 +1090,8 @@
   
   <a id="Godot_ArrayMesh_SurfaceGetPrimitiveType_" data-uid="Godot.ArrayMesh.SurfaceGetPrimitiveType*"></a>
   <h4 id="Godot_ArrayMesh_SurfaceGetPrimitiveType_System_Int32_" data-uid="Godot.ArrayMesh.SurfaceGetPrimitiveType(System.Int32)">SurfaceGetPrimitiveType(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the primitive type of the requested surface (see <a class="xref" href="Godot.ArrayMesh.html#Godot_ArrayMesh_AddSurfaceFromArrays_Godot_Mesh_PrimitiveType_Godot_Collections_Array_Godot_Collections_Array_System_UInt32_">AddSurfaceFromArrays(Mesh.PrimitiveType, Array, Array, UInt32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1092,7 +1133,8 @@
   
   <a id="Godot_ArrayMesh_SurfaceRemove_" data-uid="Godot.ArrayMesh.SurfaceRemove*"></a>
   <h4 id="Godot_ArrayMesh_SurfaceRemove_System_Int32_" data-uid="Godot.ArrayMesh.SurfaceRemove(System.Int32)">SurfaceRemove(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a surface at position <code>surf_idx</code>, shifting greater surfaces one <code>surf_idx</code> slot down.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1119,7 +1161,8 @@
   
   <a id="Godot_ArrayMesh_SurfaceSetName_" data-uid="Godot.ArrayMesh.SurfaceSetName*"></a>
   <h4 id="Godot_ArrayMesh_SurfaceSetName_System_Int32_System_String_" data-uid="Godot.ArrayMesh.SurfaceSetName(System.Int32,System.String)">SurfaceSetName(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a name for a given surface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1151,7 +1194,9 @@
   
   <a id="Godot_ArrayMesh_SurfaceUpdateRegion_" data-uid="Godot.ArrayMesh.SurfaceUpdateRegion*"></a>
   <h4 id="Godot_ArrayMesh_SurfaceUpdateRegion_System_Int32_System_Int32_System_Byte___" data-uid="Godot.ArrayMesh.SurfaceUpdateRegion(System.Int32,System.Int32,System.Byte[])">SurfaceUpdateRegion(Int32, Int32, Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates a specified region of mesh arrays on the GPU.</p>
+<p>Warning: Only use if you know what you are doing. You can easily cause crashes by calling this function with improper arguments.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

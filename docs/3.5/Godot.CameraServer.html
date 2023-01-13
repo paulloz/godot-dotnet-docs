@@ -83,7 +83,10 @@
   
   <h1 id="Godot_CameraServer" data-uid="Godot.CameraServer" class="text-break">Class CameraServer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Godot.CameraServer.html">CameraServer</a> keeps track of different cameras accessible in Godot. These are external cameras such as webcams or the cameras on your phone.</p>
+<p>It is notably used to provide AR modules with a video feed from the camera.</p>
+<p>Note: This class is currently only implemented on macOS and iOS. On other platforms, no <a class="xref" href="Godot.CameraFeed.html">CameraFeed</a>s will be available.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +132,8 @@
   
   <a id="Godot_CameraServer_AddFeed_" data-uid="Godot.CameraServer.AddFeed*"></a>
   <h4 id="Godot_CameraServer_AddFeed_Godot_CameraFeed_" data-uid="Godot.CameraServer.AddFeed(Godot.CameraFeed)">AddFeed(CameraFeed)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the camera <code>feed</code> to the camera server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -156,7 +160,8 @@
   
   <a id="Godot_CameraServer_Feeds_" data-uid="Godot.CameraServer.Feeds*"></a>
   <h4 id="Godot_CameraServer_Feeds" data-uid="Godot.CameraServer.Feeds">Feeds()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of <a class="xref" href="Godot.CameraFeed.html">CameraFeed</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -181,7 +186,8 @@
   
   <a id="Godot_CameraServer_GetFeed_" data-uid="Godot.CameraServer.GetFeed*"></a>
   <h4 id="Godot_CameraServer_GetFeed_System_Int32_" data-uid="Godot.CameraServer.GetFeed(System.Int32)">GetFeed(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.CameraFeed.html">CameraFeed</a> corresponding to the camera with the given <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -223,7 +229,8 @@
   
   <a id="Godot_CameraServer_GetFeedCount_" data-uid="Godot.CameraServer.GetFeedCount*"></a>
   <h4 id="Godot_CameraServer_GetFeedCount" data-uid="Godot.CameraServer.GetFeedCount">GetFeedCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of <a class="xref" href="Godot.CameraFeed.html">CameraFeed</a>s registered.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -248,7 +255,8 @@
   
   <a id="Godot_CameraServer_RemoveFeed_" data-uid="Godot.CameraServer.RemoveFeed*"></a>
   <h4 id="Godot_CameraServer_RemoveFeed_Godot_CameraFeed_" data-uid="Godot.CameraServer.RemoveFeed(Godot.CameraFeed)">RemoveFeed(CameraFeed)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the specified camera <code>feed</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,10 @@
   
   <h1 id="Godot_VehicleBody" data-uid="Godot.VehicleBody" class="text-break">Class VehicleBody
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This node implements all the physics logic needed to simulate a car. It is based on the raycast vehicle system commonly found in physics engines. You will need to add a <a class="xref" href="Godot.CollisionShape.html">CollisionShape</a> for the main body of your vehicle and add <a class="xref" href="Godot.VehicleWheel.html">VehicleWheel</a> nodes for the wheels. You should also add a <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> to this node for the 3D model of your car but this model should not include meshes for the wheels. You should control the vehicle by using the <a class="xref" href="Godot.VehicleBody.html#Godot_VehicleBody_Brake">Brake</a>, <a class="xref" href="Godot.VehicleBody.html#Godot_VehicleBody_EngineForce">EngineForce</a>, and <a class="xref" href="Godot.VehicleBody.html#Godot_VehicleBody_Steering">Steering</a> properties and not change the position or orientation of this node directly.</p>
+<p>Note: The origin point of your VehicleBody will determine the center of gravity of your vehicle so it is better to keep this low and move the <a class="xref" href="Godot.CollisionShape.html">CollisionShape</a> and <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> upwards.</p>
+<p>Note: This class has known issues and isn&apos;t designed to provide realistic 3D vehicle physics. If you want advanced vehicle physics, you will probably have to write your own physics integration using another <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a> class.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1282,7 +1285,8 @@
   
   <a id="Godot_VehicleBody_Brake_" data-uid="Godot.VehicleBody.Brake*"></a>
   <h4 id="Godot_VehicleBody_Brake" data-uid="Godot.VehicleBody.Brake">Brake</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Slows down the vehicle by applying a braking force. The vehicle is only slowed down if the wheels are in contact with a surface. The force you need to apply to adequately slow down your vehicle depends on the <a class="xref" href="Godot.RigidBody.html#Godot_RigidBody_Mass">Mass</a> of the vehicle. For a vehicle with a mass set to 1000, try a value in the 25 - 30 range for hard braking.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1307,7 +1311,10 @@
   
   <a id="Godot_VehicleBody_EngineForce_" data-uid="Godot.VehicleBody.EngineForce*"></a>
   <h4 id="Godot_VehicleBody_EngineForce" data-uid="Godot.VehicleBody.EngineForce">EngineForce</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Accelerates the vehicle by applying an engine force. The vehicle is only sped up if the wheels that have <a class="xref" href="Godot.VehicleWheel.html#Godot_VehicleWheel_UseAsTraction">UseAsTraction</a> set to <code>true</code> and are in contact with a surface. The <a class="xref" href="Godot.RigidBody.html#Godot_RigidBody_Mass">Mass</a> of the vehicle has an effect on the acceleration of the vehicle. For a vehicle with a mass set to 1000, try a value in the 25 - 50 range for acceleration.</p>
+<p>Note: The simulation does not take the effect of gears into account, you will need to add logic for this if you wish to simulate gears.</p>
+<p>A negative value will result in the vehicle reversing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1332,7 +1339,8 @@
   
   <a id="Godot_VehicleBody_Steering_" data-uid="Godot.VehicleBody.Steering*"></a>
   <h4 id="Godot_VehicleBody_Steering" data-uid="Godot.VehicleBody.Steering">Steering</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The steering angle for the vehicle. Setting this to a non-zero value will result in the vehicle turning when it&apos;s moving. Wheels that have <a class="xref" href="Godot.VehicleWheel.html#Godot_VehicleWheel_UseAsSteering">UseAsSteering</a> set to <code>true</code> will automatically be rotated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

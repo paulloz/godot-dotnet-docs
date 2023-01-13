@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Semaphore" data-uid="Godot.Semaphore" class="text-break">Class Semaphore
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A synchronization semaphore which can be used to synchronize multiple <a class="xref" href="Godot.Thread.html">Thread</a>s. Initialized to zero on creation. Be careful to avoid deadlocks. For a binary version, see <a class="xref" href="Godot.Mutex.html">Mutex</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +298,9 @@
   
   <a id="Godot_Semaphore_Post_" data-uid="Godot.Semaphore.Post*"></a>
   <h4 id="Godot_Semaphore_Post" data-uid="Godot.Semaphore.Post">Post()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Lowers the <a class="xref" href="Godot.Semaphore.html">Semaphore</a>, allowing one more thread in.</p>
+<p>Note: This method internals&apos; can&apos;t possibly fail, but an error code is returned for backwards compatibility, which will always be <code>OK</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +325,8 @@
   
   <a id="Godot_Semaphore_TryWait_" data-uid="Godot.Semaphore.TryWait*"></a>
   <h4 id="Godot_Semaphore_TryWait" data-uid="Godot.Semaphore.TryWait">TryWait()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Like <a class="xref" href="Godot.Semaphore.html#Godot_Semaphore_Wait">Wait()</a>, but won&apos;t block, so if the value is zero, fails immediately and returns <code>ERR_BUSY</code>. If non-zero, it returns <code>OK</code> to report success.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -347,7 +351,9 @@
   
   <a id="Godot_Semaphore_Wait_" data-uid="Godot.Semaphore.Wait*"></a>
   <h4 id="Godot_Semaphore_Wait" data-uid="Godot.Semaphore.Wait">Wait()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Waits for the <a class="xref" href="Godot.Semaphore.html">Semaphore</a>, if its value is zero, blocks until non-zero.</p>
+<p>Note: This method internals&apos; can&apos;t possibly fail, but an error code is returned for backwards compatibility, which will always be <code>OK</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

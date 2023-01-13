@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ResourcePreloader" data-uid="Godot.ResourcePreloader" class="text-break">Class ResourcePreloader
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This node is used to preload sub-resources inside a scene, so when the scene is loaded, all the resources are ready to use and can be retrieved from the preloader.</p>
+<p>GDScript has a simplified <code>@GDScript.preload</code> built-in method which can be used in most situations, leaving the use of <a class="xref" href="Godot.ResourcePreloader.html">ResourcePreloader</a> for more advanced scenarios.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -780,7 +782,8 @@
   
   <a id="Godot_ResourcePreloader_AddResource_" data-uid="Godot.ResourcePreloader.AddResource*"></a>
   <h4 id="Godot_ResourcePreloader_AddResource_System_String_Godot_Resource_" data-uid="Godot.ResourcePreloader.AddResource(System.String,Godot.Resource)">AddResource(String, Resource)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a resource to the preloader with the given <code>name</code>. If a resource with the given <code>name</code> already exists, the new resource will be renamed to &quot;<code>name</code> N&quot; where N is an incrementing number starting from 2.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -812,7 +815,8 @@
   
   <a id="Godot_ResourcePreloader_GetResource_" data-uid="Godot.ResourcePreloader.GetResource*"></a>
   <h4 id="Godot_ResourcePreloader_GetResource_System_String_" data-uid="Godot.ResourcePreloader.GetResource(System.String)">GetResource(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the resource associated to <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -854,7 +858,8 @@
   
   <a id="Godot_ResourcePreloader_GetResourceList_" data-uid="Godot.ResourcePreloader.GetResourceList*"></a>
   <h4 id="Godot_ResourcePreloader_GetResourceList" data-uid="Godot.ResourcePreloader.GetResourceList">GetResourceList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the list of resources inside the preloader.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -879,7 +884,8 @@
   
   <a id="Godot_ResourcePreloader_HasResource_" data-uid="Godot.ResourcePreloader.HasResource*"></a>
   <h4 id="Godot_ResourcePreloader_HasResource_System_String_" data-uid="Godot.ResourcePreloader.HasResource(System.String)">HasResource(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the preloader contains a resource associated to <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -921,7 +927,8 @@
   
   <a id="Godot_ResourcePreloader_RemoveResource_" data-uid="Godot.ResourcePreloader.RemoveResource*"></a>
   <h4 id="Godot_ResourcePreloader_RemoveResource_System_String_" data-uid="Godot.ResourcePreloader.RemoveResource(System.String)">RemoveResource(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the resource associated to <code>name</code> from the preloader.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -948,7 +955,8 @@
   
   <a id="Godot_ResourcePreloader_RenameResource_" data-uid="Godot.ResourcePreloader.RenameResource*"></a>
   <h4 id="Godot_ResourcePreloader_RenameResource_System_String_System_String_" data-uid="Godot.ResourcePreloader.RenameResource(System.String,System.String)">RenameResource(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Renames a resource inside the preloader from <code>name</code> to <code>newname</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

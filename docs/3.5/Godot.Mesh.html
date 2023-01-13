@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Mesh" data-uid="Godot.Mesh" class="text-break">Class Mesh
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Mesh is a type of <a class="xref" href="Godot.Resource.html">Resource</a> that contains vertex array-based geometry, divided in surfaces. Each surface contains a completely separate array and a material used to draw it. Design wise, a mesh with multiple surfaces is preferred to a single surface, because objects created in 3D editing software commonly contain multiple materials.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -336,7 +337,8 @@
   
   <a id="Godot_Mesh_LightmapSizeHint_" data-uid="Godot.Mesh.LightmapSizeHint*"></a>
   <h4 id="Godot_Mesh_LightmapSizeHint" data-uid="Godot.Mesh.LightmapSizeHint">LightmapSizeHint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a hint to be used for lightmap resolution in <a class="xref" href="Godot.BakedLightmap.html">BakedLightmap</a>. Overrides <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_DefaultTexelsPerUnit">DefaultTexelsPerUnit</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -363,7 +365,10 @@
   
   <a id="Godot_Mesh_CreateConvexShape_" data-uid="Godot.Mesh.CreateConvexShape*"></a>
   <h4 id="Godot_Mesh_CreateConvexShape_System_Boolean_System_Boolean_" data-uid="Godot.Mesh.CreateConvexShape(System.Boolean,System.Boolean)">CreateConvexShape(Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calculate a <a class="xref" href="Godot.ConvexPolygonShape.html">ConvexPolygonShape</a> from the mesh.</p>
+<p>If <code>clean</code> is <code>true</code> (default), duplicate and interior vertices are removed automatically. You can set it to <code>false</code> to make the process faster if not needed.</p>
+<p>If <code>simplify</code> is <code>true</code>, the geometry can be further simplified to reduce the amount of vertices. Disabled by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -410,7 +415,9 @@
   
   <a id="Godot_Mesh_CreateOutline_" data-uid="Godot.Mesh.CreateOutline*"></a>
   <h4 id="Godot_Mesh_CreateOutline_System_Single_" data-uid="Godot.Mesh.CreateOutline(System.Single)">CreateOutline(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calculate an outline mesh at a defined offset (margin) from the original mesh.</p>
+<p>Note: This method typically returns the vertices in reverse order (e.g. clockwise to counterclockwise).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -452,7 +459,8 @@
   
   <a id="Godot_Mesh_CreateTrimeshShape_" data-uid="Godot.Mesh.CreateTrimeshShape*"></a>
   <h4 id="Godot_Mesh_CreateTrimeshShape" data-uid="Godot.Mesh.CreateTrimeshShape">CreateTrimeshShape()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calculate a <a class="xref" href="Godot.ConcavePolygonShape.html">ConcavePolygonShape</a> from the mesh.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -477,7 +485,8 @@
   
   <a id="Godot_Mesh_GenerateTriangleMesh_" data-uid="Godot.Mesh.GenerateTriangleMesh*"></a>
   <h4 id="Godot_Mesh_GenerateTriangleMesh" data-uid="Godot.Mesh.GenerateTriangleMesh">GenerateTriangleMesh()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generate a <a class="xref" href="Godot.TriangleMesh.html">TriangleMesh</a> from the mesh.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -502,7 +511,9 @@
   
   <a id="Godot_Mesh_GetAabb_" data-uid="Godot.Mesh.GetAabb*"></a>
   <h4 id="Godot_Mesh_GetAabb" data-uid="Godot.Mesh.GetAabb">GetAabb()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the smallest <a class="xref" href="Godot.AABB.html">AABB</a> enclosing this mesh in local space. Not affected by <code>custom_aabb</code>. See also <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_GetTransformedAabb">GetTransformedAabb()</a>.</p>
+<p>Note: This is only implemented for <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a> and <a class="xref" href="Godot.PrimitiveMesh.html">PrimitiveMesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -527,7 +538,8 @@
   
   <a id="Godot_Mesh_GetFaces_" data-uid="Godot.Mesh.GetFaces*"></a>
   <h4 id="Godot_Mesh_GetFaces" data-uid="Godot.Mesh.GetFaces">GetFaces()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all the vertices that make up the faces of the mesh. Each three vertices represent one triangle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -577,7 +589,8 @@
   
   <a id="Godot_Mesh_GetSurfaceCount_" data-uid="Godot.Mesh.GetSurfaceCount*"></a>
   <h4 id="Godot_Mesh_GetSurfaceCount" data-uid="Godot.Mesh.GetSurfaceCount">GetSurfaceCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of surfaces that the <a class="xref" href="Godot.Mesh.html">Mesh</a> holds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -629,7 +642,8 @@
   
   <a id="Godot_Mesh_SurfaceGetArrays_" data-uid="Godot.Mesh.SurfaceGetArrays*"></a>
   <h4 id="Godot_Mesh_SurfaceGetArrays_System_Int32_" data-uid="Godot.Mesh.SurfaceGetArrays(System.Int32)">SurfaceGetArrays(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the arrays for the vertices, normals, uvs, etc. that make up the requested surface (see <a class="xref" href="Godot.ArrayMesh.html#Godot_ArrayMesh_AddSurfaceFromArrays_Godot_Mesh_PrimitiveType_Godot_Collections_Array_Godot_Collections_Array_System_UInt32_">AddSurfaceFromArrays(Mesh.PrimitiveType, Array, Array, UInt32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -671,7 +685,8 @@
   
   <a id="Godot_Mesh_SurfaceGetBlendShapeArrays_" data-uid="Godot.Mesh.SurfaceGetBlendShapeArrays*"></a>
   <h4 id="Godot_Mesh_SurfaceGetBlendShapeArrays_System_Int32_" data-uid="Godot.Mesh.SurfaceGetBlendShapeArrays(System.Int32)">SurfaceGetBlendShapeArrays(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the blend shape arrays for the requested surface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -713,7 +728,8 @@
   
   <a id="Godot_Mesh_SurfaceGetMaterial_" data-uid="Godot.Mesh.SurfaceGetMaterial*"></a>
   <h4 id="Godot_Mesh_SurfaceGetMaterial_System_Int32_" data-uid="Godot.Mesh.SurfaceGetMaterial(System.Int32)">SurfaceGetMaterial(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.Material.html">Material</a> in a given surface. Surface is rendered using this material.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -755,7 +771,8 @@
   
   <a id="Godot_Mesh_SurfaceSetMaterial_" data-uid="Godot.Mesh.SurfaceSetMaterial*"></a>
   <h4 id="Godot_Mesh_SurfaceSetMaterial_System_Int32_Godot_Material_" data-uid="Godot.Mesh.SurfaceSetMaterial(System.Int32,Godot.Material)">SurfaceSetMaterial(Int32, Material)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a <a class="xref" href="Godot.Material.html">Material</a> for a given surface. Surface will be rendered using this material.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

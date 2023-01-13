@@ -83,7 +83,14 @@
   
   <h1 id="Godot_NavigationMeshInstance" data-uid="Godot.NavigationMeshInstance" class="text-break">Class NavigationMeshInstance
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An instance of a <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a>. It tells the <a class="xref" href="Godot.Navigation.html">Navigation</a> node what can be navigated and what cannot, based on the <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> resource.</p>
+<p>By default this node will register to the default <a class="xref" href="Godot.World.html">World</a> navigation map. If this node is a child of a <a class="xref" href="Godot.Navigation.html">Navigation</a> node it will register to the navigation map of the navigation node.</p>
+<p>Two regions can be connected to each other if they share a similar edge. You can set the minimum distance between two vertices required to connect two edges by using <a class="xref" href="Godot.NavigationServer.html#Godot_NavigationServer_MapSetEdgeConnectionMargin_Godot_RID_System_Single_">MapSetEdgeConnectionMargin(RID, Single)</a>.</p>
+<p>Note: Overlapping two regions&apos; navmeshes is not enough for connecting two regions. They must share a similar edge.</p>
+<p>The cost of entering this region from another region can be controlled with the <a class="xref" href="Godot.NavigationMeshInstance.html#Godot_NavigationMeshInstance_EnterCost">EnterCost</a> value.</p>
+<p>Note: This value is not added to the path cost when the start position is already inside this region.</p>
+<p>The cost of traveling distances inside this region can be controlled with the <a class="xref" href="Godot.NavigationMeshInstance.html#Godot_NavigationMeshInstance_TravelCost">TravelCost</a> multiplier.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +971,8 @@
   
   <a id="Godot_NavigationMeshInstance_Enabled_" data-uid="Godot.NavigationMeshInstance.Enabled*"></a>
   <h4 id="Godot_NavigationMeshInstance_Enabled" data-uid="Godot.NavigationMeshInstance.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines if the <a class="xref" href="Godot.NavigationMeshInstance.html">NavigationMeshInstance</a> is enabled or disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +997,8 @@
   
   <a id="Godot_NavigationMeshInstance_EnterCost_" data-uid="Godot.NavigationMeshInstance.EnterCost*"></a>
   <h4 id="Godot_NavigationMeshInstance_EnterCost" data-uid="Godot.NavigationMeshInstance.EnterCost">EnterCost</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When pathfinding enters this region&apos;s navmesh from another regions navmesh the <code>enter_cost</code> value is added to the path distance for determining the shortest path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1023,8 @@
   
   <a id="Godot_NavigationMeshInstance_NavigationLayers_" data-uid="Godot.NavigationMeshInstance.NavigationLayers*"></a>
   <h4 id="Godot_NavigationMeshInstance_NavigationLayers" data-uid="Godot.NavigationMeshInstance.NavigationLayers">NavigationLayers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A bitfield determining all navigation map layers the <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> belongs to. On path requests with <a class="xref" href="Godot.NavigationServer.html#Godot_NavigationServer_MapGetPath_Godot_RID_Godot_Vector3_Godot_Vector3_System_Boolean_System_UInt32_">MapGetPath(RID, Vector3, Vector3, Boolean, UInt32)</a> navmeshes without matching layers will be ignored and the navigation map will only proximity merge different navmeshes with matching layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1039,7 +1049,8 @@
   
   <a id="Godot_NavigationMeshInstance_Navmesh_" data-uid="Godot.NavigationMeshInstance.Navmesh*"></a>
   <h4 id="Godot_NavigationMeshInstance_Navmesh" data-uid="Godot.NavigationMeshInstance.Navmesh">Navmesh</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> resource to use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1064,7 +1075,8 @@
   
   <a id="Godot_NavigationMeshInstance_TravelCost_" data-uid="Godot.NavigationMeshInstance.TravelCost*"></a>
   <h4 id="Godot_NavigationMeshInstance_TravelCost" data-uid="Godot.NavigationMeshInstance.TravelCost">TravelCost</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When pathfinding moves inside this region&apos;s navmesh the traveled distances are multiplied with <code>travel_cost</code> for determining the shortest path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1091,7 +1103,8 @@
   
   <a id="Godot_NavigationMeshInstance_BakeNavigationMesh_" data-uid="Godot.NavigationMeshInstance.BakeNavigationMesh*"></a>
   <h4 id="Godot_NavigationMeshInstance_BakeNavigationMesh_System_Boolean_" data-uid="Godot.NavigationMeshInstance.BakeNavigationMesh(System.Boolean)">BakeNavigationMesh(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bakes the <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a>. If <code>on_thread</code> is set to <code>true</code> (default), the baking is done on a separate thread. Baking on separate thread is useful because navigation baking is not a cheap operation. When it is completed, it automatically sets the new <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a>. Please note that baking on separate thread may be very slow if geometry is parsed from meshes as async access to each mesh involves heavy synchronization. Also, please note that baking on a separate thread is automatically disabled on operating systems that cannot use threads (such as HTML5 with threads disabled).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1193,7 +1206,8 @@
   
   <a id="Godot_NavigationMeshInstance_GetRegionRid_" data-uid="Godot.NavigationMeshInstance.GetRegionRid*"></a>
   <h4 id="Godot_NavigationMeshInstance_GetRegionRid" data-uid="Godot.NavigationMeshInstance.GetRegionRid">GetRegionRid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.RID.html">RID</a> of this region on the <a class="xref" href="Godot.NavigationServer.html">NavigationServer</a>. Combined with <a class="xref" href="Godot.NavigationServer.html#Godot_NavigationServer_MapGetClosestPointOwner_Godot_RID_Godot_Vector3_">MapGetClosestPointOwner(RID, Vector3)</a> can be used to identify the <a class="xref" href="Godot.NavigationMeshInstance.html">NavigationMeshInstance</a> closest to a point on the merged navigation map.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

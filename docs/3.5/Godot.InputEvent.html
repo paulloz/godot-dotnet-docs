@@ -83,7 +83,8 @@
   
   <h1 id="Godot_InputEvent" data-uid="Godot.InputEvent" class="text-break">Class InputEvent
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Base class of all sort of input event. See <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">_Input(InputEvent)</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -341,7 +342,9 @@
   
   <a id="Godot_InputEvent_Device_" data-uid="Godot.InputEvent.Device*"></a>
   <h4 id="Godot_InputEvent_Device" data-uid="Godot.InputEvent.Device">Device</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The event&apos;s device ID.</p>
+<p>Note: This device ID will always be <code>-1</code> for emulated mouse input from a touchscreen. This can be used to distinguish emulated mouse input from physical mouse input.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -368,7 +371,9 @@
   
   <a id="Godot_InputEvent_Accumulate_" data-uid="Godot.InputEvent.Accumulate*"></a>
   <h4 id="Godot_InputEvent_Accumulate_Godot_InputEvent_" data-uid="Godot.InputEvent.Accumulate(Godot.InputEvent)">Accumulate(InputEvent)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given input event and this input event can be added together (only for events of type <a class="xref" href="Godot.InputEventMouseMotion.html">InputEventMouseMotion</a>).</p>
+<p>The given input event&apos;s position, global position and speed will be copied. The resulting <code>relative</code> is a sum of both events. Both events&apos; modifiers have to be identical.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -410,7 +415,8 @@
   
   <a id="Godot_InputEvent_AsText_" data-uid="Godot.InputEvent.AsText*"></a>
   <h4 id="Godot_InputEvent_AsText" data-uid="Godot.InputEvent.AsText">AsText()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.String</span> representation of the event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -435,7 +441,9 @@
   
   <a id="Godot_InputEvent_GetActionStrength_" data-uid="Godot.InputEvent.GetActionStrength*"></a>
   <h4 id="Godot_InputEvent_GetActionStrength_System_String_System_Boolean_" data-uid="Godot.InputEvent.GetActionStrength(System.String,System.Boolean)">GetActionStrength(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a value between 0.0 and 1.0 depending on the given actions&apos; state. Useful for getting the value of events of type <a class="xref" href="Godot.InputEventJoypadMotion.html">InputEventJoypadMotion</a>.</p>
+<p>If <code>exact_match</code> is <code>false</code>, it ignores additional input modifiers for <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a> and <a class="xref" href="Godot.InputEventMouseButton.html">InputEventMouseButton</a> events, and the direction for <a class="xref" href="Godot.InputEventJoypadMotion.html">InputEventJoypadMotion</a> events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -507,7 +515,9 @@
   
   <a id="Godot_InputEvent_IsAction_" data-uid="Godot.InputEvent.IsAction*"></a>
   <h4 id="Godot_InputEvent_IsAction_System_String_System_Boolean_" data-uid="Godot.InputEvent.IsAction(System.String,System.Boolean)">IsAction(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this input event matches a pre-defined action of any type.</p>
+<p>If <code>exact_match</code> is <code>false</code>, it ignores additional input modifiers for <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a> and <a class="xref" href="Godot.InputEventMouseButton.html">InputEventMouseButton</a> events, and the direction for <a class="xref" href="Godot.InputEventJoypadMotion.html">InputEventJoypadMotion</a> events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -554,7 +564,10 @@
   
   <a id="Godot_InputEvent_IsActionPressed_" data-uid="Godot.InputEvent.IsActionPressed*"></a>
   <h4 id="Godot_InputEvent_IsActionPressed_System_String_System_Boolean_System_Boolean_" data-uid="Godot.InputEvent.IsActionPressed(System.String,System.Boolean,System.Boolean)">IsActionPressed(String, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given action is being pressed (and is not an echo event for <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a> events, unless <code>allow_echo</code> is <code>true</code>). Not relevant for events of type <a class="xref" href="Godot.InputEventMouseMotion.html">InputEventMouseMotion</a> or <a class="xref" href="Godot.InputEventScreenDrag.html">InputEventScreenDrag</a>.</p>
+<p>If <code>exact_match</code> is <code>false</code>, it ignores additional input modifiers for <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a> and <a class="xref" href="Godot.InputEventMouseButton.html">InputEventMouseButton</a> events, and the direction for <a class="xref" href="Godot.InputEventJoypadMotion.html">InputEventJoypadMotion</a> events.</p>
+<p>Note: Due to keyboard ghosting, <a class="xref" href="Godot.InputEvent.html#Godot_InputEvent_IsActionPressed_System_String_System_Boolean_System_Boolean_">IsActionPressed(String, Boolean, Boolean)</a> may return <code>false</code> even if one of the action&apos;s keys is pressed. See <a href="$DOCS_URL/tutorials/inputs/input_examples.html#keyboard-events">Input examples</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -606,7 +619,9 @@
   
   <a id="Godot_InputEvent_IsActionReleased_" data-uid="Godot.InputEvent.IsActionReleased*"></a>
   <h4 id="Godot_InputEvent_IsActionReleased_System_String_System_Boolean_" data-uid="Godot.InputEvent.IsActionReleased(System.String,System.Boolean)">IsActionReleased(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given action is released (i.e. not pressed). Not relevant for events of type <a class="xref" href="Godot.InputEventMouseMotion.html">InputEventMouseMotion</a> or <a class="xref" href="Godot.InputEventScreenDrag.html">InputEventScreenDrag</a>.</p>
+<p>If <code>exact_match</code> is <code>false</code>, it ignores additional input modifiers for <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a> and <a class="xref" href="Godot.InputEventMouseButton.html">InputEventMouseButton</a> events, and the direction for <a class="xref" href="Godot.InputEventJoypadMotion.html">InputEventJoypadMotion</a> events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -653,7 +668,8 @@
   
   <a id="Godot_InputEvent_IsActionType_" data-uid="Godot.InputEvent.IsActionType*"></a>
   <h4 id="Godot_InputEvent_IsActionType" data-uid="Godot.InputEvent.IsActionType">IsActionType()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this input event&apos;s type is one that can be assigned to an input action.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -678,7 +694,8 @@
   
   <a id="Godot_InputEvent_IsEcho_" data-uid="Godot.InputEvent.IsEcho*"></a>
   <h4 id="Godot_InputEvent_IsEcho" data-uid="Godot.InputEvent.IsEcho">IsEcho()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this input event is an echo event (only for events of type <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -703,7 +720,9 @@
   
   <a id="Godot_InputEvent_IsPressed_" data-uid="Godot.InputEvent.IsPressed*"></a>
   <h4 id="Godot_InputEvent_IsPressed" data-uid="Godot.InputEvent.IsPressed">IsPressed()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this input event is pressed. Not relevant for events of type <a class="xref" href="Godot.InputEventMouseMotion.html">InputEventMouseMotion</a> or <a class="xref" href="Godot.InputEventScreenDrag.html">InputEventScreenDrag</a>.</p>
+<p>Note: Due to keyboard ghosting, <a class="xref" href="Godot.InputEvent.html#Godot_InputEvent_IsActionPressed_System_String_System_Boolean_System_Boolean_">IsActionPressed(String, Boolean, Boolean)</a> may return <code>false</code> even if one of the action&apos;s keys is pressed. See <a href="$DOCS_URL/tutorials/inputs/input_examples.html#keyboard-events">Input examples</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -755,7 +774,9 @@
   
   <a id="Godot_InputEvent_ShortcutMatch_" data-uid="Godot.InputEvent.ShortcutMatch*"></a>
   <h4 id="Godot_InputEvent_ShortcutMatch_Godot_InputEvent_System_Boolean_" data-uid="Godot.InputEvent.ShortcutMatch(Godot.InputEvent,System.Boolean)">ShortcutMatch(InputEvent, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the specified <code>event</code> matches this event. Only valid for action events i.e key (<a class="xref" href="Godot.InputEventKey.html">InputEventKey</a>), button (<a class="xref" href="Godot.InputEventMouseButton.html">InputEventMouseButton</a> or <a class="xref" href="Godot.InputEventJoypadButton.html">InputEventJoypadButton</a>), axis <a class="xref" href="Godot.InputEventJoypadMotion.html">InputEventJoypadMotion</a> or action (<a class="xref" href="Godot.InputEventAction.html">InputEventAction</a>) events.</p>
+<p>If <code>exact_match</code> is <code>false</code>, it ignores additional input modifiers for <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a> and <a class="xref" href="Godot.InputEventMouseButton.html">InputEventMouseButton</a> events, and the direction for <a class="xref" href="Godot.InputEventJoypadMotion.html">InputEventJoypadMotion</a> events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -802,7 +823,8 @@
   
   <a id="Godot_InputEvent_XformedBy_" data-uid="Godot.InputEvent.XformedBy*"></a>
   <h4 id="Godot_InputEvent_XformedBy_Godot_Transform2D_System_Nullable_Godot_Vector2__" data-uid="Godot.InputEvent.XformedBy(Godot.Transform2D,System.Nullable{Godot.Vector2})">XformedBy(Transform2D, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the given input event which has been offset by <code>local_ofs</code> and transformed by <code>xform</code>. Relevant for events of type <a class="xref" href="Godot.InputEventMouseButton.html">InputEventMouseButton</a>, <a class="xref" href="Godot.InputEventMouseMotion.html">InputEventMouseMotion</a>, <a class="xref" href="Godot.InputEventScreenTouch.html">InputEventScreenTouch</a>, <a class="xref" href="Godot.InputEventScreenDrag.html">InputEventScreenDrag</a>, <a class="xref" href="Godot.InputEventMagnifyGesture.html">InputEventMagnifyGesture</a> and <a class="xref" href="Godot.InputEventPanGesture.html">InputEventPanGesture</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -826,7 +848,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">localOfs</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>

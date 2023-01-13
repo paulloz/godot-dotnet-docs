@@ -83,7 +83,8 @@
   
   <h1 id="Godot_NavigationMesh" data-uid="Godot.NavigationMesh" class="text-break">Class NavigationMesh
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A navigation mesh is a collection of polygons that define which areas of an environment are traversable to aid agents in pathfinding through complicated spaces.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -346,7 +347,9 @@
   
   <a id="Godot_NavigationMesh_AgentHeight_" data-uid="Godot.NavigationMesh.AgentHeight*"></a>
   <h4 id="Godot_NavigationMesh_AgentHeight" data-uid="Godot.NavigationMesh.AgentHeight">AgentHeight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum floor to ceiling height that will still allow the floor area to be considered walkable.</p>
+<p>Note: While baking, this value will be rounded up to the nearest multiple of <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_CellHeight">CellHeight</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +374,9 @@
   
   <a id="Godot_NavigationMesh_AgentMaxClimb_" data-uid="Godot.NavigationMesh.AgentMaxClimb*"></a>
   <h4 id="Godot_NavigationMesh_AgentMaxClimb" data-uid="Godot.NavigationMesh.AgentMaxClimb">AgentMaxClimb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum ledge height that is considered to still be traversable.</p>
+<p>Note: While baking, this value will be rounded down to the nearest multiple of <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_CellHeight">CellHeight</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +401,8 @@
   
   <a id="Godot_NavigationMesh_AgentMaxSlope_" data-uid="Godot.NavigationMesh.AgentMaxSlope*"></a>
   <h4 id="Godot_NavigationMesh_AgentMaxSlope" data-uid="Godot.NavigationMesh.AgentMaxSlope">AgentMaxSlope</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum slope that is considered walkable, in degrees.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +427,9 @@
   
   <a id="Godot_NavigationMesh_AgentRadius_" data-uid="Godot.NavigationMesh.AgentRadius*"></a>
   <h4 id="Godot_NavigationMesh_AgentRadius" data-uid="Godot.NavigationMesh.AgentRadius">AgentRadius</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The distance to erode/shrink the walkable area of the heightfield away from obstructions.</p>
+<p>Note: While baking, this value will be rounded up to the nearest multiple of <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_CellSize">CellSize</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -446,7 +454,8 @@
   
   <a id="Godot_NavigationMesh_CellHeight_" data-uid="Godot.NavigationMesh.CellHeight*"></a>
   <h4 id="Godot_NavigationMesh_CellHeight" data-uid="Godot.NavigationMesh.CellHeight">CellHeight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Y axis cell size to use for fields.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,7 +480,8 @@
   
   <a id="Godot_NavigationMesh_CellSize_" data-uid="Godot.NavigationMesh.CellSize*"></a>
   <h4 id="Godot_NavigationMesh_CellSize" data-uid="Godot.NavigationMesh.CellSize">CellSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The XZ plane cell size to use for fields.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -496,7 +506,8 @@
   
   <a id="Godot_NavigationMesh_DetailSampleDistance_" data-uid="Godot.NavigationMesh.DetailSampleDistance*"></a>
   <h4 id="Godot_NavigationMesh_DetailSampleDistance" data-uid="Godot.NavigationMesh.DetailSampleDistance">DetailSampleDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The sampling distance to use when generating the detail mesh, in cell unit.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -521,7 +532,8 @@
   
   <a id="Godot_NavigationMesh_DetailSampleMaxError_" data-uid="Godot.NavigationMesh.DetailSampleMaxError*"></a>
   <h4 id="Godot_NavigationMesh_DetailSampleMaxError" data-uid="Godot.NavigationMesh.DetailSampleMaxError">DetailSampleMaxError</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum distance the detail mesh surface should deviate from heightfield, in cell unit.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -546,7 +558,8 @@
   
   <a id="Godot_NavigationMesh_EdgeMaxError_" data-uid="Godot.NavigationMesh.EdgeMaxError*"></a>
   <h4 id="Godot_NavigationMesh_EdgeMaxError" data-uid="Godot.NavigationMesh.EdgeMaxError">EdgeMaxError</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum distance a simplfied contour&apos;s border edges should deviate the original raw contour.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -571,7 +584,9 @@
   
   <a id="Godot_NavigationMesh_EdgeMaxLength_" data-uid="Godot.NavigationMesh.EdgeMaxLength*"></a>
   <h4 id="Godot_NavigationMesh_EdgeMaxLength" data-uid="Godot.NavigationMesh.EdgeMaxLength">EdgeMaxLength</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum allowed length for contour edges along the border of the mesh.</p>
+<p>Note: While baking, this value will be rounded up to the nearest multiple of <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_CellSize">CellSize</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -596,7 +611,8 @@
   
   <a id="Godot_NavigationMesh_FilterBakingAabb_" data-uid="Godot.NavigationMesh.FilterBakingAabb*"></a>
   <h4 id="Godot_NavigationMesh_FilterBakingAabb" data-uid="Godot.NavigationMesh.FilterBakingAabb">FilterBakingAabb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If the baking <a class="xref" href="Godot.AABB.html">AABB</a> has a volume the navigation mesh baking will be restricted to its enclosing area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -621,7 +637,8 @@
   
   <a id="Godot_NavigationMesh_FilterBakingAabbOffset_" data-uid="Godot.NavigationMesh.FilterBakingAabbOffset*"></a>
   <h4 id="Godot_NavigationMesh_FilterBakingAabbOffset" data-uid="Godot.NavigationMesh.FilterBakingAabbOffset">FilterBakingAabbOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The position offset applied to the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_FilterBakingAabb">FilterBakingAabb</a> <a class="xref" href="Godot.AABB.html">AABB</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -646,7 +663,8 @@
   
   <a id="Godot_NavigationMesh_FilterLedgeSpans_" data-uid="Godot.NavigationMesh.FilterLedgeSpans*"></a>
   <h4 id="Godot_NavigationMesh_FilterLedgeSpans" data-uid="Godot.NavigationMesh.FilterLedgeSpans">FilterLedgeSpans</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, marks spans that are ledges as non-walkable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -671,7 +689,8 @@
   
   <a id="Godot_NavigationMesh_FilterLowHangingObstacles_" data-uid="Godot.NavigationMesh.FilterLowHangingObstacles*"></a>
   <h4 id="Godot_NavigationMesh_FilterLowHangingObstacles" data-uid="Godot.NavigationMesh.FilterLowHangingObstacles">FilterLowHangingObstacles</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, marks non-walkable spans as walkable if their maximum is within <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_AgentMaxClimb">AgentMaxClimb</a> of a walkable neighbor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -696,7 +715,8 @@
   
   <a id="Godot_NavigationMesh_FilterWalkableLowHeightSpans_" data-uid="Godot.NavigationMesh.FilterWalkableLowHeightSpans*"></a>
   <h4 id="Godot_NavigationMesh_FilterWalkableLowHeightSpans" data-uid="Godot.NavigationMesh.FilterWalkableLowHeightSpans">FilterWalkableLowHeightSpans</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, marks walkable spans as not walkable if the clearance above the span is less than <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_AgentHeight">AgentHeight</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -721,7 +741,9 @@
   
   <a id="Godot_NavigationMesh_GeometryCollisionMask_" data-uid="Godot.NavigationMesh.GeometryCollisionMask*"></a>
   <h4 id="Godot_NavigationMesh_GeometryCollisionMask" data-uid="Godot.NavigationMesh.GeometryCollisionMask">GeometryCollisionMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics layers to scan for static colliders.</p>
+<p>Only used when <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_GeometryParsedGeometryType">GeometryParsedGeometryType</a> is <a class="xref" href="Godot.NavigationMesh.ParsedGeometryType.html#Godot_NavigationMesh_ParsedGeometryType_StaticColliders">StaticColliders</a> or <a class="xref" href="Godot.NavigationMesh.ParsedGeometryType.html#Godot_NavigationMesh_ParsedGeometryType_Both">Both</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -746,7 +768,8 @@
   
   <a id="Godot_NavigationMesh_GeometryParsedGeometryType_" data-uid="Godot.NavigationMesh.GeometryParsedGeometryType*"></a>
   <h4 id="Godot_NavigationMesh_GeometryParsedGeometryType" data-uid="Godot.NavigationMesh.GeometryParsedGeometryType">GeometryParsedGeometryType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines which type of nodes will be parsed as geometry. See <a class="xref" href="Godot.NavigationMesh.ParsedGeometryType.html">NavigationMesh.ParsedGeometryType</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -771,7 +794,8 @@
   
   <a id="Godot_NavigationMesh_GeometrySourceGeometryMode_" data-uid="Godot.NavigationMesh.GeometrySourceGeometryMode*"></a>
   <h4 id="Godot_NavigationMesh_GeometrySourceGeometryMode" data-uid="Godot.NavigationMesh.GeometrySourceGeometryMode">GeometrySourceGeometryMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The source of the geometry used when baking. See <a class="xref" href="Godot.NavigationMesh.SourceGeometryMode.html">NavigationMesh.SourceGeometryMode</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -796,7 +820,9 @@
   
   <a id="Godot_NavigationMesh_GeometrySourceGroupName_" data-uid="Godot.NavigationMesh.GeometrySourceGroupName*"></a>
   <h4 id="Godot_NavigationMesh_GeometrySourceGroupName" data-uid="Godot.NavigationMesh.GeometrySourceGroupName">GeometrySourceGroupName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the group to scan for geometry.</p>
+<p>Only used when <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_GeometrySourceGeometryMode">GeometrySourceGeometryMode</a> is <a class="xref" href="Godot.NavigationMesh.SourceGeometryMode.html#Godot_NavigationMesh_SourceGeometryMode_GroupsWithChildren">GroupsWithChildren</a> or <a class="xref" href="Godot.NavigationMesh.SourceGeometryMode.html#Godot_NavigationMesh_SourceGeometryMode_GroupsExplicit">GroupsExplicit</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -846,7 +872,8 @@
   
   <a id="Godot_NavigationMesh_PolygonVertsPerPoly_" data-uid="Godot.NavigationMesh.PolygonVertsPerPoly*"></a>
   <h4 id="Godot_NavigationMesh_PolygonVertsPerPoly" data-uid="Godot.NavigationMesh.PolygonVertsPerPoly">PolygonVertsPerPoly</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of vertices allowed for polygons generated during the contour to polygon conversion process.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -871,7 +898,9 @@
   
   <a id="Godot_NavigationMesh_RegionMergeSize_" data-uid="Godot.NavigationMesh.RegionMergeSize*"></a>
   <h4 id="Godot_NavigationMesh_RegionMergeSize" data-uid="Godot.NavigationMesh.RegionMergeSize">RegionMergeSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Any regions with a size smaller than this will be merged with larger regions if possible.</p>
+<p>Note: This value will be squared to calculate the number of cells. For example, a value of 20 will set the number of cells to 400.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -896,7 +925,9 @@
   
   <a id="Godot_NavigationMesh_RegionMinSize_" data-uid="Godot.NavigationMesh.RegionMinSize*"></a>
   <h4 id="Godot_NavigationMesh_RegionMinSize" data-uid="Godot.NavigationMesh.RegionMinSize">RegionMinSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum size of a region for it to be created.</p>
+<p>Note: This value will be squared to calculate the minimum number of cells allowed to form isolated island areas. For example, a value of 8 will set the number of cells to 64.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -921,7 +952,8 @@
   
   <a id="Godot_NavigationMesh_SamplePartitionType_" data-uid="Godot.NavigationMesh.SamplePartitionType*"></a>
   <h4 id="Godot_NavigationMesh_SamplePartitionType" data-uid="Godot.NavigationMesh.SamplePartitionType">SamplePartitionType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Partitioning algorithm for creating the navigation mesh polys. See <a class="xref" href="Godot.NavigationMesh.SamplePartitionTypeEnum.html">NavigationMesh.SamplePartitionTypeEnum</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -973,7 +1005,8 @@
   
   <a id="Godot_NavigationMesh_AddPolygon_" data-uid="Godot.NavigationMesh.AddPolygon*"></a>
   <h4 id="Godot_NavigationMesh_AddPolygon_System_Int32___" data-uid="Godot.NavigationMesh.AddPolygon(System.Int32[])">AddPolygon(Int32[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a polygon using the indices of the vertices you get when calling <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_GetVertices">GetVertices()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1000,7 +1033,8 @@
   
   <a id="Godot_NavigationMesh_ClearPolygons_" data-uid="Godot.NavigationMesh.ClearPolygons*"></a>
   <h4 id="Godot_NavigationMesh_ClearPolygons" data-uid="Godot.NavigationMesh.ClearPolygons">ClearPolygons()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the array of polygons, but it doesn&apos;t clear the array of vertices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1010,7 +1044,8 @@
   
   <a id="Godot_NavigationMesh_CreateFromMesh_" data-uid="Godot.NavigationMesh.CreateFromMesh*"></a>
   <h4 id="Godot_NavigationMesh_CreateFromMesh_Godot_Mesh_" data-uid="Godot.NavigationMesh.CreateFromMesh(Godot.Mesh)">CreateFromMesh(Mesh)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes the navigation mesh by setting the vertices and indices according to a <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1212,7 +1247,8 @@
   
   <a id="Godot_NavigationMesh_GetCollisionMaskBit_" data-uid="Godot.NavigationMesh.GetCollisionMaskBit*"></a>
   <h4 id="Godot_NavigationMesh_GetCollisionMaskBit_System_Int32_" data-uid="Godot.NavigationMesh.GetCollisionMaskBit(System.Int32)">GetCollisionMaskBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the specified <code>bit</code> of the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_GeometryCollisionMask">GeometryCollisionMask</a> is set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1504,7 +1540,8 @@
   
   <a id="Godot_NavigationMesh_GetPolygon_" data-uid="Godot.NavigationMesh.GetPolygon*"></a>
   <h4 id="Godot_NavigationMesh_GetPolygon_System_Int32_" data-uid="Godot.NavigationMesh.GetPolygon(System.Int32)">GetPolygon(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.Int32</span> containing the indices of the vertices of a created polygon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1546,7 +1583,8 @@
   
   <a id="Godot_NavigationMesh_GetPolygonCount_" data-uid="Godot.NavigationMesh.GetPolygonCount*"></a>
   <h4 id="Godot_NavigationMesh_GetPolygonCount" data-uid="Godot.NavigationMesh.GetPolygonCount">GetPolygonCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of polygons in the navigation mesh.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1696,7 +1734,8 @@
   
   <a id="Godot_NavigationMesh_GetVertices_" data-uid="Godot.NavigationMesh.GetVertices*"></a>
   <h4 id="Godot_NavigationMesh_GetVertices" data-uid="Godot.NavigationMesh.GetVertices">GetVertices()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.Vector3.html">Vector3</a> containing all the vertices being used to create the polygons.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1935,7 +1974,9 @@
   
   <a id="Godot_NavigationMesh_SetCollisionMaskBit_" data-uid="Godot.NavigationMesh.SetCollisionMaskBit*"></a>
   <h4 id="Godot_NavigationMesh_SetCollisionMaskBit_System_Int32_System_Boolean_" data-uid="Godot.NavigationMesh.SetCollisionMaskBit(System.Int32,System.Boolean)">SetCollisionMaskBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>value</code> is <code>true</code>, sets the specified <code>bit</code> in the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_GeometryCollisionMask">GeometryCollisionMask</a>.</p>
+<p>If <code>value</code> is <code>false</code>, clears the specified <code>bit</code> in the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_GeometryCollisionMask">GeometryCollisionMask</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2372,7 +2413,8 @@
   
   <a id="Godot_NavigationMesh_SetVertices_" data-uid="Godot.NavigationMesh.SetVertices*"></a>
   <h4 id="Godot_NavigationMesh_SetVertices_Godot_Vector3___" data-uid="Godot.NavigationMesh.SetVertices(Godot.Vector3[])">SetVertices(Vector3[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the vertices that can be then indexed to create polygons with the <a class="xref" href="Godot.NavigationMesh.html#Godot_NavigationMesh_AddPolygon_System_Int32___">AddPolygon(Int32[])</a> method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

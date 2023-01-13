@@ -83,7 +83,25 @@
   
   <h1 id="Godot_NodePath" data-uid="Godot.NodePath" class="text-break">Class NodePath
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A pre-parsed relative or absolute path in a scene tree,
+for use with <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">GetNode(NodePath)</a> and similar functions.
+It can reference a node, a resource within a node, or a property
+of a node or resource.
+For instance, <code>&quot;Path2D/PathFollow2D/Sprite2D:texture:size&quot;</code>
+would refer to the <code>size</code> property of the <code>texture</code>
+resource on the node named <code>&quot;Sprite2D&quot;</code> which is a child of
+the other named nodes in the path.
+You will usually just pass a string to <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">GetNode(NodePath)</a>
+and it will be automatically converted, but you may occasionally
+want to parse a path ahead of time with NodePath.
+Exporting a NodePath variable will give you a node selection widget
+in the properties panel of the editor, which can often be useful.
+A NodePath is composed of a list of slash-separated node names
+(like a filesystem path) and an optional colon-separated list of
+&quot;subnames&quot; which can be resources or properties.</p>
+<p>Note: In the editor, NodePath properties are automatically updated when moving,
+renaming or deleting a node in the scene tree, but they are never updated at runtime.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -100,13 +118,27 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed class NodePath : Object</code></pre>
   </div>
+  <h5 id="Godot_NodePath_examples"><strong>Examples</strong></h5>
+  <p>Some examples of NodePaths include the following:</p>
+<pre><code>// No leading slash means it is relative to the current node.
+new NodePath(&quot;A&quot;); // Immediate child A.
+new NodePath(&quot;A/B&quot;); // A&apos;s child B.
+new NodePath(&quot;.&quot;); // The current node.
+new NodePath(&quot;..&quot;); // The parent node.
+new NodePath(&quot;../C&quot;); // A sibling node C.
+// A leading slash means it is absolute from the SceneTree.
+new NodePath(&quot;/root&quot;); // Equivalent to GetTree().Root
+new NodePath(&quot;/root/Main&quot;); // If your main scene&apos;s root node were named &quot;Main&quot;.
+new NodePath(&quot;/root/MyAutoload&quot;); // If you have an autoloaded node or scene.</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="Godot_NodePath__ctor_" data-uid="Godot.NodePath.#ctor*"></a>
   <h4 id="Godot_NodePath__ctor" data-uid="Godot.NodePath.#ctor">NodePath()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs an empty <a class="xref" href="Godot.NodePath.html">NodePath</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -116,7 +148,15 @@
   
   <a id="Godot_NodePath__ctor_" data-uid="Godot.NodePath.#ctor*"></a>
   <h4 id="Godot_NodePath__ctor_System_String_" data-uid="Godot.NodePath.#ctor(System.String)">NodePath(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Godot.NodePath.html">NodePath</a> from a string <code data-dev-comment-type="paramref" class="paramref">path</code>,
+e.g.: <code>&quot;Path2D/PathFollow2D/Sprite2D:texture:size&quot;</code>.
+A path is absolute if it starts with a slash. Absolute paths
+are only valid in the global scene tree, not within individual
+scenes. In a relative path, <code>&quot;.&quot;</code> and <code>&quot;..&quot;</code> indicate
+the current node and its parent.
+The &quot;subnames&quot; optionally included after the path to the target
+node can point to resources or properties, and can also be nested.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -135,17 +175,35 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>A string that represents a path in a scene tree.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_NodePath__ctor_System_String__examples">Examples</h5>
+  <p>Examples of valid NodePaths (assuming that those nodes exist and
+have the referenced resources or properties):</p>
+<pre><code>// Points to the Sprite2D node.
+&quot;Path2D/PathFollow2D/Sprite2D&quot;
+// Points to the Sprite2D node and its &quot;texture&quot; resource.
+// GetNode() would retrieve &quot;Sprite2D&quot;, while GetNodeAndResource()
+// would retrieve both the Sprite2D node and the &quot;texture&quot; resource.
+&quot;Path2D/PathFollow2D/Sprite2D:texture&quot;
+// Points to the Sprite2D node and its &quot;position&quot; property.
+&quot;Path2D/PathFollow2D/Sprite2D:position&quot;
+// Points to the Sprite2D node and the &quot;x&quot; component of its &quot;position&quot; property.
+&quot;Path2D/PathFollow2D/Sprite2D:position:x&quot;
+// Absolute path (from &quot;root&quot;)
+&quot;/root/Level/Path2D&quot;</code></pre>
+
   <h3 id="properties">Properties
   </h3>
   
   
   <a id="Godot_NodePath_NativeInstance_" data-uid="Godot.NodePath.NativeInstance*"></a>
   <h4 id="Godot_NodePath_NativeInstance" data-uid="Godot.NodePath.NativeInstance">NativeInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The pointer to the native instance of this <a class="xref" href="Godot.NodePath.html">NodePath</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -172,7 +230,8 @@
   
   <a id="Godot_NodePath_Dispose_" data-uid="Godot.NodePath.Dispose*"></a>
   <h4 id="Godot_NodePath_Dispose" data-uid="Godot.NodePath.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disposes of this <a class="xref" href="Godot.NodePath.html">NodePath</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -192,7 +251,10 @@
   
   <a id="Godot_NodePath_GetAsPropertyPath_" data-uid="Godot.NodePath.GetAsPropertyPath*"></a>
   <h4 id="Godot_NodePath_GetAsPropertyPath" data-uid="Godot.NodePath.GetAsPropertyPath">GetAsPropertyPath()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a node path with a colon character (<code>:</code>) prepended,
+transforming it to a pure property path with no node name (defaults
+to resolving from the current node).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -209,15 +271,25 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.NodePath.html">NodePath</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Godot.NodePath.html">NodePath</a> as a pure property path.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_NodePath_GetAsPropertyPath_examples">Examples</h5>
+  <pre><code>// This will be parsed as a node path to the &quot;x&quot; property in the &quot;position&quot; node.
+var nodePath = new NodePath(&quot;position:x&quot;);
+// This will be parsed as a node path to the &quot;x&quot; component of the &quot;position&quot; property in the current node.
+NodePath propertyPath = nodePath.GetAsPropertyPath();
+GD.Print(propertyPath); // :position:x</code></pre>
+
   
   
   <a id="Godot_NodePath_GetConcatenatedSubnames_" data-uid="Godot.NodePath.GetConcatenatedSubnames*"></a>
   <h4 id="Godot_NodePath_GetConcatenatedSubnames" data-uid="Godot.NodePath.GetConcatenatedSubnames">GetConcatenatedSubnames()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all subnames concatenated with a colon character (<code>:</code>)
+as separator, i.e. the right side of the first colon in a node path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -234,15 +306,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The subnames concatenated with <code>:</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_NodePath_GetConcatenatedSubnames_examples">Examples</h5>
+  <pre><code>var nodepath = new NodePath(&quot;Path2D/PathFollow2D/Sprite2D:texture:load_path&quot;);
+GD.Print(nodepath.GetConcatenatedSubnames()); // texture:load_path</code></pre>
+
   
   
   <a id="Godot_NodePath_GetName_" data-uid="Godot.NodePath.GetName*"></a>
   <h4 id="Godot_NodePath_GetName_System_Int32_" data-uid="Godot.NodePath.GetName(System.Int32)">GetName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the node name indicated by <code data-dev-comment-type="paramref" class="paramref">idx</code> (0 to <a class="xref" href="Godot.NodePath.html#Godot_NodePath_GetNameCount">GetNameCount()</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -261,7 +339,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">idx</span></td>
-        <td></td>
+        <td><p>The name index.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -276,15 +355,25 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The name at the given index <code data-dev-comment-type="paramref" class="paramref">idx</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_NodePath_GetName_System_Int32__examples">Examples</h5>
+  <pre><code>var nodePath = new NodePath(&quot;Path2D/PathFollow2D/Sprite2D&quot;);
+GD.Print(nodePath.GetName(0)); // Path2D
+GD.Print(nodePath.GetName(1)); // PathFollow2D
+GD.Print(nodePath.GetName(2)); // Sprite</code></pre>
+
   
   
   <a id="Godot_NodePath_GetNameCount_" data-uid="Godot.NodePath.GetNameCount*"></a>
   <h4 id="Godot_NodePath_GetNameCount" data-uid="Godot.NodePath.GetNameCount">GetNameCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the number of node names which make up the path.
+Subnames (see <a class="xref" href="Godot.NodePath.html#Godot_NodePath_GetSubnameCount">GetSubnameCount()</a>) are not included.
+For example, <code>&quot;Path2D/PathFollow2D/Sprite2D&quot;</code> has 3 names.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -301,7 +390,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The number of node names which make up the path.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -309,7 +399,8 @@
   
   <a id="Godot_NodePath_GetSubname_" data-uid="Godot.NodePath.GetSubname*"></a>
   <h4 id="Godot_NodePath_GetSubname_System_Int32_" data-uid="Godot.NodePath.GetSubname(System.Int32)">GetSubname(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the resource or property name indicated by <code data-dev-comment-type="paramref" class="paramref">idx</code> (0 to <a class="xref" href="Godot.NodePath.html#Godot_NodePath_GetSubnameCount">GetSubnameCount()</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -328,7 +419,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">idx</span></td>
-        <td></td>
+        <td><p>The subname index.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -343,7 +435,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The subname at the given index <code data-dev-comment-type="paramref" class="paramref">idx</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -351,7 +444,10 @@
   
   <a id="Godot_NodePath_GetSubnameCount_" data-uid="Godot.NodePath.GetSubnameCount*"></a>
   <h4 id="Godot_NodePath_GetSubnameCount" data-uid="Godot.NodePath.GetSubnameCount">GetSubnameCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the number of resource or property names (&quot;subnames&quot;) in the path.
+Each subname is listed after a colon character (<code>:</code>) in the node path.
+For example, <code>&quot;Path2D/PathFollow2D/Sprite2D:texture:load_path&quot;</code> has 2 subnames.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -368,7 +464,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The number of subnames in the path.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -376,7 +473,11 @@
   
   <a id="Godot_NodePath_IsAbsolute_" data-uid="Godot.NodePath.IsAbsolute*"></a>
   <h4 id="Godot_NodePath_IsAbsolute" data-uid="Godot.NodePath.IsAbsolute">IsAbsolute()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the node path is absolute (as opposed to relative),
+which means that it starts with a slash character (<code>/</code>). Absolute node paths can
+be used to access the root node (<code>&quot;/root&quot;</code>) or autoloads (e.g. <code>&quot;/global&quot;</code>
+if a &quot;global&quot; autoload was registered).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -393,7 +494,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the <a class="xref" href="Godot.NodePath.html">NodePath</a> is an absolute path.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -401,7 +503,8 @@
   
   <a id="Godot_NodePath_IsEmpty_" data-uid="Godot.NodePath.IsEmpty*"></a>
   <h4 id="Godot_NodePath_IsEmpty" data-uid="Godot.NodePath.IsEmpty">IsEmpty()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the node path is empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -418,7 +521,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the <a class="xref" href="Godot.NodePath.html">NodePath</a> is empty.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -426,7 +530,8 @@
   
   <a id="Godot_NodePath_ToString_" data-uid="Godot.NodePath.ToString*"></a>
   <h4 id="Godot_NodePath_ToString" data-uid="Godot.NodePath.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.NodePath.html">NodePath</a> to a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -443,7 +548,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string representation of this <a class="xref" href="Godot.NodePath.html">NodePath</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -453,7 +559,8 @@
   
   <a id="Godot_NodePath_op_Implicit_" data-uid="Godot.NodePath.op_Implicit*"></a>
   <h4 id="Godot_NodePath_op_Implicit_Godot_NodePath__System_String" data-uid="Godot.NodePath.op_Implicit(Godot.NodePath)~System.String">Implicit(NodePath to String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.NodePath.html">NodePath</a> to a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -472,7 +579,8 @@
       <tr>
         <td><a class="xref" href="Godot.NodePath.html">NodePath</a></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Godot.NodePath.html">NodePath</a> to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -495,7 +603,8 @@
   
   <a id="Godot_NodePath_op_Implicit_" data-uid="Godot.NodePath.op_Implicit*"></a>
   <h4 id="Godot_NodePath_op_Implicit_System_String__Godot_NodePath" data-uid="Godot.NodePath.op_Implicit(System.String)~Godot.NodePath">Implicit(String to NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a string to a <a class="xref" href="Godot.NodePath.html">NodePath</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -514,7 +623,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The string to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>

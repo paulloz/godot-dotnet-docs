@@ -83,7 +83,13 @@
   
   <h1 id="Godot_Particles2D" data-uid="Godot.Particles2D" class="text-break">Class Particles2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>2D particle node used to create a variety of particle systems and effects. <a class="xref" href="Godot.Particles2D.html">Particles2D</a> features an emitter that generates some number of particles at a given rate.</p>
+<p>Use the <code>process_material</code> property to add a <a class="xref" href="Godot.ParticlesMaterial.html">ParticlesMaterial</a> to configure particle appearance and behavior. Alternatively, you can add a <a class="xref" href="Godot.ShaderMaterial.html">ShaderMaterial</a> which will be applied to all particles.</p>
+<p>Note: <a class="xref" href="Godot.Particles2D.html">Particles2D</a> only work when using the GLES3 renderer. If using the GLES2 renderer, use <a class="xref" href="Godot.CPUParticles2D.html">CPUParticles2D</a> instead. You can convert <a class="xref" href="Godot.Particles2D.html">Particles2D</a> to <a class="xref" href="Godot.CPUParticles2D.html">CPUParticles2D</a> by selecting the node, clicking the Particles menu at the top of the 2D editor viewport then choosing Convert to CPUParticles2D.</p>
+<p>Note: On macOS, <a class="xref" href="Godot.Particles2D.html">Particles2D</a> rendering is much slower than <a class="xref" href="Godot.CPUParticles2D.html">CPUParticles2D</a> due to transform feedback being implemented on the CPU instead of the GPU. Consider using <a class="xref" href="Godot.CPUParticles2D.html">CPUParticles2D</a> instead when targeting macOS.</p>
+<p>Note: After working on a Particles node, remember to update its <a class="xref" href="Godot.Particles2D.html#Godot_Particles2D_VisibilityRect">VisibilityRect</a> by selecting it, clicking the Particles menu at the top of the 2D editor viewport then choose Generate Visibility Rect. Otherwise, particles may suddenly disappear depending on the camera position and angle.</p>
+<p>Note: Unlike <a class="xref" href="Godot.CPUParticles2D.html">CPUParticles2D</a>, <a class="xref" href="Godot.Particles2D.html">Particles2D</a> currently ignore the texture region defined in <a class="xref" href="Godot.AtlasTexture.html">AtlasTexture</a>s.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1118,9 @@
   
   <a id="Godot_Particles2D_Amount_" data-uid="Godot.Particles2D.Amount*"></a>
   <h4 id="Godot_Particles2D_Amount" data-uid="Godot.Particles2D.Amount">Amount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of particles emitted in one emission cycle (corresponding to the <a class="xref" href="Godot.Particles2D.html#Godot_Particles2D_Lifetime">Lifetime</a>).</p>
+<p>Note: Changing <a class="xref" href="Godot.Particles2D.html#Godot_Particles2D_Amount">Amount</a> will reset the particle emission, therefore removing all particles that were already emitted before changing <a class="xref" href="Godot.Particles2D.html#Godot_Particles2D_Amount">Amount</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1137,7 +1145,8 @@
   
   <a id="Godot_Particles2D_DrawOrder_" data-uid="Godot.Particles2D.DrawOrder*"></a>
   <h4 id="Godot_Particles2D_DrawOrder" data-uid="Godot.Particles2D.DrawOrder">DrawOrder</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle draw order. Uses <a class="xref" href="Godot.Particles2D.DrawOrderEnum.html">Particles2D.DrawOrderEnum</a> values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1162,7 +1171,8 @@
   
   <a id="Godot_Particles2D_Emitting_" data-uid="Godot.Particles2D.Emitting*"></a>
   <h4 id="Godot_Particles2D_Emitting" data-uid="Godot.Particles2D.Emitting">Emitting</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, particles are being emitted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1187,7 +1197,8 @@
   
   <a id="Godot_Particles2D_Explosiveness_" data-uid="Godot.Particles2D.Explosiveness*"></a>
   <h4 id="Godot_Particles2D_Explosiveness" data-uid="Godot.Particles2D.Explosiveness">Explosiveness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How rapidly particles in an emission cycle are emitted. If greater than <code>0</code>, there will be a gap in emissions before the next cycle begins.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1212,7 +1223,8 @@
   
   <a id="Godot_Particles2D_FixedFps_" data-uid="Godot.Particles2D.FixedFps*"></a>
   <h4 id="Godot_Particles2D_FixedFps" data-uid="Godot.Particles2D.FixedFps">FixedFps</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The particle system&apos;s frame rate is fixed to a value. For instance, changing the value to 2 will make the particles render at 2 frames per second. Note this does not slow down the simulation of the particle system itself.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1237,7 +1249,8 @@
   
   <a id="Godot_Particles2D_FractDelta_" data-uid="Godot.Particles2D.FractDelta*"></a>
   <h4 id="Godot_Particles2D_FractDelta" data-uid="Godot.Particles2D.FractDelta">FractDelta</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, results in fractional delta calculation which has a smoother particles display effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1262,7 +1275,8 @@
   
   <a id="Godot_Particles2D_Lifetime_" data-uid="Godot.Particles2D.Lifetime*"></a>
   <h4 id="Godot_Particles2D_Lifetime" data-uid="Godot.Particles2D.Lifetime">Lifetime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The amount of time each particle will exist (in seconds).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1287,7 +1301,8 @@
   
   <a id="Godot_Particles2D_LocalCoords_" data-uid="Godot.Particles2D.LocalCoords*"></a>
   <h4 id="Godot_Particles2D_LocalCoords" data-uid="Godot.Particles2D.LocalCoords">LocalCoords</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, particles use the parent node&apos;s coordinate space. If <code>false</code>, they use global coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1312,7 +1327,9 @@
   
   <a id="Godot_Particles2D_NormalMap_" data-uid="Godot.Particles2D.NormalMap*"></a>
   <h4 id="Godot_Particles2D_NormalMap" data-uid="Godot.Particles2D.NormalMap">NormalMap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Normal map to be used for the <a class="xref" href="Godot.Particles2D.html#Godot_Particles2D_Texture">Texture</a> property.</p>
+<p>Note: Godot expects the normal map to use X+, Y-, and Z+ coordinates. See <a href="http://wiki.polycount.com/wiki/Normal_Map_Technical_Details#Common_Swizzle_Coordinates">this page</a> for a comparison of normal map coordinates expected by popular engines.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1337,7 +1354,8 @@
   
   <a id="Godot_Particles2D_OneShot_" data-uid="Godot.Particles2D.OneShot*"></a>
   <h4 id="Godot_Particles2D_OneShot" data-uid="Godot.Particles2D.OneShot">OneShot</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, only one emission cycle occurs. If set <code>true</code> during a cycle, emission will stop at the cycle&apos;s end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1362,7 +1380,8 @@
   
   <a id="Godot_Particles2D_Preprocess_" data-uid="Godot.Particles2D.Preprocess*"></a>
   <h4 id="Godot_Particles2D_Preprocess" data-uid="Godot.Particles2D.Preprocess">Preprocess</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle system starts as if it had already run for this many seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1387,7 +1406,8 @@
   
   <a id="Godot_Particles2D_ProcessMaterial_" data-uid="Godot.Particles2D.ProcessMaterial*"></a>
   <h4 id="Godot_Particles2D_ProcessMaterial" data-uid="Godot.Particles2D.ProcessMaterial">ProcessMaterial</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a class="xref" href="Godot.Material.html">Material</a> for processing particles. Can be a <a class="xref" href="Godot.ParticlesMaterial.html">ParticlesMaterial</a> or a <a class="xref" href="Godot.ShaderMaterial.html">ShaderMaterial</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1412,7 +1432,8 @@
   
   <a id="Godot_Particles2D_Randomness_" data-uid="Godot.Particles2D.Randomness*"></a>
   <h4 id="Godot_Particles2D_Randomness" data-uid="Godot.Particles2D.Randomness">Randomness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Emission lifetime randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1437,7 +1458,8 @@
   
   <a id="Godot_Particles2D_SpeedScale_" data-uid="Godot.Particles2D.SpeedScale*"></a>
   <h4 id="Godot_Particles2D_SpeedScale" data-uid="Godot.Particles2D.SpeedScale">SpeedScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle system&apos;s running speed scaling ratio. A value of <code>0</code> can be used to pause the particles.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1462,7 +1484,8 @@
   
   <a id="Godot_Particles2D_Texture_" data-uid="Godot.Particles2D.Texture*"></a>
   <h4 id="Godot_Particles2D_Texture" data-uid="Godot.Particles2D.Texture">Texture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle texture. If <code>null</code>, particles will be squares.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1487,7 +1510,9 @@
   
   <a id="Godot_Particles2D_VisibilityRect_" data-uid="Godot.Particles2D.VisibilityRect*"></a>
   <h4 id="Godot_Particles2D_VisibilityRect" data-uid="Godot.Particles2D.VisibilityRect">VisibilityRect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Rect2.html">Rect2</a> that determines the node&apos;s region which needs to be visible on screen for the particle system to be active.</p>
+<p>Grow the rect if particles suddenly appear/disappear when the node enters/exits the screen. The <a class="xref" href="Godot.Rect2.html">Rect2</a> can be grown via code or with the Particles → Generate Visibility Rect editor tool.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1514,7 +1539,8 @@
   
   <a id="Godot_Particles2D_CaptureRect_" data-uid="Godot.Particles2D.CaptureRect*"></a>
   <h4 id="Godot_Particles2D_CaptureRect" data-uid="Godot.Particles2D.CaptureRect">CaptureRect()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a rectangle containing the positions of all existing particles.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1939,7 +1965,8 @@
   
   <a id="Godot_Particles2D_Restart_" data-uid="Godot.Particles2D.Restart*"></a>
   <h4 id="Godot_Particles2D_Restart" data-uid="Godot.Particles2D.Restart">Restart()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Restarts all the existing particles.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

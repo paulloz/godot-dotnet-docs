@@ -83,7 +83,8 @@
   
   <h1 id="Godot_AudioServer" data-uid="Godot.AudioServer" class="text-break">Class AudioServer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.AudioServer.html">AudioServer</a> is a low-level server interface for audio access. It is in charge of creating sample data (playable audio) as well as its playback via a voice interface.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -102,7 +103,8 @@
   
   <a id="Godot_AudioServer_BusCount_" data-uid="Godot.AudioServer.BusCount*"></a>
   <h4 id="Godot_AudioServer_BusCount" data-uid="Godot.AudioServer.BusCount">BusCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of available audio buses.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -127,7 +129,9 @@
   
   <a id="Godot_AudioServer_CaptureDevice_" data-uid="Godot.AudioServer.CaptureDevice*"></a>
   <h4 id="Godot_AudioServer_CaptureDevice" data-uid="Godot.AudioServer.CaptureDevice">CaptureDevice</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Name of the current device for audio input (see <a class="xref" href="Godot.AudioServer.html#Godot_AudioServer_CaptureGetDeviceList">CaptureGetDeviceList()</a>). On systems with multiple audio inputs (such as analog, USB and HDMI audio), this can be used to select the audio input device. The value <code>&quot;Default&quot;</code> will record audio on the system-wide default audio input. If an invalid device name is set, the value will be reverted back to <code>&quot;Default&quot;</code>.</p>
+<p>Note:  must be <code>true</code> for audio input to work. See also that setting&apos;s description for caveats related to permissions and operating system privacy settings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -152,7 +156,8 @@
   
   <a id="Godot_AudioServer_Device_" data-uid="Godot.AudioServer.Device*"></a>
   <h4 id="Godot_AudioServer_Device" data-uid="Godot.AudioServer.Device">Device</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Name of the current device for audio output (see <a class="xref" href="Godot.AudioServer.html#Godot_AudioServer_GetDeviceList">GetDeviceList()</a>). On systems with multiple audio outputs (such as analog, USB and HDMI audio), this can be used to select the audio output device. The value <code>&quot;Default&quot;</code> will play audio on the system-wide default audio output. If an invalid device name is set, the value will be reverted back to <code>&quot;Default&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -177,7 +182,8 @@
   
   <a id="Godot_AudioServer_GlobalRateScale_" data-uid="Godot.AudioServer.GlobalRateScale*"></a>
   <h4 id="Godot_AudioServer_GlobalRateScale" data-uid="Godot.AudioServer.GlobalRateScale">GlobalRateScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scales the rate at which audio is played (i.e. setting it to <code>0.5</code> will make the audio be played twice as fast).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -229,7 +235,8 @@
   
   <a id="Godot_AudioServer_AddBus_" data-uid="Godot.AudioServer.AddBus*"></a>
   <h4 id="Godot_AudioServer_AddBus_System_Int32_" data-uid="Godot.AudioServer.AddBus(System.Int32)">AddBus(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a bus at <code>at_position</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -256,7 +263,8 @@
   
   <a id="Godot_AudioServer_AddBusEffect_" data-uid="Godot.AudioServer.AddBusEffect*"></a>
   <h4 id="Godot_AudioServer_AddBusEffect_System_Int32_Godot_AudioEffect_System_Int32_" data-uid="Godot.AudioServer.AddBusEffect(System.Int32,Godot.AudioEffect,System.Int32)">AddBusEffect(Int32, AudioEffect, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an <a class="xref" href="Godot.AudioEffect.html">AudioEffect</a> effect to the bus <code>bus_idx</code> at <code>at_position</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -318,7 +326,9 @@
   
   <a id="Godot_AudioServer_CaptureGetDeviceList_" data-uid="Godot.AudioServer.CaptureGetDeviceList*"></a>
   <h4 id="Godot_AudioServer_CaptureGetDeviceList" data-uid="Godot.AudioServer.CaptureGetDeviceList">CaptureGetDeviceList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the names of all audio input devices detected on the system.</p>
+<p>Note:  must be <code>true</code> for audio input to work. See also that setting&apos;s description for caveats related to permissions and operating system privacy settings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -370,7 +380,8 @@
   
   <a id="Godot_AudioServer_GenerateBusLayout_" data-uid="Godot.AudioServer.GenerateBusLayout*"></a>
   <h4 id="Godot_AudioServer_GenerateBusLayout" data-uid="Godot.AudioServer.GenerateBusLayout">GenerateBusLayout()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates an <a class="xref" href="Godot.AudioBusLayout.html">AudioBusLayout</a> using the available buses and effects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -395,7 +406,8 @@
   
   <a id="Godot_AudioServer_GetBusChannels_" data-uid="Godot.AudioServer.GetBusChannels*"></a>
   <h4 id="Godot_AudioServer_GetBusChannels_System_Int32_" data-uid="Godot.AudioServer.GetBusChannels(System.Int32)">GetBusChannels(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of channels of the bus at index <code>bus_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -462,7 +474,8 @@
   
   <a id="Godot_AudioServer_GetBusEffect_" data-uid="Godot.AudioServer.GetBusEffect*"></a>
   <h4 id="Godot_AudioServer_GetBusEffect_System_Int32_System_Int32_" data-uid="Godot.AudioServer.GetBusEffect(System.Int32,System.Int32)">GetBusEffect(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.AudioEffect.html">AudioEffect</a> at position <code>effect_idx</code> in bus <code>bus_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -509,7 +522,8 @@
   
   <a id="Godot_AudioServer_GetBusEffectCount_" data-uid="Godot.AudioServer.GetBusEffectCount*"></a>
   <h4 id="Godot_AudioServer_GetBusEffectCount_System_Int32_" data-uid="Godot.AudioServer.GetBusEffectCount(System.Int32)">GetBusEffectCount(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of effects on the bus at <code>bus_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -551,7 +565,8 @@
   
   <a id="Godot_AudioServer_GetBusEffectInstance_" data-uid="Godot.AudioServer.GetBusEffectInstance*"></a>
   <h4 id="Godot_AudioServer_GetBusEffectInstance_System_Int32_System_Int32_System_Int32_" data-uid="Godot.AudioServer.GetBusEffectInstance(System.Int32,System.Int32,System.Int32)">GetBusEffectInstance(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.AudioEffectInstance.html">AudioEffectInstance</a> assigned to the given bus and effect indices (and optionally channel).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -603,7 +618,8 @@
   
   <a id="Godot_AudioServer_GetBusIndex_" data-uid="Godot.AudioServer.GetBusIndex*"></a>
   <h4 id="Godot_AudioServer_GetBusIndex_System_String_" data-uid="Godot.AudioServer.GetBusIndex(System.String)">GetBusIndex(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the index of the bus with the name <code>bus_name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -645,7 +661,8 @@
   
   <a id="Godot_AudioServer_GetBusName_" data-uid="Godot.AudioServer.GetBusName*"></a>
   <h4 id="Godot_AudioServer_GetBusName_System_Int32_" data-uid="Godot.AudioServer.GetBusName(System.Int32)">GetBusName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of the bus with the index <code>bus_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -687,7 +704,8 @@
   
   <a id="Godot_AudioServer_GetBusPeakVolumeLeftDb_" data-uid="Godot.AudioServer.GetBusPeakVolumeLeftDb*"></a>
   <h4 id="Godot_AudioServer_GetBusPeakVolumeLeftDb_System_Int32_System_Int32_" data-uid="Godot.AudioServer.GetBusPeakVolumeLeftDb(System.Int32,System.Int32)">GetBusPeakVolumeLeftDb(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the peak volume of the left speaker at bus index <code>bus_idx</code> and channel index <code>channel</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -734,7 +752,8 @@
   
   <a id="Godot_AudioServer_GetBusPeakVolumeRightDb_" data-uid="Godot.AudioServer.GetBusPeakVolumeRightDb*"></a>
   <h4 id="Godot_AudioServer_GetBusPeakVolumeRightDb_System_Int32_System_Int32_" data-uid="Godot.AudioServer.GetBusPeakVolumeRightDb(System.Int32,System.Int32)">GetBusPeakVolumeRightDb(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the peak volume of the right speaker at bus index <code>bus_idx</code> and channel index <code>channel</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -781,7 +800,8 @@
   
   <a id="Godot_AudioServer_GetBusSend_" data-uid="Godot.AudioServer.GetBusSend*"></a>
   <h4 id="Godot_AudioServer_GetBusSend_System_Int32_" data-uid="Godot.AudioServer.GetBusSend(System.Int32)">GetBusSend(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of the bus that the bus at index <code>bus_idx</code> sends to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -823,7 +843,8 @@
   
   <a id="Godot_AudioServer_GetBusVolumeDb_" data-uid="Godot.AudioServer.GetBusVolumeDb*"></a>
   <h4 id="Godot_AudioServer_GetBusVolumeDb_System_Int32_" data-uid="Godot.AudioServer.GetBusVolumeDb(System.Int32)">GetBusVolumeDb(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the volume of the bus at index <code>bus_idx</code> in dB.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -890,7 +911,8 @@
   
   <a id="Godot_AudioServer_GetDeviceList_" data-uid="Godot.AudioServer.GetDeviceList*"></a>
   <h4 id="Godot_AudioServer_GetDeviceList" data-uid="Godot.AudioServer.GetDeviceList">GetDeviceList()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the names of all audio devices detected on the system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -940,7 +962,8 @@
   
   <a id="Godot_AudioServer_GetMixRate_" data-uid="Godot.AudioServer.GetMixRate*"></a>
   <h4 id="Godot_AudioServer_GetMixRate" data-uid="Godot.AudioServer.GetMixRate">GetMixRate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the sample rate at the output of the <a class="xref" href="Godot.AudioServer.html">AudioServer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -965,7 +988,8 @@
   
   <a id="Godot_AudioServer_GetOutputLatency_" data-uid="Godot.AudioServer.GetOutputLatency*"></a>
   <h4 id="Godot_AudioServer_GetOutputLatency" data-uid="Godot.AudioServer.GetOutputLatency">GetOutputLatency()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the audio driver&apos;s output latency.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -990,7 +1014,8 @@
   
   <a id="Godot_AudioServer_GetSpeakerMode_" data-uid="Godot.AudioServer.GetSpeakerMode*"></a>
   <h4 id="Godot_AudioServer_GetSpeakerMode" data-uid="Godot.AudioServer.GetSpeakerMode">GetSpeakerMode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the speaker configuration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1015,7 +1040,8 @@
   
   <a id="Godot_AudioServer_GetTimeSinceLastMix_" data-uid="Godot.AudioServer.GetTimeSinceLastMix*"></a>
   <h4 id="Godot_AudioServer_GetTimeSinceLastMix" data-uid="Godot.AudioServer.GetTimeSinceLastMix">GetTimeSinceLastMix()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the relative time since the last mix occurred.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1040,7 +1066,8 @@
   
   <a id="Godot_AudioServer_GetTimeToNextMix_" data-uid="Godot.AudioServer.GetTimeToNextMix*"></a>
   <h4 id="Godot_AudioServer_GetTimeToNextMix" data-uid="Godot.AudioServer.GetTimeToNextMix">GetTimeToNextMix()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the relative time until the next mix occurs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1065,7 +1092,8 @@
   
   <a id="Godot_AudioServer_IsBusBypassingEffects_" data-uid="Godot.AudioServer.IsBusBypassingEffects*"></a>
   <h4 id="Godot_AudioServer_IsBusBypassingEffects_System_Int32_" data-uid="Godot.AudioServer.IsBusBypassingEffects(System.Int32)">IsBusBypassingEffects(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the bus at index <code>bus_idx</code> is bypassing effects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1107,7 +1135,8 @@
   
   <a id="Godot_AudioServer_IsBusEffectEnabled_" data-uid="Godot.AudioServer.IsBusEffectEnabled*"></a>
   <h4 id="Godot_AudioServer_IsBusEffectEnabled_System_Int32_System_Int32_" data-uid="Godot.AudioServer.IsBusEffectEnabled(System.Int32,System.Int32)">IsBusEffectEnabled(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the effect at index <code>effect_idx</code> on the bus at index <code>bus_idx</code> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1154,7 +1183,8 @@
   
   <a id="Godot_AudioServer_IsBusMute_" data-uid="Godot.AudioServer.IsBusMute*"></a>
   <h4 id="Godot_AudioServer_IsBusMute_System_Int32_" data-uid="Godot.AudioServer.IsBusMute(System.Int32)">IsBusMute(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the bus at index <code>bus_idx</code> is muted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1196,7 +1226,8 @@
   
   <a id="Godot_AudioServer_IsBusSolo_" data-uid="Godot.AudioServer.IsBusSolo*"></a>
   <h4 id="Godot_AudioServer_IsBusSolo_System_Int32_" data-uid="Godot.AudioServer.IsBusSolo(System.Int32)">IsBusSolo(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the bus at index <code>bus_idx</code> is in solo mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1238,7 +1269,9 @@
   
   <a id="Godot_AudioServer_Lock_" data-uid="Godot.AudioServer.Lock*"></a>
   <h4 id="Godot_AudioServer_Lock" data-uid="Godot.AudioServer.Lock">Lock()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Locks the audio driver&apos;s main loop.</p>
+<p>Note: Remember to unlock it afterwards.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1248,7 +1281,8 @@
   
   <a id="Godot_AudioServer_MoveBus_" data-uid="Godot.AudioServer.MoveBus*"></a>
   <h4 id="Godot_AudioServer_MoveBus_System_Int32_System_Int32_" data-uid="Godot.AudioServer.MoveBus(System.Int32,System.Int32)">MoveBus(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the bus from index <code>index</code> to index <code>to_index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1280,7 +1314,8 @@
   
   <a id="Godot_AudioServer_RemoveBus_" data-uid="Godot.AudioServer.RemoveBus*"></a>
   <h4 id="Godot_AudioServer_RemoveBus_System_Int32_" data-uid="Godot.AudioServer.RemoveBus(System.Int32)">RemoveBus(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the bus at index <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1307,7 +1342,8 @@
   
   <a id="Godot_AudioServer_RemoveBusEffect_" data-uid="Godot.AudioServer.RemoveBusEffect*"></a>
   <h4 id="Godot_AudioServer_RemoveBusEffect_System_Int32_System_Int32_" data-uid="Godot.AudioServer.RemoveBusEffect(System.Int32,System.Int32)">RemoveBusEffect(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the effect at index <code>effect_idx</code> from the bus at index <code>bus_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1339,7 +1375,8 @@
   
   <a id="Godot_AudioServer_SetBusBypassEffects_" data-uid="Godot.AudioServer.SetBusBypassEffects*"></a>
   <h4 id="Godot_AudioServer_SetBusBypassEffects_System_Int32_System_Boolean_" data-uid="Godot.AudioServer.SetBusBypassEffects(System.Int32,System.Boolean)">SetBusBypassEffects(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the bus at index <code>bus_idx</code> is bypassing effects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1398,7 +1435,8 @@
   
   <a id="Godot_AudioServer_SetBusEffectEnabled_" data-uid="Godot.AudioServer.SetBusEffectEnabled*"></a>
   <h4 id="Godot_AudioServer_SetBusEffectEnabled_System_Int32_System_Int32_System_Boolean_" data-uid="Godot.AudioServer.SetBusEffectEnabled(System.Int32,System.Int32,System.Boolean)">SetBusEffectEnabled(Int32, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the effect at index <code>effect_idx</code> on the bus at index <code>bus_idx</code> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1435,7 +1473,8 @@
   
   <a id="Godot_AudioServer_SetBusLayout_" data-uid="Godot.AudioServer.SetBusLayout*"></a>
   <h4 id="Godot_AudioServer_SetBusLayout_Godot_AudioBusLayout_" data-uid="Godot.AudioServer.SetBusLayout(Godot.AudioBusLayout)">SetBusLayout(AudioBusLayout)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Overwrites the currently used <a class="xref" href="Godot.AudioBusLayout.html">AudioBusLayout</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1462,7 +1501,8 @@
   
   <a id="Godot_AudioServer_SetBusMute_" data-uid="Godot.AudioServer.SetBusMute*"></a>
   <h4 id="Godot_AudioServer_SetBusMute_System_Int32_System_Boolean_" data-uid="Godot.AudioServer.SetBusMute(System.Int32,System.Boolean)">SetBusMute(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the bus at index <code>bus_idx</code> is muted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1494,7 +1534,8 @@
   
   <a id="Godot_AudioServer_SetBusName_" data-uid="Godot.AudioServer.SetBusName*"></a>
   <h4 id="Godot_AudioServer_SetBusName_System_Int32_System_String_" data-uid="Godot.AudioServer.SetBusName(System.Int32,System.String)">SetBusName(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the name of the bus at index <code>bus_idx</code> to <code>name</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1526,7 +1567,8 @@
   
   <a id="Godot_AudioServer_SetBusSend_" data-uid="Godot.AudioServer.SetBusSend*"></a>
   <h4 id="Godot_AudioServer_SetBusSend_System_Int32_System_String_" data-uid="Godot.AudioServer.SetBusSend(System.Int32,System.String)">SetBusSend(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connects the output of the bus at <code>bus_idx</code> to the bus named <code>send</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1558,7 +1600,8 @@
   
   <a id="Godot_AudioServer_SetBusSolo_" data-uid="Godot.AudioServer.SetBusSolo*"></a>
   <h4 id="Godot_AudioServer_SetBusSolo_System_Int32_System_Boolean_" data-uid="Godot.AudioServer.SetBusSolo(System.Int32,System.Boolean)">SetBusSolo(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the bus at index <code>bus_idx</code> is in solo mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1590,7 +1633,8 @@
   
   <a id="Godot_AudioServer_SetBusVolumeDb_" data-uid="Godot.AudioServer.SetBusVolumeDb*"></a>
   <h4 id="Godot_AudioServer_SetBusVolumeDb_System_Int32_System_Single_" data-uid="Godot.AudioServer.SetBusVolumeDb(System.Int32,System.Single)">SetBusVolumeDb(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the volume of the bus at index <code>bus_idx</code> to <code>volume_db</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1676,7 +1720,8 @@
   
   <a id="Godot_AudioServer_SwapBusEffects_" data-uid="Godot.AudioServer.SwapBusEffects*"></a>
   <h4 id="Godot_AudioServer_SwapBusEffects_System_Int32_System_Int32_System_Int32_" data-uid="Godot.AudioServer.SwapBusEffects(System.Int32,System.Int32,System.Int32)">SwapBusEffects(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Swaps the position of two effects in bus <code>bus_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1713,7 +1758,8 @@
   
   <a id="Godot_AudioServer_Unlock_" data-uid="Godot.AudioServer.Unlock*"></a>
   <h4 id="Godot_AudioServer_Unlock" data-uid="Godot.AudioServer.Unlock">Unlock()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unlocks the audio driver&apos;s main loop. (After locking it, you should always unlock it.)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

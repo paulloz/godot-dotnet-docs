@@ -101,7 +101,9 @@
   
   
   <h4 id="Godot_Image_Format_BptcRgba" data-uid="Godot.Image.Format.BptcRgba">BptcRgba</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture format that uses <a href="https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression">BPTC</a> compression with unsigned normalized RGBA components.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +127,8 @@
   
   
   <h4 id="Godot_Image_Format_BptcRgbf" data-uid="Godot.Image.Format.BptcRgbf">BptcRgbf</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture format that uses <a href="https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression">BPTC</a> compression with signed floating-point RGB components.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +152,8 @@
   
   
   <h4 id="Godot_Image_Format_BptcRgbfu" data-uid="Godot.Image.Format.BptcRgbfu">BptcRgbfu</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture format that uses <a href="https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression">BPTC</a> compression with unsigned floating-point RGB components.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -173,7 +177,9 @@
   
   
   <h4 id="Godot_Image_Format_Dxt1" data-uid="Godot.Image.Format.Dxt1">Dxt1</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a href="https://en.wikipedia.org/wiki/S3_Texture_Compression">S3TC</a> texture format that uses Block Compression 1, and is the smallest variation of S3TC, only providing 1 bit of alpha and color data being premultiplied with alpha.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,7 +203,9 @@
   
   
   <h4 id="Godot_Image_Format_Dxt3" data-uid="Godot.Image.Format.Dxt3">Dxt3</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a href="https://en.wikipedia.org/wiki/S3_Texture_Compression">S3TC</a> texture format that uses Block Compression 2, and color data is interpreted as not having been premultiplied by alpha. Well suited for images with sharp alpha transitions between translucent and opaque areas.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -221,7 +229,9 @@
   
   
   <h4 id="Godot_Image_Format_Dxt5" data-uid="Godot.Image.Format.Dxt5">Dxt5</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a href="https://en.wikipedia.org/wiki/S3_Texture_Compression">S3TC</a> texture format also known as Block Compression 3 or BC3 that contains 64 bits of alpha channel data followed by 64 bits of DXT1-encoded color data. Color data is not premultiplied by alpha, same as DXT3. DXT5 generally produces superior results for transparent gradients compared to DXT3.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -245,7 +255,8 @@
   
   
   <h4 id="Godot_Image_Format_Etc" data-uid="Godot.Image.Format.Etc">Etc</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC1">Ericsson Texture Compression format 1</a>, also referred to as &quot;ETC1&quot;, and is part of the OpenGL ES graphics standard. This format cannot store an alpha channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -269,7 +280,8 @@
   
   
   <h4 id="Godot_Image_Format_Etc2R11" data-uid="Godot.Image.Format.Etc2R11">Etc2R11</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC">Ericsson Texture Compression format 2</a> (<code>R11_EAC</code> variant), which provides one channel of unsigned data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -293,7 +305,8 @@
   
   
   <h4 id="Godot_Image_Format_Etc2R11s" data-uid="Godot.Image.Format.Etc2R11s">Etc2R11s</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC">Ericsson Texture Compression format 2</a> (<code>SIGNED_R11_EAC</code> variant), which provides one channel of signed data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -317,7 +330,8 @@
   
   
   <h4 id="Godot_Image_Format_Etc2Rg11" data-uid="Godot.Image.Format.Etc2Rg11">Etc2Rg11</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC">Ericsson Texture Compression format 2</a> (<code>RG11_EAC</code> variant), which provides two channels of unsigned data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -341,7 +355,8 @@
   
   
   <h4 id="Godot_Image_Format_Etc2Rg11s" data-uid="Godot.Image.Format.Etc2Rg11s">Etc2Rg11s</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC">Ericsson Texture Compression format 2</a> (<code>SIGNED_RG11_EAC</code> variant), which provides two channels of signed data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -365,7 +380,9 @@
   
   
   <h4 id="Godot_Image_Format_Etc2Rgb8" data-uid="Godot.Image.Format.Etc2Rgb8">Etc2Rgb8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC">Ericsson Texture Compression format 2</a> (<code>RGB8</code> variant), which is a follow-up of ETC1 and compresses RGB888 data.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -389,7 +406,9 @@
   
   
   <h4 id="Godot_Image_Format_Etc2Rgb8a1" data-uid="Godot.Image.Format.Etc2Rgb8a1">Etc2Rgb8a1</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC">Ericsson Texture Compression format 2</a> (<code>RGB8_PUNCHTHROUGH_ALPHA1</code> variant), which compresses RGBA data to make alpha either fully transparent or fully opaque.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -413,7 +432,9 @@
   
   
   <h4 id="Godot_Image_Format_Etc2Rgba8" data-uid="Godot.Image.Format.Etc2Rgba8">Etc2Rgba8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC">Ericsson Texture Compression format 2</a> (<code>RGBA8</code>variant), which compresses RGBA8888 data with full alpha support.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -437,7 +458,8 @@
   
   
   <h4 id="Godot_Image_Format_L8" data-uid="Godot.Image.Format.L8">L8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture format with a single 8-bit depth representing luminance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -461,7 +483,8 @@
   
   
   <h4 id="Godot_Image_Format_La8" data-uid="Godot.Image.Format.La8">La8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format with two values, luminance and alpha each stored with 8 bits.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,7 +508,8 @@
   
   
   <h4 id="Godot_Image_Format_Max" data-uid="Godot.Image.Format.Max">Max</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Represents the size of the <a class="xref" href="Godot.Image.Format.html">Image.Format</a> enum.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -509,7 +533,9 @@
   
   
   <h4 id="Godot_Image_Format_Pvrtc2" data-uid="Godot.Image.Format.Pvrtc2">Pvrtc2</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture format used on PowerVR-supported mobile platforms, uses 2-bit color depth with no alpha. More information can be found <a href="https://en.wikipedia.org/wiki/PVRTC">here</a>.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -533,7 +559,8 @@
   
   
   <h4 id="Godot_Image_Format_Pvrtc2a" data-uid="Godot.Image.Format.Pvrtc2a">Pvrtc2a</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Same as <a href="https://en.wikipedia.org/wiki/PVRTC">PVRTC2</a>, but with an alpha component.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -557,7 +584,8 @@
   
   
   <h4 id="Godot_Image_Format_Pvrtc4" data-uid="Godot.Image.Format.Pvrtc4">Pvrtc4</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Similar to <a href="https://en.wikipedia.org/wiki/PVRTC">PVRTC2</a>, but with 4-bit color depth and no alpha.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -581,7 +609,8 @@
   
   
   <h4 id="Godot_Image_Format_Pvrtc4a" data-uid="Godot.Image.Format.Pvrtc4a">Pvrtc4a</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Same as <a href="https://en.wikipedia.org/wiki/PVRTC">PVRTC4</a>, but with an alpha component.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -605,7 +634,9 @@
   
   
   <h4 id="Godot_Image_Format_R8" data-uid="Godot.Image.Format.R8">R8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>RED</code> with a single component and a bitdepth of 8.</p>
+<p>Note: When using the GLES2 backend, this uses the alpha channel instead of the red channel for storage.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -629,7 +660,8 @@
   
   
   <h4 id="Godot_Image_Format_Rf" data-uid="Godot.Image.Format.Rf">Rf</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>GL_R32F</code> where there&apos;s one component, a 32-bit floating-point value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -653,7 +685,8 @@
   
   
   <h4 id="Godot_Image_Format_Rg8" data-uid="Godot.Image.Format.Rg8">Rg8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>RG</code> with two components and a bitdepth of 8 for each.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -677,7 +710,9 @@
   
   
   <h4 id="Godot_Image_Format_Rgb8" data-uid="Godot.Image.Format.Rgb8">Rgb8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>RGB</code> with three components, each with a bitdepth of 8.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -701,7 +736,8 @@
   
   
   <h4 id="Godot_Image_Format_Rgba4444" data-uid="Godot.Image.Format.Rgba4444">Rgba4444</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>RGBA</code> with four components, each with a bitdepth of 4.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -725,7 +761,8 @@
   
   
   <h4 id="Godot_Image_Format_Rgba5551" data-uid="Godot.Image.Format.Rgba5551">Rgba5551</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>GL_RGB5_A1</code> where 5 bits of depth for each component of RGB and one bit for alpha.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -749,7 +786,9 @@
   
   
   <h4 id="Godot_Image_Format_Rgba8" data-uid="Godot.Image.Format.Rgba8">Rgba8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>RGBA</code> with four components, each with a bitdepth of 8.</p>
+<p>Note: When creating an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a>, an sRGB to linear color space conversion is performed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -773,7 +812,8 @@
   
   
   <h4 id="Godot_Image_Format_Rgbaf" data-uid="Godot.Image.Format.Rgbaf">Rgbaf</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>GL_RGBA32F</code> where there are four components, each a 32-bit floating-point values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -797,7 +837,8 @@
   
   
   <h4 id="Godot_Image_Format_Rgbah" data-uid="Godot.Image.Format.Rgbah">Rgbah</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>GL_RGBA32F</code> where there are four components, each a 16-bit &quot;half-precision&quot; floating-point value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -821,7 +862,8 @@
   
   
   <h4 id="Godot_Image_Format_Rgbe9995" data-uid="Godot.Image.Format.Rgbe9995">Rgbe9995</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A special OpenGL texture format where the three color components have 9 bits of precision and all three share a single 5-bit exponent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -845,7 +887,8 @@
   
   
   <h4 id="Godot_Image_Format_Rgbf" data-uid="Godot.Image.Format.Rgbf">Rgbf</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>GL_RGB32F</code> where there are three components, each a 32-bit floating-point values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -869,7 +912,8 @@
   
   
   <h4 id="Godot_Image_Format_Rgbh" data-uid="Godot.Image.Format.Rgbh">Rgbh</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>GL_RGB32F</code> where there are three components, each a 16-bit &quot;half-precision&quot; floating-point value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -893,7 +937,8 @@
   
   
   <h4 id="Godot_Image_Format_Rgf" data-uid="Godot.Image.Format.Rgf">Rgf</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>GL_RG32F</code> where there are two components, each a 32-bit floating-point values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -917,7 +962,8 @@
   
   
   <h4 id="Godot_Image_Format_Rgh" data-uid="Godot.Image.Format.Rgh">Rgh</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>GL_RG32F</code> where there are two components, each a 16-bit &quot;half-precision&quot; floating-point value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -941,7 +987,8 @@
   
   
   <h4 id="Godot_Image_Format_RgtcR" data-uid="Godot.Image.Format.RgtcR">RgtcR</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture format that uses <a href="https://www.khronos.org/opengl/wiki/Red_Green_Texture_Compression">Red Green Texture Compression</a>, normalizing the red channel data using the same compression algorithm that DXT5 uses for the alpha channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -965,7 +1012,8 @@
   
   
   <h4 id="Godot_Image_Format_RgtcRg" data-uid="Godot.Image.Format.RgtcRg">RgtcRg</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Texture format that uses <a href="https://www.khronos.org/opengl/wiki/Red_Green_Texture_Compression">Red Green Texture Compression</a>, normalizing the red and green channel data using the same compression algorithm that DXT5 uses for the alpha channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +1037,8 @@
   
   
   <h4 id="Godot_Image_Format_Rh" data-uid="Godot.Image.Format.Rh">Rh</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL texture format <code>GL_R32F</code> where there&apos;s one component, a 16-bit &quot;half-precision&quot; floating-point value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

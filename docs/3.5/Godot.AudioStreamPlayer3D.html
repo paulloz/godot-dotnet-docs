@@ -83,7 +83,11 @@
   
   <h1 id="Godot_AudioStreamPlayer3D" data-uid="Godot.AudioStreamPlayer3D" class="text-break">Class AudioStreamPlayer3D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Plays a sound effect with directed sound effects, dampens with distance if needed, generates effect of hearable position in space. For greater realism, a low-pass filter is automatically applied to distant sounds. This can be disabled by setting <a class="xref" href="Godot.AudioStreamPlayer3D.html#Godot_AudioStreamPlayer3D_AttenuationFilterCutoffHz">AttenuationFilterCutoffHz</a> to <code>20500</code>.</p>
+<p>By default, audio is heard from the camera position. This can be changed by adding a <a class="xref" href="Godot.Listener.html">Listener</a> node to the scene and enabling it by calling <a class="xref" href="Godot.Listener.html#Godot_Listener_MakeCurrent">MakeCurrent()</a> on it.</p>
+<p>See also <a class="xref" href="Godot.AudioStreamPlayer.html">AudioStreamPlayer</a> to play a sound non-positionally.</p>
+<p>Note: Hiding an <a class="xref" href="Godot.AudioStreamPlayer3D.html">AudioStreamPlayer3D</a> node does not disable its audio output. To temporarily disable an <a class="xref" href="Godot.AudioStreamPlayer3D.html">AudioStreamPlayer3D</a>&apos;s audio output, set <a class="xref" href="Godot.AudioStreamPlayer3D.html#Godot_AudioStreamPlayer3D_UnitDb">UnitDb</a> to a very low value like <code>-100</code> (which isn&apos;t audible to human hearing).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +968,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_AreaMask_" data-uid="Godot.AudioStreamPlayer3D.AreaMask*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_AreaMask" data-uid="Godot.AudioStreamPlayer3D.AreaMask">AreaMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines which <a class="xref" href="Godot.Area.html">Area</a> layers affect the sound for reverb and audio bus effects. Areas can be used to redirect <a class="xref" href="Godot.AudioStream.html">AudioStream</a>s so that they play in a certain audio bus. An example of how you might use this is making a &quot;water&quot; area so that sounds played in the water are redirected through an audio bus to make them sound like they are being played underwater.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +994,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_AttenuationFilterCutoffHz_" data-uid="Godot.AudioStreamPlayer3D.AttenuationFilterCutoffHz*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_AttenuationFilterCutoffHz" data-uid="Godot.AudioStreamPlayer3D.AttenuationFilterCutoffHz">AttenuationFilterCutoffHz</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Dampens audio using a low-pass filter above this frequency, in Hz. To disable the dampening effect entirely, set this to <code>20500</code> as this frequency is above the human hearing limit.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1020,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_AttenuationFilterDb_" data-uid="Godot.AudioStreamPlayer3D.AttenuationFilterDb*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_AttenuationFilterDb" data-uid="Godot.AudioStreamPlayer3D.AttenuationFilterDb">AttenuationFilterDb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount how much the filter affects the loudness, in decibels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1039,7 +1046,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_AttenuationModel_" data-uid="Godot.AudioStreamPlayer3D.AttenuationModel*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_AttenuationModel" data-uid="Godot.AudioStreamPlayer3D.AttenuationModel">AttenuationModel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decides if audio should get quieter with distance linearly, quadratically, logarithmically, or not be affected by distance, effectively disabling attenuation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1064,7 +1072,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_Autoplay_" data-uid="Godot.AudioStreamPlayer3D.Autoplay*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_Autoplay" data-uid="Godot.AudioStreamPlayer3D.Autoplay">Autoplay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, audio plays when the AudioStreamPlayer3D node is added to scene tree.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1089,7 +1098,9 @@
   
   <a id="Godot_AudioStreamPlayer3D_Bus_" data-uid="Godot.AudioStreamPlayer3D.Bus*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_Bus" data-uid="Godot.AudioStreamPlayer3D.Bus">Bus</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The bus on which this audio is playing.</p>
+<p>Note: When setting this property, keep in mind that no validation is performed to see if the given name matches an existing bus. This is because audio bus layouts might be loaded after this property is set. If this given name can&apos;t be resolved at runtime, it will fall back to <code>&quot;Master&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1114,7 +1125,9 @@
   
   <a id="Godot_AudioStreamPlayer3D_DopplerTracking_" data-uid="Godot.AudioStreamPlayer3D.DopplerTracking*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_DopplerTracking" data-uid="Godot.AudioStreamPlayer3D.DopplerTracking">DopplerTracking</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decides in which step the <a href="https://en.wikipedia.org/wiki/Doppler_effect">Doppler effect</a> should be calculated.</p>
+<p>Note: Only effective if the current <a class="xref" href="Godot.Camera.html">Camera</a>&apos;s <a class="xref" href="Godot.Camera.html#Godot_Camera_DopplerTracking">DopplerTracking</a> property is set to a value other than <a class="xref" href="Godot.Camera.DopplerTrackingEnum.html#Godot_Camera_DopplerTrackingEnum_Disabled">Disabled</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1139,7 +1152,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_EmissionAngleDegrees_" data-uid="Godot.AudioStreamPlayer3D.EmissionAngleDegrees*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_EmissionAngleDegrees" data-uid="Godot.AudioStreamPlayer3D.EmissionAngleDegrees">EmissionAngleDegrees</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The angle in which the audio reaches cameras undampened.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1164,7 +1178,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_EmissionAngleEnabled_" data-uid="Godot.AudioStreamPlayer3D.EmissionAngleEnabled*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_EmissionAngleEnabled" data-uid="Godot.AudioStreamPlayer3D.EmissionAngleEnabled">EmissionAngleEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the audio should be dampened according to the direction of the sound.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1189,7 +1204,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_EmissionAngleFilterAttenuationDb_" data-uid="Godot.AudioStreamPlayer3D.EmissionAngleFilterAttenuationDb*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_EmissionAngleFilterAttenuationDb" data-uid="Godot.AudioStreamPlayer3D.EmissionAngleFilterAttenuationDb">EmissionAngleFilterAttenuationDb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Dampens audio if camera is outside of <a class="xref" href="Godot.AudioStreamPlayer3D.html#Godot_AudioStreamPlayer3D_EmissionAngleDegrees">EmissionAngleDegrees</a> and <a class="xref" href="Godot.AudioStreamPlayer3D.html#Godot_AudioStreamPlayer3D_EmissionAngleEnabled">EmissionAngleEnabled</a> is set by this factor, in decibels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1214,7 +1230,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_MaxDb_" data-uid="Godot.AudioStreamPlayer3D.MaxDb*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_MaxDb" data-uid="Godot.AudioStreamPlayer3D.MaxDb">MaxDb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the absolute maximum of the soundlevel, in decibels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1239,7 +1256,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_MaxDistance_" data-uid="Godot.AudioStreamPlayer3D.MaxDistance*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_MaxDistance" data-uid="Godot.AudioStreamPlayer3D.MaxDistance">MaxDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the distance from which the <a class="xref" href="Godot.AudioStreamPlayer3D.html#Godot_AudioStreamPlayer3D_OutOfRangeMode">OutOfRangeMode</a> takes effect. Has no effect if set to 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1264,7 +1282,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_OutOfRangeMode_" data-uid="Godot.AudioStreamPlayer3D.OutOfRangeMode*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_OutOfRangeMode" data-uid="Godot.AudioStreamPlayer3D.OutOfRangeMode">OutOfRangeMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decides if audio should pause when source is outside of <a class="xref" href="Godot.AudioStreamPlayer3D.html#Godot_AudioStreamPlayer3D_MaxDistance">MaxDistance</a> range.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1289,7 +1308,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_PitchScale_" data-uid="Godot.AudioStreamPlayer3D.PitchScale*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_PitchScale" data-uid="Godot.AudioStreamPlayer3D.PitchScale">PitchScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The pitch and the tempo of the audio, as a multiplier of the audio sample&apos;s sample rate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1314,7 +1334,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_Playing_" data-uid="Godot.AudioStreamPlayer3D.Playing*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_Playing" data-uid="Godot.AudioStreamPlayer3D.Playing">Playing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, audio is playing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1339,7 +1360,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_Stream_" data-uid="Godot.AudioStreamPlayer3D.Stream*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_Stream" data-uid="Godot.AudioStreamPlayer3D.Stream">Stream</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.AudioStream.html">AudioStream</a> resource to be played.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1364,7 +1386,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_StreamPaused_" data-uid="Godot.AudioStreamPlayer3D.StreamPaused*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_StreamPaused" data-uid="Godot.AudioStreamPlayer3D.StreamPaused">StreamPaused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the playback is paused. You can resume it by setting <a class="xref" href="Godot.AudioStreamPlayer3D.html#Godot_AudioStreamPlayer3D_StreamPaused">StreamPaused</a> to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1389,7 +1412,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_UnitDb_" data-uid="Godot.AudioStreamPlayer3D.UnitDb*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_UnitDb" data-uid="Godot.AudioStreamPlayer3D.UnitDb">UnitDb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base sound level unaffected by dampening, in decibels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1414,7 +1438,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_UnitSize_" data-uid="Godot.AudioStreamPlayer3D.UnitSize*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_UnitSize" data-uid="Godot.AudioStreamPlayer3D.UnitSize">UnitSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The factor for the attenuation effect. Higher values make the sound audible over a larger distance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1741,7 +1766,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_GetPlaybackPosition_" data-uid="Godot.AudioStreamPlayer3D.GetPlaybackPosition*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_GetPlaybackPosition" data-uid="Godot.AudioStreamPlayer3D.GetPlaybackPosition">GetPlaybackPosition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position in the <a class="xref" href="Godot.AudioStream.html">AudioStream</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1816,7 +1842,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_GetStreamPlayback_" data-uid="Godot.AudioStreamPlayer3D.GetStreamPlayback*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_GetStreamPlayback" data-uid="Godot.AudioStreamPlayer3D.GetStreamPlayback">GetStreamPlayback()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.AudioStreamPlayback.html">AudioStreamPlayback</a> object associated with this <a class="xref" href="Godot.AudioStreamPlayer3D.html">AudioStreamPlayer3D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1966,7 +1993,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_Play_" data-uid="Godot.AudioStreamPlayer3D.Play*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_Play_System_Single_" data-uid="Godot.AudioStreamPlayer3D.Play(System.Single)">Play(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plays the audio from the given position <code>from_position</code>, in seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1993,7 +2021,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_Seek_" data-uid="Godot.AudioStreamPlayer3D.Seek*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_Seek_System_Single_" data-uid="Godot.AudioStreamPlayer3D.Seek(System.Single)">Seek(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the position from which audio will be played, in seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2506,7 +2535,8 @@
   
   <a id="Godot_AudioStreamPlayer3D_Stop_" data-uid="Godot.AudioStreamPlayer3D.Stop*"></a>
   <h4 id="Godot_AudioStreamPlayer3D_Stop" data-uid="Godot.AudioStreamPlayer3D.Stop">Stop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the audio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

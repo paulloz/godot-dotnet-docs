@@ -83,7 +83,8 @@
   
   <h1 id="Godot_JSON" data-uid="Godot.JSON" class="text-break">Class JSON
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Helper class for parsing JSON data. For usage example and other important hints, see <a class="xref" href="Godot.JSONParseResult.html">JSONParseResult</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +130,8 @@
   
   <a id="Godot_JSON_Parse_" data-uid="Godot.JSON.Parse*"></a>
   <h4 id="Godot_JSON_Parse_System_String_" data-uid="Godot.JSON.Parse(System.String)">Parse(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Parses a JSON-encoded string and returns a <a class="xref" href="Godot.JSONParseResult.html">JSONParseResult</a> containing the result.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -171,7 +173,43 @@
   
   <a id="Godot_JSON_Print_" data-uid="Godot.JSON.Print*"></a>
   <h4 id="Godot_JSON_Print_System_Object_System_String_System_Boolean_" data-uid="Godot.JSON.Print(System.Object,System.String,System.Boolean)">Print(Object, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a <code>Variant</code> var to JSON text and returns the result. Useful for serializing data to store or send over the network.</p>
+<p>Note: The JSON specification does not define integer or float types, but only a number type. Therefore, converting a Variant to JSON text will convert all numerical values to <span class="xref">System.Single</span> types.</p>
+<p>The <code>indent</code> parameter controls if and how something is indented, the string used for this parameter will be used where there should be an indent in the output, even spaces like <code>&quot;   &quot;</code> will work. <code>\t</code> and <code>\n</code> can also be used for a tab indent, or to make a newline for each indent respectively.</p>
+<p>Example output:</p>
+<p><pre><code>## JSON.print(my_dictionary)
+{&quot;name&quot;:&quot;my_dictionary&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;entities&quot;:[{&quot;name&quot;:&quot;entity_0&quot;,&quot;value&quot;:&quot;value_0&quot;},{&quot;name&quot;:&quot;entity_1&quot;,&quot;value&quot;:&quot;value_1&quot;}]}
+<h2 id="jsonprintmy_dictionary-t">JSON.print(my_dictionary, &quot;\t&quot;)</h2>
+<p>{
+&quot;name&quot;: &quot;my_dictionary&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;entities&quot;: [
+{
+&quot;name&quot;: &quot;entity_0&quot;,
+&quot;value&quot;: &quot;value_0&quot;
+},
+{
+&quot;name&quot;: &quot;entity_1&quot;,
+&quot;value&quot;: &quot;value_1&quot;
+}
+]
+}</p>
+<h2 id="jsonprintmy_dictionary-">JSON.print(my_dictionary, &quot;...&quot;)</h2>
+<p>{
+...&quot;name&quot;: &quot;my_dictionary&quot;,
+...&quot;version&quot;: &quot;1.0.0&quot;,
+...&quot;entities&quot;: [
+......{
+.........&quot;name&quot;: &quot;entity_0&quot;,
+.........&quot;value&quot;: &quot;value_0&quot;
+......},
+......{
+.........&quot;name&quot;: &quot;entity_1&quot;,
+.........&quot;value&quot;: &quot;value_1&quot;
+......}
+...]
+}</code></pre></p><p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

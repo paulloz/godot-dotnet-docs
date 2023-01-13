@@ -83,7 +83,41 @@
   
   <h1 id="Godot_SceneTreeTween" data-uid="Godot.SceneTreeTween" class="text-break">Class SceneTreeTween
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> is a tween managed by the scene tree. As opposed to <a class="xref" href="Godot.Tween.html">Tween</a>, it does not require the instantiation of a node.</p>
+<p><a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>s are more light-weight than <a class="xref" href="Godot.AnimationPlayer.html">AnimationPlayer</a>, so they are very much suited for simple animations or general tasks that don&apos;t require visual tweaking provided by the editor. They can be used in a fire-and-forget manner for some logic that normally would be done by code. You can e.g. make something shoot periodically by using a looped <a class="xref" href="Godot.CallbackTweener.html">CallbackTweener</a> with a delay.</p>
+<p>A <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> can be created by using either <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CreateTween">CreateTween()</a> or <a class="xref" href="Godot.Node.html#Godot_Node_CreateTween">CreateTween()</a>. <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>s created manually (i.e. by using <code>Tween.new()</code>) are invalid. They can&apos;t be used for tweening values, but you can do manual interpolation with <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_InterpolateValue_System_Object_System_Object_System_Single_System_Single_Godot_Tween_TransitionType_Godot_Tween_EaseType_">InterpolateValue(Object, Object, Single, Single, Tween.TransitionType, Tween.EaseType)</a>.</p>
+<p>A tween animation is created by adding <a class="xref" href="Godot.Tweener.html">Tweener</a>s to the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> object, using <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenProperty_Godot_Object_Godot_NodePath_System_Object_System_Single_">TweenProperty(Object, NodePath, Object, Single)</a>, <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenInterval_System_Single_">TweenInterval(Single)</a>, <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenCallback_Godot_Object_System_String_Godot_Collections_Array_">TweenCallback(Object, String, Array)</a> or <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenMethod_Godot_Object_System_String_System_Object_System_Object_System_Single_Godot_Collections_Array_">TweenMethod(Object, String, Object, Object, Single, Array)</a>:</p>
+<p><pre><code>var tween = get_tree().create_tween()
+tween.tween_property($Sprite, &quot;modulate&quot;, Color.red, 1)
+tween.tween_property($Sprite, &quot;scale&quot;, Vector2(), 1)
+tween.tween_callback($Sprite, &quot;queue_free&quot;)</code></pre></p>
+<p>This sequence will make the <code>$Sprite</code> node turn red, then shrink, before finally calling <a class="xref" href="Godot.Node.html#Godot_Node_QueueFree">QueueFree()</a> to free the sprite. <a class="xref" href="Godot.Tweener.html">Tweener</a>s are executed one after another by default. This behavior can be changed using <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_Parallel">Parallel()</a> and <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_SetParallel_System_Boolean_">SetParallel(Boolean)</a>.</p>
+<p>When a <a class="xref" href="Godot.Tweener.html">Tweener</a> is created with one of the <code>tween_*</code> methods, a chained method call can be used to tweak the properties of this <a class="xref" href="Godot.Tweener.html">Tweener</a>. For example, if you want to set a different transition type in the above example, you can use <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_SetTrans_Godot_Tween_TransitionType_">SetTrans(Tween.TransitionType)</a>:</p>
+<p><pre><code>var tween = get_tree().create_tween()
+tween.tween_property($Sprite, &quot;modulate&quot;, Color.red, 1).set_trans(Tween.TRANS_SINE)
+tween.tween_property($Sprite, &quot;scale&quot;, Vector2(), 1).set_trans(Tween.TRANS_BOUNCE)
+tween.tween_callback($Sprite, &quot;queue_free&quot;)</code></pre></p>
+<p>Most of the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> methods can be chained this way too. In the following example the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> is bound to the running script&apos;s node and a default transition is set for its <a class="xref" href="Godot.Tweener.html">Tweener</a>s:</p>
+<p><pre><code>var tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
+tween.tween_property($Sprite, &quot;modulate&quot;, Color.red, 1)
+tween.tween_property($Sprite, &quot;scale&quot;, Vector2(), 1)
+tween.tween_callback($Sprite, &quot;queue_free&quot;)</code></pre></p>
+<p>Another interesting use for <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>s is animating arbitrary sets of objects:</p>
+<p><pre><code>var tween = create_tween()
+for sprite in get_children():
+    tween.tween_property(sprite, &quot;position&quot;, Vector2(0, 0), 1)</code></pre></p>
+<p>In the example above, all children of a node are moved one after another to position (0, 0).</p>
+<p>You should avoid using more than one <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> per object&apos;s property. If two or more tweens animate one property at the same time, the last one created will take priority and assign the final value. If you want to interrupt and restart an animation, consider assigning the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> to a variable:</p>
+<p><pre><code>var tween
+func animate():
+    if tween:
+        tween.kill() # Abort the previous animation.
+    tween = create_tween()</code></pre></p>
+<p>Some <a class="xref" href="Godot.Tweener.html">Tweener</a>s use transitions and eases. The first accepts a <a class="xref" href="Godot.Tween.TransitionType.html">Tween.TransitionType</a> constant, and refers to the way the timing of the animation is handled (see <a href="https://easings.net/">easings.net</a> for some examples). The second accepts an <a class="xref" href="Godot.Tween.EaseType.html">Tween.EaseType</a> constant, and controls where the <code>trans_type</code> is applied to the interpolation (in the beginning, the end, or both). If you don&apos;t know which transition and easing to pick, you can try different <a class="xref" href="Godot.Tween.TransitionType.html">Tween.TransitionType</a> constants with <a class="xref" href="Godot.Tween.EaseType.html#Godot_Tween_EaseType_InOut">InOut</a>, and use the one that looks best.</p>
+<p><a href="https://raw.githubusercontent.com/godotengine/godot-docs/master/img/tween_cheatsheet.png">Tween easing and transition types cheatsheet</a></p>
+<p>Note: All <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>s will automatically start by default. To prevent a <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> from autostarting, you can call <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_Stop">Stop()</a> immediately after it is created.</p>
+<p>Note: <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>s are processing after all of nodes in the current frame, i.e. after <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a> or <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> (depending on <a class="xref" href="Godot.Tween.TweenProcessMode.html">Tween.TweenProcessMode</a>).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +331,9 @@
   
   <a id="Godot_SceneTreeTween_BindNode_" data-uid="Godot.SceneTreeTween.BindNode*"></a>
   <h4 id="Godot_SceneTreeTween_BindNode_Godot_Node_" data-uid="Godot.SceneTreeTween.BindNode(Godot.Node)">BindNode(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Binds this <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> with the given <code>node</code>. <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>s are processed directly by the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>, so they run independently of the animated nodes. When you bind a <a class="xref" href="Godot.Node.html">Node</a> with the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>, the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> will halt the animation when the object is not inside tree and the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> will be automatically killed when the bound object is freed. Also <a class="xref" href="Godot.SceneTreeTween.TweenPauseMode.html#Godot_SceneTreeTween_TweenPauseMode_Bound">Bound</a> will make the pausing behavior dependent on the bound node.</p>
+<p>For a shorter way to create and bind a <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>, you can use <a class="xref" href="Godot.Node.html#Godot_Node_CreateTween">CreateTween()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -339,7 +375,12 @@
   
   <a id="Godot_SceneTreeTween_Chain_" data-uid="Godot.SceneTreeTween.Chain*"></a>
   <h4 id="Godot_SceneTreeTween_Chain" data-uid="Godot.SceneTreeTween.Chain">Chain()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used to chain two <a class="xref" href="Godot.Tweener.html">Tweener</a>s after <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_SetParallel_System_Boolean_">SetParallel(Boolean)</a> is called with <code>true</code>.</p>
+<p><pre><code>var tween = create_tween().set_parallel(true)
+tween.tween_property(...)
+tween.tween_property(...) # Will run parallelly with above.
+tween.chain().tween_property(...) # Will run after two above are finished.</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -364,7 +405,10 @@
   
   <a id="Godot_SceneTreeTween_CustomStep_" data-uid="Godot.SceneTreeTween.CustomStep*"></a>
   <h4 id="Godot_SceneTreeTween_CustomStep_System_Single_" data-uid="Godot.SceneTreeTween.CustomStep(System.Single)">CustomStep(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Processes the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> by the given <code>delta</code> value, in seconds. This is mostly useful for manual control when the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> is paused. It can also be used to end the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> animation immediately, by setting <code>delta</code> longer than the whole duration of the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> animation.</p>
+<p>Returns <code>true</code> if the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> still has <a class="xref" href="Godot.Tweener.html">Tweener</a>s that haven&apos;t finished.</p>
+<p>Note: The <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> will become invalid in the next processing frame after its animation finishes. Calling <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_Stop">Stop()</a> after performing <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_CustomStep_System_Single_">CustomStep(Single)</a> instead keeps and resets the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -406,7 +450,9 @@
   
   <a id="Godot_SceneTreeTween_GetTotalElapsedTime_" data-uid="Godot.SceneTreeTween.GetTotalElapsedTime*"></a>
   <h4 id="Godot_SceneTreeTween_GetTotalElapsedTime" data-uid="Godot.SceneTreeTween.GetTotalElapsedTime">GetTotalElapsedTime()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total time in seconds the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> has been animating (i.e. the time since it started, not counting pauses etc.). The time is affected by <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_SetSpeedScale_System_Single_">SetSpeedScale(Single)</a>, and <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_Stop">Stop()</a> will reset it to <code>0</code>.</p>
+<p>Note: As it results from accumulating frame deltas, the time returned after the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> has finished animating will be slightly greater than the actual <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> duration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -431,7 +477,13 @@
   
   <a id="Godot_SceneTreeTween_InterpolateValue_" data-uid="Godot.SceneTreeTween.InterpolateValue*"></a>
   <h4 id="Godot_SceneTreeTween_InterpolateValue_System_Object_System_Object_System_Single_System_Single_Godot_Tween_TransitionType_Godot_Tween_EaseType_" data-uid="Godot.SceneTreeTween.InterpolateValue(System.Object,System.Object,System.Single,System.Single,Godot.Tween.TransitionType,Godot.Tween.EaseType)">InterpolateValue(Object, Object, Single, Single, Tween.TransitionType, Tween.EaseType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method can be used for manual interpolation of a value, when you don&apos;t want <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> to do animating for you. It&apos;s similar to <code>@GDScript.lerp</code>, but with support for custom transition and easing.</p>
+<p><code>initial_value</code> is the starting value of the interpolation.</p>
+<p><code>delta_value</code> is the change of the value in the interpolation, i.e. it&apos;s equal to <code>final_value - initial_value</code>.</p>
+<p><code>elapsed_time</code> is the time in seconds that passed after the interpolation started and it&apos;s used to control the position of the interpolation. E.g. when it&apos;s equal to half of the <code>duration</code>, the interpolated value will be halfway between initial and final values. This value can also be greater than <code>duration</code> or lower than 0, which will extrapolate the value.</p>
+<p><code>duration</code> is the total time of the interpolation.</p>
+<p>Note: If <code>duration</code> is equal to <code>0</code>, the method will always return the final value, regardless of <code>elapsed_time</code> provided.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -498,7 +550,8 @@
   
   <a id="Godot_SceneTreeTween_IsRunning_" data-uid="Godot.SceneTreeTween.IsRunning*"></a>
   <h4 id="Godot_SceneTreeTween_IsRunning" data-uid="Godot.SceneTreeTween.IsRunning">IsRunning()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> is currently running, i.e. it wasn&apos;t paused and it&apos;s not finished.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -523,7 +576,8 @@
   
   <a id="Godot_SceneTreeTween_IsValid_" data-uid="Godot.SceneTreeTween.IsValid*"></a>
   <h4 id="Godot_SceneTreeTween_IsValid" data-uid="Godot.SceneTreeTween.IsValid">IsValid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> is valid. A valid <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> is a <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> contained by the scene tree (i.e. the array from <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_GetProcessedTweens">GetProcessedTweens()</a> will contain this <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>). A <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> might become invalid when it has finished tweening, is killed, or when created with <code>SceneTreeTween.new()</code>. Invalid <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>s can&apos;t have <a class="xref" href="Godot.Tweener.html">Tweener</a>s appended. You can however still use <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_InterpolateValue_System_Object_System_Object_System_Single_System_Single_Godot_Tween_TransitionType_Godot_Tween_EaseType_">InterpolateValue(Object, Object, Single, Single, Tween.TransitionType, Tween.EaseType)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -548,7 +602,8 @@
   
   <a id="Godot_SceneTreeTween_Kill_" data-uid="Godot.SceneTreeTween.Kill*"></a>
   <h4 id="Godot_SceneTreeTween_Kill" data-uid="Godot.SceneTreeTween.Kill">Kill()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aborts all tweening operations and invalidates the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -558,7 +613,14 @@
   
   <a id="Godot_SceneTreeTween_Parallel_" data-uid="Godot.SceneTreeTween.Parallel*"></a>
   <h4 id="Godot_SceneTreeTween_Parallel" data-uid="Godot.SceneTreeTween.Parallel">Parallel()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes the next <a class="xref" href="Godot.Tweener.html">Tweener</a> run parallelly to the previous one. Example:</p>
+<p><pre><code>var tween = create_tween()
+tween.tween_property(...)
+tween.parallel().tween_property(...)
+tween.parallel().tween_property(...)</code></pre></p>
+<p>All <a class="xref" href="Godot.Tweener.html">Tweener</a>s in the example will run at the same time.</p>
+<p>You can make the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> parallel by default by using <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_SetParallel_System_Boolean_">SetParallel(Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -583,7 +645,8 @@
   
   <a id="Godot_SceneTreeTween_Pause_" data-uid="Godot.SceneTreeTween.Pause*"></a>
   <h4 id="Godot_SceneTreeTween_Pause" data-uid="Godot.SceneTreeTween.Pause">Pause()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pauses the tweening. The animation can be resumed by using <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_Play">Play()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -593,7 +656,8 @@
   
   <a id="Godot_SceneTreeTween_Play_" data-uid="Godot.SceneTreeTween.Play*"></a>
   <h4 id="Godot_SceneTreeTween_Play" data-uid="Godot.SceneTreeTween.Play">Play()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resumes a paused or stopped <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -603,7 +667,8 @@
   
   <a id="Godot_SceneTreeTween_SetEase_" data-uid="Godot.SceneTreeTween.SetEase*"></a>
   <h4 id="Godot_SceneTreeTween_SetEase_Godot_Tween_EaseType_" data-uid="Godot.SceneTreeTween.SetEase(Godot.Tween.EaseType)">SetEase(Tween.EaseType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the default ease type for <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a>s and <a class="xref" href="Godot.MethodTweener.html">MethodTweener</a>s animated by this <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -645,7 +710,10 @@
   
   <a id="Godot_SceneTreeTween_SetLoops_" data-uid="Godot.SceneTreeTween.SetLoops*"></a>
   <h4 id="Godot_SceneTreeTween_SetLoops_System_Int32_" data-uid="Godot.SceneTreeTween.SetLoops(System.Int32)">SetLoops(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the number of times the tweening sequence will be repeated, i.e. <code>set_loops(2)</code> will run the animation twice.</p>
+<p>Calling this method without arguments will make the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> run infinitely, until either it is killed with <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_Kill">Kill()</a>, the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>&apos;s bound node is freed, or all the animated objects have been freed (which makes further animation impossible).</p>
+<p>Warning: Make sure to always add some duration/delay when using infinite loops. To prevent the game freezing, 0-duration looped animations (e.g. a single <a class="xref" href="Godot.CallbackTweener.html">CallbackTweener</a> with no delay) are stopped after a small number of loops, which may produce unexpected results. If a <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>&apos;s lifetime depends on some node, always use <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_BindNode_Godot_Node_">BindNode(Node)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -687,7 +755,8 @@
   
   <a id="Godot_SceneTreeTween_SetParallel_" data-uid="Godot.SceneTreeTween.SetParallel*"></a>
   <h4 id="Godot_SceneTreeTween_SetParallel_System_Boolean_" data-uid="Godot.SceneTreeTween.SetParallel(System.Boolean)">SetParallel(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>parallel</code> is <code>true</code>, the <a class="xref" href="Godot.Tweener.html">Tweener</a>s appended after this method will by default run simultaneously, as opposed to sequentially.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -729,7 +798,9 @@
   
   <a id="Godot_SceneTreeTween_SetPauseMode_" data-uid="Godot.SceneTreeTween.SetPauseMode*"></a>
   <h4 id="Godot_SceneTreeTween_SetPauseMode_Godot_SceneTreeTween_TweenPauseMode_" data-uid="Godot.SceneTreeTween.SetPauseMode(Godot.SceneTreeTween.TweenPauseMode)">SetPauseMode(SceneTreeTween.TweenPauseMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines the behavior of the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> when the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> is paused. Check <a class="xref" href="Godot.SceneTreeTween.TweenPauseMode.html">SceneTreeTween.TweenPauseMode</a> for options.</p>
+<p>Default value is <a class="xref" href="Godot.SceneTreeTween.TweenPauseMode.html#Godot_SceneTreeTween_TweenPauseMode_Bound">Bound</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -771,7 +842,9 @@
   
   <a id="Godot_SceneTreeTween_SetProcessMode_" data-uid="Godot.SceneTreeTween.SetProcessMode*"></a>
   <h4 id="Godot_SceneTreeTween_SetProcessMode_Godot_Tween_TweenProcessMode_" data-uid="Godot.SceneTreeTween.SetProcessMode(Godot.Tween.TweenProcessMode)">SetProcessMode(Tween.TweenProcessMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> should run during idle frame (see <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>) or physics frame (see <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a>.</p>
+<p>Default value is <a class="xref" href="Godot.Tween.TweenProcessMode.html#Godot_Tween_TweenProcessMode_Idle">Idle</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -813,7 +886,8 @@
   
   <a id="Godot_SceneTreeTween_SetSpeedScale_" data-uid="Godot.SceneTreeTween.SetSpeedScale*"></a>
   <h4 id="Godot_SceneTreeTween_SetSpeedScale_System_Single_" data-uid="Godot.SceneTreeTween.SetSpeedScale(System.Single)">SetSpeedScale(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scales the speed of tweening. This affects all <a class="xref" href="Godot.Tweener.html">Tweener</a>s and their delays.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -855,7 +929,8 @@
   
   <a id="Godot_SceneTreeTween_SetTrans_" data-uid="Godot.SceneTreeTween.SetTrans*"></a>
   <h4 id="Godot_SceneTreeTween_SetTrans_Godot_Tween_TransitionType_" data-uid="Godot.SceneTreeTween.SetTrans(Godot.Tween.TransitionType)">SetTrans(Tween.TransitionType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the default transition type for <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a>s and <a class="xref" href="Godot.MethodTweener.html">MethodTweener</a>s animated by this <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -897,7 +972,8 @@
   
   <a id="Godot_SceneTreeTween_Stop_" data-uid="Godot.SceneTreeTween.Stop*"></a>
   <h4 id="Godot_SceneTreeTween_Stop" data-uid="Godot.SceneTreeTween.Stop">Stop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the tweening and resets the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> to its initial state. This will not remove any appended <a class="xref" href="Godot.Tweener.html">Tweener</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -907,7 +983,15 @@
   
   <a id="Godot_SceneTreeTween_TweenCallback_" data-uid="Godot.SceneTreeTween.TweenCallback*"></a>
   <h4 id="Godot_SceneTreeTween_TweenCallback_Godot_Object_System_String_Godot_Collections_Array_" data-uid="Godot.SceneTreeTween.TweenCallback(Godot.Object,System.String,Godot.Collections.Array)">TweenCallback(Object, String, Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates and appends a <a class="xref" href="Godot.CallbackTweener.html">CallbackTweener</a>. This method can be used to call an arbitrary method in any object. Use <code>binds</code> to bind additional arguments for the call.</p>
+<p>Example: object that keeps shooting every 1 second.</p>
+<p><pre><code>var tween = get_tree().create_tween().set_loops()
+tween.tween_callback(self, &quot;shoot&quot;).set_delay(1)</code></pre></p>
+<p>Example: turning a sprite red and then blue, with 2 second delay.</p>
+<p><pre><code>var tween = get_tree().create_tween()
+tween.tween_callback($Sprite, &quot;set_modulate&quot;, [Color.red]).set_delay(2)
+tween.tween_callback($Sprite, &quot;set_modulate&quot;, [Color.blue]).set_delay(2)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -936,7 +1020,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">binds</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -959,7 +1044,20 @@
   
   <a id="Godot_SceneTreeTween_TweenInterval_" data-uid="Godot.SceneTreeTween.TweenInterval*"></a>
   <h4 id="Godot_SceneTreeTween_TweenInterval_System_Single_" data-uid="Godot.SceneTreeTween.TweenInterval(System.Single)">TweenInterval(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates and appends an <a class="xref" href="Godot.IntervalTweener.html">IntervalTweener</a>. This method can be used to create delays in the tween animation, as an alternative to using the delay in other <a class="xref" href="Godot.Tweener.html">Tweener</a>s, or when there&apos;s no animation (in which case the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> acts as a timer). <code>time</code> is the length of the interval, in seconds.</p>
+<p>Example: creating an interval in code execution.</p>
+<p><pre><code># ... some code
+yield(create_tween().tween_interval(2), &quot;finished&quot;)
+# ... more code</code></pre></p>
+<p>Example: creating an object that moves back and forth and jumps every few seconds.</p>
+<p><pre><code>var tween = create_tween().set_loops()
+tween.tween_property($Sprite, &quot;position:x&quot;, 200.0, 1).as_relative()
+tween.tween_callback(self, &quot;jump&quot;)
+tween.tween_interval(2)
+tween.tween_property($Sprite, &quot;position:x&quot;, -200.0, 1).as_relative()
+tween.tween_callback(self, &quot;jump&quot;)
+tween.tween_interval(2)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1001,7 +1099,17 @@
   
   <a id="Godot_SceneTreeTween_TweenMethod_" data-uid="Godot.SceneTreeTween.TweenMethod*"></a>
   <h4 id="Godot_SceneTreeTween_TweenMethod_Godot_Object_System_String_System_Object_System_Object_System_Single_Godot_Collections_Array_" data-uid="Godot.SceneTreeTween.TweenMethod(Godot.Object,System.String,System.Object,System.Object,System.Single,Godot.Collections.Array)">TweenMethod(Object, String, Object, Object, Single, Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates and appends a <a class="xref" href="Godot.MethodTweener.html">MethodTweener</a>. This method is similar to a combination of <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenCallback_Godot_Object_System_String_Godot_Collections_Array_">TweenCallback(Object, String, Array)</a> and <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenProperty_Godot_Object_Godot_NodePath_System_Object_System_Single_">TweenProperty(Object, NodePath, Object, Single)</a>. It calls a method over time with a tweened value provided as an argument. The value is tweened between <code>from</code> and <code>to</code> over the time specified by <code>duration</code>, in seconds. Use <code>binds</code> to bind additional arguments for the call. You can use <a class="xref" href="Godot.MethodTweener.html#Godot_MethodTweener_SetEase_Godot_Tween_EaseType_">SetEase(Tween.EaseType)</a> and <a class="xref" href="Godot.MethodTweener.html#Godot_MethodTweener_SetTrans_Godot_Tween_TransitionType_">SetTrans(Tween.TransitionType)</a> to tweak the easing and transition of the value or <a class="xref" href="Godot.MethodTweener.html#Godot_MethodTweener_SetDelay_System_Single_">SetDelay(Single)</a> to delay the tweening.</p>
+<p>Example: making a 3D object look from one point to another point.</p>
+<p><pre><code>var tween = create_tween()
+tween.tween_method(self, &quot;look_at&quot;, Vector3(-1, 0, -1), Vector3(1, 0, -1), 1, [Vector3.UP]) # The look_at() method takes up vector as second argument.</code></pre></p>
+<p>Example: setting a text of a <a class="xref" href="Godot.Label.html">Label</a>, using an intermediate method and after a delay.</p>
+<p><pre><code>func _ready():
+    var tween = create_tween()
+    tween.tween_method(self, &quot;set_label_text&quot;, 0, 10, 1).set_delay(1)
+<p>func set_label_text(value: int):
+$Label.text = &quot;Counting &quot; + str(value)</code></pre></p><p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1045,7 +1153,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">binds</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1068,7 +1177,17 @@
   
   <a id="Godot_SceneTreeTween_TweenProperty_" data-uid="Godot.SceneTreeTween.TweenProperty*"></a>
   <h4 id="Godot_SceneTreeTween_TweenProperty_Godot_Object_Godot_NodePath_System_Object_System_Single_" data-uid="Godot.SceneTreeTween.TweenProperty(Godot.Object,Godot.NodePath,System.Object,System.Single)">TweenProperty(Object, NodePath, Object, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates and appends a <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a>. This method tweens a <code>property</code> of an <code>object</code> between an initial value and <code>final_val</code> in a span of time equal to <code>duration</code>, in seconds. The initial value by default is the property&apos;s value at the time the tweening of the <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a> starts. For example:</p>
+<p><pre><code>var tween = create_tween()
+tween.tween_property($Sprite, &quot;position&quot;, Vector2(100, 200), 1)
+tween.tween_property($Sprite, &quot;position&quot;, Vector2(200, 300), 1)</code></pre></p>
+<p>will move the sprite to position (100, 200) and then to (200, 300). If you use <a class="xref" href="Godot.PropertyTweener.html#Godot_PropertyTweener_From_System_Object_">From(Object)</a> or <a class="xref" href="Godot.PropertyTweener.html#Godot_PropertyTweener_FromCurrent">FromCurrent()</a>, the starting position will be overwritten by the given value instead. See other methods in <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a> to see how the tweening can be tweaked further.</p>
+<p>Note: You can find the correct property name by hovering over the property in the Inspector. You can also provide the components of a property directly by using <code>&quot;property:component&quot;</code> (eg. <code>position:x</code>), where it would only apply to that particular component.</p>
+<p>Example: moving object twice from the same position, with different transition types.</p>
+<p><pre><code>var tween = create_tween()
+tween.tween_property($Sprite, &quot;position&quot;, Vector2.RIGHT * 300, 1).as_relative().set_trans(Tween.TRANS_SINE)
+tween.tween_property($Sprite, &quot;position&quot;, Vector2.RIGHT * 300, 1).as_relative().from_current().set_trans(Tween.TRANS_EXPO)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,32 @@
   
   <h1 id="Godot_PackedScene" data-uid="Godot.PackedScene" class="text-break">Class PackedScene
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A simplified interface to a scene file. Provides access to operations and checks that can be performed on the scene resource itself.</p>
+<p>Can be used to save a node to a file. When saving, the node as well as all the nodes it owns get saved (see <code>owner</code> property on <a class="xref" href="Godot.Node.html">Node</a>).</p>
+<p>Note: The node doesn&apos;t need to own itself.</p>
+<p>Example of loading a saved scene:</p>
+<p><pre><code># Use `load()` instead of `preload()` if the path isn&apos;t known at compile-time.
+var scene = preload(&quot;res://scene.tscn&quot;).instance()
+# Add the node as a child of the node the script is attached to.
+add_child(scene)</code></pre></p>
+<p>Example of saving a node with different owners: The following example creates 3 objects: <code>Node2D</code> (<code>node</code>), <code>RigidBody2D</code> (<code>rigid</code>) and <code>CollisionObject2D</code> (<code>collision</code>). <code>collision</code> is a child of <code>rigid</code> which is a child of <code>node</code>. Only <code>rigid</code> is owned by <code>node</code> and <code>pack</code> will therefore only save those two nodes, but not <code>collision</code>.</p>
+<p><pre><code># Create the objects.
+var node = Node2D.new()
+var rigid = RigidBody2D.new()
+var collision = CollisionShape2D.new()
+<h1 id="create-the-object-hierarchy">Create the object hierarchy.</h1>
+<p>rigid.add_child(collision)
+node.add_child(rigid)</p>
+<h1 id="change-owner-of-rigid-but-not-of-collision">Change owner of <code>rigid</code>, but not of <code>collision</code>.</h1>
+<p>rigid.owner = node</p>
+<p>var scene = PackedScene.new()</p>
+<h1 id="only-node-and-rigid-are-now-packed">Only <code>node</code> and <code>rigid</code> are now packed.</h1>
+<p>var result = scene.pack(node)
+if result == OK:
+var error = ResourceSaver.save(&quot;res://path/name.scn&quot;, scene)  # Or &quot;user://...&quot;
+if error != OK:
+push_error(&quot;An error occurred while saving the scene to disk.&quot;)</code></pre></p><p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -347,7 +372,9 @@
   
   <a id="Godot_PackedScene__Bundled_" data-uid="Godot.PackedScene._Bundled*"></a>
   <h4 id="Godot_PackedScene__Bundled" data-uid="Godot.PackedScene._Bundled">_Bundled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A dictionary representation of the scene contents.</p>
+<p>Available keys include &quot;rnames&quot; and &quot;variants&quot; for resources, &quot;node_count&quot;, &quot;nodes&quot;, &quot;node_paths&quot; for nodes, &quot;editable_instances&quot; for base scene children overrides, &quot;conn_count&quot; and &quot;conns&quot; for signal connections, and &quot;version&quot; for the format style of the PackedScene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +401,8 @@
   
   <a id="Godot_PackedScene_CanInstance_" data-uid="Godot.PackedScene.CanInstance*"></a>
   <h4 id="Godot_PackedScene_CanInstance" data-uid="Godot.PackedScene.CanInstance">CanInstance()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the scene file has nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -399,7 +427,8 @@
   
   <a id="Godot_PackedScene_GetState_" data-uid="Godot.PackedScene.GetState*"></a>
   <h4 id="Godot_PackedScene_GetState" data-uid="Godot.PackedScene.GetState">GetState()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <code>SceneState</code> representing the scene file contents.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -424,7 +453,8 @@
   
   <a id="Godot_PackedScene_Instance_" data-uid="Godot.PackedScene.Instance*"></a>
   <h4 id="Godot_PackedScene_Instance_Godot_PackedScene_GenEditState_" data-uid="Godot.PackedScene.Instance(Godot.PackedScene.GenEditState)">Instance(PackedScene.GenEditState)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Instantiates the scene&apos;s node hierarchy. Triggers child scene instantiation(s). Triggers a <a class="xref" href="Godot.Node.html#Godot_Node_NotificationInstanced">NotificationInstanced</a> notification on the root node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -466,7 +496,10 @@
   
   <a id="Godot_PackedScene_Instance_" data-uid="Godot.PackedScene.Instance*"></a>
   <h4 id="Godot_PackedScene_Instance__1_Godot_PackedScene_GenEditState_" data-uid="Godot.PackedScene.Instance``1(Godot.PackedScene.GenEditState)">Instance&lt;T&gt;(PackedScene.GenEditState)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Instantiates the scene's node hierarchy, erroring on failure.
+Triggers child scene instantiation(s). Triggers a
+<a class="xref" href="Godot.Node.html#Godot_Node_NotificationInstanced">NotificationInstanced</a> notification on the root node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -501,7 +534,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The instantiated scene.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -516,15 +550,39 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td><p>Thrown when the given the instantiated node can't be casted to the given type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Godot_PackedScene_Instance__1_Godot_PackedScene_GenEditState__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.PackedScene.html#Godot_PackedScene_InstanceOrNull__1_Godot_PackedScene_GenEditState_">InstanceOrNull&lt;T&gt;(PackedScene.GenEditState)</a></div>
+  </div>
   
   
   <a id="Godot_PackedScene_InstanceOrNull_" data-uid="Godot.PackedScene.InstanceOrNull*"></a>
   <h4 id="Godot_PackedScene_InstanceOrNull__1_Godot_PackedScene_GenEditState_" data-uid="Godot.PackedScene.InstanceOrNull``1(Godot.PackedScene.GenEditState)">InstanceOrNull&lt;T&gt;(PackedScene.GenEditState)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Instantiates the scene's node hierarchy, returning <span class="xref">null</span> on failure.
+Triggers child scene instantiation(s). Triggers a
+<a class="xref" href="Godot.Node.html#Godot_Node_NotificationInstanced">NotificationInstanced</a> notification on the root node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -559,7 +617,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The instantiated scene.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -574,15 +633,21 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_PackedScene_InstanceOrNull__1_Godot_PackedScene_GenEditState__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.PackedScene.html#Godot_PackedScene_Instance__1_Godot_PackedScene_GenEditState_">Instance&lt;T&gt;(PackedScene.GenEditState)</a></div>
+  </div>
   
   
   <a id="Godot_PackedScene_Pack_" data-uid="Godot.PackedScene.Pack*"></a>
   <h4 id="Godot_PackedScene_Pack_Godot_Node_" data-uid="Godot.PackedScene.Pack(Godot.Node)">Pack(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pack will ignore any sub-nodes not owned by given node. See <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Owner</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

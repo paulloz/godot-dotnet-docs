@@ -83,7 +83,9 @@
   
   <h1 id="Godot_YSort" data-uid="Godot.YSort" class="text-break">Class YSort
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Sort all child nodes based on their Y positions. The child node must inherit from <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a> for it to be sorted. Nodes that have a higher Y position will be drawn later, so they will appear on top of nodes that have a lower Y position.</p>
+<p>Nesting of YSort nodes is possible. Children YSort nodes will be sorted in the same space as the parent YSort, allowing to better organize a scene or divide it in multiple ones, yet keep the unique sorting.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1114,8 @@
   
   <a id="Godot_YSort_SortEnabled_" data-uid="Godot.YSort.SortEnabled*"></a>
   <h4 id="Godot_YSort_SortEnabled" data-uid="Godot.YSort.SortEnabled">SortEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, child nodes are sorted, otherwise sorting is disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

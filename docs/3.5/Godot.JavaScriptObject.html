@@ -83,7 +83,30 @@
   
   <h1 id="Godot_JavaScriptObject" data-uid="Godot.JavaScriptObject" class="text-break">Class JavaScriptObject
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>JavaScriptObject is used to interact with JavaScript objects retrieved or created via <a class="xref" href="Godot.JavaScript.html#Godot_JavaScript_GetInterface_System_String_">GetInterface(String)</a>, <a class="xref" href="Godot.JavaScript.html#Godot_JavaScript_CreateObject_System_String_System_Object___">CreateObject(String, Object[])</a>, or <a class="xref" href="Godot.JavaScript.html#Godot_JavaScript_CreateCallback_Godot_Object_System_String_">CreateCallback(Object, String)</a>.</p>
+<p>Example:</p>
+<p><pre><code>extends Node
+<p>var _my_js_callback = JavaScript.create_callback(self, &quot;myCallback&quot;) # This reference must be kept
+var console = JavaScript.get_interface(&quot;console&quot;)</p>
+<p>func _init():
+var buf = JavaScript.create_object(&quot;ArrayBuffer&quot;, 10) # new ArrayBuffer(10)
+print(buf) # prints [JavaScriptObject:OBJECT_ID]
+var uint8arr = JavaScript.create_object(&quot;Uint8Array&quot;, buf) # new Uint8Array(buf)
+uint8arr[1] = 255
+prints(uint8arr[1], uint8arr.byteLength) # prints 255 10
+console.log(uint8arr) # prints in browser console &quot;Uint8Array(10) [ 0, 255, 0, 0, 0, 0, 0, 0, 0, 0 ]&quot;</p>
+<pre><code># Equivalent of JavaScript: Array.from(uint8arr).forEach(myCallback)
+JavaScript.get_interface(&amp;quot;Array&amp;quot;).from(uint8arr).forEach(_my_js_callback)
+</code></pre>
+<p>func myCallback(args):
+# Will be called with the parameters passed to the &quot;forEach&quot; callback
+# [0, 0, [JavaScriptObject:1173]]
+# [255, 1, [JavaScriptObject:1173]]
+# ...
+# [0, 9, [JavaScriptObject:1180]]
+print(args)</code></pre></p><p>
+<p>Note: Only available in the HTML5 platform.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>

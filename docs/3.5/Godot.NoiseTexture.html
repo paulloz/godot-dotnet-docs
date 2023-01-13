@@ -83,7 +83,13 @@
   
   <h1 id="Godot_NoiseTexture" data-uid="Godot.NoiseTexture" class="text-break">Class NoiseTexture
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Uses an <a class="xref" href="Godot.OpenSimplexNoise.html">OpenSimplexNoise</a> to fill the texture data. You can specify the texture size but keep in mind that larger textures will take longer to generate and seamless noise only works with square sized textures.</p>
+<p>NoiseTexture can also generate normalmap textures.</p>
+<p>The class uses <a class="xref" href="Godot.Thread.html">Thread</a>s to generate the texture data internally, so <a class="xref" href="Godot.Texture.html#Godot_Texture_GetData">GetData()</a> may return <code>null</code> if the generation process has not completed yet. In that case, you need to wait for the texture to be generated before accessing the data:</p>
+<p><pre><code>var texture = preload(&quot;res://noise.tres&quot;)
+yield(texture, &quot;changed&quot;)
+var image = texture.get_data()</code></pre></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -380,7 +386,8 @@
   
   <a id="Godot_NoiseTexture_AsNormalmap_" data-uid="Godot.NoiseTexture.AsNormalmap*"></a>
   <h4 id="Godot_NoiseTexture_AsNormalmap" data-uid="Godot.NoiseTexture.AsNormalmap">AsNormalmap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the resulting texture contains a normal map created from the original noise interpreted as a bump map.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -405,7 +412,8 @@
   
   <a id="Godot_NoiseTexture_BumpStrength_" data-uid="Godot.NoiseTexture.BumpStrength*"></a>
   <h4 id="Godot_NoiseTexture_BumpStrength" data-uid="Godot.NoiseTexture.BumpStrength">BumpStrength</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Strength of the bump maps used in this texture. A higher value will make the bump maps appear larger while a lower value will make them appear softer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -430,7 +438,8 @@
   
   <a id="Godot_NoiseTexture_Height_" data-uid="Godot.NoiseTexture.Height*"></a>
   <h4 id="Godot_NoiseTexture_Height" data-uid="Godot.NoiseTexture.Height">Height</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Height of the generated texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -455,7 +464,8 @@
   
   <a id="Godot_NoiseTexture_Noise_" data-uid="Godot.NoiseTexture.Noise*"></a>
   <h4 id="Godot_NoiseTexture_Noise" data-uid="Godot.NoiseTexture.Noise">Noise</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.OpenSimplexNoise.html">OpenSimplexNoise</a> instance used to generate the noise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -480,7 +490,8 @@
   
   <a id="Godot_NoiseTexture_NoiseOffset_" data-uid="Godot.NoiseTexture.NoiseOffset*"></a>
   <h4 id="Godot_NoiseTexture_NoiseOffset" data-uid="Godot.NoiseTexture.NoiseOffset">NoiseOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>An offset used to specify the noise space coordinate of the top left corner of the generated noise. This value is ignored if <a class="xref" href="Godot.NoiseTexture.html#Godot_NoiseTexture_Seamless">Seamless</a> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -505,7 +516,9 @@
   
   <a id="Godot_NoiseTexture_Seamless_" data-uid="Godot.NoiseTexture.Seamless*"></a>
   <h4 id="Godot_NoiseTexture_Seamless" data-uid="Godot.NoiseTexture.Seamless">Seamless</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether the texture can be tiled without visible seams or not. Seamless textures take longer to generate.</p>
+<p>Note: Seamless noise has a lower contrast compared to non-seamless noise. This is due to the way noise uses higher dimensions for generating seamless noise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -530,7 +543,8 @@
   
   <a id="Godot_NoiseTexture_Width_" data-uid="Godot.NoiseTexture.Width*"></a>
   <h4 id="Godot_NoiseTexture_Width" data-uid="Godot.NoiseTexture.Width">Width</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Width of the generated texture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

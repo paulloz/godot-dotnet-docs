@@ -83,7 +83,10 @@
   
   <h1 id="Godot_AnimationNodeBlendSpace2D" data-uid="Godot.AnimationNodeBlendSpace2D" class="text-break">Class AnimationNodeBlendSpace2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A resource to add to an <a class="xref" href="Godot.AnimationNodeBlendTree.html">AnimationNodeBlendTree</a>.</p>
+<p>This node allows you to blend linearly between three animations using a <a class="xref" href="Godot.Vector2.html">Vector2</a> weight.</p>
+<p>You can add vertices to the blend space with <a class="xref" href="Godot.AnimationNodeBlendSpace2D.html#Godot_AnimationNodeBlendSpace2D_AddBlendPoint_Godot_AnimationRootNode_Godot_Vector2_System_Int32_">AddBlendPoint(AnimationRootNode, Vector2, Int32)</a> and automatically triangulate it by setting <a class="xref" href="Godot.AnimationNodeBlendSpace2D.html#Godot_AnimationNodeBlendSpace2D_AutoTriangles">AutoTriangles</a> to <code>true</code>. Otherwise, use <a class="xref" href="Godot.AnimationNodeBlendSpace2D.html#Godot_AnimationNodeBlendSpace2D_AddTriangle_System_Int32_System_Int32_System_Int32_System_Int32_">AddTriangle(Int32, Int32, Int32, Int32)</a> and <a class="xref" href="Godot.AnimationNodeBlendSpace2D.html#Godot_AnimationNodeBlendSpace2D_RemoveTriangle_System_Int32_">RemoveTriangle(Int32)</a> to create up the blend space by hand.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -414,7 +417,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_AutoTriangles_" data-uid="Godot.AnimationNodeBlendSpace2D.AutoTriangles*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_AutoTriangles" data-uid="Godot.AnimationNodeBlendSpace2D.AutoTriangles">AutoTriangles</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the blend space is triangulated automatically. The mesh updates every time you add or remove points with <a class="xref" href="Godot.AnimationNodeBlendSpace2D.html#Godot_AnimationNodeBlendSpace2D_AddBlendPoint_Godot_AnimationRootNode_Godot_Vector2_System_Int32_">AddBlendPoint(AnimationRootNode, Vector2, Int32)</a> and <a class="xref" href="Godot.AnimationNodeBlendSpace2D.html#Godot_AnimationNodeBlendSpace2D_RemoveBlendPoint_System_Int32_">RemoveBlendPoint(Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -439,7 +443,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_BlendMode_" data-uid="Godot.AnimationNodeBlendSpace2D.BlendMode*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_BlendMode" data-uid="Godot.AnimationNodeBlendSpace2D.BlendMode">BlendMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls the interpolation between animations. See <a class="xref" href="Godot.AnimationNodeBlendSpace2D.BlendModeEnum.html">AnimationNodeBlendSpace2D.BlendModeEnum</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3664,7 +3669,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_MaxSpace_" data-uid="Godot.AnimationNodeBlendSpace2D.MaxSpace*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_MaxSpace" data-uid="Godot.AnimationNodeBlendSpace2D.MaxSpace">MaxSpace</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The blend space&apos;s X and Y axes&apos; upper limit for the points&apos; position. See <a class="xref" href="Godot.AnimationNodeBlendSpace2D.html#Godot_AnimationNodeBlendSpace2D_AddBlendPoint_Godot_AnimationRootNode_Godot_Vector2_System_Int32_">AddBlendPoint(AnimationRootNode, Vector2, Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3689,7 +3695,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_MinSpace_" data-uid="Godot.AnimationNodeBlendSpace2D.MinSpace*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_MinSpace" data-uid="Godot.AnimationNodeBlendSpace2D.MinSpace">MinSpace</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The blend space&apos;s X and Y axes&apos; lower limit for the points&apos; position. See <a class="xref" href="Godot.AnimationNodeBlendSpace2D.html#Godot_AnimationNodeBlendSpace2D_AddBlendPoint_Godot_AnimationRootNode_Godot_Vector2_System_Int32_">AddBlendPoint(AnimationRootNode, Vector2, Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3714,7 +3721,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_Snap_" data-uid="Godot.AnimationNodeBlendSpace2D.Snap*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_Snap" data-uid="Godot.AnimationNodeBlendSpace2D.Snap">Snap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Position increment to snap to when moving a point.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3764,7 +3772,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_XLabel_" data-uid="Godot.AnimationNodeBlendSpace2D.XLabel*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_XLabel" data-uid="Godot.AnimationNodeBlendSpace2D.XLabel">XLabel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Name of the blend space&apos;s X axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3789,7 +3798,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_YLabel_" data-uid="Godot.AnimationNodeBlendSpace2D.YLabel*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_YLabel" data-uid="Godot.AnimationNodeBlendSpace2D.YLabel">YLabel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Name of the blend space&apos;s Y axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3816,7 +3826,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_AddBlendPoint_" data-uid="Godot.AnimationNodeBlendSpace2D.AddBlendPoint*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_AddBlendPoint_Godot_AnimationRootNode_Godot_Vector2_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace2D.AddBlendPoint(Godot.AnimationRootNode,Godot.Vector2,System.Int32)">AddBlendPoint(AnimationRootNode, Vector2, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new point that represents a <code>node</code> at the position set by <code>pos</code>. You can insert it at a specific index using the <code>at_index</code> argument. If you use the default value for <code>at_index</code>, the point is inserted at the end of the blend points array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3853,7 +3864,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_AddTriangle_" data-uid="Godot.AnimationNodeBlendSpace2D.AddTriangle*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_AddTriangle_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace2D.AddTriangle(System.Int32,System.Int32,System.Int32,System.Int32)">AddTriangle(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new triangle using three points <code>x</code>, <code>y</code>, and <code>z</code>. Triangles can overlap. You can insert the triangle at a specific index using the <code>at_index</code> argument. If you use the default value for <code>at_index</code>, the point is inserted at the end of the blend points array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3945,7 +3957,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_GetBlendPointCount_" data-uid="Godot.AnimationNodeBlendSpace2D.GetBlendPointCount*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_GetBlendPointCount" data-uid="Godot.AnimationNodeBlendSpace2D.GetBlendPointCount">GetBlendPointCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of points in the blend space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3970,7 +3983,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_GetBlendPointNode_" data-uid="Godot.AnimationNodeBlendSpace2D.GetBlendPointNode*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_GetBlendPointNode_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace2D.GetBlendPointNode(System.Int32)">GetBlendPointNode(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.AnimationRootNode.html">AnimationRootNode</a> referenced by the point at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4012,7 +4026,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_GetBlendPointPosition_" data-uid="Godot.AnimationNodeBlendSpace2D.GetBlendPointPosition*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_GetBlendPointPosition_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace2D.GetBlendPointPosition(System.Int32)">GetBlendPointPosition(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the point at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4129,7 +4144,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_GetTriangleCount_" data-uid="Godot.AnimationNodeBlendSpace2D.GetTriangleCount*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_GetTriangleCount" data-uid="Godot.AnimationNodeBlendSpace2D.GetTriangleCount">GetTriangleCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of triangles in the blend space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4154,7 +4170,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_GetTrianglePoint_" data-uid="Godot.AnimationNodeBlendSpace2D.GetTrianglePoint*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_GetTrianglePoint_System_Int32_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace2D.GetTrianglePoint(System.Int32,System.Int32)">GetTrianglePoint(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the point at index <code>point</code> in the triangle of index <code>triangle</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4251,7 +4268,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_RemoveBlendPoint_" data-uid="Godot.AnimationNodeBlendSpace2D.RemoveBlendPoint*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_RemoveBlendPoint_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace2D.RemoveBlendPoint(System.Int32)">RemoveBlendPoint(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the point at index <code>point</code> from the blend space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4278,7 +4296,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_RemoveTriangle_" data-uid="Godot.AnimationNodeBlendSpace2D.RemoveTriangle*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_RemoveTriangle_System_Int32_" data-uid="Godot.AnimationNodeBlendSpace2D.RemoveTriangle(System.Int32)">RemoveTriangle(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the triangle at index <code>triangle</code> from the blend space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4359,7 +4378,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_SetBlendPointNode_" data-uid="Godot.AnimationNodeBlendSpace2D.SetBlendPointNode*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_SetBlendPointNode_System_Int32_Godot_AnimationRootNode_" data-uid="Godot.AnimationNodeBlendSpace2D.SetBlendPointNode(System.Int32,Godot.AnimationRootNode)">SetBlendPointNode(Int32, AnimationRootNode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the <a class="xref" href="Godot.AnimationNode.html">AnimationNode</a> referenced by the point at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4391,7 +4411,8 @@
   
   <a id="Godot_AnimationNodeBlendSpace2D_SetBlendPointPosition_" data-uid="Godot.AnimationNodeBlendSpace2D.SetBlendPointPosition*"></a>
   <h4 id="Godot_AnimationNodeBlendSpace2D_SetBlendPointPosition_System_Int32_Godot_Vector2_" data-uid="Godot.AnimationNodeBlendSpace2D.SetBlendPointPosition(System.Int32,Godot.Vector2)">SetBlendPointPosition(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the position of the point at index <code>point</code> on the blend axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

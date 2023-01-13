@@ -83,7 +83,10 @@
   
   <h1 id="Godot_NetworkedMultiplayerENet" data-uid="Godot.NetworkedMultiplayerENet" class="text-break">Class NetworkedMultiplayerENet
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A PacketPeer implementation that should be passed to <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_NetworkPeer">NetworkPeer</a> after being initialized as either a client or server. Events can then be handled by connecting to <a class="xref" href="Godot.SceneTree.html">SceneTree</a> signals.</p>
+<p>ENet&apos;s purpose is to provide a relatively thin, simple and robust network communication layer on top of UDP (User Datagram Protocol).</p>
+<p>Note: ENet only uses UDP, not TCP. When forwarding the server port to make your server accessible on the public Internet, you only need to forward the server port in UDP. You can use the <a class="xref" href="Godot.UPNP.html">UPNP</a> class to try to forward the server port automatically when starting the server.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -374,7 +377,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_AlwaysOrdered_" data-uid="Godot.NetworkedMultiplayerENet.AlwaysOrdered*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_AlwaysOrdered" data-uid="Godot.NetworkedMultiplayerENet.AlwaysOrdered">AlwaysOrdered</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enforce ordered packets when using <a class="xref" href="Godot.NetworkedMultiplayerPeer.TransferModeEnum.html#Godot_NetworkedMultiplayerPeer_TransferModeEnum_Unreliable">Unreliable</a> (thus behaving similarly to <a class="xref" href="Godot.NetworkedMultiplayerPeer.TransferModeEnum.html#Godot_NetworkedMultiplayerPeer_TransferModeEnum_UnreliableOrdered">UnreliableOrdered</a>). This is the only way to use ordering with the RPC system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -399,7 +403,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_ChannelCount_" data-uid="Godot.NetworkedMultiplayerENet.ChannelCount*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_ChannelCount" data-uid="Godot.NetworkedMultiplayerENet.ChannelCount">ChannelCount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of channels to be used by ENet. Channels are used to separate different kinds of data. In reliable or ordered mode, for example, the packet delivery order is ensured on a per-channel basis. This is done to combat latency and reduces ordering restrictions on packets. The delivery status of a packet in one channel won&apos;t stall the delivery of other packets in another channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -424,7 +429,10 @@
   
   <a id="Godot_NetworkedMultiplayerENet_CompressionMode_" data-uid="Godot.NetworkedMultiplayerENet.CompressionMode*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_CompressionMode" data-uid="Godot.NetworkedMultiplayerENet.CompressionMode">CompressionMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The compression method used for network packets. These have different tradeoffs of compression speed versus bandwidth, you may need to test which one works best for your use case if you use compression at all.</p>
+<p>Note: Most games&apos; network design involve sending many small packets frequently (smaller than 4 KB each). If in doubt, it is recommended to keep the default compression algorithm as it works best on these small packets.</p>
+<p>Note: <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_CompressionMode">CompressionMode</a> must be set to the same value on both the server and all its clients. Clients will fail to connect if the <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_CompressionMode">CompressionMode</a> set on the client differs from the one set on the server. Prior to Godot 3.4, the default <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_CompressionMode">CompressionMode</a> was <a class="xref" href="Godot.NetworkedMultiplayerENet.CompressionModeEnum.html#Godot_NetworkedMultiplayerENet_CompressionModeEnum_None">None</a>. Nonetheless, mixing engine versions between clients and server is not recommended and not officially supported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -449,7 +457,9 @@
   
   <a id="Godot_NetworkedMultiplayerENet_DtlsHostname_" data-uid="Godot.NetworkedMultiplayerENet.DtlsHostname*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_DtlsHostname" data-uid="Godot.NetworkedMultiplayerENet.DtlsHostname">DtlsHostname</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The hostname used for DTLS verification, to be compared against the &quot;CN&quot; value in the certificate provided by the server.</p>
+<p>When set to an empty string, the <code>address</code> parameter passed to <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_CreateClient_System_String_System_Int32_System_Int32_System_Int32_System_Int32_">CreateClient(String, Int32, Int32, Int32, Int32)</a> is used instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -474,7 +484,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_DtlsVerify_" data-uid="Godot.NetworkedMultiplayerENet.DtlsVerify*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_DtlsVerify" data-uid="Godot.NetworkedMultiplayerENet.DtlsVerify">DtlsVerify</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enable or disable certificate verification when <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_UseDtls">UseDtls</a> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -499,7 +510,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_ServerRelay_" data-uid="Godot.NetworkedMultiplayerENet.ServerRelay*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_ServerRelay" data-uid="Godot.NetworkedMultiplayerENet.ServerRelay">ServerRelay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enable or disable the server feature that notifies clients of other peers&apos; connection/disconnection, and relays messages between them. When this option is <code>false</code>, clients won&apos;t be automatically notified of other peers and won&apos;t be able to send them packets through the server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -524,7 +536,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_TransferChannel_" data-uid="Godot.NetworkedMultiplayerENet.TransferChannel*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_TransferChannel" data-uid="Godot.NetworkedMultiplayerENet.TransferChannel">TransferChannel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set the default channel to be used to transfer data. By default, this value is <code>-1</code> which means that ENet will only use 2 channels: one for reliable packets, and one for unreliable packets. The channel <code>0</code> is reserved and cannot be used. Setting this member to any value between <code>0</code> and <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_ChannelCount">ChannelCount</a> (excluded) will force ENet to use that channel for sending data. See <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_ChannelCount">ChannelCount</a> for more information about ENet channels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -549,7 +562,9 @@
   
   <a id="Godot_NetworkedMultiplayerENet_UseDtls_" data-uid="Godot.NetworkedMultiplayerENet.UseDtls*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_UseDtls" data-uid="Godot.NetworkedMultiplayerENet.UseDtls">UseDtls</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When enabled, the client or server created by this peer, will use <a class="xref" href="Godot.PacketPeerDTLS.html">PacketPeerDTLS</a> instead of raw UDP sockets for communicating with the remote peer. This will make the communication encrypted with DTLS at the cost of higher resource usage and potentially larger packet size.</p>
+<p>Note: When creating a DTLS server, make sure you setup the key/certificate pair via <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_SetDtlsKey_Godot_CryptoKey_">SetDtlsKey(CryptoKey)</a> and <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_SetDtlsCertificate_Godot_X509Certificate_">SetDtlsCertificate(X509Certificate)</a>. For DTLS clients, have a look at the <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_DtlsVerify">DtlsVerify</a> option, and configure the certificate accordingly via <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_SetDtlsCertificate_Godot_X509Certificate_">SetDtlsCertificate(X509Certificate)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -576,7 +591,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_CloseConnection_" data-uid="Godot.NetworkedMultiplayerENet.CloseConnection*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_CloseConnection_System_UInt32_" data-uid="Godot.NetworkedMultiplayerENet.CloseConnection(System.UInt32)">CloseConnection(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Closes the connection. Ignored if no connection is currently established. If this is a server it tries to notify all clients before forcibly disconnecting them. If this is a client it simply closes the connection to the server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -603,7 +619,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_CreateClient_" data-uid="Godot.NetworkedMultiplayerENet.CreateClient*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_CreateClient_System_String_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.NetworkedMultiplayerENet.CreateClient(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">CreateClient(String, Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create client that connects to a server at <code>address</code> using specified <code>port</code>. The given address needs to be either a fully qualified domain name (e.g. <code>&quot;www.example.com&quot;</code>) or an IP address in IPv4 or IPv6 format (e.g. <code>&quot;192.168.1.1&quot;</code>). The <code>port</code> is the port the server is listening on. The <code>in_bandwidth</code> and <code>out_bandwidth</code> parameters can be used to limit the incoming and outgoing bandwidth to the given number of bytes per second. The default of 0 means unlimited bandwidth. Note that ENet will strategically drop packets on specific sides of a connection between peers to ensure the peer&apos;s bandwidth is not overwhelmed. The bandwidth parameters also determine the window size of a connection which limits the amount of reliable packets that may be in transit at any given time. Returns <code>OK</code> if a client was created, <code>ERR_ALREADY_IN_USE</code> if this NetworkedMultiplayerENet instance already has an open connection (in which case you need to call <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_CloseConnection_System_UInt32_">CloseConnection(UInt32)</a> first) or <code>ERR_CANT_CREATE</code> if the client could not be created. If <code>client_port</code> is specified, the client will also listen to the given port; this is useful for some NAT traversal techniques.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -665,7 +682,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_CreateServer_" data-uid="Godot.NetworkedMultiplayerENet.CreateServer*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_CreateServer_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.NetworkedMultiplayerENet.CreateServer(System.Int32,System.Int32,System.Int32,System.Int32)">CreateServer(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create server that listens to connections via <code>port</code>. The port needs to be an available, unused port between 0 and 65535. Note that ports below 1024 are privileged and may require elevated permissions depending on the platform. To change the interface the server listens on, use <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_SetBindIp_System_String_">SetBindIp(String)</a>. The default IP is the wildcard <code>&quot;*&quot;</code>, which listens on all available interfaces. <code>max_clients</code> is the maximum number of clients that are allowed at once, any number up to 4095 may be used, although the achievable number of simultaneous clients may be far lower and depends on the application. For additional details on the bandwidth parameters, see <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_CreateClient_System_String_System_Int32_System_Int32_System_Int32_System_Int32_">CreateClient(String, Int32, Int32, Int32, Int32)</a>. Returns <code>OK</code> if a server was created, <code>ERR_ALREADY_IN_USE</code> if this NetworkedMultiplayerENet instance already has an open connection (in which case you need to call <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_CloseConnection_System_UInt32_">CloseConnection(UInt32)</a> first) or <code>ERR_CANT_CREATE</code> if the server could not be created.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -722,7 +740,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_DisconnectPeer_" data-uid="Godot.NetworkedMultiplayerENet.DisconnectPeer*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_DisconnectPeer_System_Int32_System_Boolean_" data-uid="Godot.NetworkedMultiplayerENet.DisconnectPeer(System.Int32,System.Boolean)">DisconnectPeer(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnect the given peer. If &quot;now&quot; is set to <code>true</code>, the connection will be closed immediately without flushing queued messages.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -829,7 +848,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_GetLastPacketChannel_" data-uid="Godot.NetworkedMultiplayerENet.GetLastPacketChannel*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_GetLastPacketChannel" data-uid="Godot.NetworkedMultiplayerENet.GetLastPacketChannel">GetLastPacketChannel()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the channel of the last packet fetched via <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetPacket">GetPacket()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -854,7 +874,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_GetPacketChannel_" data-uid="Godot.NetworkedMultiplayerENet.GetPacketChannel*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_GetPacketChannel" data-uid="Godot.NetworkedMultiplayerENet.GetPacketChannel">GetPacketChannel()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the channel of the next packet that will be retrieved via <a class="xref" href="Godot.PacketPeer.html#Godot_PacketPeer_GetPacket">GetPacket()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -879,7 +900,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_GetPeerAddress_" data-uid="Godot.NetworkedMultiplayerENet.GetPeerAddress*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_GetPeerAddress_System_Int32_" data-uid="Godot.NetworkedMultiplayerENet.GetPeerAddress(System.Int32)">GetPeerAddress(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the IP address of the given peer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -921,7 +943,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_GetPeerPort_" data-uid="Godot.NetworkedMultiplayerENet.GetPeerPort*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_GetPeerPort_System_Int32_" data-uid="Godot.NetworkedMultiplayerENet.GetPeerPort(System.Int32)">GetPeerPort(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the remote port of the given peer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1115,7 +1138,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_SetBindIp_" data-uid="Godot.NetworkedMultiplayerENet.SetBindIp*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_SetBindIp_System_String_" data-uid="Godot.NetworkedMultiplayerENet.SetBindIp(System.String)">SetBindIp(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IP used when creating a server. This is set to the wildcard <code>&quot;*&quot;</code> by default, which binds to all available interfaces. The given IP needs to be in IPv4 or IPv6 address format, for example: <code>&quot;192.168.1.1&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1196,7 +1220,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_SetDtlsCertificate_" data-uid="Godot.NetworkedMultiplayerENet.SetDtlsCertificate*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_SetDtlsCertificate_Godot_X509Certificate_" data-uid="Godot.NetworkedMultiplayerENet.SetDtlsCertificate(Godot.X509Certificate)">SetDtlsCertificate(X509Certificate)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Configure the <a class="xref" href="Godot.X509Certificate.html">X509Certificate</a> to use when <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_UseDtls">UseDtls</a> is <code>true</code>. For servers, you must also setup the <a class="xref" href="Godot.CryptoKey.html">CryptoKey</a> via <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_SetDtlsKey_Godot_CryptoKey_">SetDtlsKey(CryptoKey)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1277,7 +1302,8 @@
   
   <a id="Godot_NetworkedMultiplayerENet_SetDtlsKey_" data-uid="Godot.NetworkedMultiplayerENet.SetDtlsKey*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_SetDtlsKey_Godot_CryptoKey_" data-uid="Godot.NetworkedMultiplayerENet.SetDtlsKey(Godot.CryptoKey)">SetDtlsKey(CryptoKey)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Configure the <a class="xref" href="Godot.CryptoKey.html">CryptoKey</a> to use when <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_UseDtls">UseDtls</a> is <code>true</code>. Remember to also call <a class="xref" href="Godot.NetworkedMultiplayerENet.html#Godot_NetworkedMultiplayerENet_SetDtlsCertificate_Godot_X509Certificate_">SetDtlsCertificate(X509Certificate)</a> to setup your <a class="xref" href="Godot.X509Certificate.html">X509Certificate</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1331,7 +1357,9 @@
   
   <a id="Godot_NetworkedMultiplayerENet_SetPeerTimeout_" data-uid="Godot.NetworkedMultiplayerENet.SetPeerTimeout*"></a>
   <h4 id="Godot_NetworkedMultiplayerENet_SetPeerTimeout_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.NetworkedMultiplayerENet.SetPeerTimeout(System.Int32,System.Int32,System.Int32,System.Int32)">SetPeerTimeout(Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the timeout parameters for a peer.The timeout parameters control how and when a peer will timeout from a failure to acknowledge reliable traffic. Timeout values are expressed in milliseconds.</p>
+<p>The <code>timeout_limit</code> is a factor that, multiplied by a value based on the average round trip time, will determine the timeout limit for a reliable packet. When that limit is reached, the timeout will be doubled, and the peer will be disconnected if that limit has reached <code>timeout_min</code>. The <code>timeout_max</code> parameter, on the other hand, defines a fixed timeout for which any packet must be acknowledged or the peer will be dropped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ResourceSaver" data-uid="Godot.ResourceSaver" class="text-break">Class ResourceSaver
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Singleton for saving Godot-specific resource types to the filesystem.</p>
+<p>It uses the many <a class="xref" href="Godot.ResourceFormatSaver.html">ResourceFormatSaver</a> classes registered in the engine (either built-in or from a plugin) to save engine-specific resource data to text-based (e.g. <code>.tres</code> or <code>.tscn</code>) or binary files (e.g. <code>.res</code> or <code>.scn</code>).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +131,8 @@
   
   <a id="Godot_ResourceSaver_GetRecognizedExtensions_" data-uid="Godot.ResourceSaver.GetRecognizedExtensions*"></a>
   <h4 id="Godot_ResourceSaver_GetRecognizedExtensions_Godot_Resource_" data-uid="Godot.ResourceSaver.GetRecognizedExtensions(Godot.Resource)">GetRecognizedExtensions(Resource)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the list of extensions available for saving a resource of a given type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -171,7 +174,10 @@
   
   <a id="Godot_ResourceSaver_Save_" data-uid="Godot.ResourceSaver.Save*"></a>
   <h4 id="Godot_ResourceSaver_Save_System_String_Godot_Resource_Godot_ResourceSaver_SaverFlags_" data-uid="Godot.ResourceSaver.Save(System.String,Godot.Resource,Godot.ResourceSaver.SaverFlags)">Save(String, Resource, ResourceSaver.SaverFlags)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves a resource to disk to the given path, using a <a class="xref" href="Godot.ResourceFormatSaver.html">ResourceFormatSaver</a> that recognizes the resource object.</p>
+<p>The <code>flags</code> bitmask can be specified to customize the save behavior.</p>
+<p>Returns <code>OK</code> on success.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

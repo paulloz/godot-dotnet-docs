@@ -83,7 +83,10 @@
   
   <h1 id="Godot_AtlasTexture" data-uid="Godot.AtlasTexture" class="text-break">Class AtlasTexture
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.Texture.html">Texture</a> resource that crops out one part of the <a class="xref" href="Godot.AtlasTexture.html#Godot_AtlasTexture_Atlas">Atlas</a> texture, defined by <a class="xref" href="Godot.AtlasTexture.html#Godot_AtlasTexture_Region">Region</a>. The main use case is cropping out textures from a texture atlas, which is a big texture file that packs multiple smaller textures. Consists of a <a class="xref" href="Godot.Texture.html">Texture</a> for the <a class="xref" href="Godot.AtlasTexture.html#Godot_AtlasTexture_Atlas">Atlas</a>, a <a class="xref" href="Godot.AtlasTexture.html#Godot_AtlasTexture_Region">Region</a> that defines the area of <a class="xref" href="Godot.AtlasTexture.html#Godot_AtlasTexture_Atlas">Atlas</a> to use, and a <a class="xref" href="Godot.AtlasTexture.html#Godot_AtlasTexture_Margin">Margin</a> that defines the border width.</p>
+<p><a class="xref" href="Godot.AtlasTexture.html">AtlasTexture</a> cannot be used in an <a class="xref" href="Godot.AnimatedTexture.html">AnimatedTexture</a>, cannot be tiled in nodes such as <a class="xref" href="Godot.TextureRect.html">TextureRect</a>, and does not work properly if used inside of other <a class="xref" href="Godot.AtlasTexture.html">AtlasTexture</a> resources. Multiple <a class="xref" href="Godot.AtlasTexture.html">AtlasTexture</a> resources can be used to crop multiple textures from the atlas. Using a texture atlas helps to optimize video memory costs and render calls compared to using multiple small files.</p>
+<p>Note: AtlasTextures don&apos;t support repetition. The <a class="xref" href="Godot.Texture.FlagsEnum.html#Godot_Texture_FlagsEnum_Repeat">Repeat</a> and <a class="xref" href="Godot.Texture.FlagsEnum.html#Godot_Texture_FlagsEnum_MirroredRepeat">MirroredRepeat</a> flags are ignored when using an AtlasTexture.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -380,7 +383,8 @@
   
   <a id="Godot_AtlasTexture_Atlas_" data-uid="Godot.AtlasTexture.Atlas*"></a>
   <h4 id="Godot_AtlasTexture_Atlas" data-uid="Godot.AtlasTexture.Atlas">Atlas</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The texture that contains the atlas. Can be any <a class="xref" href="Godot.Texture.html">Texture</a> subtype.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -405,7 +409,8 @@
   
   <a id="Godot_AtlasTexture_FilterClip_" data-uid="Godot.AtlasTexture.FilterClip*"></a>
   <h4 id="Godot_AtlasTexture_FilterClip" data-uid="Godot.AtlasTexture.FilterClip">FilterClip</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, clips the area outside of the region to avoid bleeding of the surrounding texture pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -430,7 +435,8 @@
   
   <a id="Godot_AtlasTexture_Margin_" data-uid="Godot.AtlasTexture.Margin*"></a>
   <h4 id="Godot_AtlasTexture_Margin" data-uid="Godot.AtlasTexture.Margin">Margin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The margin around the region. The <a class="xref" href="Godot.Rect2.html">Rect2</a>&apos;s <code>Rect2.size</code> parameter (&quot;w&quot; and &quot;h&quot; in the editor) resizes the texture so it fits within the margin.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -455,7 +461,8 @@
   
   <a id="Godot_AtlasTexture_Region_" data-uid="Godot.AtlasTexture.Region*"></a>
   <h4 id="Godot_AtlasTexture_Region" data-uid="Godot.AtlasTexture.Region">Region</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The AtlasTexture&apos;s used region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

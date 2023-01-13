@@ -83,7 +83,15 @@
   
   <h1 id="Godot_VisualScriptIterator" data-uid="Godot.VisualScriptIterator" class="text-break">Class VisualScriptIterator
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This node steps through each item in a given input. Input can be any sequence data type, such as an <a class="xref" href="Godot.Collections.Array.html">Array</a> or <span class="xref">System.String</span>. When each item has been processed, execution passed out the <code>exit</code> Sequence port.</p>
+<p>Input Ports:</p>
+<p>- Sequence: <code>for (elem) in (input)</code></p>
+<p>- Data (variant): <code>input</code></p>
+<p>Output Ports:</p>
+<p>- Sequence: <code>each</code></p>
+<p>- Sequence: <code>exit</code></p>
+<p>- Data (variant): <code>elem</code></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>

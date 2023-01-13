@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Node2D" data-uid="Godot.Node2D" class="text-break">Class Node2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A 2D game object, with a transform (position, rotation, and scale). All 2D nodes, including physics objects and sprites, inherit from Node2D. Use Node2D as a parent node to move, scale and rotate children in a 2D project. Also gives control of the node&apos;s render order.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1009,7 +1010,8 @@
   
   <a id="Godot_Node2D_GlobalPosition_" data-uid="Godot.Node2D.GlobalPosition*"></a>
   <h4 id="Godot_Node2D_GlobalPosition" data-uid="Godot.Node2D.GlobalPosition">GlobalPosition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Global position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1034,7 +1036,8 @@
   
   <a id="Godot_Node2D_GlobalRotation_" data-uid="Godot.Node2D.GlobalRotation*"></a>
   <h4 id="Godot_Node2D_GlobalRotation" data-uid="Godot.Node2D.GlobalRotation">GlobalRotation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Global rotation in radians.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1059,7 +1062,8 @@
   
   <a id="Godot_Node2D_GlobalRotationDegrees_" data-uid="Godot.Node2D.GlobalRotationDegrees*"></a>
   <h4 id="Godot_Node2D_GlobalRotationDegrees" data-uid="Godot.Node2D.GlobalRotationDegrees">GlobalRotationDegrees</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Global rotation in degrees.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1084,7 +1088,8 @@
   
   <a id="Godot_Node2D_GlobalScale_" data-uid="Godot.Node2D.GlobalScale*"></a>
   <h4 id="Godot_Node2D_GlobalScale" data-uid="Godot.Node2D.GlobalScale">GlobalScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Global scale.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1109,7 +1114,8 @@
   
   <a id="Godot_Node2D_GlobalTransform_" data-uid="Godot.Node2D.GlobalTransform*"></a>
   <h4 id="Godot_Node2D_GlobalTransform" data-uid="Godot.Node2D.GlobalTransform">GlobalTransform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Global <a class="xref" href="Godot.Transform2D.html">Transform2D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1134,7 +1140,8 @@
   
   <a id="Godot_Node2D_Position_" data-uid="Godot.Node2D.Position*"></a>
   <h4 id="Godot_Node2D_Position" data-uid="Godot.Node2D.Position">Position</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Position, relative to the node&apos;s parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1159,7 +1166,8 @@
   
   <a id="Godot_Node2D_Rotation_" data-uid="Godot.Node2D.Rotation*"></a>
   <h4 id="Godot_Node2D_Rotation" data-uid="Godot.Node2D.Rotation">Rotation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotation in radians, relative to the node&apos;s parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1184,7 +1192,8 @@
   
   <a id="Godot_Node2D_RotationDegrees_" data-uid="Godot.Node2D.RotationDegrees*"></a>
   <h4 id="Godot_Node2D_RotationDegrees" data-uid="Godot.Node2D.RotationDegrees">RotationDegrees</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotation in degrees, relative to the node&apos;s parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1209,7 +1218,9 @@
   
   <a id="Godot_Node2D_Scale_" data-uid="Godot.Node2D.Scale*"></a>
   <h4 id="Godot_Node2D_Scale" data-uid="Godot.Node2D.Scale">Scale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node&apos;s scale. Unscaled value: <code>(1, 1)</code>.</p>
+<p>Note: Negative X scales in 2D are not decomposable from the transformation matrix. Due to the way scale is represented with transformation matrices in Godot, negative scales on the X axis will be changed to negative scales on the Y axis and a rotation of 180 degrees when decomposed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1234,7 +1245,8 @@
   
   <a id="Godot_Node2D_Transform_" data-uid="Godot.Node2D.Transform*"></a>
   <h4 id="Godot_Node2D_Transform" data-uid="Godot.Node2D.Transform">Transform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Local <a class="xref" href="Godot.Transform2D.html">Transform2D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1259,7 +1271,8 @@
   
   <a id="Godot_Node2D_ZAsRelative_" data-uid="Godot.Node2D.ZAsRelative*"></a>
   <h4 id="Godot_Node2D_ZAsRelative" data-uid="Godot.Node2D.ZAsRelative">ZAsRelative</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the node&apos;s Z index is relative to its parent&apos;s Z index. If this node&apos;s Z index is 2 and its parent&apos;s effective Z index is 3, then this node&apos;s effective Z index will be 2 + 3 = 5.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1284,7 +1297,8 @@
   
   <a id="Godot_Node2D_ZIndex_" data-uid="Godot.Node2D.ZIndex*"></a>
   <h4 id="Godot_Node2D_ZIndex" data-uid="Godot.Node2D.ZIndex">ZIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Z index. Controls the order in which the nodes render. A node with a higher Z index will display in front of others. Must be between <a class="xref" href="Godot.VisualServer.html#Godot_VisualServer_CanvasItemZMin">CanvasItemZMin</a> and <a class="xref" href="Godot.VisualServer.html#Godot_VisualServer_CanvasItemZMax">CanvasItemZMax</a> (inclusive).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1311,7 +1325,8 @@
   
   <a id="Godot_Node2D_ApplyScale_" data-uid="Godot.Node2D.ApplyScale*"></a>
   <h4 id="Godot_Node2D_ApplyScale_Godot_Vector2_" data-uid="Godot.Node2D.ApplyScale(Godot.Vector2)">ApplyScale(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Multiplies the current scale by the <code>ratio</code> vector.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1338,7 +1353,9 @@
   
   <a id="Godot_Node2D_GetAngleTo_" data-uid="Godot.Node2D.GetAngleTo*"></a>
   <h4 id="Godot_Node2D_GetAngleTo_Godot_Vector2_" data-uid="Godot.Node2D.GetAngleTo(Godot.Vector2)">GetAngleTo(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the angle between the node and the <code>point</code> in radians.</p>
+<p><a href="https://raw.githubusercontent.com/godotengine/godot-docs/master/img/node2d_get_angle_to.png">Illustration of the returned angle.</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1505,7 +1522,8 @@
   
   <a id="Godot_Node2D_GetRelativeTransformToParent_" data-uid="Godot.Node2D.GetRelativeTransformToParent*"></a>
   <h4 id="Godot_Node2D_GetRelativeTransformToParent_Godot_Node_" data-uid="Godot.Node2D.GetRelativeTransformToParent(Godot.Node)">GetRelativeTransformToParent(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Transform2D.html">Transform2D</a> relative to this node&apos;s parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1647,7 +1665,8 @@
   
   <a id="Godot_Node2D_GlobalTranslate_" data-uid="Godot.Node2D.GlobalTranslate*"></a>
   <h4 id="Godot_Node2D_GlobalTranslate_Godot_Vector2_" data-uid="Godot.Node2D.GlobalTranslate(Godot.Vector2)">GlobalTranslate(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the <code>offset</code> vector to the node&apos;s global position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1699,7 +1718,8 @@
   
   <a id="Godot_Node2D_LookAt_" data-uid="Godot.Node2D.LookAt*"></a>
   <h4 id="Godot_Node2D_LookAt_Godot_Vector2_" data-uid="Godot.Node2D.LookAt(Godot.Vector2)">LookAt(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotates the node so it points towards the <code>point</code>, which is expected to use global coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1726,7 +1746,8 @@
   
   <a id="Godot_Node2D_MoveLocalX_" data-uid="Godot.Node2D.MoveLocalX*"></a>
   <h4 id="Godot_Node2D_MoveLocalX_System_Single_System_Boolean_" data-uid="Godot.Node2D.MoveLocalX(System.Single,System.Boolean)">MoveLocalX(Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies a local translation on the node&apos;s X axis based on the <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>&apos;s <code>delta</code>. If <code>scaled</code> is <code>false</code>, normalizes the movement.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1758,7 +1779,8 @@
   
   <a id="Godot_Node2D_MoveLocalY_" data-uid="Godot.Node2D.MoveLocalY*"></a>
   <h4 id="Godot_Node2D_MoveLocalY_System_Single_System_Boolean_" data-uid="Godot.Node2D.MoveLocalY(System.Single,System.Boolean)">MoveLocalY(Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies a local translation on the node&apos;s Y axis based on the <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>&apos;s <code>delta</code>. If <code>scaled</code> is <code>false</code>, normalizes the movement.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1790,7 +1812,8 @@
   
   <a id="Godot_Node2D_Rotate_" data-uid="Godot.Node2D.Rotate*"></a>
   <h4 id="Godot_Node2D_Rotate_System_Single_" data-uid="Godot.Node2D.Rotate(System.Single)">Rotate(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies a rotation to the node, in radians, starting from its current rotation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2141,7 +2164,8 @@
   
   <a id="Godot_Node2D_ToGlobal_" data-uid="Godot.Node2D.ToGlobal*"></a>
   <h4 id="Godot_Node2D_ToGlobal_Godot_Vector2_" data-uid="Godot.Node2D.ToGlobal(Godot.Vector2)">ToGlobal(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Transforms the provided local position into a position in global coordinate space. The input is expected to be local relative to the <a class="xref" href="Godot.Node2D.html">Node2D</a> it is called on. e.g. Applying this method to the positions of child nodes will correctly transform their positions into the global coordinate space, but applying it to a node&apos;s own position will give an incorrect result, as it will incorporate the node&apos;s own transformation into its global position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2183,7 +2207,8 @@
   
   <a id="Godot_Node2D_ToLocal_" data-uid="Godot.Node2D.ToLocal*"></a>
   <h4 id="Godot_Node2D_ToLocal_Godot_Vector2_" data-uid="Godot.Node2D.ToLocal(Godot.Vector2)">ToLocal(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Transforms the provided global position into a position in local coordinate space. The output will be local relative to the <a class="xref" href="Godot.Node2D.html">Node2D</a> it is called on. e.g. It is appropriate for determining the positions of child nodes, but it is not appropriate for determining its own position relative to its parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2225,7 +2250,8 @@
   
   <a id="Godot_Node2D_Translate_" data-uid="Godot.Node2D.Translate*"></a>
   <h4 id="Godot_Node2D_Translate_Godot_Vector2_" data-uid="Godot.Node2D.Translate(Godot.Vector2)">Translate(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Translates the node by the given <code>offset</code> in local coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

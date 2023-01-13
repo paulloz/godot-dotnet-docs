@@ -83,7 +83,12 @@
   
   <h1 id="Godot_EditorInspector" data-uid="Godot.EditorInspector" class="text-break">Class EditorInspector
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This is the control that implements property editing in the editor&apos;s Settings dialogs, the Inspector dock, etc. To get the <a class="xref" href="Godot.EditorInspector.html">EditorInspector</a> used in the editor&apos;s Inspector dock, use <a class="xref" href="Godot.EditorInterface.html#Godot_EditorInterface_GetInspector">GetInspector()</a>.</p>
+<p><a class="xref" href="Godot.EditorInspector.html">EditorInspector</a> will show properties in the same order as the array returned by <a class="xref" href="Godot.Object.html#Godot_Object_GetPropertyList">GetPropertyList()</a>.</p>
+<p>If a property&apos;s name is path-like (i.e. if it contains forward slashes), <a class="xref" href="Godot.EditorInspector.html">EditorInspector</a> will create nested sections for &quot;directories&quot; along the path. For example, if a property is named <code>highlighting/gdscript/node_path_color</code>, it will be shown as &quot;Node Path Color&quot; inside the &quot;GDScript&quot; section nested inside the &quot;Highlighting&quot; section.</p>
+<p>If a property has <code>@GlobalScope.PROPERTY_USAGE_GROUP</code> usage, it will group subsequent properties whose name starts with the property&apos;s hint string. The group ends when a property does not start with that hint string or when a new group starts. An empty group name effectively ends the current group. <a class="xref" href="Godot.EditorInspector.html">EditorInspector</a> will create a top-level section for each group. For example, if a property with group usage is named <code>Collide With</code> and its hint string is <code>collide_with_</code>, a subsequent <code>collide_with_area</code> property will be shown as &quot;Area&quot; inside the &quot;Collide With&quot; section.</p>
+<p>Note: Unlike sections created from path-like property names, <a class="xref" href="Godot.EditorInspector.html">EditorInspector</a> won&apos;t capitalize the name for sections created from groups. So properties with group usage usually use capitalized names instead of snake_cased names.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1537,7 +1542,9 @@
   
   <a id="Godot_EditorInspector_Refresh_" data-uid="Godot.EditorInspector.Refresh*"></a>
   <h4 id="Godot_EditorInspector_Refresh" data-uid="Godot.EditorInspector.Refresh">Refresh()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Refreshes the inspector.</p>
+<p>Note: To save on CPU resources, calling this method will do nothing if the time specified in <code>docks/property_editor/auto_refresh_interval</code> editor setting hasn&apos;t passed yet since this method was last called. (By default, this interval is set to 0.3 seconds.)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

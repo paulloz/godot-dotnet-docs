@@ -83,7 +83,11 @@
   
   <h1 id="Godot_OccluderShapePolygon" data-uid="Godot.OccluderShapePolygon" class="text-break">Class OccluderShapePolygon
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.OccluderShape.html">OccluderShape</a>s are resources used by <a class="xref" href="Godot.Occluder.html">Occluder</a> nodes, allowing geometric occlusion culling.</p>
+<p>The polygon must be a convex polygon. The polygon points can be created and deleted either in the Editor inspector or by calling <code>set_polygon_points</code>. The points of the edges can be set by dragging the handles in the Editor viewport.</p>
+<p>Additionally each polygon occluder can optionally support a single hole. If you add at least three points in the Editor inspector to the hole, you can drag the edge points of the hole in the Editor viewport.</p>
+<p>In general, the lower the number of edges in polygons and holes, the faster the system will operate at runtime, so in most cases you will want to use 4 points for each.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -347,7 +351,8 @@
   
   <a id="Godot_OccluderShapePolygon_HolePoints_" data-uid="Godot.OccluderShapePolygon.HolePoints*"></a>
   <h4 id="Godot_OccluderShapePolygon_HolePoints" data-uid="Godot.OccluderShapePolygon.HolePoints">HolePoints</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allows changing the hole geometry from code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -372,7 +377,8 @@
   
   <a id="Godot_OccluderShapePolygon_PolygonPoints_" data-uid="Godot.OccluderShapePolygon.PolygonPoints*"></a>
   <h4 id="Godot_OccluderShapePolygon_PolygonPoints" data-uid="Godot.OccluderShapePolygon.PolygonPoints">PolygonPoints</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allows changing the polygon geometry from code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -397,7 +403,8 @@
   
   <a id="Godot_OccluderShapePolygon_TwoWay_" data-uid="Godot.OccluderShapePolygon.TwoWay*"></a>
   <h4 id="Godot_OccluderShapePolygon_TwoWay" data-uid="Godot.OccluderShapePolygon.TwoWay">TwoWay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies whether the occluder should operate from both sides. If <code>false</code>, the occluder will operate one way only.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -499,7 +506,8 @@
   
   <a id="Godot_OccluderShapePolygon_SetHolePoint_" data-uid="Godot.OccluderShapePolygon.SetHolePoint*"></a>
   <h4 id="Godot_OccluderShapePolygon_SetHolePoint_System_Int32_Godot_Vector2_" data-uid="Godot.OccluderShapePolygon.SetHolePoint(System.Int32,Godot.Vector2)">SetHolePoint(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an individual hole point position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -558,7 +566,8 @@
   
   <a id="Godot_OccluderShapePolygon_SetPolygonPoint_" data-uid="Godot.OccluderShapePolygon.SetPolygonPoint*"></a>
   <h4 id="Godot_OccluderShapePolygon_SetPolygonPoint_System_Int32_Godot_Vector2_" data-uid="Godot.OccluderShapePolygon.SetPolygonPoint(System.Int32,Godot.Vector2)">SetPolygonPoint(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an individual polygon point position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,9 @@
   
   <h1 id="Godot_NavigationAgent2D" data-uid="Godot.NavigationAgent2D" class="text-break">Class NavigationAgent2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>2D agent that is used in navigation to reach a location while avoiding static and dynamic obstacles. The dynamic obstacles are avoided using RVO (Reciprocal Velocity Obstacles) collision avoidance. The agent needs navigation data to work correctly. By default this node will register to the default <a class="xref" href="Godot.World2D.html">World2D</a> navigation map. If this node is a child of a <a class="xref" href="Godot.Navigation2D.html">Navigation2D</a> node it will register to the navigation map of the navigation node or the function <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_SetNavigation_Godot_Node_">SetNavigation(Node)</a> can be used to set the navigation node directly. <a class="xref" href="Godot.NavigationAgent2D.html">NavigationAgent2D</a> is physics safe.</p>
+<p>Note: After <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_SetTargetLocation_Godot_Vector2_">SetTargetLocation(Vector2)</a> is used it is required to use the <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_GetNextLocation">GetNextLocation()</a> function once every physics frame to update the internal path logic of the NavigationAgent. The returned vector position from this function should be used as the next movement position for the agent&apos;s parent Node.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -753,7 +755,8 @@
   
   <a id="Godot_NavigationAgent2D_AvoidanceEnabled_" data-uid="Godot.NavigationAgent2D.AvoidanceEnabled*"></a>
   <h4 id="Godot_NavigationAgent2D_AvoidanceEnabled" data-uid="Godot.NavigationAgent2D.AvoidanceEnabled">AvoidanceEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code> the agent is registered for an RVO avoidance callback on the <a class="xref" href="Godot.Navigation2DServer.html">Navigation2DServer</a>. When <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_SetVelocity_Godot_Vector2_">SetVelocity(Vector2)</a> is used and the processing is completed a <code>safe_velocity</code> Vector2 is received with a signal connection to <code>velocity_computed</code>. Avoidance processing with many registered agents has a significant performance cost and should only be enabled on agents that currently require it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -778,7 +781,8 @@
   
   <a id="Godot_NavigationAgent2D_MaxNeighbors_" data-uid="Godot.NavigationAgent2D.MaxNeighbors*"></a>
   <h4 id="Godot_NavigationAgent2D_MaxNeighbors" data-uid="Godot.NavigationAgent2D.MaxNeighbors">MaxNeighbors</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of neighbors for the agent to consider.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -803,7 +807,8 @@
   
   <a id="Godot_NavigationAgent2D_MaxSpeed_" data-uid="Godot.NavigationAgent2D.MaxSpeed*"></a>
   <h4 id="Godot_NavigationAgent2D_MaxSpeed" data-uid="Godot.NavigationAgent2D.MaxSpeed">MaxSpeed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum speed that an agent can move.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -828,7 +833,8 @@
   
   <a id="Godot_NavigationAgent2D_NavigationLayers_" data-uid="Godot.NavigationAgent2D.NavigationLayers*"></a>
   <h4 id="Godot_NavigationAgent2D_NavigationLayers" data-uid="Godot.NavigationAgent2D.NavigationLayers">NavigationLayers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A bitfield determining all navigation map layers the <a class="xref" href="Godot.NavigationAgent2D.html">NavigationAgent2D</a> belongs to. On path requests the agent will ignore navmeshes without at least one matching layer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -853,7 +859,8 @@
   
   <a id="Godot_NavigationAgent2D_NeighborDist_" data-uid="Godot.NavigationAgent2D.NeighborDist*"></a>
   <h4 id="Godot_NavigationAgent2D_NeighborDist" data-uid="Godot.NavigationAgent2D.NeighborDist">NeighborDist</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The distance to search for other agents.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -878,7 +885,8 @@
   
   <a id="Godot_NavigationAgent2D_PathDesiredDistance_" data-uid="Godot.NavigationAgent2D.PathDesiredDistance*"></a>
   <h4 id="Godot_NavigationAgent2D_PathDesiredDistance" data-uid="Godot.NavigationAgent2D.PathDesiredDistance">PathDesiredDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The distance threshold before a path point is considered to be reached. This will allow an agent to not have to hit a path point on the path exactly, but in the area. If this value is set to high the NavigationAgent will skip points on the path which can lead to leaving the navigation mesh. If this value is set to low the NavigationAgent will be stuck in a repath loop cause it will constantly overshoot or undershoot the distance to the next point on each physics frame update.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -903,7 +911,8 @@
   
   <a id="Godot_NavigationAgent2D_PathMaxDistance_" data-uid="Godot.NavigationAgent2D.PathMaxDistance*"></a>
   <h4 id="Godot_NavigationAgent2D_PathMaxDistance" data-uid="Godot.NavigationAgent2D.PathMaxDistance">PathMaxDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum distance the agent is allowed away from the ideal path to the final location. This can happen due to trying to avoid collisions. When the maximum distance is exceeded, it recalculates the ideal path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -928,7 +937,9 @@
   
   <a id="Godot_NavigationAgent2D_Radius_" data-uid="Godot.NavigationAgent2D.Radius*"></a>
   <h4 id="Godot_NavigationAgent2D_Radius" data-uid="Godot.NavigationAgent2D.Radius">Radius</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The radius of the avoidance agent. This is the &quot;body&quot; of the avoidance agent and not the avoidance maneuver starting radius (which is controlled by <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_NeighborDist">NeighborDist</a>).</p>
+<p>Does not affect normal pathfinding.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -953,7 +964,8 @@
   
   <a id="Godot_NavigationAgent2D_TargetDesiredDistance_" data-uid="Godot.NavigationAgent2D.TargetDesiredDistance*"></a>
   <h4 id="Godot_NavigationAgent2D_TargetDesiredDistance" data-uid="Godot.NavigationAgent2D.TargetDesiredDistance">TargetDesiredDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The distance threshold before the final target point is considered to be reached. This will allow an agent to not have to hit the point of the final target exactly, but only the area. If this value is set to low the NavigationAgent will be stuck in a repath loop cause it will constantly overshoot or undershoot the distance to the final target point on each physics frame update.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -978,7 +990,8 @@
   
   <a id="Godot_NavigationAgent2D_TimeHorizon_" data-uid="Godot.NavigationAgent2D.TimeHorizon*"></a>
   <h4 id="Godot_NavigationAgent2D_TimeHorizon" data-uid="Godot.NavigationAgent2D.TimeHorizon">TimeHorizon</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimal amount of time for which this agent&apos;s velocities, that are computed with the collision avoidance algorithm, are safe with respect to other agents. The larger the number, the sooner the agent will respond to other agents, but the less freedom in choosing its velocities. Must be positive.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1005,7 +1018,8 @@
   
   <a id="Godot_NavigationAgent2D_DistanceToTarget_" data-uid="Godot.NavigationAgent2D.DistanceToTarget*"></a>
   <h4 id="Godot_NavigationAgent2D_DistanceToTarget" data-uid="Godot.NavigationAgent2D.DistanceToTarget">DistanceToTarget()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the distance to the target location, using the agent&apos;s global position. The user must set the target location with <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_SetTargetLocation_Godot_Vector2_">SetTargetLocation(Vector2)</a> in order for this to be accurate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1055,7 +1069,8 @@
   
   <a id="Godot_NavigationAgent2D_GetFinalLocation_" data-uid="Godot.NavigationAgent2D.GetFinalLocation*"></a>
   <h4 id="Godot_NavigationAgent2D_GetFinalLocation" data-uid="Godot.NavigationAgent2D.GetFinalLocation">GetFinalLocation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the reachable final location in global coordinates. This can change if the navigation path is altered in any way. Because of this, it would be best to check this each frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1130,7 +1145,8 @@
   
   <a id="Godot_NavigationAgent2D_GetNavigation_" data-uid="Godot.NavigationAgent2D.GetNavigation*"></a>
   <h4 id="Godot_NavigationAgent2D_GetNavigation" data-uid="Godot.NavigationAgent2D.GetNavigation">GetNavigation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Navigation2D.html">Navigation2D</a> node that the agent is using for its navigation system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1180,7 +1196,8 @@
   
   <a id="Godot_NavigationAgent2D_GetNavigationMap_" data-uid="Godot.NavigationAgent2D.GetNavigationMap*"></a>
   <h4 id="Godot_NavigationAgent2D_GetNavigationMap" data-uid="Godot.NavigationAgent2D.GetNavigationMap">GetNavigationMap()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.RID.html">RID</a> of the navigation map for this NavigationAgent node. This function returns always the map set on the NavigationAgent node and not the map of the abstract agent on the NavigationServer. If the agent map is changed directly with the NavigationServer API the NavigationAgent node will not be aware of the map change. Use <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_SetNavigationMap_Godot_RID_">SetNavigationMap(RID)</a> to change the navigation map for the NavigationAgent and also update the agent on the NavigationServer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1205,7 +1222,8 @@
   
   <a id="Godot_NavigationAgent2D_GetNavPath_" data-uid="Godot.NavigationAgent2D.GetNavPath*"></a>
   <h4 id="Godot_NavigationAgent2D_GetNavPath" data-uid="Godot.NavigationAgent2D.GetNavPath">GetNavPath()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns this agent&apos;s current path from start to finish in global coordinates. The path only updates when the target location is changed or the agent requires a repath. The path array is not intended to be used in direct path movement as the agent has its own internal path logic that would get corrupted by changing the path array manually. Use the intended <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_GetNextLocation">GetNextLocation()</a> once every physics frame to receive the next path point for the agents movement as this function also updates the internal path logic.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1230,7 +1248,8 @@
   
   <a id="Godot_NavigationAgent2D_GetNavPathIndex_" data-uid="Godot.NavigationAgent2D.GetNavPathIndex*"></a>
   <h4 id="Godot_NavigationAgent2D_GetNavPathIndex" data-uid="Godot.NavigationAgent2D.GetNavPathIndex">GetNavPathIndex()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns which index the agent is currently on in the navigation path&apos;s <a class="xref" href="Godot.Vector2.html">Vector2</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1280,7 +1299,8 @@
   
   <a id="Godot_NavigationAgent2D_GetNextLocation_" data-uid="Godot.NavigationAgent2D.GetNextLocation*"></a>
   <h4 id="Godot_NavigationAgent2D_GetNextLocation" data-uid="Godot.NavigationAgent2D.GetNextLocation">GetNextLocation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next location in global coordinates that can be moved to, making sure that there are no static objects in the way. If the agent does not have a navigation path, it will return the position of the agent&apos;s parent. The use of this function once every physics frame is required to update the internal path logic of the NavigationAgent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1380,7 +1400,8 @@
   
   <a id="Godot_NavigationAgent2D_GetRid_" data-uid="Godot.NavigationAgent2D.GetRid*"></a>
   <h4 id="Godot_NavigationAgent2D_GetRid" data-uid="Godot.NavigationAgent2D.GetRid">GetRid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.RID.html">RID</a> of this agent on the <a class="xref" href="Godot.Navigation2DServer.html">Navigation2DServer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1430,7 +1451,8 @@
   
   <a id="Godot_NavigationAgent2D_GetTargetLocation_" data-uid="Godot.NavigationAgent2D.GetTargetLocation*"></a>
   <h4 id="Godot_NavigationAgent2D_GetTargetLocation" data-uid="Godot.NavigationAgent2D.GetTargetLocation">GetTargetLocation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the user-defined target location (set with <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_SetTargetLocation_Godot_Vector2_">SetTargetLocation(Vector2)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1480,7 +1502,8 @@
   
   <a id="Godot_NavigationAgent2D_IsNavigationFinished_" data-uid="Godot.NavigationAgent2D.IsNavigationFinished*"></a>
   <h4 id="Godot_NavigationAgent2D_IsNavigationFinished" data-uid="Godot.NavigationAgent2D.IsNavigationFinished">IsNavigationFinished()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the navigation path&apos;s final location has been reached.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1505,7 +1528,8 @@
   
   <a id="Godot_NavigationAgent2D_IsTargetReachable_" data-uid="Godot.NavigationAgent2D.IsTargetReachable*"></a>
   <h4 id="Godot_NavigationAgent2D_IsTargetReachable" data-uid="Godot.NavigationAgent2D.IsTargetReachable">IsTargetReachable()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the target location is reachable. The target location is set using <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_SetTargetLocation_Godot_Vector2_">SetTargetLocation(Vector2)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1530,7 +1554,8 @@
   
   <a id="Godot_NavigationAgent2D_IsTargetReached_" data-uid="Godot.NavigationAgent2D.IsTargetReached*"></a>
   <h4 id="Godot_NavigationAgent2D_IsTargetReached" data-uid="Godot.NavigationAgent2D.IsTargetReached">IsTargetReached()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the target location is reached. The target location is set using <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_SetTargetLocation_Godot_Vector2_">SetTargetLocation(Vector2)</a>. It may not always be possible to reach the target location. It should always be possible to reach the final location though. See <a class="xref" href="Godot.NavigationAgent2D.html#Godot_NavigationAgent2D_GetFinalLocation">GetFinalLocation()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1636,7 +1661,8 @@
   
   <a id="Godot_NavigationAgent2D_SetNavigation_" data-uid="Godot.NavigationAgent2D.SetNavigation*"></a>
   <h4 id="Godot_NavigationAgent2D_SetNavigation_Godot_Node_" data-uid="Godot.NavigationAgent2D.SetNavigation(Godot.Node)">SetNavigation(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Navigation2D.html">Navigation2D</a> node used by the agent. Useful when you don&apos;t want to make the agent a child of a <a class="xref" href="Godot.Navigation2D.html">Navigation2D</a> node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1690,7 +1716,8 @@
   
   <a id="Godot_NavigationAgent2D_SetNavigationMap_" data-uid="Godot.NavigationAgent2D.SetNavigationMap*"></a>
   <h4 id="Godot_NavigationAgent2D_SetNavigationMap_Godot_RID_" data-uid="Godot.NavigationAgent2D.SetNavigationMap(Godot.RID)">SetNavigationMap(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.RID.html">RID</a> of the navigation map this NavigationAgent node should use and also updates the <code>agent</code> on the NavigationServer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1852,7 +1879,8 @@
   
   <a id="Godot_NavigationAgent2D_SetTargetLocation_" data-uid="Godot.NavigationAgent2D.SetTargetLocation*"></a>
   <h4 id="Godot_NavigationAgent2D_SetTargetLocation_Godot_Vector2_" data-uid="Godot.NavigationAgent2D.SetTargetLocation(Godot.Vector2)">SetTargetLocation(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the user desired final location. This will clear the current navigation path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1906,7 +1934,8 @@
   
   <a id="Godot_NavigationAgent2D_SetVelocity_" data-uid="Godot.NavigationAgent2D.SetVelocity*"></a>
   <h4 id="Godot_NavigationAgent2D_SetVelocity_Godot_Vector2_" data-uid="Godot.NavigationAgent2D.SetVelocity(Godot.Vector2)">SetVelocity(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends the passed in velocity to the collision avoidance algorithm. It will adjust the velocity to avoid collisions. Once the adjustment to the velocity is complete, it will emit the <code>velocity_computed</code> signal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

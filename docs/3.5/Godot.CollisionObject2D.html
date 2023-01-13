@@ -83,7 +83,9 @@
   
   <h1 id="Godot_CollisionObject2D" data-uid="Godot.CollisionObject2D" class="text-break">Class CollisionObject2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>CollisionObject2D is the base class for 2D physics objects. It can hold any number of 2D collision <a class="xref" href="Godot.Shape2D.html">Shape2D</a>s. Each shape must be assigned to a shape owner. The CollisionObject2D can have any number of shape owners. Shape owners are not nodes and do not appear in the editor, but are accessible through code using the <code>shape_owner_*</code> methods.</p>
+<p>Note: Only collisions between objects within the same canvas (<a class="xref" href="Godot.Viewport.html">Viewport</a> canvas or <a class="xref" href="Godot.CanvasLayer.html">CanvasLayer</a>) are supported. The behavior of collisions between objects in different canvases is undefined.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1102,7 +1104,9 @@
   
   <a id="Godot_CollisionObject2D_CollisionLayer_" data-uid="Godot.CollisionObject2D.CollisionLayer*"></a>
   <h4 id="Godot_CollisionObject2D_CollisionLayer" data-uid="Godot.CollisionObject2D.CollisionLayer">CollisionLayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics layers this CollisionObject2D is in. Collision objects can exist in one or more of 32 different layers. See also <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_CollisionMask">CollisionMask</a>.</p>
+<p>Note: A contact is detected if object A is in any of the layers that object B scans, or object B is in any layers that object A scans. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1127,7 +1131,9 @@
   
   <a id="Godot_CollisionObject2D_CollisionMask_" data-uid="Godot.CollisionObject2D.CollisionMask*"></a>
   <h4 id="Godot_CollisionObject2D_CollisionMask" data-uid="Godot.CollisionObject2D.CollisionMask">CollisionMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics layers this CollisionObject2D scans. Collision objects can scan one or more of 32 different layers. See also <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_CollisionLayer">CollisionLayer</a>.</p>
+<p>Note: A contact is detected if object A is in any of the layers that object B scans, or object B is in any layers that object A scans. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1152,7 +1158,8 @@
   
   <a id="Godot_CollisionObject2D_InputPickable_" data-uid="Godot.CollisionObject2D.InputPickable*"></a>
   <h4 id="Godot_CollisionObject2D_InputPickable" data-uid="Godot.CollisionObject2D.InputPickable">InputPickable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this object is pickable. A pickable object can detect the mouse pointer entering/leaving, and if the mouse is inside it, report input events. Requires at least one <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_CollisionLayer">CollisionLayer</a> bit to be set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1179,7 +1186,8 @@
   
   <a id="Godot_CollisionObject2D__InputEvent_" data-uid="Godot.CollisionObject2D._InputEvent*"></a>
   <h4 id="Godot_CollisionObject2D__InputEvent_Godot_Object_Godot_InputEvent_System_Int32_" data-uid="Godot.CollisionObject2D._InputEvent(Godot.Object,Godot.InputEvent,System.Int32)">_InputEvent(Object, InputEvent, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Accepts unhandled <a class="xref" href="Godot.InputEvent.html">InputEvent</a>s. Requires <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_InputPickable">InputPickable</a> to be <code>true</code>. <code>shape_idx</code> is the child index of the clicked <a class="xref" href="Godot.Shape2D.html">Shape2D</a>. Connect to the <code>input_event</code> signal to easily pick up these events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1216,7 +1224,8 @@
   
   <a id="Godot_CollisionObject2D_CreateShapeOwner_" data-uid="Godot.CollisionObject2D.CreateShapeOwner*"></a>
   <h4 id="Godot_CollisionObject2D_CreateShapeOwner_Godot_Object_" data-uid="Godot.CollisionObject2D.CreateShapeOwner(Godot.Object)">CreateShapeOwner(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new shape owner for the given object. Returns <code>owner_id</code> of the new owner for future reference.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1283,7 +1292,8 @@
   
   <a id="Godot_CollisionObject2D_GetCollisionLayerBit_" data-uid="Godot.CollisionObject2D.GetCollisionLayerBit*"></a>
   <h4 id="Godot_CollisionObject2D_GetCollisionLayerBit_System_Int32_" data-uid="Godot.CollisionObject2D.GetCollisionLayerBit(System.Int32)">GetCollisionLayerBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether or not the specified <code>bit</code> of the <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_CollisionLayer">CollisionLayer</a> is set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1350,7 +1360,8 @@
   
   <a id="Godot_CollisionObject2D_GetCollisionMaskBit_" data-uid="Godot.CollisionObject2D.GetCollisionMaskBit*"></a>
   <h4 id="Godot_CollisionObject2D_GetCollisionMaskBit_System_Int32_" data-uid="Godot.CollisionObject2D.GetCollisionMaskBit(System.Int32)">GetCollisionMaskBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether or not the specified <code>bit</code> of the <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_CollisionMask">CollisionMask</a> is set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1392,7 +1403,8 @@
   
   <a id="Godot_CollisionObject2D_GetRid_" data-uid="Godot.CollisionObject2D.GetRid*"></a>
   <h4 id="Godot_CollisionObject2D_GetRid" data-uid="Godot.CollisionObject2D.GetRid">GetRid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the object&apos;s <a class="xref" href="Godot.RID.html">RID</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1417,7 +1429,8 @@
   
   <a id="Godot_CollisionObject2D_GetShapeOwnerOneWayCollisionMargin_" data-uid="Godot.CollisionObject2D.GetShapeOwnerOneWayCollisionMargin*"></a>
   <h4 id="Godot_CollisionObject2D_GetShapeOwnerOneWayCollisionMargin_System_UInt32_" data-uid="Godot.CollisionObject2D.GetShapeOwnerOneWayCollisionMargin(System.UInt32)">GetShapeOwnerOneWayCollisionMargin(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <code>one_way_collision_margin</code> of the shape owner identified by given <code>owner_id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1459,7 +1472,8 @@
   
   <a id="Godot_CollisionObject2D_GetShapeOwners_" data-uid="Godot.CollisionObject2D.GetShapeOwners*"></a>
   <h4 id="Godot_CollisionObject2D_GetShapeOwners" data-uid="Godot.CollisionObject2D.GetShapeOwners">GetShapeOwners()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an <a class="xref" href="Godot.Collections.Array.html">Array</a> of <code>owner_id</code> identifiers. You can use these ids in other methods that take <code>owner_id</code> as an argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1509,7 +1523,8 @@
   
   <a id="Godot_CollisionObject2D_IsShapeOwnerDisabled_" data-uid="Godot.CollisionObject2D.IsShapeOwnerDisabled*"></a>
   <h4 id="Godot_CollisionObject2D_IsShapeOwnerDisabled_System_UInt32_" data-uid="Godot.CollisionObject2D.IsShapeOwnerDisabled(System.UInt32)">IsShapeOwnerDisabled(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the shape owner and its shapes are disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1551,7 +1566,8 @@
   
   <a id="Godot_CollisionObject2D_IsShapeOwnerOneWayCollisionEnabled_" data-uid="Godot.CollisionObject2D.IsShapeOwnerOneWayCollisionEnabled*"></a>
   <h4 id="Godot_CollisionObject2D_IsShapeOwnerOneWayCollisionEnabled_System_UInt32_" data-uid="Godot.CollisionObject2D.IsShapeOwnerOneWayCollisionEnabled(System.UInt32)">IsShapeOwnerOneWayCollisionEnabled(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if collisions for the shape owner originating from this <a class="xref" href="Godot.CollisionObject2D.html">CollisionObject2D</a> will not be reported to collided with <a class="xref" href="Godot.CollisionObject2D.html">CollisionObject2D</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1593,7 +1609,8 @@
   
   <a id="Godot_CollisionObject2D_RemoveShapeOwner_" data-uid="Godot.CollisionObject2D.RemoveShapeOwner*"></a>
   <h4 id="Godot_CollisionObject2D_RemoveShapeOwner_System_UInt32_" data-uid="Godot.CollisionObject2D.RemoveShapeOwner(System.UInt32)">RemoveShapeOwner(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the given shape owner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1647,7 +1664,9 @@
   
   <a id="Godot_CollisionObject2D_SetCollisionLayerBit_" data-uid="Godot.CollisionObject2D.SetCollisionLayerBit*"></a>
   <h4 id="Godot_CollisionObject2D_SetCollisionLayerBit_System_Int32_System_Boolean_" data-uid="Godot.CollisionObject2D.SetCollisionLayerBit(System.Int32,System.Boolean)">SetCollisionLayerBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>value</code> is <code>true</code>, sets the specified <code>bit</code> in the <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_CollisionLayer">CollisionLayer</a>.</p>
+<p>If <code>value</code> is <code>false</code>, clears the specified <code>bit</code> in the <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_CollisionLayer">CollisionLayer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1706,7 +1725,9 @@
   
   <a id="Godot_CollisionObject2D_SetCollisionMaskBit_" data-uid="Godot.CollisionObject2D.SetCollisionMaskBit*"></a>
   <h4 id="Godot_CollisionObject2D_SetCollisionMaskBit_System_Int32_System_Boolean_" data-uid="Godot.CollisionObject2D.SetCollisionMaskBit(System.Int32,System.Boolean)">SetCollisionMaskBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>value</code> is <code>true</code>, sets the specified <code>bit</code> in the <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_CollisionMask">CollisionMask</a>.</p>
+<p>If <code>value</code> is <code>false</code>, clears the specified <code>bit</code> in the <a class="xref" href="Godot.CollisionObject2D.html#Godot_CollisionObject2D_CollisionMask">CollisionMask</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1765,7 +1786,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeFindOwner_" data-uid="Godot.CollisionObject2D.ShapeFindOwner*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeFindOwner_System_Int32_" data-uid="Godot.CollisionObject2D.ShapeFindOwner(System.Int32)">ShapeFindOwner(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <code>owner_id</code> of the given shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1807,7 +1829,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerAddShape_" data-uid="Godot.CollisionObject2D.ShapeOwnerAddShape*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerAddShape_System_UInt32_Godot_Shape2D_" data-uid="Godot.CollisionObject2D.ShapeOwnerAddShape(System.UInt32,Godot.Shape2D)">ShapeOwnerAddShape(UInt32, Shape2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Godot.Shape2D.html">Shape2D</a> to the shape owner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1839,7 +1862,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerClearShapes_" data-uid="Godot.CollisionObject2D.ShapeOwnerClearShapes*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerClearShapes_System_UInt32_" data-uid="Godot.CollisionObject2D.ShapeOwnerClearShapes(System.UInt32)">ShapeOwnerClearShapes(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all shapes from the shape owner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1866,7 +1890,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerGetOwner_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetOwner*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerGetOwner_System_UInt32_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetOwner(System.UInt32)">ShapeOwnerGetOwner(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the parent object of the given shape owner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1908,7 +1933,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerGetShape_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetShape*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerGetShape_System_UInt32_System_Int32_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetShape(System.UInt32,System.Int32)">ShapeOwnerGetShape(UInt32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Shape2D.html">Shape2D</a> with the given id from the given shape owner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1955,7 +1981,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerGetShapeCount_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetShapeCount*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerGetShapeCount_System_UInt32_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetShapeCount(System.UInt32)">ShapeOwnerGetShapeCount(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of shapes the given shape owner contains.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1997,7 +2024,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerGetShapeIndex_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetShapeIndex*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerGetShapeIndex_System_UInt32_System_Int32_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetShapeIndex(System.UInt32,System.Int32)">ShapeOwnerGetShapeIndex(UInt32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the child index of the <a class="xref" href="Godot.Shape2D.html">Shape2D</a> with the given id from the given shape owner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2044,7 +2072,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerGetTransform_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetTransform*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerGetTransform_System_UInt32_" data-uid="Godot.CollisionObject2D.ShapeOwnerGetTransform(System.UInt32)">ShapeOwnerGetTransform(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the shape owner&apos;s <a class="xref" href="Godot.Transform2D.html">Transform2D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2086,7 +2115,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerRemoveShape_" data-uid="Godot.CollisionObject2D.ShapeOwnerRemoveShape*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerRemoveShape_System_UInt32_System_Int32_" data-uid="Godot.CollisionObject2D.ShapeOwnerRemoveShape(System.UInt32,System.Int32)">ShapeOwnerRemoveShape(UInt32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a shape from the given shape owner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2118,7 +2148,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerSetDisabled_" data-uid="Godot.CollisionObject2D.ShapeOwnerSetDisabled*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerSetDisabled_System_UInt32_System_Boolean_" data-uid="Godot.CollisionObject2D.ShapeOwnerSetDisabled(System.UInt32,System.Boolean)">ShapeOwnerSetDisabled(UInt32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, disables the given shape owner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2150,7 +2181,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerSetOneWayCollision_" data-uid="Godot.CollisionObject2D.ShapeOwnerSetOneWayCollision*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerSetOneWayCollision_System_UInt32_System_Boolean_" data-uid="Godot.CollisionObject2D.ShapeOwnerSetOneWayCollision(System.UInt32,System.Boolean)">ShapeOwnerSetOneWayCollision(UInt32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>enable</code> is <code>true</code>, collisions for the shape owner originating from this <a class="xref" href="Godot.CollisionObject2D.html">CollisionObject2D</a> will not be reported to collided with <a class="xref" href="Godot.CollisionObject2D.html">CollisionObject2D</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2182,7 +2214,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerSetOneWayCollisionMargin_" data-uid="Godot.CollisionObject2D.ShapeOwnerSetOneWayCollisionMargin*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerSetOneWayCollisionMargin_System_UInt32_System_Single_" data-uid="Godot.CollisionObject2D.ShapeOwnerSetOneWayCollisionMargin(System.UInt32,System.Single)">ShapeOwnerSetOneWayCollisionMargin(UInt32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <code>one_way_collision_margin</code> of the shape owner identified by given <code>owner_id</code> to <code>margin</code> pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2214,7 +2247,8 @@
   
   <a id="Godot_CollisionObject2D_ShapeOwnerSetTransform_" data-uid="Godot.CollisionObject2D.ShapeOwnerSetTransform*"></a>
   <h4 id="Godot_CollisionObject2D_ShapeOwnerSetTransform_System_UInt32_Godot_Transform2D_" data-uid="Godot.CollisionObject2D.ShapeOwnerSetTransform(System.UInt32,Godot.Transform2D)">ShapeOwnerSetTransform(UInt32, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Transform2D.html">Transform2D</a> of the given shape owner.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

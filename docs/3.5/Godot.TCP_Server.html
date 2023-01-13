@@ -83,7 +83,8 @@
   
   <h1 id="Godot_TCP_Server" data-uid="Godot.TCP_Server" class="text-break">Class TCP_Server
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A TCP server. Listens to connections on a port and returns a <a class="xref" href="Godot.StreamPeerTCP.html">StreamPeerTCP</a> when it gets an incoming connection.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +298,8 @@
   
   <a id="Godot_TCP_Server_IsConnectionAvailable_" data-uid="Godot.TCP_Server.IsConnectionAvailable*"></a>
   <h4 id="Godot_TCP_Server_IsConnectionAvailable" data-uid="Godot.TCP_Server.IsConnectionAvailable">IsConnectionAvailable()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a connection is available for taking.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +324,8 @@
   
   <a id="Godot_TCP_Server_IsListening_" data-uid="Godot.TCP_Server.IsListening*"></a>
   <h4 id="Godot_TCP_Server_IsListening" data-uid="Godot.TCP_Server.IsListening">IsListening()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the server is currently listening for connections.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -347,7 +350,11 @@
   
   <a id="Godot_TCP_Server_Listen_" data-uid="Godot.TCP_Server.Listen*"></a>
   <h4 id="Godot_TCP_Server_Listen_System_UInt16_System_String_" data-uid="Godot.TCP_Server.Listen(System.UInt16,System.String)">Listen(UInt16, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Listen on the <code>port</code> binding to <code>bind_address</code>.</p>
+<p>If <code>bind_address</code> is set as <code>&quot;*&quot;</code> (default), the server will listen on all available addresses (both IPv4 and IPv6).</p>
+<p>If <code>bind_address</code> is set as <code>&quot;0.0.0.0&quot;</code> (for IPv4) or <code>&quot;::&quot;</code> (for IPv6), the server will listen on all available addresses matching that IP type.</p>
+<p>If <code>bind_address</code> is set to any valid address (e.g. <code>&quot;192.168.1.101&quot;</code>, <code>&quot;::1&quot;</code>, etc), the server will only listen on the interface with that addresses (or fail if no interface with the given address exists).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -394,7 +401,8 @@
   
   <a id="Godot_TCP_Server_Stop_" data-uid="Godot.TCP_Server.Stop*"></a>
   <h4 id="Godot_TCP_Server_Stop" data-uid="Godot.TCP_Server.Stop">Stop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops listening.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -404,7 +412,8 @@
   
   <a id="Godot_TCP_Server_TakeConnection_" data-uid="Godot.TCP_Server.TakeConnection*"></a>
   <h4 id="Godot_TCP_Server_TakeConnection" data-uid="Godot.TCP_Server.TakeConnection">TakeConnection()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If a connection is available, returns a StreamPeerTCP with the connection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

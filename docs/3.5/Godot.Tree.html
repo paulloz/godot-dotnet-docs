@@ -83,7 +83,19 @@
   
   <h1 id="Godot_Tree" data-uid="Godot.Tree" class="text-break">Class Tree
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This shows a tree of items that can be selected, expanded and collapsed. The tree can have multiple columns with custom controls like text editing, buttons and popups. It can be useful for structured displays and interactions.</p>
+<p>Trees are built via code, using <a class="xref" href="Godot.TreeItem.html">TreeItem</a> objects to create the structure. They have a single root but multiple roots can be simulated if a dummy hidden root is added.</p>
+<p><pre><code>func _ready():
+    var tree = Tree.new()
+    var root = tree.create_item()
+    tree.set_hide_root(true)
+    var child1 = tree.create_item(root)
+    var child2 = tree.create_item(root)
+    var subchild1 = tree.create_item(child1)
+    subchild1.set_text(0, &quot;Subchild1&quot;)</code></pre></p>
+<p>To iterate over all the <a class="xref" href="Godot.TreeItem.html">TreeItem</a> objects in a <a class="xref" href="Godot.Tree.html">Tree</a> object, use <a class="xref" href="Godot.TreeItem.html#Godot_TreeItem_GetNext">GetNext()</a> and <a class="xref" href="Godot.TreeItem.html#Godot_TreeItem_GetChildren">GetChildren()</a> after getting the root through <a class="xref" href="Godot.Tree.html#Godot_Tree_GetRoot">GetRoot()</a>. You can use <a class="xref" href="Godot.Object.html#Godot_Object_Free">Free()</a> on a <a class="xref" href="Godot.TreeItem.html">TreeItem</a> to remove it from the <a class="xref" href="Godot.Tree.html">Tree</a>.</p>
+<p>Incremental search: Like <a class="xref" href="Godot.ItemList.html">ItemList</a> and <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a>, <a class="xref" href="Godot.Tree.html">Tree</a> supports searching within the list while the control is focused. Press a key that matches the first letter of an item&apos;s name to select the first item starting with the given letter. After that point, there are two ways to perform incremental search: 1) Press the same key again before the timeout duration to select the next item starting with the same letter. 2) Press letter keys that match the rest of the word before the timeout duration to match to select the item in question directly. Both of these actions will be reset to the beginning of the list if the timeout duration has passed since the last keystroke was registered. You can adjust the timeout duration by changing .</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1463,7 +1475,8 @@
   
   <a id="Godot_Tree_AllowReselect_" data-uid="Godot.Tree.AllowReselect*"></a>
   <h4 id="Godot_Tree_AllowReselect" data-uid="Godot.Tree.AllowReselect">AllowReselect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the currently selected cell may be selected again.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1488,7 +1501,8 @@
   
   <a id="Godot_Tree_AllowRmbSelect_" data-uid="Godot.Tree.AllowRmbSelect*"></a>
   <h4 id="Godot_Tree_AllowRmbSelect" data-uid="Godot.Tree.AllowRmbSelect">AllowRmbSelect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, a right mouse button click can select items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1513,7 +1527,8 @@
   
   <a id="Godot_Tree_Columns_" data-uid="Godot.Tree.Columns*"></a>
   <h4 id="Godot_Tree_Columns" data-uid="Godot.Tree.Columns">Columns</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of columns.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1538,7 +1553,8 @@
   
   <a id="Godot_Tree_ColumnTitlesVisible_" data-uid="Godot.Tree.ColumnTitlesVisible*"></a>
   <h4 id="Godot_Tree_ColumnTitlesVisible" data-uid="Godot.Tree.ColumnTitlesVisible">ColumnTitlesVisible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, column titles are visible.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1563,7 +1579,9 @@
   
   <a id="Godot_Tree_DropModeFlags_" data-uid="Godot.Tree.DropModeFlags*"></a>
   <h4 id="Godot_Tree_DropModeFlags" data-uid="Godot.Tree.DropModeFlags">DropModeFlags</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The drop mode as an OR combination of flags. See <a class="xref" href="Godot.Tree.DropModeFlagsEnum.html">Tree.DropModeFlagsEnum</a> constants. Once dropping is done, reverts to <a class="xref" href="Godot.Tree.DropModeFlagsEnum.html#Godot_Tree_DropModeFlagsEnum_Disabled">Disabled</a>. Setting this during <a class="xref" href="Godot.Control.html#Godot_Control_CanDropData_Godot_Vector2_System_Object_">CanDropData(Vector2, Object)</a> is recommended.</p>
+<p>This controls the drop sections, i.e. the decision and drawing of possible drop locations based on the mouse position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1588,7 +1606,8 @@
   
   <a id="Godot_Tree_HideFolding_" data-uid="Godot.Tree.HideFolding*"></a>
   <h4 id="Godot_Tree_HideFolding" data-uid="Godot.Tree.HideFolding">HideFolding</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the folding arrow is hidden.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1613,7 +1632,8 @@
   
   <a id="Godot_Tree_HideRoot_" data-uid="Godot.Tree.HideRoot*"></a>
   <h4 id="Godot_Tree_HideRoot" data-uid="Godot.Tree.HideRoot">HideRoot</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the tree&apos;s root is hidden.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1638,7 +1658,8 @@
   
   <a id="Godot_Tree_SelectMode_" data-uid="Godot.Tree.SelectMode*"></a>
   <h4 id="Godot_Tree_SelectMode" data-uid="Godot.Tree.SelectMode">SelectMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allows single or multiple selection. See the <a class="xref" href="Godot.Tree.SelectModeEnum.html">Tree.SelectModeEnum</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1690,7 +1711,8 @@
   
   <a id="Godot_Tree_Clear_" data-uid="Godot.Tree.Clear*"></a>
   <h4 id="Godot_Tree_Clear" data-uid="Godot.Tree.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the tree. This removes all items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1700,7 +1722,10 @@
   
   <a id="Godot_Tree_CreateItem_" data-uid="Godot.Tree.CreateItem*"></a>
   <h4 id="Godot_Tree_CreateItem_Godot_Object_System_Int32_" data-uid="Godot.Tree.CreateItem(Godot.Object,System.Int32)">CreateItem(Object, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates an item in the tree and adds it as a child of <code>parent</code>, which can be either a valid <a class="xref" href="Godot.TreeItem.html">TreeItem</a> or <code>null</code>.</p>
+<p>If <code>parent</code> is <code>null</code>, the root item will be the parent, or the new item will be the root itself if the tree is empty.</p>
+<p>The new item will be the <code>idx</code>th child of parent, or it will be the last child if there are not enough siblings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1747,7 +1772,8 @@
   
   <a id="Godot_Tree_EditSelected_" data-uid="Godot.Tree.EditSelected*"></a>
   <h4 id="Godot_Tree_EditSelected" data-uid="Godot.Tree.EditSelected">EditSelected()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Edits the selected tree item as if it was clicked. The item must be set editable with <a class="xref" href="Godot.TreeItem.html#Godot_TreeItem_SetEditable_System_Int32_System_Boolean_">SetEditable(Int32, Boolean)</a>. Returns <code>true</code> if the item could be edited. Fails if no item is selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1772,7 +1798,10 @@
   
   <a id="Godot_Tree_EnsureCursorIsVisible_" data-uid="Godot.Tree.EnsureCursorIsVisible*"></a>
   <h4 id="Godot_Tree_EnsureCursorIsVisible" data-uid="Godot.Tree.EnsureCursorIsVisible">EnsureCursorIsVisible()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes the currently focused cell visible.</p>
+<p>This will scroll the tree if necessary. In <a class="xref" href="Godot.Tree.SelectModeEnum.html#Godot_Tree_SelectModeEnum_Row">Row</a> mode, this will not do horizontal scrolling, as all the cells in the selected row is focused logically.</p>
+<p>Note: Despite the name of this method, the focus cursor itself is only visible in <a class="xref" href="Godot.Tree.SelectModeEnum.html#Godot_Tree_SelectModeEnum_Multi">Multi</a> mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1832,7 +1861,8 @@
   
   <a id="Godot_Tree_GetButtonIdAtPosition_" data-uid="Godot.Tree.GetButtonIdAtPosition*"></a>
   <h4 id="Godot_Tree_GetButtonIdAtPosition_Godot_Vector2_" data-uid="Godot.Tree.GetButtonIdAtPosition(Godot.Vector2)">GetButtonIdAtPosition(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the button id at <code>position</code>, or -1 if no button is there.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1874,7 +1904,8 @@
   
   <a id="Godot_Tree_GetColumnAtPosition_" data-uid="Godot.Tree.GetColumnAtPosition*"></a>
   <h4 id="Godot_Tree_GetColumnAtPosition_Godot_Vector2_" data-uid="Godot.Tree.GetColumnAtPosition(Godot.Vector2)">GetColumnAtPosition(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the column index at <code>position</code>, or -1 if no item is there.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1941,7 +1972,8 @@
   
   <a id="Godot_Tree_GetColumnTitle_" data-uid="Godot.Tree.GetColumnTitle*"></a>
   <h4 id="Godot_Tree_GetColumnTitle_System_Int32_" data-uid="Godot.Tree.GetColumnTitle(System.Int32)">GetColumnTitle(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the column&apos;s title.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1983,7 +2015,8 @@
   
   <a id="Godot_Tree_GetColumnWidth_" data-uid="Godot.Tree.GetColumnWidth*"></a>
   <h4 id="Godot_Tree_GetColumnWidth_System_Int32_" data-uid="Godot.Tree.GetColumnWidth(System.Int32)">GetColumnWidth(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the column&apos;s width in pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2025,7 +2058,8 @@
   
   <a id="Godot_Tree_GetCustomPopupRect_" data-uid="Godot.Tree.GetCustomPopupRect*"></a>
   <h4 id="Godot_Tree_GetCustomPopupRect" data-uid="Godot.Tree.GetCustomPopupRect">GetCustomPopupRect()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the rectangle for custom popups. Helper to create custom cell controls that display a popup. See <a class="xref" href="Godot.TreeItem.html#Godot_TreeItem_SetCellMode_System_Int32_Godot_TreeItem_TreeCellMode_">SetCellMode(Int32, TreeItem.TreeCellMode)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2075,7 +2109,10 @@
   
   <a id="Godot_Tree_GetDropSectionAtPosition_" data-uid="Godot.Tree.GetDropSectionAtPosition*"></a>
   <h4 id="Godot_Tree_GetDropSectionAtPosition_Godot_Vector2_" data-uid="Godot.Tree.GetDropSectionAtPosition(Godot.Vector2)">GetDropSectionAtPosition(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the drop section at <code>position</code>, or -100 if no item is there.</p>
+<p>Values -1, 0, or 1 will be returned for the &quot;above item&quot;, &quot;on item&quot;, and &quot;below item&quot; drop sections, respectively. See <a class="xref" href="Godot.Tree.DropModeFlagsEnum.html">Tree.DropModeFlagsEnum</a> for a description of each drop section.</p>
+<p>To get the item which the returned drop section is relative to, use <a class="xref" href="Godot.Tree.html#Godot_Tree_GetItemAtPosition_Godot_Vector2_">GetItemAtPosition(Vector2)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2117,7 +2154,12 @@
   
   <a id="Godot_Tree_GetEdited_" data-uid="Godot.Tree.GetEdited*"></a>
   <h4 id="Godot_Tree_GetEdited" data-uid="Godot.Tree.GetEdited">GetEdited()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the currently edited item. Can be used with <code>item_edited</code> to get the item that was modified.</p>
+<p><pre><code>func _ready():
+    $Tree.connect(&quot;item_edited&quot;, self, &quot;on_Tree_item_edited&quot;)
+<p>func on_Tree_item_edited():
+print($Tree.get_edited()) # This item just got edited (e.g. checked).</code></pre></p><p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2142,7 +2184,8 @@
   
   <a id="Godot_Tree_GetEditedColumn_" data-uid="Godot.Tree.GetEditedColumn*"></a>
   <h4 id="Godot_Tree_GetEditedColumn" data-uid="Godot.Tree.GetEditedColumn">GetEditedColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the column for the currently edited item.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2167,7 +2210,8 @@
   
   <a id="Godot_Tree_GetItemAreaRect_" data-uid="Godot.Tree.GetItemAreaRect*"></a>
   <h4 id="Godot_Tree_GetItemAreaRect_Godot_Object_System_Int32_" data-uid="Godot.Tree.GetItemAreaRect(Godot.Object,System.Int32)">GetItemAreaRect(Object, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the rectangle area for the specified <a class="xref" href="Godot.TreeItem.html">TreeItem</a>. If <code>column</code> is specified, only get the position and size of that column, otherwise get the rectangle containing all columns.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2214,7 +2258,8 @@
   
   <a id="Godot_Tree_GetItemAtPosition_" data-uid="Godot.Tree.GetItemAtPosition*"></a>
   <h4 id="Godot_Tree_GetItemAtPosition_Godot_Vector2_" data-uid="Godot.Tree.GetItemAtPosition(Godot.Vector2)">GetItemAtPosition(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tree item at the specified position (relative to the tree origin position).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2256,7 +2301,9 @@
   
   <a id="Godot_Tree_GetNextSelected_" data-uid="Godot.Tree.GetNextSelected*"></a>
   <h4 id="Godot_Tree_GetNextSelected_Godot_Object_" data-uid="Godot.Tree.GetNextSelected(Godot.Object)">GetNextSelected(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the next selected <a class="xref" href="Godot.TreeItem.html">TreeItem</a> after the given one, or <code>null</code> if the end is reached.</p>
+<p>If <code>from</code> is <code>null</code>, this returns the first selected item.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2298,7 +2345,8 @@
   
   <a id="Godot_Tree_GetPressedButton_" data-uid="Godot.Tree.GetPressedButton*"></a>
   <h4 id="Godot_Tree_GetPressedButton" data-uid="Godot.Tree.GetPressedButton">GetPressedButton()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the last pressed button&apos;s index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2323,7 +2371,8 @@
   
   <a id="Godot_Tree_GetRoot_" data-uid="Godot.Tree.GetRoot*"></a>
   <h4 id="Godot_Tree_GetRoot" data-uid="Godot.Tree.GetRoot">GetRoot()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tree&apos;s root item, or <code>null</code> if the tree is empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2348,7 +2397,8 @@
   
   <a id="Godot_Tree_GetScroll_" data-uid="Godot.Tree.GetScroll*"></a>
   <h4 id="Godot_Tree_GetScroll" data-uid="Godot.Tree.GetScroll">GetScroll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current scrolling position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2373,7 +2423,10 @@
   
   <a id="Godot_Tree_GetSelected_" data-uid="Godot.Tree.GetSelected*"></a>
   <h4 id="Godot_Tree_GetSelected" data-uid="Godot.Tree.GetSelected">GetSelected()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the currently focused item, or <code>null</code> if no item is focused.</p>
+<p>In <a class="xref" href="Godot.Tree.SelectModeEnum.html#Godot_Tree_SelectModeEnum_Row">Row</a> and <a class="xref" href="Godot.Tree.SelectModeEnum.html#Godot_Tree_SelectModeEnum_Single">Single</a> modes, the focused item is same as the selected item. In <a class="xref" href="Godot.Tree.SelectModeEnum.html#Godot_Tree_SelectModeEnum_Multi">Multi</a> mode, the focused item is the item under the focus cursor, not necessarily selected.</p>
+<p>To get the currently selected item(s), use <a class="xref" href="Godot.Tree.html#Godot_Tree_GetNextSelected_Godot_Object_">GetNextSelected(Object)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2398,7 +2451,10 @@
   
   <a id="Godot_Tree_GetSelectedColumn_" data-uid="Godot.Tree.GetSelectedColumn*"></a>
   <h4 id="Godot_Tree_GetSelectedColumn" data-uid="Godot.Tree.GetSelectedColumn">GetSelectedColumn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the currently focused column, or -1 if no column is focused.</p>
+<p>In <a class="xref" href="Godot.Tree.SelectModeEnum.html#Godot_Tree_SelectModeEnum_Single">Single</a> mode, the focused column is the selected column. In <a class="xref" href="Godot.Tree.SelectModeEnum.html#Godot_Tree_SelectModeEnum_Row">Row</a> mode, the focused column is always 0 if any item is selected. In <a class="xref" href="Godot.Tree.SelectModeEnum.html#Godot_Tree_SelectModeEnum_Multi">Multi</a> mode, the focused column is the column under the focus cursor, and there are not necessarily any column selected.</p>
+<p>To tell whether a column of an item is selected, use <a class="xref" href="Godot.TreeItem.html#Godot_TreeItem_IsSelected_System_Int32_">IsSelected(Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2498,7 +2554,8 @@
   
   <a id="Godot_Tree_ScrollToItem_" data-uid="Godot.Tree.ScrollToItem*"></a>
   <h4 id="Godot_Tree_ScrollToItem_Godot_Object_" data-uid="Godot.Tree.ScrollToItem(Godot.Object)">ScrollToItem(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Causes the <a class="xref" href="Godot.Tree.html">Tree</a> to jump to the specified <a class="xref" href="Godot.TreeItem.html">TreeItem</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2579,7 +2636,8 @@
   
   <a id="Godot_Tree_SetColumnExpand_" data-uid="Godot.Tree.SetColumnExpand*"></a>
   <h4 id="Godot_Tree_SetColumnExpand_System_Int32_System_Boolean_" data-uid="Godot.Tree.SetColumnExpand(System.Int32,System.Boolean)">SetColumnExpand(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the column will have the &quot;Expand&quot; flag of <a class="xref" href="Godot.Control.html">Control</a>. Columns that have the &quot;Expand&quot; flag will use their &quot;min_width&quot; in a similar fashion to <a class="xref" href="Godot.Control.html#Godot_Control_SizeFlagsStretchRatio">SizeFlagsStretchRatio</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2611,7 +2669,8 @@
   
   <a id="Godot_Tree_SetColumnMinWidth_" data-uid="Godot.Tree.SetColumnMinWidth*"></a>
   <h4 id="Godot_Tree_SetColumnMinWidth_System_Int32_System_Int32_" data-uid="Godot.Tree.SetColumnMinWidth(System.Int32,System.Int32)">SetColumnMinWidth(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the minimum width of a column. Columns that have the &quot;Expand&quot; flag will use their &quot;min_width&quot; in a similar fashion to <a class="xref" href="Godot.Control.html#Godot_Control_SizeFlagsStretchRatio">SizeFlagsStretchRatio</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2670,7 +2729,8 @@
   
   <a id="Godot_Tree_SetColumnTitle_" data-uid="Godot.Tree.SetColumnTitle*"></a>
   <h4 id="Godot_Tree_SetColumnTitle_System_Int32_System_String_" data-uid="Godot.Tree.SetColumnTitle(System.Int32,System.String)">SetColumnTitle(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the title of a column.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

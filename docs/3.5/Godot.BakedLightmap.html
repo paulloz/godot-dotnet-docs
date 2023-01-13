@@ -83,7 +83,10 @@
   
   <h1 id="Godot_BakedLightmap" data-uid="Godot.BakedLightmap" class="text-break">Class BakedLightmap
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Baked lightmaps are an alternative workflow for adding indirect (or baked) lighting to a scene. Unlike the <a class="xref" href="Godot.GIProbe.html">GIProbe</a> approach, baked lightmaps work fine on low-end PCs and mobile devices as they consume almost no resources in run-time.</p>
+<p>Procedural generation: Lightmap baking functionality is only available in the editor. This means <a class="xref" href="Godot.BakedLightmap.html">BakedLightmap</a> is not suited to procedurally generated or user-built levels. For procedurally generated or user-built levels, use <a class="xref" href="Godot.GIProbe.html">GIProbe</a> instead.</p>
+<p>Note: Due to how lightmaps work, most properties only have a visible effect once lightmaps are baked again.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1032,7 +1035,9 @@
   
   <a id="Godot_BakedLightmap_AtlasGenerate_" data-uid="Godot.BakedLightmap.AtlasGenerate*"></a>
   <h4 id="Godot_BakedLightmap_AtlasGenerate" data-uid="Godot.BakedLightmap.AtlasGenerate">AtlasGenerate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the lightmapper will merge the textures for all meshes into one or several large layered textures. If <code>false</code>, every mesh will get its own lightmap texture, which is less efficient.</p>
+<p>Note: Atlas lightmap rendering is only supported in GLES3, not GLES2. Non-atlas lightmap rendering is supported by both GLES3 and GLES2. If  is <code>true</code>, consider baking lightmaps with <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_AtlasGenerate">AtlasGenerate</a> set to <code>false</code> so that the resulting lightmap is visible in both GLES3 and GLES2.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1057,7 +1062,8 @@
   
   <a id="Godot_BakedLightmap_AtlasMaxSize_" data-uid="Godot.BakedLightmap.AtlasMaxSize*"></a>
   <h4 id="Godot_BakedLightmap_AtlasMaxSize" data-uid="Godot.BakedLightmap.AtlasMaxSize">AtlasMaxSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum size of each lightmap layer, only used when <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_AtlasGenerate">AtlasGenerate</a> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1082,7 +1088,8 @@
   
   <a id="Godot_BakedLightmap_Bias_" data-uid="Godot.BakedLightmap.Bias*"></a>
   <h4 id="Godot_BakedLightmap_Bias" data-uid="Godot.BakedLightmap.Bias">Bias</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Raycasting bias used during baking to avoid floating point precision issues.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1107,7 +1114,9 @@
   
   <a id="Godot_BakedLightmap_BounceIndirectEnergy_" data-uid="Godot.BakedLightmap.BounceIndirectEnergy*"></a>
   <h4 id="Godot_BakedLightmap_BounceIndirectEnergy" data-uid="Godot.BakedLightmap.BounceIndirectEnergy">BounceIndirectEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The energy multiplier for each bounce. Higher values will make indirect lighting brighter. A value of <code>1.0</code> represents physically accurate behavior, but higher values can be used to make indirect lighting propagate more visibly when using a low number of bounces. This can be used to speed up bake times by lowering the number of <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_Bounces">Bounces</a> then increasing <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_BounceIndirectEnergy">BounceIndirectEnergy</a>. Unlike <a class="xref" href="Godot.BakedLightmapData.html#Godot_BakedLightmapData_Energy">Energy</a>, this property does not affect direct lighting emitted by light nodes, emissive materials and the environment.</p>
+<p>Note: <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_BounceIndirectEnergy">BounceIndirectEnergy</a> only has an effect if <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_Bounces">Bounces</a> is set to a value greater than or equal to <code>1</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1132,7 +1141,8 @@
   
   <a id="Godot_BakedLightmap_Bounces_" data-uid="Godot.BakedLightmap.Bounces*"></a>
   <h4 id="Godot_BakedLightmap_Bounces" data-uid="Godot.BakedLightmap.Bounces">Bounces</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of light bounces that are taken into account during baking. See also <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_BounceIndirectEnergy">BounceIndirectEnergy</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1157,7 +1167,8 @@
   
   <a id="Godot_BakedLightmap_CaptureCellSize_" data-uid="Godot.BakedLightmap.CaptureCellSize*"></a>
   <h4 id="Godot_BakedLightmap_CaptureCellSize" data-uid="Godot.BakedLightmap.CaptureCellSize">CaptureCellSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Grid size used for real-time capture information on dynamic objects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1182,7 +1193,8 @@
   
   <a id="Godot_BakedLightmap_CaptureEnabled_" data-uid="Godot.BakedLightmap.CaptureEnabled*"></a>
   <h4 id="Godot_BakedLightmap_CaptureEnabled" data-uid="Godot.BakedLightmap.CaptureEnabled">CaptureEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When enabled, an octree containing the scene&apos;s lighting information will be computed. This octree will then be used to light dynamic objects in the scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1207,7 +1219,8 @@
   
   <a id="Godot_BakedLightmap_CapturePropagation_" data-uid="Godot.BakedLightmap.CapturePropagation*"></a>
   <h4 id="Godot_BakedLightmap_CapturePropagation" data-uid="Godot.BakedLightmap.CapturePropagation">CapturePropagation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bias value to reduce the amount of light propagation in the captured octree.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1232,7 +1245,8 @@
   
   <a id="Godot_BakedLightmap_CaptureQuality_" data-uid="Godot.BakedLightmap.CaptureQuality*"></a>
   <h4 id="Godot_BakedLightmap_CaptureQuality" data-uid="Godot.BakedLightmap.CaptureQuality">CaptureQuality</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bake quality of the capture data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1257,7 +1271,8 @@
   
   <a id="Godot_BakedLightmap_DefaultTexelsPerUnit_" data-uid="Godot.BakedLightmap.DefaultTexelsPerUnit*"></a>
   <h4 id="Godot_BakedLightmap_DefaultTexelsPerUnit" data-uid="Godot.BakedLightmap.DefaultTexelsPerUnit">DefaultTexelsPerUnit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If a baked mesh doesn&apos;t have a UV2 size hint, this value will be used to roughly compute a suitable lightmap size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1282,7 +1297,8 @@
   
   <a id="Godot_BakedLightmap_EnvironmentCustomColor_" data-uid="Godot.BakedLightmap.EnvironmentCustomColor*"></a>
   <h4 id="Godot_BakedLightmap_EnvironmentCustomColor" data-uid="Godot.BakedLightmap.EnvironmentCustomColor">EnvironmentCustomColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The environment color when <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_EnvironmentMode">EnvironmentMode</a> is set to <a class="xref" href="Godot.BakedLightmap.EnvironmentModeEnum.html#Godot_BakedLightmap_EnvironmentModeEnum_CustomColor">CustomColor</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1307,7 +1323,8 @@
   
   <a id="Godot_BakedLightmap_EnvironmentCustomEnergy_" data-uid="Godot.BakedLightmap.EnvironmentCustomEnergy*"></a>
   <h4 id="Godot_BakedLightmap_EnvironmentCustomEnergy" data-uid="Godot.BakedLightmap.EnvironmentCustomEnergy">EnvironmentCustomEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The energy scaling factor when when <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_EnvironmentMode">EnvironmentMode</a> is set to <a class="xref" href="Godot.BakedLightmap.EnvironmentModeEnum.html#Godot_BakedLightmap_EnvironmentModeEnum_CustomColor">CustomColor</a> or <a class="xref" href="Godot.BakedLightmap.EnvironmentModeEnum.html#Godot_BakedLightmap_EnvironmentModeEnum_CustomSky">CustomSky</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1332,7 +1349,8 @@
   
   <a id="Godot_BakedLightmap_EnvironmentCustomSky_" data-uid="Godot.BakedLightmap.EnvironmentCustomSky*"></a>
   <h4 id="Godot_BakedLightmap_EnvironmentCustomSky" data-uid="Godot.BakedLightmap.EnvironmentCustomSky">EnvironmentCustomSky</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Sky.html">Sky</a> resource to use when <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_EnvironmentMode">EnvironmentMode</a> is set o <a class="xref" href="Godot.BakedLightmap.EnvironmentModeEnum.html#Godot_BakedLightmap_EnvironmentModeEnum_CustomSky">CustomSky</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1357,7 +1375,8 @@
   
   <a id="Godot_BakedLightmap_EnvironmentCustomSkyRotationDegrees_" data-uid="Godot.BakedLightmap.EnvironmentCustomSkyRotationDegrees*"></a>
   <h4 id="Godot_BakedLightmap_EnvironmentCustomSkyRotationDegrees" data-uid="Godot.BakedLightmap.EnvironmentCustomSkyRotationDegrees">EnvironmentCustomSkyRotationDegrees</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The rotation of the baked custom sky.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1382,7 +1401,8 @@
   
   <a id="Godot_BakedLightmap_EnvironmentMinLight_" data-uid="Godot.BakedLightmap.EnvironmentMinLight*"></a>
   <h4 id="Godot_BakedLightmap_EnvironmentMinLight" data-uid="Godot.BakedLightmap.EnvironmentMinLight">EnvironmentMinLight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Minimum ambient light for all the lightmap texels. This doesn&apos;t take into account any occlusion from the scene&apos;s geometry, it simply ensures a minimum amount of light on all the lightmap texels. Can be used for artistic control on shadow color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1407,7 +1427,8 @@
   
   <a id="Godot_BakedLightmap_EnvironmentMode_" data-uid="Godot.BakedLightmap.EnvironmentMode*"></a>
   <h4 id="Godot_BakedLightmap_EnvironmentMode" data-uid="Godot.BakedLightmap.EnvironmentMode">EnvironmentMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decides which environment to use during baking.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1432,7 +1453,8 @@
   
   <a id="Godot_BakedLightmap_Extents_" data-uid="Godot.BakedLightmap.Extents*"></a>
   <h4 id="Godot_BakedLightmap_Extents" data-uid="Godot.BakedLightmap.Extents">Extents</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Size of the baked lightmap. Only meshes inside this region will be included in the baked lightmap, also used as the bounds of the captured region for dynamic lighting.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1457,7 +1479,8 @@
   
   <a id="Godot_BakedLightmap_ImagePath_" data-uid="Godot.BakedLightmap.ImagePath*"></a>
   <h4 id="Godot_BakedLightmap_ImagePath" data-uid="Godot.BakedLightmap.ImagePath">ImagePath</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated, in previous versions it determined the location where lightmaps were be saved.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1482,7 +1505,8 @@
   
   <a id="Godot_BakedLightmap_LightData_" data-uid="Godot.BakedLightmap.LightData*"></a>
   <h4 id="Godot_BakedLightmap_LightData" data-uid="Godot.BakedLightmap.LightData">LightData</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The calculated light data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1507,7 +1531,8 @@
   
   <a id="Godot_BakedLightmap_Quality_" data-uid="Godot.BakedLightmap.Quality*"></a>
   <h4 id="Godot_BakedLightmap_Quality" data-uid="Godot.BakedLightmap.Quality">Quality</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines the amount of samples per texel used in indirect light baking. The amount of samples for each quality level can be configured in the project settings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1532,7 +1557,8 @@
   
   <a id="Godot_BakedLightmap_UseColor_" data-uid="Godot.BakedLightmap.UseColor*"></a>
   <h4 id="Godot_BakedLightmap_UseColor" data-uid="Godot.BakedLightmap.UseColor">UseColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Store full color values in the lightmap textures. When disabled, lightmap textures will store a single brightness channel. Can be disabled to reduce disk usage if the scene contains only white lights or you don&apos;t mind losing color information in indirect lighting.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1557,7 +1583,8 @@
   
   <a id="Godot_BakedLightmap_UseDenoiser_" data-uid="Godot.BakedLightmap.UseDenoiser*"></a>
   <h4 id="Godot_BakedLightmap_UseDenoiser" data-uid="Godot.BakedLightmap.UseDenoiser">UseDenoiser</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When enabled, a lightmap denoiser will be used to reduce the noise inherent to Monte Carlo based global illumination.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1582,7 +1609,9 @@
   
   <a id="Godot_BakedLightmap_UseHdr_" data-uid="Godot.BakedLightmap.UseHdr*"></a>
   <h4 id="Godot_BakedLightmap_UseHdr" data-uid="Godot.BakedLightmap.UseHdr">UseHdr</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, stores the lightmap textures in a high dynamic range format (EXR). If <code>false</code>, stores the lightmap texture in a low dynamic range PNG image. This can be set to <code>false</code> to reduce disk usage, but light values over 1.0 will be clamped and you may see banding caused by the reduced precision.</p>
+<p>Note: Setting <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_UseHdr">UseHdr</a> to <code>true</code> will decrease lightmap banding even when using the GLES2 backend or if  is <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1609,7 +1638,8 @@
   
   <a id="Godot_BakedLightmap_Bake_" data-uid="Godot.BakedLightmap.Bake*"></a>
   <h4 id="Godot_BakedLightmap_Bake_Godot_Node_System_String_" data-uid="Godot.BakedLightmap.Bake(Godot.Node,System.String)">Bake(Node, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bakes the lightmap, scanning from the given <code>from_node</code> root and saves the resulting <a class="xref" href="Godot.BakedLightmapData.html">BakedLightmapData</a> in <code>data_save_path</code>. If no root node is provided, parent of this node will be used as root instead. If no save path is provided it will try to match the path from the current <a class="xref" href="Godot.BakedLightmap.html#Godot_BakedLightmap_LightData">LightData</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

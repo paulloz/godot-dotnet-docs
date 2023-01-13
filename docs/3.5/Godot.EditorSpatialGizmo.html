@@ -83,7 +83,8 @@
   
   <h1 id="Godot_EditorSpatialGizmo" data-uid="Godot.EditorSpatialGizmo" class="text-break">Class EditorSpatialGizmo
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Custom gizmo that is used for providing custom visualization and editing (handles) for 3D Spatial objects. See <a class="xref" href="Godot.EditorSpatialGizmoPlugin.html">EditorSpatialGizmoPlugin</a> for more information.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -298,7 +299,8 @@
   
   <a id="Godot_EditorSpatialGizmo_AddCollisionSegments_" data-uid="Godot.EditorSpatialGizmo.AddCollisionSegments*"></a>
   <h4 id="Godot_EditorSpatialGizmo_AddCollisionSegments_Godot_Vector3___" data-uid="Godot.EditorSpatialGizmo.AddCollisionSegments(Godot.Vector3[])">AddCollisionSegments(Vector3[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the specified <code>segments</code> to the gizmo&apos;s collision shape for picking. Call this function during <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_Redraw">Redraw()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -325,7 +327,8 @@
   
   <a id="Godot_EditorSpatialGizmo_AddCollisionTriangles_" data-uid="Godot.EditorSpatialGizmo.AddCollisionTriangles*"></a>
   <h4 id="Godot_EditorSpatialGizmo_AddCollisionTriangles_Godot_TriangleMesh_" data-uid="Godot.EditorSpatialGizmo.AddCollisionTriangles(Godot.TriangleMesh)">AddCollisionTriangles(TriangleMesh)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds collision triangles to the gizmo for picking. A <a class="xref" href="Godot.TriangleMesh.html">TriangleMesh</a> can be generated from a regular <a class="xref" href="Godot.Mesh.html">Mesh</a> too. Call this function during <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_Redraw">Redraw()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -352,7 +355,9 @@
   
   <a id="Godot_EditorSpatialGizmo_AddHandles_" data-uid="Godot.EditorSpatialGizmo.AddHandles*"></a>
   <h4 id="Godot_EditorSpatialGizmo_AddHandles_Godot_Vector3___Godot_Material_System_Boolean_System_Boolean_" data-uid="Godot.EditorSpatialGizmo.AddHandles(Godot.Vector3[],Godot.Material,System.Boolean,System.Boolean)">AddHandles(Vector3[], Material, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a list of handles (points) which can be used to deform the object being edited.</p>
+<p>There are virtual functions which will be called upon editing of these handles. Call this function during <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_Redraw">Redraw()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -394,7 +399,8 @@
   
   <a id="Godot_EditorSpatialGizmo_AddLines_" data-uid="Godot.EditorSpatialGizmo.AddLines*"></a>
   <h4 id="Godot_EditorSpatialGizmo_AddLines_Godot_Vector3___Godot_Material_System_Boolean_System_Nullable_Godot_Color__" data-uid="Godot.EditorSpatialGizmo.AddLines(Godot.Vector3[],Godot.Material,System.Boolean,System.Nullable{Godot.Color})">AddLines(Vector3[], Material, Boolean, Nullable&lt;Color&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds lines to the gizmo (as sets of 2 points), with a given material. The lines are used for visualizing the gizmo. Call this function during <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_Redraw">Redraw()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -428,7 +434,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">modulate</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Color(1, 1, 1, 1)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -436,7 +443,8 @@
   
   <a id="Godot_EditorSpatialGizmo_AddMesh_" data-uid="Godot.EditorSpatialGizmo.AddMesh*"></a>
   <h4 id="Godot_EditorSpatialGizmo_AddMesh_Godot_Mesh_System_Boolean_Godot_SkinReference_Godot_Material_" data-uid="Godot.EditorSpatialGizmo.AddMesh(Godot.Mesh,System.Boolean,Godot.SkinReference,Godot.Material)">AddMesh(Mesh, Boolean, SkinReference, Material)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a mesh to the gizmo with the specified <code>billboard</code> state, <code>skeleton</code> and <code>material</code>. If <code>billboard</code> is <code>true</code>, the mesh will rotate to always face the camera. Call this function during <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_Redraw">Redraw()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -478,7 +486,8 @@
   
   <a id="Godot_EditorSpatialGizmo_AddUnscaledBillboard_" data-uid="Godot.EditorSpatialGizmo.AddUnscaledBillboard*"></a>
   <h4 id="Godot_EditorSpatialGizmo_AddUnscaledBillboard_Godot_Material_System_Single_System_Nullable_Godot_Color__" data-uid="Godot.EditorSpatialGizmo.AddUnscaledBillboard(Godot.Material,System.Single,System.Nullable{Godot.Color})">AddUnscaledBillboard(Material, Single, Nullable&lt;Color&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an unscaled billboard for visualization. Call this function during <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_Redraw">Redraw()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -507,7 +516,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">modulate</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Color(1, 1, 1, 1)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -515,7 +525,8 @@
   
   <a id="Godot_EditorSpatialGizmo_Clear_" data-uid="Godot.EditorSpatialGizmo.Clear*"></a>
   <h4 id="Godot_EditorSpatialGizmo_Clear" data-uid="Godot.EditorSpatialGizmo.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes everything in the gizmo including meshes, collisions and handles.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -525,7 +536,9 @@
   
   <a id="Godot_EditorSpatialGizmo_CommitHandle_" data-uid="Godot.EditorSpatialGizmo.CommitHandle*"></a>
   <h4 id="Godot_EditorSpatialGizmo_CommitHandle_System_Int32_System_Object_System_Boolean_" data-uid="Godot.EditorSpatialGizmo.CommitHandle(System.Int32,System.Object,System.Boolean)">CommitHandle(Int32, Object, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Commit a handle being edited (handles must have been previously added by <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_AddHandles_Godot_Vector3___Godot_Material_System_Boolean_System_Boolean_">AddHandles(Vector3[], Material, Boolean, Boolean)</a>).</p>
+<p>If the <code>cancel</code> parameter is <code>true</code>, an option to restore the edited value to the original is provided.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -562,7 +575,9 @@
   
   <a id="Godot_EditorSpatialGizmo_GetHandleName_" data-uid="Godot.EditorSpatialGizmo.GetHandleName*"></a>
   <h4 id="Godot_EditorSpatialGizmo_GetHandleName_System_Int32_" data-uid="Godot.EditorSpatialGizmo.GetHandleName(System.Int32)">GetHandleName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name of an edited handle (handles must have been previously added by <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_AddHandles_Godot_Vector3___Godot_Material_System_Boolean_System_Boolean_">AddHandles(Vector3[], Material, Boolean, Boolean)</a>).</p>
+<p>Handles can be named for reference to the user when editing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -604,7 +619,8 @@
   
   <a id="Godot_EditorSpatialGizmo_GetHandleValue_" data-uid="Godot.EditorSpatialGizmo.GetHandleValue*"></a>
   <h4 id="Godot_EditorSpatialGizmo_GetHandleValue_System_Int32_" data-uid="Godot.EditorSpatialGizmo.GetHandleValue(System.Int32)">GetHandleValue(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets actual value of a handle. This value can be anything and used for eventually undoing the motion when calling <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_CommitHandle_System_Int32_System_Object_System_Boolean_">CommitHandle(Int32, Object, Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -646,7 +662,8 @@
   
   <a id="Godot_EditorSpatialGizmo_GetPlugin_" data-uid="Godot.EditorSpatialGizmo.GetPlugin*"></a>
   <h4 id="Godot_EditorSpatialGizmo_GetPlugin" data-uid="Godot.EditorSpatialGizmo.GetPlugin">GetPlugin()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.EditorSpatialGizmoPlugin.html">EditorSpatialGizmoPlugin</a> that owns this gizmo. It&apos;s useful to retrieve materials using <a class="xref" href="Godot.EditorSpatialGizmoPlugin.html#Godot_EditorSpatialGizmoPlugin_GetMaterial_System_String_Godot_EditorSpatialGizmo_">GetMaterial(String, EditorSpatialGizmo)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -671,7 +688,8 @@
   
   <a id="Godot_EditorSpatialGizmo_GetSpatialNode_" data-uid="Godot.EditorSpatialGizmo.GetSpatialNode*"></a>
   <h4 id="Godot_EditorSpatialGizmo_GetSpatialNode" data-uid="Godot.EditorSpatialGizmo.GetSpatialNode">GetSpatialNode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the Spatial node associated with this gizmo.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -696,7 +714,8 @@
   
   <a id="Godot_EditorSpatialGizmo_IsHandleHighlighted_" data-uid="Godot.EditorSpatialGizmo.IsHandleHighlighted*"></a>
   <h4 id="Godot_EditorSpatialGizmo_IsHandleHighlighted_System_Int32_" data-uid="Godot.EditorSpatialGizmo.IsHandleHighlighted(System.Int32)">IsHandleHighlighted(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the handle at index <code>index</code> is highlighted by being hovered with the mouse.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -738,7 +757,8 @@
   
   <a id="Godot_EditorSpatialGizmo_Redraw_" data-uid="Godot.EditorSpatialGizmo.Redraw*"></a>
   <h4 id="Godot_EditorSpatialGizmo_Redraw" data-uid="Godot.EditorSpatialGizmo.Redraw">Redraw()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This function is called when the <a class="xref" href="Godot.Spatial.html">Spatial</a> this gizmo refers to changes (the <a class="xref" href="Godot.Spatial.html#Godot_Spatial_UpdateGizmo">UpdateGizmo()</a> is called).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -748,7 +768,9 @@
   
   <a id="Godot_EditorSpatialGizmo_SetHandle_" data-uid="Godot.EditorSpatialGizmo.SetHandle*"></a>
   <h4 id="Godot_EditorSpatialGizmo_SetHandle_System_Int32_Godot_Camera_Godot_Vector2_" data-uid="Godot.EditorSpatialGizmo.SetHandle(System.Int32,Godot.Camera,Godot.Vector2)">SetHandle(Int32, Camera, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This function is used when the user drags a gizmo handle (previously added with <a class="xref" href="Godot.EditorSpatialGizmo.html#Godot_EditorSpatialGizmo_AddHandles_Godot_Vector3___Godot_Material_System_Boolean_System_Boolean_">AddHandles(Vector3[], Material, Boolean, Boolean)</a>) in screen coordinates.</p>
+<p>The <a class="xref" href="Godot.Camera.html">Camera</a> is also provided so screen coordinates can be converted to raycasts.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -785,7 +807,8 @@
   
   <a id="Godot_EditorSpatialGizmo_SetHidden_" data-uid="Godot.EditorSpatialGizmo.SetHidden*"></a>
   <h4 id="Godot_EditorSpatialGizmo_SetHidden_System_Boolean_" data-uid="Godot.EditorSpatialGizmo.SetHidden(System.Boolean)">SetHidden(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the gizmo&apos;s hidden state. If <code>true</code>, the gizmo will be hidden. If <code>false</code>, it will be shown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -812,7 +835,8 @@
   
   <a id="Godot_EditorSpatialGizmo_SetSpatialNode_" data-uid="Godot.EditorSpatialGizmo.SetSpatialNode*"></a>
   <h4 id="Godot_EditorSpatialGizmo_SetSpatialNode_Godot_Node_" data-uid="Godot.EditorSpatialGizmo.SetSpatialNode(Godot.Node)">SetSpatialNode(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the reference <a class="xref" href="Godot.Spatial.html">Spatial</a> node for the gizmo. <code>node</code> must inherit from <a class="xref" href="Godot.Spatial.html">Spatial</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

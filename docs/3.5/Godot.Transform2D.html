@@ -83,7 +83,12 @@
   
   <h1 id="Godot_Transform2D" data-uid="Godot.Transform2D" class="text-break">Class Transform2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>2×3 matrix (2 rows, 3 columns) used for 2D linear transformations.
+It can represent transformations such as translation, rotation, or scaling.
+It consists of a three <a class="xref" href="Godot.Vector2.html">Vector2</a> values: x, y, and the origin.</p>
+<p>For more information, read this documentation article:
+<a href="https://docs.godotengine.org/en/3.5/tutorials/math/matrices_and_transforms.html">https://docs.godotengine.org/en/3.5/tutorials/math/matrices_and_transforms.html</a></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -106,7 +111,8 @@
   
   <a id="Godot_Transform2D__ctor_" data-uid="Godot.Transform2D.#ctor*"></a>
   <h4 id="Godot_Transform2D__ctor_Godot_Vector2_Godot_Vector2_Godot_Vector2_" data-uid="Godot.Transform2D.#ctor(Godot.Vector2,Godot.Vector2,Godot.Vector2)">Transform2D(Vector2, Vector2, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a transformation matrix from 3 vectors (matrix columns).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,17 +131,20 @@
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">xAxis</span></td>
-        <td></td>
+        <td><p>The X vector, or column index 0.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">yAxis</span></td>
-        <td></td>
+        <td><p>The Y vector, or column index 1.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">originPos</span></td>
-        <td></td>
+        <td><p>The origin vector, or column index 2.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -143,7 +152,9 @@
   
   <a id="Godot_Transform2D__ctor_" data-uid="Godot.Transform2D.#ctor*"></a>
   <h4 id="Godot_Transform2D__ctor_System_Single_Godot_Vector2_" data-uid="Godot.Transform2D.#ctor(System.Single,Godot.Vector2)">Transform2D(Single, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a transformation matrix from a <code data-dev-comment-type="paramref" class="paramref">rotation</code> value and
+<code data-dev-comment-type="paramref" class="paramref">origin</code> vector.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -162,12 +173,14 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">rotation</span></td>
-        <td></td>
+        <td><p>The rotation of the new transform, in radians.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">origin</span></td>
-        <td></td>
+        <td><p>The origin vector, or column index 2.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -175,7 +188,9 @@
   
   <a id="Godot_Transform2D__ctor_" data-uid="Godot.Transform2D.#ctor*"></a>
   <h4 id="Godot_Transform2D__ctor_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="Godot.Transform2D.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Transform2D(Single, Single, Single, Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a transformation matrix from the given components.
+Arguments are named such that xy is equal to calling x.y</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -194,32 +209,38 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">xx</span></td>
-        <td></td>
+        <td><p>The X component of the X column vector, accessed via <code>t.x.x</code> or <code>[0][0]</code>.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">xy</span></td>
-        <td></td>
+        <td><p>The Y component of the X column vector, accessed via <code>t.x.y</code> or <code>[0][1]</code>.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">yx</span></td>
-        <td></td>
+        <td><p>The X component of the Y column vector, accessed via <code>t.y.x</code> or <code>[1][0]</code>.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">yy</span></td>
-        <td></td>
+        <td><p>The Y component of the Y column vector, accessed via <code>t.y.y</code> or <code>[1][1]</code>.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">ox</span></td>
-        <td></td>
+        <td><p>The X component of the origin vector, accessed via <code>t.origin.x</code> or <code>[2][0]</code>.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">oy</span></td>
-        <td></td>
+        <td><p>The Y component of the origin vector, accessed via <code>t.origin.y</code> or <code>[2][1]</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -228,7 +249,9 @@
   
   
   <h4 id="Godot_Transform2D_origin" data-uid="Godot.Transform2D.origin">origin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The origin vector (column 2, the third column). Equivalent to array index <code>[2]</code>.
+The origin vector represents translation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -252,7 +275,8 @@
   
   
   <h4 id="Godot_Transform2D_x" data-uid="Godot.Transform2D.x">x</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The basis matrix's X vector (column 0). Equivalent to array index <code>[0]</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -276,7 +300,8 @@
   
   
   <h4 id="Godot_Transform2D_y" data-uid="Godot.Transform2D.y">y</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The basis matrix's Y vector (column 1). Equivalent to array index <code>[1]</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -303,7 +328,8 @@
   
   <a id="Godot_Transform2D_FlipX_" data-uid="Godot.Transform2D.FlipX*"></a>
   <h4 id="Godot_Transform2D_FlipX" data-uid="Godot.Transform2D.FlipX">FlipX</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The transform that will flip something along the X axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -320,7 +346,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>Equivalent to <code>new Transform2D(Vector2.Left, Vector2.Down, Vector2.Zero)</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -328,7 +355,8 @@
   
   <a id="Godot_Transform2D_FlipY_" data-uid="Godot.Transform2D.FlipY*"></a>
   <h4 id="Godot_Transform2D_FlipY" data-uid="Godot.Transform2D.FlipY">FlipY</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The transform that will flip something along the Y axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -345,7 +373,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>Equivalent to <code>new Transform2D(Vector2.Right, Vector2.Up, Vector2.Zero)</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -353,7 +382,10 @@
   
   <a id="Godot_Transform2D_Identity_" data-uid="Godot.Transform2D.Identity*"></a>
   <h4 id="Godot_Transform2D_Identity" data-uid="Godot.Transform2D.Identity">Identity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The identity transform, with no translation, rotation, or scaling applied.
+This is used as a replacement for <code>Transform2D()</code> in GDScript.
+Do not use <code>new Transform2D()</code> with no arguments in C#, because it sets all values to zero.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -370,7 +402,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>Equivalent to <code>new Transform2D(Vector2.Right, Vector2.Down, Vector2.Zero)</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -378,7 +411,9 @@
   
   <a id="Godot_Transform2D_Item_" data-uid="Godot.Transform2D.Item*"></a>
   <h4 id="Godot_Transform2D_Item_System_Int32_" data-uid="Godot.Transform2D.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Access whole columns in the form of <a class="xref" href="Godot.Vector2.html">Vector2</a>.
+The third column is the <a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_origin">origin</a> vector.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -397,7 +432,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">column</span></td>
-        <td></td>
+        <td><p>Which column vector.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -420,7 +456,9 @@
   
   <a id="Godot_Transform2D_Item_" data-uid="Godot.Transform2D.Item*"></a>
   <h4 id="Godot_Transform2D_Item_System_Int32_System_Int32_" data-uid="Godot.Transform2D.Item(System.Int32,System.Int32)">Item[Int32, Int32]</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Access matrix elements in column-major order.
+The third column is the <a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_origin">origin</a> vector.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -439,12 +477,14 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">column</span></td>
-        <td></td>
+        <td><p>Which column, the matrix horizontal position.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">row</span></td>
-        <td></td>
+        <td><p>Which row, the matrix vertical position.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -467,7 +507,8 @@
   
   <a id="Godot_Transform2D_Rotation_" data-uid="Godot.Transform2D.Rotation*"></a>
   <h4 id="Godot_Transform2D_Rotation" data-uid="Godot.Transform2D.Rotation">Rotation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The rotation of this transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -484,7 +525,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>Getting is equivalent to calling <a class="xref" href="Godot.Mathf.html#Godot_Mathf_Atan2_System_Single_System_Single_">Atan2(Single, Single)</a> with the values of <a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_x">x</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -492,7 +534,8 @@
   
   <a id="Godot_Transform2D_Scale_" data-uid="Godot.Transform2D.Scale*"></a>
   <h4 id="Godot_Transform2D_Scale" data-uid="Godot.Transform2D.Scale">Scale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The scale of this transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -509,7 +552,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
-        <td></td>
+        <td><p>Equivalent to the lengths of each column vector, but Y is negative if the determinant is negative.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -519,7 +563,9 @@
   
   <a id="Godot_Transform2D_AffineInverse_" data-uid="Godot.Transform2D.AffineInverse*"></a>
   <h4 id="Godot_Transform2D_AffineInverse" data-uid="Godot.Transform2D.AffineInverse">AffineInverse()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the inverse of the transform, under the assumption that
+the transformation is composed of rotation, scaling, and translation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -536,15 +582,22 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>The inverse transformation matrix.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Transform2D_AffineInverse_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_Inverse">Inverse()</a></div>
+  </div>
   
   
   <a id="Godot_Transform2D_BasisXform_" data-uid="Godot.Transform2D.BasisXform*"></a>
   <h4 id="Godot_Transform2D_BasisXform_Godot_Vector2_" data-uid="Godot.Transform2D.BasisXform(Godot.Vector2)">BasisXform(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a vector transformed (multiplied) by the basis matrix.
+This method does not account for translation (the <a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_origin">origin</a> vector).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -563,7 +616,8 @@
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">v</span></td>
-        <td></td>
+        <td><p>A vector to transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -578,15 +632,24 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
-        <td></td>
+        <td><p>The transformed vector.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Transform2D_BasisXform_Godot_Vector2__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_BasisXformInv_Godot_Vector2_">BasisXformInv(Vector2)</a></div>
+  </div>
   
   
   <a id="Godot_Transform2D_BasisXformInv_" data-uid="Godot.Transform2D.BasisXformInv*"></a>
   <h4 id="Godot_Transform2D_BasisXformInv_Godot_Vector2_" data-uid="Godot.Transform2D.BasisXformInv(Godot.Vector2)">BasisXformInv(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a vector transformed (multiplied) by the inverse basis matrix.
+This method does not account for translation (the <a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_origin">origin</a> vector).</p>
+<p>Note: This results in a multiplication by the inverse of the
+basis matrix only if it represents a rotation-reflection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -605,7 +668,8 @@
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">v</span></td>
-        <td></td>
+        <td><p>A vector to inversely transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -620,15 +684,23 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
-        <td></td>
+        <td><p>The inversely transformed vector.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Transform2D_BasisXformInv_Godot_Vector2__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_BasisXform_Godot_Vector2_">BasisXform(Vector2)</a></div>
+  </div>
   
   
   <a id="Godot_Transform2D_Equals_" data-uid="Godot.Transform2D.Equals*"></a>
   <h4 id="Godot_Transform2D_Equals_Godot_Transform2D_" data-uid="Godot.Transform2D.Equals(Godot.Transform2D)">Equals(Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the transforms are exactly equal.
+Note: Due to floating-point precision errors, consider using
+<a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_IsEqualApprox_Godot_Transform2D_">IsEqualApprox(Transform2D)</a> instead, which is more reliable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -647,7 +719,8 @@
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>The other transform to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -662,7 +735,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the matrices are exactly equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -670,7 +744,11 @@
   
   <a id="Godot_Transform2D_Equals_" data-uid="Godot.Transform2D.Equals*"></a>
   <h4 id="Godot_Transform2D_Equals_System_Object_" data-uid="Godot.Transform2D.Equals(System.Object)">Equals(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the transform is exactly equal
+to the given object (<see paramref="obj"></see>).
+Note: Due to floating-point precision errors, consider using
+<a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_IsEqualApprox_Godot_Transform2D_">IsEqualApprox(Transform2D)</a> instead, which is more reliable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -689,7 +767,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>The object to compare with.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -704,7 +783,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the transform and the object are exactly equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -712,7 +792,8 @@
   
   <a id="Godot_Transform2D_GetHashCode_" data-uid="Godot.Transform2D.GetHashCode*"></a>
   <h4 id="Godot_Transform2D_GetHashCode" data-uid="Godot.Transform2D.GetHashCode">GetHashCode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Serves as the hash function for <a class="xref" href="Godot.Transform2D.html">Transform2D</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -729,7 +810,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>A hash code for this transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -737,7 +819,8 @@
   
   <a id="Godot_Transform2D_InterpolateWith_" data-uid="Godot.Transform2D.InterpolateWith*"></a>
   <h4 id="Godot_Transform2D_InterpolateWith_Godot_Transform2D_System_Single_" data-uid="Godot.Transform2D.InterpolateWith(Godot.Transform2D,System.Single)">InterpolateWith(Transform2D, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Interpolates this transform to the other <code data-dev-comment-type="paramref" class="paramref">transform</code> by <code data-dev-comment-type="paramref" class="paramref">weight</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -756,12 +839,14 @@
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>The other transform.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">weight</span></td>
-        <td></td>
+        <td><p>A value on the range of 0.0 to 1.0, representing the amount of interpolation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -776,7 +861,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>The interpolated transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -784,7 +870,10 @@
   
   <a id="Godot_Transform2D_Inverse_" data-uid="Godot.Transform2D.Inverse*"></a>
   <h4 id="Godot_Transform2D_Inverse" data-uid="Godot.Transform2D.Inverse">Inverse()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the inverse of the transform, under the assumption that
+the transformation is composed of rotation and translation
+(no scaling, use <a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_AffineInverse">AffineInverse()</a> for transforms with scaling).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -801,7 +890,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>The inverse matrix.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -809,7 +899,9 @@
   
   <a id="Godot_Transform2D_IsEqualApprox_" data-uid="Godot.Transform2D.IsEqualApprox*"></a>
   <h4 id="Godot_Transform2D_IsEqualApprox_Godot_Transform2D_" data-uid="Godot.Transform2D.IsEqualApprox(Godot.Transform2D)">IsEqualApprox(Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if this transform and <code data-dev-comment-type="paramref" class="paramref">other</code> are approximately equal,
+by running <a class="xref" href="Godot.Vector2.html#Godot_Vector2_IsEqualApprox_Godot_Vector2_">IsEqualApprox(Vector2)</a> on each component.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -828,7 +920,8 @@
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>The other transform to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -843,7 +936,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the matrices are approximately equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -851,7 +945,9 @@
   
   <a id="Godot_Transform2D_Orthonormalized_" data-uid="Godot.Transform2D.Orthonormalized*"></a>
   <h4 id="Godot_Transform2D_Orthonormalized" data-uid="Godot.Transform2D.Orthonormalized">Orthonormalized()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the transform with the basis orthogonal (90 degrees),
+and normalized axis vectors (scale of 1 or -1).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -868,7 +964,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>The orthonormalized transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -876,7 +973,8 @@
   
   <a id="Godot_Transform2D_Rotated_" data-uid="Godot.Transform2D.Rotated*"></a>
   <h4 id="Godot_Transform2D_Rotated_System_Single_" data-uid="Godot.Transform2D.Rotated(System.Single)">Rotated(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotates the transform by <code data-dev-comment-type="paramref" class="paramref">angle</code> (in radians), using matrix multiplication.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -895,7 +993,8 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">angle</span></td>
-        <td></td>
+        <td><p>The angle to rotate, in radians.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -910,7 +1009,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>The rotated transformation matrix.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -918,7 +1018,8 @@
   
   <a id="Godot_Transform2D_Scaled_" data-uid="Godot.Transform2D.Scaled*"></a>
   <h4 id="Godot_Transform2D_Scaled_Godot_Vector2_" data-uid="Godot.Transform2D.Scaled(Godot.Vector2)">Scaled(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scales the transform by the given scaling factor, using matrix multiplication.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -937,7 +1038,8 @@
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">scale</span></td>
-        <td></td>
+        <td><p>The scale to introduce.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -952,7 +1054,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>The scaled transformation matrix.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -960,7 +1063,8 @@
   
   <a id="Godot_Transform2D_ToString_" data-uid="Godot.Transform2D.ToString*"></a>
   <h4 id="Godot_Transform2D_ToString" data-uid="Godot.Transform2D.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.Transform2D.html">Transform2D</a> to a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -977,7 +1081,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string representation of this transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -985,7 +1090,8 @@
   
   <a id="Godot_Transform2D_ToString_" data-uid="Godot.Transform2D.ToString*"></a>
   <h4 id="Godot_Transform2D_ToString_System_String_" data-uid="Godot.Transform2D.ToString(System.String)">ToString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.Transform2D.html">Transform2D</a> to a string with the given <code data-dev-comment-type="paramref" class="paramref">format</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1019,7 +1125,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string representation of this transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1027,7 +1134,11 @@
   
   <a id="Godot_Transform2D_Translated_" data-uid="Godot.Transform2D.Translated*"></a>
   <h4 id="Godot_Transform2D_Translated_Godot_Vector2_" data-uid="Godot.Transform2D.Translated(Godot.Vector2)">Translated(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Translates the transform by the given <code data-dev-comment-type="paramref" class="paramref">offset</code>,
+relative to the transform's basis vectors.</p>
+<p>Unlike <a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_Rotated_System_Single_">Rotated(Single)</a> and <a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_Scaled_Godot_Vector2_">Scaled(Vector2)</a>,
+this does not use matrix multiplication.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1046,7 +1157,8 @@
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">offset</span></td>
-        <td></td>
+        <td><p>The offset to translate by.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1061,7 +1173,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>The translated matrix.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1069,7 +1182,8 @@
   
   <a id="Godot_Transform2D_Xform_" data-uid="Godot.Transform2D.Xform*"></a>
   <h4 id="Godot_Transform2D_Xform_Godot_Vector2_" data-uid="Godot.Transform2D.Xform(Godot.Vector2)">Xform(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a vector transformed (multiplied) by this transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1088,7 +1202,8 @@
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">v</span></td>
-        <td></td>
+        <td><p>A vector to transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1103,15 +1218,21 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
-        <td></td>
+        <td><p>The transformed vector.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Transform2D_Xform_Godot_Vector2__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_XformInv_Godot_Vector2_">XformInv(Vector2)</a></div>
+  </div>
   
   
   <a id="Godot_Transform2D_XformInv_" data-uid="Godot.Transform2D.XformInv*"></a>
   <h4 id="Godot_Transform2D_XformInv_Godot_Vector2_" data-uid="Godot.Transform2D.XformInv(Godot.Vector2)">XformInv(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a vector transformed (multiplied) by the inverse transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1130,7 +1251,8 @@
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">v</span></td>
-        <td></td>
+        <td><p>A vector to inversely transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1145,17 +1267,25 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
-        <td></td>
+        <td><p>The inversely transformed vector.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Transform2D_XformInv_Godot_Vector2__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_Xform_Godot_Vector2_">Xform(Vector2)</a></div>
+  </div>
   <h3 id="operators">Operators
   </h3>
   
   
   <a id="Godot_Transform2D_op_Equality_" data-uid="Godot.Transform2D.op_Equality*"></a>
   <h4 id="Godot_Transform2D_op_Equality_Godot_Transform2D_Godot_Transform2D_" data-uid="Godot.Transform2D.op_Equality(Godot.Transform2D,Godot.Transform2D)">Equality(Transform2D, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the transforms are exactly equal.
+Note: Due to floating-point precision errors, consider using
+<a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_IsEqualApprox_Godot_Transform2D_">IsEqualApprox(Transform2D)</a> instead, which is more reliable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1174,12 +1304,14 @@
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left transform.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1194,7 +1326,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the transforms are exactly equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1202,7 +1335,10 @@
   
   <a id="Godot_Transform2D_op_Inequality_" data-uid="Godot.Transform2D.op_Inequality*"></a>
   <h4 id="Godot_Transform2D_op_Inequality_Godot_Transform2D_Godot_Transform2D_" data-uid="Godot.Transform2D.op_Inequality(Godot.Transform2D,Godot.Transform2D)">Inequality(Transform2D, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the transforms are not equal.
+Note: Due to floating-point precision errors, consider using
+<a class="xref" href="Godot.Transform2D.html#Godot_Transform2D_IsEqualApprox_Godot_Transform2D_">IsEqualApprox(Transform2D)</a> instead, which is more reliable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1221,12 +1357,14 @@
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left transform.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1241,7 +1379,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the transforms are not equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1249,7 +1388,8 @@
   
   <a id="Godot_Transform2D_op_Multiply_" data-uid="Godot.Transform2D.op_Multiply*"></a>
   <h4 id="Godot_Transform2D_op_Multiply_Godot_Rect2_Godot_Transform2D_" data-uid="Godot.Transform2D.op_Multiply(Godot.Rect2,Godot.Transform2D)">Multiply(Rect2, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a Rect2 transformed (multiplied) by the inverse transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1268,12 +1408,14 @@
       <tr>
         <td><a class="xref" href="Godot.Rect2.html">Rect2</a></td>
         <td><span class="parametername">rect</span></td>
-        <td></td>
+        <td><p>A Rect2 to inversely transform.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>The transformation to apply.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1288,7 +1430,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Rect2.html">Rect2</a></td>
-        <td></td>
+        <td><p>The inversely transformed Rect2.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1296,7 +1439,8 @@
   
   <a id="Godot_Transform2D_op_Multiply_" data-uid="Godot.Transform2D.op_Multiply*"></a>
   <h4 id="Godot_Transform2D_op_Multiply_Godot_Transform2D_Godot_Rect2_" data-uid="Godot.Transform2D.op_Multiply(Godot.Transform2D,Godot.Rect2)">Multiply(Transform2D, Rect2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a Rect2 transformed (multiplied) by transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1315,12 +1459,14 @@
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>The transformation to apply.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Rect2.html">Rect2</a></td>
         <td><span class="parametername">rect</span></td>
-        <td></td>
+        <td><p>A Rect2 to transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1335,7 +1481,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Rect2.html">Rect2</a></td>
-        <td></td>
+        <td><p>The transformed Rect2.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1343,7 +1490,10 @@
   
   <a id="Godot_Transform2D_op_Multiply_" data-uid="Godot.Transform2D.op_Multiply*"></a>
   <h4 id="Godot_Transform2D_op_Multiply_Godot_Transform2D_Godot_Transform2D_" data-uid="Godot.Transform2D.op_Multiply(Godot.Transform2D,Godot.Transform2D)">Multiply(Transform2D, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Composes these two transformation matrices by multiplying them
+together. This has the effect of transforming the second transform
+(the child) by the first transform (the parent).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1362,12 +1512,14 @@
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The parent transform.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The child transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1382,7 +1534,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
-        <td></td>
+        <td><p>The composed transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1390,7 +1543,8 @@
   
   <a id="Godot_Transform2D_op_Multiply_" data-uid="Godot.Transform2D.op_Multiply*"></a>
   <h4 id="Godot_Transform2D_op_Multiply_Godot_Transform2D_Godot_Vector2_" data-uid="Godot.Transform2D.op_Multiply(Godot.Transform2D,Godot.Vector2)">Multiply(Transform2D, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a Vector2 transformed (multiplied) by transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1409,12 +1563,14 @@
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>The transformation to apply.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">vector</span></td>
-        <td></td>
+        <td><p>A Vector2 to transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1429,7 +1585,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
-        <td></td>
+        <td><p>The transformed Vector2.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1437,7 +1594,8 @@
   
   <a id="Godot_Transform2D_op_Multiply_" data-uid="Godot.Transform2D.op_Multiply*"></a>
   <h4 id="Godot_Transform2D_op_Multiply_Godot_Transform2D_Godot_Vector2___" data-uid="Godot.Transform2D.op_Multiply(Godot.Transform2D,Godot.Vector2[])">Multiply(Transform2D, Vector2[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the given Vector2[] transformed (multiplied) by transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1456,12 +1614,14 @@
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>The transformation to apply.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a>[]</td>
         <td><span class="parametername">array</span></td>
-        <td></td>
+        <td><p>A Vector2[] to transform.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1476,7 +1636,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a>[]</td>
-        <td></td>
+        <td><p>The transformed copy of the Vector2[].</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1484,7 +1645,8 @@
   
   <a id="Godot_Transform2D_op_Multiply_" data-uid="Godot.Transform2D.op_Multiply*"></a>
   <h4 id="Godot_Transform2D_op_Multiply_Godot_Vector2_Godot_Transform2D_" data-uid="Godot.Transform2D.op_Multiply(Godot.Vector2,Godot.Transform2D)">Multiply(Vector2, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a Vector2 transformed (multiplied) by the inverse transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1503,12 +1665,14 @@
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
         <td><span class="parametername">vector</span></td>
-        <td></td>
+        <td><p>A Vector2 to inversely transform.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>The transformation to apply.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1523,7 +1687,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a></td>
-        <td></td>
+        <td><p>The inversely transformed Vector2.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1531,7 +1696,8 @@
   
   <a id="Godot_Transform2D_op_Multiply_" data-uid="Godot.Transform2D.op_Multiply*"></a>
   <h4 id="Godot_Transform2D_op_Multiply_Godot_Vector2___Godot_Transform2D_" data-uid="Godot.Transform2D.op_Multiply(Godot.Vector2[],Godot.Transform2D)">Multiply(Vector2[], Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the given Vector2[] transformed (multiplied) by the inverse transformation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1550,12 +1716,14 @@
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a>[]</td>
         <td><span class="parametername">array</span></td>
-        <td></td>
+        <td><p>A Vector2[] to inversely transform.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Transform2D.html">Transform2D</a></td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>The transformation to apply.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1570,7 +1738,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Vector2.html">Vector2</a>[]</td>
-        <td></td>
+        <td><p>The inversely transformed copy of the Vector2[].</p>
+</td>
       </tr>
     </tbody>
   </table>

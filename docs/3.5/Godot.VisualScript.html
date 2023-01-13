@@ -83,7 +83,10 @@
   
   <h1 id="Godot_VisualScript" data-uid="Godot.VisualScript" class="text-break">Class VisualScript
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A script implemented in the Visual Script programming environment. The script extends the functionality of all objects that instance it.</p>
+<p><a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">SetScript(Reference)</a> extends an existing object, if that object&apos;s class matches one of the script&apos;s base classes.</p>
+<p>You are most likely to use this class via the Visual Script editor or when writing plugins for it.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -422,7 +425,8 @@
   
   <a id="Godot_VisualScript_AddCustomSignal_" data-uid="Godot.VisualScript.AddCustomSignal*"></a>
   <h4 id="Godot_VisualScript_AddCustomSignal_System_String_" data-uid="Godot.VisualScript.AddCustomSignal(System.String)">AddCustomSignal(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Add a custom signal with the specified name to the VisualScript.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -449,7 +453,8 @@
   
   <a id="Godot_VisualScript_AddFunction_" data-uid="Godot.VisualScript.AddFunction*"></a>
   <h4 id="Godot_VisualScript_AddFunction_System_String_" data-uid="Godot.VisualScript.AddFunction(System.String)">AddFunction(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Add a function with the specified name to the VisualScript.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -476,7 +481,8 @@
   
   <a id="Godot_VisualScript_AddNode_" data-uid="Godot.VisualScript.AddNode*"></a>
   <h4 id="Godot_VisualScript_AddNode_System_String_System_Int32_Godot_VisualScriptNode_System_Nullable_Godot_Vector2__" data-uid="Godot.VisualScript.AddNode(System.String,System.Int32,Godot.VisualScriptNode,System.Nullable{Godot.Vector2})">AddNode(String, Int32, VisualScriptNode, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Add a node to a function of the VisualScript.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -510,7 +516,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">position</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -518,7 +525,8 @@
   
   <a id="Godot_VisualScript_AddVariable_" data-uid="Godot.VisualScript.AddVariable*"></a>
   <h4 id="Godot_VisualScript_AddVariable_System_String_System_Object_System_Boolean_" data-uid="Godot.VisualScript.AddVariable(System.String,System.Object,System.Boolean)">AddVariable(String, Object, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Add a variable to the VisualScript, optionally giving it a default value or marking it as exported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -555,7 +563,8 @@
   
   <a id="Godot_VisualScript_CustomSignalAddArgument_" data-uid="Godot.VisualScript.CustomSignalAddArgument*"></a>
   <h4 id="Godot_VisualScript_CustomSignalAddArgument_System_String_Godot_Variant_Type_System_String_System_Int32_" data-uid="Godot.VisualScript.CustomSignalAddArgument(System.String,Godot.Variant.Type,System.String,System.Int32)">CustomSignalAddArgument(String, Variant.Type, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Add an argument to a custom signal added with <a class="xref" href="Godot.VisualScript.html#Godot_VisualScript_AddCustomSignal_System_String_">AddCustomSignal(String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -597,7 +606,8 @@
   
   <a id="Godot_VisualScript_CustomSignalGetArgumentCount_" data-uid="Godot.VisualScript.CustomSignalGetArgumentCount*"></a>
   <h4 id="Godot_VisualScript_CustomSignalGetArgumentCount_System_String_" data-uid="Godot.VisualScript.CustomSignalGetArgumentCount(System.String)">CustomSignalGetArgumentCount(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get the count of a custom signal&apos;s arguments.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -639,7 +649,8 @@
   
   <a id="Godot_VisualScript_CustomSignalGetArgumentName_" data-uid="Godot.VisualScript.CustomSignalGetArgumentName*"></a>
   <h4 id="Godot_VisualScript_CustomSignalGetArgumentName_System_String_System_Int32_" data-uid="Godot.VisualScript.CustomSignalGetArgumentName(System.String,System.Int32)">CustomSignalGetArgumentName(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get the name of a custom signal&apos;s argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -686,7 +697,8 @@
   
   <a id="Godot_VisualScript_CustomSignalGetArgumentType_" data-uid="Godot.VisualScript.CustomSignalGetArgumentType*"></a>
   <h4 id="Godot_VisualScript_CustomSignalGetArgumentType_System_String_System_Int32_" data-uid="Godot.VisualScript.CustomSignalGetArgumentType(System.String,System.Int32)">CustomSignalGetArgumentType(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get the type of a custom signal&apos;s argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -733,7 +745,8 @@
   
   <a id="Godot_VisualScript_CustomSignalRemoveArgument_" data-uid="Godot.VisualScript.CustomSignalRemoveArgument*"></a>
   <h4 id="Godot_VisualScript_CustomSignalRemoveArgument_System_String_System_Int32_" data-uid="Godot.VisualScript.CustomSignalRemoveArgument(System.String,System.Int32)">CustomSignalRemoveArgument(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remove a specific custom signal&apos;s argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -765,7 +778,8 @@
   
   <a id="Godot_VisualScript_CustomSignalSetArgumentName_" data-uid="Godot.VisualScript.CustomSignalSetArgumentName*"></a>
   <h4 id="Godot_VisualScript_CustomSignalSetArgumentName_System_String_System_Int32_System_String_" data-uid="Godot.VisualScript.CustomSignalSetArgumentName(System.String,System.Int32,System.String)">CustomSignalSetArgumentName(String, Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rename a custom signal&apos;s argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -802,7 +816,8 @@
   
   <a id="Godot_VisualScript_CustomSignalSetArgumentType_" data-uid="Godot.VisualScript.CustomSignalSetArgumentType*"></a>
   <h4 id="Godot_VisualScript_CustomSignalSetArgumentType_System_String_System_Int32_Godot_Variant_Type_" data-uid="Godot.VisualScript.CustomSignalSetArgumentType(System.String,System.Int32,Godot.Variant.Type)">CustomSignalSetArgumentType(String, Int32, Variant.Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Change the type of a custom signal&apos;s argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -839,7 +854,8 @@
   
   <a id="Godot_VisualScript_CustomSignalSwapArgument_" data-uid="Godot.VisualScript.CustomSignalSwapArgument*"></a>
   <h4 id="Godot_VisualScript_CustomSignalSwapArgument_System_String_System_Int32_System_Int32_" data-uid="Godot.VisualScript.CustomSignalSwapArgument(System.String,System.Int32,System.Int32)">CustomSignalSwapArgument(String, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Swap two of the arguments of a custom signal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -876,7 +892,8 @@
   
   <a id="Godot_VisualScript_DataConnect_" data-uid="Godot.VisualScript.DataConnect*"></a>
   <h4 id="Godot_VisualScript_DataConnect_System_String_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.VisualScript.DataConnect(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">DataConnect(String, Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connect two data ports. The value of <code>from_node</code>&apos;s <code>from_port</code> would be fed into <code>to_node</code>&apos;s <code>to_port</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -923,7 +940,8 @@
   
   <a id="Godot_VisualScript_DataDisconnect_" data-uid="Godot.VisualScript.DataDisconnect*"></a>
   <h4 id="Godot_VisualScript_DataDisconnect_System_String_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.VisualScript.DataDisconnect(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">DataDisconnect(String, Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnect two data ports previously connected with <a class="xref" href="Godot.VisualScript.html#Godot_VisualScript_DataConnect_System_String_System_Int32_System_Int32_System_Int32_System_Int32_">DataConnect(String, Int32, Int32, Int32, Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -970,7 +988,8 @@
   
   <a id="Godot_VisualScript_GetFunctionNodeId_" data-uid="Godot.VisualScript.GetFunctionNodeId*"></a>
   <h4 id="Godot_VisualScript_GetFunctionNodeId_System_String_" data-uid="Godot.VisualScript.GetFunctionNodeId(System.String)">GetFunctionNodeId(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the id of a function&apos;s entry point node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1012,7 +1031,8 @@
   
   <a id="Godot_VisualScript_GetFunctionScroll_" data-uid="Godot.VisualScript.GetFunctionScroll*"></a>
   <h4 id="Godot_VisualScript_GetFunctionScroll_System_String_" data-uid="Godot.VisualScript.GetFunctionScroll(System.String)">GetFunctionScroll(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the center of the screen for a given function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1054,7 +1074,8 @@
   
   <a id="Godot_VisualScript_GetNode_" data-uid="Godot.VisualScript.GetNode*"></a>
   <h4 id="Godot_VisualScript_GetNode_System_String_System_Int32_" data-uid="Godot.VisualScript.GetNode(System.String,System.Int32)">GetNode(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a node given its id and its function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1101,7 +1122,8 @@
   
   <a id="Godot_VisualScript_GetNodePosition_" data-uid="Godot.VisualScript.GetNodePosition*"></a>
   <h4 id="Godot_VisualScript_GetNodePosition_System_String_System_Int32_" data-uid="Godot.VisualScript.GetNodePosition(System.String,System.Int32)">GetNodePosition(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a node&apos;s position in pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1148,7 +1170,8 @@
   
   <a id="Godot_VisualScript_GetVariableDefaultValue_" data-uid="Godot.VisualScript.GetVariableDefaultValue*"></a>
   <h4 id="Godot_VisualScript_GetVariableDefaultValue_System_String_" data-uid="Godot.VisualScript.GetVariableDefaultValue(System.String)">GetVariableDefaultValue(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the default (initial) value of a variable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1190,7 +1213,8 @@
   
   <a id="Godot_VisualScript_GetVariableExport_" data-uid="Godot.VisualScript.GetVariableExport*"></a>
   <h4 id="Godot_VisualScript_GetVariableExport_System_String_" data-uid="Godot.VisualScript.GetVariableExport(System.String)">GetVariableExport(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a variable is exported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1232,7 +1256,8 @@
   
   <a id="Godot_VisualScript_GetVariableInfo_" data-uid="Godot.VisualScript.GetVariableInfo*"></a>
   <h4 id="Godot_VisualScript_GetVariableInfo_System_String_" data-uid="Godot.VisualScript.GetVariableInfo(System.String)">GetVariableInfo(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the information for a given variable as a dictionary. The information includes its name, type, hint and usage.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1274,7 +1299,8 @@
   
   <a id="Godot_VisualScript_HasCustomSignal_" data-uid="Godot.VisualScript.HasCustomSignal*"></a>
   <h4 id="Godot_VisualScript_HasCustomSignal_System_String_" data-uid="Godot.VisualScript.HasCustomSignal(System.String)">HasCustomSignal(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a signal exists with the specified name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1316,7 +1342,8 @@
   
   <a id="Godot_VisualScript_HasDataConnection_" data-uid="Godot.VisualScript.HasDataConnection*"></a>
   <h4 id="Godot_VisualScript_HasDataConnection_System_String_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.VisualScript.HasDataConnection(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">HasDataConnection(String, Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the specified data ports are connected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1378,7 +1405,8 @@
   
   <a id="Godot_VisualScript_HasFunction_" data-uid="Godot.VisualScript.HasFunction*"></a>
   <h4 id="Godot_VisualScript_HasFunction_System_String_" data-uid="Godot.VisualScript.HasFunction(System.String)">HasFunction(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a function exists with the specified name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1420,7 +1448,8 @@
   
   <a id="Godot_VisualScript_HasNode_" data-uid="Godot.VisualScript.HasNode*"></a>
   <h4 id="Godot_VisualScript_HasNode_System_String_System_Int32_" data-uid="Godot.VisualScript.HasNode(System.String,System.Int32)">HasNode(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a node exists with the given id.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1467,7 +1496,8 @@
   
   <a id="Godot_VisualScript_HasSequenceConnection_" data-uid="Godot.VisualScript.HasSequenceConnection*"></a>
   <h4 id="Godot_VisualScript_HasSequenceConnection_System_String_System_Int32_System_Int32_System_Int32_" data-uid="Godot.VisualScript.HasSequenceConnection(System.String,System.Int32,System.Int32,System.Int32)">HasSequenceConnection(String, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the specified sequence ports are connected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1524,7 +1554,8 @@
   
   <a id="Godot_VisualScript_HasVariable_" data-uid="Godot.VisualScript.HasVariable*"></a>
   <h4 id="Godot_VisualScript_HasVariable_System_String_" data-uid="Godot.VisualScript.HasVariable(System.String)">HasVariable(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a variable exists with the specified name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1566,7 +1597,8 @@
   
   <a id="Godot_VisualScript_RemoveCustomSignal_" data-uid="Godot.VisualScript.RemoveCustomSignal*"></a>
   <h4 id="Godot_VisualScript_RemoveCustomSignal_System_String_" data-uid="Godot.VisualScript.RemoveCustomSignal(System.String)">RemoveCustomSignal(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remove a custom signal with the given name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1593,7 +1625,8 @@
   
   <a id="Godot_VisualScript_RemoveFunction_" data-uid="Godot.VisualScript.RemoveFunction*"></a>
   <h4 id="Godot_VisualScript_RemoveFunction_System_String_" data-uid="Godot.VisualScript.RemoveFunction(System.String)">RemoveFunction(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remove a specific function and its nodes from the script.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1620,7 +1653,8 @@
   
   <a id="Godot_VisualScript_RemoveNode_" data-uid="Godot.VisualScript.RemoveNode*"></a>
   <h4 id="Godot_VisualScript_RemoveNode_System_String_System_Int32_" data-uid="Godot.VisualScript.RemoveNode(System.String,System.Int32)">RemoveNode(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remove a specific node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1652,7 +1686,8 @@
   
   <a id="Godot_VisualScript_RemoveVariable_" data-uid="Godot.VisualScript.RemoveVariable*"></a>
   <h4 id="Godot_VisualScript_RemoveVariable_System_String_" data-uid="Godot.VisualScript.RemoveVariable(System.String)">RemoveVariable(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remove a variable with the given name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1679,7 +1714,8 @@
   
   <a id="Godot_VisualScript_RenameCustomSignal_" data-uid="Godot.VisualScript.RenameCustomSignal*"></a>
   <h4 id="Godot_VisualScript_RenameCustomSignal_System_String_System_String_" data-uid="Godot.VisualScript.RenameCustomSignal(System.String,System.String)">RenameCustomSignal(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Change the name of a custom signal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1711,7 +1747,8 @@
   
   <a id="Godot_VisualScript_RenameFunction_" data-uid="Godot.VisualScript.RenameFunction*"></a>
   <h4 id="Godot_VisualScript_RenameFunction_System_String_System_String_" data-uid="Godot.VisualScript.RenameFunction(System.String,System.String)">RenameFunction(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Change the name of a function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1743,7 +1780,8 @@
   
   <a id="Godot_VisualScript_RenameVariable_" data-uid="Godot.VisualScript.RenameVariable*"></a>
   <h4 id="Godot_VisualScript_RenameVariable_System_String_System_String_" data-uid="Godot.VisualScript.RenameVariable(System.String,System.String)">RenameVariable(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Change the name of a variable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1775,7 +1813,9 @@
   
   <a id="Godot_VisualScript_SequenceConnect_" data-uid="Godot.VisualScript.SequenceConnect*"></a>
   <h4 id="Godot_VisualScript_SequenceConnect_System_String_System_Int32_System_Int32_System_Int32_" data-uid="Godot.VisualScript.SequenceConnect(System.String,System.Int32,System.Int32,System.Int32)">SequenceConnect(String, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connect two sequence ports. The execution will flow from of <code>from_node</code>&apos;s <code>from_output</code> into <code>to_node</code>.</p>
+<p>Unlike <a class="xref" href="Godot.VisualScript.html#Godot_VisualScript_DataConnect_System_String_System_Int32_System_Int32_System_Int32_System_Int32_">DataConnect(String, Int32, Int32, Int32, Int32)</a>, there isn&apos;t a <code>to_port</code>, since the target node can have only one sequence port.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1817,7 +1857,8 @@
   
   <a id="Godot_VisualScript_SequenceDisconnect_" data-uid="Godot.VisualScript.SequenceDisconnect*"></a>
   <h4 id="Godot_VisualScript_SequenceDisconnect_System_String_System_Int32_System_Int32_System_Int32_" data-uid="Godot.VisualScript.SequenceDisconnect(System.String,System.Int32,System.Int32,System.Int32)">SequenceDisconnect(String, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnect two sequence ports previously connected with <a class="xref" href="Godot.VisualScript.html#Godot_VisualScript_SequenceConnect_System_String_System_Int32_System_Int32_System_Int32_">SequenceConnect(String, Int32, Int32, Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1859,7 +1900,8 @@
   
   <a id="Godot_VisualScript_SetFunctionScroll_" data-uid="Godot.VisualScript.SetFunctionScroll*"></a>
   <h4 id="Godot_VisualScript_SetFunctionScroll_System_String_Godot_Vector2_" data-uid="Godot.VisualScript.SetFunctionScroll(System.String,Godot.Vector2)">SetFunctionScroll(String, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Position the center of the screen for a function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1891,7 +1933,8 @@
   
   <a id="Godot_VisualScript_SetInstanceBaseType_" data-uid="Godot.VisualScript.SetInstanceBaseType*"></a>
   <h4 id="Godot_VisualScript_SetInstanceBaseType_System_String_" data-uid="Godot.VisualScript.SetInstanceBaseType(System.String)">SetInstanceBaseType(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set the base type of the script.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1918,7 +1961,8 @@
   
   <a id="Godot_VisualScript_SetNodePosition_" data-uid="Godot.VisualScript.SetNodePosition*"></a>
   <h4 id="Godot_VisualScript_SetNodePosition_System_String_System_Int32_Godot_Vector2_" data-uid="Godot.VisualScript.SetNodePosition(System.String,System.Int32,Godot.Vector2)">SetNodePosition(String, Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Position a node on the screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1955,7 +1999,8 @@
   
   <a id="Godot_VisualScript_SetVariableDefaultValue_" data-uid="Godot.VisualScript.SetVariableDefaultValue*"></a>
   <h4 id="Godot_VisualScript_SetVariableDefaultValue_System_String_System_Object_" data-uid="Godot.VisualScript.SetVariableDefaultValue(System.String,System.Object)">SetVariableDefaultValue(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Change the default (initial) value of a variable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1987,7 +2032,8 @@
   
   <a id="Godot_VisualScript_SetVariableExport_" data-uid="Godot.VisualScript.SetVariableExport*"></a>
   <h4 id="Godot_VisualScript_SetVariableExport_System_String_System_Boolean_" data-uid="Godot.VisualScript.SetVariableExport(System.String,System.Boolean)">SetVariableExport(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Change whether a variable is exported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2019,7 +2065,8 @@
   
   <a id="Godot_VisualScript_SetVariableInfo_" data-uid="Godot.VisualScript.SetVariableInfo*"></a>
   <h4 id="Godot_VisualScript_SetVariableInfo_System_String_Godot_Collections_Dictionary_" data-uid="Godot.VisualScript.SetVariableInfo(System.String,Godot.Collections.Dictionary)">SetVariableInfo(String, Dictionary)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set a variable&apos;s info, using the same format as <a class="xref" href="Godot.VisualScript.html#Godot_VisualScript_GetVariableInfo_System_String_">GetVariableInfo(String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

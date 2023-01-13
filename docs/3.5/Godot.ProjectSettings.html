@@ -83,7 +83,11 @@
   
   <h1 id="Godot_ProjectSettings" data-uid="Godot.ProjectSettings" class="text-break">Class ProjectSettings
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Contains global variables accessible from everywhere. Use <a class="xref" href="Godot.ProjectSettings.html#Godot_ProjectSettings_GetSetting_System_String_">GetSetting(String)</a>, <a class="xref" href="Godot.ProjectSettings.html#Godot_ProjectSettings_SetSetting_System_String_System_Object_">SetSetting(String, Object)</a> or <a class="xref" href="Godot.ProjectSettings.html#Godot_ProjectSettings_HasSetting_System_String_">HasSetting(String)</a> to access them. Variables stored in <code>project.godot</code> are also loaded into ProjectSettings, making this object very useful for reading custom game configuration options.</p>
+<p>When naming a Project Settings property, use the full path to the setting including the category. For example, <code>&quot;application/config/name&quot;</code> for the project name. Category and property names can be viewed in the Project Settings dialog.</p>
+<p>Feature tags: Project settings can be overridden for specific platforms and configurations (debug, release, ...) using <a href="$DOCS_URL/tutorials/export/feature_tags.html">feature tags</a>.</p>
+<p>Overriding: Any project setting can be overridden by creating a file named <code>override.cfg</code> in the project&apos;s root directory. This can also be used in exported projects by placing this file in the same directory as the project binary. Overriding will still take the base project settings&apos; <a href="$DOCS_URL/tutorials/export/feature_tags.html">feature tags</a> in account. Therefore, make sure to also override the setting with the desired feature tags if you want them to override base project settings on all platforms and configurations.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +133,20 @@
   
   <a id="Godot_ProjectSettings_AddPropertyInfo_" data-uid="Godot.ProjectSettings.AddPropertyInfo*"></a>
   <h4 id="Godot_ProjectSettings_AddPropertyInfo_Godot_Collections_Dictionary_" data-uid="Godot.ProjectSettings.AddPropertyInfo(Godot.Collections.Dictionary)">AddPropertyInfo(Dictionary)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a custom property info to a property. The dictionary must contain:</p>
+<p>- <code>name</code>: <span class="xref">System.String</span> (the property&apos;s name)</p>
+<p>- <code>type</code>: <span class="xref">System.Int32</span> (see <a class="xref" href="Godot.Variant.Type.html">Variant.Type</a>)</p>
+<p>- optionally <code>hint</code>: <span class="xref">System.Int32</span> (see <a class="xref" href="Godot.PropertyHint.html">PropertyHint</a>) and <code>hint_string</code>: <span class="xref">System.String</span></p>
+<p>Example:</p>
+<p><pre><code>ProjectSettings.set(&quot;category/property_name&quot;, 0)
+<p>var property_info = {
+&quot;name&quot;: &quot;category/property_name&quot;,
+&quot;type&quot;: TYPE_INT,
+&quot;hint&quot;: PROPERTY_HINT_ENUM,
+&quot;hint_string&quot;: &quot;one,two,three&quot;
+}</p>
+<p>ProjectSettings.add_property_info(property_info)</code></pre></p><p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -156,7 +173,8 @@
   
   <a id="Godot_ProjectSettings_Clear_" data-uid="Godot.ProjectSettings.Clear*"></a>
   <h4 id="Godot_ProjectSettings_Clear_System_String_" data-uid="Godot.ProjectSettings.Clear(System.String)">Clear(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the whole configuration (not recommended, may break things).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -183,7 +201,8 @@
   
   <a id="Godot_ProjectSettings_GetOrder_" data-uid="Godot.ProjectSettings.GetOrder*"></a>
   <h4 id="Godot_ProjectSettings_GetOrder_System_String_" data-uid="Godot.ProjectSettings.GetOrder(System.String)">GetOrder(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the order of a configuration value (influences when saved to the config file).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -225,7 +244,10 @@
   
   <a id="Godot_ProjectSettings_GetSetting_" data-uid="Godot.ProjectSettings.GetSetting*"></a>
   <h4 id="Godot_ProjectSettings_GetSetting_System_String_" data-uid="Godot.ProjectSettings.GetSetting(System.String)">GetSetting(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of a setting.</p>
+<p>Example:</p>
+<p><pre><code>print(ProjectSettings.get_setting(&quot;application/config/name&quot;))</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -267,7 +289,20 @@
   
   <a id="Godot_ProjectSettings_GlobalizePath_" data-uid="Godot.ProjectSettings.GlobalizePath*"></a>
   <h4 id="Godot_ProjectSettings_GlobalizePath_System_String_" data-uid="Godot.ProjectSettings.GlobalizePath(System.String)">GlobalizePath(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the absolute, native OS path corresponding to the localized <code>path</code> (starting with <code>res://</code> or <code>user://</code>). The returned path will vary depending on the operating system and user preferences. See <a href="$DOCS_URL/tutorials/io/data_paths.html">File paths in Godot projects</a> to see what those paths convert to. See also <a class="xref" href="Godot.ProjectSettings.html#Godot_ProjectSettings_LocalizePath_System_String_">LocalizePath(String)</a>.</p>
+<p>Note: <a class="xref" href="Godot.ProjectSettings.html#Godot_ProjectSettings_GlobalizePath_System_String_">GlobalizePath(String)</a> with <code>res://</code> will not work in an exported project. Instead, prepend the executable&apos;s base directory to the path when running from an exported project:</p>
+<p><pre><code>var path = &quot;&quot;
+if OS.has_feature(&quot;editor&quot;):
+    # Running from an editor binary.
+    # `path` will contain the absolute path to `hello.txt` located in the project root.
+    path = ProjectSettings.globalize_path(&quot;res://hello.txt&quot;)
+else:
+    # Running from an exported project.
+    # `path` will contain the absolute path to `hello.txt` next to the executable.
+    # This is *not* identical to using `ProjectSettings.globalize_path()` with a `res://` path,
+    # but is close enough in spirit.
+    path = OS.get_executable_path().get_base_dir().plus_file(&quot;hello.txt&quot;)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -309,7 +344,8 @@
   
   <a id="Godot_ProjectSettings_HasSetting_" data-uid="Godot.ProjectSettings.HasSetting*"></a>
   <h4 id="Godot_ProjectSettings_HasSetting_System_String_" data-uid="Godot.ProjectSettings.HasSetting(System.String)">HasSetting(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a configuration value is present.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -351,7 +387,10 @@
   
   <a id="Godot_ProjectSettings_LoadResourcePack_" data-uid="Godot.ProjectSettings.LoadResourcePack*"></a>
   <h4 id="Godot_ProjectSettings_LoadResourcePack_System_String_System_Boolean_System_Int32_" data-uid="Godot.ProjectSettings.LoadResourcePack(System.String,System.Boolean,System.Int32)">LoadResourcePack(String, Boolean, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads the contents of the .pck or .zip file specified by <code>pack</code> into the resource filesystem (<code>res://</code>). Returns <code>true</code> on success.</p>
+<p>Note: If a file from <code>pack</code> shares the same path as a file already in the resource filesystem, any attempts to load that file will use the file from <code>pack</code> unless <code>replace_files</code> is set to <code>false</code>.</p>
+<p>Note: The optional <code>offset</code> parameter can be used to specify the offset in bytes to the start of the resource pack. This is only supported for .pck files.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -403,7 +442,8 @@
   
   <a id="Godot_ProjectSettings_LocalizePath_" data-uid="Godot.ProjectSettings.LocalizePath*"></a>
   <h4 id="Godot_ProjectSettings_LocalizePath_System_String_" data-uid="Godot.ProjectSettings.LocalizePath(System.String)">LocalizePath(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the localized path (starting with <code>res://</code>) corresponding to the absolute, native OS <code>path</code>. See also <a class="xref" href="Godot.ProjectSettings.html#Godot_ProjectSettings_GlobalizePath_System_String_">GlobalizePath(String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -445,7 +485,8 @@
   
   <a id="Godot_ProjectSettings_PropertyCanRevert_" data-uid="Godot.ProjectSettings.PropertyCanRevert*"></a>
   <h4 id="Godot_ProjectSettings_PropertyCanRevert_System_String_" data-uid="Godot.ProjectSettings.PropertyCanRevert(System.String)">PropertyCanRevert(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the specified property exists and its initial value differs from the current value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -487,7 +528,8 @@
   
   <a id="Godot_ProjectSettings_PropertyGetRevert_" data-uid="Godot.ProjectSettings.PropertyGetRevert*"></a>
   <h4 id="Godot_ProjectSettings_PropertyGetRevert_System_String_" data-uid="Godot.ProjectSettings.PropertyGetRevert(System.String)">PropertyGetRevert(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the specified property&apos;s initial value. Returns <code>null</code> if the property does not exist.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -529,7 +571,9 @@
   
   <a id="Godot_ProjectSettings_Save_" data-uid="Godot.ProjectSettings.Save*"></a>
   <h4 id="Godot_ProjectSettings_Save" data-uid="Godot.ProjectSettings.Save">Save()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves the configuration to the <code>project.godot</code> file.</p>
+<p>Note: This method is intended to be used by editor plugins, as modified <a class="xref" href="Godot.ProjectSettings.html">ProjectSettings</a> can&apos;t be loaded back in the running app. If you want to change project settings in exported projects, use <a class="xref" href="Godot.ProjectSettings.html#Godot_ProjectSettings_SaveCustom_System_String_">SaveCustom(String)</a> to save <code>override.cfg</code> file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -554,7 +598,8 @@
   
   <a id="Godot_ProjectSettings_SaveCustom_" data-uid="Godot.ProjectSettings.SaveCustom*"></a>
   <h4 id="Godot_ProjectSettings_SaveCustom_System_String_" data-uid="Godot.ProjectSettings.SaveCustom(System.String)">SaveCustom(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves the configuration to a custom file. The file extension must be <code>.godot</code> (to save in text-based <a class="xref" href="Godot.ConfigFile.html">ConfigFile</a> format) or <code>.binary</code> (to save in binary format). You can also save <code>override.cfg</code> file, which is also text, but can be used in exported projects unlike other formats.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -596,7 +641,8 @@
   
   <a id="Godot_ProjectSettings_SetInitialValue_" data-uid="Godot.ProjectSettings.SetInitialValue*"></a>
   <h4 id="Godot_ProjectSettings_SetInitialValue_System_String_System_Object_" data-uid="Godot.ProjectSettings.SetInitialValue(System.String,System.Object)">SetInitialValue(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the specified property&apos;s initial value. This is the value the property reverts to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -628,7 +674,8 @@
   
   <a id="Godot_ProjectSettings_SetOrder_" data-uid="Godot.ProjectSettings.SetOrder*"></a>
   <h4 id="Godot_ProjectSettings_SetOrder_System_String_System_Int32_" data-uid="Godot.ProjectSettings.SetOrder(System.String,System.Int32)">SetOrder(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the order of a configuration value (influences when saved to the config file).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -660,7 +707,11 @@
   
   <a id="Godot_ProjectSettings_SetSetting_" data-uid="Godot.ProjectSettings.SetSetting*"></a>
   <h4 id="Godot_ProjectSettings_SetSetting_System_String_System_Object_" data-uid="Godot.ProjectSettings.SetSetting(System.String,System.Object)">SetSetting(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the value of a setting.</p>
+<p>Example:</p>
+<p><pre><code>ProjectSettings.set_setting(&quot;application/config/name&quot;, &quot;Example&quot;)</code></pre></p>
+<p>This can also be used to erase custom project settings. To do this change the setting value to <code>null</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

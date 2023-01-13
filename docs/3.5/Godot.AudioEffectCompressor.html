@@ -83,7 +83,13 @@
   
   <h1 id="Godot_AudioEffectCompressor" data-uid="Godot.AudioEffectCompressor" class="text-break">Class AudioEffectCompressor
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Dynamic range compressor reduces the level of the sound when the amplitude goes over a certain threshold in Decibels. One of the main uses of a compressor is to increase the dynamic range by clipping as little as possible (when sound goes over 0dB).</p>
+<p>Compressor has many uses in the mix:</p>
+<p>- In the Master bus to compress the whole output (although an <a class="xref" href="Godot.AudioEffectLimiter.html">AudioEffectLimiter</a> is probably better).</p>
+<p>- In voice channels to ensure they sound as balanced as possible.</p>
+<p>- Sidechained. This can reduce the sound level sidechained with another audio bus for threshold detection. This technique is common in video game mixing to the level of music and SFX while voices are being heard.</p>
+<p>- Accentuates transients by using a wider attack, making effects sound more punchy.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -347,7 +353,8 @@
   
   <a id="Godot_AudioEffectCompressor_AttackUs_" data-uid="Godot.AudioEffectCompressor.AttackUs*"></a>
   <h4 id="Godot_AudioEffectCompressor_AttackUs" data-uid="Godot.AudioEffectCompressor.AttackUs">AttackUs</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compressor&apos;s reaction time when the signal exceeds the threshold, in microseconds. Value can range from 20 to 2000.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -372,7 +379,8 @@
   
   <a id="Godot_AudioEffectCompressor_Gain_" data-uid="Godot.AudioEffectCompressor.Gain*"></a>
   <h4 id="Godot_AudioEffectCompressor_Gain" data-uid="Godot.AudioEffectCompressor.Gain">Gain</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gain applied to the output signal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -397,7 +405,8 @@
   
   <a id="Godot_AudioEffectCompressor_Mix_" data-uid="Godot.AudioEffectCompressor.Mix*"></a>
   <h4 id="Godot_AudioEffectCompressor_Mix" data-uid="Godot.AudioEffectCompressor.Mix">Mix</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Balance between original signal and effect signal. Value can range from 0 (totally dry) to 1 (totally wet).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -422,7 +431,8 @@
   
   <a id="Godot_AudioEffectCompressor_Ratio_" data-uid="Godot.AudioEffectCompressor.Ratio*"></a>
   <h4 id="Godot_AudioEffectCompressor_Ratio" data-uid="Godot.AudioEffectCompressor.Ratio">Ratio</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount of compression applied to the audio once it passes the threshold level. The higher the ratio, the more the loud parts of the audio will be compressed. Value can range from 1 to 48.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -447,7 +457,8 @@
   
   <a id="Godot_AudioEffectCompressor_ReleaseMs_" data-uid="Godot.AudioEffectCompressor.ReleaseMs*"></a>
   <h4 id="Godot_AudioEffectCompressor_ReleaseMs" data-uid="Godot.AudioEffectCompressor.ReleaseMs">ReleaseMs</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compressor&apos;s delay time to stop reducing the signal after the signal level falls below the threshold, in milliseconds. Value can range from 20 to 2000.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -472,7 +483,8 @@
   
   <a id="Godot_AudioEffectCompressor_Sidechain_" data-uid="Godot.AudioEffectCompressor.Sidechain*"></a>
   <h4 id="Godot_AudioEffectCompressor_Sidechain" data-uid="Godot.AudioEffectCompressor.Sidechain">Sidechain</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reduce the sound level using another audio bus for threshold detection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -497,7 +509,8 @@
   
   <a id="Godot_AudioEffectCompressor_Threshold_" data-uid="Godot.AudioEffectCompressor.Threshold*"></a>
   <h4 id="Godot_AudioEffectCompressor_Threshold" data-uid="Godot.AudioEffectCompressor.Threshold">Threshold</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The level above which compression is applied to the audio. Value can range from -60 to 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

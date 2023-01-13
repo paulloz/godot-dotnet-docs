@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ResourceLoader" data-uid="Godot.ResourceLoader" class="text-break">Class ResourceLoader
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Singleton used to load resource files from the filesystem.</p>
+<p>It uses the many <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a> classes registered in the engine (either built-in or from a plugin) to load files into memory and convert them to a format that can be used by the engine.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +131,9 @@
   
   <a id="Godot_ResourceLoader_Exists_" data-uid="Godot.ResourceLoader.Exists*"></a>
   <h4 id="Godot_ResourceLoader_Exists_System_String_System_String_" data-uid="Godot.ResourceLoader.Exists(System.String,System.String)">Exists(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a recognized resource exists for the given <code>path</code>.</p>
+<p>An optional <code>type_hint</code> can be used to further specify the <a class="xref" href="Godot.Resource.html">Resource</a> type that should be handled by the <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -176,7 +180,8 @@
   
   <a id="Godot_ResourceLoader_GetDependencies_" data-uid="Godot.ResourceLoader.GetDependencies*"></a>
   <h4 id="Godot_ResourceLoader_GetDependencies_System_String_" data-uid="Godot.ResourceLoader.GetDependencies(System.String)">GetDependencies(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the dependencies for the resource at the given <code>path</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -218,7 +223,8 @@
   
   <a id="Godot_ResourceLoader_GetRecognizedExtensionsForType_" data-uid="Godot.ResourceLoader.GetRecognizedExtensionsForType*"></a>
   <h4 id="Godot_ResourceLoader_GetRecognizedExtensionsForType_System_String_" data-uid="Godot.ResourceLoader.GetRecognizedExtensionsForType(System.String)">GetRecognizedExtensionsForType(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the list of recognized extensions for a resource type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -260,7 +266,8 @@
   
   <a id="Godot_ResourceLoader_Has_" data-uid="Godot.ResourceLoader.Has*"></a>
   <h4 id="Godot_ResourceLoader_Has_System_String_" data-uid="Godot.ResourceLoader.Has(System.String)">Has(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated method. Use <a class="xref" href="Godot.ResourceLoader.html#Godot_ResourceLoader_HasCached_System_String_">HasCached(String)</a> or <a class="xref" href="Godot.ResourceLoader.html#Godot_ResourceLoader_Exists_System_String_System_String_">Exists(String, String)</a> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -302,7 +309,9 @@
   
   <a id="Godot_ResourceLoader_HasCached_" data-uid="Godot.ResourceLoader.HasCached*"></a>
   <h4 id="Godot_ResourceLoader_HasCached_System_String_" data-uid="Godot.ResourceLoader.HasCached(System.String)">HasCached(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a cached resource is available for the given <code>path</code>.</p>
+<p>Once a resource has been loaded by the engine, it is cached in memory for faster access, and future calls to the <a class="xref" href="Godot.ResourceLoader.html#Godot_ResourceLoader_Load_System_String_System_String_System_Boolean_">Load(String, String, Boolean)</a> or <a class="xref" href="Godot.ResourceLoader.html#Godot_ResourceLoader_LoadInteractive_System_String_System_String_">LoadInteractive(String, String)</a> methods will use the cached version. The cached resource can be overridden by using <a class="xref" href="Godot.Resource.html#Godot_Resource_TakeOverPath_System_String_">TakeOverPath(String)</a> on a new resource for that same path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,7 +353,13 @@
   
   <a id="Godot_ResourceLoader_Load_" data-uid="Godot.ResourceLoader.Load*"></a>
   <h4 id="Godot_ResourceLoader_Load_System_String_System_String_System_Boolean_" data-uid="Godot.ResourceLoader.Load(System.String,System.String,System.Boolean)">Load(String, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads a resource at the given <code>path</code>, caching the result for further access.</p>
+<p>The registered <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a>s are queried sequentially to find the first one which can handle the file&apos;s extension, and then attempt loading. If loading fails, the remaining ResourceFormatLoaders are also attempted.</p>
+<p>An optional <code>type_hint</code> can be used to further specify the <a class="xref" href="Godot.Resource.html">Resource</a> type that should be handled by the <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a>. Anything that inherits from <a class="xref" href="Godot.Resource.html">Resource</a> can be used as a type hint, for example <a class="xref" href="Godot.Image.html">Image</a>.</p>
+<p>If <code>no_cache</code> is <code>true</code>, the resource cache will be bypassed and the resource will be loaded anew. Otherwise, the cached resource will be returned if it exists.</p>
+<p>Returns an empty resource if no <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a> could handle the file.</p>
+<p>GDScript has a simplified <code>@GDScript.load</code> built-in method which can be used in most situations, leaving the use of <a class="xref" href="Godot.ResourceLoader.html">ResourceLoader</a> for more advanced scenarios.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +411,19 @@
   
   <a id="Godot_ResourceLoader_Load_" data-uid="Godot.ResourceLoader.Load*"></a>
   <h4 id="Godot_ResourceLoader_Load__1_System_String_System_String_System_Boolean_" data-uid="Godot.ResourceLoader.Load``1(System.String,System.String,System.Boolean)">Load&lt;T&gt;(String, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads a resource at the given <code data-dev-comment-type="paramref" class="paramref">path</code>, caching the result
+for further access.
+The registered <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a> instances are queried sequentially
+to find the first one which can handle the file's extension, and then attempt
+loading. If loading fails, the remaining ResourceFormatLoaders are also attempted.
+An optional <code data-dev-comment-type="paramref" class="paramref">typeHint</code> can be used to further specify the
+<a class="xref" href="Godot.Resource.html">Resource</a> type that should be handled by the <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a>.
+Anything that inherits from <a class="xref" href="Godot.Resource.html">Resource</a> can be used as a type hint,
+for example <a class="xref" href="Godot.Image.html">Image</a>.
+If <code data-dev-comment-type="paramref" class="paramref">noCache</code> is <span class="xref">true</span>, the resource cache will be bypassed and
+the resource will be loaded anew. Otherwise, the cached resource will be returned if it exists.
+Returns an empty resource if no <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a> could handle the file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -456,7 +483,24 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Resource.html">Resource</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td><p>Thrown when the given the loaded resource can't be casted to the given type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -464,7 +508,9 @@
   
   <a id="Godot_ResourceLoader_LoadInteractive_" data-uid="Godot.ResourceLoader.LoadInteractive*"></a>
   <h4 id="Godot_ResourceLoader_LoadInteractive_System_String_System_String_" data-uid="Godot.ResourceLoader.LoadInteractive(System.String,System.String)">LoadInteractive(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Starts loading a resource interactively. The returned <a class="xref" href="Godot.ResourceInteractiveLoader.html">ResourceInteractiveLoader</a> object allows to load with high granularity, calling its <a class="xref" href="Godot.ResourceInteractiveLoader.html#Godot_ResourceInteractiveLoader_Poll">Poll()</a> method successively to load chunks.</p>
+<p>An optional <code>type_hint</code> can be used to further specify the <a class="xref" href="Godot.Resource.html">Resource</a> type that should be handled by the <a class="xref" href="Godot.ResourceFormatLoader.html">ResourceFormatLoader</a>. Anything that inherits from <a class="xref" href="Godot.Resource.html">Resource</a> can be used as a type hint, for example <a class="xref" href="Godot.Image.html">Image</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -511,7 +557,8 @@
   
   <a id="Godot_ResourceLoader_SetAbortOnMissingResources_" data-uid="Godot.ResourceLoader.SetAbortOnMissingResources*"></a>
   <h4 id="Godot_ResourceLoader_SetAbortOnMissingResources_System_Boolean_" data-uid="Godot.ResourceLoader.SetAbortOnMissingResources(System.Boolean)">SetAbortOnMissingResources(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the behavior on missing sub-resources. The default behavior is to abort loading.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

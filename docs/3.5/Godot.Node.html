@@ -83,7 +83,18 @@
   
   <h1 id="Godot_Node" data-uid="Godot.Node" class="text-break">Class Node
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Nodes are Godot&apos;s building blocks. They can be assigned as the child of another node, resulting in a tree arrangement. A given node can contain any number of nodes as children with the requirement that all siblings (direct children of a node) should have unique names.</p>
+<p>A tree of nodes is called a scene. Scenes can be saved to the disk and then instanced into other scenes. This allows for very high flexibility in the architecture and data model of Godot projects.</p>
+<p>Scene tree: The <a class="xref" href="Godot.SceneTree.html">SceneTree</a> contains the active tree of nodes. When a node is added to the scene tree, it receives the <a class="xref" href="Godot.Node.html#Godot_Node_NotificationEnterTree">NotificationEnterTree</a> notification and its <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">_EnterTree()</a> callback is triggered. Child nodes are always added after their parent node, i.e. the <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">_EnterTree()</a> callback of a parent node will be triggered before its child&apos;s.</p>
+<p>Once all nodes have been added in the scene tree, they receive the <a class="xref" href="Godot.Node.html#Godot_Node_NotificationReady">NotificationReady</a> notification and their respective <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> callbacks are triggered. For groups of nodes, the <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> callback is called in reverse order, starting with the children and moving up to the parent nodes.</p>
+<p>This means that when adding a node to the scene tree, the following order will be used for the callbacks: <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">_EnterTree()</a> of the parent, <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">_EnterTree()</a> of the children, <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> of the children and finally <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> of the parent (recursively for the entire scene tree).</p>
+<p>Processing: Nodes can override the &quot;process&quot; state, so that they receive a callback on each frame requesting them to process (do something). Normal processing (callback <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>, toggled with <a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">SetProcess(Boolean)</a>) happens as fast as possible and is dependent on the frame rate, so the processing time delta (in seconds) is passed as an argument. Physics processing (callback <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a>, toggled with <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">SetPhysicsProcess(Boolean)</a>) happens a fixed number of times per second (60 by default) and is useful for code related to the physics engine.</p>
+<p>Nodes can also process input events. When present, the <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">_Input(InputEvent)</a> function will be called for each input that the program receives. In many cases, this can be overkill (unless used for simple projects), and the <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">_UnhandledInput(InputEvent)</a> function might be preferred; it is called when the input event was not handled by anyone else (typically, GUI <a class="xref" href="Godot.Control.html">Control</a> nodes), ensuring that the node only receives the events that were meant for it.</p>
+<p>To keep track of the scene hierarchy (especially when instancing scenes into other scenes), an &quot;owner&quot; can be set for the node with the <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Owner</a> property. This keeps track of who instanced what. This is mostly useful when writing editors and tools, though.</p>
+<p>Finally, when a node is freed with <a class="xref" href="Godot.Object.html#Godot_Object_Free">Free()</a> or <a class="xref" href="Godot.Node.html#Godot_Node_QueueFree">QueueFree()</a>, it will also free all its children.</p>
+<p>Groups: Nodes can be added to as many groups as you want to be easy to manage, you could create groups like &quot;enemies&quot; or &quot;collectables&quot; for example, depending on your game. See <a class="xref" href="Godot.Node.html#Godot_Node_AddToGroup_System_String_System_Boolean_">AddToGroup(String, Boolean)</a>, <a class="xref" href="Godot.Node.html#Godot_Node_IsInGroup_System_String_">IsInGroup(String)</a> and <a class="xref" href="Godot.Node.html#Godot_Node_RemoveFromGroup_System_String_">RemoveFromGroup(String)</a>. You can then retrieve all nodes in these groups, iterate them and even call methods on groups via the methods on <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+<p>Networking with nodes: After connecting to a server (or making one, see <a class="xref" href="Godot.NetworkedMultiplayerENet.html">NetworkedMultiplayerENet</a>), it is possible to use the built-in RPC (remote procedure call) system to communicate over the network. By calling <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Rpc(String, Object[])</a> with a method name, it will be called locally and in all connected peers (peers = clients and the server that accepts connections). To identify which node receives the RPC call, Godot will use its <a class="xref" href="Godot.NodePath.html">NodePath</a> (make sure node names are the same on all peers). Also, take a look at the high-level networking tutorial and corresponding demos.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -309,7 +320,9 @@
   
   
   <h4 id="Godot_Node_NotificationAppPaused" data-uid="Godot.Node.NotificationAppPaused">NotificationAppPaused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the app is paused.</p>
+<p>Specific to the Android platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -333,7 +346,9 @@
   
   
   <h4 id="Godot_Node_NotificationAppResumed" data-uid="Godot.Node.NotificationAppResumed">NotificationAppResumed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the app is resumed.</p>
+<p>Specific to the Android platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -357,7 +372,9 @@
   
   
   <h4 id="Godot_Node_NotificationCrash" data-uid="Godot.Node.NotificationCrash">NotificationCrash</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from Godot&apos;s crash handler when the engine is about to crash.</p>
+<p>Implemented on desktop platforms if the crash handler is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -381,7 +398,10 @@
   
   
   <h4 id="Godot_Node_NotificationDragBegin" data-uid="Godot.Node.NotificationDragBegin">NotificationDragBegin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when a drag operation begins. All nodes receive this notification, not only the dragged one.</p>
+<p>Can be triggered either by dragging a <a class="xref" href="Godot.Control.html">Control</a> that provides drag data (see <a class="xref" href="Godot.Control.html#Godot_Control_GetDragData_Godot_Vector2_">GetDragData(Vector2)</a>) or using <a class="xref" href="Godot.Control.html#Godot_Control_ForceDrag_System_Object_Godot_Control_">ForceDrag(Object, Control)</a>.</p>
+<p>Use <a class="xref" href="Godot.Viewport.html#Godot_Viewport_GuiGetDragData">GuiGetDragData()</a> to get the dragged data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -405,7 +425,9 @@
   
   
   <h4 id="Godot_Node_NotificationDragEnd" data-uid="Godot.Node.NotificationDragEnd">NotificationDragEnd</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when a drag operation ends.</p>
+<p>Use <a class="xref" href="Godot.Viewport.html#Godot_Viewport_GuiIsDragSuccessful">GuiIsDragSuccessful()</a> to check if the drag succeeded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -429,7 +451,9 @@
   
   
   <h4 id="Godot_Node_NotificationEnterTree" data-uid="Godot.Node.NotificationEnterTree">NotificationEnterTree</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when the node enters a <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+<p>This notification is emitted before the related <code>tree_entered</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -453,7 +477,9 @@
   
   
   <h4 id="Godot_Node_NotificationExitTree" data-uid="Godot.Node.NotificationExitTree">NotificationExitTree</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when the node is about to exit a <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+<p>This notification is emitted after the related <code>tree_exiting</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -477,7 +503,8 @@
   
   
   <h4 id="Godot_Node_NotificationInstanced" data-uid="Godot.Node.NotificationInstanced">NotificationInstanced</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when the node is instanced.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -501,7 +528,8 @@
   
   
   <h4 id="Godot_Node_NotificationInternalPhysicsProcess" data-uid="Godot.Node.NotificationInternalPhysicsProcess">NotificationInternalPhysicsProcess</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received every frame when the internal physics process flag is set (see <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcessInternal_System_Boolean_">SetPhysicsProcessInternal(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -525,7 +553,8 @@
   
   
   <h4 id="Godot_Node_NotificationInternalProcess" data-uid="Godot.Node.NotificationInternalProcess">NotificationInternalProcess</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received every frame when the internal process flag is set (see <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInternal_System_Boolean_">SetProcessInternal(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -549,7 +578,8 @@
   
   
   <h4 id="Godot_Node_NotificationMovedInParent" data-uid="Godot.Node.NotificationMovedInParent">NotificationMovedInParent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when the node is moved in the parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -573,7 +603,9 @@
   
   
   <h4 id="Godot_Node_NotificationOsImeUpdate" data-uid="Godot.Node.NotificationOsImeUpdate">NotificationOsImeUpdate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when an update of the Input Method Engine occurs (e.g. change of IME cursor position or composition string).</p>
+<p>Specific to the macOS platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -597,7 +629,9 @@
   
   
   <h4 id="Godot_Node_NotificationOsMemoryWarning" data-uid="Godot.Node.NotificationOsMemoryWarning">NotificationOsMemoryWarning</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the application is exceeding its allocated memory.</p>
+<p>Specific to the iOS platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -621,7 +655,9 @@
   
   
   <h4 id="Godot_Node_NotificationParented" data-uid="Godot.Node.NotificationParented">NotificationParented</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when a node is set as a child of another node.</p>
+<p>Note: This doesn&apos;t mean that a node entered the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -645,7 +681,8 @@
   
   
   <h4 id="Godot_Node_NotificationPathChanged" data-uid="Godot.Node.NotificationPathChanged">NotificationPathChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when the node&apos;s <a class="xref" href="Godot.NodePath.html">NodePath</a> changed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -669,7 +706,8 @@
   
   
   <h4 id="Godot_Node_NotificationPaused" data-uid="Godot.Node.NotificationPaused">NotificationPaused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when the node is paused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -693,7 +731,8 @@
   
   
   <h4 id="Godot_Node_NotificationPhysicsProcess" data-uid="Godot.Node.NotificationPhysicsProcess">NotificationPhysicsProcess</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received every frame when the physics process flag is set (see <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">SetPhysicsProcess(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -717,7 +756,8 @@
   
   
   <h4 id="Godot_Node_NotificationPostEnterTree" data-uid="Godot.Node.NotificationPostEnterTree">NotificationPostEnterTree</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when the node is ready, just before <a class="xref" href="Godot.Node.html#Godot_Node_NotificationReady">NotificationReady</a> is received. Unlike the latter, it&apos;s sent every time the node enters tree, instead of only once.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -741,7 +781,8 @@
   
   
   <h4 id="Godot_Node_NotificationProcess" data-uid="Godot.Node.NotificationProcess">NotificationProcess</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received every frame when the process flag is set (see <a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">SetProcess(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -765,7 +806,8 @@
   
   
   <h4 id="Godot_Node_NotificationReady" data-uid="Godot.Node.NotificationReady">NotificationReady</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when the node is ready. See <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -789,7 +831,8 @@
   
   
   <h4 id="Godot_Node_NotificationResetPhysicsInterpolation" data-uid="Godot.Node.NotificationResetPhysicsInterpolation">NotificationResetPhysicsInterpolation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when <a class="xref" href="Godot.Node.html#Godot_Node_ResetPhysicsInterpolation">ResetPhysicsInterpolation()</a> is called on the node or parent nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -813,7 +856,8 @@
   
   
   <h4 id="Godot_Node_NotificationTranslationChanged" data-uid="Godot.Node.NotificationTranslationChanged">NotificationTranslationChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when translations may have changed. Can be triggered by the user changing the locale. Can be used to respond to language changes, for example to change the UI strings on the fly. Useful when working with the built-in translation support, like <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Tr(String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -837,7 +881,8 @@
   
   
   <h4 id="Godot_Node_NotificationUnparented" data-uid="Godot.Node.NotificationUnparented">NotificationUnparented</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when a node is unparented (parent removed it from the list of children).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -861,7 +906,8 @@
   
   
   <h4 id="Godot_Node_NotificationUnpaused" data-uid="Godot.Node.NotificationUnpaused">NotificationUnpaused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when the node is unpaused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -885,7 +931,9 @@
   
   
   <h4 id="Godot_Node_NotificationWmAbout" data-uid="Godot.Node.NotificationWmAbout">NotificationWmAbout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when a request for &quot;About&quot; information is sent.</p>
+<p>Specific to the macOS platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -909,7 +957,9 @@
   
   
   <h4 id="Godot_Node_NotificationWmFocusIn" data-uid="Godot.Node.NotificationWmFocusIn">NotificationWmFocusIn</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the game window is focused.</p>
+<p>Implemented on all platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -933,7 +983,9 @@
   
   
   <h4 id="Godot_Node_NotificationWmFocusOut" data-uid="Godot.Node.NotificationWmFocusOut">NotificationWmFocusOut</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the game window is unfocused.</p>
+<p>Implemented on all platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -957,7 +1009,9 @@
   
   
   <h4 id="Godot_Node_NotificationWmGoBackRequest" data-uid="Godot.Node.NotificationWmGoBackRequest">NotificationWmGoBackRequest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when a go back request is sent (e.g. pressing the &quot;Back&quot; button on Android).</p>
+<p>Specific to the Android platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -981,7 +1035,9 @@
   
   
   <h4 id="Godot_Node_NotificationWmMouseEnter" data-uid="Godot.Node.NotificationWmMouseEnter">NotificationWmMouseEnter</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the mouse enters the game window.</p>
+<p>Implemented on desktop and web platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1005,7 +1061,9 @@
   
   
   <h4 id="Godot_Node_NotificationWmMouseExit" data-uid="Godot.Node.NotificationWmMouseExit">NotificationWmMouseExit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the mouse leaves the game window.</p>
+<p>Implemented on desktop and web platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1029,7 +1087,9 @@
   
   
   <h4 id="Godot_Node_NotificationWmQuitRequest" data-uid="Godot.Node.NotificationWmQuitRequest">NotificationWmQuitRequest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when a quit request is sent (e.g. closing the window with a &quot;Close&quot; button or Alt+F4).</p>
+<p>Implemented on desktop platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1053,7 +1113,9 @@
   
   
   <h4 id="Godot_Node_NotificationWmUnfocusRequest" data-uid="Godot.Node.NotificationWmUnfocusRequest">NotificationWmUnfocusRequest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when an unfocus request is sent (e.g. another OS window wants to take the focus).</p>
+<p>No supported platforms currently send this notification.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1105,7 +1167,8 @@
   
   <a id="Godot_Node_CustomMultiplayer_" data-uid="Godot.Node.CustomMultiplayer*"></a>
   <h4 id="Godot_Node_CustomMultiplayer" data-uid="Godot.Node.CustomMultiplayer">CustomMultiplayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The override to the default <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a>. Set to <code>null</code> to use the default <a class="xref" href="Godot.SceneTree.html">SceneTree</a> one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1155,7 +1218,8 @@
   
   <a id="Godot_Node_Filename_" data-uid="Godot.Node.Filename*"></a>
   <h4 id="Godot_Node_Filename" data-uid="Godot.Node.Filename">Filename</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If a scene is instantiated from a file, its topmost node contains the absolute file path from which it was loaded in <a class="xref" href="Godot.Node.html#Godot_Node_Filename">Filename</a> (e.g. <code>res://levels/1.tscn</code>). Otherwise, <a class="xref" href="Godot.Node.html#Godot_Node_Filename">Filename</a> is set to an empty string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1180,7 +1244,8 @@
   
   <a id="Godot_Node_Multiplayer_" data-uid="Godot.Node.Multiplayer*"></a>
   <h4 id="Godot_Node_Multiplayer" data-uid="Godot.Node.Multiplayer">Multiplayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a> instance associated with this node. Either the <a class="xref" href="Godot.Node.html#Godot_Node_CustomMultiplayer">CustomMultiplayer</a>, or the default SceneTree one (if inside tree).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1205,7 +1270,9 @@
   
   <a id="Godot_Node_Name_" data-uid="Godot.Node.Name*"></a>
   <h4 id="Godot_Node_Name" data-uid="Godot.Node.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the node. This name is unique among the siblings (other child nodes from the same parent). When set to an existing name, the node will be automatically renamed.</p>
+<p>Note: Auto-generated names might include the <code>@</code> character, which is reserved for unique names when using <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">AddChild(Node, Boolean)</a>. When setting the name manually, any <code>@</code> will be removed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1230,7 +1297,9 @@
   
   <a id="Godot_Node_Owner_" data-uid="Godot.Node.Owner*"></a>
   <h4 id="Godot_Node_Owner" data-uid="Godot.Node.Owner">Owner</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node owner. A node can have any other node as owner (as long as it is a valid parent, grandparent, etc. ascending in the tree). When saving a node (using <a class="xref" href="Godot.PackedScene.html">PackedScene</a>), all the nodes it owns will be saved with it. This allows for the creation of complex <a class="xref" href="Godot.SceneTree.html">SceneTree</a>s, with instancing and subinstancing.</p>
+<p>Note: If you want a child to be persisted to a <a class="xref" href="Godot.PackedScene.html">PackedScene</a>, you must set <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Owner</a> in addition to calling <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">AddChild(Node, Boolean)</a>. This is typically relevant for <a href="$DOCS_URL/tutorials/plugins/running_code_in_the_editor.html">tool scripts</a> and <a href="$DOCS_URL/tutorials/plugins/editor/index.html">editor plugins</a>. If <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">AddChild(Node, Boolean)</a> is called without setting <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Owner</a>, the newly added <a class="xref" href="Godot.Node.html">Node</a> will not be visible in the scene tree, though it will be visible in the 2D/3D view.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1255,7 +1324,8 @@
   
   <a id="Godot_Node_PauseMode_" data-uid="Godot.Node.PauseMode*"></a>
   <h4 id="Godot_Node_PauseMode" data-uid="Godot.Node.PauseMode">PauseMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pause mode. How the node will behave if the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> is paused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1280,7 +1350,9 @@
   
   <a id="Godot_Node_PhysicsInterpolationMode_" data-uid="Godot.Node.PhysicsInterpolationMode*"></a>
   <h4 id="Godot_Node_PhysicsInterpolationMode" data-uid="Godot.Node.PhysicsInterpolationMode">PhysicsInterpolationMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allows enabling or disabling physics interpolation per node, offering a finer grain of control than turning physics interpolation on and off globally.</p>
+<p>Note: This can be especially useful for <a class="xref" href="Godot.Camera.html">Camera</a>s, where custom interpolation can sometimes give superior results.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1305,7 +1377,8 @@
   
   <a id="Godot_Node_ProcessPriority_" data-uid="Godot.Node.ProcessPriority*"></a>
   <h4 id="Godot_Node_ProcessPriority" data-uid="Godot.Node.ProcessPriority">ProcessPriority</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node&apos;s priority in the execution order of the enabled processing callbacks (i.e. <a class="xref" href="Godot.Node.html#Godot_Node_NotificationProcess">NotificationProcess</a>, <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPhysicsProcess">NotificationPhysicsProcess</a> and their internal counterparts). Nodes whose process priority value is lower will have their processing callbacks executed first.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1330,7 +1403,9 @@
   
   <a id="Godot_Node_UniqueNameInOwner_" data-uid="Godot.Node.UniqueNameInOwner*"></a>
   <h4 id="Godot_Node_UniqueNameInOwner" data-uid="Godot.Node.UniqueNameInOwner">UniqueNameInOwner</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets this node&apos;s name as a unique name in its <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Owner</a>. This allows the node to be accessed as <code>%Name</code> instead of the full path, from any node within that scene.</p>
+<p>If another node with the same owner already had that name declared as unique, that other node&apos;s name will no longer be set as having a unique name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1357,7 +1432,9 @@
   
   <a id="Godot_Node__EnterTree_" data-uid="Godot.Node._EnterTree*"></a>
   <h4 id="Godot_Node__EnterTree" data-uid="Godot.Node._EnterTree">_EnterTree()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when the node enters the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> (e.g. upon instancing, scene changing, or after calling <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">AddChild(Node, Boolean)</a> in a script). If the node has children, its <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">_EnterTree()</a> callback will be called first, and then that of the children.</p>
+<p>Corresponds to the <a class="xref" href="Godot.Node.html#Godot_Node_NotificationEnterTree">NotificationEnterTree</a> notification in <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">_Notification(Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1367,7 +1444,9 @@
   
   <a id="Godot_Node__ExitTree_" data-uid="Godot.Node._ExitTree*"></a>
   <h4 id="Godot_Node__ExitTree" data-uid="Godot.Node._ExitTree">_ExitTree()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when the node is about to leave the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> (e.g. upon freeing, scene changing, or after calling <a class="xref" href="Godot.Node.html#Godot_Node_RemoveChild_Godot_Node_">RemoveChild(Node)</a> in a script). If the node has children, its <a class="xref" href="Godot.Node.html#Godot_Node__ExitTree">_ExitTree()</a> callback will be called last, after all its children have left the tree.</p>
+<p>Corresponds to the <a class="xref" href="Godot.Node.html#Godot_Node_NotificationExitTree">NotificationExitTree</a> notification in <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">_Notification(Int32)</a> and signal <code>tree_exiting</code>. To get notified when the node has already left the active tree, connect to the <code>tree_exited</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1377,7 +1456,10 @@
   
   <a id="Godot_Node__GetConfigurationWarning_" data-uid="Godot.Node._GetConfigurationWarning*"></a>
   <h4 id="Godot_Node__GetConfigurationWarning" data-uid="Godot.Node._GetConfigurationWarning">_GetConfigurationWarning()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The string returned from this method is displayed as a warning in the Scene Dock if the script that overrides it is a <code>tool</code> script.</p>
+<p>Returning an empty string produces no warning.</p>
+<p>Call <a class="xref" href="Godot.Node.html#Godot_Node_UpdateConfigurationWarning">UpdateConfigurationWarning()</a> when the warning needs to be updated for this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1402,7 +1484,12 @@
   
   <a id="Godot_Node__Input_" data-uid="Godot.Node._Input*"></a>
   <h4 id="Godot_Node__Input_Godot_InputEvent_" data-uid="Godot.Node._Input(Godot.InputEvent)">_Input(InputEvent)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when there is an input event. The input event propagates up through the node tree until a node consumes it.</p>
+<p>It is only called if input processing is enabled, which is done automatically if this method is overridden, and can be toggled with <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInput_System_Boolean_">SetProcessInput(Boolean)</a>.</p>
+<p>To consume the input event and stop it propagating further to other nodes, <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_SetInputAsHandled">SetInputAsHandled()</a> can be called.</p>
+<p>For gameplay input, <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">_UnhandledInput(InputEvent)</a> and <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledKeyInput_Godot_InputEventKey_">_UnhandledKeyInput(InputEventKey)</a> are usually a better fit as they allow the GUI to intercept the events first.</p>
+<p>Note: This method is only called if the node is present in the scene tree (i.e. if it&apos;s not an orphan).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1429,7 +1516,11 @@
   
   <a id="Godot_Node__PhysicsProcess_" data-uid="Godot.Node._PhysicsProcess*"></a>
   <h4 id="Godot_Node__PhysicsProcess_System_Single_" data-uid="Godot.Node._PhysicsProcess(System.Single)">_PhysicsProcess(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called during the physics processing step of the main loop. Physics processing means that the frame rate is synced to the physics, i.e. the <code>delta</code> variable should be constant. <code>delta</code> is in seconds.</p>
+<p>It is only called if physics processing is enabled, which is done automatically if this method is overridden, and can be toggled with <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">SetPhysicsProcess(Boolean)</a>.</p>
+<p>Corresponds to the <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPhysicsProcess">NotificationPhysicsProcess</a> notification in <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">_Notification(Int32)</a>.</p>
+<p>Note: This method is only called if the node is present in the scene tree (i.e. if it&apos;s not an orphan).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1456,7 +1547,11 @@
   
   <a id="Godot_Node__Process_" data-uid="Godot.Node._Process*"></a>
   <h4 id="Godot_Node__Process_System_Single_" data-uid="Godot.Node._Process(System.Single)">_Process(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called during the processing step of the main loop. Processing happens at every frame and as fast as possible, so the <code>delta</code> time since the previous frame is not constant. <code>delta</code> is in seconds.</p>
+<p>It is only called if processing is enabled, which is done automatically if this method is overridden, and can be toggled with <a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">SetProcess(Boolean)</a>.</p>
+<p>Corresponds to the <a class="xref" href="Godot.Node.html#Godot_Node_NotificationProcess">NotificationProcess</a> notification in <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">_Notification(Int32)</a>.</p>
+<p>Note: This method is only called if the node is present in the scene tree (i.e. if it&apos;s not an orphan).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1483,7 +1578,11 @@
   
   <a id="Godot_Node__Ready_" data-uid="Godot.Node._Ready*"></a>
   <h4 id="Godot_Node__Ready" data-uid="Godot.Node._Ready">_Ready()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when the node is &quot;ready&quot;, i.e. when both the node and its children have entered the scene tree. If the node has children, their <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> callbacks get triggered first, and the parent node will receive the ready notification afterwards.</p>
+<p>Corresponds to the <a class="xref" href="Godot.Node.html#Godot_Node_NotificationReady">NotificationReady</a> notification in <a class="xref" href="Godot.Object.html#Godot_Object__Notification_System_Int32_">_Notification(Int32)</a>. See also the <code>onready</code> keyword for variables.</p>
+<p>Usually used for initialization. For even earlier initialization,  may be used. See also <a class="xref" href="Godot.Node.html#Godot_Node__EnterTree">_EnterTree()</a>.</p>
+<p>Note: <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> may be called only once for each node. After removing a node from the scene tree and adding it again, <code>_ready</code> will not be called a second time. This can be bypassed by requesting another call with <a class="xref" href="Godot.Node.html#Godot_Node_RequestReady">RequestReady()</a>, which may be called anywhere before adding the node again.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1493,7 +1592,12 @@
   
   <a id="Godot_Node__UnhandledInput_" data-uid="Godot.Node._UnhandledInput*"></a>
   <h4 id="Godot_Node__UnhandledInput_Godot_InputEvent_" data-uid="Godot.Node._UnhandledInput(Godot.InputEvent)">_UnhandledInput(InputEvent)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when an <a class="xref" href="Godot.InputEvent.html">InputEvent</a> hasn&apos;t been consumed by <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">_Input(InputEvent)</a> or any GUI <a class="xref" href="Godot.Control.html">Control</a> item. The input event propagates up through the node tree until a node consumes it.</p>
+<p>It is only called if unhandled input processing is enabled, which is done automatically if this method is overridden, and can be toggled with <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledInput_System_Boolean_">SetProcessUnhandledInput(Boolean)</a>.</p>
+<p>To consume the input event and stop it propagating further to other nodes, <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_SetInputAsHandled">SetInputAsHandled()</a> can be called.</p>
+<p>For gameplay input, this and <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledKeyInput_Godot_InputEventKey_">_UnhandledKeyInput(InputEventKey)</a> are usually a better fit than <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">_Input(InputEvent)</a> as they allow the GUI to intercept the events first.</p>
+<p>Note: This method is only called if the node is present in the scene tree (i.e. if it&apos;s not an orphan).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1520,7 +1624,12 @@
   
   <a id="Godot_Node__UnhandledKeyInput_" data-uid="Godot.Node._UnhandledKeyInput*"></a>
   <h4 id="Godot_Node__UnhandledKeyInput_Godot_InputEventKey_" data-uid="Godot.Node._UnhandledKeyInput(Godot.InputEventKey)">_UnhandledKeyInput(InputEventKey)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when an <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a> hasn&apos;t been consumed by <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">_Input(InputEvent)</a> or any GUI <a class="xref" href="Godot.Control.html">Control</a> item. The input event propagates up through the node tree until a node consumes it.</p>
+<p>It is only called if unhandled key input processing is enabled, which is done automatically if this method is overridden, and can be toggled with <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledKeyInput_System_Boolean_">SetProcessUnhandledKeyInput(Boolean)</a>.</p>
+<p>To consume the input event and stop it propagating further to other nodes, <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_SetInputAsHandled">SetInputAsHandled()</a> can be called.</p>
+<p>For gameplay input, this and <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">_UnhandledInput(InputEvent)</a> are usually a better fit than <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">_Input(InputEvent)</a> as they allow the GUI to intercept the events first.</p>
+<p>Note: This method is only called if the node is present in the scene tree (i.e. if it&apos;s not an orphan).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1547,7 +1656,14 @@
   
   <a id="Godot_Node_AddChild_" data-uid="Godot.Node.AddChild*"></a>
   <h4 id="Godot_Node_AddChild_Godot_Node_System_Boolean_" data-uid="Godot.Node.AddChild(Godot.Node,System.Boolean)">AddChild(Node, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a child node. Nodes can have any number of children, but every child must have a unique name. Child nodes are automatically deleted when the parent node is deleted, so an entire scene can be removed by deleting its topmost node.</p>
+<p>If <code>legible_unique_name</code> is <code>true</code>, the child node will have a human-readable name based on the name of the node being instanced instead of its type.</p>
+<p>Note: If the child node already has a parent, the function will fail. Use <a class="xref" href="Godot.Node.html#Godot_Node_RemoveChild_Godot_Node_">RemoveChild(Node)</a> first to remove the node from its current parent. For example:</p>
+<p><pre><code>if child_node.get_parent():
+    child_node.get_parent().remove_child(child_node)
+add_child(child_node)</code></pre></p>
+<p>Note: If you want a child to be persisted to a <a class="xref" href="Godot.PackedScene.html">PackedScene</a>, you must set <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Owner</a> in addition to calling <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">AddChild(Node, Boolean)</a>. This is typically relevant for <a href="$DOCS_URL/tutorials/plugins/running_code_in_the_editor.html">tool scripts</a> and <a href="$DOCS_URL/tutorials/plugins/editor/index.html">editor plugins</a>. If <a class="xref" href="Godot.Node.html#Godot_Node_AddChild_Godot_Node_System_Boolean_">AddChild(Node, Boolean)</a> is called without setting <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Owner</a>, the newly added <a class="xref" href="Godot.Node.html">Node</a> will not be visible in the scene tree, though it will be visible in the 2D/3D view.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1579,7 +1695,9 @@
   
   <a id="Godot_Node_AddChildBelowNode_" data-uid="Godot.Node.AddChildBelowNode*"></a>
   <h4 id="Godot_Node_AddChildBelowNode_Godot_Node_Godot_Node_System_Boolean_" data-uid="Godot.Node.AddChildBelowNode(Godot.Node,Godot.Node,System.Boolean)">AddChildBelowNode(Node, Node, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds <code>child_node</code> as a child. The child is placed below the given <code>node</code> in the list of children.</p>
+<p>If <code>legible_unique_name</code> is <code>true</code>, the child node will have a human-readable name based on the name of the node being instanced instead of its type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1616,7 +1734,10 @@
   
   <a id="Godot_Node_AddToGroup_" data-uid="Godot.Node.AddToGroup*"></a>
   <h4 id="Godot_Node_AddToGroup_System_String_System_Boolean_" data-uid="Godot.Node.AddToGroup(System.String,System.Boolean)">AddToGroup(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the node to a group. Groups are helpers to name and organize a subset of nodes, for example &quot;enemies&quot; or &quot;collectables&quot;. A node can be in any number of groups. Nodes can be assigned a group at any time, but will not be added until they are inside the scene tree (see <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">IsInsideTree()</a>). See notes in the description, and the group methods in <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+<p>The <code>persistent</code> option is used when packing node to <a class="xref" href="Godot.PackedScene.html">PackedScene</a> and saving to file. Non-persistent groups aren&apos;t stored.</p>
+<p>Note: For performance reasons, the order of node groups is not guaranteed. The order of node groups should not be relied upon as it can vary across project runs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1648,7 +1769,8 @@
   
   <a id="Godot_Node_CanProcess_" data-uid="Godot.Node.CanProcess*"></a>
   <h4 id="Godot_Node_CanProcess" data-uid="Godot.Node.CanProcess">CanProcess()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the node can process while the scene tree is paused (see <a class="xref" href="Godot.Node.html#Godot_Node_PauseMode">PauseMode</a>). Always returns <code>true</code> if the scene tree is not paused, and <code>false</code> if the node is not in the tree.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1673,7 +1795,9 @@
   
   <a id="Godot_Node_CreateTween_" data-uid="Godot.Node.CreateTween*"></a>
   <h4 id="Godot_Node_CreateTween" data-uid="Godot.Node.CreateTween">CreateTween()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> and binds it to this node. This is equivalent of doing:</p>
+<p><pre><code>get_tree().create_tween().bind_node(self)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1698,7 +1822,10 @@
   
   <a id="Godot_Node_Duplicate_" data-uid="Godot.Node.Duplicate*"></a>
   <h4 id="Godot_Node_Duplicate_System_Int32_" data-uid="Godot.Node.Duplicate(System.Int32)">Duplicate(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Duplicates the node, returning a new node.</p>
+<p>You can fine-tune the behavior using the <code>flags</code> (see <a class="xref" href="Godot.Node.DuplicateFlags.html">Node.DuplicateFlags</a>).</p>
+<p>Note: It will not work properly if the node contains a script with constructor arguments (i.e. needs to supply arguments to  method). In that case, the node will be duplicated without a script.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1740,7 +1867,11 @@
   
   <a id="Godot_Node_FindNode_" data-uid="Godot.Node.FindNode*"></a>
   <h4 id="Godot_Node_FindNode_System_String_System_Boolean_System_Boolean_" data-uid="Godot.Node.FindNode(System.String,System.Boolean,System.Boolean)">FindNode(String, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Finds a descendant of this node whose name matches <code>mask</code> as in <code>String.match</code> (i.e. case-sensitive, but <code>&quot;*&quot;</code> matches zero or more characters and <code>&quot;?&quot;</code> matches any single character except <code>&quot;.&quot;</code>). Returns <code>null</code> if no matching <a class="xref" href="Godot.Node.html">Node</a> is found.</p>
+<p>Note: It does not match against the full path, just against individual node names.</p>
+<p>If <code>owned</code> is <code>true</code>, this method only finds nodes whose owner is this node. This is especially important for scenes instantiated through a script, because those scenes don&apos;t have an owner.</p>
+<p>Note: As this method walks through all the descendants of the node, it is the slowest way to get a reference to another node. Whenever possible, consider using <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">GetNode(NodePath)</a> instead. To avoid using <a class="xref" href="Godot.Node.html#Godot_Node_FindNode_System_String_System_Boolean_System_Boolean_">FindNode(String, Boolean, Boolean)</a> too often, consider caching the node reference into a variable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1792,7 +1923,10 @@
   
   <a id="Godot_Node_FindParent_" data-uid="Godot.Node.FindParent*"></a>
   <h4 id="Godot_Node_FindParent_System_String_" data-uid="Godot.Node.FindParent(System.String)">FindParent(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Finds the first parent of the current node whose name matches <code>mask</code> as in <code>String.match</code> (i.e. case-sensitive, but <code>&quot;*&quot;</code> matches zero or more characters and <code>&quot;?&quot;</code> matches any single character except <code>&quot;.&quot;</code>).</p>
+<p>Note: It does not match against the full path, just against individual node names.</p>
+<p>Note: As this method walks upwards in the scene tree, it can be slow in large, deeply nested scene trees. Whenever possible, consider using <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">GetNode(NodePath)</a> instead. To avoid using <a class="xref" href="Godot.Node.html#Godot_Node_FindParent_System_String_">FindParent(String)</a> too often, consider caching the node reference into a variable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1834,7 +1968,9 @@
   
   <a id="Godot_Node_GetChild_" data-uid="Godot.Node.GetChild*"></a>
   <h4 id="Godot_Node_GetChild_System_Int32_" data-uid="Godot.Node.GetChild(System.Int32)">GetChild(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a child node by its index (see <a class="xref" href="Godot.Node.html#Godot_Node_GetChildCount">GetChildCount()</a>). This method is often used for iterating all children of a node.</p>
+<p>To access a child node via its name, use <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">GetNode(NodePath)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1876,7 +2012,11 @@
   
   <a id="Godot_Node_GetChild_" data-uid="Godot.Node.GetChild*"></a>
   <h4 id="Godot_Node_GetChild__1_System_Int32_" data-uid="Godot.Node.GetChild``1(System.Int32)">GetChild&lt;T&gt;(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a child node by its index (see <a class="xref" href="Godot.Node.html#Godot_Node_GetChildCount">GetChildCount()</a>).
+This method is often used for iterating all children of a node.
+Negative indices access the children from the last one.
+To access a child node via its name, use <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">GetNode(NodePath)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1896,7 +2036,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">idx</span></td>
-        <td></td>
+        <td><p>Child index.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1911,7 +2052,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The child <a class="xref" href="Godot.Node.html">Node</a> at the given index <code data-dev-comment-type="paramref" class="paramref">idx</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1926,15 +2068,37 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td><p>Thrown when the given the fetched node can't be casted to the given type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Godot_Node_GetChild__1_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Node.html#Godot_Node_GetChildOrNull__1_System_Int32_">GetChildOrNull&lt;T&gt;(Int32)</a></div>
+  </div>
   
   
   <a id="Godot_Node_GetChildCount_" data-uid="Godot.Node.GetChildCount*"></a>
   <h4 id="Godot_Node_GetChildCount" data-uid="Godot.Node.GetChildCount">GetChildCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of child nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1959,7 +2123,11 @@
   
   <a id="Godot_Node_GetChildOrNull_" data-uid="Godot.Node.GetChildOrNull*"></a>
   <h4 id="Godot_Node_GetChildOrNull__1_System_Int32_" data-uid="Godot.Node.GetChildOrNull``1(System.Int32)">GetChildOrNull&lt;T&gt;(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a child node by its index (see <a class="xref" href="Godot.Node.html#Godot_Node_GetChildCount">GetChildCount()</a>).
+This method is often used for iterating all children of a node.
+Negative indices access the children from the last one.
+To access a child node via its name, use <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">GetNode(NodePath)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1979,7 +2147,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">idx</span></td>
-        <td></td>
+        <td><p>Child index.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1994,7 +2163,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The child <a class="xref" href="Godot.Node.html">Node</a> at the given index <code data-dev-comment-type="paramref" class="paramref">idx</code>, or <span class="xref">null</span> if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2009,15 +2179,21 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Node_GetChildOrNull__1_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Node.html#Godot_Node_GetChild__1_System_Int32_">GetChild&lt;T&gt;(Int32)</a></div>
+  </div>
   
   
   <a id="Godot_Node_GetChildren_" data-uid="Godot.Node.GetChildren*"></a>
   <h4 id="Godot_Node_GetChildren" data-uid="Godot.Node.GetChildren">GetChildren()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of references to node&apos;s children.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2092,7 +2268,15 @@
   
   <a id="Godot_Node_GetGroups_" data-uid="Godot.Node.GetGroups*"></a>
   <h4 id="Godot_Node_GetGroups" data-uid="Godot.Node.GetGroups">GetGroups()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array listing the groups that the node is a member of.</p>
+<p>Note: For performance reasons, the order of node groups is not guaranteed. The order of node groups should not be relied upon as it can vary across project runs.</p>
+<p>Note: The engine uses some group names internally (all starting with an underscore). To avoid conflicts with internal groups, do not add custom groups whose name starts with an underscore. To exclude internal groups while looping over <a class="xref" href="Godot.Node.html#Godot_Node_GetGroups">GetGroups()</a>, use the following snippet:</p>
+<p><pre><code># Stores the node&apos;s non-internal groups only (as an array of Strings).
+var non_internal_groups = []
+for group in get_groups():
+    if not group.begins_with(&quot;_&quot;):
+        non_internal_groups.push_back(group)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2117,7 +2301,8 @@
   
   <a id="Godot_Node_GetIndex_" data-uid="Godot.Node.GetIndex*"></a>
   <h4 id="Godot_Node_GetIndex" data-uid="Godot.Node.GetIndex">GetIndex()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the node&apos;s index, i.e. its position among the siblings of its parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2192,7 +2377,8 @@
   
   <a id="Godot_Node_GetNetworkMaster_" data-uid="Godot.Node.GetNetworkMaster*"></a>
   <h4 id="Godot_Node_GetNetworkMaster" data-uid="Godot.Node.GetNetworkMaster">GetNetworkMaster()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the peer ID of the network master for this node. See <a class="xref" href="Godot.Node.html#Godot_Node_SetNetworkMaster_System_Int32_System_Boolean_">SetNetworkMaster(Int32, Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2217,7 +2403,23 @@
   
   <a id="Godot_Node_GetNode_" data-uid="Godot.Node.GetNode*"></a>
   <h4 id="Godot_Node_GetNode_Godot_NodePath_" data-uid="Godot.Node.GetNode(Godot.NodePath)">GetNode(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fetches a node. The <a class="xref" href="Godot.NodePath.html">NodePath</a> can be either a relative path (from the current node) or an absolute path (in the scene tree) to a node. If the path does not exist, <code>null</code> is returned and an error is logged. Attempts to access methods on the return value will result in an &quot;Attempt to call &lt;method> on a null instance.&quot; error.</p>
+<p>Note: Fetching absolute paths only works when the node is inside the scene tree (see <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">IsInsideTree()</a>).</p>
+<p>Example: Assume your current node is Character and the following tree:</p>
+<p><pre><code>/root
+/root/Character
+/root/Character/Sword
+/root/Character/Backpack/Dagger
+/root/MyGame
+/root/Swamp/Alligator
+/root/Swamp/Mosquito
+/root/Swamp/Goblin</code></pre></p>
+<p>Possible paths are:</p>
+<p><pre><code>get_node(&quot;Sword&quot;)
+get_node(&quot;Backpack/Dagger&quot;)
+get_node(&quot;../Swamp/Alligator&quot;)
+get_node(&quot;/root/MyGame&quot;)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2259,7 +2461,14 @@
   
   <a id="Godot_Node_GetNode_" data-uid="Godot.Node.GetNode*"></a>
   <h4 id="Godot_Node_GetNode__1_Godot_NodePath_" data-uid="Godot.Node.GetNode``1(Godot.NodePath)">GetNode&lt;T&gt;(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fetches a node. The <a class="xref" href="Godot.NodePath.html">NodePath</a> can be either a relative path (from
+the current node) or an absolute path (in the scene tree) to a node. If the path
+does not exist, a <span class="xref">null</span> instance is returned and an error
+is logged. Attempts to access methods on the return value will result in an
+&quot;Attempt to call &lt;method&gt; on a null instance.&quot; error.
+Note: Fetching absolute paths only works when the node is inside the scene tree
+(see <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">IsInsideTree()</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2279,7 +2488,8 @@
       <tr>
         <td><a class="xref" href="Godot.NodePath.html">NodePath</a></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>The path to the node to fetch.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2294,7 +2504,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Godot.Node.html">Node</a> at the given <code data-dev-comment-type="paramref" class="paramref">path</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2309,15 +2520,58 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Node_GetNode__1_Godot_NodePath__examples">Examples</h5>
+  <p>Example: Assume your current node is Character and the following tree:</p>
+<pre><code>/root
+/root/Character
+/root/Character/Sword
+/root/Character/Backpack/Dagger
+/root/MyGame
+/root/Swamp/Alligator
+/root/Swamp/Mosquito
+/root/Swamp/Goblin</code></pre>
+<p>Possible paths are:</p>
+<pre><code>GetNode(&quot;Sword&quot;);
+GetNode(&quot;Backpack/Dagger&quot;);
+GetNode(&quot;../Swamp/Alligator&quot;);
+GetNode(&quot;/root/MyGame&quot;);</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td><p>Thrown when the given the fetched node can't be casted to the given type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Godot_Node_GetNode__1_Godot_NodePath__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Node.html#Godot_Node_GetNodeOrNull__1_Godot_NodePath_">GetNodeOrNull&lt;T&gt;(NodePath)</a></div>
+  </div>
   
   
   <a id="Godot_Node_GetNodeAndResource_" data-uid="Godot.Node.GetNodeAndResource*"></a>
   <h4 id="Godot_Node_GetNodeAndResource_Godot_NodePath_" data-uid="Godot.Node.GetNodeAndResource(Godot.NodePath)">GetNodeAndResource(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fetches a node and one of its resources as specified by the <a class="xref" href="Godot.NodePath.html">NodePath</a>&apos;s subname (e.g. <code>Area2D/CollisionShape2D:shape</code>). If several nested resources are specified in the <a class="xref" href="Godot.NodePath.html">NodePath</a>, the last one will be fetched.</p>
+<p>The return value is an array of size 3: the first index points to the <a class="xref" href="Godot.Node.html">Node</a> (or <code>null</code> if not found), the second index points to the <a class="xref" href="Godot.Resource.html">Resource</a> (or <code>null</code> if not found), and the third index is the remaining <a class="xref" href="Godot.NodePath.html">NodePath</a>, if any.</p>
+<p>For example, assuming that <code>Area2D/CollisionShape2D</code> is a valid node and that its <code>shape</code> property has been assigned a <a class="xref" href="Godot.RectangleShape2D.html">RectangleShape2D</a> resource, one could have this kind of output:</p>
+<p><pre><code>print(get_node_and_resource(&quot;Area2D/CollisionShape2D&quot;)) # [[CollisionShape2D:1161], Null, ]
+print(get_node_and_resource(&quot;Area2D/CollisionShape2D:shape&quot;)) # [[CollisionShape2D:1161], [RectangleShape2D:1156], ]
+print(get_node_and_resource(&quot;Area2D/CollisionShape2D:shape:extents&quot;)) # [[CollisionShape2D:1161], [RectangleShape2D:1156], :extents]</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2359,7 +2613,8 @@
   
   <a id="Godot_Node_GetNodeOrNull_" data-uid="Godot.Node.GetNodeOrNull*"></a>
   <h4 id="Godot_Node_GetNodeOrNull_Godot_NodePath_" data-uid="Godot.Node.GetNodeOrNull(Godot.NodePath)">GetNodeOrNull(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Similar to <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">GetNode(NodePath)</a>, but does not log an error if <code>path</code> does not point to a valid <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2401,7 +2656,14 @@
   
   <a id="Godot_Node_GetNodeOrNull_" data-uid="Godot.Node.GetNodeOrNull*"></a>
   <h4 id="Godot_Node_GetNodeOrNull__1_Godot_NodePath_" data-uid="Godot.Node.GetNodeOrNull``1(Godot.NodePath)">GetNodeOrNull&lt;T&gt;(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fetches a node. The <a class="xref" href="Godot.NodePath.html">NodePath</a> can be either a relative path (from
+the current node) or an absolute path (in the scene tree) to a node. If the path
+does not exist, a <span class="xref">null</span> instance is returned and an error
+is logged. Attempts to access methods on the return value will result in an
+&quot;Attempt to call &lt;method&gt; on a null instance.&quot; error.
+Note: Fetching absolute paths only works when the node is inside the scene tree
+(see <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">IsInsideTree()</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2421,7 +2683,8 @@
       <tr>
         <td><a class="xref" href="Godot.NodePath.html">NodePath</a></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>The path to the node to fetch.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2436,7 +2699,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Godot.Node.html">Node</a> at the given <code data-dev-comment-type="paramref" class="paramref">path</code>, or <span class="xref">null</span> if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2451,10 +2715,31 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Node_GetNodeOrNull__1_Godot_NodePath__examples">Examples</h5>
+  <p>Example: Assume your current node is Character and the following tree:</p>
+<pre><code>/root
+/root/Character
+/root/Character/Sword
+/root/Character/Backpack/Dagger
+/root/MyGame
+/root/Swamp/Alligator
+/root/Swamp/Mosquito
+/root/Swamp/Goblin</code></pre>
+<p>Possible paths are:</p>
+<pre><code>GetNode(&quot;Sword&quot;);
+GetNode(&quot;Backpack/Dagger&quot;);
+GetNode(&quot;../Swamp/Alligator&quot;);
+GetNode(&quot;/root/MyGame&quot;);</code></pre>
+
+  <h5 id="Godot_Node_GetNodeOrNull__1_Godot_NodePath__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Node.html#Godot_Node_GetNode__1_Godot_NodePath_">GetNode&lt;T&gt;(NodePath)</a></div>
+  </div>
   
   
   <a id="Godot_Node_GetOwner_" data-uid="Godot.Node.GetOwner*"></a>
@@ -2484,7 +2769,12 @@
   
   <a id="Godot_Node_GetOwner_" data-uid="Godot.Node.GetOwner*"></a>
   <h4 id="Godot_Node_GetOwner__1" data-uid="Godot.Node.GetOwner``1">GetOwner&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node owner. A node can have any other node as owner (as long as it is
+a valid parent, grandparent, etc. ascending in the tree). When saving a
+node (using <a class="xref" href="Godot.PackedScene.html">PackedScene</a>), all the nodes it owns will be saved
+with it. This allows for the creation of complex <a class="xref" href="Godot.SceneTree.html">SceneTree</a>s,
+with instancing and subinstancing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2502,7 +2792,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The owner <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2517,15 +2808,41 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td><p>Thrown when the given the fetched node can't be casted to the given type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Godot_Node_GetOwner__1_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Node.html#Godot_Node_GetOwnerOrNull__1">GetOwnerOrNull&lt;T&gt;()</a></div>
+  </div>
   
   
   <a id="Godot_Node_GetOwnerOrNull_" data-uid="Godot.Node.GetOwnerOrNull*"></a>
   <h4 id="Godot_Node_GetOwnerOrNull__1" data-uid="Godot.Node.GetOwnerOrNull``1">GetOwnerOrNull&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node owner. A node can have any other node as owner (as long as it is
+a valid parent, grandparent, etc. ascending in the tree). When saving a
+node (using <a class="xref" href="Godot.PackedScene.html">PackedScene</a>), all the nodes it owns will be saved
+with it. This allows for the creation of complex <a class="xref" href="Godot.SceneTree.html">SceneTree</a>s,
+with instancing and subinstancing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2543,7 +2860,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The owner <a class="xref" href="Godot.Node.html">Node</a>, or <span class="xref">null</span> if there is no owner.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2558,15 +2876,21 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Node_GetOwnerOrNull__1_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Node.html#Godot_Node_GetOwner__1">GetOwner&lt;T&gt;()</a></div>
+  </div>
   
   
   <a id="Godot_Node_GetParent_" data-uid="Godot.Node.GetParent*"></a>
   <h4 id="Godot_Node_GetParent" data-uid="Godot.Node.GetParent">GetParent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the parent node of the current node, or <code>null</code> if the node lacks a parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2591,7 +2915,9 @@
   
   <a id="Godot_Node_GetParent_" data-uid="Godot.Node.GetParent*"></a>
   <h4 id="Godot_Node_GetParent__1" data-uid="Godot.Node.GetParent``1">GetParent&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the parent node of the current node, or a <span class="xref">null</span> instance
+if the node lacks a parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2609,7 +2935,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The parent <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2624,15 +2951,38 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td><p>Thrown when the given the fetched node can't be casted to the given type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Godot_Node_GetParent__1_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Node.html#Godot_Node_GetParentOrNull__1">GetParentOrNull&lt;T&gt;()</a></div>
+  </div>
   
   
   <a id="Godot_Node_GetParentOrNull_" data-uid="Godot.Node.GetParentOrNull*"></a>
   <h4 id="Godot_Node_GetParentOrNull__1" data-uid="Godot.Node.GetParentOrNull``1">GetParentOrNull&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the parent node of the current node, or a <span class="xref">null</span> instance
+if the node lacks a parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2650,7 +3000,8 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
+        <td><p>The parent <a class="xref" href="Godot.Node.html">Node</a>, or <span class="xref">null</span> if the node has no parent.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2665,15 +3016,21 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_Node_GetParentOrNull__1_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.Node.html#Godot_Node_GetParent__1">GetParent&lt;T&gt;()</a></div>
+  </div>
   
   
   <a id="Godot_Node_GetPath_" data-uid="Godot.Node.GetPath*"></a>
   <h4 id="Godot_Node_GetPath" data-uid="Godot.Node.GetPath">GetPath()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the absolute path of the current node. This only works if the current node is inside the scene tree (see <a class="xref" href="Godot.Node.html#Godot_Node_IsInsideTree">IsInsideTree()</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2698,7 +3055,8 @@
   
   <a id="Godot_Node_GetPathTo_" data-uid="Godot.Node.GetPathTo*"></a>
   <h4 id="Godot_Node_GetPathTo_Godot_Node_" data-uid="Godot.Node.GetPathTo(Godot.Node)">GetPathTo(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the relative <a class="xref" href="Godot.NodePath.html">NodePath</a> from this node to the specified <code>node</code>. Both nodes must be in the same scene or the function will fail.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2790,7 +3148,8 @@
   
   <a id="Godot_Node_GetPhysicsProcessDeltaTime_" data-uid="Godot.Node.GetPhysicsProcessDeltaTime*"></a>
   <h4 id="Godot_Node_GetPhysicsProcessDeltaTime" data-uid="Godot.Node.GetPhysicsProcessDeltaTime">GetPhysicsProcessDeltaTime()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the time elapsed (in seconds) since the last physics-bound frame (see <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a>). This is always a constant value in physics processing unless the frames per second is changed via <a class="xref" href="Godot.Engine.html#Godot_Engine_IterationsPerSecond">IterationsPerSecond</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2815,7 +3174,8 @@
   
   <a id="Godot_Node_GetPositionInParent_" data-uid="Godot.Node.GetPositionInParent*"></a>
   <h4 id="Godot_Node_GetPositionInParent" data-uid="Godot.Node.GetPositionInParent">GetPositionInParent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the node&apos;s order in the scene tree branch. For example, if called on the first child node the position is <code>0</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2840,7 +3200,8 @@
   
   <a id="Godot_Node_GetProcessDeltaTime_" data-uid="Godot.Node.GetProcessDeltaTime*"></a>
   <h4 id="Godot_Node_GetProcessDeltaTime" data-uid="Godot.Node.GetProcessDeltaTime">GetProcessDeltaTime()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the time elapsed (in seconds) since the last process callback. This value may vary from frame to frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2890,7 +3251,8 @@
   
   <a id="Godot_Node_GetSceneInstanceLoadPlaceholder_" data-uid="Godot.Node.GetSceneInstanceLoadPlaceholder*"></a>
   <h4 id="Godot_Node_GetSceneInstanceLoadPlaceholder" data-uid="Godot.Node.GetSceneInstanceLoadPlaceholder">GetSceneInstanceLoadPlaceholder()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this is an instance load placeholder. See <a class="xref" href="Godot.InstancePlaceholder.html">InstancePlaceholder</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2915,7 +3277,8 @@
   
   <a id="Godot_Node_GetTree_" data-uid="Godot.Node.GetTree*"></a>
   <h4 id="Godot_Node_GetTree" data-uid="Godot.Node.GetTree">GetTree()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> that contains this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2940,7 +3303,8 @@
   
   <a id="Godot_Node_GetViewport_" data-uid="Godot.Node.GetViewport*"></a>
   <h4 id="Godot_Node_GetViewport" data-uid="Godot.Node.GetViewport">GetViewport()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the node&apos;s <a class="xref" href="Godot.Viewport.html">Viewport</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2965,7 +3329,8 @@
   
   <a id="Godot_Node_HasNode_" data-uid="Godot.Node.HasNode*"></a>
   <h4 id="Godot_Node_HasNode_Godot_NodePath_" data-uid="Godot.Node.HasNode(Godot.NodePath)">HasNode(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the node that the <a class="xref" href="Godot.NodePath.html">NodePath</a> points to exists.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3007,7 +3372,8 @@
   
   <a id="Godot_Node_HasNodeAndResource_" data-uid="Godot.Node.HasNodeAndResource*"></a>
   <h4 id="Godot_Node_HasNodeAndResource_Godot_NodePath_" data-uid="Godot.Node.HasNodeAndResource(Godot.NodePath)">HasNodeAndResource(NodePath)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the <a class="xref" href="Godot.NodePath.html">NodePath</a> points to a valid node and its subname points to a valid resource, e.g. <code>Area2D/CollisionShape2D:shape</code>. Properties with a non-<a class="xref" href="Godot.Resource.html">Resource</a> type (e.g. nodes or primitive math types) are not considered resources.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3049,7 +3415,8 @@
   
   <a id="Godot_Node_IsAParentOf_" data-uid="Godot.Node.IsAParentOf*"></a>
   <h4 id="Godot_Node_IsAParentOf_Godot_Node_" data-uid="Godot.Node.IsAParentOf(Godot.Node)">IsAParentOf(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given node is a direct or indirect child of the current node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3091,7 +3458,8 @@
   
   <a id="Godot_Node_IsDisplayedFolded_" data-uid="Godot.Node.IsDisplayedFolded*"></a>
   <h4 id="Godot_Node_IsDisplayedFolded" data-uid="Godot.Node.IsDisplayedFolded">IsDisplayedFolded()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the node is folded (collapsed) in the Scene dock.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3116,7 +3484,8 @@
   
   <a id="Godot_Node_IsGreaterThan_" data-uid="Godot.Node.IsGreaterThan*"></a>
   <h4 id="Godot_Node_IsGreaterThan_Godot_Node_" data-uid="Godot.Node.IsGreaterThan(Godot.Node)">IsGreaterThan(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the given node occurs later in the scene hierarchy than the current node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3158,7 +3527,8 @@
   
   <a id="Godot_Node_IsInGroup_" data-uid="Godot.Node.IsInGroup*"></a>
   <h4 id="Godot_Node_IsInGroup_System_String_" data-uid="Godot.Node.IsInGroup(System.String)">IsInGroup(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this node is in the specified group. See notes in the description, and the group methods in <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3200,7 +3570,8 @@
   
   <a id="Godot_Node_IsInsideTree_" data-uid="Godot.Node.IsInsideTree*"></a>
   <h4 id="Godot_Node_IsInsideTree" data-uid="Godot.Node.IsInsideTree">IsInsideTree()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this node is currently inside a <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3225,7 +3596,8 @@
   
   <a id="Godot_Node_IsNetworkMaster_" data-uid="Godot.Node.IsNetworkMaster*"></a>
   <h4 id="Godot_Node_IsNetworkMaster" data-uid="Godot.Node.IsNetworkMaster">IsNetworkMaster()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the local system is the master of this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3250,7 +3622,9 @@
   
   <a id="Godot_Node_IsPhysicsInterpolated_" data-uid="Godot.Node.IsPhysicsInterpolated*"></a>
   <h4 id="Godot_Node_IsPhysicsInterpolated" data-uid="Godot.Node.IsPhysicsInterpolated">IsPhysicsInterpolated()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the physics interpolated flag is set for this Node (see <a class="xref" href="Godot.Node.html#Godot_Node_PhysicsInterpolationMode">PhysicsInterpolationMode</a>).</p>
+<p>Note: Interpolation will only be active if both the flag is set and physics interpolation is enabled within the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>. This can be tested using <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsInterpolatedAndEnabled">IsPhysicsInterpolatedAndEnabled()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3275,7 +3649,10 @@
   
   <a id="Godot_Node_IsPhysicsInterpolatedAndEnabled_" data-uid="Godot.Node.IsPhysicsInterpolatedAndEnabled*"></a>
   <h4 id="Godot_Node_IsPhysicsInterpolatedAndEnabled" data-uid="Godot.Node.IsPhysicsInterpolatedAndEnabled">IsPhysicsInterpolatedAndEnabled()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if physics interpolation is enabled (see <a class="xref" href="Godot.Node.html#Godot_Node_PhysicsInterpolationMode">PhysicsInterpolationMode</a>) and enabled in the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+<p>This is a convenience version of <a class="xref" href="Godot.Node.html#Godot_Node_IsPhysicsInterpolated">IsPhysicsInterpolated()</a> that also checks whether physics interpolation is enabled globally.</p>
+<p>See <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_PhysicsInterpolation">PhysicsInterpolation</a> and .</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3300,7 +3677,8 @@
   
   <a id="Godot_Node_IsPhysicsProcessing_" data-uid="Godot.Node.IsPhysicsProcessing*"></a>
   <h4 id="Godot_Node_IsPhysicsProcessing" data-uid="Godot.Node.IsPhysicsProcessing">IsPhysicsProcessing()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if physics processing is enabled (see <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">SetPhysicsProcess(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3325,7 +3703,8 @@
   
   <a id="Godot_Node_IsPhysicsProcessingInternal_" data-uid="Godot.Node.IsPhysicsProcessingInternal*"></a>
   <h4 id="Godot_Node_IsPhysicsProcessingInternal" data-uid="Godot.Node.IsPhysicsProcessingInternal">IsPhysicsProcessingInternal()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if internal physics processing is enabled (see <a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcessInternal_System_Boolean_">SetPhysicsProcessInternal(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3350,7 +3729,8 @@
   
   <a id="Godot_Node_IsProcessing_" data-uid="Godot.Node.IsProcessing*"></a>
   <h4 id="Godot_Node_IsProcessing" data-uid="Godot.Node.IsProcessing">IsProcessing()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if processing is enabled (see <a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">SetProcess(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3375,7 +3755,8 @@
   
   <a id="Godot_Node_IsProcessingInput_" data-uid="Godot.Node.IsProcessingInput*"></a>
   <h4 id="Godot_Node_IsProcessingInput" data-uid="Godot.Node.IsProcessingInput">IsProcessingInput()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the node is processing input (see <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInput_System_Boolean_">SetProcessInput(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3400,7 +3781,8 @@
   
   <a id="Godot_Node_IsProcessingInternal_" data-uid="Godot.Node.IsProcessingInternal*"></a>
   <h4 id="Godot_Node_IsProcessingInternal" data-uid="Godot.Node.IsProcessingInternal">IsProcessingInternal()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if internal processing is enabled (see <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessInternal_System_Boolean_">SetProcessInternal(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3425,7 +3807,8 @@
   
   <a id="Godot_Node_IsProcessingUnhandledInput_" data-uid="Godot.Node.IsProcessingUnhandledInput*"></a>
   <h4 id="Godot_Node_IsProcessingUnhandledInput" data-uid="Godot.Node.IsProcessingUnhandledInput">IsProcessingUnhandledInput()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the node is processing unhandled input (see <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledInput_System_Boolean_">SetProcessUnhandledInput(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3450,7 +3833,8 @@
   
   <a id="Godot_Node_IsProcessingUnhandledKeyInput_" data-uid="Godot.Node.IsProcessingUnhandledKeyInput*"></a>
   <h4 id="Godot_Node_IsProcessingUnhandledKeyInput" data-uid="Godot.Node.IsProcessingUnhandledKeyInput">IsProcessingUnhandledKeyInput()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the node is processing unhandled key input (see <a class="xref" href="Godot.Node.html#Godot_Node_SetProcessUnhandledKeyInput_System_Boolean_">SetProcessUnhandledKeyInput(Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3500,7 +3884,8 @@
   
   <a id="Godot_Node_MoveChild_" data-uid="Godot.Node.MoveChild*"></a>
   <h4 id="Godot_Node_MoveChild_Godot_Node_System_Int32_" data-uid="Godot.Node.MoveChild(Godot.Node,System.Int32)">MoveChild(Node, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves a child node to a different position (order) among the other children. Since calls, signals, etc are performed by tree order, changing the order of children nodes may be useful.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3532,7 +3917,8 @@
   
   <a id="Godot_Node_PrintStrayNodes_" data-uid="Godot.Node.PrintStrayNodes*"></a>
   <h4 id="Godot_Node_PrintStrayNodes" data-uid="Godot.Node.PrintStrayNodes">PrintStrayNodes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Prints all stray nodes (nodes outside the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>). Used for debugging. Works only in debug builds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3542,7 +3928,15 @@
   
   <a id="Godot_Node_PrintTree_" data-uid="Godot.Node.PrintTree*"></a>
   <h4 id="Godot_Node_PrintTree" data-uid="Godot.Node.PrintTree">PrintTree()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Prints the tree to stdout. Used mainly for debugging purposes. This version displays the path relative to the current node, and is good for copy/pasting into the <a class="xref" href="Godot.Node.html#Godot_Node_GetNode_Godot_NodePath_">GetNode(NodePath)</a> function.</p>
+<p>Example output:</p>
+<p><pre><code>TheGame
+TheGame/Menu
+TheGame/Menu/Label
+TheGame/Menu/Camera2D
+TheGame/SplashScreen
+TheGame/SplashScreen/Camera2D</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3552,7 +3946,15 @@
   
   <a id="Godot_Node_PrintTreePretty_" data-uid="Godot.Node.PrintTreePretty*"></a>
   <h4 id="Godot_Node_PrintTreePretty" data-uid="Godot.Node.PrintTreePretty">PrintTreePretty()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Similar to <a class="xref" href="Godot.Node.html#Godot_Node_PrintTree">PrintTree()</a>, this prints the tree to stdout. This version displays a more graphical representation similar to what is displayed in the scene inspector. It is useful for inspecting larger trees.</p>
+<p>Example output:</p>
+<p><pre><code> ┖╴TheGame
+    ┠╴Menu
+    ┃  ┠╴Label
+    ┃  ┖╴Camera2D
+    ┖╴SplashScreen
+       ┖╴Camera2D</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3562,7 +3964,8 @@
   
   <a id="Godot_Node_PropagateCall_" data-uid="Godot.Node.PropagateCall*"></a>
   <h4 id="Godot_Node_PropagateCall_System_String_Godot_Collections_Array_System_Boolean_" data-uid="Godot.Node.PropagateCall(System.String,Godot.Collections.Array,System.Boolean)">PropagateCall(String, Array, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls the given method (if present) with the arguments given in <code>args</code> on this node and recursively on all its children. If the <code>parent_first</code> argument is <code>true</code>, the method will be called on the current node first, then on all its children. If <code>parent_first</code> is <code>false</code>, the children will be called first.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3586,7 +3989,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">args</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -3599,7 +4003,8 @@
   
   <a id="Godot_Node_PropagateNotification_" data-uid="Godot.Node.PropagateNotification*"></a>
   <h4 id="Godot_Node_PropagateNotification_System_Int32_" data-uid="Godot.Node.PropagateNotification(System.Int32)">PropagateNotification(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notifies the current node and all its children recursively by calling <a class="xref" href="Godot.Object.html#Godot_Object_Notification_System_Int32_System_Boolean_">Notification(Int32, Boolean)</a> on all of them.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3626,7 +4031,9 @@
   
   <a id="Godot_Node_QueueFree_" data-uid="Godot.Node.QueueFree*"></a>
   <h4 id="Godot_Node_QueueFree" data-uid="Godot.Node.QueueFree">QueueFree()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Queues a node for deletion at the end of the current frame. When deleted, all of its child nodes will be deleted as well. This method ensures it&apos;s safe to delete the node, contrary to <a class="xref" href="Godot.Object.html#Godot_Object_Free">Free()</a>. Use <a class="xref" href="Godot.Object.html#Godot_Object_IsQueuedForDeletion">IsQueuedForDeletion()</a> to check whether a node will be deleted at the end of the frame.</p>
+<p>Important: If you have a variable pointing to a node, it will not be assigned to <code>null</code> once the node is freed. Instead, it will point to a previously freed instance and you should validate it with <code>@GDScript.is_instance_valid</code> before attempting to call its methods or access its properties.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3636,7 +4043,8 @@
   
   <a id="Godot_Node_Raise_" data-uid="Godot.Node.Raise*"></a>
   <h4 id="Godot_Node_Raise" data-uid="Godot.Node.Raise">Raise()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves this node to the bottom of parent node&apos;s children hierarchy. This is often useful in GUIs (<a class="xref" href="Godot.Control.html">Control</a> nodes), because their order of drawing depends on their order in the tree. The top Node is drawn first, then any siblings below the top Node in the hierarchy are successively drawn on top of it. After using <code>raise</code>, a Control will be drawn on top of its siblings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3646,7 +4054,8 @@
   
   <a id="Godot_Node_RemoveAndSkip_" data-uid="Godot.Node.RemoveAndSkip*"></a>
   <h4 id="Godot_Node_RemoveAndSkip" data-uid="Godot.Node.RemoveAndSkip">RemoveAndSkip()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a node and sets all its children as children of the parent node (if it exists). All event subscriptions that pass by the removed node will be unsubscribed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3656,7 +4065,9 @@
   
   <a id="Godot_Node_RemoveChild_" data-uid="Godot.Node.RemoveChild*"></a>
   <h4 id="Godot_Node_RemoveChild_Godot_Node_" data-uid="Godot.Node.RemoveChild(Godot.Node)">RemoveChild(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a child node. The node is NOT deleted and must be deleted manually.</p>
+<p>Note: This function may set the <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Owner</a> of the removed Node (or its descendants) to be <code>null</code>, if that <a class="xref" href="Godot.Node.html#Godot_Node_Owner">Owner</a> is no longer a parent or ancestor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3683,7 +4094,8 @@
   
   <a id="Godot_Node_RemoveFromGroup_" data-uid="Godot.Node.RemoveFromGroup*"></a>
   <h4 id="Godot_Node_RemoveFromGroup_System_String_" data-uid="Godot.Node.RemoveFromGroup(System.String)">RemoveFromGroup(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a node from a group. See notes in the description, and the group methods in <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3710,7 +4122,10 @@
   
   <a id="Godot_Node_ReplaceBy_" data-uid="Godot.Node.ReplaceBy*"></a>
   <h4 id="Godot_Node_ReplaceBy_Godot_Node_System_Boolean_" data-uid="Godot.Node.ReplaceBy(Godot.Node,System.Boolean)">ReplaceBy(Node, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Replaces a node in a scene by the given one. Subscriptions that pass through this node will be lost.</p>
+<p>Note: The given node will become the new parent of any child nodes that the replaced node had.</p>
+<p>Note: The replaced node is not automatically freed, so you either need to keep it in a variable for later use or free it using <a class="xref" href="Godot.Object.html#Godot_Object_Free">Free()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3742,7 +4157,8 @@
   
   <a id="Godot_Node_RequestReady_" data-uid="Godot.Node.RequestReady*"></a>
   <h4 id="Godot_Node_RequestReady" data-uid="Godot.Node.RequestReady">RequestReady()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests that <code>_ready</code> be called again. Note that the method won&apos;t be called immediately, but is scheduled for when the node is added to the scene tree again (see <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a>). <code>_ready</code> is called only for the node which requested it, which means that you need to request ready for each child if you want them to call <code>_ready</code> too (in which case, <code>_ready</code> will be called in the same order as it would normally).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3752,7 +4168,11 @@
   
   <a id="Godot_Node_ResetPhysicsInterpolation_" data-uid="Godot.Node.ResetPhysicsInterpolation*"></a>
   <h4 id="Godot_Node_ResetPhysicsInterpolation" data-uid="Godot.Node.ResetPhysicsInterpolation">ResetPhysicsInterpolation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When physics interpolation is active, moving a node to a radically different transform (such as placement within a level) can result in a visible glitch as the object is rendered moving from the old to new position over the physics tick.</p>
+<p>This glitch can be prevented by calling <code>reset_physics_interpolation</code>, which temporarily turns off interpolation until the physics tick is complete.</p>
+<p><a class="xref" href="Godot.Node.html#Godot_Node_NotificationResetPhysicsInterpolation">NotificationResetPhysicsInterpolation</a> will be received by the node and all children recursively.</p>
+<p>Note: This function should be called after moving the node, rather than before.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3762,7 +4182,9 @@
   
   <a id="Godot_Node_Rpc_" data-uid="Godot.Node.Rpc*"></a>
   <h4 id="Godot_Node_Rpc_System_String_System_Object___" data-uid="Godot.Node.Rpc(System.String,System.Object[])">Rpc(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a remote procedure call request for the given <code>method</code> to peers on the network (and locally), optionally sending all additional arguments as arguments to the method called by the RPC. The call request will only be received by nodes with the same <a class="xref" href="Godot.NodePath.html">NodePath</a>, including the exact same node name. Behaviour depends on the RPC configuration for the given method, see <a class="xref" href="Godot.Node.html#Godot_Node_RpcConfig_System_String_Godot_MultiplayerAPI_RPCMode_">RpcConfig(String, MultiplayerAPI.RPCMode)</a>. Methods are not exposed to RPCs by default. See also <a class="xref" href="Godot.Node.html#Godot_Node_Rset_System_String_System_Object_">Rset(String, Object)</a> and <a class="xref" href="Godot.Node.html#Godot_Node_RsetConfig_System_String_Godot_MultiplayerAPI_RPCMode_">RsetConfig(String, MultiplayerAPI.RPCMode)</a> for properties. Returns <code>null</code>.</p>
+<p>Note: You can only safely use RPCs on clients after you received the <code>connected_to_server</code> signal from the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>. You also need to keep track of the connection state, either by the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> signals like <code>server_disconnected</code> or by checking <code>SceneTree.network_peer.get_connection_status() == CONNECTION_CONNECTED</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3809,7 +4231,8 @@
   
   <a id="Godot_Node_RpcConfig_" data-uid="Godot.Node.RpcConfig*"></a>
   <h4 id="Godot_Node_RpcConfig_System_String_Godot_MultiplayerAPI_RPCMode_" data-uid="Godot.Node.RpcConfig(System.String,Godot.MultiplayerAPI.RPCMode)">RpcConfig(String, MultiplayerAPI.RPCMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the RPC mode for the given <code>method</code> to the given <code>mode</code>. See <a class="xref" href="Godot.MultiplayerAPI.RPCMode.html">MultiplayerAPI.RPCMode</a>. An alternative is annotating methods and properties with the corresponding keywords (<code>remote</code>, <code>master</code>, <code>puppet</code>, <code>remotesync</code>, <code>mastersync</code>, <code>puppetsync</code>). By default, methods are not exposed to networking (and RPCs). See also <a class="xref" href="Godot.Node.html#Godot_Node_Rset_System_String_System_Object_">Rset(String, Object)</a> and <a class="xref" href="Godot.Node.html#Godot_Node_RsetConfig_System_String_Godot_MultiplayerAPI_RPCMode_">RsetConfig(String, MultiplayerAPI.RPCMode)</a> for properties.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3841,7 +4264,8 @@
   
   <a id="Godot_Node_RpcId_" data-uid="Godot.Node.RpcId*"></a>
   <h4 id="Godot_Node_RpcId_System_Int32_System_String_System_Object___" data-uid="Godot.Node.RpcId(System.Int32,System.String,System.Object[])">RpcId(Int32, String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Rpc(String, Object[])</a> to a specific peer identified by <code>peer_id</code> (see <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_SetTargetPeer_System_Int32_">SetTargetPeer(Int32)</a>). Returns <code>null</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3893,7 +4317,8 @@
   
   <a id="Godot_Node_RpcUnreliable_" data-uid="Godot.Node.RpcUnreliable*"></a>
   <h4 id="Godot_Node_RpcUnreliable_System_String_System_Object___" data-uid="Godot.Node.RpcUnreliable(System.String,System.Object[])">RpcUnreliable(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Rpc(String, Object[])</a> using an unreliable protocol. Returns <code>null</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3940,7 +4365,8 @@
   
   <a id="Godot_Node_RpcUnreliableId_" data-uid="Godot.Node.RpcUnreliableId*"></a>
   <h4 id="Godot_Node_RpcUnreliableId_System_Int32_System_String_System_Object___" data-uid="Godot.Node.RpcUnreliableId(System.Int32,System.String,System.Object[])">RpcUnreliableId(Int32, String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Rpc(String, Object[])</a> to a specific peer identified by <code>peer_id</code> using an unreliable protocol (see <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_SetTargetPeer_System_Int32_">SetTargetPeer(Int32)</a>). Returns <code>null</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3992,7 +4418,8 @@
   
   <a id="Godot_Node_Rset_" data-uid="Godot.Node.Rset*"></a>
   <h4 id="Godot_Node_Rset_System_String_System_Object_" data-uid="Godot.Node.Rset(System.String,System.Object)">Rset(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remotely changes a property&apos;s value on other peers (and locally). Behaviour depends on the RPC configuration for the given property, see <a class="xref" href="Godot.Node.html#Godot_Node_RsetConfig_System_String_Godot_MultiplayerAPI_RPCMode_">RsetConfig(String, MultiplayerAPI.RPCMode)</a>. See also <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Rpc(String, Object[])</a> for RPCs for methods, most information applies to this method as well.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4024,7 +4451,8 @@
   
   <a id="Godot_Node_RsetConfig_" data-uid="Godot.Node.RsetConfig*"></a>
   <h4 id="Godot_Node_RsetConfig_System_String_Godot_MultiplayerAPI_RPCMode_" data-uid="Godot.Node.RsetConfig(System.String,Godot.MultiplayerAPI.RPCMode)">RsetConfig(String, MultiplayerAPI.RPCMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the RPC mode for the given <code>property</code> to the given <code>mode</code>. See <a class="xref" href="Godot.MultiplayerAPI.RPCMode.html">MultiplayerAPI.RPCMode</a>. An alternative is annotating methods and properties with the corresponding keywords (<code>remote</code>, <code>master</code>, <code>puppet</code>, <code>remotesync</code>, <code>mastersync</code>, <code>puppetsync</code>). By default, properties are not exposed to networking (and RPCs). See also <a class="xref" href="Godot.Node.html#Godot_Node_Rpc_System_String_System_Object___">Rpc(String, Object[])</a> and <a class="xref" href="Godot.Node.html#Godot_Node_RpcConfig_System_String_Godot_MultiplayerAPI_RPCMode_">RpcConfig(String, MultiplayerAPI.RPCMode)</a> for methods.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4056,7 +4484,8 @@
   
   <a id="Godot_Node_RsetId_" data-uid="Godot.Node.RsetId*"></a>
   <h4 id="Godot_Node_RsetId_System_Int32_System_String_System_Object_" data-uid="Godot.Node.RsetId(System.Int32,System.String,System.Object)">RsetId(Int32, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remotely changes the property&apos;s value on a specific peer identified by <code>peer_id</code> (see <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_SetTargetPeer_System_Int32_">SetTargetPeer(Int32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4093,7 +4522,8 @@
   
   <a id="Godot_Node_RsetUnreliable_" data-uid="Godot.Node.RsetUnreliable*"></a>
   <h4 id="Godot_Node_RsetUnreliable_System_String_System_Object_" data-uid="Godot.Node.RsetUnreliable(System.String,System.Object)">RsetUnreliable(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remotely changes the property&apos;s value on other peers (and locally) using an unreliable protocol.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4125,7 +4555,8 @@
   
   <a id="Godot_Node_RsetUnreliableId_" data-uid="Godot.Node.RsetUnreliableId*"></a>
   <h4 id="Godot_Node_RsetUnreliableId_System_Int32_System_String_System_Object_" data-uid="Godot.Node.RsetUnreliableId(System.Int32,System.String,System.Object)">RsetUnreliableId(Int32, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remotely changes property&apos;s value on a specific peer identified by <code>peer_id</code> using an unreliable protocol (see <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_SetTargetPeer_System_Int32_">SetTargetPeer(Int32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4189,7 +4620,8 @@
   
   <a id="Godot_Node_SetDisplayFolded_" data-uid="Godot.Node.SetDisplayFolded*"></a>
   <h4 id="Godot_Node_SetDisplayFolded_System_Boolean_" data-uid="Godot.Node.SetDisplayFolded(System.Boolean)">SetDisplayFolded(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the folded state of the node in the Scene dock.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4270,7 +4702,8 @@
   
   <a id="Godot_Node_SetNetworkMaster_" data-uid="Godot.Node.SetNetworkMaster*"></a>
   <h4 id="Godot_Node_SetNetworkMaster_System_Int32_System_Boolean_" data-uid="Godot.Node.SetNetworkMaster(System.Int32,System.Boolean)">SetNetworkMaster(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the node&apos;s network master to the peer with the given peer ID. The network master is the peer that has authority over the node on the network. Useful in conjunction with the <code>master</code> and <code>puppet</code> keywords. Inherited from the parent node by default, which ultimately defaults to peer ID 1 (the server). If <code>recursive</code>, the given peer is recursively set as the master for all children of this node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4383,7 +4816,8 @@
   
   <a id="Godot_Node_SetPhysicsProcess_" data-uid="Godot.Node.SetPhysicsProcess*"></a>
   <h4 id="Godot_Node_SetPhysicsProcess_System_Boolean_" data-uid="Godot.Node.SetPhysicsProcess(System.Boolean)">SetPhysicsProcess(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables or disables physics (i.e. fixed framerate) processing. When a node is being processed, it will receive a <a class="xref" href="Godot.Node.html#Godot_Node_NotificationPhysicsProcess">NotificationPhysicsProcess</a> at a fixed (usually 60 FPS, see <a class="xref" href="Godot.Engine.html#Godot_Engine_IterationsPerSecond">IterationsPerSecond</a> to change) interval (and the <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> callback will be called if exists). Enabled automatically if <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> is overridden. Any calls to this before <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> will be ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4410,7 +4844,9 @@
   
   <a id="Godot_Node_SetPhysicsProcessInternal_" data-uid="Godot.Node.SetPhysicsProcessInternal*"></a>
   <h4 id="Godot_Node_SetPhysicsProcessInternal_System_Boolean_" data-uid="Godot.Node.SetPhysicsProcessInternal(System.Boolean)">SetPhysicsProcessInternal(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables or disables internal physics for this node. Internal physics processing happens in isolation from the normal <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> calls and is used by some nodes internally to guarantee proper functioning even if the node is paused or physics processing is disabled for scripting (<a class="xref" href="Godot.Node.html#Godot_Node_SetPhysicsProcess_System_Boolean_">SetPhysicsProcess(Boolean)</a>). Only useful for advanced uses to manipulate built-in nodes&apos; behavior.</p>
+<p>Warning: Built-in Nodes rely on the internal processing for their own logic, so changing this value from your code may lead to unexpected behavior. Script access to this internal logic is provided for specific advanced uses, but is unsafe and not supported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4437,7 +4873,8 @@
   
   <a id="Godot_Node_SetProcess_" data-uid="Godot.Node.SetProcess*"></a>
   <h4 id="Godot_Node_SetProcess_System_Boolean_" data-uid="Godot.Node.SetProcess(System.Boolean)">SetProcess(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables or disables processing. When a node is being processed, it will receive a <a class="xref" href="Godot.Node.html#Godot_Node_NotificationProcess">NotificationProcess</a> on every drawn frame (and the <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a> callback will be called if exists). Enabled automatically if <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a> is overridden. Any calls to this before <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> will be ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4464,7 +4901,8 @@
   
   <a id="Godot_Node_SetProcessInput_" data-uid="Godot.Node.SetProcessInput*"></a>
   <h4 id="Godot_Node_SetProcessInput_System_Boolean_" data-uid="Godot.Node.SetProcessInput(System.Boolean)">SetProcessInput(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables or disables input processing. This is not required for GUI controls! Enabled automatically if <a class="xref" href="Godot.Node.html#Godot_Node__Input_Godot_InputEvent_">_Input(InputEvent)</a> is overridden. Any calls to this before <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> will be ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4491,7 +4929,9 @@
   
   <a id="Godot_Node_SetProcessInternal_" data-uid="Godot.Node.SetProcessInternal*"></a>
   <h4 id="Godot_Node_SetProcessInternal_System_Boolean_" data-uid="Godot.Node.SetProcessInternal(System.Boolean)">SetProcessInternal(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables or disabled internal processing for this node. Internal processing happens in isolation from the normal <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a> calls and is used by some nodes internally to guarantee proper functioning even if the node is paused or processing is disabled for scripting (<a class="xref" href="Godot.Node.html#Godot_Node_SetProcess_System_Boolean_">SetProcess(Boolean)</a>). Only useful for advanced uses to manipulate built-in nodes&apos; behavior.</p>
+<p>Warning: Built-in Nodes rely on the internal processing for their own logic, so changing this value from your code may lead to unexpected behavior. Script access to this internal logic is provided for specific advanced uses, but is unsafe and not supported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4545,7 +4985,8 @@
   
   <a id="Godot_Node_SetProcessUnhandledInput_" data-uid="Godot.Node.SetProcessUnhandledInput*"></a>
   <h4 id="Godot_Node_SetProcessUnhandledInput_System_Boolean_" data-uid="Godot.Node.SetProcessUnhandledInput(System.Boolean)">SetProcessUnhandledInput(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables unhandled input processing. This is not required for GUI controls! It enables the node to receive all input that was not previously handled (usually by a <a class="xref" href="Godot.Control.html">Control</a>). Enabled automatically if <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">_UnhandledInput(InputEvent)</a> is overridden. Any calls to this before <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> will be ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4572,7 +5013,8 @@
   
   <a id="Godot_Node_SetProcessUnhandledKeyInput_" data-uid="Godot.Node.SetProcessUnhandledKeyInput*"></a>
   <h4 id="Godot_Node_SetProcessUnhandledKeyInput_System_Boolean_" data-uid="Godot.Node.SetProcessUnhandledKeyInput(System.Boolean)">SetProcessUnhandledKeyInput(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables unhandled key input processing. Enabled automatically if <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledKeyInput_Godot_InputEventKey_">_UnhandledKeyInput(InputEventKey)</a> is overridden. Any calls to this before <a class="xref" href="Godot.Node.html#Godot_Node__Ready">_Ready()</a> will be ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4599,7 +5041,8 @@
   
   <a id="Godot_Node_SetSceneInstanceLoadPlaceholder_" data-uid="Godot.Node.SetSceneInstanceLoadPlaceholder*"></a>
   <h4 id="Godot_Node_SetSceneInstanceLoadPlaceholder_System_Boolean_" data-uid="Godot.Node.SetSceneInstanceLoadPlaceholder(System.Boolean)">SetSceneInstanceLoadPlaceholder(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets whether this is an instance load placeholder. See <a class="xref" href="Godot.InstancePlaceholder.html">InstancePlaceholder</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4653,7 +5096,9 @@
   
   <a id="Godot_Node_UpdateConfigurationWarning_" data-uid="Godot.Node.UpdateConfigurationWarning*"></a>
   <h4 id="Godot_Node_UpdateConfigurationWarning" data-uid="Godot.Node.UpdateConfigurationWarning">UpdateConfigurationWarning()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the warning displayed for this node in the Scene Dock.</p>
+<p>Use <a class="xref" href="Godot.Node.html#Godot_Node__GetConfigurationWarning">_GetConfigurationWarning()</a> to setup the warning message to display.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

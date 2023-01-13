@@ -83,7 +83,21 @@
   
   <h1 id="Godot_Expression" data-uid="Godot.Expression" class="text-break">Class Expression
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An expression can be made of any arithmetic operation, built-in math function call, method call of a passed instance, or built-in type construction call.</p>
+<p>An example expression text using the built-in math functions could be <code>sqrt(pow(3,2) + pow(4,2))</code>.</p>
+<p>In the following example we use a <a class="xref" href="Godot.LineEdit.html">LineEdit</a> node to write our expression and show the result.</p>
+<p><pre><code>onready var expression = Expression.new()
+<p>func _ready():
+$LineEdit.connect(&quot;text_entered&quot;, self, &quot;_on_text_entered&quot;)</p>
+<p>func _on_text_entered(command):
+var error = expression.parse(command, [])
+if error != OK:
+print(expression.get_error_text())
+return
+var result = expression.execute([], null, true)
+if not expression.has_execute_failed():
+$LineEdit.text = str(result)</code></pre></p><p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +311,9 @@
   
   <a id="Godot_Expression_Execute_" data-uid="Godot.Expression.Execute*"></a>
   <h4 id="Godot_Expression_Execute_Godot_Collections_Array_Godot_Object_System_Boolean_" data-uid="Godot.Expression.Execute(Godot.Collections.Array,Godot.Object,System.Boolean)">Execute(Array, Object, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Executes the expression that was previously parsed by <a class="xref" href="Godot.Expression.html#Godot_Expression_Parse_System_String_System_String___">Parse(String, String[])</a> and returns the result. Before you use the returned object, you should check if the method failed by calling <a class="xref" href="Godot.Expression.html#Godot_Expression_HasExecuteFailed">HasExecuteFailed()</a>.</p>
+<p>If you defined input variables in <a class="xref" href="Godot.Expression.html#Godot_Expression_Parse_System_String_System_String___">Parse(String, String[])</a>, you can specify their values in the inputs array, in the same order.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -316,7 +332,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">inputs</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Object.html">Object</a></td>
@@ -349,7 +366,8 @@
   
   <a id="Godot_Expression_GetErrorText_" data-uid="Godot.Expression.GetErrorText*"></a>
   <h4 id="Godot_Expression_GetErrorText" data-uid="Godot.Expression.GetErrorText">GetErrorText()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the error text if <a class="xref" href="Godot.Expression.html#Godot_Expression_Parse_System_String_System_String___">Parse(String, String[])</a> has failed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +392,8 @@
   
   <a id="Godot_Expression_HasExecuteFailed_" data-uid="Godot.Expression.HasExecuteFailed*"></a>
   <h4 id="Godot_Expression_HasExecuteFailed" data-uid="Godot.Expression.HasExecuteFailed">HasExecuteFailed()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if <a class="xref" href="Godot.Expression.html#Godot_Expression_Execute_Godot_Collections_Array_Godot_Object_System_Boolean_">Execute(Array, Object, Boolean)</a> has failed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -399,7 +418,9 @@
   
   <a id="Godot_Expression_Parse_" data-uid="Godot.Expression.Parse*"></a>
   <h4 id="Godot_Expression_Parse_System_String_System_String___" data-uid="Godot.Expression.Parse(System.String,System.String[])">Parse(String, String[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Parses the expression and returns an <a class="xref" href="Godot.Error.html">Error</a> code.</p>
+<p>You can optionally specify names of variables that may appear in the expression with <code>input_names</code>, so that you can bind them when it gets executed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -423,7 +444,8 @@
       <tr>
         <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">inputNames</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;string&gt;()</p>
+</td>
       </tr>
     </tbody>
   </table>

@@ -83,7 +83,9 @@
   
   <h1 id="Godot_Listener2D" data-uid="Godot.Listener2D" class="text-break">Class Listener2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Once added to the scene tree and enabled using <a class="xref" href="Godot.Listener2D.html#Godot_Listener2D_MakeCurrent">MakeCurrent()</a>, this node will override the location sounds are heard from. Only one <a class="xref" href="Godot.Listener2D.html">Listener2D</a> can be current. Using <a class="xref" href="Godot.Listener2D.html#Godot_Listener2D_MakeCurrent">MakeCurrent()</a> will disable the previous <a class="xref" href="Godot.Listener2D.html">Listener2D</a>.</p>
+<p>If there is no active <a class="xref" href="Godot.Listener2D.html">Listener2D</a> in the current <a class="xref" href="Godot.Viewport.html">Viewport</a>, center of the screen will be used as a hearing point for the audio. <a class="xref" href="Godot.Listener2D.html">Listener2D</a> needs to be inside <a class="xref" href="Godot.SceneTree.html">SceneTree</a> to function.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1114,8 @@
   
   <a id="Godot_Listener2D_ClearCurrent_" data-uid="Godot.Listener2D.ClearCurrent*"></a>
   <h4 id="Godot_Listener2D_ClearCurrent" data-uid="Godot.Listener2D.ClearCurrent">ClearCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables the <a class="xref" href="Godot.Listener2D.html">Listener2D</a>. If it&apos;s not set as current, this method will have no effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1122,7 +1125,8 @@
   
   <a id="Godot_Listener2D_IsCurrent_" data-uid="Godot.Listener2D.IsCurrent*"></a>
   <h4 id="Godot_Listener2D_IsCurrent" data-uid="Godot.Listener2D.IsCurrent">IsCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this <a class="xref" href="Godot.Listener2D.html">Listener2D</a> is currently active.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1147,7 +1151,9 @@
   
   <a id="Godot_Listener2D_MakeCurrent_" data-uid="Godot.Listener2D.MakeCurrent*"></a>
   <h4 id="Godot_Listener2D_MakeCurrent" data-uid="Godot.Listener2D.MakeCurrent">MakeCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes the <a class="xref" href="Godot.Listener2D.html">Listener2D</a> active, setting it as the hearing point for the sounds. If there is already another active <a class="xref" href="Godot.Listener2D.html">Listener2D</a>, it will be disabled.</p>
+<p>This method will have no effect if the <a class="xref" href="Godot.Listener2D.html">Listener2D</a> is not added to <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

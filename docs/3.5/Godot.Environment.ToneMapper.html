@@ -101,7 +101,9 @@
   
   
   <h4 id="Godot_Environment_ToneMapper_Aces" data-uid="Godot.Environment.ToneMapper.Aces">Aces</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Use the legacy Godot version of the Academy Color Encoding System tonemapper. Unlike <a class="xref" href="Godot.Environment.ToneMapper.html#Godot_Environment_ToneMapper_AcesFitted">AcesFitted</a>, this version of ACES does not handle bright lighting in a physically accurate way. ACES typically has a more contrasted output compared to <a class="xref" href="Godot.Environment.ToneMapper.html#Godot_Environment_ToneMapper_Reinhardt">Reinhardt</a> and <a class="xref" href="Godot.Environment.ToneMapper.html#Godot_Environment_ToneMapper_Filmic">Filmic</a>.</p>
+<p>Note: This tonemapping operator will be removed in Godot 4.0 in favor of the more accurate <a class="xref" href="Godot.Environment.ToneMapper.html#Godot_Environment_ToneMapper_AcesFitted">AcesFitted</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +127,8 @@
   
   
   <h4 id="Godot_Environment_ToneMapper_AcesFitted" data-uid="Godot.Environment.ToneMapper.AcesFitted">AcesFitted</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Use the Academy Color Encoding System tonemapper. ACES is slightly more expensive than other options, but it handles bright lighting in a more realistic fashion by desaturating it as it becomes brighter. ACES typically has a more contrasted output compared to <a class="xref" href="Godot.Environment.ToneMapper.html#Godot_Environment_ToneMapper_Reinhardt">Reinhardt</a> and <a class="xref" href="Godot.Environment.ToneMapper.html#Godot_Environment_ToneMapper_Filmic">Filmic</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +152,8 @@
   
   
   <h4 id="Godot_Environment_ToneMapper_Filmic" data-uid="Godot.Environment.ToneMapper.Filmic">Filmic</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Filmic tonemapper operator. This avoids clipping bright highlights, with a resulting image that usually looks more vivid than <a class="xref" href="Godot.Environment.ToneMapper.html#Godot_Environment_ToneMapper_Reinhardt">Reinhardt</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -173,7 +177,8 @@
   
   
   <h4 id="Godot_Environment_ToneMapper_Linear" data-uid="Godot.Environment.ToneMapper.Linear">Linear</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Linear tonemapper operator. Reads the linear data and passes it on unmodified. This can cause bright lighting to look blown out, with noticeable clipping in the output colors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,7 +202,8 @@
   
   
   <h4 id="Godot_Environment_ToneMapper_Reinhardt" data-uid="Godot.Environment.ToneMapper.Reinhardt">Reinhardt</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reinhardt tonemapper operator. Performs a variation on rendered pixels&apos; colors by this formula: <code>color = color / (1 + color)</code>. This avoids clipping bright highlights, but the resulting image can look a bit dull.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

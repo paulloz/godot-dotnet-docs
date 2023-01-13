@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ProceduralSky" data-uid="Godot.ProceduralSky" class="text-break">Class ProceduralSky
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>ProceduralSky provides a way to create an effective background quickly by defining procedural parameters for the sun, the sky and the ground. The sky and ground are very similar, they are defined by a color at the horizon, another color, and finally an easing curve to interpolate between these two colors. Similarly, the sun is described by a position in the sky, a color, and an easing curve. However, the sun also defines a minimum and maximum angle, these two values define at what distance the easing curve begins and ends from the sun, and thus end up defining the size of the sun in the sky.</p>
+<p>The ProceduralSky is updated on the CPU after the parameters change. It is stored in a texture and then displayed as a background in the scene. This makes it relatively unsuitable for real-time updates during gameplay. However, with a small enough texture size, it can still be updated relatively frequently, as it is updated on a background thread when multi-threading is available.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -356,7 +358,8 @@
   
   <a id="Godot_ProceduralSky_GroundBottomColor_" data-uid="Godot.ProceduralSky.GroundBottomColor*"></a>
   <h4 id="Godot_ProceduralSky_GroundBottomColor" data-uid="Godot.ProceduralSky.GroundBottomColor">GroundBottomColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Color of the ground at the bottom.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -381,7 +384,8 @@
   
   <a id="Godot_ProceduralSky_GroundCurve_" data-uid="Godot.ProceduralSky.GroundCurve*"></a>
   <h4 id="Godot_ProceduralSky_GroundCurve" data-uid="Godot.ProceduralSky.GroundCurve">GroundCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How quickly the <a class="xref" href="Godot.ProceduralSky.html#Godot_ProceduralSky_GroundHorizonColor">GroundHorizonColor</a> fades into the <a class="xref" href="Godot.ProceduralSky.html#Godot_ProceduralSky_GroundBottomColor">GroundBottomColor</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -406,7 +410,8 @@
   
   <a id="Godot_ProceduralSky_GroundEnergy_" data-uid="Godot.ProceduralSky.GroundEnergy*"></a>
   <h4 id="Godot_ProceduralSky_GroundEnergy" data-uid="Godot.ProceduralSky.GroundEnergy">GroundEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount of energy contribution from the ground.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -431,7 +436,8 @@
   
   <a id="Godot_ProceduralSky_GroundHorizonColor_" data-uid="Godot.ProceduralSky.GroundHorizonColor*"></a>
   <h4 id="Godot_ProceduralSky_GroundHorizonColor" data-uid="Godot.ProceduralSky.GroundHorizonColor">GroundHorizonColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Color of the ground at the horizon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -456,7 +462,8 @@
   
   <a id="Godot_ProceduralSky_SkyCurve_" data-uid="Godot.ProceduralSky.SkyCurve*"></a>
   <h4 id="Godot_ProceduralSky_SkyCurve" data-uid="Godot.ProceduralSky.SkyCurve">SkyCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How quickly the <a class="xref" href="Godot.ProceduralSky.html#Godot_ProceduralSky_SkyHorizonColor">SkyHorizonColor</a> fades into the <a class="xref" href="Godot.ProceduralSky.html#Godot_ProceduralSky_SkyTopColor">SkyTopColor</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -481,7 +488,8 @@
   
   <a id="Godot_ProceduralSky_SkyEnergy_" data-uid="Godot.ProceduralSky.SkyEnergy*"></a>
   <h4 id="Godot_ProceduralSky_SkyEnergy" data-uid="Godot.ProceduralSky.SkyEnergy">SkyEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount of energy contribution from the sky.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -506,7 +514,8 @@
   
   <a id="Godot_ProceduralSky_SkyHorizonColor_" data-uid="Godot.ProceduralSky.SkyHorizonColor*"></a>
   <h4 id="Godot_ProceduralSky_SkyHorizonColor" data-uid="Godot.ProceduralSky.SkyHorizonColor">SkyHorizonColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Color of the sky at the horizon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -531,7 +540,8 @@
   
   <a id="Godot_ProceduralSky_SkyTopColor_" data-uid="Godot.ProceduralSky.SkyTopColor*"></a>
   <h4 id="Godot_ProceduralSky_SkyTopColor" data-uid="Godot.ProceduralSky.SkyTopColor">SkyTopColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Color of the sky at the top.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -556,7 +566,8 @@
   
   <a id="Godot_ProceduralSky_SunAngleMax_" data-uid="Godot.ProceduralSky.SunAngleMax*"></a>
   <h4 id="Godot_ProceduralSky_SunAngleMax" data-uid="Godot.ProceduralSky.SunAngleMax">SunAngleMax</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Distance from center of sun where it fades out completely.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -581,7 +592,8 @@
   
   <a id="Godot_ProceduralSky_SunAngleMin_" data-uid="Godot.ProceduralSky.SunAngleMin*"></a>
   <h4 id="Godot_ProceduralSky_SunAngleMin" data-uid="Godot.ProceduralSky.SunAngleMin">SunAngleMin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Distance from sun where it goes from solid to starting to fade.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -606,7 +618,8 @@
   
   <a id="Godot_ProceduralSky_SunColor_" data-uid="Godot.ProceduralSky.SunColor*"></a>
   <h4 id="Godot_ProceduralSky_SunColor" data-uid="Godot.ProceduralSky.SunColor">SunColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The sun&apos;s color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -631,7 +644,8 @@
   
   <a id="Godot_ProceduralSky_SunCurve_" data-uid="Godot.ProceduralSky.SunCurve*"></a>
   <h4 id="Godot_ProceduralSky_SunCurve" data-uid="Godot.ProceduralSky.SunCurve">SunCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How quickly the sun fades away between <a class="xref" href="Godot.ProceduralSky.html#Godot_ProceduralSky_SunAngleMin">SunAngleMin</a> and <a class="xref" href="Godot.ProceduralSky.html#Godot_ProceduralSky_SunAngleMax">SunAngleMax</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -656,7 +670,8 @@
   
   <a id="Godot_ProceduralSky_SunEnergy_" data-uid="Godot.ProceduralSky.SunEnergy*"></a>
   <h4 id="Godot_ProceduralSky_SunEnergy" data-uid="Godot.ProceduralSky.SunEnergy">SunEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount of energy contribution from the sun.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -681,7 +696,8 @@
   
   <a id="Godot_ProceduralSky_SunLatitude_" data-uid="Godot.ProceduralSky.SunLatitude*"></a>
   <h4 id="Godot_ProceduralSky_SunLatitude" data-uid="Godot.ProceduralSky.SunLatitude">SunLatitude</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The sun&apos;s height using polar coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -706,7 +722,8 @@
   
   <a id="Godot_ProceduralSky_SunLongitude_" data-uid="Godot.ProceduralSky.SunLongitude*"></a>
   <h4 id="Godot_ProceduralSky_SunLongitude" data-uid="Godot.ProceduralSky.SunLongitude">SunLongitude</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The direction of the sun using polar coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -731,7 +748,8 @@
   
   <a id="Godot_ProceduralSky_TextureSize_" data-uid="Godot.ProceduralSky.TextureSize*"></a>
   <h4 id="Godot_ProceduralSky_TextureSize" data-uid="Godot.ProceduralSky.TextureSize">TextureSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Size of <a class="xref" href="Godot.Texture.html">Texture</a> that the ProceduralSky will generate. The size is set using <a class="xref" href="Godot.ProceduralSky.TextureSizeEnum.html">ProceduralSky.TextureSizeEnum</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

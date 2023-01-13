@@ -83,7 +83,9 @@
   
   <h1 id="Godot_NetworkedMultiplayerPeer" data-uid="Godot.NetworkedMultiplayerPeer" class="text-break">Class NetworkedMultiplayerPeer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Manages the connection to network peers. Assigns unique IDs to each client connected to the server. See also <a class="xref" href="Godot.MultiplayerAPI.html">MultiplayerAPI</a>.</p>
+<p>Note: The high-level multiplayer API protocol is an implementation detail and isn&apos;t meant to be used by non-Godot servers. It may change without notice.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -326,7 +328,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerPeer_TargetPeerBroadcast" data-uid="Godot.NetworkedMultiplayerPeer.TargetPeerBroadcast">TargetPeerBroadcast</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Packets are sent to the server and then redistributed to other peers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -350,7 +353,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerPeer_TargetPeerServer" data-uid="Godot.NetworkedMultiplayerPeer.TargetPeerServer">TargetPeerServer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Packets are sent to the server alone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -377,7 +381,8 @@
   
   <a id="Godot_NetworkedMultiplayerPeer_RefuseNewConnections_" data-uid="Godot.NetworkedMultiplayerPeer.RefuseNewConnections*"></a>
   <h4 id="Godot_NetworkedMultiplayerPeer_RefuseNewConnections" data-uid="Godot.NetworkedMultiplayerPeer.RefuseNewConnections">RefuseNewConnections</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this <a class="xref" href="Godot.NetworkedMultiplayerPeer.html">NetworkedMultiplayerPeer</a> refuses new connections.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -402,7 +407,8 @@
   
   <a id="Godot_NetworkedMultiplayerPeer_TransferMode_" data-uid="Godot.NetworkedMultiplayerPeer.TransferMode*"></a>
   <h4 id="Godot_NetworkedMultiplayerPeer_TransferMode" data-uid="Godot.NetworkedMultiplayerPeer.TransferMode">TransferMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The manner in which to send packets to the <code>target_peer</code>. See <a class="xref" href="Godot.NetworkedMultiplayerPeer.TransferModeEnum.html">NetworkedMultiplayerPeer.TransferModeEnum</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -429,7 +435,8 @@
   
   <a id="Godot_NetworkedMultiplayerPeer_GetConnectionStatus_" data-uid="Godot.NetworkedMultiplayerPeer.GetConnectionStatus*"></a>
   <h4 id="Godot_NetworkedMultiplayerPeer_GetConnectionStatus" data-uid="Godot.NetworkedMultiplayerPeer.GetConnectionStatus">GetConnectionStatus()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current state of the connection. See <a class="xref" href="Godot.NetworkedMultiplayerPeer.ConnectionStatus.html">NetworkedMultiplayerPeer.ConnectionStatus</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -454,7 +461,8 @@
   
   <a id="Godot_NetworkedMultiplayerPeer_GetPacketPeer_" data-uid="Godot.NetworkedMultiplayerPeer.GetPacketPeer*"></a>
   <h4 id="Godot_NetworkedMultiplayerPeer_GetPacketPeer" data-uid="Godot.NetworkedMultiplayerPeer.GetPacketPeer">GetPacketPeer()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the ID of the <a class="xref" href="Godot.NetworkedMultiplayerPeer.html">NetworkedMultiplayerPeer</a> who sent the most recent packet.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -504,7 +512,8 @@
   
   <a id="Godot_NetworkedMultiplayerPeer_GetUniqueId_" data-uid="Godot.NetworkedMultiplayerPeer.GetUniqueId*"></a>
   <h4 id="Godot_NetworkedMultiplayerPeer_GetUniqueId" data-uid="Godot.NetworkedMultiplayerPeer.GetUniqueId">GetUniqueId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the ID of this <a class="xref" href="Godot.NetworkedMultiplayerPeer.html">NetworkedMultiplayerPeer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -554,7 +563,8 @@
   
   <a id="Godot_NetworkedMultiplayerPeer_Poll_" data-uid="Godot.NetworkedMultiplayerPeer.Poll*"></a>
   <h4 id="Godot_NetworkedMultiplayerPeer_Poll" data-uid="Godot.NetworkedMultiplayerPeer.Poll">Poll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Waits up to 1 second to receive a new network event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -591,7 +601,9 @@
   
   <a id="Godot_NetworkedMultiplayerPeer_SetTargetPeer_" data-uid="Godot.NetworkedMultiplayerPeer.SetTargetPeer*"></a>
   <h4 id="Godot_NetworkedMultiplayerPeer_SetTargetPeer_System_Int32_" data-uid="Godot.NetworkedMultiplayerPeer.SetTargetPeer(System.Int32)">SetTargetPeer(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the peer to which packets will be sent.</p>
+<p>The <code>id</code> can be one of: <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_TargetPeerBroadcast">TargetPeerBroadcast</a> to send to all connected peers, <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_TargetPeerServer">TargetPeerServer</a> to send to the peer acting as server, a valid peer ID to send to that specific peer, a negative peer ID to send to all peers except that one. By default, the target peer is <a class="xref" href="Godot.NetworkedMultiplayerPeer.html#Godot_NetworkedMultiplayerPeer_TargetPeerBroadcast">TargetPeerBroadcast</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

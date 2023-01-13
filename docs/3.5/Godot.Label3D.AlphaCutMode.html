@@ -101,7 +101,8 @@
   
   
   <h4 id="Godot_Label3D_AlphaCutMode_Disabled" data-uid="Godot.Label3D.AlphaCutMode.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This mode performs standard alpha blending. It can display translucent areas, but transparency sorting issues may be visible when multiple transparent materials are overlapping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +126,10 @@
   
   
   <h4 id="Godot_Label3D_AlphaCutMode_Discard" data-uid="Godot.Label3D.AlphaCutMode.Discard">Discard</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This mode only allows fully transparent or fully opaque pixels. This mode is also known as alpha testing or 1-bit transparency.</p>
+<p>Note: This mode might have issues with anti-aliased fonts and outlines, try adjusting <a class="xref" href="Godot.Label3D.html#Godot_Label3D_AlphaScissorThreshold">AlphaScissorThreshold</a> or using SDF font.</p>
+<p>Note: When using text with overlapping glyphs (e.g., cursive scripts), this mode might have transparency sorting issues between the main text and the outline.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +153,9 @@
   
   
   <h4 id="Godot_Label3D_AlphaCutMode_OpaquePrepass" data-uid="Godot.Label3D.AlphaCutMode.OpaquePrepass">OpaquePrepass</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This mode draws fully opaque pixels in the depth prepass. This is slower than <a class="xref" href="Godot.Label3D.AlphaCutMode.html#Godot_Label3D_AlphaCutMode_Disabled">Disabled</a> or <a class="xref" href="Godot.Label3D.AlphaCutMode.html#Godot_Label3D_AlphaCutMode_Discard">Discard</a>, but it allows displaying translucent areas and smooth edges while using proper sorting.</p>
+<p>Note: When using text with overlapping glyphs (e.g., cursive scripts), this mode might have transparency sorting issues between the main text and the outline.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,15 @@
   
   <h1 id="Godot_MarginContainer" data-uid="Godot.MarginContainer" class="text-break">Class MarginContainer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Adds a top, left, bottom, and right margin to all <a class="xref" href="Godot.Control.html">Control</a> nodes that are direct children of the container. To control the <a class="xref" href="Godot.MarginContainer.html">MarginContainer</a>&apos;s margin, use the <code>margin_*</code> theme properties listed below.</p>
+<p>Note: Be careful, <a class="xref" href="Godot.Control.html">Control</a> margin values are different than the constant margin values. If you want to change the custom margin values of the <a class="xref" href="Godot.MarginContainer.html">MarginContainer</a> by code, you should use the following examples:</p>
+<p><pre><code># This code sample assumes the current script is extending MarginContainer.
+var margin_value = 100
+add_constant_override(&quot;margin_top&quot;, margin_value)
+add_constant_override(&quot;margin_left&quot;, margin_value)
+add_constant_override(&quot;margin_bottom&quot;, margin_value)
+add_constant_override(&quot;margin_right&quot;, margin_value)</code></pre></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>

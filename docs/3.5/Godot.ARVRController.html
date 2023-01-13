@@ -83,7 +83,10 @@
   
   <h1 id="Godot_ARVRController" data-uid="Godot.ARVRController" class="text-break">Class ARVRController
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This is a helper spatial node that is linked to the tracking of controllers. It also offers several handy passthroughs to the state of buttons and such on the controllers.</p>
+<p>Controllers are linked by their ID. You can create controller nodes before the controllers are available. If your game always uses two controllers (one for each hand), you can predefine the controllers with ID 1 and 2; they will become active as soon as the controllers are identified. If you expect additional controllers to be used, you should react to the signals and add ARVRController nodes to your scene.</p>
+<p>The position of the controller node is automatically updated by the <a class="xref" href="Godot.ARVRServer.html">ARVRServer</a>. This makes this node ideal to add child nodes to visualize the controller.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +967,11 @@
   
   <a id="Godot_ARVRController_ControllerId_" data-uid="Godot.ARVRController.ControllerId*"></a>
   <h4 id="Godot_ARVRController_ControllerId" data-uid="Godot.ARVRController.ControllerId">ControllerId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The controller&apos;s ID.</p>
+<p>A controller ID of 0 is unbound and will always result in an inactive node. Controller ID 1 is reserved for the first controller that identifies itself as the left-hand controller and ID 2 is reserved for the first controller that identifies itself as the right-hand controller.</p>
+<p>For any other controller that the <a class="xref" href="Godot.ARVRServer.html">ARVRServer</a> detects, we continue with controller ID 3.</p>
+<p>When a controller is turned off, its slot is freed. This ensures controllers will keep the same ID even when controllers with lower IDs are turned off.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -989,7 +996,9 @@
   
   <a id="Godot_ARVRController_Rumble_" data-uid="Godot.ARVRController.Rumble*"></a>
   <h4 id="Godot_ARVRController_Rumble" data-uid="Godot.ARVRController.Rumble">Rumble</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The degree to which the controller vibrates. Ranges from <code>0.0</code> to <code>1.0</code>. If changed, updates <a class="xref" href="Godot.ARVRPositionalTracker.html#Godot_ARVRPositionalTracker_Rumble">Rumble</a> accordingly.</p>
+<p>This is a useful property to animate if you want the controller to vibrate for a limited duration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1041,7 +1050,8 @@
   
   <a id="Godot_ARVRController_GetControllerName_" data-uid="Godot.ARVRController.GetControllerName*"></a>
   <h4 id="Godot_ARVRController_GetControllerName" data-uid="Godot.ARVRController.GetControllerName">GetControllerName()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If active, returns the name of the associated controller if provided by the AR/VR SDK used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1066,7 +1076,8 @@
   
   <a id="Godot_ARVRController_GetHand_" data-uid="Godot.ARVRController.GetHand*"></a>
   <h4 id="Godot_ARVRController_GetHand" data-uid="Godot.ARVRController.GetHand">GetHand()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the hand holding this controller, if known. See <a class="xref" href="Godot.ARVRPositionalTracker.TrackerHand.html">ARVRPositionalTracker.TrackerHand</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1091,7 +1102,8 @@
   
   <a id="Godot_ARVRController_GetIsActive_" data-uid="Godot.ARVRController.GetIsActive*"></a>
   <h4 id="Godot_ARVRController_GetIsActive" data-uid="Godot.ARVRController.GetIsActive">GetIsActive()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the bound controller is active. ARVR systems attempt to track active controllers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1116,7 +1128,8 @@
   
   <a id="Godot_ARVRController_GetJoystickAxis_" data-uid="Godot.ARVRController.GetJoystickAxis*"></a>
   <h4 id="Godot_ARVRController_GetJoystickAxis_System_Int32_" data-uid="Godot.ARVRController.GetJoystickAxis(System.Int32)">GetJoystickAxis(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of the given axis for things like triggers, touchpads, etc. that are embedded into the controller.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1158,7 +1171,8 @@
   
   <a id="Godot_ARVRController_GetJoystickId_" data-uid="Godot.ARVRController.GetJoystickId*"></a>
   <h4 id="Godot_ARVRController_GetJoystickId" data-uid="Godot.ARVRController.GetJoystickId">GetJoystickId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the ID of the joystick object bound to this. Every controller tracked by the <a class="xref" href="Godot.ARVRServer.html">ARVRServer</a> that has buttons and axis will also be registered as a joystick within Godot. This means that all the normal joystick tracking and input mapping will work for buttons and axis found on the AR/VR controllers. This ID is purely offered as information so you can link up the controller with its joystick entry.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1183,7 +1197,8 @@
   
   <a id="Godot_ARVRController_GetMesh_" data-uid="Godot.ARVRController.GetMesh*"></a>
   <h4 id="Godot_ARVRController_GetMesh" data-uid="Godot.ARVRController.GetMesh">GetMesh()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If provided by the <a class="xref" href="Godot.ARVRInterface.html">ARVRInterface</a>, this returns a mesh associated with the controller. This can be used to visualize the controller.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1233,7 +1248,8 @@
   
   <a id="Godot_ARVRController_IsButtonPressed_" data-uid="Godot.ARVRController.IsButtonPressed*"></a>
   <h4 id="Godot_ARVRController_IsButtonPressed_System_Int32_" data-uid="Godot.ARVRController.IsButtonPressed(System.Int32)">IsButtonPressed(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the button at index <code>button</code> is pressed. See <a class="xref" href="Godot.JoystickList.html">JoystickList</a>, in particular the <code>JOY_VR_*</code> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

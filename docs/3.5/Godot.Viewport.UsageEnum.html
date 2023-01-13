@@ -101,7 +101,8 @@
   
   
   <h4 id="Godot_Viewport_UsageEnum_Usage2d" data-uid="Godot.Viewport.UsageEnum.Usage2d">Usage2d</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allocates all buffers needed for drawing 2D scenes. This takes less VRAM than the 3D usage modes. Note that 3D rendering effects such as glow and HDR are not available when using this mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +126,8 @@
   
   
   <h4 id="Godot_Viewport_UsageEnum_Usage2dNoSampling" data-uid="Godot.Viewport.UsageEnum.Usage2dNoSampling">Usage2dNoSampling</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allocates buffers needed for 2D scenes without allocating a buffer for screen copy. Accordingly, you cannot read from the screen. Of the <a class="xref" href="Godot.Viewport.UsageEnum.html">Viewport.UsageEnum</a> types, this requires the least VRAM. Note that 3D rendering effects such as glow and HDR are not available when using this mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +151,8 @@
   
   
   <h4 id="Godot_Viewport_UsageEnum_Usage3d" data-uid="Godot.Viewport.UsageEnum.Usage3d">Usage3d</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allocates full buffers for drawing 3D scenes and all 3D effects including buffers needed for 2D scenes and effects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -173,7 +176,8 @@
   
   
   <h4 id="Godot_Viewport_UsageEnum_Usage3dNoEffects" data-uid="Godot.Viewport.UsageEnum.Usage3dNoEffects">Usage3dNoEffects</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allocates buffers needed for drawing 3D scenes. But does not allocate buffers needed for reading from the screen and post-processing effects. Saves some VRAM.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

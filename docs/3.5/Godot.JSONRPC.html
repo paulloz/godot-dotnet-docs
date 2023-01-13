@@ -83,7 +83,8 @@
   
   <h1 id="Godot_JSONRPC" data-uid="Godot.JSONRPC" class="text-break">Class JSONRPC
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a href="https://www.jsonrpc.org/">JSON-RPC</a> is a standard which wraps a method call in a <a class="xref" href="Godot.JSON.html">JSON</a> object. The object has a particular structure and identifies which method is called, the parameters to that function, and carries an ID to keep track of responses. This class implements that standard on top of <a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a>; you will have to convert between a <a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a> and <a class="xref" href="Godot.JSON.html">JSON</a> with other functions.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -287,7 +288,10 @@
   
   <a id="Godot_JSONRPC_MakeNotification_" data-uid="Godot.JSONRPC.MakeNotification*"></a>
   <h4 id="Godot_JSONRPC_MakeNotification_System_String_System_Object_" data-uid="Godot.JSONRPC.MakeNotification(System.String,System.Object)">MakeNotification(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a dictionary in the form of a JSON-RPC notification. Notifications are one-shot messages which do not expect a response.</p>
+<p>- <code>method</code>: Name of the method being called.</p>
+<p>- <code>params</code>: An array or dictionary of parameters being passed to the method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -334,7 +338,11 @@
   
   <a id="Godot_JSONRPC_MakeRequest_" data-uid="Godot.JSONRPC.MakeRequest*"></a>
   <h4 id="Godot_JSONRPC_MakeRequest_System_String_System_Object_System_Object_" data-uid="Godot.JSONRPC.MakeRequest(System.String,System.Object,System.Object)">MakeRequest(String, Object, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a dictionary in the form of a JSON-RPC request. Requests are sent to a server with the expectation of a response. The ID field is used for the server to specify which exact request it is responding to.</p>
+<p>- <code>method</code>: Name of the method being called.</p>
+<p>- <code>params</code>: An array or dictionary of parameters being passed to the method.</p>
+<p>- <code>id</code>: Uniquely identifies this request. The server is expected to send a response with the same ID.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -386,7 +394,10 @@
   
   <a id="Godot_JSONRPC_MakeResponse_" data-uid="Godot.JSONRPC.MakeResponse*"></a>
   <h4 id="Godot_JSONRPC_MakeResponse_System_Object_System_Object_" data-uid="Godot.JSONRPC.MakeResponse(System.Object,System.Object)">MakeResponse(Object, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When a server has received and processed a request, it is expected to send a response. If you did not want a response then you need to have sent a Notification instead.</p>
+<p>- <code>result</code>: The return value of the function which was called.</p>
+<p>- <code>id</code>: The ID of the request this response is targeted to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -433,7 +444,11 @@
   
   <a id="Godot_JSONRPC_MakeResponseError_" data-uid="Godot.JSONRPC.MakeResponseError*"></a>
   <h4 id="Godot_JSONRPC_MakeResponseError_System_Int32_System_String_System_Object_" data-uid="Godot.JSONRPC.MakeResponseError(System.Int32,System.String,System.Object)">MakeResponseError(Int32, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a response which indicates a previous reply has failed in some way.</p>
+<p>- <code>code</code>: The error code corresponding to what kind of error this is. See the <a class="xref" href="Godot.JSONRPC.ErrorCode.html">JSONRPC.ErrorCode</a> constants.</p>
+<p>- <code>message</code>: A custom message about this error.</p>
+<p>- <code>id</code>: The request this error is a response to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,7 +500,10 @@
   
   <a id="Godot_JSONRPC_ProcessAction_" data-uid="Godot.JSONRPC.ProcessAction*"></a>
   <h4 id="Godot_JSONRPC_ProcessAction_System_Object_System_Boolean_" data-uid="Godot.JSONRPC.ProcessAction(System.Object,System.Boolean)">ProcessAction(Object, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Given a Dictionary which takes the form of a JSON-RPC request: unpack the request and run it. Methods are resolved by looking at the field called &quot;method&quot; and looking for an equivalently named function in the JSONRPC object. If one is found that method is called.</p>
+<p>To add new supported methods extend the JSONRPC class and call <a class="xref" href="Godot.JSONRPC.html#Godot_JSONRPC_ProcessAction_System_Object_System_Boolean_">ProcessAction(Object, Boolean)</a> on your subclass.</p>
+<p><code>action</code>: The action to be run, as a Dictionary in the form of a JSON-RPC request or notification.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

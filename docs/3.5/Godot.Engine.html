@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Engine" data-uid="Godot.Engine" class="text-break">Class Engine
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Godot.Engine.html">Engine</a> singleton allows you to query and modify the project&apos;s run-time parameters, such as frames per second, time scale, and others.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -102,7 +103,14 @@
   
   <a id="Godot_Engine_EditorHint_" data-uid="Godot.Engine.EditorHint*"></a>
   <h4 id="Godot_Engine_EditorHint" data-uid="Godot.Engine.EditorHint">EditorHint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the script is currently running inside the editor. This is useful for <code>tool</code> scripts to conditionally draw editor helpers, or prevent accidentally running &quot;game&quot; code that would affect the scene state while in the editor:</p>
+<p><pre><code>if Engine.editor_hint:
+    draw_gizmos()
+else:
+    simulate_physics()</code></pre></p>
+<p>See <a href="$DOCS_URL/tutorials/plugins/running_code_in_the_editor.html">Running code in the editor</a> in the documentation for more information.</p>
+<p>Note: To detect whether the script is run from an editor build (e.g. when pressing <code>F5</code>), use <a class="xref" href="Godot.OS.html#Godot_OS_HasFeature_System_String_">HasFeature(String)</a> with the <code>&quot;editor&quot;</code> argument instead. <code>OS.has_feature(&quot;editor&quot;)</code> will evaluate to <code>true</code> both when the code is running in the editor and when running the project from the editor, but it will evaluate to <code>false</code> when the code is run from an exported project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -127,7 +135,9 @@
   
   <a id="Godot_Engine_IterationsPerSecond_" data-uid="Godot.Engine.IterationsPerSecond*"></a>
   <h4 id="Godot_Engine_IterationsPerSecond" data-uid="Godot.Engine.IterationsPerSecond">IterationsPerSecond</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of fixed iterations per second. This controls how often physics simulation and <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a> methods are run. This value should generally always be set to <code>60</code> or above, as Godot doesn&apos;t interpolate the physics step. As a result, values lower than <code>60</code> will look stuttery. This value can be increased to make input more reactive or work around collision tunneling issues, but keep in mind doing so will increase CPU usage. See also <a class="xref" href="Godot.Engine.html#Godot_Engine_TargetFps">TargetFps</a> and .</p>
+<p>Note: Only 8 physics ticks may be simulated per rendered frame at most. If more than 8 physics ticks have to be simulated per rendered frame to keep up with rendering, the game will appear to slow down (even if <code>delta</code> is used consistently in physics calculations). Therefore, it is recommended not to increase <a class="xref" href="Godot.Engine.html#Godot_Engine_IterationsPerSecond">IterationsPerSecond</a> above 240. Otherwise, the game will slow down when the rendering framerate goes below 30 FPS.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -152,7 +162,9 @@
   
   <a id="Godot_Engine_PhysicsJitterFix_" data-uid="Godot.Engine.PhysicsJitterFix*"></a>
   <h4 id="Godot_Engine_PhysicsJitterFix" data-uid="Godot.Engine.PhysicsJitterFix">PhysicsJitterFix</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls how much physics ticks are synchronized with real time. For 0 or less, the ticks are synchronized. Such values are recommended for network games, where clock synchronization matters. Higher values cause higher deviation of the in-game clock and real clock but smooth out framerate jitters. The default value of 0.5 should be fine for most; values above 2 could cause the game to react to dropped frames with a noticeable delay and are not recommended.</p>
+<p>Note: For best results, when using a custom physics interpolation solution, the physics jitter fix should be disabled by setting <a class="xref" href="Godot.Engine.html#Godot_Engine_PhysicsJitterFix">PhysicsJitterFix</a> to <code>0</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -177,7 +189,10 @@
   
   <a id="Godot_Engine_PrintErrorMessages_" data-uid="Godot.Engine.PrintErrorMessages*"></a>
   <h4 id="Godot_Engine_PrintErrorMessages" data-uid="Godot.Engine.PrintErrorMessages">PrintErrorMessages</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>false</code>, stops printing error and warning messages to the console and editor Output log. This can be used to hide error and warning messages during unit test suite runs. This property is equivalent to the  project setting.</p>
+<p>Warning: If you set this to <code>false</code> anywhere in the project, important error messages may be hidden even if they are emitted from other scripts. If this is set to <code>false</code> in a <code>tool</code> script, this will also impact the editor itself. Do not report bugs before ensuring error messages are enabled (as they are by default).</p>
+<p>Note: This property does not impact the editor&apos;s Errors tab when running a project from the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -227,7 +242,8 @@
   
   <a id="Godot_Engine_TargetFps_" data-uid="Godot.Engine.TargetFps*"></a>
   <h4 id="Godot_Engine_TargetFps" data-uid="Godot.Engine.TargetFps">TargetFps</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The desired frames per second. If the hardware cannot keep up, this setting may not be respected. A value of 0 means no limit.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -252,7 +268,8 @@
   
   <a id="Godot_Engine_TimeScale_" data-uid="Godot.Engine.TimeScale*"></a>
   <h4 id="Godot_Engine_TimeScale" data-uid="Godot.Engine.TimeScale">TimeScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls how fast or slow the in-game clock ticks versus the real life one. It defaults to 1.0. A value of 2.0 means the game moves twice as fast as real life, whilst a value of 0.5 means the game moves at half the regular speed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -279,7 +296,12 @@
   
   <a id="Godot_Engine_GetAuthorInfo_" data-uid="Godot.Engine.GetAuthorInfo*"></a>
   <h4 id="Godot_Engine_GetAuthorInfo" data-uid="Godot.Engine.GetAuthorInfo">GetAuthorInfo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns engine author information in a Dictionary.</p>
+<p><code>lead_developers</code>    - Array of Strings, lead developer names</p>
+<p><code>founders</code>           - Array of Strings, founder names</p>
+<p><code>project_managers</code>   - Array of Strings, project manager names</p>
+<p><code>developers</code>         - Array of Strings, developer names</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -304,7 +326,10 @@
   
   <a id="Godot_Engine_GetCopyrightInfo_" data-uid="Godot.Engine.GetCopyrightInfo*"></a>
   <h4 id="Godot_Engine_GetCopyrightInfo" data-uid="Godot.Engine.GetCopyrightInfo">GetCopyrightInfo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an Array of copyright information Dictionaries.</p>
+<p><code>name</code>    - String, component name</p>
+<p><code>parts</code>   - Array of Dictionaries {<code>files</code>, <code>copyright</code>, <code>license</code>} describing subsections of the component</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -329,7 +354,9 @@
   
   <a id="Godot_Engine_GetDonorInfo_" data-uid="Godot.Engine.GetDonorInfo*"></a>
   <h4 id="Godot_Engine_GetDonorInfo" data-uid="Godot.Engine.GetDonorInfo">GetDonorInfo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a Dictionary of Arrays of donor names.</p>
+<p>{<code>platinum_sponsors</code>, <code>gold_sponsors</code>, <code>silver_sponsors</code>, <code>bronze_sponsors</code>, <code>mini_sponsors</code>, <code>gold_donors</code>, <code>silver_donors</code>, <code>bronze_donors</code>}</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -354,7 +381,8 @@
   
   <a id="Godot_Engine_GetFramesDrawn_" data-uid="Godot.Engine.GetFramesDrawn*"></a>
   <h4 id="Godot_Engine_GetFramesDrawn" data-uid="Godot.Engine.GetFramesDrawn">GetFramesDrawn()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total number of frames drawn. On headless platforms, or if the render loop is disabled with <code>--disable-render-loop</code> via command line, <a class="xref" href="Godot.Engine.html#Godot_Engine_GetFramesDrawn">GetFramesDrawn()</a> always returns <code>0</code>. See <a class="xref" href="Godot.Engine.html#Godot_Engine_GetIdleFrames">GetIdleFrames()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -379,7 +407,8 @@
   
   <a id="Godot_Engine_GetFramesPerSecond_" data-uid="Godot.Engine.GetFramesPerSecond*"></a>
   <h4 id="Godot_Engine_GetFramesPerSecond" data-uid="Godot.Engine.GetFramesPerSecond">GetFramesPerSecond()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the frames per second of the running game.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -404,7 +433,12 @@
   
   <a id="Godot_Engine_GetIdleFrames_" data-uid="Godot.Engine.GetIdleFrames*"></a>
   <h4 id="Godot_Engine_GetIdleFrames" data-uid="Godot.Engine.GetIdleFrames">GetIdleFrames()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total number of frames passed since engine initialization which is advanced on each idle frame, regardless of whether the render loop is enabled. See also <a class="xref" href="Godot.Engine.html#Godot_Engine_GetFramesDrawn">GetFramesDrawn()</a> and <a class="xref" href="Godot.Engine.html#Godot_Engine_GetPhysicsFrames">GetPhysicsFrames()</a>.</p>
+<p><a class="xref" href="Godot.Engine.html#Godot_Engine_GetIdleFrames">GetIdleFrames()</a> can be used to run expensive logic less often without relying on a <a class="xref" href="Godot.Timer.html">Timer</a>:</p>
+<p><pre><code>func _process(_delta):
+    if Engine.get_idle_frames() % 2 == 0:
+        pass  # Run expensive logic only once every 2 idle (render) frames here.</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -454,7 +488,8 @@
   
   <a id="Godot_Engine_GetLicenseInfo_" data-uid="Godot.Engine.GetLicenseInfo*"></a>
   <h4 id="Godot_Engine_GetLicenseInfo" data-uid="Godot.Engine.GetLicenseInfo">GetLicenseInfo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns Dictionary of licenses used by Godot and included third party components.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -479,7 +514,8 @@
   
   <a id="Godot_Engine_GetLicenseText_" data-uid="Godot.Engine.GetLicenseText*"></a>
   <h4 id="Godot_Engine_GetLicenseText" data-uid="Godot.Engine.GetLicenseText">GetLicenseText()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns Godot license text.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -504,7 +540,8 @@
   
   <a id="Godot_Engine_GetMainLoop_" data-uid="Godot.Engine.GetMainLoop*"></a>
   <h4 id="Godot_Engine_GetMainLoop" data-uid="Godot.Engine.GetMainLoop">GetMainLoop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the main loop object (see <a class="xref" href="Godot.MainLoop.html">MainLoop</a> and <a class="xref" href="Godot.SceneTree.html">SceneTree</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -529,7 +566,12 @@
   
   <a id="Godot_Engine_GetPhysicsFrames_" data-uid="Godot.Engine.GetPhysicsFrames*"></a>
   <h4 id="Godot_Engine_GetPhysicsFrames" data-uid="Godot.Engine.GetPhysicsFrames">GetPhysicsFrames()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total number of frames passed since engine initialization which is advanced on each physics frame. See also <a class="xref" href="Godot.Engine.html#Godot_Engine_GetIdleFrames">GetIdleFrames()</a>.</p>
+<p><a class="xref" href="Godot.Engine.html#Godot_Engine_GetPhysicsFrames">GetPhysicsFrames()</a> can be used to run expensive logic less often without relying on a <a class="xref" href="Godot.Timer.html">Timer</a>:</p>
+<p><pre><code>func _physics_process(_delta):
+    if Engine.get_physics_frames() % 2 == 0:
+        pass  # Run expensive logic only once every 2 physics frames here.</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -554,7 +596,8 @@
   
   <a id="Godot_Engine_GetPhysicsInterpolationFraction_" data-uid="Godot.Engine.GetPhysicsInterpolationFraction*"></a>
   <h4 id="Godot_Engine_GetPhysicsInterpolationFraction" data-uid="Godot.Engine.GetPhysicsInterpolationFraction">GetPhysicsInterpolationFraction()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the fraction through the current physics tick we are at the time of rendering the frame. This can be used to implement fixed timestep interpolation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -604,7 +647,8 @@
   
   <a id="Godot_Engine_GetSingleton_" data-uid="Godot.Engine.GetSingleton*"></a>
   <h4 id="Godot_Engine_GetSingleton_System_String_" data-uid="Godot.Engine.GetSingleton(System.String)">GetSingleton(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a global singleton with given <code>name</code>. Often used for plugins, e.g. <code>GodotPayment</code> on Android.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -696,7 +740,22 @@
   
   <a id="Godot_Engine_GetVersionInfo_" data-uid="Godot.Engine.GetVersionInfo*"></a>
   <h4 id="Godot_Engine_GetVersionInfo" data-uid="Godot.Engine.GetVersionInfo">GetVersionInfo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current engine version information in a Dictionary.</p>
+<p><code>major</code>    - Holds the major version number as an int</p>
+<p><code>minor</code>    - Holds the minor version number as an int</p>
+<p><code>patch</code>    - Holds the patch version number as an int</p>
+<p><code>hex</code>      - Holds the full version number encoded as a hexadecimal int with one byte (2 places) per number (see example below)</p>
+<p><code>status</code>   - Holds the status (e.g. &quot;beta&quot;, &quot;rc1&quot;, &quot;rc2&quot;, ... &quot;stable&quot;) as a String</p>
+<p><code>build</code>    - Holds the build name (e.g. &quot;custom_build&quot;) as a String</p>
+<p><code>hash</code>     - Holds the full Git commit hash as a String</p>
+<p><code>year</code>     - Holds the year the version was released in as an int</p>
+<p><code>string</code>   - <code>major</code> + <code>minor</code> + <code>patch</code> + <code>status</code> + <code>build</code> in a single String</p>
+<p>The <code>hex</code> value is encoded as follows, from left to right: one byte for the major, one byte for the minor, one byte for the patch version. For example, &quot;3.1.12&quot; would be <code>0x03010C</code>. Note: It&apos;s still an int internally, and printing it will give you its decimal representation, which is not particularly meaningful. Use hexadecimal literals for easy version comparisons from code:</p>
+<p><pre><code>if Engine.get_version_info().hex >= 0x030200:
+    # Do things specific to version 3.2 or later
+else:
+    # Do things specific to versions before 3.2</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -721,7 +780,8 @@
   
   <a id="Godot_Engine_HasSingleton_" data-uid="Godot.Engine.HasSingleton*"></a>
   <h4 id="Godot_Engine_HasSingleton_System_String_" data-uid="Godot.Engine.HasSingleton(System.String)">HasSingleton(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a singleton with given <code>name</code> exists in global scope.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -788,7 +848,8 @@
   
   <a id="Godot_Engine_IsInPhysicsFrame_" data-uid="Godot.Engine.IsInPhysicsFrame*"></a>
   <h4 id="Godot_Engine_IsInPhysicsFrame" data-uid="Godot.Engine.IsInPhysicsFrame">IsInPhysicsFrame()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the game is inside the fixed process and physics phase of the game loop.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

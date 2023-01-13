@@ -83,7 +83,14 @@
   
   <h1 id="Godot_EditorInspectorPlugin" data-uid="Godot.EditorInspectorPlugin" class="text-break">Class EditorInspectorPlugin
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.EditorInspectorPlugin.html">EditorInspectorPlugin</a> allows adding custom property editors to <a class="xref" href="Godot.EditorInspector.html">EditorInspector</a>.</p>
+<p>When an object is edited, the <a class="xref" href="Godot.EditorInspectorPlugin.html#Godot_EditorInspectorPlugin_CanHandle_Godot_Object_">CanHandle(Object)</a> function is called and must return <code>true</code> if the object type is supported.</p>
+<p>If supported, the function <a class="xref" href="Godot.EditorInspectorPlugin.html#Godot_EditorInspectorPlugin_ParseBegin_Godot_Object_">ParseBegin(Object)</a> will be called, allowing to place custom controls at the beginning of the class.</p>
+<p>Subsequently, the <a class="xref" href="Godot.EditorInspectorPlugin.html#Godot_EditorInspectorPlugin_ParseCategory_Godot_Object_System_String_">ParseCategory(Object, String)</a> and <a class="xref" href="Godot.EditorInspectorPlugin.html#Godot_EditorInspectorPlugin_ParseProperty_Godot_Object_System_Int32_System_String_System_Int32_System_String_System_Int32_">ParseProperty(Object, Int32, String, Int32, String, Int32)</a> are called for every category and property. They offer the ability to add custom controls to the inspector too.</p>
+<p>Finally, <a class="xref" href="Godot.EditorInspectorPlugin.html#Godot_EditorInspectorPlugin_ParseEnd">ParseEnd()</a> will be called.</p>
+<p>On each of these calls, the &quot;add&quot; functions can be called.</p>
+<p>To use <a class="xref" href="Godot.EditorInspectorPlugin.html">EditorInspectorPlugin</a>, register it using the <a class="xref" href="Godot.EditorPlugin.html#Godot_EditorPlugin_AddInspectorPlugin_Godot_EditorInspectorPlugin_">AddInspectorPlugin(EditorInspectorPlugin)</a> method first.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +304,8 @@
   
   <a id="Godot_EditorInspectorPlugin_AddCustomControl_" data-uid="Godot.EditorInspectorPlugin.AddCustomControl*"></a>
   <h4 id="Godot_EditorInspectorPlugin_AddCustomControl_Godot_Control_" data-uid="Godot.EditorInspectorPlugin.AddCustomControl(Godot.Control)">AddCustomControl(Control)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a custom control, which is not necessarily a property editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -324,7 +332,8 @@
   
   <a id="Godot_EditorInspectorPlugin_AddPropertyEditor_" data-uid="Godot.EditorInspectorPlugin.AddPropertyEditor*"></a>
   <h4 id="Godot_EditorInspectorPlugin_AddPropertyEditor_System_String_Godot_Control_" data-uid="Godot.EditorInspectorPlugin.AddPropertyEditor(System.String,Godot.Control)">AddPropertyEditor(String, Control)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a property editor for an individual property. The <code>editor</code> control must extend <a class="xref" href="Godot.EditorProperty.html">EditorProperty</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -356,7 +365,8 @@
   
   <a id="Godot_EditorInspectorPlugin_AddPropertyEditorForMultipleProperties_" data-uid="Godot.EditorInspectorPlugin.AddPropertyEditorForMultipleProperties*"></a>
   <h4 id="Godot_EditorInspectorPlugin_AddPropertyEditorForMultipleProperties_System_String_System_String___Godot_Control_" data-uid="Godot.EditorInspectorPlugin.AddPropertyEditorForMultipleProperties(System.String,System.String[],Godot.Control)">AddPropertyEditorForMultipleProperties(String, String[], Control)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an editor that allows modifying multiple properties. The <code>editor</code> control must extend <a class="xref" href="Godot.EditorProperty.html">EditorProperty</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -393,7 +403,8 @@
   
   <a id="Godot_EditorInspectorPlugin_CanHandle_" data-uid="Godot.EditorInspectorPlugin.CanHandle*"></a>
   <h4 id="Godot_EditorInspectorPlugin_CanHandle_Godot_Object_" data-uid="Godot.EditorInspectorPlugin.CanHandle(Godot.Object)">CanHandle(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this object can be handled by this plugin.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -435,7 +446,8 @@
   
   <a id="Godot_EditorInspectorPlugin_ParseBegin_" data-uid="Godot.EditorInspectorPlugin.ParseBegin*"></a>
   <h4 id="Godot_EditorInspectorPlugin_ParseBegin_Godot_Object_" data-uid="Godot.EditorInspectorPlugin.ParseBegin(Godot.Object)">ParseBegin(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called to allow adding controls at the beginning of the list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -462,7 +474,8 @@
   
   <a id="Godot_EditorInspectorPlugin_ParseCategory_" data-uid="Godot.EditorInspectorPlugin.ParseCategory*"></a>
   <h4 id="Godot_EditorInspectorPlugin_ParseCategory_Godot_Object_System_String_" data-uid="Godot.EditorInspectorPlugin.ParseCategory(Godot.Object,System.String)">ParseCategory(Object, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called to allow adding controls at the beginning of the category.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -494,7 +507,8 @@
   
   <a id="Godot_EditorInspectorPlugin_ParseEnd_" data-uid="Godot.EditorInspectorPlugin.ParseEnd*"></a>
   <h4 id="Godot_EditorInspectorPlugin_ParseEnd" data-uid="Godot.EditorInspectorPlugin.ParseEnd">ParseEnd()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called to allow adding controls at the end of the list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -504,7 +518,8 @@
   
   <a id="Godot_EditorInspectorPlugin_ParseProperty_" data-uid="Godot.EditorInspectorPlugin.ParseProperty*"></a>
   <h4 id="Godot_EditorInspectorPlugin_ParseProperty_Godot_Object_System_Int32_System_String_System_Int32_System_String_System_Int32_" data-uid="Godot.EditorInspectorPlugin.ParseProperty(Godot.Object,System.Int32,System.String,System.Int32,System.String,System.Int32)">ParseProperty(Object, Int32, String, Int32, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called to allow adding property specific editors to the inspector. Usually these inherit <a class="xref" href="Godot.EditorProperty.html">EditorProperty</a>. Returning <code>true</code> removes the built-in editor for this property, otherwise allows to insert a custom editor before the built-in one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

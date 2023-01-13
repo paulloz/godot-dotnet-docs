@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Listener" data-uid="Godot.Listener" class="text-break">Class Listener
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Once added to the scene tree and enabled using <a class="xref" href="Godot.Listener.html#Godot_Listener_MakeCurrent">MakeCurrent()</a>, this node will override the location sounds are heard from. This can be used to listen from a location different from the <a class="xref" href="Godot.Camera.html">Camera</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -964,7 +965,8 @@
   
   <a id="Godot_Listener_ClearCurrent_" data-uid="Godot.Listener.ClearCurrent*"></a>
   <h4 id="Godot_Listener_ClearCurrent" data-uid="Godot.Listener.ClearCurrent">ClearCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables the listener to use the current camera&apos;s listener instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -974,7 +976,8 @@
   
   <a id="Godot_Listener_GetListenerTransform_" data-uid="Godot.Listener.GetListenerTransform*"></a>
   <h4 id="Godot_Listener_GetListenerTransform" data-uid="Godot.Listener.GetListenerTransform">GetListenerTransform()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the listener&apos;s global orthonormalized <a class="xref" href="Godot.Transform.html">Transform</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -999,7 +1002,9 @@
   
   <a id="Godot_Listener_IsCurrent_" data-uid="Godot.Listener.IsCurrent*"></a>
   <h4 id="Godot_Listener_IsCurrent" data-uid="Godot.Listener.IsCurrent">IsCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the listener was made current using <a class="xref" href="Godot.Listener.html#Godot_Listener_MakeCurrent">MakeCurrent()</a>, <code>false</code> otherwise.</p>
+<p>Note: There may be more than one Listener marked as &quot;current&quot; in the scene tree, but only the one that was made current last will be used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1024,7 +1029,8 @@
   
   <a id="Godot_Listener_MakeCurrent_" data-uid="Godot.Listener.MakeCurrent*"></a>
   <h4 id="Godot_Listener_MakeCurrent" data-uid="Godot.Listener.MakeCurrent">MakeCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables the listener. This will override the current camera&apos;s listener.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

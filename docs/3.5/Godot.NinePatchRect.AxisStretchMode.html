@@ -101,7 +101,8 @@
   
   
   <h4 id="Godot_NinePatchRect_AxisStretchMode_Stretch" data-uid="Godot.NinePatchRect.AxisStretchMode.Stretch">Stretch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stretches the center texture across the NinePatchRect. This may cause the texture to be distorted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +126,9 @@
   
   
   <h4 id="Godot_NinePatchRect_AxisStretchMode_Tile" data-uid="Godot.NinePatchRect.AxisStretchMode.Tile">Tile</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Repeats the center texture across the NinePatchRect. This won&apos;t cause any visible distortion. The texture must be seamless for this to work without displaying artifacts between edges.</p>
+<p>Note: Only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like <a class="xref" href="Godot.NinePatchRect.AxisStretchMode.html#Godot_NinePatchRect_AxisStretchMode_Stretch">Stretch</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +152,9 @@
   
   
   <h4 id="Godot_NinePatchRect_AxisStretchMode_TileFit" data-uid="Godot.NinePatchRect.AxisStretchMode.TileFit">TileFit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Repeats the center texture across the NinePatchRect, but will also stretch the texture to make sure each tile is visible in full. This may cause the texture to be distorted, but less than <a class="xref" href="Godot.NinePatchRect.AxisStretchMode.html#Godot_NinePatchRect_AxisStretchMode_Stretch">Stretch</a>. The texture must be seamless for this to work without displaying artifacts between edges.</p>
+<p>Note: Only supported when using the GLES3 renderer. When using the GLES2 renderer, this will behave like <a class="xref" href="Godot.NinePatchRect.AxisStretchMode.html#Godot_NinePatchRect_AxisStretchMode_Stretch">Stretch</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

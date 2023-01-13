@@ -83,7 +83,12 @@
   
   <h1 id="Godot_ScriptCreateDialog" data-uid="Godot.ScriptCreateDialog" class="text-break">Class ScriptCreateDialog
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Godot.ScriptCreateDialog.html">ScriptCreateDialog</a> creates script files according to a given template for a given scripting language. The standard use is to configure its fields prior to calling one of the <a class="xref" href="Godot.Popup.html#Godot_Popup_Popup__System_Nullable_Godot_Rect2__">Popup_(Nullable&lt;Rect2&gt;)</a> methods.</p>
+<p><pre><code>func _ready():
+    dialog.config(&quot;Node&quot;, &quot;res://new_node.gd&quot;) # For in-engine types
+    dialog.config(&quot;\&quot;res://base_node.gd\&quot;&quot;, &quot;res://derived_node.gd&quot;) # For script types
+    dialog.popup_centered()</code></pre></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1569,7 +1574,8 @@
   
   <a id="Godot_ScriptCreateDialog_Config_" data-uid="Godot.ScriptCreateDialog.Config*"></a>
   <h4 id="Godot_ScriptCreateDialog_Config_System_String_System_String_System_Boolean_System_Boolean_" data-uid="Godot.ScriptCreateDialog.Config(System.String,System.String,System.Boolean,System.Boolean)">Config(String, String, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Prefills required fields to configure the ScriptCreateDialog for use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

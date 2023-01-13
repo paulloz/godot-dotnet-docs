@@ -83,7 +83,9 @@
   
   <h1 id="Godot_EditorFileSystem" data-uid="Godot.EditorFileSystem" class="text-break">Class EditorFileSystem
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This object holds information of all resources in the filesystem, their types, etc.</p>
+<p>Note: This class shouldn&apos;t be instantiated directly. Instead, access the singleton using <a class="xref" href="Godot.EditorInterface.html#Godot_EditorInterface_GetResourceFilesystem">GetResourceFilesystem()</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -741,7 +743,8 @@
   
   <a id="Godot_EditorFileSystem_GetFilesystem_" data-uid="Godot.EditorFileSystem.GetFilesystem*"></a>
   <h4 id="Godot_EditorFileSystem_GetFilesystem" data-uid="Godot.EditorFileSystem.GetFilesystem">GetFilesystem()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the root directory object.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -766,7 +769,8 @@
   
   <a id="Godot_EditorFileSystem_GetFilesystemPath_" data-uid="Godot.EditorFileSystem.GetFilesystemPath*"></a>
   <h4 id="Godot_EditorFileSystem_GetFilesystemPath_System_String_" data-uid="Godot.EditorFileSystem.GetFilesystemPath(System.String)">GetFilesystemPath(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a view into the filesystem at <code>path</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -808,7 +812,8 @@
   
   <a id="Godot_EditorFileSystem_GetFileType_" data-uid="Godot.EditorFileSystem.GetFileType*"></a>
   <h4 id="Godot_EditorFileSystem_GetFileType_System_String_" data-uid="Godot.EditorFileSystem.GetFileType(System.String)">GetFileType(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the resource type of the file, given the full path. This returns a string such as <code>&quot;Resource&quot;</code> or <code>&quot;GDScript&quot;</code>, not a file extension such as <code>&quot;.gd&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -850,7 +855,8 @@
   
   <a id="Godot_EditorFileSystem_GetScanningProgress_" data-uid="Godot.EditorFileSystem.GetScanningProgress*"></a>
   <h4 id="Godot_EditorFileSystem_GetScanningProgress" data-uid="Godot.EditorFileSystem.GetScanningProgress">GetScanningProgress()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the scan progress for 0 to 1 if the FS is being scanned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -875,7 +881,8 @@
   
   <a id="Godot_EditorFileSystem_IsScanning_" data-uid="Godot.EditorFileSystem.IsScanning*"></a>
   <h4 id="Godot_EditorFileSystem_IsScanning" data-uid="Godot.EditorFileSystem.IsScanning">IsScanning()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the filesystem is being scanned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -900,7 +907,8 @@
   
   <a id="Godot_EditorFileSystem_Scan_" data-uid="Godot.EditorFileSystem.Scan*"></a>
   <h4 id="Godot_EditorFileSystem_Scan" data-uid="Godot.EditorFileSystem.Scan">Scan()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scan the filesystem for changes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -910,7 +918,8 @@
   
   <a id="Godot_EditorFileSystem_ScanSources_" data-uid="Godot.EditorFileSystem.ScanSources*"></a>
   <h4 id="Godot_EditorFileSystem_ScanSources" data-uid="Godot.EditorFileSystem.ScanSources">ScanSources()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check if the source of any imported resource changed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -920,7 +929,8 @@
   
   <a id="Godot_EditorFileSystem_UpdateFile_" data-uid="Godot.EditorFileSystem.UpdateFile*"></a>
   <h4 id="Godot_EditorFileSystem_UpdateFile_System_String_" data-uid="Godot.EditorFileSystem.UpdateFile(System.String)">UpdateFile(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Update a file information. Call this if an external program (not Godot) modified the file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -947,7 +957,8 @@
   
   <a id="Godot_EditorFileSystem_UpdateScriptClasses_" data-uid="Godot.EditorFileSystem.UpdateScriptClasses*"></a>
   <h4 id="Godot_EditorFileSystem_UpdateScriptClasses" data-uid="Godot.EditorFileSystem.UpdateScriptClasses">UpdateScriptClasses()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scans the script files and updates the list of custom class names.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

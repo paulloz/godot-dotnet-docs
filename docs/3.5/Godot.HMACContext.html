@@ -83,7 +83,45 @@
   
   <h1 id="Godot_HMACContext" data-uid="Godot.HMACContext" class="text-break">Class HMACContext
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The HMACContext class is useful for advanced HMAC use cases, such as streaming the message as it supports creating the message over time rather than providing it all at once.</p>
+<p><pre><code>extends Node
+var ctx = HMACContext.new()
+<p>func _ready():
+var key = &quot;supersecret&quot;.to_utf8()
+var err = ctx.start(HashingContext.HASH_SHA256, key)
+assert(err == OK)
+var msg1 = &quot;this is &quot;.to_utf8()
+var msg2 = &quot;super duper secret&quot;.to_utf8()
+err = ctx.update(msg1)
+assert(err == OK)
+err = ctx.update(msg2)
+assert(err == OK)
+var hmac = ctx.finish()
+print(hmac.hex_encode())</code></pre></p><p>
+<p>And in C# we can use the following.</p>
+<p><pre><code>using Godot;
+using System;
+using System.Diagnostics;
+<p>public class CryptoNode : Node
+{
+private HMACContext ctx = new HMACContext();
+public override void _Ready()
+{
+PoolByteArray key = String(&quot;supersecret&quot;).to_utf8();
+Error err = ctx.Start(HashingContext.HASH_SHA256, key);
+GD.Assert(err == OK);
+PoolByteArray msg1 = String(&quot;this is &quot;).to_utf8();
+PoolByteArray msg2 = String(&quot;super duper secret&quot;).to_utf8();
+err = ctx.Update(msg1);
+GD.Assert(err == OK);
+err = ctx.Update(msg2);
+GD.Assert(err == OK);
+PoolByteArray hmac = ctx.Finish();
+GD.Print(hmac.HexEncode());
+}
+}</code></pre></p></p>
+<p>Note: Not available in HTML5 exports.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +335,8 @@
   
   <a id="Godot_HMACContext_Finish_" data-uid="Godot.HMACContext.Finish*"></a>
   <h4 id="Godot_HMACContext_Finish" data-uid="Godot.HMACContext.Finish">Finish()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the resulting HMAC. If the HMAC failed, an empty <span class="xref">System.Byte</span> is returned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +361,8 @@
   
   <a id="Godot_HMACContext_Start_" data-uid="Godot.HMACContext.Start*"></a>
   <h4 id="Godot_HMACContext_Start_Godot_HashingContext_HashType_System_Byte___" data-uid="Godot.HMACContext.Start(Godot.HashingContext.HashType,System.Byte[])">Start(HashingContext.HashType, Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes the HMACContext. This method cannot be called again on the same HMACContext until <a class="xref" href="Godot.HMACContext.html#Godot_HMACContext_Finish">Finish()</a> has been called.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -369,7 +409,8 @@
   
   <a id="Godot_HMACContext_Update_" data-uid="Godot.HMACContext.Update*"></a>
   <h4 id="Godot_HMACContext_Update_System_Byte___" data-uid="Godot.HMACContext.Update(System.Byte[])">Update(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the message to be HMACed. This can be called multiple times before <a class="xref" href="Godot.HMACContext.html#Godot_HMACContext_Finish">Finish()</a> is called to append <code>data</code> to the message, but cannot be called until <a class="xref" href="Godot.HMACContext.html#Godot_HMACContext_Start_Godot_HashingContext_HashType_System_Byte___">Start(HashingContext.HashType, Byte[])</a> has been called.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

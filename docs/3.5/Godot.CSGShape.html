@@ -83,7 +83,9 @@
   
   <h1 id="Godot_CSGShape" data-uid="Godot.CSGShape" class="text-break">Class CSGShape
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This is the CSG base class that provides CSG operation support to the various CSG nodes in Godot.</p>
+<p>Note: CSG nodes are intended to be used for level prototyping. Creating CSG nodes has a significant CPU cost compared to creating a <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> with a <a class="xref" href="Godot.PrimitiveMesh.html">PrimitiveMesh</a>. Moving a CSG node within another CSG node also has a significant CPU cost, so it should be avoided during gameplay.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1125,7 +1127,8 @@
   
   <a id="Godot_CSGShape_CalculateTangents_" data-uid="Godot.CSGShape.CalculateTangents*"></a>
   <h4 id="Godot_CSGShape_CalculateTangents" data-uid="Godot.CSGShape.CalculateTangents">CalculateTangents</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calculate tangents for the CSG shape which allows the use of normal maps. This is only applied on the root shape, this setting is ignored on any child.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1150,7 +1153,10 @@
   
   <a id="Godot_CSGShape_CollisionLayer_" data-uid="Godot.CSGShape.CollisionLayer*"></a>
   <h4 id="Godot_CSGShape_CollisionLayer" data-uid="Godot.CSGShape.CollisionLayer">CollisionLayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics layers this area is in.</p>
+<p>Collidable objects can exist in any of 32 different layers. These layers work like a tagging system, and are not visual. A collidable can use these layers to select with which objects it can collide, using the collision_mask property.</p>
+<p>A contact is detected if object A is in any of the layers that object B scans, or object B is in any layer scanned by object A. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1175,7 +1181,8 @@
   
   <a id="Godot_CSGShape_CollisionMask_" data-uid="Godot.CSGShape.CollisionMask*"></a>
   <h4 id="Godot_CSGShape_CollisionMask" data-uid="Godot.CSGShape.CollisionMask">CollisionMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics layers this CSG shape scans for collisions. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1200,7 +1207,8 @@
   
   <a id="Godot_CSGShape_Operation_" data-uid="Godot.CSGShape.Operation*"></a>
   <h4 id="Godot_CSGShape_Operation" data-uid="Godot.CSGShape.Operation">Operation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The operation that is performed on this shape. This is ignored for the first CSG child node as the operation is between this node and the previous child of this nodes parent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1225,7 +1233,8 @@
   
   <a id="Godot_CSGShape_Snap_" data-uid="Godot.CSGShape.Snap*"></a>
   <h4 id="Godot_CSGShape_Snap" data-uid="Godot.CSGShape.Snap">Snap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Snap makes the mesh snap to a given distance so that the faces of two meshes can be perfectly aligned. A lower value results in greater precision but may be harder to adjust.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1250,7 +1259,8 @@
   
   <a id="Godot_CSGShape_UseCollision_" data-uid="Godot.CSGShape.UseCollision*"></a>
   <h4 id="Godot_CSGShape_UseCollision" data-uid="Godot.CSGShape.UseCollision">UseCollision</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a collision shape to the physics engine for our CSG shape. This will always act like a static body. Note that the collision shape is still active even if the CSG shape itself is hidden.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1302,7 +1312,8 @@
   
   <a id="Godot_CSGShape_GetCollisionLayerBit_" data-uid="Godot.CSGShape.GetCollisionLayerBit*"></a>
   <h4 id="Godot_CSGShape_GetCollisionLayerBit_System_Int32_" data-uid="Godot.CSGShape.GetCollisionLayerBit(System.Int32)">GetCollisionLayerBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an individual bit on the collision mask.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1369,7 +1380,8 @@
   
   <a id="Godot_CSGShape_GetCollisionMaskBit_" data-uid="Godot.CSGShape.GetCollisionMaskBit*"></a>
   <h4 id="Godot_CSGShape_GetCollisionMaskBit_System_Int32_" data-uid="Godot.CSGShape.GetCollisionMaskBit(System.Int32)">GetCollisionMaskBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an individual bit on the collision mask.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1411,7 +1423,8 @@
   
   <a id="Godot_CSGShape_GetMeshes_" data-uid="Godot.CSGShape.GetMeshes*"></a>
   <h4 id="Godot_CSGShape_GetMeshes" data-uid="Godot.CSGShape.GetMeshes">GetMeshes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an <a class="xref" href="Godot.Collections.Array.html">Array</a> with two elements, the first is the <a class="xref" href="Godot.Transform.html">Transform</a> of this node and the second is the root <a class="xref" href="Godot.Mesh.html">Mesh</a> of this node. Only works when this node is the root shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1511,7 +1524,8 @@
   
   <a id="Godot_CSGShape_IsRootShape_" data-uid="Godot.CSGShape.IsRootShape*"></a>
   <h4 id="Godot_CSGShape_IsRootShape" data-uid="Godot.CSGShape.IsRootShape">IsRootShape()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this is a root shape and is thus the object that is rendered.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1615,7 +1629,8 @@
   
   <a id="Godot_CSGShape_SetCollisionLayerBit_" data-uid="Godot.CSGShape.SetCollisionLayerBit*"></a>
   <h4 id="Godot_CSGShape_SetCollisionLayerBit_System_Int32_System_Boolean_" data-uid="Godot.CSGShape.SetCollisionLayerBit(System.Int32,System.Boolean)">SetCollisionLayerBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets individual bits on the layer mask. Use this if you only need to change one layer&apos;s value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1674,7 +1689,8 @@
   
   <a id="Godot_CSGShape_SetCollisionMaskBit_" data-uid="Godot.CSGShape.SetCollisionMaskBit*"></a>
   <h4 id="Godot_CSGShape_SetCollisionMaskBit_System_Int32_System_Boolean_" data-uid="Godot.CSGShape.SetCollisionMaskBit(System.Int32,System.Boolean)">SetCollisionMaskBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets individual bits on the collision mask. Use this if you only need to change one layer&apos;s value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

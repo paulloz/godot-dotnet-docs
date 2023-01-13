@@ -83,7 +83,10 @@
   
   <h1 id="Godot_Area" data-uid="Godot.Area" class="text-break">Class Area
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>3D area that detects <a class="xref" href="Godot.CollisionObject.html">CollisionObject</a> nodes overlapping, entering, or exiting. Can also alter or override local physics parameters (gravity, damping) and route audio to a custom audio bus.</p>
+<p>To give the area its shape, add a <a class="xref" href="Godot.CollisionShape.html">CollisionShape</a> or a <a class="xref" href="Godot.CollisionPolygon.html">CollisionPolygon</a> node as a direct child (or add multiple such nodes as direct children) of the area.</p>
+<p>Warning: See <a class="xref" href="Godot.ConcavePolygonShape.html">ConcavePolygonShape</a> (also called &quot;trimesh&quot;) for a warning about possibly unexpected behavior when using that shape for an area.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1064,7 +1067,9 @@
   
   <a id="Godot_Area_AngularDamp_" data-uid="Godot.Area.AngularDamp*"></a>
   <h4 id="Godot_Area_AngularDamp" data-uid="Godot.Area.AngularDamp">AngularDamp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The rate at which objects stop spinning in this area. Represents the angular velocity lost per second.</p>
+<p>See  for more details about damping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1089,7 +1094,8 @@
   
   <a id="Godot_Area_AudioBusName_" data-uid="Godot.Area.AudioBusName*"></a>
   <h4 id="Godot_Area_AudioBusName" data-uid="Godot.Area.AudioBusName">AudioBusName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the area&apos;s audio bus.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1114,7 +1120,8 @@
   
   <a id="Godot_Area_AudioBusOverride_" data-uid="Godot.Area.AudioBusOverride*"></a>
   <h4 id="Godot_Area_AudioBusOverride" data-uid="Godot.Area.AudioBusOverride">AudioBusOverride</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the area&apos;s audio bus overrides the default audio bus.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1139,7 +1146,8 @@
   
   <a id="Godot_Area_Gravity_" data-uid="Godot.Area.Gravity*"></a>
   <h4 id="Godot_Area_Gravity" data-uid="Godot.Area.Gravity">Gravity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The area&apos;s gravity intensity (in meters per second squared). This value multiplies the gravity vector. This is useful to alter the force of gravity without altering its direction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1164,7 +1172,8 @@
   
   <a id="Godot_Area_GravityDistanceScale_" data-uid="Godot.Area.GravityDistanceScale*"></a>
   <h4 id="Godot_Area_GravityDistanceScale" data-uid="Godot.Area.GravityDistanceScale">GravityDistanceScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The falloff factor for point gravity. The greater the value, the faster gravity decreases with distance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1189,7 +1198,8 @@
   
   <a id="Godot_Area_GravityPoint_" data-uid="Godot.Area.GravityPoint*"></a>
   <h4 id="Godot_Area_GravityPoint" data-uid="Godot.Area.GravityPoint">GravityPoint</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, gravity is calculated from a point (set via <a class="xref" href="Godot.Area.html#Godot_Area_GravityVec">GravityVec</a>). See also <a class="xref" href="Godot.Area.html#Godot_Area_SpaceOverride">SpaceOverride</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1214,7 +1224,8 @@
   
   <a id="Godot_Area_GravityVec_" data-uid="Godot.Area.GravityVec*"></a>
   <h4 id="Godot_Area_GravityVec" data-uid="Godot.Area.GravityVec">GravityVec</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The area&apos;s gravity vector (not normalized). If gravity is a point (see <a class="xref" href="Godot.Area.html#Godot_Area_GravityPoint">GravityPoint</a>), this will be the point of attraction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1239,7 +1250,9 @@
   
   <a id="Godot_Area_LinearDamp_" data-uid="Godot.Area.LinearDamp*"></a>
   <h4 id="Godot_Area_LinearDamp" data-uid="Godot.Area.LinearDamp">LinearDamp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The rate at which objects stop moving in this area. Represents the linear velocity lost per second.</p>
+<p>See  for more details about damping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1264,7 +1277,8 @@
   
   <a id="Godot_Area_Monitorable_" data-uid="Godot.Area.Monitorable*"></a>
   <h4 id="Godot_Area_Monitorable" data-uid="Godot.Area.Monitorable">Monitorable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, other monitoring areas can detect this area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1289,7 +1303,8 @@
   
   <a id="Godot_Area_Monitoring_" data-uid="Godot.Area.Monitoring*"></a>
   <h4 id="Godot_Area_Monitoring" data-uid="Godot.Area.Monitoring">Monitoring</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the area detects bodies or areas entering and exiting it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1314,7 +1329,8 @@
   
   <a id="Godot_Area_Priority_" data-uid="Godot.Area.Priority*"></a>
   <h4 id="Godot_Area_Priority" data-uid="Godot.Area.Priority">Priority</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The area&apos;s priority. Higher priority areas are processed first.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1339,7 +1355,8 @@
   
   <a id="Godot_Area_ReverbBusAmount_" data-uid="Godot.Area.ReverbBusAmount*"></a>
   <h4 id="Godot_Area_ReverbBusAmount" data-uid="Godot.Area.ReverbBusAmount">ReverbBusAmount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The degree to which this area applies reverb to its associated audio. Ranges from <code>0</code> to <code>1</code> with <code>0.1</code> precision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1364,7 +1381,8 @@
   
   <a id="Godot_Area_ReverbBusEnable_" data-uid="Godot.Area.ReverbBusEnable*"></a>
   <h4 id="Godot_Area_ReverbBusEnable" data-uid="Godot.Area.ReverbBusEnable">ReverbBusEnable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the area applies reverb to its associated audio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1389,7 +1407,8 @@
   
   <a id="Godot_Area_ReverbBusName_" data-uid="Godot.Area.ReverbBusName*"></a>
   <h4 id="Godot_Area_ReverbBusName" data-uid="Godot.Area.ReverbBusName">ReverbBusName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The reverb bus name to use for this area&apos;s associated audio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1414,7 +1433,8 @@
   
   <a id="Godot_Area_ReverbBusUniformity_" data-uid="Godot.Area.ReverbBusUniformity*"></a>
   <h4 id="Godot_Area_ReverbBusUniformity" data-uid="Godot.Area.ReverbBusUniformity">ReverbBusUniformity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The degree to which this area&apos;s reverb is a uniform effect. Ranges from <code>0</code> to <code>1</code> with <code>0.1</code> precision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1439,7 +1459,8 @@
   
   <a id="Godot_Area_SpaceOverride_" data-uid="Godot.Area.SpaceOverride*"></a>
   <h4 id="Godot_Area_SpaceOverride" data-uid="Godot.Area.SpaceOverride">SpaceOverride</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Override mode for gravity and damping calculations within this area. See <a class="xref" href="Godot.Area.SpaceOverrideEnum.html">Area.SpaceOverrideEnum</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1616,7 +1637,9 @@
   
   <a id="Godot_Area_GetOverlappingAreas_" data-uid="Godot.Area.GetOverlappingAreas*"></a>
   <h4 id="Godot_Area_GetOverlappingAreas" data-uid="Godot.Area.GetOverlappingAreas">GetOverlappingAreas()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of intersecting <a class="xref" href="Godot.Area.html">Area</a>s. The overlapping area&apos;s <a class="xref" href="Godot.CollisionObject.html#Godot_CollisionObject_CollisionLayer">CollisionLayer</a> must be part of this area&apos;s <a class="xref" href="Godot.CollisionObject.html#Godot_CollisionObject_CollisionMask">CollisionMask</a> in order to be detected.</p>
+<p>For performance reasons (collisions are all processed at the same time) this list is modified once during the physics step, not immediately after objects are moved. Consider using signals instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1641,7 +1664,9 @@
   
   <a id="Godot_Area_GetOverlappingBodies_" data-uid="Godot.Area.GetOverlappingBodies*"></a>
   <h4 id="Godot_Area_GetOverlappingBodies" data-uid="Godot.Area.GetOverlappingBodies">GetOverlappingBodies()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of intersecting <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a>s. The overlapping body&apos;s <a class="xref" href="Godot.CollisionObject.html#Godot_CollisionObject_CollisionLayer">CollisionLayer</a> must be part of this area&apos;s <a class="xref" href="Godot.CollisionObject.html#Godot_CollisionObject_CollisionMask">CollisionMask</a> in order to be detected.</p>
+<p>For performance reasons (collisions are all processed at the same time) this list is modified once during the physics step, not immediately after objects are moved. Consider using signals instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1916,7 +1941,9 @@
   
   <a id="Godot_Area_OverlapsArea_" data-uid="Godot.Area.OverlapsArea*"></a>
   <h4 id="Godot_Area_OverlapsArea_Godot_Node_" data-uid="Godot.Area.OverlapsArea(Godot.Node)">OverlapsArea(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the given area overlaps the Area.</p>
+<p>Note: The result of this test is not immediate after moving objects. For performance, list of overlaps is updated once per frame and before the physics step. Consider using signals instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1958,7 +1985,10 @@
   
   <a id="Godot_Area_OverlapsBody_" data-uid="Godot.Area.OverlapsBody*"></a>
   <h4 id="Godot_Area_OverlapsBody_Godot_Node_" data-uid="Godot.Area.OverlapsBody(Godot.Node)">OverlapsBody(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the given physics body overlaps the Area.</p>
+<p>Note: The result of this test is not immediate after moving objects. For performance, list of overlaps is updated once per frame and before the physics step. Consider using signals instead.</p>
+<p>The <code>body</code> argument can either be a <a class="xref" href="Godot.PhysicsBody.html">PhysicsBody</a> or a <a class="xref" href="Godot.GridMap.html">GridMap</a> instance (while GridMaps are not physics body themselves, they register their tiles with collision shapes as a virtual physics body).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

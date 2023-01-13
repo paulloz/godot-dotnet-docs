@@ -83,7 +83,13 @@
   
   <h1 id="Godot_GIProbe" data-uid="Godot.GIProbe" class="text-break">Class GIProbe
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.GIProbe.html">GIProbe</a>s are used to provide high-quality real-time indirect light to scenes. They precompute the effect of objects that emit light and the effect of static geometry to simulate the behavior of complex light in real-time. <a class="xref" href="Godot.GIProbe.html">GIProbe</a>s need to be baked before using, however, once baked, dynamic objects will receive light from them. Further, lights can be fully dynamic or baked.</p>
+<p>Having <a class="xref" href="Godot.GIProbe.html">GIProbe</a>s in a scene can be expensive, the quality of the probe can be turned down in exchange for better performance in the <a class="xref" href="Godot.ProjectSettings.html">ProjectSettings</a> using .</p>
+<p>Procedural generation: <a class="xref" href="Godot.GIProbe.html">GIProbe</a> can be baked in an exported project, which makes it suitable for procedurally generated or user-built levels as long as all the geometry is generated in advance.</p>
+<p>Performance: <a class="xref" href="Godot.GIProbe.html">GIProbe</a> is relatively demanding on the GPU and is not suited to low-end hardware such as integrated graphics (consider <a class="xref" href="Godot.BakedLightmap.html">BakedLightmap</a> instead). To provide a fallback for low-end hardware, consider adding an option to disable <a class="xref" href="Godot.GIProbe.html">GIProbe</a> in your project&apos;s options menus. A <a class="xref" href="Godot.GIProbe.html">GIProbe</a> node can be disabled by hiding it.</p>
+<p>Note: Meshes should have sufficiently thick walls to avoid light leaks (avoid one-sided walls). For interior levels, enclose your level geometry in a sufficiently large box and bridge the loops to close the mesh. To further prevent light leaks, you can also strategically place temporary <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> nodes with <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_UseInBakedLight">UseInBakedLight</a> enabled. These temporary nodes can then be hidden after baking the <a class="xref" href="Godot.GIProbe.html">GIProbe</a> node.</p>
+<p>Note: Due to a renderer limitation, emissive <a class="xref" href="Godot.ShaderMaterial.html">ShaderMaterial</a>s cannot emit light when used in a <a class="xref" href="Godot.GIProbe.html">GIProbe</a>. Only emissive <a class="xref" href="Godot.SpatialMaterial.html">SpatialMaterial</a>s can emit light in a <a class="xref" href="Godot.GIProbe.html">GIProbe</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1032,7 +1038,9 @@
   
   <a id="Godot_GIProbe_Bias_" data-uid="Godot.GIProbe.Bias*"></a>
   <h4 id="Godot_GIProbe_Bias" data-uid="Godot.GIProbe.Bias">Bias</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Offsets the lookup of the light contribution from the <a class="xref" href="Godot.GIProbe.html">GIProbe</a>. This can be used to avoid self-shadowing, but may introduce light leaking at higher values. This and <a class="xref" href="Godot.GIProbe.html#Godot_GIProbe_NormalBias">NormalBias</a> should be played around with to minimize self-shadowing and light leaking.</p>
+<p>Note: <code>bias</code> should usually be above 1.0 as that is the size of the voxels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1057,7 +1065,8 @@
   
   <a id="Godot_GIProbe_Compress_" data-uid="Godot.GIProbe.Compress*"></a>
   <h4 id="Godot_GIProbe_Compress" data-uid="Godot.GIProbe.Compress">Compress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated. This property has been deprecated due to known bugs and no longer has any effect when enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1082,7 +1091,8 @@
   
   <a id="Godot_GIProbe_Data_" data-uid="Godot.GIProbe.Data*"></a>
   <h4 id="Godot_GIProbe_Data" data-uid="Godot.GIProbe.Data">Data</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.GIProbeData.html">GIProbeData</a> resource that holds the data for this <a class="xref" href="Godot.GIProbe.html">GIProbe</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1107,7 +1117,8 @@
   
   <a id="Godot_GIProbe_DynamicRange_" data-uid="Godot.GIProbe.DynamicRange*"></a>
   <h4 id="Godot_GIProbe_DynamicRange" data-uid="Godot.GIProbe.DynamicRange">DynamicRange</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum brightness that the <a class="xref" href="Godot.GIProbe.html">GIProbe</a> will recognize. Brightness will be scaled within this range.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1132,7 +1143,8 @@
   
   <a id="Godot_GIProbe_Energy_" data-uid="Godot.GIProbe.Energy*"></a>
   <h4 id="Godot_GIProbe_Energy" data-uid="Godot.GIProbe.Energy">Energy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Energy multiplier. Makes the lighting contribution from the <a class="xref" href="Godot.GIProbe.html">GIProbe</a> brighter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1157,7 +1169,8 @@
   
   <a id="Godot_GIProbe_Extents_" data-uid="Godot.GIProbe.Extents*"></a>
   <h4 id="Godot_GIProbe_Extents" data-uid="Godot.GIProbe.Extents">Extents</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size of the area covered by the <a class="xref" href="Godot.GIProbe.html">GIProbe</a>. If you make the extents larger without increasing the subdivisions with <a class="xref" href="Godot.GIProbe.html#Godot_GIProbe_Subdiv">Subdiv</a>, the size of each cell will increase and result in lower detailed lighting.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1182,7 +1195,8 @@
   
   <a id="Godot_GIProbe_Interior_" data-uid="Godot.GIProbe.Interior*"></a>
   <h4 id="Godot_GIProbe_Interior" data-uid="Godot.GIProbe.Interior">Interior</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, ignores the sky contribution when calculating lighting.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1207,7 +1221,8 @@
   
   <a id="Godot_GIProbe_NormalBias_" data-uid="Godot.GIProbe.NormalBias*"></a>
   <h4 id="Godot_GIProbe_NormalBias" data-uid="Godot.GIProbe.NormalBias">NormalBias</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Offsets the lookup into the <a class="xref" href="Godot.GIProbe.html">GIProbe</a> based on the object&apos;s normal direction. Can be used to reduce some self-shadowing artifacts.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1232,7 +1247,8 @@
   
   <a id="Godot_GIProbe_Propagation_" data-uid="Godot.GIProbe.Propagation*"></a>
   <h4 id="Godot_GIProbe_Propagation" data-uid="Godot.GIProbe.Propagation">Propagation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How much light propagates through the probe internally. A higher value allows light to spread further.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1257,7 +1273,8 @@
   
   <a id="Godot_GIProbe_Subdiv_" data-uid="Godot.GIProbe.Subdiv*"></a>
   <h4 id="Godot_GIProbe_Subdiv" data-uid="Godot.GIProbe.Subdiv">Subdiv</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of times to subdivide the grid that the <a class="xref" href="Godot.GIProbe.html">GIProbe</a> operates on. A higher number results in finer detail and thus higher visual quality, while lower numbers result in better performance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1284,7 +1301,10 @@
   
   <a id="Godot_GIProbe_Bake_" data-uid="Godot.GIProbe.Bake*"></a>
   <h4 id="Godot_GIProbe_Bake_Godot_Node_System_Boolean_" data-uid="Godot.GIProbe.Bake(Godot.Node,System.Boolean)">Bake(Node, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bakes the effect from all <a class="xref" href="Godot.GeometryInstance.html">GeometryInstance</a>s marked with <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_UseInBakedLight">UseInBakedLight</a> and <a class="xref" href="Godot.Light.html">Light</a>s marked with either <a class="xref" href="Godot.Light.BakeMode.html#Godot_Light_BakeMode_Indirect">Indirect</a> or <a class="xref" href="Godot.Light.BakeMode.html#Godot_Light_BakeMode_All">All</a>. If <code>create_visual_debug</code> is <code>true</code>, after baking the light, this will generate a <a class="xref" href="Godot.MultiMesh.html">MultiMesh</a> that has a cube representing each solid cell with each cube colored to the cell&apos;s albedo color. This can be used to visualize the <a class="xref" href="Godot.GIProbe.html">GIProbe</a>&apos;s data and debug any issues that may be occurring.</p>
+<p>Note: <a class="xref" href="Godot.GIProbe.html#Godot_GIProbe_Bake_Godot_Node_System_Boolean_">Bake(Node, Boolean)</a> works from the editor and in exported projects. This makes it suitable for procedurally generated or user-built levels. Baking a <a class="xref" href="Godot.GIProbe.html">GIProbe</a> generally takes from 5 to 20 seconds in most scenes. Reducing <a class="xref" href="Godot.GIProbe.html#Godot_GIProbe_Subdiv">Subdiv</a> can speed up baking.</p>
+<p>Note: <a class="xref" href="Godot.GeometryInstance.html">GeometryInstance</a>s and <a class="xref" href="Godot.Light.html">Light</a>s must be fully ready before <a class="xref" href="Godot.GIProbe.html#Godot_GIProbe_Bake_Godot_Node_System_Boolean_">Bake(Node, Boolean)</a> is called. If you are procedurally creating those and some meshes or lights are missing from your baked <a class="xref" href="Godot.GIProbe.html">GIProbe</a>, use <code>call_deferred(&quot;bake&quot;)</code> instead of calling <a class="xref" href="Godot.GIProbe.html#Godot_GIProbe_Bake_Godot_Node_System_Boolean_">Bake(Node, Boolean)</a> directly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1316,7 +1336,8 @@
   
   <a id="Godot_GIProbe_DebugBake_" data-uid="Godot.GIProbe.DebugBake*"></a>
   <h4 id="Godot_GIProbe_DebugBake" data-uid="Godot.GIProbe.DebugBake">DebugBake()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Godot.GIProbe.html#Godot_GIProbe_Bake_Godot_Node_System_Boolean_">Bake(Node, Boolean)</a> with <code>create_visual_debug</code> enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

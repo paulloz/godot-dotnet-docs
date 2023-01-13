@@ -346,7 +346,9 @@
   
   <a id="Godot_AnimationNodeStateMachineTransition_AdvanceCondition_" data-uid="Godot.AnimationNodeStateMachineTransition.AdvanceCondition*"></a>
   <h4 id="Godot_AnimationNodeStateMachineTransition_AdvanceCondition" data-uid="Godot.AnimationNodeStateMachineTransition.AdvanceCondition">AdvanceCondition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Turn on auto advance when this condition is set. The provided name will become a boolean parameter on the <a class="xref" href="Godot.AnimationTree.html">AnimationTree</a> that can be controlled from code (see <a href="$DOCS_URL/tutorials/animation/animation_tree.html#controlling-from-code">Using AnimationTree</a>). For example, if <a class="xref" href="Godot.AnimationTree.html#Godot_AnimationTree_TreeRoot">TreeRoot</a> is an <a class="xref" href="Godot.AnimationNodeStateMachine.html">AnimationNodeStateMachine</a> and <a class="xref" href="Godot.AnimationNodeStateMachineTransition.html#Godot_AnimationNodeStateMachineTransition_AdvanceCondition">AdvanceCondition</a> is set to <code>&quot;idle&quot;</code>:</p>
+<p><pre><code>$animation_tree[&quot;parameters/conditions/idle&quot;] = is_on_floor and (linear_velocity.x == 0)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +373,8 @@
   
   <a id="Godot_AnimationNodeStateMachineTransition_AutoAdvance_" data-uid="Godot.AnimationNodeStateMachineTransition.AutoAdvance*"></a>
   <h4 id="Godot_AnimationNodeStateMachineTransition_AutoAdvance" data-uid="Godot.AnimationNodeStateMachineTransition.AutoAdvance">AutoAdvance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Turn on the transition automatically when this state is reached. This works best with <a class="xref" href="Godot.AnimationNodeStateMachineTransition.SwitchModeEnum.html#Godot_AnimationNodeStateMachineTransition_SwitchModeEnum_AtEnd">AtEnd</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +399,8 @@
   
   <a id="Godot_AnimationNodeStateMachineTransition_Disabled_" data-uid="Godot.AnimationNodeStateMachineTransition.Disabled*"></a>
   <h4 id="Godot_AnimationNodeStateMachineTransition_Disabled" data-uid="Godot.AnimationNodeStateMachineTransition.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Don&apos;t use this transition during <a class="xref" href="Godot.AnimationNodeStateMachinePlayback.html#Godot_AnimationNodeStateMachinePlayback_Travel_System_String_">Travel(String)</a> or <a class="xref" href="Godot.AnimationNodeStateMachineTransition.html#Godot_AnimationNodeStateMachineTransition_AutoAdvance">AutoAdvance</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +425,8 @@
   
   <a id="Godot_AnimationNodeStateMachineTransition_Priority_" data-uid="Godot.AnimationNodeStateMachineTransition.Priority*"></a>
   <h4 id="Godot_AnimationNodeStateMachineTransition_Priority" data-uid="Godot.AnimationNodeStateMachineTransition.Priority">Priority</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Lower priority transitions are preferred when travelling through the tree via <a class="xref" href="Godot.AnimationNodeStateMachinePlayback.html#Godot_AnimationNodeStateMachinePlayback_Travel_System_String_">Travel(String)</a> or <a class="xref" href="Godot.AnimationNodeStateMachineTransition.html#Godot_AnimationNodeStateMachineTransition_AutoAdvance">AutoAdvance</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -446,7 +451,8 @@
   
   <a id="Godot_AnimationNodeStateMachineTransition_SwitchMode_" data-uid="Godot.AnimationNodeStateMachineTransition.SwitchMode*"></a>
   <h4 id="Godot_AnimationNodeStateMachineTransition_SwitchMode" data-uid="Godot.AnimationNodeStateMachineTransition.SwitchMode">SwitchMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The transition type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,7 +477,8 @@
   
   <a id="Godot_AnimationNodeStateMachineTransition_XfadeTime_" data-uid="Godot.AnimationNodeStateMachineTransition.XfadeTime*"></a>
   <h4 id="Godot_AnimationNodeStateMachineTransition_XfadeTime" data-uid="Godot.AnimationNodeStateMachineTransition.XfadeTime">XfadeTime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The time to cross-fade between this state and the next.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

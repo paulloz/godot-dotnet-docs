@@ -83,7 +83,15 @@
   
   <h1 id="Godot_HTTPClient" data-uid="Godot.HTTPClient" class="text-break">Class HTTPClient
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Hyper-text transfer protocol client (sometimes called &quot;User Agent&quot;). Used to make HTTP requests to download web content, upload files and other data or to communicate with various services, among other use cases.</p>
+<p>See the <a class="xref" href="Godot.HTTPRequest.html">HTTPRequest</a> node for a higher-level alternative.</p>
+<p>Note: This client only needs to connect to a host once (see <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_ConnectToHost_System_String_System_Int32_System_Boolean_System_Boolean_">ConnectToHost(String, Int32, Boolean, Boolean)</a>) to send multiple requests. Because of this, methods that take URLs usually take just the part after the host instead of the full URL, as the client is already connected to a host. See <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_Request_Godot_HTTPClient_Method_System_String_System_String___System_String_">Request(HTTPClient.Method, String, String[], String)</a> for a full example and to get started.</p>
+<p>A <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a> should be reused between multiple requests or to connect to different hosts instead of creating one client per request. Supports SSL and SSL server certificate verification. HTTP status codes in the 2xx range indicate success, 3xx redirection (i.e. &quot;try again, but over here&quot;), 4xx something was wrong with the request, and 5xx something went wrong on the server&apos;s side.</p>
+<p>For more information on HTTP, see https://developer.mozilla.org/en-US/docs/Web/HTTP (or read RFC 2616 to get it straight from the source: https://tools.ietf.org/html/rfc2616).</p>
+<p>Note: When performing HTTP requests from a project exported to HTML5, keep in mind the remote server may not allow requests from foreign origins due to <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>. If you host the server in question, you should modify its backend to allow requests from foreign origins by adding the <code>Access-Control-Allow-Origin: *</code> HTTP header.</p>
+<p>Note: SSL/TLS support is currently limited to TLS 1.0, TLS 1.1, and TLS 1.2. Attempting to connect to a TLS 1.3-only server will return an error.</p>
+<p>Warning: SSL/TLS certificate revocation and certificate pinning are currently not supported. Revoked certificates are accepted as long as they are otherwise valid. If this is a concern, you may want to use automatically managed certificates with a short validity period.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +305,8 @@
   
   <a id="Godot_HTTPClient_BlockingModeEnabled_" data-uid="Godot.HTTPClient.BlockingModeEnabled*"></a>
   <h4 id="Godot_HTTPClient_BlockingModeEnabled" data-uid="Godot.HTTPClient.BlockingModeEnabled">BlockingModeEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, execution will block until all data is read from the response.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +331,8 @@
   
   <a id="Godot_HTTPClient_Connection_" data-uid="Godot.HTTPClient.Connection*"></a>
   <h4 id="Godot_HTTPClient_Connection" data-uid="Godot.HTTPClient.Connection">Connection</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The connection to use for this client.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -347,7 +357,8 @@
   
   <a id="Godot_HTTPClient_ReadChunkSize_" data-uid="Godot.HTTPClient.ReadChunkSize*"></a>
   <h4 id="Godot_HTTPClient_ReadChunkSize" data-uid="Godot.HTTPClient.ReadChunkSize">ReadChunkSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size of the buffer used and maximum bytes to read per iteration. See <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_ReadResponseBodyChunk">ReadResponseBodyChunk()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +385,8 @@
   
   <a id="Godot_HTTPClient_Close_" data-uid="Godot.HTTPClient.Close*"></a>
   <h4 id="Godot_HTTPClient_Close" data-uid="Godot.HTTPClient.Close">Close()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Closes the current connection, allowing reuse of this <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -384,7 +396,11 @@
   
   <a id="Godot_HTTPClient_ConnectToHost_" data-uid="Godot.HTTPClient.ConnectToHost*"></a>
   <h4 id="Godot_HTTPClient_ConnectToHost_System_String_System_Int32_System_Boolean_System_Boolean_" data-uid="Godot.HTTPClient.ConnectToHost(System.String,System.Int32,System.Boolean,System.Boolean)">ConnectToHost(String, Int32, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connects to a host. This needs to be done before any requests are sent.</p>
+<p>The host should not have http:// prepended but will strip the protocol identifier if provided.</p>
+<p>If no <code>port</code> is specified (or <code>-1</code> is used), it is automatically set to 80 for HTTP and 443 for HTTPS (if <code>use_ssl</code> is enabled).</p>
+<p><code>verify_host</code> will check the SSL identity of the host if set to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -491,7 +507,9 @@
   
   <a id="Godot_HTTPClient_GetResponseBodyLength_" data-uid="Godot.HTTPClient.GetResponseBodyLength*"></a>
   <h4 id="Godot_HTTPClient_GetResponseBodyLength" data-uid="Godot.HTTPClient.GetResponseBodyLength">GetResponseBodyLength()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the response&apos;s body length.</p>
+<p>Note: Some Web servers may not send a body length. In this case, the value returned will be <code>-1</code>. If using chunked transfer encoding, the body length will also be <code>-1</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -516,7 +534,8 @@
   
   <a id="Godot_HTTPClient_GetResponseCode_" data-uid="Godot.HTTPClient.GetResponseCode*"></a>
   <h4 id="Godot_HTTPClient_GetResponseCode" data-uid="Godot.HTTPClient.GetResponseCode">GetResponseCode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the response&apos;s HTTP status code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -541,7 +560,8 @@
   
   <a id="Godot_HTTPClient_GetResponseHeaders_" data-uid="Godot.HTTPClient.GetResponseHeaders*"></a>
   <h4 id="Godot_HTTPClient_GetResponseHeaders" data-uid="Godot.HTTPClient.GetResponseHeaders">GetResponseHeaders()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the response headers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -566,7 +586,13 @@
   
   <a id="Godot_HTTPClient_GetResponseHeadersAsDictionary_" data-uid="Godot.HTTPClient.GetResponseHeadersAsDictionary*"></a>
   <h4 id="Godot_HTTPClient_GetResponseHeadersAsDictionary" data-uid="Godot.HTTPClient.GetResponseHeadersAsDictionary">GetResponseHeadersAsDictionary()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all response headers as a Dictionary of structure <code>{ &quot;key&quot;: &quot;value1; value2&quot; }</code> where the case-sensitivity of the keys and values is kept like the server delivers it. A value is a simple String, this string can have more than one value where &quot;; &quot; is used as separator.</p>
+<p>Example:</p>
+<p><pre><code>{
+    &quot;content-length&quot;: 12,
+    &quot;Content-Type&quot;: &quot;application/json; charset=UTF-8&quot;,
+}</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -591,7 +617,8 @@
   
   <a id="Godot_HTTPClient_GetStatus_" data-uid="Godot.HTTPClient.GetStatus*"></a>
   <h4 id="Godot_HTTPClient_GetStatus" data-uid="Godot.HTTPClient.GetStatus">GetStatus()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.HTTPClient.Status.html">HTTPClient.Status</a> constant. Need to call <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_Poll">Poll()</a> in order to get status updates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -616,7 +643,8 @@
   
   <a id="Godot_HTTPClient_HasResponse_" data-uid="Godot.HTTPClient.HasResponse*"></a>
   <h4 id="Godot_HTTPClient_HasResponse" data-uid="Godot.HTTPClient.HasResponse">HasResponse()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a> has a response available.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -666,7 +694,8 @@
   
   <a id="Godot_HTTPClient_IsResponseChunked_" data-uid="Godot.HTTPClient.IsResponseChunked*"></a>
   <h4 id="Godot_HTTPClient_IsResponseChunked" data-uid="Godot.HTTPClient.IsResponseChunked">IsResponseChunked()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this <a class="xref" href="Godot.HTTPClient.html">HTTPClient</a> has a response that is chunked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -691,7 +720,8 @@
   
   <a id="Godot_HTTPClient_Poll_" data-uid="Godot.HTTPClient.Poll*"></a>
   <h4 id="Godot_HTTPClient_Poll" data-uid="Godot.HTTPClient.Poll">Poll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This needs to be called in order to have any request processed. Check results with <a class="xref" href="Godot.HTTPClient.html#Godot_HTTPClient_GetStatus">GetStatus()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -716,7 +746,15 @@
   
   <a id="Godot_HTTPClient_QueryStringFromDict_" data-uid="Godot.HTTPClient.QueryStringFromDict*"></a>
   <h4 id="Godot_HTTPClient_QueryStringFromDict_Godot_Collections_Dictionary_" data-uid="Godot.HTTPClient.QueryStringFromDict(Godot.Collections.Dictionary)">QueryStringFromDict(Dictionary)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates a GET/POST application/x-www-form-urlencoded style query string from a provided dictionary, e.g.:</p>
+<p><pre><code>var fields = {&quot;username&quot;: &quot;user&quot;, &quot;password&quot;: &quot;pass&quot;}
+var query_string = http_client.query_string_from_dict(fields)
+# Returns &quot;username=user&amp;password=pass&quot;</code></pre></p>
+<p>Furthermore, if a key has a <code>null</code> value, only the key itself is added, without equal sign and value. If the value is an array, for each value in it a pair with the same key is added.</p>
+<p><pre><code>var fields = {&quot;single&quot;: 123, &quot;not_valued&quot;: null, &quot;multiple&quot;: [22, 33, 44]}
+var query_string = http_client.query_string_from_dict(fields)
+# Returns &quot;single=123&amp;not_valued&amp;multiple=22&amp;multiple=33&amp;multiple=44&quot;</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -758,7 +796,8 @@
   
   <a id="Godot_HTTPClient_ReadResponseBodyChunk_" data-uid="Godot.HTTPClient.ReadResponseBodyChunk*"></a>
   <h4 id="Godot_HTTPClient_ReadResponseBodyChunk" data-uid="Godot.HTTPClient.ReadResponseBodyChunk">ReadResponseBodyChunk()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads one chunk from the response.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -783,7 +822,16 @@
   
   <a id="Godot_HTTPClient_Request_" data-uid="Godot.HTTPClient.Request*"></a>
   <h4 id="Godot_HTTPClient_Request_Godot_HTTPClient_Method_System_String_System_String___System_String_" data-uid="Godot.HTTPClient.Request(Godot.HTTPClient.Method,System.String,System.String[],System.String)">Request(HTTPClient.Method, String, String[], String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a request to the connected host.</p>
+<p>The URL parameter is usually just the part after the host, so for <code>http://somehost.com/index.php</code>, it is <code>/index.php</code>. When sending requests to an HTTP proxy server, it should be an absolute URL. For <a class="xref" href="Godot.HTTPClient.Method.html#Godot_HTTPClient_Method_Options">Options</a> requests, <code>*</code> is also allowed. For <a class="xref" href="Godot.HTTPClient.Method.html#Godot_HTTPClient_Method_Connect">Connect</a> requests, it should be the authority component (<code>host:port</code>).</p>
+<p>Headers are HTTP request headers. For available HTTP methods, see <a class="xref" href="Godot.HTTPClient.Method.html">HTTPClient.Method</a>.</p>
+<p>To create a POST request with query strings to push to the server, do:</p>
+<p><pre><code>var fields = {&quot;username&quot; : &quot;user&quot;, &quot;password&quot; : &quot;pass&quot;}
+var query_string = http_client.query_string_from_dict(fields)
+var headers = [&quot;Content-Type: application/x-www-form-urlencoded&quot;, &quot;Content-Length: &quot; + str(query_string.length())]
+var result = http_client.request(http_client.METHOD_POST, &quot;/index.php&quot;, headers, query_string)</code></pre></p>
+<p>Note: The <code>request_data</code> parameter is ignored if <code>method</code> is <a class="xref" href="Godot.HTTPClient.Method.html#Godot_HTTPClient_Method_Get">Get</a>. This is because GET methods can&apos;t contain request data. As a workaround, you can pass request data as a query string in the URL. See <code>String.http_escape</code> for an example.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -840,7 +888,11 @@
   
   <a id="Godot_HTTPClient_RequestRaw_" data-uid="Godot.HTTPClient.RequestRaw*"></a>
   <h4 id="Godot_HTTPClient_RequestRaw_Godot_HTTPClient_Method_System_String_System_String___System_Byte___" data-uid="Godot.HTTPClient.RequestRaw(Godot.HTTPClient.Method,System.String,System.String[],System.Byte[])">RequestRaw(HTTPClient.Method, String, String[], Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a raw request to the connected host.</p>
+<p>The URL parameter is usually just the part after the host, so for <code>http://somehost.com/index.php</code>, it is <code>/index.php</code>. When sending requests to an HTTP proxy server, it should be an absolute URL. For <a class="xref" href="Godot.HTTPClient.Method.html#Godot_HTTPClient_Method_Options">Options</a> requests, <code>*</code> is also allowed. For <a class="xref" href="Godot.HTTPClient.Method.html#Godot_HTTPClient_Method_Connect">Connect</a> requests, it should be the authority component (<code>host:port</code>).</p>
+<p>Headers are HTTP request headers. For available HTTP methods, see <a class="xref" href="Godot.HTTPClient.Method.html">HTTPClient.Method</a>.</p>
+<p>Sends the body data raw, as a byte array and does not encode it in any way.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -951,7 +1003,9 @@
   
   <a id="Godot_HTTPClient_SetHttpProxy_" data-uid="Godot.HTTPClient.SetHttpProxy*"></a>
   <h4 id="Godot_HTTPClient_SetHttpProxy_System_String_System_Int32_" data-uid="Godot.HTTPClient.SetHttpProxy(System.String,System.Int32)">SetHttpProxy(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the proxy server for HTTP requests.</p>
+<p>The proxy server is unset if <code>host</code> is empty or <code>port</code> is -1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -983,7 +1037,9 @@
   
   <a id="Godot_HTTPClient_SetHttpsProxy_" data-uid="Godot.HTTPClient.SetHttpsProxy*"></a>
   <h4 id="Godot_HTTPClient_SetHttpsProxy_System_String_System_Int32_" data-uid="Godot.HTTPClient.SetHttpsProxy(System.String,System.Int32)">SetHttpsProxy(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the proxy server for HTTPS requests.</p>
+<p>The proxy server is unset if <code>host</code> is empty or <code>port</code> is -1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,10 @@
   
   <h1 id="Godot_Camera2D" data-uid="Godot.Camera2D" class="text-break">Class Camera2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Camera node for 2D scenes. It forces the screen (current layer) to scroll following this node. This makes it easier (and faster) to program scrollable scenes than manually changing the position of <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a>-based nodes.</p>
+<p>This node is intended to be a simple helper to get things going quickly, but more functionality may be desired to change how the camera works. To make your own custom camera node, inherit it from <a class="xref" href="Godot.Node2D.html">Node2D</a> and change the transform of the canvas by setting <a class="xref" href="Godot.Viewport.html#Godot_Viewport_CanvasTransform">CanvasTransform</a> in <a class="xref" href="Godot.Viewport.html">Viewport</a> (you can obtain the current <a class="xref" href="Godot.Viewport.html">Viewport</a> by using <a class="xref" href="Godot.Node.html#Godot_Node_GetViewport">GetViewport()</a>).</p>
+<p>Note that the <a class="xref" href="Godot.Camera2D.html">Camera2D</a> node&apos;s <code>position</code> doesn&apos;t represent the actual position of the screen, which may differ due to applied smoothing or limits. You can use <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_GetCameraScreenCenter">GetCameraScreenCenter()</a> to get the real position.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1115,8 @@
   
   <a id="Godot_Camera2D_AnchorMode_" data-uid="Godot.Camera2D.AnchorMode*"></a>
   <h4 id="Godot_Camera2D_AnchorMode" data-uid="Godot.Camera2D.AnchorMode">AnchorMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Camera2D&apos;s anchor point. See <a class="xref" href="Godot.Camera2D.AnchorModeEnum.html">Camera2D.AnchorModeEnum</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1137,7 +1141,8 @@
   
   <a id="Godot_Camera2D_Current_" data-uid="Godot.Camera2D.Current*"></a>
   <h4 id="Godot_Camera2D_Current" data-uid="Godot.Camera2D.Current">Current</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the camera is the active camera for the current scene. Only one camera can be current, so setting a different camera <code>current</code> will disable this one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1162,7 +1167,8 @@
   
   <a id="Godot_Camera2D_CustomViewport_" data-uid="Godot.Camera2D.CustomViewport*"></a>
   <h4 id="Godot_Camera2D_CustomViewport" data-uid="Godot.Camera2D.CustomViewport">CustomViewport</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The custom <a class="xref" href="Godot.Viewport.html">Viewport</a> node attached to the <a class="xref" href="Godot.Camera2D.html">Camera2D</a>. If <code>null</code> or not a <a class="xref" href="Godot.Viewport.html">Viewport</a>, uses the default viewport instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1187,7 +1193,8 @@
   
   <a id="Godot_Camera2D_DragMarginBottom_" data-uid="Godot.Camera2D.DragMarginBottom*"></a>
   <h4 id="Godot_Camera2D_DragMarginBottom" data-uid="Godot.Camera2D.DragMarginBottom">DragMarginBottom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bottom margin needed to drag the camera. A value of <code>1</code> makes the camera move only when reaching the edge of the screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1212,7 +1219,8 @@
   
   <a id="Godot_Camera2D_DragMarginHEnabled_" data-uid="Godot.Camera2D.DragMarginHEnabled*"></a>
   <h4 id="Godot_Camera2D_DragMarginHEnabled" data-uid="Godot.Camera2D.DragMarginHEnabled">DragMarginHEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the camera only moves when reaching the horizontal drag margins. If <code>false</code>, the camera moves horizontally regardless of margins.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1237,7 +1245,8 @@
   
   <a id="Godot_Camera2D_DragMarginLeft_" data-uid="Godot.Camera2D.DragMarginLeft*"></a>
   <h4 id="Godot_Camera2D_DragMarginLeft" data-uid="Godot.Camera2D.DragMarginLeft">DragMarginLeft</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Left margin needed to drag the camera. A value of <code>1</code> makes the camera move only when reaching the edge of the screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1262,7 +1271,8 @@
   
   <a id="Godot_Camera2D_DragMarginRight_" data-uid="Godot.Camera2D.DragMarginRight*"></a>
   <h4 id="Godot_Camera2D_DragMarginRight" data-uid="Godot.Camera2D.DragMarginRight">DragMarginRight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Right margin needed to drag the camera. A value of <code>1</code> makes the camera move only when reaching the edge of the screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1287,7 +1297,8 @@
   
   <a id="Godot_Camera2D_DragMarginTop_" data-uid="Godot.Camera2D.DragMarginTop*"></a>
   <h4 id="Godot_Camera2D_DragMarginTop" data-uid="Godot.Camera2D.DragMarginTop">DragMarginTop</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Top margin needed to drag the camera. A value of <code>1</code> makes the camera move only when reaching the edge of the screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1312,7 +1323,8 @@
   
   <a id="Godot_Camera2D_DragMarginVEnabled_" data-uid="Godot.Camera2D.DragMarginVEnabled*"></a>
   <h4 id="Godot_Camera2D_DragMarginVEnabled" data-uid="Godot.Camera2D.DragMarginVEnabled">DragMarginVEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the camera only moves when reaching the vertical drag margins. If <code>false</code>, the camera moves vertically regardless of margins.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1337,7 +1349,8 @@
   
   <a id="Godot_Camera2D_EditorDrawDragMargin_" data-uid="Godot.Camera2D.EditorDrawDragMargin*"></a>
   <h4 id="Godot_Camera2D_EditorDrawDragMargin" data-uid="Godot.Camera2D.EditorDrawDragMargin">EditorDrawDragMargin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, draws the camera&apos;s drag margin rectangle in the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1362,7 +1375,8 @@
   
   <a id="Godot_Camera2D_EditorDrawLimits_" data-uid="Godot.Camera2D.EditorDrawLimits*"></a>
   <h4 id="Godot_Camera2D_EditorDrawLimits" data-uid="Godot.Camera2D.EditorDrawLimits">EditorDrawLimits</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, draws the camera&apos;s limits rectangle in the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1387,7 +1401,8 @@
   
   <a id="Godot_Camera2D_EditorDrawScreen_" data-uid="Godot.Camera2D.EditorDrawScreen*"></a>
   <h4 id="Godot_Camera2D_EditorDrawScreen" data-uid="Godot.Camera2D.EditorDrawScreen">EditorDrawScreen</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, draws the camera&apos;s screen rectangle in the editor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1412,7 +1427,8 @@
   
   <a id="Godot_Camera2D_LimitBottom_" data-uid="Godot.Camera2D.LimitBottom*"></a>
   <h4 id="Godot_Camera2D_LimitBottom" data-uid="Godot.Camera2D.LimitBottom">LimitBottom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Bottom scroll limit in pixels. The camera stops moving when reaching this value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1437,7 +1453,8 @@
   
   <a id="Godot_Camera2D_LimitLeft_" data-uid="Godot.Camera2D.LimitLeft*"></a>
   <h4 id="Godot_Camera2D_LimitLeft" data-uid="Godot.Camera2D.LimitLeft">LimitLeft</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Left scroll limit in pixels. The camera stops moving when reaching this value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1462,7 +1479,8 @@
   
   <a id="Godot_Camera2D_LimitRight_" data-uid="Godot.Camera2D.LimitRight*"></a>
   <h4 id="Godot_Camera2D_LimitRight" data-uid="Godot.Camera2D.LimitRight">LimitRight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Right scroll limit in pixels. The camera stops moving when reaching this value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1487,7 +1505,10 @@
   
   <a id="Godot_Camera2D_LimitSmoothed_" data-uid="Godot.Camera2D.LimitSmoothed*"></a>
   <h4 id="Godot_Camera2D_LimitSmoothed" data-uid="Godot.Camera2D.LimitSmoothed">LimitSmoothed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the camera smoothly stops when reaches its limits.</p>
+<p>This property has no effect if <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_SmoothingEnabled">SmoothingEnabled</a> is <code>false</code>.</p>
+<p>Note: To immediately update the camera&apos;s position to be within limits without smoothing, even with this setting enabled, invoke <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_ResetSmoothing">ResetSmoothing()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1512,7 +1533,8 @@
   
   <a id="Godot_Camera2D_LimitTop_" data-uid="Godot.Camera2D.LimitTop*"></a>
   <h4 id="Godot_Camera2D_LimitTop" data-uid="Godot.Camera2D.LimitTop">LimitTop</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Top scroll limit in pixels. The camera stops moving when reaching this value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1537,7 +1559,8 @@
   
   <a id="Godot_Camera2D_Offset_" data-uid="Godot.Camera2D.Offset*"></a>
   <h4 id="Godot_Camera2D_Offset" data-uid="Godot.Camera2D.Offset">Offset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The camera&apos;s offset, useful for looking around or camera shake animations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1562,7 +1585,9 @@
   
   <a id="Godot_Camera2D_OffsetH_" data-uid="Godot.Camera2D.OffsetH*"></a>
   <h4 id="Godot_Camera2D_OffsetH" data-uid="Godot.Camera2D.OffsetH">OffsetH</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The horizontal offset of the camera, relative to the drag margins.</p>
+<p>Note: Offset H is used only to force offset relative to margins. It&apos;s not updated in any way if drag margins are enabled and can be used to set initial offset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1587,7 +1612,9 @@
   
   <a id="Godot_Camera2D_OffsetV_" data-uid="Godot.Camera2D.OffsetV*"></a>
   <h4 id="Godot_Camera2D_OffsetV" data-uid="Godot.Camera2D.OffsetV">OffsetV</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The vertical offset of the camera, relative to the drag margins.</p>
+<p>Note: Used the same as <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_OffsetH">OffsetH</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1612,7 +1639,8 @@
   
   <a id="Godot_Camera2D_ProcessMode_" data-uid="Godot.Camera2D.ProcessMode*"></a>
   <h4 id="Godot_Camera2D_ProcessMode" data-uid="Godot.Camera2D.ProcessMode">ProcessMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The camera&apos;s process callback. See <a class="xref" href="Godot.Camera2D.Camera2DProcessMode.html">Camera2D.Camera2DProcessMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1637,7 +1665,8 @@
   
   <a id="Godot_Camera2D_Rotating_" data-uid="Godot.Camera2D.Rotating*"></a>
   <h4 id="Godot_Camera2D_Rotating" data-uid="Godot.Camera2D.Rotating">Rotating</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the camera view rotates with the target.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1662,7 +1691,8 @@
   
   <a id="Godot_Camera2D_SmoothingEnabled_" data-uid="Godot.Camera2D.SmoothingEnabled*"></a>
   <h4 id="Godot_Camera2D_SmoothingEnabled" data-uid="Godot.Camera2D.SmoothingEnabled">SmoothingEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the camera smoothly moves towards the target at <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_SmoothingSpeed">SmoothingSpeed</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1687,7 +1717,8 @@
   
   <a id="Godot_Camera2D_SmoothingSpeed_" data-uid="Godot.Camera2D.SmoothingSpeed*"></a>
   <h4 id="Godot_Camera2D_SmoothingSpeed" data-uid="Godot.Camera2D.SmoothingSpeed">SmoothingSpeed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Speed in pixels per second of the camera&apos;s smoothing effect when <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_SmoothingEnabled">SmoothingEnabled</a> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1712,7 +1743,8 @@
   
   <a id="Godot_Camera2D_Zoom_" data-uid="Godot.Camera2D.Zoom*"></a>
   <h4 id="Godot_Camera2D_Zoom" data-uid="Godot.Camera2D.Zoom">Zoom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The camera&apos;s zoom relative to the viewport. Values larger than <code>Vector2(1, 1)</code> zoom out and smaller values zoom in. For an example, use <code>Vector2(0.5, 0.5)</code> for a 2× zoom-in, and <code>Vector2(4, 4)</code> for a 4× zoom-out.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1739,7 +1771,8 @@
   
   <a id="Godot_Camera2D_Align_" data-uid="Godot.Camera2D.Align*"></a>
   <h4 id="Godot_Camera2D_Align" data-uid="Godot.Camera2D.Align">Align()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Aligns the camera to the tracked node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1749,7 +1782,8 @@
   
   <a id="Godot_Camera2D_ClearCurrent_" data-uid="Godot.Camera2D.ClearCurrent*"></a>
   <h4 id="Godot_Camera2D_ClearCurrent" data-uid="Godot.Camera2D.ClearCurrent">ClearCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes any <a class="xref" href="Godot.Camera2D.html">Camera2D</a> from the ancestor <a class="xref" href="Godot.Viewport.html">Viewport</a>&apos;s internal currently-assigned camera.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1759,7 +1793,8 @@
   
   <a id="Godot_Camera2D_ForceUpdateScroll_" data-uid="Godot.Camera2D.ForceUpdateScroll*"></a>
   <h4 id="Godot_Camera2D_ForceUpdateScroll" data-uid="Godot.Camera2D.ForceUpdateScroll">ForceUpdateScroll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Forces the camera to update scroll immediately.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1794,7 +1829,9 @@
   
   <a id="Godot_Camera2D_GetCameraPosition_" data-uid="Godot.Camera2D.GetCameraPosition*"></a>
   <h4 id="Godot_Camera2D_GetCameraPosition" data-uid="Godot.Camera2D.GetCameraPosition">GetCameraPosition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the camera&apos;s <code>position</code> (the tracked point the camera attempts to follow), relative to the origin.</p>
+<p>Note: The returned value is not the same as <a class="xref" href="Godot.Node2D.html#Godot_Node2D_Position">Position</a> or <a class="xref" href="Godot.Node2D.html#Godot_Node2D_GlobalPosition">GlobalPosition</a>, as it is affected by the <code>drag</code> properties.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1819,7 +1856,9 @@
   
   <a id="Godot_Camera2D_GetCameraScreenCenter_" data-uid="Godot.Camera2D.GetCameraScreenCenter*"></a>
   <h4 id="Godot_Camera2D_GetCameraScreenCenter" data-uid="Godot.Camera2D.GetCameraScreenCenter">GetCameraScreenCenter()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the location of the <a class="xref" href="Godot.Camera2D.html">Camera2D</a>&apos;s screen-center, relative to the origin.</p>
+<p>Note: The real <code>position</code> of the camera may be different, see <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_GetCameraPosition">GetCameraPosition()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1869,7 +1908,8 @@
   
   <a id="Godot_Camera2D_GetDragMargin_" data-uid="Godot.Camera2D.GetDragMargin*"></a>
   <h4 id="Godot_Camera2D_GetDragMargin_Godot_Margin_" data-uid="Godot.Camera2D.GetDragMargin(Godot.Margin)">GetDragMargin(Margin)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the specified margin. See also <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_DragMarginBottom">DragMarginBottom</a>, <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_DragMarginTop">DragMarginTop</a>, <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_DragMarginLeft">DragMarginLeft</a>, and <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_DragMarginRight">DragMarginRight</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1961,7 +2001,8 @@
   
   <a id="Godot_Camera2D_GetLimit_" data-uid="Godot.Camera2D.GetLimit*"></a>
   <h4 id="Godot_Camera2D_GetLimit_Godot_Margin_" data-uid="Godot.Camera2D.GetLimit(Godot.Margin)">GetLimit(Margin)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the specified camera limit. See also <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_LimitBottom">LimitBottom</a>, <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_LimitTop">LimitTop</a>, <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_LimitLeft">LimitLeft</a>, and <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_LimitRight">LimitRight</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2328,7 +2369,8 @@
   
   <a id="Godot_Camera2D_MakeCurrent_" data-uid="Godot.Camera2D.MakeCurrent*"></a>
   <h4 id="Godot_Camera2D_MakeCurrent" data-uid="Godot.Camera2D.MakeCurrent">MakeCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Make this the current 2D camera for the scene (viewport and layer), in case there are many cameras in the scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2338,7 +2380,9 @@
   
   <a id="Godot_Camera2D_ResetSmoothing_" data-uid="Godot.Camera2D.ResetSmoothing*"></a>
   <h4 id="Godot_Camera2D_ResetSmoothing" data-uid="Godot.Camera2D.ResetSmoothing">ResetSmoothing()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the camera&apos;s position immediately to its current smoothing destination.</p>
+<p>This method has no effect if <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_SmoothingEnabled">SmoothingEnabled</a> is <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2402,7 +2446,8 @@
   
   <a id="Godot_Camera2D_SetDragMargin_" data-uid="Godot.Camera2D.SetDragMargin*"></a>
   <h4 id="Godot_Camera2D_SetDragMargin_Godot_Margin_System_Single_" data-uid="Godot.Camera2D.SetDragMargin(Godot.Margin,System.Single)">SetDragMargin(Margin, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the specified margin. See also <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_DragMarginBottom">DragMarginBottom</a>, <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_DragMarginTop">DragMarginTop</a>, <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_DragMarginLeft">DragMarginLeft</a>, and <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_DragMarginRight">DragMarginRight</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2542,7 +2587,8 @@
   
   <a id="Godot_Camera2D_SetLimit_" data-uid="Godot.Camera2D.SetLimit*"></a>
   <h4 id="Godot_Camera2D_SetLimit_Godot_Margin_System_Int32_" data-uid="Godot.Camera2D.SetLimit(Godot.Margin,System.Int32)">SetLimit(Margin, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the specified camera limit. See also <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_LimitBottom">LimitBottom</a>, <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_LimitTop">LimitTop</a>, <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_LimitLeft">LimitLeft</a>, and <a class="xref" href="Godot.Camera2D.html#Godot_Camera2D_LimitRight">LimitRight</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

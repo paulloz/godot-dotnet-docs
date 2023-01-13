@@ -83,7 +83,10 @@
   
   <h1 id="Godot_TabContainer" data-uid="Godot.TabContainer" class="text-break">Class TabContainer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Arranges <a class="xref" href="Godot.Control.html">Control</a> children into a tabbed view, creating a tab for each one. The active tab&apos;s corresponding <a class="xref" href="Godot.Control.html">Control</a> has its <code>visible</code> property set to <code>true</code>, and all other children&apos;s to <code>false</code>.</p>
+<p>Ignores non-<a class="xref" href="Godot.Control.html">Control</a> children.</p>
+<p>Note: The drawing of the clickable tabs themselves is handled by this node. Adding <a class="xref" href="Godot.Tabs.html">Tabs</a> as children is not needed.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1473,7 +1476,8 @@
   
   <a id="Godot_TabContainer_AllTabsInFront_" data-uid="Godot.TabContainer.AllTabsInFront*"></a>
   <h4 id="Godot_TabContainer_AllTabsInFront" data-uid="Godot.TabContainer.AllTabsInFront">AllTabsInFront</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, all tabs are drawn in front of the panel. If <code>false</code>, inactive tabs are drawn behind the panel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1498,7 +1502,8 @@
   
   <a id="Godot_TabContainer_CurrentTab_" data-uid="Godot.TabContainer.CurrentTab*"></a>
   <h4 id="Godot_TabContainer_CurrentTab" data-uid="Godot.TabContainer.CurrentTab">CurrentTab</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current tab index. When set, this index&apos;s <a class="xref" href="Godot.Control.html">Control</a> node&apos;s <code>visible</code> property is set to <code>true</code> and all others are set to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1523,7 +1528,8 @@
   
   <a id="Godot_TabContainer_DragToRearrangeEnabled_" data-uid="Godot.TabContainer.DragToRearrangeEnabled*"></a>
   <h4 id="Godot_TabContainer_DragToRearrangeEnabled" data-uid="Godot.TabContainer.DragToRearrangeEnabled">DragToRearrangeEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, tabs can be rearranged with mouse drag.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1548,7 +1554,8 @@
   
   <a id="Godot_TabContainer_TabAlign_" data-uid="Godot.TabContainer.TabAlign*"></a>
   <h4 id="Godot_TabContainer_TabAlign" data-uid="Godot.TabContainer.TabAlign">TabAlign</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The alignment of all tabs in the tab container. See the <a class="xref" href="Godot.TabContainer.TabAlignEnum.html">TabContainer.TabAlignEnum</a> constants for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1573,7 +1580,8 @@
   
   <a id="Godot_TabContainer_TabsVisible_" data-uid="Godot.TabContainer.TabsVisible*"></a>
   <h4 id="Godot_TabContainer_TabsVisible" data-uid="Godot.TabContainer.TabsVisible">TabsVisible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, tabs are visible. If <code>false</code>, tabs&apos; content and titles are hidden.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1598,7 +1606,8 @@
   
   <a id="Godot_TabContainer_UseHiddenTabsForMinSize_" data-uid="Godot.TabContainer.UseHiddenTabsForMinSize*"></a>
   <h4 id="Godot_TabContainer_UseHiddenTabsForMinSize" data-uid="Godot.TabContainer.UseHiddenTabsForMinSize">UseHiddenTabsForMinSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, children <a class="xref" href="Godot.Control.html">Control</a> nodes that are hidden have their minimum size take into account in the total, instead of only the currently visible one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1675,7 +1684,8 @@
   
   <a id="Godot_TabContainer_GetCurrentTabControl_" data-uid="Godot.TabContainer.GetCurrentTabControl*"></a>
   <h4 id="Godot_TabContainer_GetCurrentTabControl" data-uid="Godot.TabContainer.GetCurrentTabControl">GetCurrentTabControl()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the child <a class="xref" href="Godot.Control.html">Control</a> node located at the active tab index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1725,7 +1735,9 @@
   
   <a id="Godot_TabContainer_GetPopup_" data-uid="Godot.TabContainer.GetPopup*"></a>
   <h4 id="Godot_TabContainer_GetPopup" data-uid="Godot.TabContainer.GetPopup">GetPopup()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Popup.html">Popup</a> node instance if one has been set already with <a class="xref" href="Godot.TabContainer.html#Godot_TabContainer_SetPopup_Godot_Node_">SetPopup(Node)</a>.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1750,7 +1762,8 @@
   
   <a id="Godot_TabContainer_GetPreviousTab_" data-uid="Godot.TabContainer.GetPreviousTab*"></a>
   <h4 id="Godot_TabContainer_GetPreviousTab" data-uid="Godot.TabContainer.GetPreviousTab">GetPreviousTab()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the previously active tab index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1800,7 +1813,8 @@
   
   <a id="Godot_TabContainer_GetTabControl_" data-uid="Godot.TabContainer.GetTabControl*"></a>
   <h4 id="Godot_TabContainer_GetTabControl_System_Int32_" data-uid="Godot.TabContainer.GetTabControl(System.Int32)">GetTabControl(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Control.html">Control</a> node from the tab at index <code>tab_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1842,7 +1856,8 @@
   
   <a id="Godot_TabContainer_GetTabCount_" data-uid="Godot.TabContainer.GetTabCount*"></a>
   <h4 id="Godot_TabContainer_GetTabCount" data-uid="Godot.TabContainer.GetTabCount">GetTabCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of tabs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1867,7 +1882,8 @@
   
   <a id="Godot_TabContainer_GetTabDisabled_" data-uid="Godot.TabContainer.GetTabDisabled*"></a>
   <h4 id="Godot_TabContainer_GetTabDisabled_System_Int32_" data-uid="Godot.TabContainer.GetTabDisabled(System.Int32)">GetTabDisabled(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the tab at index <code>tab_idx</code> is disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1909,7 +1925,8 @@
   
   <a id="Godot_TabContainer_GetTabHidden_" data-uid="Godot.TabContainer.GetTabHidden*"></a>
   <h4 id="Godot_TabContainer_GetTabHidden_System_Int32_" data-uid="Godot.TabContainer.GetTabHidden(System.Int32)">GetTabHidden(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the tab at index <code>tab_idx</code> is hidden.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1951,7 +1968,8 @@
   
   <a id="Godot_TabContainer_GetTabIcon_" data-uid="Godot.TabContainer.GetTabIcon*"></a>
   <h4 id="Godot_TabContainer_GetTabIcon_System_Int32_" data-uid="Godot.TabContainer.GetTabIcon(System.Int32)">GetTabIcon(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Texture.html">Texture</a> for the tab at index <code>tab_idx</code> or <code>null</code> if the tab has no <a class="xref" href="Godot.Texture.html">Texture</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1993,7 +2011,8 @@
   
   <a id="Godot_TabContainer_GetTabIdxAtPoint_" data-uid="Godot.TabContainer.GetTabIdxAtPoint*"></a>
   <h4 id="Godot_TabContainer_GetTabIdxAtPoint_Godot_Vector2_" data-uid="Godot.TabContainer.GetTabIdxAtPoint(Godot.Vector2)">GetTabIdxAtPoint(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the index of the tab at local coordinates <code>point</code>. Returns <code>-1</code> if the point is outside the control boundaries or if there&apos;s no tab at the queried position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2035,7 +2054,8 @@
   
   <a id="Godot_TabContainer_GetTabsRearrangeGroup_" data-uid="Godot.TabContainer.GetTabsRearrangeGroup*"></a>
   <h4 id="Godot_TabContainer_GetTabsRearrangeGroup" data-uid="Godot.TabContainer.GetTabsRearrangeGroup">GetTabsRearrangeGroup()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.TabContainer.html">TabContainer</a> rearrange group id.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2060,7 +2080,8 @@
   
   <a id="Godot_TabContainer_GetTabTitle_" data-uid="Godot.TabContainer.GetTabTitle*"></a>
   <h4 id="Godot_TabContainer_GetTabTitle_System_Int32_" data-uid="Godot.TabContainer.GetTabTitle(System.Int32)">GetTabTitle(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the title of the tab at index <code>tab_idx</code>. Tab titles default to the name of the indexed child node, but this can be overridden with <a class="xref" href="Godot.TabContainer.html#Godot_TabContainer_SetTabTitle_System_Int32_System_String_">SetTabTitle(Int32, String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2233,7 +2254,8 @@
   
   <a id="Godot_TabContainer_SetPopup_" data-uid="Godot.TabContainer.SetPopup*"></a>
   <h4 id="Godot_TabContainer_SetPopup_Godot_Node_" data-uid="Godot.TabContainer.SetPopup(Godot.Node)">SetPopup(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set on a <a class="xref" href="Godot.Popup.html">Popup</a> node instance, a popup menu icon appears in the top-right corner of the <a class="xref" href="Godot.TabContainer.html">TabContainer</a>. Clicking it will expand the <a class="xref" href="Godot.Popup.html">Popup</a> node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2287,7 +2309,8 @@
   
   <a id="Godot_TabContainer_SetTabDisabled_" data-uid="Godot.TabContainer.SetTabDisabled*"></a>
   <h4 id="Godot_TabContainer_SetTabDisabled_System_Int32_System_Boolean_" data-uid="Godot.TabContainer.SetTabDisabled(System.Int32,System.Boolean)">SetTabDisabled(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>disabled</code> is <code>true</code>, disables the tab at index <code>tab_idx</code>, making it non-interactable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2319,7 +2342,8 @@
   
   <a id="Godot_TabContainer_SetTabHidden_" data-uid="Godot.TabContainer.SetTabHidden*"></a>
   <h4 id="Godot_TabContainer_SetTabHidden_System_Int32_System_Boolean_" data-uid="Godot.TabContainer.SetTabHidden(System.Int32,System.Boolean)">SetTabHidden(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>hidden</code> is <code>true</code>, hides the tab at index <code>tab_idx</code>, making it disappear from the tab area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2351,7 +2375,8 @@
   
   <a id="Godot_TabContainer_SetTabIcon_" data-uid="Godot.TabContainer.SetTabIcon*"></a>
   <h4 id="Godot_TabContainer_SetTabIcon_System_Int32_Godot_Texture_" data-uid="Godot.TabContainer.SetTabIcon(System.Int32,Godot.Texture)">SetTabIcon(Int32, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an icon for the tab at index <code>tab_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2383,7 +2408,8 @@
   
   <a id="Godot_TabContainer_SetTabsRearrangeGroup_" data-uid="Godot.TabContainer.SetTabsRearrangeGroup*"></a>
   <h4 id="Godot_TabContainer_SetTabsRearrangeGroup_System_Int32_" data-uid="Godot.TabContainer.SetTabsRearrangeGroup(System.Int32)">SetTabsRearrangeGroup(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines rearrange group id, choose for each <a class="xref" href="Godot.TabContainer.html">TabContainer</a> the same value to enable tab drag between <a class="xref" href="Godot.TabContainer.html">TabContainer</a>. Enable drag with <a class="xref" href="Godot.TabContainer.html#Godot_TabContainer_DragToRearrangeEnabled">DragToRearrangeEnabled</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2437,7 +2463,8 @@
   
   <a id="Godot_TabContainer_SetTabTitle_" data-uid="Godot.TabContainer.SetTabTitle*"></a>
   <h4 id="Godot_TabContainer_SetTabTitle_System_Int32_System_String_" data-uid="Godot.TabContainer.SetTabTitle(System.Int32,System.String)">SetTabTitle(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a title for the tab at index <code>tab_idx</code>. Tab titles default to the name of the indexed child node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

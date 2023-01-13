@@ -83,7 +83,35 @@
   
   <h1 id="Godot_AESContext" data-uid="Godot.AESContext" class="text-break">Class AESContext
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class provides access to AES encryption/decryption of raw data. Both AES-ECB and AES-CBC mode are supported.</p>
+<p><pre><code>extends Node
+<p>var aes = AESContext.new()</p>
+<p>func _ready():
+var key = &quot;My secret key!!!&quot; # Key must be either 16 or 32 bytes.
+var data = &quot;My secret text!!&quot; # Data size must be multiple of 16 bytes, apply padding if needed.
+# Encrypt ECB
+aes.start(AESContext.MODE_ECB_ENCRYPT, key.to_utf8())
+var encrypted = aes.update(data.to_utf8())
+aes.finish()
+# Decrypt ECB
+aes.start(AESContext.MODE_ECB_DECRYPT, key.to_utf8())
+var decrypted = aes.update(encrypted)
+aes.finish()
+# Check ECB
+assert(decrypted == data.to_utf8())</p>
+<pre><code>var iv = &amp;quot;My secret iv!!!!&amp;quot; # IV must be of exactly 16 bytes.
+# Encrypt CBC
+aes.start(AESContext.MODE_CBC_ENCRYPT, key.to_utf8(), iv.to_utf8())
+encrypted = aes.update(data.to_utf8())
+aes.finish()
+# Decrypt CBC
+aes.start(AESContext.MODE_CBC_DECRYPT, key.to_utf8(), iv.to_utf8())
+decrypted = aes.update(encrypted)
+aes.finish()
+# Check CBC
+assert(decrypted == data.to_utf8())&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+</code></pre>
+</code></pre></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +325,8 @@
   
   <a id="Godot_AESContext_Finish_" data-uid="Godot.AESContext.Finish*"></a>
   <h4 id="Godot_AESContext_Finish" data-uid="Godot.AESContext.Finish">Finish()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Close this AES context so it can be started again. See <a class="xref" href="Godot.AESContext.html#Godot_AESContext_Start_Godot_AESContext_Mode_System_Byte___System_Byte___">Start(AESContext.Mode, Byte[], Byte[])</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -307,7 +336,9 @@
   
   <a id="Godot_AESContext_GetIvState_" data-uid="Godot.AESContext.GetIvState*"></a>
   <h4 id="Godot_AESContext_GetIvState" data-uid="Godot.AESContext.GetIvState">GetIvState()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get the current IV state for this context (IV gets updated when calling <a class="xref" href="Godot.AESContext.html#Godot_AESContext_Update_System_Byte___">Update(Byte[])</a>). You normally don&apos;t need this function.</p>
+<p>Note: This function only makes sense when the context is started with <a class="xref" href="Godot.AESContext.Mode.html#Godot_AESContext_Mode_CbcEncrypt">CbcEncrypt</a> or <a class="xref" href="Godot.AESContext.Mode.html#Godot_AESContext_Mode_CbcDecrypt">CbcDecrypt</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -332,7 +363,8 @@
   
   <a id="Godot_AESContext_Start_" data-uid="Godot.AESContext.Start*"></a>
   <h4 id="Godot_AESContext_Start_Godot_AESContext_Mode_System_Byte___System_Byte___" data-uid="Godot.AESContext.Start(Godot.AESContext.Mode,System.Byte[],System.Byte[])">Start(AESContext.Mode, Byte[], Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Start the AES context in the given <code>mode</code>. A <code>key</code> of either 16 or 32 bytes must always be provided, while an <code>iv</code> (initialization vector) of exactly 16 bytes, is only needed when <code>mode</code> is either <a class="xref" href="Godot.AESContext.Mode.html#Godot_AESContext_Mode_CbcEncrypt">CbcEncrypt</a> or <a class="xref" href="Godot.AESContext.Mode.html#Godot_AESContext_Mode_CbcDecrypt">CbcDecrypt</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -361,7 +393,8 @@
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">iv</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is Array.Empty&lt;byte&gt;()</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -384,7 +417,9 @@
   
   <a id="Godot_AESContext_Update_" data-uid="Godot.AESContext.Update*"></a>
   <h4 id="Godot_AESContext_Update_System_Byte___" data-uid="Godot.AESContext.Update(System.Byte[])">Update(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Run the desired operation for this AES context. Will return a <span class="xref">System.Byte</span> containing the result of encrypting (or decrypting) the given <code>src</code>. See <a class="xref" href="Godot.AESContext.html#Godot_AESContext_Start_Godot_AESContext_Mode_System_Byte___System_Byte___">Start(AESContext.Mode, Byte[], Byte[])</a> for mode of operation.</p>
+<p>Note: The size of <code>src</code> must be a multiple of 16. Apply some padding if needed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

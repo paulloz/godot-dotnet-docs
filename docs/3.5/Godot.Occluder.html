@@ -83,7 +83,12 @@
   
   <h1 id="Godot_Occluder" data-uid="Godot.Occluder" class="text-break">Class Occluder
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.Occluder.html">Occluder</a>s that are placed within your scene will automatically cull objects that are hidden from view by the occluder. This can increase performance by decreasing the amount of objects drawn.</p>
+<p><a class="xref" href="Godot.Occluder.html">Occluder</a>s are totally dynamic, you can move them as you wish. This means you can for example, place occluders on a moving spaceship, and have it occlude objects as it flies past.</p>
+<p>You can place a large number of <a class="xref" href="Godot.Occluder.html">Occluder</a>s within a scene. As it would be counterproductive to cull against hundreds of occluders, the system will automatically choose a selection of these for active use during any given frame, based a screen space metric. Larger occluders are favored, as well as those close to the camera. Note that a small occluder close to the camera may be a better occluder in terms of screen space than a large occluder far in the distance.</p>
+<p>The type of occlusion primitive is determined by the <a class="xref" href="Godot.OccluderShape.html">OccluderShape</a> that you add to the <a class="xref" href="Godot.Occluder.html">Occluder</a>. Some <a class="xref" href="Godot.OccluderShape.html">OccluderShape</a>s may allow more than one primitive in a single, node, for greater efficiency.</p>
+<p>Although <a class="xref" href="Godot.Occluder.html">Occluder</a>s work in general use, they also become even more powerful when used in conjunction with the portal system. Occluders are placed in rooms (based on their origin), and can block portals (and thus entire rooms) as well as objects from rendering.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>

@@ -83,7 +83,14 @@
   
   <h1 id="Godot_NavigationPolygonInstance" data-uid="Godot.NavigationPolygonInstance" class="text-break">Class NavigationPolygonInstance
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A region of the navigation map. It tells the <a class="xref" href="Godot.Navigation2DServer.html">Navigation2DServer</a> what can be navigated and what cannot, based on its <a class="xref" href="Godot.NavigationPolygon.html">NavigationPolygon</a> resource.</p>
+<p>By default this node will register to the default <a class="xref" href="Godot.World2D.html">World2D</a> navigation map. If this node is a child of a <a class="xref" href="Godot.Navigation2D.html">Navigation2D</a> node it will register to the navigation map of the navigation node.</p>
+<p>Two regions can be connected to each other if they share a similar edge. You can set the minimum distance between two vertices required to connect two edges by using <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_MapSetEdgeConnectionMargin_Godot_RID_System_Single_">MapSetEdgeConnectionMargin(RID, Single)</a>.</p>
+<p>Note: Overlapping two regions&apos; polygons is not enough for connecting two regions. They must share a similar edge.</p>
+<p>The pathfinding cost of entering this region from another region can be controlled with the <a class="xref" href="Godot.NavigationPolygonInstance.html#Godot_NavigationPolygonInstance_EnterCost">EnterCost</a> value.</p>
+<p>Note: This value is not added to the path cost when the start position is already inside this region.</p>
+<p>The pathfinding cost of traveling distances inside this region can be controlled with the <a class="xref" href="Godot.NavigationPolygonInstance.html#Godot_NavigationPolygonInstance_TravelCost">TravelCost</a> multiplier.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1112,7 +1119,8 @@
   
   <a id="Godot_NavigationPolygonInstance_Enabled_" data-uid="Godot.NavigationPolygonInstance.Enabled*"></a>
   <h4 id="Godot_NavigationPolygonInstance_Enabled" data-uid="Godot.NavigationPolygonInstance.Enabled">Enabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines if the <a class="xref" href="Godot.NavigationPolygonInstance.html">NavigationPolygonInstance</a> is enabled or disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1137,7 +1145,8 @@
   
   <a id="Godot_NavigationPolygonInstance_EnterCost_" data-uid="Godot.NavigationPolygonInstance.EnterCost*"></a>
   <h4 id="Godot_NavigationPolygonInstance_EnterCost" data-uid="Godot.NavigationPolygonInstance.EnterCost">EnterCost</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When pathfinding enters this region&apos;s navmesh from another regions navmesh the <code>enter_cost</code> value is added to the path distance for determining the shortest path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1162,7 +1171,8 @@
   
   <a id="Godot_NavigationPolygonInstance_NavigationLayers_" data-uid="Godot.NavigationPolygonInstance.NavigationLayers*"></a>
   <h4 id="Godot_NavigationPolygonInstance_NavigationLayers" data-uid="Godot.NavigationPolygonInstance.NavigationLayers">NavigationLayers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A bitfield determining all navigation map layers the <a class="xref" href="Godot.NavigationPolygon.html">NavigationPolygon</a> belongs to. On path requests with <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_MapGetPath_Godot_RID_Godot_Vector2_Godot_Vector2_System_Boolean_System_UInt32_">MapGetPath(RID, Vector2, Vector2, Boolean, UInt32)</a> navmeshes without matching layers will be ignored and the navigation map will only proximity merge different navmeshes with matching layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1187,7 +1197,8 @@
   
   <a id="Godot_NavigationPolygonInstance_Navpoly_" data-uid="Godot.NavigationPolygonInstance.Navpoly*"></a>
   <h4 id="Godot_NavigationPolygonInstance_Navpoly" data-uid="Godot.NavigationPolygonInstance.Navpoly">Navpoly</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.NavigationPolygon.html">NavigationPolygon</a> resource to use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1212,7 +1223,8 @@
   
   <a id="Godot_NavigationPolygonInstance_TravelCost_" data-uid="Godot.NavigationPolygonInstance.TravelCost*"></a>
   <h4 id="Godot_NavigationPolygonInstance_TravelCost" data-uid="Godot.NavigationPolygonInstance.TravelCost">TravelCost</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When pathfinding moves inside this region&apos;s navmesh the traveled distances are multiplied with <code>travel_cost</code> for determining the shortest path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1314,7 +1326,8 @@
   
   <a id="Godot_NavigationPolygonInstance_GetRegionRid_" data-uid="Godot.NavigationPolygonInstance.GetRegionRid*"></a>
   <h4 id="Godot_NavigationPolygonInstance_GetRegionRid" data-uid="Godot.NavigationPolygonInstance.GetRegionRid">GetRegionRid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.RID.html">RID</a> of this region on the <a class="xref" href="Godot.Navigation2DServer.html">Navigation2DServer</a>. Combined with <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_MapGetClosestPointOwner_Godot_RID_Godot_Vector2_">MapGetClosestPointOwner(RID, Vector2)</a> can be used to identify the <a class="xref" href="Godot.NavigationPolygonInstance.html">NavigationPolygonInstance</a> closest to a point on the merged navigation map.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

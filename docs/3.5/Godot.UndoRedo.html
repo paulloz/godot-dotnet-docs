@@ -83,7 +83,25 @@
   
   <h1 id="Godot_UndoRedo" data-uid="Godot.UndoRedo" class="text-break">Class UndoRedo
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Helper to manage undo/redo operations in the editor or custom tools. It works by registering methods and property changes inside &quot;actions&quot;.</p>
+<p>Common behavior is to create an action, then add do/undo calls to functions or property changes, then committing the action.</p>
+<p>Here&apos;s an example on how to add an action to the Godot editor&apos;s own <a class="xref" href="Godot.UndoRedo.html">UndoRedo</a>, from a plugin:</p>
+<p><pre><code>var undo_redo = get_undo_redo() # Method of EditorPlugin.
+<p>func do_something():
+pass # Put your code here.</p>
+<p>func undo_something():
+pass # Put here the code that reverts what's done by &quot;do_something()&quot;.</p>
+<p>func _on_MyButton_pressed():
+var node = get_node(&quot;MyNode2D&quot;)
+undo_redo.create_action(&quot;Move the node&quot;)
+undo_redo.add_do_method(self, &quot;do_something&quot;)
+undo_redo.add_undo_method(self, &quot;undo_something&quot;)
+undo_redo.add_do_property(node, &quot;position&quot;, Vector2(100,100))
+undo_redo.add_undo_property(node, &quot;position&quot;, node.position)
+undo_redo.commit_action()</code></pre></p><p>
+<p><a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_CreateAction_System_String_Godot_UndoRedo_MergeMode_">CreateAction(String, UndoRedo.MergeMode)</a>, <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddDoMethod_Godot_Object_System_String_System_Object___">AddDoMethod(Object, String, Object[])</a>, <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddUndoMethod_Godot_Object_System_String_System_Object___">AddUndoMethod(Object, String, Object[])</a>, <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddDoProperty_Godot_Object_System_String_System_Object_">AddDoProperty(Object, String, Object)</a>, <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddUndoProperty_Godot_Object_System_String_System_Object_">AddUndoProperty(Object, String, Object)</a>, and <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_CommitAction">CommitAction()</a> should be called one after the other, like in the example. Not doing so could lead to crashes.</p>
+<p>If you don&apos;t need to register a method, you can leave <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddDoMethod_Godot_Object_System_String_System_Object___">AddDoMethod(Object, String, Object[])</a> and <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddUndoMethod_Godot_Object_System_String_System_Object___">AddUndoMethod(Object, String, Object[])</a> out; the same goes for properties. You can also register more than one method/property.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -287,7 +305,8 @@
   
   <a id="Godot_UndoRedo_AddDoMethod_" data-uid="Godot.UndoRedo.AddDoMethod*"></a>
   <h4 id="Godot_UndoRedo_AddDoMethod_Godot_Object_System_String_System_Object___" data-uid="Godot.UndoRedo.AddDoMethod(Godot.Object,System.String,System.Object[])">AddDoMethod(Object, String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Register a method that will be called when the action is committed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -324,7 +343,8 @@
   
   <a id="Godot_UndoRedo_AddDoProperty_" data-uid="Godot.UndoRedo.AddDoProperty*"></a>
   <h4 id="Godot_UndoRedo_AddDoProperty_Godot_Object_System_String_System_Object_" data-uid="Godot.UndoRedo.AddDoProperty(Godot.Object,System.String,System.Object)">AddDoProperty(Object, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Register a property value change for &quot;do&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -361,7 +381,8 @@
   
   <a id="Godot_UndoRedo_AddDoReference_" data-uid="Godot.UndoRedo.AddDoReference*"></a>
   <h4 id="Godot_UndoRedo_AddDoReference_Godot_Object_" data-uid="Godot.UndoRedo.AddDoReference(Godot.Object)">AddDoReference(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Register a reference for &quot;do&quot; that will be erased if the &quot;do&quot; history is lost. This is useful mostly for new nodes created for the &quot;do&quot; call. Do not use for resources.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -388,7 +409,8 @@
   
   <a id="Godot_UndoRedo_AddUndoMethod_" data-uid="Godot.UndoRedo.AddUndoMethod*"></a>
   <h4 id="Godot_UndoRedo_AddUndoMethod_Godot_Object_System_String_System_Object___" data-uid="Godot.UndoRedo.AddUndoMethod(Godot.Object,System.String,System.Object[])">AddUndoMethod(Object, String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Register a method that will be called when the action is undone.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -425,7 +447,8 @@
   
   <a id="Godot_UndoRedo_AddUndoProperty_" data-uid="Godot.UndoRedo.AddUndoProperty*"></a>
   <h4 id="Godot_UndoRedo_AddUndoProperty_Godot_Object_System_String_System_Object_" data-uid="Godot.UndoRedo.AddUndoProperty(Godot.Object,System.String,System.Object)">AddUndoProperty(Object, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Register a property value change for &quot;undo&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -462,7 +485,8 @@
   
   <a id="Godot_UndoRedo_AddUndoReference_" data-uid="Godot.UndoRedo.AddUndoReference*"></a>
   <h4 id="Godot_UndoRedo_AddUndoReference_Godot_Object_" data-uid="Godot.UndoRedo.AddUndoReference(Godot.Object)">AddUndoReference(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Register a reference for &quot;undo&quot; that will be erased if the &quot;undo&quot; history is lost. This is useful mostly for nodes removed with the &quot;do&quot; call (not the &quot;undo&quot; call!).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -489,7 +513,9 @@
   
   <a id="Godot_UndoRedo_ClearHistory_" data-uid="Godot.UndoRedo.ClearHistory*"></a>
   <h4 id="Godot_UndoRedo_ClearHistory_System_Boolean_" data-uid="Godot.UndoRedo.ClearHistory(System.Boolean)">ClearHistory(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clear the undo/redo history and associated references.</p>
+<p>Passing <code>false</code> to <code>increase_version</code> will prevent the version number to be increased from this.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -516,7 +542,8 @@
   
   <a id="Godot_UndoRedo_CommitAction_" data-uid="Godot.UndoRedo.CommitAction*"></a>
   <h4 id="Godot_UndoRedo_CommitAction" data-uid="Godot.UndoRedo.CommitAction">CommitAction()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Commit the action. All &quot;do&quot; methods/properties are called/set when this function is called.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -526,7 +553,9 @@
   
   <a id="Godot_UndoRedo_CreateAction_" data-uid="Godot.UndoRedo.CreateAction*"></a>
   <h4 id="Godot_UndoRedo_CreateAction_System_String_Godot_UndoRedo_MergeMode_" data-uid="Godot.UndoRedo.CreateAction(System.String,Godot.UndoRedo.MergeMode)">CreateAction(String, UndoRedo.MergeMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a new action. After this is called, do all your calls to <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddDoMethod_Godot_Object_System_String_System_Object___">AddDoMethod(Object, String, Object[])</a>, <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddUndoMethod_Godot_Object_System_String_System_Object___">AddUndoMethod(Object, String, Object[])</a>, <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddDoProperty_Godot_Object_System_String_System_Object_">AddDoProperty(Object, String, Object)</a>, and <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_AddUndoProperty_Godot_Object_System_String_System_Object_">AddUndoProperty(Object, String, Object)</a>, then commit the action with <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_CommitAction">CommitAction()</a>.</p>
+<p>The way actions are merged is dictated by the <code>merge_mode</code> argument. See <a class="xref" href="Godot.UndoRedo.MergeMode.html">UndoRedo.MergeMode</a> for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -558,7 +587,8 @@
   
   <a id="Godot_UndoRedo_GetCurrentActionName_" data-uid="Godot.UndoRedo.GetCurrentActionName*"></a>
   <h4 id="Godot_UndoRedo_GetCurrentActionName" data-uid="Godot.UndoRedo.GetCurrentActionName">GetCurrentActionName()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name of the current action.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -583,7 +613,9 @@
   
   <a id="Godot_UndoRedo_GetVersion_" data-uid="Godot.UndoRedo.GetVersion*"></a>
   <h4 id="Godot_UndoRedo_GetVersion" data-uid="Godot.UndoRedo.GetVersion">GetVersion()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the version. Every time a new action is committed, the <a class="xref" href="Godot.UndoRedo.html">UndoRedo</a>&apos;s version number is increased automatically.</p>
+<p>This is useful mostly to check if something changed from a saved version.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -608,7 +640,8 @@
   
   <a id="Godot_UndoRedo_HasRedo_" data-uid="Godot.UndoRedo.HasRedo*"></a>
   <h4 id="Godot_UndoRedo_HasRedo" data-uid="Godot.UndoRedo.HasRedo">HasRedo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a &quot;redo&quot; action is available.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -633,7 +666,8 @@
   
   <a id="Godot_UndoRedo_HasUndo_" data-uid="Godot.UndoRedo.HasUndo*"></a>
   <h4 id="Godot_UndoRedo_HasUndo" data-uid="Godot.UndoRedo.HasUndo">HasUndo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if an &quot;undo&quot; action is available.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -658,7 +692,8 @@
   
   <a id="Godot_UndoRedo_IsCommitingAction_" data-uid="Godot.UndoRedo.IsCommitingAction*"></a>
   <h4 id="Godot_UndoRedo_IsCommitingAction" data-uid="Godot.UndoRedo.IsCommitingAction">IsCommitingAction()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the <a class="xref" href="Godot.UndoRedo.html">UndoRedo</a> is currently committing the action, i.e. running its &quot;do&quot; method or property change (see <a class="xref" href="Godot.UndoRedo.html#Godot_UndoRedo_CommitAction">CommitAction()</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -683,7 +718,8 @@
   
   <a id="Godot_UndoRedo_Redo_" data-uid="Godot.UndoRedo.Redo*"></a>
   <h4 id="Godot_UndoRedo_Redo" data-uid="Godot.UndoRedo.Redo">Redo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Redo the last action.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -708,7 +744,8 @@
   
   <a id="Godot_UndoRedo_Undo_" data-uid="Godot.UndoRedo.Undo*"></a>
   <h4 id="Godot_UndoRedo_Undo" data-uid="Godot.UndoRedo.Undo">Undo()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Undo the last action.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

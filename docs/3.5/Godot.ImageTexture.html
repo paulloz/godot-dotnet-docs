@@ -83,7 +83,23 @@
   
   <h1 id="Godot_ImageTexture" data-uid="Godot.ImageTexture" class="text-break">Class ImageTexture
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="Godot.Texture.html">Texture</a> based on an <a class="xref" href="Godot.Image.html">Image</a>. For an image to be displayed, an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a> has to be created from it using the <a class="xref" href="Godot.ImageTexture.html#Godot_ImageTexture_CreateFromImage_Godot_Image_System_UInt32_">CreateFromImage(Image, UInt32)</a> method:</p>
+<p><pre><code>var texture = ImageTexture.new()
+var image = Image.new()
+image.load(&quot;res://icon.png&quot;)
+texture.create_from_image(image)
+$Sprite.texture = texture</code></pre></p>
+<p>This way, textures can be created at run-time by loading images both from within the editor and externally.</p>
+<p>Warning: Prefer to load imported textures with <code>@GDScript.load</code> over loading them from within the filesystem dynamically with <a class="xref" href="Godot.Image.html#Godot_Image_Load_System_String_">Load(String)</a>, as it may not work in exported projects:</p>
+<p><pre><code>var texture = load(&quot;res://icon.png&quot;)
+$Sprite.texture = texture</code></pre></p>
+<p>This is because images have to be imported as <a class="xref" href="Godot.StreamTexture.html">StreamTexture</a> first to be loaded with <code>@GDScript.load</code>. If you&apos;d still like to load an image file just like any other <a class="xref" href="Godot.Resource.html">Resource</a>, import it as an <a class="xref" href="Godot.Image.html">Image</a> resource instead, and then load it normally using the <code>@GDScript.load</code> method.</p>
+<p>But do note that the image data can still be retrieved from an imported texture as well using the <a class="xref" href="Godot.Texture.html#Godot_Texture_GetData">GetData()</a> method, which returns a copy of the data:</p>
+<p><pre><code>var texture = load(&quot;res://icon.png&quot;)
+var image : Image = texture.get_data()</code></pre></p>
+<p>An <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a> is not meant to be operated from within the editor interface directly, and is mostly useful for rendering images on screen dynamically via code. If you need to generate images procedurally from within the editor, consider saving and importing images as custom texture resources implementing a new <see cref="!:Godot.EditorImportPlugin"></see>.</p>
+<p>Note: The maximum texture size is 16384×16384 pixels due to graphics hardware limitations.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -380,7 +396,8 @@
   
   <a id="Godot_ImageTexture_LossyQuality_" data-uid="Godot.ImageTexture.LossyQuality*"></a>
   <h4 id="Godot_ImageTexture_LossyQuality" data-uid="Godot.ImageTexture.LossyQuality">LossyQuality</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The storage quality for <a class="xref" href="Godot.ImageTexture.StorageEnum.html#Godot_ImageTexture_StorageEnum_CompressLossy">CompressLossy</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -405,7 +422,8 @@
   
   <a id="Godot_ImageTexture_Storage_" data-uid="Godot.ImageTexture.Storage*"></a>
   <h4 id="Godot_ImageTexture_Storage" data-uid="Godot.ImageTexture.Storage">Storage</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The storage type (raw, lossy, or compressed).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -432,7 +450,9 @@
   
   <a id="Godot_ImageTexture_Create_" data-uid="Godot.ImageTexture.Create*"></a>
   <h4 id="Godot_ImageTexture_Create_System_Int32_System_Int32_Godot_Image_Format_System_UInt32_" data-uid="Godot.ImageTexture.Create(System.Int32,System.Int32,Godot.Image.Format,System.UInt32)">Create(Int32, Int32, Image.Format, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a new <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a> with <code>width</code> and <code>height</code>.</p>
+<p><code>format</code> is a value from <a class="xref" href="Godot.Image.Format.html">Image.Format</a>, <code>flags</code> is any combination of <a class="xref" href="Godot.Texture.FlagsEnum.html">Texture.FlagsEnum</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -474,7 +494,8 @@
   
   <a id="Godot_ImageTexture_CreateFromImage_" data-uid="Godot.ImageTexture.CreateFromImage*"></a>
   <h4 id="Godot_ImageTexture_CreateFromImage_Godot_Image_System_UInt32_" data-uid="Godot.ImageTexture.CreateFromImage(Godot.Image,System.UInt32)">CreateFromImage(Image, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes the texture by allocating and setting the data from an <a class="xref" href="Godot.Image.html">Image</a> with <code>flags</code> from <a class="xref" href="Godot.Texture.FlagsEnum.html">Texture.FlagsEnum</a>. An sRGB to linear color space conversion can take place, according to <a class="xref" href="Godot.Image.Format.html">Image.Format</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -506,7 +527,8 @@
   
   <a id="Godot_ImageTexture_GetFormat_" data-uid="Godot.ImageTexture.GetFormat*"></a>
   <h4 id="Godot_ImageTexture_GetFormat" data-uid="Godot.ImageTexture.GetFormat">GetFormat()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the format of the texture, one of <a class="xref" href="Godot.Image.Format.html">Image.Format</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -581,7 +603,9 @@
   
   <a id="Godot_ImageTexture_Load_" data-uid="Godot.ImageTexture.Load*"></a>
   <h4 id="Godot_ImageTexture_Load_System_String_" data-uid="Godot.ImageTexture.Load(System.String)">Load(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads an image from a file path and creates a texture from it.</p>
+<p>Note: This method is deprecated and will be removed in Godot 4.0, use <a class="xref" href="Godot.Image.html#Godot_Image_Load_System_String_">Load(String)</a> and <a class="xref" href="Godot.ImageTexture.html#Godot_ImageTexture_CreateFromImage_Godot_Image_System_UInt32_">CreateFromImage(Image, UInt32)</a> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -623,7 +647,10 @@
   
   <a id="Godot_ImageTexture_SetData_" data-uid="Godot.ImageTexture.SetData*"></a>
   <h4 id="Godot_ImageTexture_SetData_Godot_Image_" data-uid="Godot.ImageTexture.SetData(Godot.Image)">SetData(Image)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Replaces the texture&apos;s data with a new <a class="xref" href="Godot.Image.html">Image</a>.</p>
+<p>Note: The texture has to be initialized first with the <a class="xref" href="Godot.ImageTexture.html#Godot_ImageTexture_CreateFromImage_Godot_Image_System_UInt32_">CreateFromImage(Image, UInt32)</a> method before it can be updated. The new image dimensions, format, and mipmaps configuration should match the existing texture&apos;s image configuration, otherwise it has to be re-created with the <a class="xref" href="Godot.ImageTexture.html#Godot_ImageTexture_CreateFromImage_Godot_Image_System_UInt32_">CreateFromImage(Image, UInt32)</a> method.</p>
+<p>Use this method over <a class="xref" href="Godot.ImageTexture.html#Godot_ImageTexture_CreateFromImage_Godot_Image_System_UInt32_">CreateFromImage(Image, UInt32)</a> if you need to update the texture frequently, which is faster than allocating additional memory for a new texture each time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -677,7 +704,8 @@
   
   <a id="Godot_ImageTexture_SetSizeOverride_" data-uid="Godot.ImageTexture.SetSizeOverride*"></a>
   <h4 id="Godot_ImageTexture_SetSizeOverride_Godot_Vector2_" data-uid="Godot.ImageTexture.SetSizeOverride(Godot.Vector2)">SetSizeOverride(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resizes the texture to the specified dimensions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

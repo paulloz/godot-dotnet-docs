@@ -83,7 +83,9 @@
   
   <h1 id="Godot_NavigationObstacle" data-uid="Godot.NavigationObstacle" class="text-break">Class NavigationObstacle
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>3D obstacle used in navigation for collision avoidance. The obstacle needs navigation data to work correctly. This can be done by having the obstacle as a child of a <a class="xref" href="Godot.Navigation.html">Navigation</a> node, or using <a class="xref" href="Godot.NavigationObstacle.html#Godot_NavigationObstacle_SetNavigation_Godot_Node_">SetNavigation(Node)</a>. <a class="xref" href="Godot.NavigationObstacle.html">NavigationObstacle</a> is physics safe.</p>
+<p>Note: Obstacles are intended as a last resort option for constantly moving objects that cannot be (re)baked to a navigation mesh efficiently.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -753,7 +755,8 @@
   
   <a id="Godot_NavigationObstacle_EstimateRadius_" data-uid="Godot.NavigationObstacle.EstimateRadius*"></a>
   <h4 id="Godot_NavigationObstacle_EstimateRadius" data-uid="Godot.NavigationObstacle.EstimateRadius">EstimateRadius</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables radius estimation algorithm which uses parent&apos;s collision shapes to determine the obstacle radius.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -778,7 +781,8 @@
   
   <a id="Godot_NavigationObstacle_Radius_" data-uid="Godot.NavigationObstacle.Radius*"></a>
   <h4 id="Godot_NavigationObstacle_Radius" data-uid="Godot.NavigationObstacle.Radius">Radius</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The radius of the agent. Used only if <a class="xref" href="Godot.NavigationObstacle.html#Godot_NavigationObstacle_EstimateRadius">EstimateRadius</a> is set to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -805,7 +809,8 @@
   
   <a id="Godot_NavigationObstacle_GetNavigation_" data-uid="Godot.NavigationObstacle.GetNavigation*"></a>
   <h4 id="Godot_NavigationObstacle_GetNavigation" data-uid="Godot.NavigationObstacle.GetNavigation">GetNavigation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Navigation.html">Navigation</a> node that the obstacle is using for its navigation system.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -855,7 +860,8 @@
   
   <a id="Godot_NavigationObstacle_GetRid_" data-uid="Godot.NavigationObstacle.GetRid*"></a>
   <h4 id="Godot_NavigationObstacle_GetRid" data-uid="Godot.NavigationObstacle.GetRid">GetRid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.RID.html">RID</a> of this obstacle on the <a class="xref" href="Godot.NavigationServer.html">NavigationServer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -932,7 +938,8 @@
   
   <a id="Godot_NavigationObstacle_SetNavigation_" data-uid="Godot.NavigationObstacle.SetNavigation*"></a>
   <h4 id="Godot_NavigationObstacle_SetNavigation_Godot_Node_" data-uid="Godot.NavigationObstacle.SetNavigation(Godot.Node)">SetNavigation(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Navigation.html">Navigation</a> node used by the obstacle. Useful when you don&apos;t want to make the obstacle a child of a <a class="xref" href="Godot.Navigation.html">Navigation</a> node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

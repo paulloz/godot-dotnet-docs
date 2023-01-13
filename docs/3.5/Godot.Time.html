@@ -83,7 +83,12 @@
   
   <h1 id="Godot_Time" data-uid="Godot.Time" class="text-break">Class Time
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The Time singleton allows converting time between various formats and also getting time information from the system.</p>
+<p>This class conforms with as many of the ISO 8601 standards as possible. All dates follow the Proleptic Gregorian calendar. As such, the day before <code>1582-10-15</code> is <code>1582-10-14</code>, not <code>1582-10-04</code>. The year before 1 AD (aka 1 BC) is number <code>0</code>, with the year before that (2 BC) being <code>-1</code>, etc.</p>
+<p>Conversion methods assume &quot;the same timezone&quot;, and do not handle timezone conversions or DST automatically. Leap seconds are also not handled, they must be done manually if desired. Suffixes such as &quot;Z&quot; are not handled, you need to strip them away manually.</p>
+<p>When getting time information from the system, the time can either be in the local timezone or UTC depending on the <code>utc</code> parameter. However, the <a class="xref" href="Godot.Time.html#Godot_Time_GetUnixTimeFromSystem">GetUnixTimeFromSystem()</a> method always returns the time in UTC.</p>
+<p>Important: The <code>_from_system</code> methods use the system clock that the user can manually set. Never use this method for precise time calculation since its results are subject to automatic adjustments by the user or the operating system. Always use <a class="xref" href="Godot.Time.html#Godot_Time_GetTicksUsec">GetTicksUsec()</a> or <a class="xref" href="Godot.Time.html#Godot_Time_GetTicksMsec">GetTicksMsec()</a> for precise time calculation instead, since they are guaranteed to be monotonic (i.e. never decrease).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +134,9 @@
   
   <a id="Godot_Time_GetDateDictFromSystem_" data-uid="Godot.Time.GetDateDictFromSystem*"></a>
   <h4 id="Godot_Time_GetDateDictFromSystem_System_Boolean_" data-uid="Godot.Time.GetDateDictFromSystem(System.Boolean)">GetDateDictFromSystem(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current date as a dictionary of keys: <code>year</code>, <code>month</code>, <code>day</code>, <code>weekday</code>, and <code>dst</code> (Daylight Savings Time).</p>
+<p>The returned values are in the system&apos;s local time when <code>utc</code> is false, otherwise they are in UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -171,7 +178,8 @@
   
   <a id="Godot_Time_GetDateDictFromUnixTime_" data-uid="Godot.Time.GetDateDictFromUnixTime*"></a>
   <h4 id="Godot_Time_GetDateDictFromUnixTime_System_Int64_" data-uid="Godot.Time.GetDateDictFromUnixTime(System.Int64)">GetDateDictFromUnixTime(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given Unix timestamp to a dictionary of keys: <code>year</code>, <code>month</code>, <code>day</code>, and <code>weekday</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -213,7 +221,9 @@
   
   <a id="Godot_Time_GetDateStringFromSystem_" data-uid="Godot.Time.GetDateStringFromSystem*"></a>
   <h4 id="Godot_Time_GetDateStringFromSystem_System_Boolean_" data-uid="Godot.Time.GetDateStringFromSystem(System.Boolean)">GetDateStringFromSystem(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current date as an ISO 8601 date string (YYYY-MM-DD).</p>
+<p>The returned values are in the system&apos;s local time when <code>utc</code> is false, otherwise they are in UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -255,7 +265,8 @@
   
   <a id="Godot_Time_GetDateStringFromUnixTime_" data-uid="Godot.Time.GetDateStringFromUnixTime*"></a>
   <h4 id="Godot_Time_GetDateStringFromUnixTime_System_Int64_" data-uid="Godot.Time.GetDateStringFromUnixTime(System.Int64)">GetDateStringFromUnixTime(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given Unix timestamp to an ISO 8601 date string (YYYY-MM-DD).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -297,7 +308,10 @@
   
   <a id="Godot_Time_GetDatetimeDictFromDatetimeString_" data-uid="Godot.Time.GetDatetimeDictFromDatetimeString*"></a>
   <h4 id="Godot_Time_GetDatetimeDictFromDatetimeString_System_String_System_Boolean_" data-uid="Godot.Time.GetDatetimeDictFromDatetimeString(System.String,System.Boolean)">GetDatetimeDictFromDatetimeString(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given ISO 8601 date and time string (YYYY-MM-DDTHH:MM:SS) to a dictionary of keys: <code>year</code>, <code>month</code>, <code>day</code>, <code>weekday</code>, <code>hour</code>, <code>minute</code>, and <code>second</code>.</p>
+<p>If <code>weekday</code> is false, then the <code>weekday</code> entry is excluded (the calculation is relatively expensive).</p>
+<p>Note: Any decimal fraction in the time string will be ignored silently.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,7 +358,8 @@
   
   <a id="Godot_Time_GetDatetimeDictFromSystem_" data-uid="Godot.Time.GetDatetimeDictFromSystem*"></a>
   <h4 id="Godot_Time_GetDatetimeDictFromSystem_System_Boolean_" data-uid="Godot.Time.GetDatetimeDictFromSystem(System.Boolean)">GetDatetimeDictFromSystem(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current date as a dictionary of keys: <code>year</code>, <code>month</code>, <code>day</code>, <code>weekday</code>, <code>hour</code>, <code>minute</code>, and <code>second</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -386,7 +401,9 @@
   
   <a id="Godot_Time_GetDatetimeDictFromUnixTime_" data-uid="Godot.Time.GetDatetimeDictFromUnixTime*"></a>
   <h4 id="Godot_Time_GetDatetimeDictFromUnixTime_System_Int64_" data-uid="Godot.Time.GetDatetimeDictFromUnixTime(System.Int64)">GetDatetimeDictFromUnixTime(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given Unix timestamp to a dictionary of keys: <code>year</code>, <code>month</code>, <code>day</code>, and <code>weekday</code>.</p>
+<p>The returned Dictionary&apos;s values will be the same as the <a class="xref" href="Godot.Time.html#Godot_Time_GetDatetimeDictFromSystem_System_Boolean_">GetDatetimeDictFromSystem(Boolean)</a> if the Unix timestamp is the current time, with the exception of Daylight Savings Time as it cannot be determined from the epoch.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -428,7 +445,11 @@
   
   <a id="Godot_Time_GetDatetimeStringFromDatetimeDict_" data-uid="Godot.Time.GetDatetimeStringFromDatetimeDict*"></a>
   <h4 id="Godot_Time_GetDatetimeStringFromDatetimeDict_Godot_Collections_Dictionary_System_Boolean_" data-uid="Godot.Time.GetDatetimeStringFromDatetimeDict(Godot.Collections.Dictionary,System.Boolean)">GetDatetimeStringFromDatetimeDict(Dictionary, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given dictionary of keys to an ISO 8601 date and time string (YYYY-MM-DDTHH:MM:SS).</p>
+<p>The given dictionary can be populated with the following keys: <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, and <code>second</code>. Any other entries (including <code>dst</code>) are ignored.</p>
+<p>If the dictionary is empty, <code>0</code> is returned. If some keys are omitted, they default to the equivalent values for the Unix epoch timestamp 0 (1970-01-01 at 00:00:00).</p>
+<p>If <code>use_space</code> is true, use a space instead of the letter T in the middle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -475,7 +496,10 @@
   
   <a id="Godot_Time_GetDatetimeStringFromSystem_" data-uid="Godot.Time.GetDatetimeStringFromSystem*"></a>
   <h4 id="Godot_Time_GetDatetimeStringFromSystem_System_Boolean_System_Boolean_" data-uid="Godot.Time.GetDatetimeStringFromSystem(System.Boolean,System.Boolean)">GetDatetimeStringFromSystem(Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current date and time as an ISO 8601 date and time string (YYYY-MM-DDTHH:MM:SS).</p>
+<p>The returned values are in the system&apos;s local time when <code>utc</code> is false, otherwise they are in UTC.</p>
+<p>If <code>use_space</code> is true, use a space instead of the letter T in the middle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -522,7 +546,9 @@
   
   <a id="Godot_Time_GetDatetimeStringFromUnixTime_" data-uid="Godot.Time.GetDatetimeStringFromUnixTime*"></a>
   <h4 id="Godot_Time_GetDatetimeStringFromUnixTime_System_Int64_System_Boolean_" data-uid="Godot.Time.GetDatetimeStringFromUnixTime(System.Int64,System.Boolean)">GetDatetimeStringFromUnixTime(Int64, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given Unix timestamp to an ISO 8601 date and time string (YYYY-MM-DDTHH:MM:SS).</p>
+<p>If <code>use_space</code> is true, use a space instead of the letter T in the middle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -569,7 +595,8 @@
   
   <a id="Godot_Time_GetOffsetStringFromOffsetMinutes_" data-uid="Godot.Time.GetOffsetStringFromOffsetMinutes*"></a>
   <h4 id="Godot_Time_GetOffsetStringFromOffsetMinutes_System_Int64_" data-uid="Godot.Time.GetOffsetStringFromOffsetMinutes(System.Int64)">GetOffsetStringFromOffsetMinutes(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given timezone offset in minutes to a timezone offset string. For example, -480 returns &quot;-08:00&quot;, 345 returns &quot;+05:45&quot;, and 0 returns &quot;+00:00&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -611,7 +638,9 @@
   
   <a id="Godot_Time_GetTicksMsec_" data-uid="Godot.Time.GetTicksMsec*"></a>
   <h4 id="Godot_Time_GetTicksMsec" data-uid="Godot.Time.GetTicksMsec">GetTicksMsec()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of time passed in milliseconds since the engine started.</p>
+<p>Will always be positive or 0 and uses a 64-bit value (it will wrap after roughly 500 million years).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -636,7 +665,9 @@
   
   <a id="Godot_Time_GetTicksUsec_" data-uid="Godot.Time.GetTicksUsec*"></a>
   <h4 id="Godot_Time_GetTicksUsec" data-uid="Godot.Time.GetTicksUsec">GetTicksUsec()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of time passed in microseconds since the engine started.</p>
+<p>Will always be positive or 0 and uses a 64-bit value (it will wrap after roughly half a million years).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -661,7 +692,9 @@
   
   <a id="Godot_Time_GetTimeDictFromSystem_" data-uid="Godot.Time.GetTimeDictFromSystem*"></a>
   <h4 id="Godot_Time_GetTimeDictFromSystem_System_Boolean_" data-uid="Godot.Time.GetTimeDictFromSystem(System.Boolean)">GetTimeDictFromSystem(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current time as a dictionary of keys: <code>hour</code>, <code>minute</code>, and <code>second</code>.</p>
+<p>The returned values are in the system&apos;s local time when <code>utc</code> is false, otherwise they are in UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -703,7 +736,8 @@
   
   <a id="Godot_Time_GetTimeDictFromUnixTime_" data-uid="Godot.Time.GetTimeDictFromUnixTime*"></a>
   <h4 id="Godot_Time_GetTimeDictFromUnixTime_System_Int64_" data-uid="Godot.Time.GetTimeDictFromUnixTime(System.Int64)">GetTimeDictFromUnixTime(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given time to a dictionary of keys: <code>hour</code>, <code>minute</code>, and <code>second</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -745,7 +779,9 @@
   
   <a id="Godot_Time_GetTimeStringFromSystem_" data-uid="Godot.Time.GetTimeStringFromSystem*"></a>
   <h4 id="Godot_Time_GetTimeStringFromSystem_System_Boolean_" data-uid="Godot.Time.GetTimeStringFromSystem(System.Boolean)">GetTimeStringFromSystem(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current time as an ISO 8601 time string (HH:MM:SS).</p>
+<p>The returned values are in the system&apos;s local time when <code>utc</code> is false, otherwise they are in UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -787,7 +823,8 @@
   
   <a id="Godot_Time_GetTimeStringFromUnixTime_" data-uid="Godot.Time.GetTimeStringFromUnixTime*"></a>
   <h4 id="Godot_Time_GetTimeStringFromUnixTime_System_Int64_" data-uid="Godot.Time.GetTimeStringFromUnixTime(System.Int64)">GetTimeStringFromUnixTime(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given Unix timestamp to an ISO 8601 time string (HH:MM:SS).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -829,7 +866,8 @@
   
   <a id="Godot_Time_GetTimeZoneFromSystem_" data-uid="Godot.Time.GetTimeZoneFromSystem*"></a>
   <h4 id="Godot_Time_GetTimeZoneFromSystem" data-uid="Godot.Time.GetTimeZoneFromSystem">GetTimeZoneFromSystem()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current time zone as a dictionary of keys: <code>bias</code> and <code>name</code>. The <code>bias</code> value is the offset from UTC in minutes, since not all time zones are multiples of an hour from UTC.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -854,7 +892,12 @@
   
   <a id="Godot_Time_GetUnixTimeFromDatetimeDict_" data-uid="Godot.Time.GetUnixTimeFromDatetimeDict*"></a>
   <h4 id="Godot_Time_GetUnixTimeFromDatetimeDict_Godot_Collections_Dictionary_" data-uid="Godot.Time.GetUnixTimeFromDatetimeDict(Godot.Collections.Dictionary)">GetUnixTimeFromDatetimeDict(Dictionary)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a dictionary of time values to a Unix timestamp.</p>
+<p>The given dictionary can be populated with the following keys: <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, and <code>second</code>. Any other entries (including <code>dst</code>) are ignored.</p>
+<p>If the dictionary is empty, <code>0</code> is returned. If some keys are omitted, they default to the equivalent values for the Unix epoch timestamp 0 (1970-01-01 at 00:00:00).</p>
+<p>You can pass the output from <a class="xref" href="Godot.Time.html#Godot_Time_GetDatetimeDictFromUnixTime_System_Int64_">GetDatetimeDictFromUnixTime(Int64)</a> directly into this function and get the same as what was put in.</p>
+<p>Note: Unix timestamps are often in UTC. This method does not do any timezone conversion, so the timestamp will be in the same timezone as the given datetime dictionary.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -896,7 +939,10 @@
   
   <a id="Godot_Time_GetUnixTimeFromDatetimeString_" data-uid="Godot.Time.GetUnixTimeFromDatetimeString*"></a>
   <h4 id="Godot_Time_GetUnixTimeFromDatetimeString_System_String_" data-uid="Godot.Time.GetUnixTimeFromDatetimeString(System.String)">GetUnixTimeFromDatetimeString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given ISO 8601 date and/or time string to a Unix timestamp. The string can contain a date only, a time only, or both.</p>
+<p>Note: Unix timestamps are often in UTC. This method does not do any timezone conversion, so the timestamp will be in the same timezone as the given datetime string.</p>
+<p>Note: Any decimal fraction in the time string will be ignored silently.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -938,7 +984,9 @@
   
   <a id="Godot_Time_GetUnixTimeFromSystem_" data-uid="Godot.Time.GetUnixTimeFromSystem*"></a>
   <h4 id="Godot_Time_GetUnixTimeFromSystem" data-uid="Godot.Time.GetUnixTimeFromSystem">GetUnixTimeFromSystem()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current Unix timestamp in seconds based on the system time in UTC. This method is implemented by the operating system and always returns the time in UTC.</p>
+<p>Note: Unlike other methods that use integer timestamps, this method returns the timestamp as a <span class="xref">System.Single</span> for sub-second precision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

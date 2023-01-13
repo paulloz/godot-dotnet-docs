@@ -83,7 +83,8 @@
   
   <h1 id="Godot_IP" data-uid="Godot.IP" class="text-break">Class IP
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>IP contains support functions for the Internet Protocol (IP). TCP/IP support is in different classes (see <a class="xref" href="Godot.StreamPeerTCP.html">StreamPeerTCP</a> and <a class="xref" href="Godot.TCP_Server.html">TCP_Server</a>). IP provides DNS hostname resolution support, both blocking and threaded.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -101,7 +102,8 @@
   
   
   <h4 id="Godot_IP_ResolverInvalidId" data-uid="Godot.IP.ResolverInvalidId">ResolverInvalidId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Invalid ID constant. Returned if <a class="xref" href="Godot.IP.html#Godot_IP_ResolverMaxQueries">ResolverMaxQueries</a> is exceeded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +127,8 @@
   
   
   <h4 id="Godot_IP_ResolverMaxQueries" data-uid="Godot.IP.ResolverMaxQueries">ResolverMaxQueries</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum number of concurrent DNS resolver queries allowed, <a class="xref" href="Godot.IP.html#Godot_IP_ResolverInvalidId">ResolverInvalidId</a> is returned if exceeded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -179,7 +182,8 @@
   
   <a id="Godot_IP_ClearCache_" data-uid="Godot.IP.ClearCache*"></a>
   <h4 id="Godot_IP_ClearCache_System_String_" data-uid="Godot.IP.ClearCache(System.String)">ClearCache(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all of a <code>hostname</code>&apos;s cached references. If no <code>hostname</code> is given, all cached IP addresses are removed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -206,7 +210,8 @@
   
   <a id="Godot_IP_EraseResolveItem_" data-uid="Godot.IP.EraseResolveItem*"></a>
   <h4 id="Godot_IP_EraseResolveItem_System_Int32_" data-uid="Godot.IP.EraseResolveItem(System.Int32)">EraseResolveItem(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a given item <code>id</code> from the queue. This should be used to free a queue after it has completed to enable more queries to happen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -233,7 +238,8 @@
   
   <a id="Godot_IP_GetLocalAddresses_" data-uid="Godot.IP.GetLocalAddresses*"></a>
   <h4 id="Godot_IP_GetLocalAddresses" data-uid="Godot.IP.GetLocalAddresses">GetLocalAddresses()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all the user&apos;s current IPv4 and IPv6 addresses as an array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -258,7 +264,15 @@
   
   <a id="Godot_IP_GetLocalInterfaces_" data-uid="Godot.IP.GetLocalInterfaces*"></a>
   <h4 id="Godot_IP_GetLocalInterfaces" data-uid="Godot.IP.GetLocalInterfaces">GetLocalInterfaces()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all network adapters as an array.</p>
+<p>Each adapter is a dictionary of the form:</p>
+<p><pre><code>{
+    &quot;index&quot;: &quot;1&quot;, # Interface index.
+    &quot;name&quot;: &quot;eth0&quot;, # Interface name.
+    &quot;friendly&quot;: &quot;Ethernet One&quot;, # A friendly name (might be empty).
+    &quot;addresses&quot;: [&quot;192.168.1.101&quot;], # An array of IP addresses associated to this interface.
+}</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -283,7 +297,8 @@
   
   <a id="Godot_IP_GetResolveItemAddress_" data-uid="Godot.IP.GetResolveItemAddress*"></a>
   <h4 id="Godot_IP_GetResolveItemAddress_System_Int32_" data-uid="Godot.IP.GetResolveItemAddress(System.Int32)">GetResolveItemAddress(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a queued hostname&apos;s IP address, given its queue <code>id</code>. Returns an empty string on error or if resolution hasn&apos;t happened yet (see <a class="xref" href="Godot.IP.html#Godot_IP_GetResolveItemStatus_System_Int32_">GetResolveItemStatus(Int32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -325,7 +340,8 @@
   
   <a id="Godot_IP_GetResolveItemAddresses_" data-uid="Godot.IP.GetResolveItemAddresses*"></a>
   <h4 id="Godot_IP_GetResolveItemAddresses_System_Int32_" data-uid="Godot.IP.GetResolveItemAddresses(System.Int32)">GetResolveItemAddresses(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Return resolved addresses, or an empty array if an error happened or resolution didn&apos;t happen yet (see <a class="xref" href="Godot.IP.html#Godot_IP_GetResolveItemStatus_System_Int32_">GetResolveItemStatus(Int32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -367,7 +383,8 @@
   
   <a id="Godot_IP_GetResolveItemStatus_" data-uid="Godot.IP.GetResolveItemStatus*"></a>
   <h4 id="Godot_IP_GetResolveItemStatus_System_Int32_" data-uid="Godot.IP.GetResolveItemStatus(System.Int32)">GetResolveItemStatus(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a queued hostname&apos;s status as a <a class="xref" href="Godot.IP.ResolverStatus.html">IP.ResolverStatus</a> constant, given its queue <code>id</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -409,7 +426,8 @@
   
   <a id="Godot_IP_ResolveHostname_" data-uid="Godot.IP.ResolveHostname*"></a>
   <h4 id="Godot_IP_ResolveHostname_System_String_Godot_IP_Type_" data-uid="Godot.IP.ResolveHostname(System.String,Godot.IP.Type)">ResolveHostname(String, IP.Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a given hostname&apos;s IPv4 or IPv6 address when resolved (blocking-type method). The address type returned depends on the <a class="xref" href="Godot.IP.Type.html">IP.Type</a> constant given as <code>ip_type</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -456,7 +474,8 @@
   
   <a id="Godot_IP_ResolveHostnameAddresses_" data-uid="Godot.IP.ResolveHostnameAddresses*"></a>
   <h4 id="Godot_IP_ResolveHostnameAddresses_System_String_Godot_IP_Type_" data-uid="Godot.IP.ResolveHostnameAddresses(System.String,Godot.IP.Type)">ResolveHostnameAddresses(String, IP.Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resolves a given hostname in a blocking way. Addresses are returned as an <a class="xref" href="Godot.Collections.Array.html">Array</a> of IPv4 or IPv6 depending on <code>ip_type</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -503,7 +522,8 @@
   
   <a id="Godot_IP_ResolveHostnameQueueItem_" data-uid="Godot.IP.ResolveHostnameQueueItem*"></a>
   <h4 id="Godot_IP_ResolveHostnameQueueItem_System_String_Godot_IP_Type_" data-uid="Godot.IP.ResolveHostnameQueueItem(System.String,Godot.IP.Type)">ResolveHostnameQueueItem(String, IP.Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a queue item to resolve a hostname to an IPv4 or IPv6 address depending on the <a class="xref" href="Godot.IP.Type.html">IP.Type</a> constant given as <code>ip_type</code>. Returns the queue ID if successful, or <a class="xref" href="Godot.IP.html#Godot_IP_ResolverInvalidId">ResolverInvalidId</a> on error.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

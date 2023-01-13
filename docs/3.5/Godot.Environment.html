@@ -83,7 +83,17 @@
   
   <h1 id="Godot_Environment" data-uid="Godot.Environment" class="text-break">Class Environment
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Resource for environment nodes (like <a class="xref" href="Godot.WorldEnvironment.html">WorldEnvironment</a>) that define multiple environment operations (such as background <a class="xref" href="Godot.Sky.html">Sky</a> or <a class="xref" href="Godot.Color.html">Color</a>, ambient light, fog, depth-of-field...). These parameters affect the final render of the scene. The order of these operations is:</p>
+<p>- Depth of Field Blur</p>
+<p>- Glow</p>
+<p>- Tonemap (Auto Exposure)</p>
+<p>- Adjustments</p>
+<p>If the target <a class="xref" href="Godot.Viewport.html">Viewport</a> is set to &quot;2D Without Sampling&quot;, all post-processing effects will be unavailable. With &quot;3D Without Effects&quot;, the following options will be unavailable:</p>
+<p>- Ssao</p>
+<p>- Ss Reflections</p>
+<p>This can be configured for the root Viewport with , or for specific Viewports via the <a class="xref" href="Godot.Viewport.html#Godot_Viewport_Usage">Usage</a> property.</p>
+<p>Note that  has a mobile platform override to use &quot;3D Without Effects&quot; by default. It improves the performance on mobile devices, but at the same time affects the screen display on mobile devices.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -346,7 +356,8 @@
   
   <a id="Godot_Environment_AdjustmentBrightness_" data-uid="Godot.Environment.AdjustmentBrightness*"></a>
   <h4 id="Godot_Environment_AdjustmentBrightness" data-uid="Godot.Environment.AdjustmentBrightness">AdjustmentBrightness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The global brightness value of the rendered scene. Effective only if <code>adjustment_enabled</code> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +382,8 @@
   
   <a id="Godot_Environment_AdjustmentColorCorrection_" data-uid="Godot.Environment.AdjustmentColorCorrection*"></a>
   <h4 id="Godot_Environment_AdjustmentColorCorrection" data-uid="Godot.Environment.AdjustmentColorCorrection">AdjustmentColorCorrection</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies the provided <a class="xref" href="Godot.Texture.html">Texture</a> resource to affect the global color aspect of the rendered scene. Effective only if <code>adjustment_enabled</code> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +408,8 @@
   
   <a id="Godot_Environment_AdjustmentContrast_" data-uid="Godot.Environment.AdjustmentContrast*"></a>
   <h4 id="Godot_Environment_AdjustmentContrast" data-uid="Godot.Environment.AdjustmentContrast">AdjustmentContrast</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The global contrast value of the rendered scene (default value is 1). Effective only if <code>adjustment_enabled</code> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +434,8 @@
   
   <a id="Godot_Environment_AdjustmentEnabled_" data-uid="Godot.Environment.AdjustmentEnabled*"></a>
   <h4 id="Godot_Environment_AdjustmentEnabled" data-uid="Godot.Environment.AdjustmentEnabled">AdjustmentEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables the <code>adjustment_*</code> properties provided by this resource. If <code>false</code>, modifications to the <code>adjustment_*</code> properties will have no effect on the rendered scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -446,7 +460,8 @@
   
   <a id="Godot_Environment_AdjustmentSaturation_" data-uid="Godot.Environment.AdjustmentSaturation*"></a>
   <h4 id="Godot_Environment_AdjustmentSaturation" data-uid="Godot.Environment.AdjustmentSaturation">AdjustmentSaturation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The global color saturation value of the rendered scene (default value is 1). Effective only if <code>adjustment_enabled</code> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,7 +486,8 @@
   
   <a id="Godot_Environment_AmbientLightColor_" data-uid="Godot.Environment.AmbientLightColor*"></a>
   <h4 id="Godot_Environment_AmbientLightColor" data-uid="Godot.Environment.AmbientLightColor">AmbientLightColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ambient light&apos;s <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -496,7 +512,8 @@
   
   <a id="Godot_Environment_AmbientLightEnergy_" data-uid="Godot.Environment.AmbientLightEnergy*"></a>
   <h4 id="Godot_Environment_AmbientLightEnergy" data-uid="Godot.Environment.AmbientLightEnergy">AmbientLightEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ambient light&apos;s energy. The higher the value, the stronger the light.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -521,7 +538,9 @@
   
   <a id="Godot_Environment_AmbientLightSkyContribution_" data-uid="Godot.Environment.AmbientLightSkyContribution*"></a>
   <h4 id="Godot_Environment_AmbientLightSkyContribution" data-uid="Godot.Environment.AmbientLightSkyContribution">AmbientLightSkyContribution</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines the amount of light that the sky brings on the scene. A value of <code>0.0</code> means that the sky&apos;s light emission has no effect on the scene illumination, thus all ambient illumination is provided by the ambient light. On the contrary, a value of <code>1.0</code> means that all the light that affects the scene is provided by the sky, thus the ambient light parameter has no effect on the scene.</p>
+<p>Note: <a class="xref" href="Godot.Environment.html#Godot_Environment_AmbientLightSkyContribution">AmbientLightSkyContribution</a> is internally clamped between <code>0.0</code> and <code>1.0</code> (inclusive).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -546,7 +565,8 @@
   
   <a id="Godot_Environment_AutoExposureEnabled_" data-uid="Godot.Environment.AutoExposureEnabled*"></a>
   <h4 id="Godot_Environment_AutoExposureEnabled" data-uid="Godot.Environment.AutoExposureEnabled">AutoExposureEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables the tonemapping auto exposure mode of the scene renderer. If <code>true</code>, the renderer will automatically determine the exposure setting to adapt to the scene&apos;s illumination and the observed light.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -571,7 +591,8 @@
   
   <a id="Godot_Environment_AutoExposureMaxLuma_" data-uid="Godot.Environment.AutoExposureMaxLuma*"></a>
   <h4 id="Godot_Environment_AutoExposureMaxLuma" data-uid="Godot.Environment.AutoExposureMaxLuma">AutoExposureMaxLuma</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum luminance value for the auto exposure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -596,7 +617,8 @@
   
   <a id="Godot_Environment_AutoExposureMinLuma_" data-uid="Godot.Environment.AutoExposureMinLuma*"></a>
   <h4 id="Godot_Environment_AutoExposureMinLuma" data-uid="Godot.Environment.AutoExposureMinLuma">AutoExposureMinLuma</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum luminance value for the auto exposure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -621,7 +643,8 @@
   
   <a id="Godot_Environment_AutoExposureScale_" data-uid="Godot.Environment.AutoExposureScale*"></a>
   <h4 id="Godot_Environment_AutoExposureScale" data-uid="Godot.Environment.AutoExposureScale">AutoExposureScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The scale of the auto exposure effect. Affects the intensity of auto exposure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -646,7 +669,8 @@
   
   <a id="Godot_Environment_AutoExposureSpeed_" data-uid="Godot.Environment.AutoExposureSpeed*"></a>
   <h4 id="Godot_Environment_AutoExposureSpeed" data-uid="Godot.Environment.AutoExposureSpeed">AutoExposureSpeed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The speed of the auto exposure effect. Affects the time needed for the camera to perform auto exposure.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -671,7 +695,8 @@
   
   <a id="Godot_Environment_BackgroundCameraFeedId_" data-uid="Godot.Environment.BackgroundCameraFeedId*"></a>
   <h4 id="Godot_Environment_BackgroundCameraFeedId" data-uid="Godot.Environment.BackgroundCameraFeedId">BackgroundCameraFeedId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID of the camera feed to show in the background.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -696,7 +721,8 @@
   
   <a id="Godot_Environment_BackgroundCanvasMaxLayer_" data-uid="Godot.Environment.BackgroundCanvasMaxLayer*"></a>
   <h4 id="Godot_Environment_BackgroundCanvasMaxLayer" data-uid="Godot.Environment.BackgroundCanvasMaxLayer">BackgroundCanvasMaxLayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum layer ID to display. Only effective when using the <a class="xref" href="Godot.Environment.BGMode.html#Godot_Environment_BGMode_Canvas">Canvas</a> background mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -721,7 +747,8 @@
   
   <a id="Godot_Environment_BackgroundColor_" data-uid="Godot.Environment.BackgroundColor*"></a>
   <h4 id="Godot_Environment_BackgroundColor" data-uid="Godot.Environment.BackgroundColor">BackgroundColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Color.html">Color</a> displayed for clear areas of the scene. Only effective when using the <a class="xref" href="Godot.Environment.BGMode.html#Godot_Environment_BGMode_Color">Color</a> or <a class="xref" href="Godot.Environment.BGMode.html#Godot_Environment_BGMode_ColorSky">ColorSky</a> background modes).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -746,7 +773,8 @@
   
   <a id="Godot_Environment_BackgroundEnergy_" data-uid="Godot.Environment.BackgroundEnergy*"></a>
   <h4 id="Godot_Environment_BackgroundEnergy" data-uid="Godot.Environment.BackgroundEnergy">BackgroundEnergy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The power of the light emitted by the background.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -771,7 +799,8 @@
   
   <a id="Godot_Environment_BackgroundMode_" data-uid="Godot.Environment.BackgroundMode*"></a>
   <h4 id="Godot_Environment_BackgroundMode" data-uid="Godot.Environment.BackgroundMode">BackgroundMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The background mode. See <a class="xref" href="Godot.Environment.BGMode.html">Environment.BGMode</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -796,7 +825,8 @@
   
   <a id="Godot_Environment_BackgroundSky_" data-uid="Godot.Environment.BackgroundSky*"></a>
   <h4 id="Godot_Environment_BackgroundSky" data-uid="Godot.Environment.BackgroundSky">BackgroundSky</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Sky.html">Sky</a> resource defined as background.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -821,7 +851,8 @@
   
   <a id="Godot_Environment_BackgroundSkyCustomFov_" data-uid="Godot.Environment.BackgroundSkyCustomFov*"></a>
   <h4 id="Godot_Environment_BackgroundSkyCustomFov" data-uid="Godot.Environment.BackgroundSkyCustomFov">BackgroundSkyCustomFov</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Sky.html">Sky</a> resource&apos;s custom field of view.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -846,7 +877,8 @@
   
   <a id="Godot_Environment_BackgroundSkyOrientation_" data-uid="Godot.Environment.BackgroundSkyOrientation*"></a>
   <h4 id="Godot_Environment_BackgroundSkyOrientation" data-uid="Godot.Environment.BackgroundSkyOrientation">BackgroundSkyOrientation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Sky.html">Sky</a> resource&apos;s rotation expressed as a <a class="xref" href="Godot.Basis.html">Basis</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -871,7 +903,8 @@
   
   <a id="Godot_Environment_BackgroundSkyRotation_" data-uid="Godot.Environment.BackgroundSkyRotation*"></a>
   <h4 id="Godot_Environment_BackgroundSkyRotation" data-uid="Godot.Environment.BackgroundSkyRotation">BackgroundSkyRotation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Sky.html">Sky</a> resource&apos;s rotation expressed as Euler angles in radians.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -896,7 +929,8 @@
   
   <a id="Godot_Environment_BackgroundSkyRotationDegrees_" data-uid="Godot.Environment.BackgroundSkyRotationDegrees*"></a>
   <h4 id="Godot_Environment_BackgroundSkyRotationDegrees" data-uid="Godot.Environment.BackgroundSkyRotationDegrees">BackgroundSkyRotationDegrees</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Sky.html">Sky</a> resource&apos;s rotation expressed as Euler angles in degrees.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -921,7 +955,8 @@
   
   <a id="Godot_Environment_DofBlurFarAmount_" data-uid="Godot.Environment.DofBlurFarAmount*"></a>
   <h4 id="Godot_Environment_DofBlurFarAmount" data-uid="Godot.Environment.DofBlurFarAmount">DofBlurFarAmount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The amount of far blur for the depth-of-field effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -946,7 +981,8 @@
   
   <a id="Godot_Environment_DofBlurFarDistance_" data-uid="Godot.Environment.DofBlurFarDistance*"></a>
   <h4 id="Godot_Environment_DofBlurFarDistance" data-uid="Godot.Environment.DofBlurFarDistance">DofBlurFarDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The distance from the camera where the far blur effect affects the rendering.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -971,7 +1007,8 @@
   
   <a id="Godot_Environment_DofBlurFarEnabled_" data-uid="Godot.Environment.DofBlurFarEnabled*"></a>
   <h4 id="Godot_Environment_DofBlurFarEnabled" data-uid="Godot.Environment.DofBlurFarEnabled">DofBlurFarEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables the depth-of-field far blur effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -996,7 +1033,8 @@
   
   <a id="Godot_Environment_DofBlurFarQuality_" data-uid="Godot.Environment.DofBlurFarQuality*"></a>
   <h4 id="Godot_Environment_DofBlurFarQuality" data-uid="Godot.Environment.DofBlurFarQuality">DofBlurFarQuality</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The depth-of-field far blur&apos;s quality. Higher values can mitigate the visible banding effect seen at higher strengths, but are much slower.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1021,7 +1059,8 @@
   
   <a id="Godot_Environment_DofBlurFarTransition_" data-uid="Godot.Environment.DofBlurFarTransition*"></a>
   <h4 id="Godot_Environment_DofBlurFarTransition" data-uid="Godot.Environment.DofBlurFarTransition">DofBlurFarTransition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The length of the transition between the no-blur area and far blur.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1046,7 +1085,8 @@
   
   <a id="Godot_Environment_DofBlurNearAmount_" data-uid="Godot.Environment.DofBlurNearAmount*"></a>
   <h4 id="Godot_Environment_DofBlurNearAmount" data-uid="Godot.Environment.DofBlurNearAmount">DofBlurNearAmount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The amount of near blur for the depth-of-field effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1071,7 +1111,8 @@
   
   <a id="Godot_Environment_DofBlurNearDistance_" data-uid="Godot.Environment.DofBlurNearDistance*"></a>
   <h4 id="Godot_Environment_DofBlurNearDistance" data-uid="Godot.Environment.DofBlurNearDistance">DofBlurNearDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Distance from the camera where the near blur effect affects the rendering.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1096,7 +1137,8 @@
   
   <a id="Godot_Environment_DofBlurNearEnabled_" data-uid="Godot.Environment.DofBlurNearEnabled*"></a>
   <h4 id="Godot_Environment_DofBlurNearEnabled" data-uid="Godot.Environment.DofBlurNearEnabled">DofBlurNearEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enables the depth-of-field near blur effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1121,7 +1163,8 @@
   
   <a id="Godot_Environment_DofBlurNearQuality_" data-uid="Godot.Environment.DofBlurNearQuality*"></a>
   <h4 id="Godot_Environment_DofBlurNearQuality" data-uid="Godot.Environment.DofBlurNearQuality">DofBlurNearQuality</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The depth-of-field near blur&apos;s quality. Higher values can mitigate the visible banding effect seen at higher strengths, but are much slower.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1146,7 +1189,8 @@
   
   <a id="Godot_Environment_DofBlurNearTransition_" data-uid="Godot.Environment.DofBlurNearTransition*"></a>
   <h4 id="Godot_Environment_DofBlurNearTransition" data-uid="Godot.Environment.DofBlurNearTransition">DofBlurNearTransition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The length of the transition between the near blur and no-blur area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1171,7 +1215,8 @@
   
   <a id="Godot_Environment_FogColor_" data-uid="Godot.Environment.FogColor*"></a>
   <h4 id="Godot_Environment_FogColor" data-uid="Godot.Environment.FogColor">FogColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The fog&apos;s <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1196,7 +1241,8 @@
   
   <a id="Godot_Environment_FogDepthBegin_" data-uid="Godot.Environment.FogDepthBegin*"></a>
   <h4 id="Godot_Environment_FogDepthBegin" data-uid="Godot.Environment.FogDepthBegin">FogDepthBegin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The fog&apos;s depth starting distance from the camera.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1221,7 +1267,8 @@
   
   <a id="Godot_Environment_FogDepthCurve_" data-uid="Godot.Environment.FogDepthCurve*"></a>
   <h4 id="Godot_Environment_FogDepthCurve" data-uid="Godot.Environment.FogDepthCurve">FogDepthCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The fog depth&apos;s intensity curve. A number of presets are available in the Inspector by right-clicking the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1246,7 +1293,8 @@
   
   <a id="Godot_Environment_FogDepthEnabled_" data-uid="Godot.Environment.FogDepthEnabled*"></a>
   <h4 id="Godot_Environment_FogDepthEnabled" data-uid="Godot.Environment.FogDepthEnabled">FogDepthEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the depth fog effect is enabled. When enabled, fog will appear in the distance (relative to the camera).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1271,7 +1319,8 @@
   
   <a id="Godot_Environment_FogDepthEnd_" data-uid="Godot.Environment.FogDepthEnd*"></a>
   <h4 id="Godot_Environment_FogDepthEnd" data-uid="Godot.Environment.FogDepthEnd">FogDepthEnd</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The fog&apos;s depth end distance from the camera. If this value is set to 0, it will be equal to the current camera&apos;s <a class="xref" href="Godot.Camera.html#Godot_Camera_Far">Far</a> value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1296,7 +1345,8 @@
   
   <a id="Godot_Environment_FogEnabled_" data-uid="Godot.Environment.FogEnabled*"></a>
   <h4 id="Godot_Environment_FogEnabled" data-uid="Godot.Environment.FogEnabled">FogEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, fog effects are enabled. <a class="xref" href="Godot.Environment.html#Godot_Environment_FogHeightEnabled">FogHeightEnabled</a> and/or <a class="xref" href="Godot.Environment.html#Godot_Environment_FogDepthEnabled">FogDepthEnabled</a> must be set to <code>true</code> to actually display fog.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1321,7 +1371,8 @@
   
   <a id="Godot_Environment_FogHeightCurve_" data-uid="Godot.Environment.FogHeightCurve*"></a>
   <h4 id="Godot_Environment_FogHeightCurve" data-uid="Godot.Environment.FogHeightCurve">FogHeightCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The height fog&apos;s intensity. A number of presets are available in the Inspector by right-clicking the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1346,7 +1397,8 @@
   
   <a id="Godot_Environment_FogHeightEnabled_" data-uid="Godot.Environment.FogHeightEnabled*"></a>
   <h4 id="Godot_Environment_FogHeightEnabled" data-uid="Godot.Environment.FogHeightEnabled">FogHeightEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the height fog effect is enabled. When enabled, fog will appear in a defined height range, regardless of the distance from the camera. This can be used to simulate &quot;deep water&quot; effects with a lower performance cost compared to a dedicated shader.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1371,7 +1423,8 @@
   
   <a id="Godot_Environment_FogHeightMax_" data-uid="Godot.Environment.FogHeightMax*"></a>
   <h4 id="Godot_Environment_FogHeightMax" data-uid="Godot.Environment.FogHeightMax">FogHeightMax</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Y coordinate where the height fog will be the most intense. If this value is greater than <a class="xref" href="Godot.Environment.html#Godot_Environment_FogHeightMin">FogHeightMin</a>, fog will be displayed from bottom to top. Otherwise, it will be displayed from top to bottom.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1396,7 +1449,8 @@
   
   <a id="Godot_Environment_FogHeightMin_" data-uid="Godot.Environment.FogHeightMin*"></a>
   <h4 id="Godot_Environment_FogHeightMin" data-uid="Godot.Environment.FogHeightMin">FogHeightMin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Y coordinate where the height fog will be the least intense. If this value is greater than <a class="xref" href="Godot.Environment.html#Godot_Environment_FogHeightMax">FogHeightMax</a>, fog will be displayed from top to bottom. Otherwise, it will be displayed from bottom to top.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1421,7 +1475,8 @@
   
   <a id="Godot_Environment_FogSunAmount_" data-uid="Godot.Environment.FogSunAmount*"></a>
   <h4 id="Godot_Environment_FogSunAmount" data-uid="Godot.Environment.FogSunAmount">FogSunAmount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The intensity of the depth fog color transition when looking towards the sun. The sun&apos;s direction is determined automatically using the DirectionalLight node in the scene.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1446,7 +1501,8 @@
   
   <a id="Godot_Environment_FogSunColor_" data-uid="Godot.Environment.FogSunColor*"></a>
   <h4 id="Godot_Environment_FogSunColor" data-uid="Godot.Environment.FogSunColor">FogSunColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The depth fog&apos;s <a class="xref" href="Godot.Color.html">Color</a> when looking towards the sun.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1471,7 +1527,8 @@
   
   <a id="Godot_Environment_FogTransmitCurve_" data-uid="Godot.Environment.FogTransmitCurve*"></a>
   <h4 id="Godot_Environment_FogTransmitCurve" data-uid="Godot.Environment.FogTransmitCurve">FogTransmitCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The intensity of the fog light transmittance effect. Amount of light that the fog transmits.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1496,7 +1553,8 @@
   
   <a id="Godot_Environment_FogTransmitEnabled_" data-uid="Godot.Environment.FogTransmitEnabled*"></a>
   <h4 id="Godot_Environment_FogTransmitEnabled" data-uid="Godot.Environment.FogTransmitEnabled">FogTransmitEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables fog&apos;s light transmission effect. If <code>true</code>, light will be more visible in the fog to simulate light scattering as in real life.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1521,7 +1579,9 @@
   
   <a id="Godot_Environment_GlowBicubicUpscale_" data-uid="Godot.Environment.GlowBicubicUpscale*"></a>
   <h4 id="Godot_Environment_GlowBicubicUpscale" data-uid="Godot.Environment.GlowBicubicUpscale">GlowBicubicUpscale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Smooths out the blockiness created by sampling higher levels, at the cost of performance.</p>
+<p>Note: When using the GLES2 renderer, this is only available if the GPU supports the <code>GL_EXT_gpu_shader4</code> extension.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1546,7 +1606,8 @@
   
   <a id="Godot_Environment_GlowBlendMode_" data-uid="Godot.Environment.GlowBlendMode*"></a>
   <h4 id="Godot_Environment_GlowBlendMode" data-uid="Godot.Environment.GlowBlendMode">GlowBlendMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The glow blending mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1571,7 +1632,8 @@
   
   <a id="Godot_Environment_GlowBloom_" data-uid="Godot.Environment.GlowBloom*"></a>
   <h4 id="Godot_Environment_GlowBloom" data-uid="Godot.Environment.GlowBloom">GlowBloom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The bloom&apos;s intensity. If set to a value higher than <code>0</code>, this will make glow visible in areas darker than the <a class="xref" href="Godot.Environment.html#Godot_Environment_GlowHdrThreshold">GlowHdrThreshold</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1596,7 +1658,10 @@
   
   <a id="Godot_Environment_GlowEnabled_" data-uid="Godot.Environment.GlowEnabled*"></a>
   <h4 id="Godot_Environment_GlowEnabled" data-uid="Godot.Environment.GlowEnabled">GlowEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the glow effect is enabled.</p>
+<p>Note: Only effective if  is 3D (not 3D Without Effects). On mobile,  defaults to 3D Without Effects by default, so its <code>.mobile</code> override needs to be changed to 3D.</p>
+<p>Note: When using GLES3 on mobile, HDR rendering is disabled by default for performance reasons. This means glow will only be visible if <a class="xref" href="Godot.Environment.html#Godot_Environment_GlowHdrThreshold">GlowHdrThreshold</a> is decreased below <code>1.0</code> or if <a class="xref" href="Godot.Environment.html#Godot_Environment_GlowBloom">GlowBloom</a> is increased above <code>0.0</code>. Also consider increasing <a class="xref" href="Godot.Environment.html#Godot_Environment_GlowIntensity">GlowIntensity</a> to <code>1.5</code>. If you want glow to behave on mobile like it does on desktop (at a performance cost), enable &apos;s <code>.mobile</code> override.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1621,7 +1686,8 @@
   
   <a id="Godot_Environment_GlowHdrLuminanceCap_" data-uid="Godot.Environment.GlowHdrLuminanceCap*"></a>
   <h4 id="Godot_Environment_GlowHdrLuminanceCap" data-uid="Godot.Environment.GlowHdrLuminanceCap">GlowHdrLuminanceCap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The higher threshold of the HDR glow. Areas brighter than this threshold will be clamped for the purposes of the glow effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1646,7 +1712,8 @@
   
   <a id="Godot_Environment_GlowHdrScale_" data-uid="Godot.Environment.GlowHdrScale*"></a>
   <h4 id="Godot_Environment_GlowHdrScale" data-uid="Godot.Environment.GlowHdrScale">GlowHdrScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The bleed scale of the HDR glow.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1671,7 +1738,8 @@
   
   <a id="Godot_Environment_GlowHdrThreshold_" data-uid="Godot.Environment.GlowHdrThreshold*"></a>
   <h4 id="Godot_Environment_GlowHdrThreshold" data-uid="Godot.Environment.GlowHdrThreshold">GlowHdrThreshold</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The lower threshold of the HDR glow. When using the GLES2 renderer (which doesn&apos;t support HDR), this needs to be below <code>1.0</code> for glow to be visible. A value of <code>0.9</code> works well in this case.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1696,7 +1764,8 @@
   
   <a id="Godot_Environment_GlowHighQuality_" data-uid="Godot.Environment.GlowHighQuality*"></a>
   <h4 id="Godot_Environment_GlowHighQuality" data-uid="Godot.Environment.GlowHighQuality">GlowHighQuality</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Takes more samples during downsample pass of glow. This ensures that single pixels are captured by glow which makes the glow look smoother and more stable during movement. However, it is very expensive and makes the glow post process take twice as long.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1721,7 +1790,8 @@
   
   <a id="Godot_Environment_GlowIntensity_" data-uid="Godot.Environment.GlowIntensity*"></a>
   <h4 id="Godot_Environment_GlowIntensity" data-uid="Godot.Environment.GlowIntensity">GlowIntensity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The glow intensity. When using the GLES2 renderer, this should be increased to 1.5 to compensate for the lack of HDR rendering.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1746,7 +1816,8 @@
   
   <a id="Godot_Environment_GlowLevels__1_" data-uid="Godot.Environment.GlowLevels__1*"></a>
   <h4 id="Godot_Environment_GlowLevels__1" data-uid="Godot.Environment.GlowLevels__1">GlowLevels__1</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the 1st level of glow is enabled. This is the most &quot;local&quot; level (least blurry).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1771,7 +1842,8 @@
   
   <a id="Godot_Environment_GlowLevels__2_" data-uid="Godot.Environment.GlowLevels__2*"></a>
   <h4 id="Godot_Environment_GlowLevels__2" data-uid="Godot.Environment.GlowLevels__2">GlowLevels__2</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the 2th level of glow is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1796,7 +1868,8 @@
   
   <a id="Godot_Environment_GlowLevels__3_" data-uid="Godot.Environment.GlowLevels__3*"></a>
   <h4 id="Godot_Environment_GlowLevels__3" data-uid="Godot.Environment.GlowLevels__3">GlowLevels__3</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the 3th level of glow is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1821,7 +1894,8 @@
   
   <a id="Godot_Environment_GlowLevels__4_" data-uid="Godot.Environment.GlowLevels__4*"></a>
   <h4 id="Godot_Environment_GlowLevels__4" data-uid="Godot.Environment.GlowLevels__4">GlowLevels__4</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the 4th level of glow is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1846,7 +1920,8 @@
   
   <a id="Godot_Environment_GlowLevels__5_" data-uid="Godot.Environment.GlowLevels__5*"></a>
   <h4 id="Godot_Environment_GlowLevels__5" data-uid="Godot.Environment.GlowLevels__5">GlowLevels__5</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the 5th level of glow is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1871,7 +1946,8 @@
   
   <a id="Godot_Environment_GlowLevels__6_" data-uid="Godot.Environment.GlowLevels__6*"></a>
   <h4 id="Godot_Environment_GlowLevels__6" data-uid="Godot.Environment.GlowLevels__6">GlowLevels__6</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the 6th level of glow is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1896,7 +1972,8 @@
   
   <a id="Godot_Environment_GlowLevels__7_" data-uid="Godot.Environment.GlowLevels__7*"></a>
   <h4 id="Godot_Environment_GlowLevels__7" data-uid="Godot.Environment.GlowLevels__7">GlowLevels__7</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the 7th level of glow is enabled. This is the most &quot;global&quot; level (blurriest).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1921,7 +1998,8 @@
   
   <a id="Godot_Environment_GlowStrength_" data-uid="Godot.Environment.GlowStrength*"></a>
   <h4 id="Godot_Environment_GlowStrength" data-uid="Godot.Environment.GlowStrength">GlowStrength</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The glow strength. When using the GLES2 renderer, this should be increased to 1.3 to compensate for the lack of HDR rendering.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1946,7 +2024,8 @@
   
   <a id="Godot_Environment_SsaoAoChannelAffect_" data-uid="Godot.Environment.SsaoAoChannelAffect*"></a>
   <h4 id="Godot_Environment_SsaoAoChannelAffect" data-uid="Godot.Environment.SsaoAoChannelAffect">SsaoAoChannelAffect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The screen-space ambient occlusion intensity on materials that have an AO texture defined. Values higher than <code>0</code> will make the SSAO effect visible in areas darkened by AO textures.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1971,7 +2050,8 @@
   
   <a id="Godot_Environment_SsaoBias_" data-uid="Godot.Environment.SsaoBias*"></a>
   <h4 id="Godot_Environment_SsaoBias" data-uid="Godot.Environment.SsaoBias">SsaoBias</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The screen-space ambient occlusion bias. This should be kept high enough to prevent &quot;smooth&quot; curves from being affected by ambient occlusion.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1996,7 +2076,8 @@
   
   <a id="Godot_Environment_SsaoBlur_" data-uid="Godot.Environment.SsaoBlur*"></a>
   <h4 id="Godot_Environment_SsaoBlur" data-uid="Godot.Environment.SsaoBlur">SsaoBlur</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The screen-space ambient occlusion blur quality. See <a class="xref" href="Godot.Environment.SSAOBlur.html">Environment.SSAOBlur</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2021,7 +2102,8 @@
   
   <a id="Godot_Environment_SsaoColor_" data-uid="Godot.Environment.SsaoColor*"></a>
   <h4 id="Godot_Environment_SsaoColor" data-uid="Godot.Environment.SsaoColor">SsaoColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The screen-space ambient occlusion color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2046,7 +2128,8 @@
   
   <a id="Godot_Environment_SsaoEdgeSharpness_" data-uid="Godot.Environment.SsaoEdgeSharpness*"></a>
   <h4 id="Godot_Environment_SsaoEdgeSharpness" data-uid="Godot.Environment.SsaoEdgeSharpness">SsaoEdgeSharpness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The screen-space ambient occlusion edge sharpness.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2071,7 +2154,8 @@
   
   <a id="Godot_Environment_SsaoEnabled_" data-uid="Godot.Environment.SsaoEnabled*"></a>
   <h4 id="Godot_Environment_SsaoEnabled" data-uid="Godot.Environment.SsaoEnabled">SsaoEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the screen-space ambient occlusion effect is enabled. This darkens objects&apos; corners and cavities to simulate ambient light not reaching the entire object as in real life. This works well for small, dynamic objects, but baked lighting or ambient occlusion textures will do a better job at displaying ambient occlusion on large static objects. This is a costly effect and should be disabled first when running into performance issues.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2096,7 +2180,8 @@
   
   <a id="Godot_Environment_SsaoIntensity_" data-uid="Godot.Environment.SsaoIntensity*"></a>
   <h4 id="Godot_Environment_SsaoIntensity" data-uid="Godot.Environment.SsaoIntensity">SsaoIntensity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The primary screen-space ambient occlusion intensity. See also <a class="xref" href="Godot.Environment.html#Godot_Environment_SsaoRadius">SsaoRadius</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2121,7 +2206,8 @@
   
   <a id="Godot_Environment_SsaoIntensity2_" data-uid="Godot.Environment.SsaoIntensity2*"></a>
   <h4 id="Godot_Environment_SsaoIntensity2" data-uid="Godot.Environment.SsaoIntensity2">SsaoIntensity2</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The secondary screen-space ambient occlusion intensity. See also <a class="xref" href="Godot.Environment.html#Godot_Environment_SsaoRadius2">SsaoRadius2</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2146,7 +2232,8 @@
   
   <a id="Godot_Environment_SsaoLightAffect_" data-uid="Godot.Environment.SsaoLightAffect*"></a>
   <h4 id="Godot_Environment_SsaoLightAffect" data-uid="Godot.Environment.SsaoLightAffect">SsaoLightAffect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The screen-space ambient occlusion intensity in direct light. In real life, ambient occlusion only applies to indirect light, which means its effects can&apos;t be seen in direct light. Values higher than <code>0</code> will make the SSAO effect visible in direct light.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2171,7 +2258,8 @@
   
   <a id="Godot_Environment_SsaoQuality_" data-uid="Godot.Environment.SsaoQuality*"></a>
   <h4 id="Godot_Environment_SsaoQuality" data-uid="Godot.Environment.SsaoQuality">SsaoQuality</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The screen-space ambient occlusion quality. Higher qualities will make better use of small objects for ambient occlusion, but are slower.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2196,7 +2284,8 @@
   
   <a id="Godot_Environment_SsaoRadius_" data-uid="Godot.Environment.SsaoRadius*"></a>
   <h4 id="Godot_Environment_SsaoRadius" data-uid="Godot.Environment.SsaoRadius">SsaoRadius</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The primary screen-space ambient occlusion radius.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2221,7 +2310,8 @@
   
   <a id="Godot_Environment_SsaoRadius2_" data-uid="Godot.Environment.SsaoRadius2*"></a>
   <h4 id="Godot_Environment_SsaoRadius2" data-uid="Godot.Environment.SsaoRadius2">SsaoRadius2</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The secondary screen-space ambient occlusion radius. If set to a value higher than <code>0</code>, enables the secondary screen-space ambient occlusion effect which can be used to improve the effect&apos;s appearance (at the cost of performance).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2246,7 +2336,8 @@
   
   <a id="Godot_Environment_SsReflectionsDepthTolerance_" data-uid="Godot.Environment.SsReflectionsDepthTolerance*"></a>
   <h4 id="Godot_Environment_SsReflectionsDepthTolerance" data-uid="Godot.Environment.SsReflectionsDepthTolerance">SsReflectionsDepthTolerance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The depth tolerance for screen-space reflections.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2271,7 +2362,8 @@
   
   <a id="Godot_Environment_SsReflectionsEnabled_" data-uid="Godot.Environment.SsReflectionsEnabled*"></a>
   <h4 id="Godot_Environment_SsReflectionsEnabled" data-uid="Godot.Environment.SsReflectionsEnabled">SsReflectionsEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, screen-space reflections are enabled. Screen-space reflections are more accurate than reflections from <a class="xref" href="Godot.GIProbe.html">GIProbe</a>s or <a class="xref" href="Godot.ReflectionProbe.html">ReflectionProbe</a>s, but are slower and can&apos;t reflect surfaces occluded by others.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2296,7 +2388,8 @@
   
   <a id="Godot_Environment_SsReflectionsFadeIn_" data-uid="Godot.Environment.SsReflectionsFadeIn*"></a>
   <h4 id="Godot_Environment_SsReflectionsFadeIn" data-uid="Godot.Environment.SsReflectionsFadeIn">SsReflectionsFadeIn</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The fade-in distance for screen-space reflections. Affects the area from the reflected material to the screen-space reflection).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2321,7 +2414,8 @@
   
   <a id="Godot_Environment_SsReflectionsFadeOut_" data-uid="Godot.Environment.SsReflectionsFadeOut*"></a>
   <h4 id="Godot_Environment_SsReflectionsFadeOut" data-uid="Godot.Environment.SsReflectionsFadeOut">SsReflectionsFadeOut</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The fade-out distance for screen-space reflections. Affects the area from the screen-space reflection to the &quot;global&quot; reflection.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2346,7 +2440,8 @@
   
   <a id="Godot_Environment_SsReflectionsMaxSteps_" data-uid="Godot.Environment.SsReflectionsMaxSteps*"></a>
   <h4 id="Godot_Environment_SsReflectionsMaxSteps" data-uid="Godot.Environment.SsReflectionsMaxSteps">SsReflectionsMaxSteps</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum number of steps for screen-space reflections. Higher values are slower.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2371,7 +2466,8 @@
   
   <a id="Godot_Environment_SsReflectionsRoughness_" data-uid="Godot.Environment.SsReflectionsRoughness*"></a>
   <h4 id="Godot_Environment_SsReflectionsRoughness" data-uid="Godot.Environment.SsReflectionsRoughness">SsReflectionsRoughness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, screen-space reflections will take the material roughness into account.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2396,7 +2492,8 @@
   
   <a id="Godot_Environment_TonemapExposure_" data-uid="Godot.Environment.TonemapExposure*"></a>
   <h4 id="Godot_Environment_TonemapExposure" data-uid="Godot.Environment.TonemapExposure">TonemapExposure</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The default exposure used for tonemapping.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2421,7 +2518,8 @@
   
   <a id="Godot_Environment_TonemapMode_" data-uid="Godot.Environment.TonemapMode*"></a>
   <h4 id="Godot_Environment_TonemapMode" data-uid="Godot.Environment.TonemapMode">TonemapMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The tonemapping mode to use. Tonemapping is the process that &quot;converts&quot; HDR values to be suitable for rendering on a SDR display. (Godot doesn&apos;t support rendering on HDR displays yet.)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2446,7 +2544,8 @@
   
   <a id="Godot_Environment_TonemapWhite_" data-uid="Godot.Environment.TonemapWhite*"></a>
   <h4 id="Godot_Environment_TonemapWhite" data-uid="Godot.Environment.TonemapWhite">TonemapWhite</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The white reference value for tonemapping. Only effective if the <a class="xref" href="Godot.Environment.html#Godot_Environment_TonemapMode">TonemapMode</a> isn&apos;t set to <a class="xref" href="Godot.Environment.ToneMapper.html#Godot_Environment_ToneMapper_Linear">Linear</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4348,7 +4447,8 @@
   
   <a id="Godot_Environment_IsGlowLevelEnabled_" data-uid="Godot.Environment.IsGlowLevelEnabled*"></a>
   <h4 id="Godot_Environment_IsGlowLevelEnabled_System_Int32_" data-uid="Godot.Environment.IsGlowLevelEnabled(System.Int32)">IsGlowLevelEnabled(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the glow level <code>idx</code> is specified, <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -5707,7 +5807,8 @@
   
   <a id="Godot_Environment_SetGlowLevel_" data-uid="Godot.Environment.SetGlowLevel*"></a>
   <h4 id="Godot_Environment_SetGlowLevel_System_Int32_System_Boolean_" data-uid="Godot.Environment.SetGlowLevel(System.Int32,System.Boolean)">SetGlowLevel(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables or disables the glow level at index <code>idx</code>. Each level relies on the previous level. This means that enabling higher glow levels will slow down the glow effect rendering, even if previous levels aren&apos;t enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

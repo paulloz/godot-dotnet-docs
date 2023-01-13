@@ -83,7 +83,12 @@
   
   <h1 id="Godot_ImmediateGeometry" data-uid="Godot.ImmediateGeometry" class="text-break">Class ImmediateGeometry
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Draws simple geometry from code. Uses a drawing mode similar to OpenGL 1.x.</p>
+<p>See also <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>, <a class="xref" href="Godot.MeshDataTool.html">MeshDataTool</a> and <a class="xref" href="Godot.SurfaceTool.html">SurfaceTool</a> for procedural geometry generation.</p>
+<p>Note: ImmediateGeometry3D is best suited to small amounts of mesh data that change every frame. It will be slow when handling large amounts of mesh data. If mesh data doesn&apos;t change often, use <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>, <a class="xref" href="Godot.MeshDataTool.html">MeshDataTool</a> or <a class="xref" href="Godot.SurfaceTool.html">SurfaceTool</a> instead.</p>
+<p>Note: Godot uses clockwise <a href="https://learnopengl.com/Advanced-OpenGL/Face-culling">winding order</a> for front faces of triangle primitive modes.</p>
+<p>Note: In case of missing points when handling large amounts of mesh data, try increasing its buffer size limit under .</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1135,7 +1140,8 @@
   
   <a id="Godot_ImmediateGeometry_AddSphere_" data-uid="Godot.ImmediateGeometry.AddSphere*"></a>
   <h4 id="Godot_ImmediateGeometry_AddSphere_System_Int32_System_Int32_System_Single_System_Boolean_" data-uid="Godot.ImmediateGeometry.AddSphere(System.Int32,System.Int32,System.Single,System.Boolean)">AddSphere(Int32, Int32, Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Simple helper to draw an UV sphere with given latitude, longitude and radius.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1177,7 +1183,8 @@
   
   <a id="Godot_ImmediateGeometry_AddVertex_" data-uid="Godot.ImmediateGeometry.AddVertex*"></a>
   <h4 id="Godot_ImmediateGeometry_AddVertex_Godot_Vector3_" data-uid="Godot.ImmediateGeometry.AddVertex(Godot.Vector3)">AddVertex(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a vertex in local coordinate space with the currently set color/uv/etc.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1204,7 +1211,9 @@
   
   <a id="Godot_ImmediateGeometry_Begin_" data-uid="Godot.ImmediateGeometry.Begin*"></a>
   <h4 id="Godot_ImmediateGeometry_Begin_Godot_Mesh_PrimitiveType_Godot_Texture_" data-uid="Godot.ImmediateGeometry.Begin(Godot.Mesh.PrimitiveType,Godot.Texture)">Begin(Mesh.PrimitiveType, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Begin drawing (and optionally pass a texture override). When done call <a class="xref" href="Godot.ImmediateGeometry.html#Godot_ImmediateGeometry_End">End()</a>. For more information on how this works, search for <code>glBegin()</code> and <code>glEnd()</code> references.</p>
+<p>For the type of primitive, see the <a class="xref" href="Godot.Mesh.PrimitiveType.html">Mesh.PrimitiveType</a> enum.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1236,7 +1245,8 @@
   
   <a id="Godot_ImmediateGeometry_Clear_" data-uid="Godot.ImmediateGeometry.Clear*"></a>
   <h4 id="Godot_ImmediateGeometry_Clear" data-uid="Godot.ImmediateGeometry.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears everything that was drawn using begin/end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1246,7 +1256,8 @@
   
   <a id="Godot_ImmediateGeometry_End_" data-uid="Godot.ImmediateGeometry.End*"></a>
   <h4 id="Godot_ImmediateGeometry_End" data-uid="Godot.ImmediateGeometry.End">End()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Ends a drawing context and displays the results.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1256,7 +1267,8 @@
   
   <a id="Godot_ImmediateGeometry_SetColor_" data-uid="Godot.ImmediateGeometry.SetColor*"></a>
   <h4 id="Godot_ImmediateGeometry_SetColor_Godot_Color_" data-uid="Godot.ImmediateGeometry.SetColor(Godot.Color)">SetColor(Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current drawing color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1283,7 +1295,8 @@
   
   <a id="Godot_ImmediateGeometry_SetNormal_" data-uid="Godot.ImmediateGeometry.SetNormal*"></a>
   <h4 id="Godot_ImmediateGeometry_SetNormal_Godot_Vector3_" data-uid="Godot.ImmediateGeometry.SetNormal(Godot.Vector3)">SetNormal(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The next vertex&apos;s normal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1310,7 +1323,8 @@
   
   <a id="Godot_ImmediateGeometry_SetTangent_" data-uid="Godot.ImmediateGeometry.SetTangent*"></a>
   <h4 id="Godot_ImmediateGeometry_SetTangent_Godot_Plane_" data-uid="Godot.ImmediateGeometry.SetTangent(Godot.Plane)">SetTangent(Plane)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The next vertex&apos;s tangent (and binormal facing).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1337,7 +1351,8 @@
   
   <a id="Godot_ImmediateGeometry_SetUv_" data-uid="Godot.ImmediateGeometry.SetUv*"></a>
   <h4 id="Godot_ImmediateGeometry_SetUv_Godot_Vector2_" data-uid="Godot.ImmediateGeometry.SetUv(Godot.Vector2)">SetUv(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The next vertex&apos;s UV.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1364,7 +1379,8 @@
   
   <a id="Godot_ImmediateGeometry_SetUv2_" data-uid="Godot.ImmediateGeometry.SetUv2*"></a>
   <h4 id="Godot_ImmediateGeometry_SetUv2_Godot_Vector2_" data-uid="Godot.ImmediateGeometry.SetUv2(Godot.Vector2)">SetUv2(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The next vertex&apos;s second layer UV.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

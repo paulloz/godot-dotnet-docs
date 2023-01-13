@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Popup" data-uid="Godot.Popup" class="text-break">Class Popup
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Popup is a base <a class="xref" href="Godot.Control.html">Control</a> used to show dialogs and popups. It&apos;s a subwindow and modal by default (see <a class="xref" href="Godot.Control.html">Control</a>) and has helpers for custom popup behavior. All popup methods ensure correct placement within the viewport.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1466,7 +1467,8 @@
   
   
   <h4 id="Godot_Popup_NotificationPopupHide" data-uid="Godot.Popup.NotificationPopupHide">NotificationPopupHide</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification sent right after the popup is hidden.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1490,7 +1492,8 @@
   
   
   <h4 id="Godot_Popup_NotificationPostPopup" data-uid="Godot.Popup.NotificationPostPopup">NotificationPostPopup</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification sent right after the popup is shown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1517,7 +1520,9 @@
   
   <a id="Godot_Popup_PopupExclusive_" data-uid="Godot.Popup.PopupExclusive*"></a>
   <h4 id="Godot_Popup_PopupExclusive" data-uid="Godot.Popup.PopupExclusive">PopupExclusive</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the popup will not be hidden when a click event occurs outside of it, or when it receives the <code>ui_cancel</code> action event.</p>
+<p>Note: Enabling this property doesn&apos;t affect the Close or Cancel buttons&apos; behavior in dialogs that inherit from this class. As a workaround, you can use <a class="xref" href="Godot.WindowDialog.html#Godot_WindowDialog_GetCloseButton">GetCloseButton()</a> or <a class="xref" href="Godot.ConfirmationDialog.html#Godot_ConfirmationDialog_GetCancel">GetCancel()</a> and hide the buttons in question by setting their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1569,7 +1574,8 @@
   
   <a id="Godot_Popup_Popup__" data-uid="Godot.Popup.Popup_*"></a>
   <h4 id="Godot_Popup_Popup__System_Nullable_Godot_Rect2__" data-uid="Godot.Popup.Popup_(System.Nullable{Godot.Rect2})">Popup_(Nullable&lt;Rect2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Popup (show the control in modal form).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1588,7 +1594,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Rect2.html">Rect2</a>&gt;</td>
         <td><span class="parametername">bounds</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Rect2(new Vector2(0, 0), new Vector2(0, 0))</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1596,7 +1603,8 @@
   
   <a id="Godot_Popup_PopupCentered_" data-uid="Godot.Popup.PopupCentered*"></a>
   <h4 id="Godot_Popup_PopupCentered_System_Nullable_Godot_Vector2__" data-uid="Godot.Popup.PopupCentered(System.Nullable{Godot.Vector2})">PopupCentered(Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Popup (show the control in modal form) in the center of the screen relative to its current canvas transform, at the current size, or at a size determined by <code>size</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1615,7 +1623,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">size</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1623,7 +1632,8 @@
   
   <a id="Godot_Popup_PopupCenteredClamped_" data-uid="Godot.Popup.PopupCenteredClamped*"></a>
   <h4 id="Godot_Popup_PopupCenteredClamped_System_Nullable_Godot_Vector2__System_Single_" data-uid="Godot.Popup.PopupCenteredClamped(System.Nullable{Godot.Vector2},System.Single)">PopupCenteredClamped(Nullable&lt;Vector2&gt;, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Popup (show the control in modal form) in the center of the screen relative to the current canvas transform, clamping the size to <code>size</code>, then ensuring the popup is no larger than the viewport size multiplied by <code>fallback_ratio</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1642,7 +1652,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">size</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
@@ -1655,7 +1666,8 @@
   
   <a id="Godot_Popup_PopupCenteredMinsize_" data-uid="Godot.Popup.PopupCenteredMinsize*"></a>
   <h4 id="Godot_Popup_PopupCenteredMinsize_System_Nullable_Godot_Vector2__" data-uid="Godot.Popup.PopupCenteredMinsize(System.Nullable{Godot.Vector2})">PopupCenteredMinsize(Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Popup (show the control in modal form) in the center of the screen relative to the current canvas transform, ensuring the size is never smaller than <code>minsize</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1674,7 +1686,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">minsize</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1682,7 +1695,8 @@
   
   <a id="Godot_Popup_PopupCenteredRatio_" data-uid="Godot.Popup.PopupCenteredRatio*"></a>
   <h4 id="Godot_Popup_PopupCenteredRatio_System_Single_" data-uid="Godot.Popup.PopupCenteredRatio(System.Single)">PopupCenteredRatio(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Popup (show the control in modal form) in the center of the screen relative to the current canvas transform, scaled at a ratio of size of the screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1709,7 +1723,8 @@
   
   <a id="Godot_Popup_SetAsMinsize_" data-uid="Godot.Popup.SetAsMinsize*"></a>
   <h4 id="Godot_Popup_SetAsMinsize" data-uid="Godot.Popup.SetAsMinsize">SetAsMinsize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Shrink popup to keep to the minimum size of content.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

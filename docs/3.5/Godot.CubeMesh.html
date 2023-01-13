@@ -83,7 +83,10 @@
   
   <h1 id="Godot_CubeMesh" data-uid="Godot.CubeMesh" class="text-break">Class CubeMesh
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Generate an axis-aligned cuboid <a class="xref" href="Godot.PrimitiveMesh.html">PrimitiveMesh</a>.</p>
+<p>The cube&apos;s UV layout is arranged in a 3×2 layout that allows texturing each face individually. To apply the same texture on all faces, change the material&apos;s UV property to <code>Vector3(3, 2, 1)</code>.</p>
+<p>Note: When using a large textured <a class="xref" href="Godot.CubeMesh.html">CubeMesh</a> (e.g. as a floor), you may stumble upon UV jittering issues depending on the camera angle. To solve this, increase <a class="xref" href="Godot.CubeMesh.html#Godot_CubeMesh_SubdivideDepth">SubdivideDepth</a>, <a class="xref" href="Godot.CubeMesh.html#Godot_CubeMesh_SubdivideHeight">SubdivideHeight</a> and <a class="xref" href="Godot.CubeMesh.html#Godot_CubeMesh_SubdivideWidth">SubdivideWidth</a> until you no longer notice UV jittering.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -420,7 +423,8 @@
   
   <a id="Godot_CubeMesh_Size_" data-uid="Godot.CubeMesh.Size*"></a>
   <h4 id="Godot_CubeMesh_Size" data-uid="Godot.CubeMesh.Size">Size</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Size of the cuboid mesh.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -445,7 +449,8 @@
   
   <a id="Godot_CubeMesh_SubdivideDepth_" data-uid="Godot.CubeMesh.SubdivideDepth*"></a>
   <h4 id="Godot_CubeMesh_SubdivideDepth" data-uid="Godot.CubeMesh.SubdivideDepth">SubdivideDepth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of extra edge loops inserted along the Z axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -470,7 +475,8 @@
   
   <a id="Godot_CubeMesh_SubdivideHeight_" data-uid="Godot.CubeMesh.SubdivideHeight*"></a>
   <h4 id="Godot_CubeMesh_SubdivideHeight" data-uid="Godot.CubeMesh.SubdivideHeight">SubdivideHeight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of extra edge loops inserted along the Y axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -495,7 +501,8 @@
   
   <a id="Godot_CubeMesh_SubdivideWidth_" data-uid="Godot.CubeMesh.SubdivideWidth*"></a>
   <h4 id="Godot_CubeMesh_SubdivideWidth" data-uid="Godot.CubeMesh.SubdivideWidth">SubdivideWidth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of extra edge loops inserted along the X axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

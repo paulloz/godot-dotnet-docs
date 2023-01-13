@@ -83,7 +83,8 @@
   
   <h1 id="Godot_PrimitiveMesh" data-uid="Godot.PrimitiveMesh" class="text-break">Class PrimitiveMesh
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Base class for all primitive meshes. Handles applying a <a class="xref" href="Godot.Material.html">Material</a> to a primitive mesh. Examples include <a class="xref" href="Godot.CapsuleMesh.html">CapsuleMesh</a>, <a class="xref" href="Godot.CubeMesh.html">CubeMesh</a>, <a class="xref" href="Godot.CylinderMesh.html">CylinderMesh</a>, <a class="xref" href="Godot.PlaneMesh.html">PlaneMesh</a>, <a class="xref" href="Godot.PrismMesh.html">PrismMesh</a>, <a class="xref" href="Godot.QuadMesh.html">QuadMesh</a>, and <a class="xref" href="Godot.SphereMesh.html">SphereMesh</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -386,7 +387,8 @@
   
   <a id="Godot_PrimitiveMesh_CustomAabb_" data-uid="Godot.PrimitiveMesh.CustomAabb*"></a>
   <h4 id="Godot_PrimitiveMesh_CustomAabb" data-uid="Godot.PrimitiveMesh.CustomAabb">CustomAabb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Overrides the <a class="xref" href="Godot.AABB.html">AABB</a> with one defined by user for use with frustum culling. Especially useful to avoid unexpected culling when using a shader to offset vertices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -411,7 +413,9 @@
   
   <a id="Godot_PrimitiveMesh_FlipFaces_" data-uid="Godot.PrimitiveMesh.FlipFaces*"></a>
   <h4 id="Godot_PrimitiveMesh_FlipFaces" data-uid="Godot.PrimitiveMesh.FlipFaces">FlipFaces</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set, the order of the vertices in each triangle are reversed resulting in the backside of the mesh being drawn.</p>
+<p>This gives the same result as using <a class="xref" href="Godot.SpatialMaterial.CullMode.html#Godot_SpatialMaterial_CullMode_Back">Back</a> in <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_ParamsCullMode">ParamsCullMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -436,7 +440,8 @@
   
   <a id="Godot_PrimitiveMesh_Material_" data-uid="Godot.PrimitiveMesh.Material*"></a>
   <h4 id="Godot_PrimitiveMesh_Material" data-uid="Godot.PrimitiveMesh.Material">Material</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current <a class="xref" href="Godot.Material.html">Material</a> of the primitive mesh.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -538,7 +543,11 @@
   
   <a id="Godot_PrimitiveMesh_GetMeshArrays_" data-uid="Godot.PrimitiveMesh.GetMeshArrays*"></a>
   <h4 id="Godot_PrimitiveMesh_GetMeshArrays" data-uid="Godot.PrimitiveMesh.GetMeshArrays">GetMeshArrays()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns mesh arrays used to constitute surface of <a class="xref" href="Godot.Mesh.html">Mesh</a>. The result can be passed to <a class="xref" href="Godot.ArrayMesh.html#Godot_ArrayMesh_AddSurfaceFromArrays_Godot_Mesh_PrimitiveType_Godot_Collections_Array_Godot_Collections_Array_System_UInt32_">AddSurfaceFromArrays(Mesh.PrimitiveType, Array, Array, UInt32)</a> to create a new surface. For example:</p>
+<p><pre><code>var c := CylinderMesh.new()
+var arr_mesh := ArrayMesh.new()
+arr_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, c.get_mesh_arrays())</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

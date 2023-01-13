@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ColorPicker" data-uid="Godot.ColorPicker" class="text-break">Class ColorPicker
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Displays a color picker widget. Useful for selecting a color from an RGB/RGBA colorspace.</p>
+<p>Note: This control is the color picker widget itself. You can use a <a class="xref" href="Godot.ColorPickerButton.html">ColorPickerButton</a> instead if you need a button that brings up a <a class="xref" href="Godot.ColorPicker.html">ColorPicker</a> in a pop-up.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1486,7 +1488,8 @@
   
   <a id="Godot_ColorPicker_Color_" data-uid="Godot.ColorPicker.Color*"></a>
   <h4 id="Godot_ColorPicker_Color" data-uid="Godot.ColorPicker.Color">Color</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The currently selected color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1511,7 +1514,8 @@
   
   <a id="Godot_ColorPicker_DeferredMode_" data-uid="Godot.ColorPicker.DeferredMode*"></a>
   <h4 id="Godot_ColorPicker_DeferredMode" data-uid="Godot.ColorPicker.DeferredMode">DeferredMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the color will apply only after the user releases the mouse button, otherwise it will apply immediately even in mouse motion event (which can cause performance issues).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1536,7 +1540,8 @@
   
   <a id="Godot_ColorPicker_EditAlpha_" data-uid="Godot.ColorPicker.EditAlpha*"></a>
   <h4 id="Godot_ColorPicker_EditAlpha" data-uid="Godot.ColorPicker.EditAlpha">EditAlpha</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, shows an alpha channel slider (opacity).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1561,7 +1566,9 @@
   
   <a id="Godot_ColorPicker_HsvMode_" data-uid="Godot.ColorPicker.HsvMode*"></a>
   <h4 id="Godot_ColorPicker_HsvMode" data-uid="Godot.ColorPicker.HsvMode">HsvMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, allows editing the color with Hue/Saturation/Value sliders.</p>
+<p>Note: Cannot be enabled if raw mode is on.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1586,7 +1593,8 @@
   
   <a id="Godot_ColorPicker_PresetsEnabled_" data-uid="Godot.ColorPicker.PresetsEnabled*"></a>
   <h4 id="Godot_ColorPicker_PresetsEnabled" data-uid="Godot.ColorPicker.PresetsEnabled">PresetsEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the &quot;add preset&quot; button is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1611,7 +1619,8 @@
   
   <a id="Godot_ColorPicker_PresetsVisible_" data-uid="Godot.ColorPicker.PresetsVisible*"></a>
   <h4 id="Godot_ColorPicker_PresetsVisible" data-uid="Godot.ColorPicker.PresetsVisible">PresetsVisible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, saved color presets are visible.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1636,7 +1645,9 @@
   
   <a id="Godot_ColorPicker_RawMode_" data-uid="Godot.ColorPicker.RawMode*"></a>
   <h4 id="Godot_ColorPicker_RawMode" data-uid="Godot.ColorPicker.RawMode">RawMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, allows the color R, G, B component values to go beyond 1.0, which can be used for certain special operations that require it (like tinting without darkening or rendering sprites in HDR).</p>
+<p>Note: Cannot be enabled if HSV mode is on.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1663,7 +1674,9 @@
   
   <a id="Godot_ColorPicker_AddPreset_" data-uid="Godot.ColorPicker.AddPreset*"></a>
   <h4 id="Godot_ColorPicker_AddPreset_Godot_Color_" data-uid="Godot.ColorPicker.AddPreset(Godot.Color)">AddPreset(Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the given color to a list of color presets. The presets are displayed in the color picker and the user will be able to select them.</p>
+<p>Note: The presets list is only for this color picker.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1740,7 +1753,8 @@
   
   <a id="Godot_ColorPicker_ErasePreset_" data-uid="Godot.ColorPicker.ErasePreset*"></a>
   <h4 id="Godot_ColorPicker_ErasePreset_Godot_Color_" data-uid="Godot.ColorPicker.ErasePreset(Godot.Color)">ErasePreset(Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the given color from the list of color presets of this color picker.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1792,7 +1806,8 @@
   
   <a id="Godot_ColorPicker_GetPresets_" data-uid="Godot.ColorPicker.GetPresets*"></a>
   <h4 id="Godot_ColorPicker_GetPresets" data-uid="Godot.ColorPicker.GetPresets">GetPresets()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the list of colors in the presets of the color picker.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

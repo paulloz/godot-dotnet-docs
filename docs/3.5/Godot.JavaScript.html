@@ -83,7 +83,9 @@
   
   <h1 id="Godot_JavaScript" data-uid="Godot.JavaScript" class="text-break">Class JavaScript
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The JavaScript singleton is implemented only in the HTML5 export. It&apos;s used to access the browser&apos;s JavaScript context. This allows interaction with embedding pages or calling third-party JavaScript APIs.</p>
+<p>Note: This singleton can be disabled at build-time to improve security. By default, the JavaScript singleton is enabled. Official export templates also have the JavaScript singleton enabled. See <a href="$DOCS_URL/development/compiling/compiling_for_web.html">Compiling for the Web</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +131,8 @@
   
   <a id="Godot_JavaScript_CreateCallback_" data-uid="Godot.JavaScript.CreateCallback*"></a>
   <h4 id="Godot_JavaScript_CreateCallback_Godot_Object_System_String_" data-uid="Godot.JavaScript.CreateCallback(Godot.Object,System.String)">CreateCallback(Object, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a reference to a script function that can be used as a callback by JavaScript. The reference must be kept until the callback happens, or it won&apos;t be called at all. See <a class="xref" href="Godot.JavaScriptObject.html">JavaScriptObject</a> for usage.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -176,7 +179,8 @@
   
   <a id="Godot_JavaScript_CreateObject_" data-uid="Godot.JavaScript.CreateObject*"></a>
   <h4 id="Godot_JavaScript_CreateObject_System_String_System_Object___" data-uid="Godot.JavaScript.CreateObject(System.String,System.Object[])">CreateObject(String, Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new JavaScript object using the <code>new</code> constructor. The <code>object</code> must a valid property of the JavaScript <code>window</code>. See <a class="xref" href="Godot.JavaScriptObject.html">JavaScriptObject</a> for usage.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -223,7 +227,11 @@
   
   <a id="Godot_JavaScript_DownloadBuffer_" data-uid="Godot.JavaScript.DownloadBuffer*"></a>
   <h4 id="Godot_JavaScript_DownloadBuffer_System_Byte___System_String_System_String_" data-uid="Godot.JavaScript.DownloadBuffer(System.Byte[],System.String,System.String)">DownloadBuffer(Byte[], String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Prompts the user to download a file containing the specified <code>buffer</code>. The file will have the given <code>name</code> and <code>mime</code> type.</p>
+<p>Note: The browser may override the <a href="https://en.wikipedia.org/wiki/Media_type">MIME type</a> provided based on the file <code>name</code>&apos;s extension.</p>
+<p>Note: Browsers might block the download if <a class="xref" href="Godot.JavaScript.html#Godot_JavaScript_DownloadBuffer_System_Byte___System_String_System_String_">DownloadBuffer(Byte[], String, String)</a> is not being called from a user interaction (e.g. button click).</p>
+<p>Note: Browsers might ask the user for permission or block the download if multiple download requests are made in a quick succession.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -260,7 +268,9 @@
   
   <a id="Godot_JavaScript_Eval_" data-uid="Godot.JavaScript.Eval*"></a>
   <h4 id="Godot_JavaScript_Eval_System_String_System_Boolean_" data-uid="Godot.JavaScript.Eval(System.String,System.Boolean)">Eval(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Execute the string <code>code</code> as JavaScript code within the browser window. This is a call to the actual global JavaScript function <code>eval()</code>.</p>
+<p>If <code>use_global_execution_context</code> is <code>true</code>, the code will be evaluated in the global execution context. Otherwise, it is evaluated in the execution context of a function within the engine&apos;s runtime environment.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -307,7 +317,8 @@
   
   <a id="Godot_JavaScript_GetInterface_" data-uid="Godot.JavaScript.GetInterface*"></a>
   <h4 id="Godot_JavaScript_GetInterface_System_String_" data-uid="Godot.JavaScript.GetInterface(System.String)">GetInterface(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an interface to a JavaScript object that can be used by scripts. The <code>interface</code> must be a valid property of the JavaScript <code>window</code>. The callback must accept a single <a class="xref" href="Godot.Collections.Array.html">Array</a> argument, which will contain the JavaScript <code>arguments</code>. See <a class="xref" href="Godot.JavaScriptObject.html">JavaScriptObject</a> for usage.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -349,7 +360,9 @@
   
   <a id="Godot_JavaScript_PwaNeedsUpdate_" data-uid="Godot.JavaScript.PwaNeedsUpdate*"></a>
   <h4 id="Godot_JavaScript_PwaNeedsUpdate" data-uid="Godot.JavaScript.PwaNeedsUpdate">PwaNeedsUpdate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a new version of the progressive web app is waiting to be activated.</p>
+<p>Note: Only relevant when exported as a Progressive Web App.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +387,10 @@
   
   <a id="Godot_JavaScript_PwaUpdate_" data-uid="Godot.JavaScript.PwaUpdate*"></a>
   <h4 id="Godot_JavaScript_PwaUpdate" data-uid="Godot.JavaScript.PwaUpdate">PwaUpdate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs the live update of the progressive web app. Forcing the new version to be installed and the page to be reloaded.</p>
+<p>Note: Your application will be reloaded in all browser tabs.</p>
+<p>Note: Only relevant when exported as a Progressive Web App and <a class="xref" href="Godot.JavaScript.html#Godot_JavaScript_PwaNeedsUpdate">PwaNeedsUpdate()</a> returns <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

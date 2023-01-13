@@ -101,7 +101,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerENet_CompressionModeEnum_Fastlz" data-uid="Godot.NetworkedMultiplayerENet.CompressionModeEnum.Fastlz">Fastlz</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="http://fastlz.org/">FastLZ</a> compression. This option uses less CPU resources compared to <a class="xref" href="Godot.NetworkedMultiplayerENet.CompressionModeEnum.html#Godot_NetworkedMultiplayerENet_CompressionModeEnum_Zlib">Zlib</a>, at the expense of using more bandwidth.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +126,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerENet_CompressionModeEnum_None" data-uid="Godot.NetworkedMultiplayerENet.CompressionModeEnum.None">None</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>No compression. This uses the most bandwidth, but has the upside of requiring the fewest CPU resources. This option may also be used to make network debugging using tools like Wireshark easier.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +151,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerENet_CompressionModeEnum_RangeCoder" data-uid="Godot.NetworkedMultiplayerENet.CompressionModeEnum.RangeCoder">RangeCoder</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>ENet&apos;s built-in range encoding. Works well on small packets, but is not the most efficient algorithm on packets larger than 4 KB.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,7 +200,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerENet_CompressionModeEnum_Zlib" data-uid="Godot.NetworkedMultiplayerENet.CompressionModeEnum.Zlib">Zlib</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://www.zlib.net/">Zlib</a> compression. This option uses less bandwidth compared to <a class="xref" href="Godot.NetworkedMultiplayerENet.CompressionModeEnum.html#Godot_NetworkedMultiplayerENet_CompressionModeEnum_Fastlz">Fastlz</a>, at the expense of using more CPU resources. Note that this algorithm is not very efficient on packets smaller than 4 KB. Therefore, it&apos;s recommended to use other compression algorithms in most cases.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -221,7 +225,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerENet_CompressionModeEnum_Zstd" data-uid="Godot.NetworkedMultiplayerENet.CompressionModeEnum.Zstd">Zstd</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://facebook.github.io/zstd/">Zstandard</a> compression.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

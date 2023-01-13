@@ -83,7 +83,9 @@
   
   <h1 id="Godot_Timer" data-uid="Godot.Timer" class="text-break">Class Timer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Counts down a specified interval and emits a signal on reaching 0. Can be set to repeat or &quot;one-shot&quot; mode.</p>
+<p>Note: To create a one-shot timer without instantiating a node, use <a class="xref" href="Godot.SceneTree.html#Godot_SceneTree_CreateTimer_System_Single_System_Boolean_">CreateTimer(Single, Boolean)</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -753,7 +755,9 @@
   
   <a id="Godot_Timer_Autostart_" data-uid="Godot.Timer.Autostart*"></a>
   <h4 id="Godot_Timer_Autostart" data-uid="Godot.Timer.Autostart">Autostart</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the timer will automatically start when entering the scene tree.</p>
+<p>Note: This property is automatically set to <code>false</code> after the timer enters the scene tree and starts.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -778,7 +782,8 @@
   
   <a id="Godot_Timer_OneShot_" data-uid="Godot.Timer.OneShot*"></a>
   <h4 id="Godot_Timer_OneShot" data-uid="Godot.Timer.OneShot">OneShot</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the timer will stop when reaching 0. If <code>false</code>, it will restart.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -803,7 +808,8 @@
   
   <a id="Godot_Timer_Paused_" data-uid="Godot.Timer.Paused*"></a>
   <h4 id="Godot_Timer_Paused" data-uid="Godot.Timer.Paused">Paused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the timer is paused and will not process until it is unpaused again, even if <a class="xref" href="Godot.Timer.html#Godot_Timer_Start_System_Single_">Start(Single)</a> is called.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -828,7 +834,8 @@
   
   <a id="Godot_Timer_ProcessMode_" data-uid="Godot.Timer.ProcessMode*"></a>
   <h4 id="Godot_Timer_ProcessMode" data-uid="Godot.Timer.ProcessMode">ProcessMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Processing mode. See <a class="xref" href="Godot.Timer.TimerProcessMode.html">Timer.TimerProcessMode</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -853,7 +860,9 @@
   
   <a id="Godot_Timer_TimeLeft_" data-uid="Godot.Timer.TimeLeft*"></a>
   <h4 id="Godot_Timer_TimeLeft" data-uid="Godot.Timer.TimeLeft">TimeLeft</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The timer&apos;s remaining time in seconds. Returns 0 if the timer is inactive.</p>
+<p>Note: You cannot set this value. To change the timer&apos;s remaining time, use <a class="xref" href="Godot.Timer.html#Godot_Timer_Start_System_Single_">Start(Single)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -878,7 +887,9 @@
   
   <a id="Godot_Timer_WaitTime_" data-uid="Godot.Timer.WaitTime*"></a>
   <h4 id="Godot_Timer_WaitTime" data-uid="Godot.Timer.WaitTime">WaitTime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The wait time in seconds.</p>
+<p>Note: Timers can only emit once per rendered frame at most (or once per physics frame if <a class="xref" href="Godot.Timer.html#Godot_Timer_ProcessMode">ProcessMode</a> is <a class="xref" href="Godot.Timer.TimerProcessMode.html#Godot_Timer_TimerProcessMode_Physics">Physics</a>). This means very low wait times (lower than 0.05 seconds) will behave in significantly different ways depending on the rendered framerate. For very low wait times, it is recommended to use a process loop in a script instead of using a Timer node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1055,7 +1066,8 @@
   
   <a id="Godot_Timer_IsStopped_" data-uid="Godot.Timer.IsStopped*"></a>
   <h4 id="Godot_Timer_IsStopped" data-uid="Godot.Timer.IsStopped">IsStopped()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the timer is stopped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1215,7 +1227,9 @@
   
   <a id="Godot_Timer_Start_" data-uid="Godot.Timer.Start*"></a>
   <h4 id="Godot_Timer_Start_System_Single_" data-uid="Godot.Timer.Start(System.Single)">Start(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Starts the timer. Sets <code>wait_time</code> to <code>time_sec</code> if <code>time_sec > 0</code>. This also resets the remaining time to <code>wait_time</code>.</p>
+<p>Note: This method will not resume a paused timer. See <a class="xref" href="Godot.Timer.html#Godot_Timer_Paused">Paused</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1242,7 +1256,8 @@
   
   <a id="Godot_Timer_Stop_" data-uid="Godot.Timer.Stop*"></a>
   <h4 id="Godot_Timer_Stop" data-uid="Godot.Timer.Stop">Stop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the timer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

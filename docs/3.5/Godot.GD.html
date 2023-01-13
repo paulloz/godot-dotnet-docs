@@ -83,7 +83,8 @@
   
   <h1 id="Godot_GD" data-uid="Godot.GD" class="text-break">Class GD
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Godot's global functions.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -101,7 +102,8 @@
   
   
   <h4 id="Godot_GD_Spkey" data-uid="Godot.GD.Spkey">Spkey</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scancodes with this bit applied are non-printable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -128,7 +130,13 @@
   
   <a id="Godot_GD_Bytes2Var_" data-uid="Godot.GD.Bytes2Var*"></a>
   <h4 id="Godot_GD_Bytes2Var_System_Byte___System_Boolean_" data-uid="Godot.GD.Bytes2Var(System.Byte[],System.Boolean)">Bytes2Var(Byte[], Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decodes a byte array back to a <code>Variant</code> value.
+If <code data-dev-comment-type="paramref" class="paramref">allowObjects</code> is <span class="xref">true</span> decoding objects is allowed.</p>
+<p>WARNING: Deserialized object can contain code which gets executed.
+Do not set <code data-dev-comment-type="paramref" class="paramref">allowObjects</code> to <span class="xref">true</span>
+if the serialized object comes from untrusted sources to avoid
+potential security threats (remote code execution).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -147,12 +155,14 @@
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">bytes</span></td>
-        <td></td>
+        <td><p>Byte array that will be decoded to a <code>Variant</code>.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">allowObjects</span></td>
-        <td></td>
+        <td><p>If objects should be decoded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -167,7 +177,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td></td>
+        <td><p>The decoded <code>Variant</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -175,7 +186,9 @@
   
   <a id="Godot_GD_Convert_" data-uid="Godot.GD.Convert*"></a>
   <h4 id="Godot_GD_Convert_System_Object_Godot_Variant_Type_" data-uid="Godot.GD.Convert(System.Object,Godot.Variant.Type)">Convert(Object, Variant.Type)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts from a <code>Variant</code> type to another in the best way possible.
+The <code data-dev-comment-type="paramref" class="paramref">type</code> parameter uses the <a class="xref" href="Godot.Variant.Type.html">Variant.Type</a> values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -214,15 +227,25 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td></td>
+        <td><p>The <code>Variant</code> converted to the given <code data-dev-comment-type="paramref" class="paramref">type</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Convert_System_Object_Godot_Variant_Type__examples">Examples</h5>
+  <pre><code>var a = new Vector2(1, 0);
+// Prints 1
+GD.Print(a.Length());
+var b = GD.Convert(a, Variant.Type.String)
+// Prints 6 as &quot;(1, 0)&quot; is 6 characters
+GD.Print(b.Length);</code></pre>
+
   
   
   <a id="Godot_GD_Db2Linear_" data-uid="Godot.GD.Db2Linear*"></a>
   <h4 id="Godot_GD_Db2Linear_System_Single_" data-uid="Godot.GD.Db2Linear(System.Single)">Db2Linear(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts from decibels to linear energy (audio).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -241,7 +264,8 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">db</span></td>
-        <td></td>
+        <td><p>Decibels to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -256,15 +280,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>Audio volume as linear energy.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Db2Linear_System_Single__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.GD.html#Godot_GD_Linear2Db_System_Single_">Linear2Db(Single)</a></div>
+  </div>
   
   
   <a id="Godot_GD_DecTime_" data-uid="Godot.GD.DecTime*"></a>
   <h4 id="Godot_GD_DecTime_System_Single_System_Single_System_Single_" data-uid="Godot.GD.DecTime(System.Single,System.Single,System.Single)">DecTime(Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the result of <code data-dev-comment-type="paramref" class="paramref">value</code> decreased by
+<code data-dev-comment-type="paramref" class="paramref">step</code> * <code data-dev-comment-type="paramref" class="paramref">amount</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -283,17 +314,20 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>Value that will be decreased.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">amount</span></td>
-        <td></td>
+        <td><p>Amount that will be decreased from <code data-dev-comment-type="paramref" class="paramref">value</code> for every <code data-dev-comment-type="paramref" class="paramref">step</code>.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">step</span></td>
-        <td></td>
+        <td><p>Times the <code data-dev-comment-type="paramref" class="paramref">value</code> will be decreased by <code data-dev-comment-type="paramref" class="paramref">amount</code></p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -308,15 +342,23 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>The decreased value.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_DecTime_System_Single_System_Single_System_Single__examples">Examples</h5>
+  <pre><code>// a = 59;
+// float a = GD.DecTime(60, 10, 0.1f);</code></pre>
+
   
   
   <a id="Godot_GD_FuncRef_" data-uid="Godot.GD.FuncRef*"></a>
   <h4 id="Godot_GD_FuncRef_Godot_Object_System_String_" data-uid="Godot.GD.FuncRef(Godot.Object,System.String)">FuncRef(Object, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Godot.GD.html#Godot_GD_FuncRef_Godot_Object_System_String_">FuncRef(Object, String)</a> that refers to the function
+with the given name <code data-dev-comment-type="paramref" class="paramref">funcname</code> in the
+given object <code data-dev-comment-type="paramref" class="paramref">instance</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -335,12 +377,14 @@
       <tr>
         <td><a class="xref" href="Godot.Object.html">Object</a></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The object that contains the function.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">funcname</span></td>
-        <td></td>
+        <td><p>The name of the function.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -355,7 +399,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.FuncRef.html">FuncRef</a></td>
-        <td></td>
+        <td><p>A reference to the given object's function.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -363,7 +408,8 @@
   
   <a id="Godot_GD_Hash_" data-uid="Godot.GD.Hash*"></a>
   <h4 id="Godot_GD_Hash_System_Object_" data-uid="Godot.GD.Hash(System.Object)">Hash(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the integer hash of the variable passed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -382,7 +428,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">var</span></td>
-        <td></td>
+        <td><p>Variable that will be hashed.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -397,15 +444,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>Hash of the variable passed.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Hash_System_Object__examples">Examples</h5>
+  <pre><code>GD.Print(GD.Hash(&quot;a&quot;)); // Prints 177670</code></pre>
+
   
   
   <a id="Godot_GD_InstanceFromId_" data-uid="Godot.GD.InstanceFromId*"></a>
   <h4 id="Godot_GD_InstanceFromId_System_UInt64_" data-uid="Godot.GD.InstanceFromId(System.UInt64)">InstanceFromId(UInt64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Object.html">Object</a> that corresponds to <code data-dev-comment-type="paramref" class="paramref">instanceId</code>.
+All Objects have a unique instance ID.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -424,7 +477,8 @@
       <tr>
         <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">instanceId</span></td>
-        <td></td>
+        <td><p>Instance ID of the Object to retrieve.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -439,15 +493,31 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Object.html">Object</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Godot.Object.html">Object</a> instance.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_InstanceFromId_System_UInt64__examples">Examples</h5>
+  <pre><code>public class MyNode : Node
+{
+    public string foo = &quot;bar&quot;;
+
+    public override void _Ready()
+    {
+        ulong id = GetInstanceId();
+        var inst = (MyNode)GD.InstanceFromId(Id);
+        GD.Print(inst.foo); // Prints bar
+    }
+}</code></pre>
+
   
   
   <a id="Godot_GD_Linear2Db_" data-uid="Godot.GD.Linear2Db*"></a>
   <h4 id="Godot_GD_Linear2Db_System_Single_" data-uid="Godot.GD.Linear2Db(System.Single)">Linear2Db(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts from linear energy to decibels (audio).
+This can be used to implement volume sliders that behave as expected (since volume isn't linear).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -466,7 +536,8 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">linear</span></td>
-        <td></td>
+        <td><p>The linear energy to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -481,15 +552,36 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>Audio as decibels.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Linear2Db_System_Single__examples">Examples</h5>
+  <pre><code>// &quot;slider&quot; refers to a node that inherits Range such as HSlider or VSlider.
+// Its range must be configured to go from 0 to 1.
+// Change the bus name if you&apos;d like to change the volume of a specific bus only.
+AudioServer.SetBusVolumeDb(AudioServer.GetBusIndex(&quot;Master&quot;), GD.Linear2Db(slider.value));</code></pre>
+
+  <h5 id="Godot_GD_Linear2Db_System_Single__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.GD.html#Godot_GD_Db2Linear_System_Single_">Db2Linear(Single)</a></div>
+  </div>
   
   
   <a id="Godot_GD_Load_" data-uid="Godot.GD.Load*"></a>
   <h4 id="Godot_GD_Load_System_String_" data-uid="Godot.GD.Load(System.String)">Load(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads a resource from the filesystem located at <code data-dev-comment-type="paramref" class="paramref">path</code>.
+The resource is loaded on the method call (unless it's referenced already
+elsewhere, e.g. in another script or in the scene), which might cause slight delay,
+especially when loading scenes. To avoid unnecessary delays when loading something
+multiple times, either store the resource in a variable.</p>
+<p>Note: Resource paths can be obtained by right-clicking on a resource in the FileSystem
+dock and choosing &quot;Copy Path&quot; or by dragging the file from the FileSystem dock into the script.</p>
+<p>Important: The path must be absolute, a local path will just return <span class="xref">null</span>.
+This method is a simplified version of <a class="xref" href="Godot.ResourceLoader.html#Godot_ResourceLoader_Load_System_String_System_String_System_Boolean_">Load(String, String, Boolean)</a>, which can be used
+for more advanced scenarios.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -508,7 +600,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>Path of the <a class="xref" href="Godot.Resource.html">Resource</a> to load.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -523,15 +616,30 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Resource.html">Resource</a></td>
-        <td></td>
+        <td><p>The loaded <a class="xref" href="Godot.Resource.html">Resource</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Load_System_String__examples">Examples</h5>
+  <pre><code>// Load a scene called main located in the root of the project directory and cache it in a variable.
+var main = GD.Load(&quot;res://main.tscn&quot;); // main will contain a PackedScene resource.</code></pre>
+
   
   
   <a id="Godot_GD_Load_" data-uid="Godot.GD.Load*"></a>
   <h4 id="Godot_GD_Load__1_System_String_" data-uid="Godot.GD.Load``1(System.String)">Load&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads a resource from the filesystem located at <code data-dev-comment-type="paramref" class="paramref">path</code>.
+The resource is loaded on the method call (unless it's referenced already
+elsewhere, e.g. in another script or in the scene), which might cause slight delay,
+especially when loading scenes. To avoid unnecessary delays when loading something
+multiple times, either store the resource in a variable.</p>
+<p>Note: Resource paths can be obtained by right-clicking on a resource in the FileSystem
+dock and choosing &quot;Copy Path&quot; or by dragging the file from the FileSystem dock into the script.</p>
+<p>Important: The path must be absolute, a local path will just return <span class="xref">null</span>.
+This method is a simplified version of <a class="xref" href="Godot.ResourceLoader.html#Godot_ResourceLoader_Load_System_String_System_String_System_Boolean_">Load(String, String, Boolean)</a>, which can be used
+for more advanced scenarios.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -551,7 +659,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>Path of the <a class="xref" href="Godot.Resource.html">Resource</a> to load.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -581,15 +690,26 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type to cast to. Should be a descendant of <a class="xref" href="Godot.Resource.html">Resource</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Load__1_System_String__examples">Examples</h5>
+  <pre><code>// Load a scene called main located in the root of the project directory and cache it in a variable.
+var main = GD.Load&lt;PackedScene>(&quot;res://main.tscn&quot;); // main will contain a PackedScene resource.</code></pre>
+
   
   
   <a id="Godot_GD_Print_" data-uid="Godot.GD.Print*"></a>
   <h4 id="Godot_GD_Print_System_Object___" data-uid="Godot.GD.Print(System.Object[])">Print(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts one or more arguments of any type to string in the best way possible
+and prints them to the console.</p>
+<p>Note: Consider using <a class="xref" href="Godot.GD.html#Godot_GD_PushError_System_String_">PushError(String)</a> and <a class="xref" href="Godot.GD.html#Godot_GD_PushWarning_System_String_">PushWarning(String)</a>
+to print error and warning messages instead of <a class="xref" href="Godot.GD.html#Godot_GD_Print_System_Object___">Print(Object[])</a>.
+This distinguishes them from print messages used for debugging purposes,
+while also displaying a stack trace when an error or warning is printed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -608,15 +728,21 @@
       <tr>
         <td><span class="xref">System.Object</span>[]</td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>Arguments that will be printed.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Print_System_Object____examples">Examples</h5>
+  <pre><code>var a = new int[] { 1, 2, 3 };
+GD.Print(&quot;a&quot;, &quot;b&quot;, a); // Prints ab[1, 2, 3]</code></pre>
+
   
   
   <a id="Godot_GD_PrintErr_" data-uid="Godot.GD.PrintErr*"></a>
   <h4 id="Godot_GD_PrintErr_System_Object___" data-uid="Godot.GD.PrintErr(System.Object[])">PrintErr(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Prints one or more arguments to strings in the best way possible to standard error line.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -635,15 +761,23 @@
       <tr>
         <td><span class="xref">System.Object</span>[]</td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>Arguments that will be printed.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_PrintErr_System_Object____examples">Examples</h5>
+  <pre><code>GD.PrintErr(&quot;prints to stderr&quot;);</code></pre>
+
   
   
   <a id="Godot_GD_PrintRaw_" data-uid="Godot.GD.PrintRaw*"></a>
   <h4 id="Godot_GD_PrintRaw_System_Object___" data-uid="Godot.GD.PrintRaw(System.Object[])">PrintRaw(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Prints one or more arguments to strings in the best way possible to console.
+No newline is added at the end.</p>
+<p>Note: Due to limitations with Godot's built-in console, this only prints to the terminal.
+If you need to print in the editor, use another method, such as <a class="xref" href="Godot.GD.html#Godot_GD_Print_System_Object___">Print(Object[])</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -662,15 +796,22 @@
       <tr>
         <td><span class="xref">System.Object</span>[]</td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>Arguments that will be printed.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_PrintRaw_System_Object____examples">Examples</h5>
+  <pre><code>GD.PrintRaw(&quot;A&quot;);
+GD.PrintRaw(&quot;B&quot;);
+// Prints AB</code></pre>
+
   
   
   <a id="Godot_GD_PrintS_" data-uid="Godot.GD.PrintS*"></a>
   <h4 id="Godot_GD_PrintS_System_Object___" data-uid="Godot.GD.PrintS(System.Object[])">PrintS(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Prints one or more arguments to the console with a space between each argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -689,15 +830,20 @@
       <tr>
         <td><span class="xref">System.Object</span>[]</td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>Arguments that will be printed.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_PrintS_System_Object____examples">Examples</h5>
+  <pre><code>GD.PrintS(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;); // Prints A B C</code></pre>
+
   
   
   <a id="Godot_GD_PrintStack_" data-uid="Godot.GD.PrintStack*"></a>
   <h4 id="Godot_GD_PrintStack" data-uid="Godot.GD.PrintStack">PrintStack()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Prints the current stack trace information to the console.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -707,7 +853,8 @@
   
   <a id="Godot_GD_PrintT_" data-uid="Godot.GD.PrintT*"></a>
   <h4 id="Godot_GD_PrintT_System_Object___" data-uid="Godot.GD.PrintT(System.Object[])">PrintT(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Prints one or more arguments to the console with a tab between each argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -726,15 +873,23 @@
       <tr>
         <td><span class="xref">System.Object</span>[]</td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>Arguments that will be printed.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_PrintT_System_Object____examples">Examples</h5>
+  <pre><code>GD.PrintT(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;); // Prints A       B       C</code></pre>
+
   
   
   <a id="Godot_GD_PushError_" data-uid="Godot.GD.PushError*"></a>
   <h4 id="Godot_GD_PushError_System_String_" data-uid="Godot.GD.PushError(System.String)">PushError(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pushes an error message to Godot's built-in debugger and to the OS terminal.</p>
+<p>Note: Errors printed this way will not pause project execution.
+To print an error message and pause project execution in debug builds,
+use [code]assert(false, &quot;test error&quot;)[/code] instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -753,15 +908,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
+        <td><p>Error message.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_PushError_System_String__examples">Examples</h5>
+  <pre><code>GD.PushError(&quot;test_error&quot;); // Prints &quot;test error&quot; to debugger and terminal as error call</code></pre>
+
   
   
   <a id="Godot_GD_PushWarning_" data-uid="Godot.GD.PushWarning*"></a>
   <h4 id="Godot_GD_PushWarning_System_String_" data-uid="Godot.GD.PushWarning(System.String)">PushWarning(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pushes a warning message to Godot's built-in debugger and to the OS terminal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -780,15 +940,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
+        <td><p>Warning message.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_PushWarning_System_String__examples">Examples</h5>
+  <p>GD.PushWarning(&quot;test warning&quot;); // Prints &quot;test warning&quot; to debugger and terminal as warning call</p>
+
   
   
   <a id="Godot_GD_Randf_" data-uid="Godot.GD.Randf*"></a>
   <h4 id="Godot_GD_Randf" data-uid="Godot.GD.Randf">Randf()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a random floating point value between <code>0.0</code> and <code>1.0</code> (inclusive).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -805,15 +970,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>A random <span class="xref">langword_csharp_float</span> number.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Randf_examples">Examples</h5>
+  <pre><code>GD.Randf(); // Returns e.g. 0.375671</code></pre>
+
   
   
   <a id="Godot_GD_Randi_" data-uid="Godot.GD.Randi*"></a>
   <h4 id="Godot_GD_Randi" data-uid="Godot.GD.Randi">Randi()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a random unsigned 32-bit integer.
+Use remainder to obtain a random value in the interval <code>[0, N - 1]</code> (where N is smaller than 2^32).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -830,15 +1001,27 @@
     <tbody>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
-        <td></td>
+        <td><p>A random <span class="xref">langword_csharp_uint</span> number.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Randi_examples">Examples</h5>
+  <pre><code>GD.Randi();           // Returns random integer between 0 and 2^32 - 1
+GD.Randi() % 20;      // Returns random integer between 0 and 19
+GD.Randi() % 100;     // Returns random integer between 0 and 99
+GD.Randi() % 100 + 1; // Returns random integer between 1 and 100</code></pre>
+
   
   
   <a id="Godot_GD_Randomize_" data-uid="Godot.GD.Randomize*"></a>
   <h4 id="Godot_GD_Randomize" data-uid="Godot.GD.Randomize">Randomize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Randomizes the seed (or the internal state) of the random number generator.
+Current implementation reseeds using a number based on time.</p>
+<p>Note: This method is called automatically when the project is run.
+If you need to fix the seed to have reproducible results, use <a class="xref" href="Godot.GD.html#Godot_GD_Seed_System_UInt64_">Seed(UInt64)</a>
+to initialize the random number generator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -848,7 +1031,9 @@
   
   <a id="Godot_GD_RandRange_" data-uid="Godot.GD.RandRange*"></a>
   <h4 id="Godot_GD_RandRange_System_Double_System_Double_" data-uid="Godot.GD.RandRange(System.Double,System.Double)">RandRange(Double, Double)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a random floating point value on the interval between <code data-dev-comment-type="paramref" class="paramref">from</code>
+and <code data-dev-comment-type="paramref" class="paramref">to</code> (inclusive).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -887,15 +1072,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Double</span></td>
-        <td></td>
+        <td><p>A random <span class="xref">langword_csharp_double</span> number inside the given range.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_RandRange_System_Double_System_Double__examples">Examples</h5>
+  <pre><code>GD.PrintS(GD.RandRange(-10.0, 10.0), GD.RandRange(-10.0, 10.0)); // Prints e.g. -3.844535 7.45315</code></pre>
+
   
   
   <a id="Godot_GD_RandSeed_" data-uid="Godot.GD.RandSeed*"></a>
   <h4 id="Godot_GD_RandSeed_System_UInt64_System_UInt64__" data-uid="Godot.GD.RandSeed(System.UInt64,System.UInt64@)">RandSeed(UInt64, out UInt64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a random unsigned 32-bit integer, using the given <code data-dev-comment-type="paramref" class="paramref">seed</code>.
+The <code data-dev-comment-type="paramref" class="paramref">newSeed</code> will return the new seed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -914,12 +1105,14 @@
       <tr>
         <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">seed</span></td>
-        <td></td>
+        <td><p>Seed to use to generate the random number.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">newSeed</span></td>
-        <td></td>
+        <td><p>Seed used by the random number generator.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -934,7 +1127,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
-        <td></td>
+        <td><p>A random <span class="xref">langword_csharp_uint</span> number.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -942,7 +1136,9 @@
   
   <a id="Godot_GD_Range_" data-uid="Godot.GD.Range*"></a>
   <h4 id="Godot_GD_Range_System_Int32_" data-uid="Godot.GD.Range(System.Int32)">Range(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.Collections.Generic.IEnumerable&lt;&gt;</span> that iterates from
+<code>0</code> to <code data-dev-comment-type="paramref" class="paramref">end</code> in steps of <code>1</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -961,7 +1157,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">end</span></td>
-        <td></td>
+        <td><p>The last index.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -984,7 +1181,9 @@
   
   <a id="Godot_GD_Range_" data-uid="Godot.GD.Range*"></a>
   <h4 id="Godot_GD_Range_System_Int32_System_Int32_" data-uid="Godot.GD.Range(System.Int32,System.Int32)">Range(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.Collections.Generic.IEnumerable&lt;&gt;</span> that iterates from
+<code data-dev-comment-type="paramref" class="paramref">start</code> to <code data-dev-comment-type="paramref" class="paramref">end</code> in steps of <code>1</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1003,12 +1202,14 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">start</span></td>
-        <td></td>
+        <td><p>The first index.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">end</span></td>
-        <td></td>
+        <td><p>The last index.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1031,7 +1232,9 @@
   
   <a id="Godot_GD_Range_" data-uid="Godot.GD.Range*"></a>
   <h4 id="Godot_GD_Range_System_Int32_System_Int32_System_Int32_" data-uid="Godot.GD.Range(System.Int32,System.Int32,System.Int32)">Range(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.Collections.Generic.IEnumerable&lt;&gt;</span> that iterates from
+<code data-dev-comment-type="paramref" class="paramref">start</code> to <code data-dev-comment-type="paramref" class="paramref">end</code> in steps of <code data-dev-comment-type="paramref" class="paramref">step</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1050,17 +1253,20 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">start</span></td>
-        <td></td>
+        <td><p>The first index.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">end</span></td>
-        <td></td>
+        <td><p>The last index.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">step</span></td>
-        <td></td>
+        <td><p>The amount by which to increment the index on each iteration.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1083,7 +1289,8 @@
   
   <a id="Godot_GD_Seed_" data-uid="Godot.GD.Seed*"></a>
   <h4 id="Godot_GD_Seed_System_UInt64_" data-uid="Godot.GD.Seed(System.UInt64)">Seed(UInt64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets seed for the random number generator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1102,7 +1309,8 @@
       <tr>
         <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">seed</span></td>
-        <td></td>
+        <td><p>Seed that will be used.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1110,7 +1318,8 @@
   
   <a id="Godot_GD_Str_" data-uid="Godot.GD.Str*"></a>
   <h4 id="Godot_GD_Str_System_Object___" data-uid="Godot.GD.Str(System.Object[])">Str(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts one or more arguments of any type to string in the best way possible.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1129,7 +1338,8 @@
       <tr>
         <td><span class="xref">System.Object</span>[]</td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>Arguments that will converted to string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1144,7 +1354,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The string formed by the given arguments.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1152,7 +1363,8 @@
   
   <a id="Godot_GD_Str2Var_" data-uid="Godot.GD.Str2Var*"></a>
   <h4 id="Godot_GD_Str2Var_System_String_" data-uid="Godot.GD.Str2Var(System.String)">Str2Var(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a formatted string that was returned by <a class="xref" href="Godot.GD.html#Godot_GD_Var2Str_System_Object_">Var2Str(Object)</a> to the original value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1171,7 +1383,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">str</span></td>
-        <td></td>
+        <td><p>String that will be converted to Variant.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1186,15 +1399,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
-        <td></td>
+        <td><p>The decoded <code>Variant</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Str2Var_System_String__examples">Examples</h5>
+  <pre><code>string a = &quot;{\&quot;a\&quot;: 1, \&quot;b\&quot;: 2 }&quot;;
+var b = (Godot.Collections.Dictionary)GD.Str2Var(a);
+GD.Print(b[&quot;a&quot;]); // Prints 1</code></pre>
+
   
   
   <a id="Godot_GD_TypeExists_" data-uid="Godot.GD.TypeExists*"></a>
   <h4 id="Godot_GD_TypeExists_System_String_" data-uid="Godot.GD.TypeExists(System.String)">TypeExists(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the given class exists in <a class="xref" href="Godot.ClassDB.html">ClassDB</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1228,7 +1448,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the class exists in <a class="xref" href="Godot.ClassDB.html">ClassDB</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1236,7 +1457,11 @@
   
   <a id="Godot_GD_Var2Bytes_" data-uid="Godot.GD.Var2Bytes*"></a>
   <h4 id="Godot_GD_Var2Bytes_System_Object_System_Boolean_" data-uid="Godot.GD.Var2Bytes(System.Object,System.Boolean)">Var2Bytes(Object, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Encodes a <code>Variant</code> value to a byte array.
+If <code data-dev-comment-type="paramref" class="paramref">fullObjects</code> is <span class="xref">true</span> encoding objects is allowed
+(and can potentially include code).
+Deserialization can be done with <a class="xref" href="Godot.GD.html#Godot_GD_Bytes2Var_System_Byte___System_Boolean_">Bytes2Var(Byte[], Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1255,12 +1480,14 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">var</span></td>
-        <td></td>
+        <td><p>Variant that will be encoded.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">fullObjects</span></td>
-        <td></td>
+        <td><p>If objects should be serialized.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1275,7 +1502,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
+        <td><p>The <code>Variant</code> encoded as an array of bytes.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1283,7 +1511,9 @@
   
   <a id="Godot_GD_Var2Str_" data-uid="Godot.GD.Var2Str*"></a>
   <h4 id="Godot_GD_Var2Str_System_Object_" data-uid="Godot.GD.Var2Str(System.Object)">Var2Str(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a <code>Variant</code> <code data-dev-comment-type="paramref" class="paramref">var</code> to a formatted string that
+can later be parsed using <a class="xref" href="Godot.GD.html#Godot_GD_Str2Var_System_String_">Str2Var(String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1302,7 +1532,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">var</span></td>
-        <td></td>
+        <td><p>Variant that will be converted to string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1317,16 +1548,27 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The <code>Variant</code> encoded as a string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_GD_Var2Str_System_Object__examples">Examples</h5>
+  <pre><code>var a = new Godot.Collections.Dictionary { [&quot;a&quot;] = 1, [&quot;b&quot;] = 2 };
+GD.Print(GD.Var2Str(a));
+// Prints
+// {
+//    &quot;a&quot;: 1,
+//    &quot;b&quot;: 2
+// }</code></pre>
+
   <h3 id="events">Events
   </h3>
   
   
   <h4 id="Godot_GD_UnhandledException" data-uid="Godot.GD.UnhandledException">UnhandledException</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fires when an unhandled exception occurs, regardless of project settings.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,21 @@
   
   <h1 id="Godot_NavigationPolygon" data-uid="Godot.NavigationPolygon" class="text-break">Class NavigationPolygon
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>There are two ways to create polygons. Either by using the <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_AddOutline_Godot_Vector2___">AddOutline(Vector2[])</a> method, or using the <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_AddPolygon_System_Int32___">AddPolygon(Int32[])</a> method.</p>
+<p>Using <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_AddOutline_Godot_Vector2___">AddOutline(Vector2[])</a>:</p>
+<p><pre><code>var polygon = NavigationPolygon.new()
+var outline = PoolVector2Array([Vector2(0, 0), Vector2(0, 50), Vector2(50, 50), Vector2(50, 0)])
+polygon.add_outline(outline)
+polygon.make_polygons_from_outlines()
+$NavigationPolygonInstance.navpoly = polygon</code></pre></p>
+<p>Using <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_AddPolygon_System_Int32___">AddPolygon(Int32[])</a> and indices of the vertices array.</p>
+<p><pre><code>var polygon = NavigationPolygon.new()
+var vertices = PoolVector2Array([Vector2(0, 0), Vector2(0, 50), Vector2(50, 50), Vector2(50, 0)])
+polygon.set_vertices(vertices)
+var indices = PoolIntArray([0, 1, 2, 3])
+polygon.add_polygon(indices)
+$NavigationPolygonInstance.navpoly = polygon</code></pre></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -423,7 +437,8 @@
   
   <a id="Godot_NavigationPolygon_AddOutline_" data-uid="Godot.NavigationPolygon.AddOutline*"></a>
   <h4 id="Godot_NavigationPolygon_AddOutline_Godot_Vector2___" data-uid="Godot.NavigationPolygon.AddOutline(Godot.Vector2[])">AddOutline(Vector2[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Appends a <a class="xref" href="Godot.Vector2.html">Vector2</a> that contains the vertices of an outline to the internal array that contains all the outlines. You have to call <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_MakePolygonsFromOutlines">MakePolygonsFromOutlines()</a> in order for this array to be converted to polygons that the engine will use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -450,7 +465,8 @@
   
   <a id="Godot_NavigationPolygon_AddOutlineAtIndex_" data-uid="Godot.NavigationPolygon.AddOutlineAtIndex*"></a>
   <h4 id="Godot_NavigationPolygon_AddOutlineAtIndex_Godot_Vector2___System_Int32_" data-uid="Godot.NavigationPolygon.AddOutlineAtIndex(Godot.Vector2[],System.Int32)">AddOutlineAtIndex(Vector2[], Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Godot.Vector2.html">Vector2</a> that contains the vertices of an outline to the internal array that contains all the outlines at a fixed position. You have to call <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_MakePolygonsFromOutlines">MakePolygonsFromOutlines()</a> in order for this array to be converted to polygons that the engine will use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -482,7 +498,8 @@
   
   <a id="Godot_NavigationPolygon_AddPolygon_" data-uid="Godot.NavigationPolygon.AddPolygon*"></a>
   <h4 id="Godot_NavigationPolygon_AddPolygon_System_Int32___" data-uid="Godot.NavigationPolygon.AddPolygon(System.Int32[])">AddPolygon(Int32[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a polygon using the indices of the vertices you get when calling <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_GetVertices">GetVertices()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -509,7 +526,8 @@
   
   <a id="Godot_NavigationPolygon_ClearOutlines_" data-uid="Godot.NavigationPolygon.ClearOutlines*"></a>
   <h4 id="Godot_NavigationPolygon_ClearOutlines" data-uid="Godot.NavigationPolygon.ClearOutlines">ClearOutlines()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the array of the outlines, but it doesn&apos;t clear the vertices and the polygons that were created by them.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -519,7 +537,8 @@
   
   <a id="Godot_NavigationPolygon_ClearPolygons_" data-uid="Godot.NavigationPolygon.ClearPolygons*"></a>
   <h4 id="Godot_NavigationPolygon_ClearPolygons" data-uid="Godot.NavigationPolygon.ClearPolygons">ClearPolygons()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the array of polygons, but it doesn&apos;t clear the array of outlines and vertices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -529,7 +548,8 @@
   
   <a id="Godot_NavigationPolygon_GetMesh_" data-uid="Godot.NavigationPolygon.GetMesh*"></a>
   <h4 id="Godot_NavigationPolygon_GetMesh" data-uid="Godot.NavigationPolygon.GetMesh">GetMesh()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.NavigationMesh.html">NavigationMesh</a> resulting from this navigation polygon. This navmesh can be used to update the navmesh of a region with the <a class="xref" href="Godot.NavigationServer.html#Godot_NavigationServer_RegionSetNavmesh_Godot_RID_Godot_NavigationMesh_">RegionSetNavmesh(RID, NavigationMesh)</a> API directly (as 2D uses the 3D server behind the scene).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -554,7 +574,8 @@
   
   <a id="Godot_NavigationPolygon_GetOutline_" data-uid="Godot.NavigationPolygon.GetOutline*"></a>
   <h4 id="Godot_NavigationPolygon_GetOutline_System_Int32_" data-uid="Godot.NavigationPolygon.GetOutline(System.Int32)">GetOutline(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.Vector2.html">Vector2</a> containing the vertices of an outline that was created in the editor or by script.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -596,7 +617,8 @@
   
   <a id="Godot_NavigationPolygon_GetOutlineCount_" data-uid="Godot.NavigationPolygon.GetOutlineCount*"></a>
   <h4 id="Godot_NavigationPolygon_GetOutlineCount" data-uid="Godot.NavigationPolygon.GetOutlineCount">GetOutlineCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of outlines that were created in the editor or by script.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -621,7 +643,8 @@
   
   <a id="Godot_NavigationPolygon_GetPolygon_" data-uid="Godot.NavigationPolygon.GetPolygon*"></a>
   <h4 id="Godot_NavigationPolygon_GetPolygon_System_Int32_" data-uid="Godot.NavigationPolygon.GetPolygon(System.Int32)">GetPolygon(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.Int32</span> containing the indices of the vertices of a created polygon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -663,7 +686,8 @@
   
   <a id="Godot_NavigationPolygon_GetPolygonCount_" data-uid="Godot.NavigationPolygon.GetPolygonCount*"></a>
   <h4 id="Godot_NavigationPolygon_GetPolygonCount" data-uid="Godot.NavigationPolygon.GetPolygonCount">GetPolygonCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the count of all polygons.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -688,7 +712,8 @@
   
   <a id="Godot_NavigationPolygon_GetVertices_" data-uid="Godot.NavigationPolygon.GetVertices*"></a>
   <h4 id="Godot_NavigationPolygon_GetVertices" data-uid="Godot.NavigationPolygon.GetVertices">GetVertices()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.Vector2.html">Vector2</a> containing all the vertices being used to create the polygons.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -713,7 +738,8 @@
   
   <a id="Godot_NavigationPolygon_MakePolygonsFromOutlines_" data-uid="Godot.NavigationPolygon.MakePolygonsFromOutlines*"></a>
   <h4 id="Godot_NavigationPolygon_MakePolygonsFromOutlines" data-uid="Godot.NavigationPolygon.MakePolygonsFromOutlines">MakePolygonsFromOutlines()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates polygons from the outlines added in the editor or by script.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -723,7 +749,8 @@
   
   <a id="Godot_NavigationPolygon_RemoveOutline_" data-uid="Godot.NavigationPolygon.RemoveOutline*"></a>
   <h4 id="Godot_NavigationPolygon_RemoveOutline_System_Int32_" data-uid="Godot.NavigationPolygon.RemoveOutline(System.Int32)">RemoveOutline(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes an outline created in the editor or by script. You have to call <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_MakePolygonsFromOutlines">MakePolygonsFromOutlines()</a> for the polygons to update.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -750,7 +777,8 @@
   
   <a id="Godot_NavigationPolygon_SetOutline_" data-uid="Godot.NavigationPolygon.SetOutline*"></a>
   <h4 id="Godot_NavigationPolygon_SetOutline_System_Int32_Godot_Vector2___" data-uid="Godot.NavigationPolygon.SetOutline(System.Int32,Godot.Vector2[])">SetOutline(Int32, Vector2[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes an outline created in the editor or by script. You have to call <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_MakePolygonsFromOutlines">MakePolygonsFromOutlines()</a> for the polygons to update.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -782,7 +810,8 @@
   
   <a id="Godot_NavigationPolygon_SetVertices_" data-uid="Godot.NavigationPolygon.SetVertices*"></a>
   <h4 id="Godot_NavigationPolygon_SetVertices_Godot_Vector2___" data-uid="Godot.NavigationPolygon.SetVertices(Godot.Vector2[])">SetVertices(Vector2[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the vertices that can be then indexed to create polygons with the <a class="xref" href="Godot.NavigationPolygon.html#Godot_NavigationPolygon_AddPolygon_System_Int32___">AddPolygon(Int32[])</a> method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

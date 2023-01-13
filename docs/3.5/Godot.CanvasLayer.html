@@ -83,7 +83,8 @@
   
   <h1 id="Godot_CanvasLayer" data-uid="Godot.CanvasLayer" class="text-break">Class CanvasLayer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Canvas drawing layer. <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a> nodes that are direct or indirect children of a <a class="xref" href="Godot.CanvasLayer.html">CanvasLayer</a> will be drawn in that layer. The layer is a numeric index that defines the draw order. The default 2D scene renders with index 0, so a <a class="xref" href="Godot.CanvasLayer.html">CanvasLayer</a> with index -1 will be drawn below, and one with index 1 will be drawn above. This is very useful for HUDs (in layer 1+ or above), or backgrounds (in layer -1 or below).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -754,7 +755,8 @@
   
   <a id="Godot_CanvasLayer_CustomViewport_" data-uid="Godot.CanvasLayer.CustomViewport*"></a>
   <h4 id="Godot_CanvasLayer_CustomViewport" data-uid="Godot.CanvasLayer.CustomViewport">CustomViewport</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The custom <a class="xref" href="Godot.Viewport.html">Viewport</a> node assigned to the <a class="xref" href="Godot.CanvasLayer.html">CanvasLayer</a>. If <code>null</code>, uses the default viewport instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -779,7 +781,9 @@
   
   <a id="Godot_CanvasLayer_FollowViewportEnable_" data-uid="Godot.CanvasLayer.FollowViewportEnable*"></a>
   <h4 id="Godot_CanvasLayer_FollowViewportEnable" data-uid="Godot.CanvasLayer.FollowViewportEnable">FollowViewportEnable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If enabled, the <a class="xref" href="Godot.CanvasLayer.html">CanvasLayer</a> will use the viewport&apos;s transform, so it will move when camera moves instead of being anchored in a fixed position on the screen.</p>
+<p>Together with <a class="xref" href="Godot.CanvasLayer.html#Godot_CanvasLayer_FollowViewportScale">FollowViewportScale</a> it can be used for a pseudo 3D effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -804,7 +808,8 @@
   
   <a id="Godot_CanvasLayer_FollowViewportScale_" data-uid="Godot.CanvasLayer.FollowViewportScale*"></a>
   <h4 id="Godot_CanvasLayer_FollowViewportScale" data-uid="Godot.CanvasLayer.FollowViewportScale">FollowViewportScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scales the layer when using <a class="xref" href="Godot.CanvasLayer.html#Godot_CanvasLayer_FollowViewportEnable">FollowViewportEnable</a>. Layers moving into the foreground should have increasing scales, while layers moving into the background should have decreasing scales.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -829,7 +834,8 @@
   
   <a id="Godot_CanvasLayer_Layer_" data-uid="Godot.CanvasLayer.Layer*"></a>
   <h4 id="Godot_CanvasLayer_Layer" data-uid="Godot.CanvasLayer.Layer">Layer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Layer index for draw order. Lower values are drawn first.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -854,7 +860,8 @@
   
   <a id="Godot_CanvasLayer_Offset_" data-uid="Godot.CanvasLayer.Offset*"></a>
   <h4 id="Godot_CanvasLayer_Offset" data-uid="Godot.CanvasLayer.Offset">Offset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The layer&apos;s base offset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -879,7 +886,8 @@
   
   <a id="Godot_CanvasLayer_Rotation_" data-uid="Godot.CanvasLayer.Rotation*"></a>
   <h4 id="Godot_CanvasLayer_Rotation" data-uid="Godot.CanvasLayer.Rotation">Rotation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The layer&apos;s rotation in radians.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -904,7 +912,8 @@
   
   <a id="Godot_CanvasLayer_RotationDegrees_" data-uid="Godot.CanvasLayer.RotationDegrees*"></a>
   <h4 id="Godot_CanvasLayer_RotationDegrees" data-uid="Godot.CanvasLayer.RotationDegrees">RotationDegrees</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The layer&apos;s rotation in degrees.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -929,7 +938,8 @@
   
   <a id="Godot_CanvasLayer_Scale_" data-uid="Godot.CanvasLayer.Scale*"></a>
   <h4 id="Godot_CanvasLayer_Scale" data-uid="Godot.CanvasLayer.Scale">Scale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The layer&apos;s scale.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -954,7 +964,8 @@
   
   <a id="Godot_CanvasLayer_Transform_" data-uid="Godot.CanvasLayer.Transform*"></a>
   <h4 id="Godot_CanvasLayer_Transform" data-uid="Godot.CanvasLayer.Transform">Transform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The layer&apos;s transform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -979,7 +990,9 @@
   
   <a id="Godot_CanvasLayer_Visible_" data-uid="Godot.CanvasLayer.Visible*"></a>
   <h4 id="Godot_CanvasLayer_Visible" data-uid="Godot.CanvasLayer.Visible">Visible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>false</code>, any <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a> under this <a class="xref" href="Godot.CanvasLayer.html">CanvasLayer</a> will be hidden.</p>
+<p>Unlike <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a>, visibility of a <a class="xref" href="Godot.CanvasLayer.html">CanvasLayer</a> isn&apos;t propagated to underlying layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1006,7 +1019,8 @@
   
   <a id="Godot_CanvasLayer_GetCanvas_" data-uid="Godot.CanvasLayer.GetCanvas*"></a>
   <h4 id="Godot_CanvasLayer_GetCanvas" data-uid="Godot.CanvasLayer.GetCanvas">GetCanvas()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the RID of the canvas used by this layer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1231,7 +1245,8 @@
   
   <a id="Godot_CanvasLayer_Hide_" data-uid="Godot.CanvasLayer.Hide*"></a>
   <h4 id="Godot_CanvasLayer_Hide" data-uid="Godot.CanvasLayer.Hide">Hide()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hides any <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a> under this <a class="xref" href="Godot.CanvasLayer.html">CanvasLayer</a>. This is equivalent to setting <a class="xref" href="Godot.CanvasLayer.html#Godot_CanvasLayer_Visible">Visible</a> to <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1561,7 +1576,8 @@
   
   <a id="Godot_CanvasLayer_Show_" data-uid="Godot.CanvasLayer.Show*"></a>
   <h4 id="Godot_CanvasLayer_Show" data-uid="Godot.CanvasLayer.Show">Show()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Shows any <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a> under this <a class="xref" href="Godot.CanvasLayer.html">CanvasLayer</a>. This is equivalent to setting <a class="xref" href="Godot.CanvasLayer.html#Godot_CanvasLayer_Visible">Visible</a> to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,15 @@
   
   <h1 id="Godot_Navigation2DServer" data-uid="Godot.Navigation2DServer" class="text-break">Class Navigation2DServer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Navigation2DServer is the server responsible for all 2D navigation. It handles several objects, namely maps, regions and agents.</p>
+<p>Maps are made up of regions, which are made of navigation polygons. Together, they define the navigable areas in the 2D world.</p>
+<p>Note: Most NavigationServer changes take effect after the next physics frame and not immediately. This includes all changes made to maps, regions or agents by navigation related Nodes in the SceneTree or made through scripts.</p>
+<p>For two regions to be connected to each other, they must share a similar edge. An edge is considered connected to another if both of its two vertices are at a distance less than navigation map <code>edge_connection_margin</code> to the respective other edge&apos;s vertex.</p>
+<p>You may assign navigation layers to regions with <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_RegionSetNavigationLayers_Godot_RID_System_UInt32_">RegionSetNavigationLayers(RID, UInt32)</a>, which then can be checked upon when requesting a path with <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_MapGetPath_Godot_RID_Godot_Vector2_Godot_Vector2_System_Boolean_System_UInt32_">MapGetPath(RID, Vector2, Vector2, Boolean, UInt32)</a>. This allows allowing or forbidding some areas to 2D objects.</p>
+<p>To use the collision avoidance system, you may use agents. You can set an agent&apos;s target velocity, then the servers will emit a callback with a modified velocity.</p>
+<p>Note: The collision avoidance system ignores regions. Using the modified velocity as-is might lead to pushing and agent outside of a navigable area. This is a limitation of the collision avoidance system, any more complex situation may require the use of the physics engine.</p>
+<p>This server keeps tracks of any call and executes them during the sync phase. This means that you can request any change to the map, using any thread, without worrying.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +137,8 @@
   
   <a id="Godot_Navigation2DServer_AgentCreate_" data-uid="Godot.Navigation2DServer.AgentCreate*"></a>
   <h4 id="Godot_Navigation2DServer_AgentCreate" data-uid="Godot.Navigation2DServer.AgentCreate">AgentCreate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates the agent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -154,7 +163,8 @@
   
   <a id="Godot_Navigation2DServer_AgentGetMap_" data-uid="Godot.Navigation2DServer.AgentGetMap*"></a>
   <h4 id="Godot_Navigation2DServer_AgentGetMap_Godot_RID_" data-uid="Godot.Navigation2DServer.AgentGetMap(Godot.RID)">AgentGetMap(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the navigation map <a class="xref" href="Godot.RID.html">RID</a> the requested <code>agent</code> is currently assigned to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -196,7 +206,8 @@
   
   <a id="Godot_Navigation2DServer_AgentIsMapChanged_" data-uid="Godot.Navigation2DServer.AgentIsMapChanged*"></a>
   <h4 id="Godot_Navigation2DServer_AgentIsMapChanged_Godot_RID_" data-uid="Godot.Navigation2DServer.AgentIsMapChanged(Godot.RID)">AgentIsMapChanged(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the map got changed the previous frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -238,7 +249,9 @@
   
   <a id="Godot_Navigation2DServer_AgentSetCallback_" data-uid="Godot.Navigation2DServer.AgentSetCallback*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetCallback_Godot_RID_Godot_Object_System_String_System_Object_" data-uid="Godot.Navigation2DServer.AgentSetCallback(Godot.RID,Godot.Object,System.String,System.Object)">AgentSetCallback(RID, Object, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Callback called at the end of the RVO process. If a callback is created manually and the agent is placed on a navigation map it will calculate avoidance for the agent and dispatch the calculated <code>safe_velocity</code> to the <code>receiver</code> object with a signal to the chosen <code>method</code> name.</p>
+<p>Note: Created callbacks are always processed independently of the SceneTree state as long as the agent is on a navigation map and not freed. To disable the dispatch of a callback from an agent use <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_AgentSetCallback_Godot_RID_Godot_Object_System_String_System_Object_">AgentSetCallback(RID, Object, String, Object)</a> again with a <code>null</code> object as the <code>receiver</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -280,7 +293,8 @@
   
   <a id="Godot_Navigation2DServer_AgentSetMap_" data-uid="Godot.Navigation2DServer.AgentSetMap*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetMap_Godot_RID_Godot_RID_" data-uid="Godot.Navigation2DServer.AgentSetMap(Godot.RID,Godot.RID)">AgentSetMap(RID, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Puts the agent in the map.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -312,7 +326,8 @@
   
   <a id="Godot_Navigation2DServer_AgentSetMaxNeighbors_" data-uid="Godot.Navigation2DServer.AgentSetMaxNeighbors*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetMaxNeighbors_Godot_RID_System_Int32_" data-uid="Godot.Navigation2DServer.AgentSetMaxNeighbors(Godot.RID,System.Int32)">AgentSetMaxNeighbors(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the maximum number of other agents the agent takes into account in the navigation. The larger this number, the longer the running time of the simulation. If the number is too low, the simulation will not be safe.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,7 +359,8 @@
   
   <a id="Godot_Navigation2DServer_AgentSetMaxSpeed_" data-uid="Godot.Navigation2DServer.AgentSetMaxSpeed*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetMaxSpeed_Godot_RID_System_Single_" data-uid="Godot.Navigation2DServer.AgentSetMaxSpeed(Godot.RID,System.Single)">AgentSetMaxSpeed(RID, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the maximum speed of the agent. Must be positive.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -376,7 +392,8 @@
   
   <a id="Godot_Navigation2DServer_AgentSetNeighborDist_" data-uid="Godot.Navigation2DServer.AgentSetNeighborDist*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetNeighborDist_Godot_RID_System_Single_" data-uid="Godot.Navigation2DServer.AgentSetNeighborDist(Godot.RID,System.Single)">AgentSetNeighborDist(RID, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the maximum distance to other agents this agent takes into account in the navigation. The larger this number, the longer the running time of the simulation. If the number is too low, the simulation will not be safe.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -408,7 +425,8 @@
   
   <a id="Godot_Navigation2DServer_AgentSetPosition_" data-uid="Godot.Navigation2DServer.AgentSetPosition*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetPosition_Godot_RID_Godot_Vector2_" data-uid="Godot.Navigation2DServer.AgentSetPosition(Godot.RID,Godot.Vector2)">AgentSetPosition(RID, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the position of the agent in world space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -440,7 +458,8 @@
   
   <a id="Godot_Navigation2DServer_AgentSetRadius_" data-uid="Godot.Navigation2DServer.AgentSetRadius*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetRadius_Godot_RID_System_Single_" data-uid="Godot.Navigation2DServer.AgentSetRadius(Godot.RID,System.Single)">AgentSetRadius(RID, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the radius of the agent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -472,7 +491,8 @@
   
   <a id="Godot_Navigation2DServer_AgentSetTargetVelocity_" data-uid="Godot.Navigation2DServer.AgentSetTargetVelocity*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetTargetVelocity_Godot_RID_Godot_Vector2_" data-uid="Godot.Navigation2DServer.AgentSetTargetVelocity(Godot.RID,Godot.Vector2)">AgentSetTargetVelocity(RID, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the new target velocity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -504,7 +524,8 @@
   
   <a id="Godot_Navigation2DServer_AgentSetTimeHorizon_" data-uid="Godot.Navigation2DServer.AgentSetTimeHorizon*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetTimeHorizon_Godot_RID_System_Single_" data-uid="Godot.Navigation2DServer.AgentSetTimeHorizon(Godot.RID,System.Single)">AgentSetTimeHorizon(RID, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimal amount of time for which the agent&apos;s velocities that are computed by the simulation are safe with respect to other agents. The larger this number, the sooner this agent will respond to the presence of other agents, but the less freedom this agent has in choosing its velocities. Must be positive.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -536,7 +557,8 @@
   
   <a id="Godot_Navigation2DServer_AgentSetVelocity_" data-uid="Godot.Navigation2DServer.AgentSetVelocity*"></a>
   <h4 id="Godot_Navigation2DServer_AgentSetVelocity_Godot_RID_Godot_Vector2_" data-uid="Godot.Navigation2DServer.AgentSetVelocity(Godot.RID,Godot.Vector2)">AgentSetVelocity(RID, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the current velocity of the agent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -568,7 +590,8 @@
   
   <a id="Godot_Navigation2DServer_FreeRid_" data-uid="Godot.Navigation2DServer.FreeRid*"></a>
   <h4 id="Godot_Navigation2DServer_FreeRid_Godot_RID_" data-uid="Godot.Navigation2DServer.FreeRid(Godot.RID)">FreeRid(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Destroys the given RID.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -595,7 +618,8 @@
   
   <a id="Godot_Navigation2DServer_GetMaps_" data-uid="Godot.Navigation2DServer.GetMaps*"></a>
   <h4 id="Godot_Navigation2DServer_GetMaps" data-uid="Godot.Navigation2DServer.GetMaps">GetMaps()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all created navigation map <a class="xref" href="Godot.RID.html">RID</a>s on the NavigationServer. This returns both 2D and 3D created navigation maps as there is technically no distinction between them.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -620,7 +644,8 @@
   
   <a id="Godot_Navigation2DServer_MapCreate_" data-uid="Godot.Navigation2DServer.MapCreate*"></a>
   <h4 id="Godot_Navigation2DServer_MapCreate" data-uid="Godot.Navigation2DServer.MapCreate">MapCreate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a new map.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -645,7 +670,11 @@
   
   <a id="Godot_Navigation2DServer_MapForceUpdate_" data-uid="Godot.Navigation2DServer.MapForceUpdate*"></a>
   <h4 id="Godot_Navigation2DServer_MapForceUpdate_Godot_RID_" data-uid="Godot.Navigation2DServer.MapForceUpdate(Godot.RID)">MapForceUpdate(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This function immediately forces synchronization of the specified navigation <code>map</code> <a class="xref" href="Godot.RID.html">RID</a>. By default navigation maps are only synchronized at the end of each physics frame. This function can be used to immediately (re)calculate all the navigation meshes and region connections of the navigation map. This makes it possible to query a navigation path for a changed map immediately and in the same frame (multiple times if needed).</p>
+<p>Due to technical restrictions the current NavigationServer command queue will be flushed. This means all already queued update commands for this physics frame will be executed, even those intended for other maps, regions and agents not part of the specified map. The expensive computation of the navigation meshes and region connections of a map will only be done for the specified map. Other maps will receive the normal synchronization at the end of the physics frame. Should the specified map receive changes after the forced update it will update again as well when the other maps receive their update.</p>
+<p>Avoidance processing and dispatch of the <code>safe_velocity</code> signals is untouched by this function and continues to happen for all maps and agents at the end of the physics frame.</p>
+<p>Note: With great power comes great responsibility. This function should only be used by users that really know what they are doing and have a good reason for it. Forcing an immediate update of a navigation map requires locking the NavigationServer and flushing the entire NavigationServer command queue. Not only can this severely impact the performance of a game but it can also introduce bugs if used inappropriately without much foresight.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -672,7 +701,8 @@
   
   <a id="Godot_Navigation2DServer_MapGetAgents_" data-uid="Godot.Navigation2DServer.MapGetAgents*"></a>
   <h4 id="Godot_Navigation2DServer_MapGetAgents_Godot_RID_" data-uid="Godot.Navigation2DServer.MapGetAgents(Godot.RID)">MapGetAgents(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all navigation agents <a class="xref" href="Godot.RID.html">RID</a>s that are currently assigned to the requested navigation <code>map</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -714,7 +744,8 @@
   
   <a id="Godot_Navigation2DServer_MapGetCellHeight_" data-uid="Godot.Navigation2DServer.MapGetCellHeight*"></a>
   <h4 id="Godot_Navigation2DServer_MapGetCellHeight_Godot_RID_" data-uid="Godot.Navigation2DServer.MapGetCellHeight(Godot.RID)">MapGetCellHeight(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the map cell height. Note: Currently not implemented.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -756,7 +787,8 @@
   
   <a id="Godot_Navigation2DServer_MapGetCellSize_" data-uid="Godot.Navigation2DServer.MapGetCellSize*"></a>
   <h4 id="Godot_Navigation2DServer_MapGetCellSize_Godot_RID_" data-uid="Godot.Navigation2DServer.MapGetCellSize(Godot.RID)">MapGetCellSize(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the map cell size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -798,7 +830,8 @@
   
   <a id="Godot_Navigation2DServer_MapGetClosestPoint_" data-uid="Godot.Navigation2DServer.MapGetClosestPoint*"></a>
   <h4 id="Godot_Navigation2DServer_MapGetClosestPoint_Godot_RID_Godot_Vector2_" data-uid="Godot.Navigation2DServer.MapGetClosestPoint(Godot.RID,Godot.Vector2)">MapGetClosestPoint(RID, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the point closest to the provided <code>to_point</code> on the navigation mesh surface.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -845,7 +878,8 @@
   
   <a id="Godot_Navigation2DServer_MapGetClosestPointOwner_" data-uid="Godot.Navigation2DServer.MapGetClosestPointOwner*"></a>
   <h4 id="Godot_Navigation2DServer_MapGetClosestPointOwner_Godot_RID_Godot_Vector2_" data-uid="Godot.Navigation2DServer.MapGetClosestPointOwner(Godot.RID,Godot.Vector2)">MapGetClosestPointOwner(RID, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the owner region RID for the point returned by <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_MapGetClosestPoint_Godot_RID_Godot_Vector2_">MapGetClosestPoint(RID, Vector2)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -892,7 +926,8 @@
   
   <a id="Godot_Navigation2DServer_MapGetEdgeConnectionMargin_" data-uid="Godot.Navigation2DServer.MapGetEdgeConnectionMargin*"></a>
   <h4 id="Godot_Navigation2DServer_MapGetEdgeConnectionMargin_Godot_RID_" data-uid="Godot.Navigation2DServer.MapGetEdgeConnectionMargin(Godot.RID)">MapGetEdgeConnectionMargin(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the edge connection margin of the map. The edge connection margin is a distance used to connect two regions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -934,7 +969,8 @@
   
   <a id="Godot_Navigation2DServer_MapGetPath_" data-uid="Godot.Navigation2DServer.MapGetPath*"></a>
   <h4 id="Godot_Navigation2DServer_MapGetPath_Godot_RID_Godot_Vector2_Godot_Vector2_System_Boolean_System_UInt32_" data-uid="Godot.Navigation2DServer.MapGetPath(Godot.RID,Godot.Vector2,Godot.Vector2,System.Boolean,System.UInt32)">MapGetPath(RID, Vector2, Vector2, Boolean, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the navigation path to reach the destination from the origin. <code>navigation_layers</code> is a bitmask of all region layers that are allowed to be in the path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -996,7 +1032,8 @@
   
   <a id="Godot_Navigation2DServer_MapGetRegions_" data-uid="Godot.Navigation2DServer.MapGetRegions*"></a>
   <h4 id="Godot_Navigation2DServer_MapGetRegions_Godot_RID_" data-uid="Godot.Navigation2DServer.MapGetRegions(Godot.RID)">MapGetRegions(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all navigation regions <a class="xref" href="Godot.RID.html">RID</a>s that are currently assigned to the requested navigation <code>map</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1038,7 +1075,8 @@
   
   <a id="Godot_Navigation2DServer_MapIsActive_" data-uid="Godot.Navigation2DServer.MapIsActive*"></a>
   <h4 id="Godot_Navigation2DServer_MapIsActive_Godot_RID_" data-uid="Godot.Navigation2DServer.MapIsActive(Godot.RID)">MapIsActive(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the map is active.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1080,7 +1118,8 @@
   
   <a id="Godot_Navigation2DServer_MapSetActive_" data-uid="Godot.Navigation2DServer.MapSetActive*"></a>
   <h4 id="Godot_Navigation2DServer_MapSetActive_Godot_RID_System_Boolean_" data-uid="Godot.Navigation2DServer.MapSetActive(Godot.RID,System.Boolean)">MapSetActive(RID, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the map active.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1112,7 +1151,8 @@
   
   <a id="Godot_Navigation2DServer_MapSetCellHeight_" data-uid="Godot.Navigation2DServer.MapSetCellHeight*"></a>
   <h4 id="Godot_Navigation2DServer_MapSetCellHeight_Godot_RID_System_Single_" data-uid="Godot.Navigation2DServer.MapSetCellHeight(Godot.RID,System.Single)">MapSetCellHeight(RID, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set the map cell height used to weld the navigation mesh polygons. Note: Currently not implemented.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1144,7 +1184,8 @@
   
   <a id="Godot_Navigation2DServer_MapSetCellSize_" data-uid="Godot.Navigation2DServer.MapSetCellSize*"></a>
   <h4 id="Godot_Navigation2DServer_MapSetCellSize_Godot_RID_System_Single_" data-uid="Godot.Navigation2DServer.MapSetCellSize(Godot.RID,System.Single)">MapSetCellSize(RID, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set the map cell size used to weld the navigation mesh polygons.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1176,7 +1217,8 @@
   
   <a id="Godot_Navigation2DServer_MapSetEdgeConnectionMargin_" data-uid="Godot.Navigation2DServer.MapSetEdgeConnectionMargin*"></a>
   <h4 id="Godot_Navigation2DServer_MapSetEdgeConnectionMargin_Godot_RID_System_Single_" data-uid="Godot.Navigation2DServer.MapSetEdgeConnectionMargin(Godot.RID,System.Single)">MapSetEdgeConnectionMargin(RID, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set the map edge connection margin used to weld the compatible region edges.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1208,7 +1250,8 @@
   
   <a id="Godot_Navigation2DServer_RegionCreate_" data-uid="Godot.Navigation2DServer.RegionCreate*"></a>
   <h4 id="Godot_Navigation2DServer_RegionCreate" data-uid="Godot.Navigation2DServer.RegionCreate">RegionCreate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1233,7 +1276,8 @@
   
   <a id="Godot_Navigation2DServer_RegionGetConnectionPathwayEnd_" data-uid="Godot.Navigation2DServer.RegionGetConnectionPathwayEnd*"></a>
   <h4 id="Godot_Navigation2DServer_RegionGetConnectionPathwayEnd_Godot_RID_System_Int32_" data-uid="Godot.Navigation2DServer.RegionGetConnectionPathwayEnd(Godot.RID,System.Int32)">RegionGetConnectionPathwayEnd(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the ending point of a connection door. <code>connection</code> is an index between 0 and the return value of <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_RegionGetConnectionsCount_Godot_RID_">RegionGetConnectionsCount(RID)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1280,7 +1324,8 @@
   
   <a id="Godot_Navigation2DServer_RegionGetConnectionPathwayStart_" data-uid="Godot.Navigation2DServer.RegionGetConnectionPathwayStart*"></a>
   <h4 id="Godot_Navigation2DServer_RegionGetConnectionPathwayStart_Godot_RID_System_Int32_" data-uid="Godot.Navigation2DServer.RegionGetConnectionPathwayStart(Godot.RID,System.Int32)">RegionGetConnectionPathwayStart(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the starting point of a connection door. <code>connection</code> is an index between 0 and the return value of <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_RegionGetConnectionsCount_Godot_RID_">RegionGetConnectionsCount(RID)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1327,7 +1372,8 @@
   
   <a id="Godot_Navigation2DServer_RegionGetConnectionsCount_" data-uid="Godot.Navigation2DServer.RegionGetConnectionsCount*"></a>
   <h4 id="Godot_Navigation2DServer_RegionGetConnectionsCount_Godot_RID_" data-uid="Godot.Navigation2DServer.RegionGetConnectionsCount(Godot.RID)">RegionGetConnectionsCount(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns how many connections this <code>region</code> has with other regions in the map.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1369,7 +1415,8 @@
   
   <a id="Godot_Navigation2DServer_RegionGetEnterCost_" data-uid="Godot.Navigation2DServer.RegionGetEnterCost*"></a>
   <h4 id="Godot_Navigation2DServer_RegionGetEnterCost_Godot_RID_" data-uid="Godot.Navigation2DServer.RegionGetEnterCost(Godot.RID)">RegionGetEnterCost(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <code>enter_cost</code> of this <code>region</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1411,7 +1458,8 @@
   
   <a id="Godot_Navigation2DServer_RegionGetMap_" data-uid="Godot.Navigation2DServer.RegionGetMap*"></a>
   <h4 id="Godot_Navigation2DServer_RegionGetMap_Godot_RID_" data-uid="Godot.Navigation2DServer.RegionGetMap(Godot.RID)">RegionGetMap(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the navigation map <a class="xref" href="Godot.RID.html">RID</a> the requested <code>region</code> is currently assigned to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1453,7 +1501,8 @@
   
   <a id="Godot_Navigation2DServer_RegionGetNavigationLayers_" data-uid="Godot.Navigation2DServer.RegionGetNavigationLayers*"></a>
   <h4 id="Godot_Navigation2DServer_RegionGetNavigationLayers_Godot_RID_" data-uid="Godot.Navigation2DServer.RegionGetNavigationLayers(Godot.RID)">RegionGetNavigationLayers(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the region&apos;s navigation layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1495,7 +1544,8 @@
   
   <a id="Godot_Navigation2DServer_RegionGetTravelCost_" data-uid="Godot.Navigation2DServer.RegionGetTravelCost*"></a>
   <h4 id="Godot_Navigation2DServer_RegionGetTravelCost_Godot_RID_" data-uid="Godot.Navigation2DServer.RegionGetTravelCost(Godot.RID)">RegionGetTravelCost(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <code>travel_cost</code> of this <code>region</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1537,7 +1587,10 @@
   
   <a id="Godot_Navigation2DServer_RegionOwnsPoint_" data-uid="Godot.Navigation2DServer.RegionOwnsPoint*"></a>
   <h4 id="Godot_Navigation2DServer_RegionOwnsPoint_Godot_RID_Godot_Vector2_" data-uid="Godot.Navigation2DServer.RegionOwnsPoint(Godot.RID,Godot.Vector2)">RegionOwnsPoint(RID, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the provided <code>point</code> in world space is currently owned by the provided navigation <code>region</code>. Owned in this context means that one of the region&apos;s navigation mesh polygon faces has a possible position at the closest distance to this point compared to all other navigation meshes from other navigation regions that are also registered on the navigation map of the provided region.</p>
+<p>If multiple navigation meshes have positions at equal distance the navigation region whose polygons are processed first wins the ownership. Polygons are processed in the same order that navigation regions were registered on the NavigationServer.</p>
+<p>Note: If navigation meshes from different navigation regions overlap (which should be avoided in general) the result might not be what is expected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1584,7 +1637,8 @@
   
   <a id="Godot_Navigation2DServer_RegionSetEnterCost_" data-uid="Godot.Navigation2DServer.RegionSetEnterCost*"></a>
   <h4 id="Godot_Navigation2DServer_RegionSetEnterCost_Godot_RID_System_Single_" data-uid="Godot.Navigation2DServer.RegionSetEnterCost(Godot.RID,System.Single)">RegionSetEnterCost(RID, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <code>enter_cost</code> for this <code>region</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1616,7 +1670,8 @@
   
   <a id="Godot_Navigation2DServer_RegionSetMap_" data-uid="Godot.Navigation2DServer.RegionSetMap*"></a>
   <h4 id="Godot_Navigation2DServer_RegionSetMap_Godot_RID_Godot_RID_" data-uid="Godot.Navigation2DServer.RegionSetMap(Godot.RID,Godot.RID)">RegionSetMap(RID, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the map for the region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1648,7 +1703,8 @@
   
   <a id="Godot_Navigation2DServer_RegionSetNavigationLayers_" data-uid="Godot.Navigation2DServer.RegionSetNavigationLayers*"></a>
   <h4 id="Godot_Navigation2DServer_RegionSetNavigationLayers_Godot_RID_System_UInt32_" data-uid="Godot.Navigation2DServer.RegionSetNavigationLayers(Godot.RID,System.UInt32)">RegionSetNavigationLayers(RID, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set the region&apos;s navigation layers. This allows selecting regions from a path request (when using <a class="xref" href="Godot.Navigation2DServer.html#Godot_Navigation2DServer_MapGetPath_Godot_RID_Godot_Vector2_Godot_Vector2_System_Boolean_System_UInt32_">MapGetPath(RID, Vector2, Vector2, Boolean, UInt32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1680,7 +1736,8 @@
   
   <a id="Godot_Navigation2DServer_RegionSetNavpoly_" data-uid="Godot.Navigation2DServer.RegionSetNavpoly*"></a>
   <h4 id="Godot_Navigation2DServer_RegionSetNavpoly_Godot_RID_Godot_NavigationPolygon_" data-uid="Godot.Navigation2DServer.RegionSetNavpoly(Godot.RID,Godot.NavigationPolygon)">RegionSetNavpoly(RID, NavigationPolygon)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the navigation mesh for the region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1712,7 +1769,8 @@
   
   <a id="Godot_Navigation2DServer_RegionSetTransform_" data-uid="Godot.Navigation2DServer.RegionSetTransform*"></a>
   <h4 id="Godot_Navigation2DServer_RegionSetTransform_Godot_RID_Godot_Transform2D_" data-uid="Godot.Navigation2DServer.RegionSetTransform(Godot.RID,Godot.Transform2D)">RegionSetTransform(RID, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the global transformation for the region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1744,7 +1802,8 @@
   
   <a id="Godot_Navigation2DServer_RegionSetTravelCost_" data-uid="Godot.Navigation2DServer.RegionSetTravelCost*"></a>
   <h4 id="Godot_Navigation2DServer_RegionSetTravelCost_Godot_RID_System_Single_" data-uid="Godot.Navigation2DServer.RegionSetTravelCost(Godot.RID,System.Single)">RegionSetTravelCost(RID, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <code>travel_cost</code> for this <code>region</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,8 @@
   
   <h1 id="Godot_CharFXTransform" data-uid="Godot.CharFXTransform" class="text-break">Class CharFXTransform
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>By setting various properties on this object, you can control how individual characters will be displayed in a <a class="xref" href="Godot.RichTextEffect.html">RichTextEffect</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +298,8 @@
   
   <a id="Godot_CharFXTransform_AbsoluteIndex_" data-uid="Godot.CharFXTransform.AbsoluteIndex*"></a>
   <h4 id="Godot_CharFXTransform_AbsoluteIndex" data-uid="Godot.CharFXTransform.AbsoluteIndex">AbsoluteIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The index of the current character (starting from 0) for the <a class="xref" href="Godot.RichTextLabel.html">RichTextLabel</a>&apos;s BBCode text. Setting this property won&apos;t affect drawing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +324,11 @@
   
   <a id="Godot_CharFXTransform_Character_" data-uid="Godot.CharFXTransform.Character*"></a>
   <h4 id="Godot_CharFXTransform_Character" data-uid="Godot.CharFXTransform.Character">Character</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Unicode codepoint the character will use. This only affects non-whitespace characters. <code>@GDScript.ord</code> can be useful here. For example, the following will replace all characters with asterisks:</p>
+<p><pre><code># `char_fx` is the CharFXTransform parameter from `_process_custom_fx()`.
+# See the RichTextEffect documentation for details.
+char_fx.character = ord(&quot;*&quot;)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -347,7 +353,8 @@
   
   <a id="Godot_CharFXTransform_Color_" data-uid="Godot.CharFXTransform.Color*"></a>
   <h4 id="Godot_CharFXTransform_Color" data-uid="Godot.CharFXTransform.Color">Color</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The color the character will be drawn with.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -372,7 +379,9 @@
   
   <a id="Godot_CharFXTransform_ElapsedTime_" data-uid="Godot.CharFXTransform.ElapsedTime*"></a>
   <h4 id="Godot_CharFXTransform_ElapsedTime" data-uid="Godot.CharFXTransform.ElapsedTime">ElapsedTime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The time elapsed since the <a class="xref" href="Godot.RichTextLabel.html">RichTextLabel</a> was added to the scene tree (in seconds). Time stops when the <a class="xref" href="Godot.RichTextLabel.html">RichTextLabel</a> is paused (see <a class="xref" href="Godot.Node.html#Godot_Node_PauseMode">PauseMode</a>). Resets when the text in the <a class="xref" href="Godot.RichTextLabel.html">RichTextLabel</a> is changed.</p>
+<p>Note: Time still passes while the <a class="xref" href="Godot.RichTextLabel.html">RichTextLabel</a> is hidden.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -397,7 +406,10 @@
   
   <a id="Godot_CharFXTransform_Env_" data-uid="Godot.CharFXTransform.Env*"></a>
   <h4 id="Godot_CharFXTransform_Env" data-uid="Godot.CharFXTransform.Env">Env</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Contains the arguments passed in the opening BBCode tag. By default, arguments are strings; if their contents match a type such as <span class="xref">System.Boolean</span>, <span class="xref">System.Int32</span> or <span class="xref">System.Single</span>, they will be converted automatically. Color codes in the form <code>#rrggbb</code> or <code>#rgb</code> will be converted to an opaque <a class="xref" href="Godot.Color.html">Color</a>. String arguments may not contain spaces, even if they&apos;re quoted. If present, quotes will also be present in the final string.</p>
+<p>For example, the opening BBCode tag <code>[example foo=hello bar=true baz=42 color=#ffffff]</code> will map to the following <a class="xref" href="Godot.Collections.Dictionary.html">Dictionary</a>:</p>
+<p><pre><code>{&quot;foo&quot;: &quot;hello&quot;, &quot;bar&quot;: true, &quot;baz&quot;: 42, &quot;color&quot;: Color(1, 1, 1, 1)}</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -422,7 +434,8 @@
   
   <a id="Godot_CharFXTransform_Offset_" data-uid="Godot.CharFXTransform.Offset*"></a>
   <h4 id="Godot_CharFXTransform_Offset" data-uid="Godot.CharFXTransform.Offset">Offset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The position offset the character will be drawn with (in pixels).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -447,7 +460,8 @@
   
   <a id="Godot_CharFXTransform_RelativeIndex_" data-uid="Godot.CharFXTransform.RelativeIndex*"></a>
   <h4 id="Godot_CharFXTransform_RelativeIndex" data-uid="Godot.CharFXTransform.RelativeIndex">RelativeIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The index of the current character (starting from 0) for this <a class="xref" href="Godot.RichTextEffect.html">RichTextEffect</a> custom block. Setting this property won&apos;t affect drawing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -472,7 +486,8 @@
   
   <a id="Godot_CharFXTransform_Visible_" data-uid="Godot.CharFXTransform.Visible*"></a>
   <h4 id="Godot_CharFXTransform_Visible" data-uid="Godot.CharFXTransform.Visible">Visible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the character will be drawn. If <code>false</code>, the character will be hidden. Characters around hidden characters will reflow to take the space of hidden characters. If this is not desired, set their <a class="xref" href="Godot.CharFXTransform.html#Godot_CharFXTransform_Color">Color</a> to <code>Color(1, 1, 1, 0)</code> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

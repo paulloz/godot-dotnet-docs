@@ -83,7 +83,11 @@
   
   <h1 id="Godot_Font" data-uid="Godot.Font" class="text-break">Class Font
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Font contains a Unicode-compatible character set, as well as the ability to draw it with variable width, ascent, descent and kerning. For creating fonts from TTF files (or other font formats), see the editor support for fonts.</p>
+<p>Note: If a <a class="xref" href="Godot.DynamicFont.html">DynamicFont</a> doesn&apos;t contain a character used in a string, the character in question will be replaced with codepoint <code>0xfffd</code> if it&apos;s available in the <a class="xref" href="Godot.DynamicFont.html">DynamicFont</a>. If this replacement character isn&apos;t available in the DynamicFont, the character will be hidden without displaying any replacement character in the string.</p>
+<p>Note: If a <a class="xref" href="Godot.BitmapFont.html">BitmapFont</a> doesn&apos;t contain a character used in a string, the character in question will be hidden without displaying any replacement character in the string.</p>
+<p>Note: Unicode characters after <code>0xffff</code> (such as most emoji) are not supported on Windows. They will display as unknown characters instead. This will be resolved in Godot 4.0.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -336,7 +340,9 @@
   
   <a id="Godot_Font_Draw_" data-uid="Godot.Font.Draw*"></a>
   <h4 id="Godot_Font_Draw_Godot_RID_Godot_Vector2_System_String_System_Nullable_Godot_Color__System_Int32_System_Nullable_Godot_Color__" data-uid="Godot.Font.Draw(Godot.RID,Godot.Vector2,System.String,System.Nullable{Godot.Color},System.Int32,System.Nullable{Godot.Color})">Draw(RID, Vector2, String, Nullable&lt;Color&gt;, Int32, Nullable&lt;Color&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Draw <code>string</code> into a canvas item using the font at a given position, with <code>modulate</code> color, and optionally clipping the width. <code>position</code> specifies the baseline, not the top. To draw from the top, ascent must be added to the Y axis.</p>
+<p>See also <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_DrawString_Godot_Font_Godot_Vector2_System_String_System_Nullable_Godot_Color__System_Int32_">DrawString(Font, Vector2, String, Nullable&lt;Color&gt;, Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -370,7 +376,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">modulate</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Color(1, 1, 1, 1)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
@@ -380,7 +387,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">outlineModulate</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Color(1, 1, 1, 1)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -388,7 +396,9 @@
   
   <a id="Godot_Font_DrawChar_" data-uid="Godot.Font.DrawChar*"></a>
   <h4 id="Godot_Font_DrawChar_Godot_RID_Godot_Vector2_System_Int32_System_Int32_System_Nullable_Godot_Color__System_Boolean_" data-uid="Godot.Font.DrawChar(Godot.RID,Godot.Vector2,System.Int32,System.Int32,System.Nullable{Godot.Color},System.Boolean)">DrawChar(RID, Vector2, Int32, Int32, Nullable&lt;Color&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Draw character <code>char</code> into a canvas item using the font at a given position, with <code>modulate</code> color, and optionally kerning if <code>next</code> is passed. clipping the width. <code>position</code> specifies the baseline, not the top. To draw from the top, ascent must be added to the Y axis. The width used by the character is returned, making this function useful for drawing strings character by character.</p>
+<p>If <code>outline</code> is <code>true</code>, the outline of the character is drawn instead of the character itself.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -427,7 +437,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">modulate</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Color(1, 1, 1, 1)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -455,7 +466,8 @@
   
   <a id="Godot_Font_GetAscent_" data-uid="Godot.Font.GetAscent*"></a>
   <h4 id="Godot_Font_GetAscent" data-uid="Godot.Font.GetAscent">GetAscent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the font ascent (number of pixels above the baseline).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -480,7 +492,11 @@
   
   <a id="Godot_Font_GetCharContours_" data-uid="Godot.Font.GetCharContours*"></a>
   <h4 id="Godot_Font_GetCharContours_System_Int32_System_Int32_" data-uid="Godot.Font.GetCharContours(System.Int32,System.Int32)">GetCharContours(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns outline contours of the glyph as a <code>Dictionary</code> with the following contents:</p>
+<p><code>points</code>         - <a class="xref" href="Godot.Vector3.html">Vector3</a>, containing outline points. <code>x</code> and <code>y</code> are point coordinates. <code>z</code> is the type of the point, using the <a class="xref" href="Godot.Font.ContourPointTag.html">Font.ContourPointTag</a> values.</p>
+<p><code>contours</code>       - <span class="xref">System.Int32</span>, containing indices the end points of each contour.</p>
+<p><code>orientation</code>    - <span class="xref">System.Boolean</span>, contour orientation. If <code>true</code>, clockwise contours must be filled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -527,7 +543,8 @@
   
   <a id="Godot_Font_GetCharSize_" data-uid="Godot.Font.GetCharSize*"></a>
   <h4 id="Godot_Font_GetCharSize_System_Int32_System_Int32_" data-uid="Godot.Font.GetCharSize(System.Int32,System.Int32)">GetCharSize(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size of a character, optionally taking kerning into account if the next character is provided. Note that the height returned is the font height (see <a class="xref" href="Godot.Font.html#Godot_Font_GetHeight">GetHeight()</a>) and has no relation to the glyph height.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -574,7 +591,8 @@
   
   <a id="Godot_Font_GetCharTexture_" data-uid="Godot.Font.GetCharTexture*"></a>
   <h4 id="Godot_Font_GetCharTexture_System_Int32_System_Int32_System_Boolean_" data-uid="Godot.Font.GetCharTexture(System.Int32,System.Int32,System.Boolean)">GetCharTexture(Int32, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns resource id of the cache texture containing the char.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -626,7 +644,8 @@
   
   <a id="Godot_Font_GetCharTextureSize_" data-uid="Godot.Font.GetCharTextureSize*"></a>
   <h4 id="Godot_Font_GetCharTextureSize_System_Int32_System_Int32_System_Boolean_" data-uid="Godot.Font.GetCharTextureSize(System.Int32,System.Int32,System.Boolean)">GetCharTextureSize(Int32, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns size of the cache texture containing the char.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -678,7 +697,8 @@
   
   <a id="Godot_Font_GetCharTxOffset_" data-uid="Godot.Font.GetCharTxOffset*"></a>
   <h4 id="Godot_Font_GetCharTxOffset_System_Int32_System_Int32_System_Boolean_" data-uid="Godot.Font.GetCharTxOffset(System.Int32,System.Int32,System.Boolean)">GetCharTxOffset(Int32, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns char offset from the baseline.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -730,7 +750,8 @@
   
   <a id="Godot_Font_GetCharTxSize_" data-uid="Godot.Font.GetCharTxSize*"></a>
   <h4 id="Godot_Font_GetCharTxSize_System_Int32_System_Int32_System_Boolean_" data-uid="Godot.Font.GetCharTxSize(System.Int32,System.Int32,System.Boolean)">GetCharTxSize(Int32, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns size of the char.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -782,7 +803,8 @@
   
   <a id="Godot_Font_GetCharTxUvRect_" data-uid="Godot.Font.GetCharTxUvRect*"></a>
   <h4 id="Godot_Font_GetCharTxUvRect_System_Int32_System_Int32_System_Boolean_" data-uid="Godot.Font.GetCharTxUvRect(System.Int32,System.Int32,System.Boolean)">GetCharTxUvRect(Int32, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns rectangle in the cache texture containing the char.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -834,7 +856,8 @@
   
   <a id="Godot_Font_GetDescent_" data-uid="Godot.Font.GetDescent*"></a>
   <h4 id="Godot_Font_GetDescent" data-uid="Godot.Font.GetDescent">GetDescent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the font descent (number of pixels below the baseline).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -859,7 +882,8 @@
   
   <a id="Godot_Font_GetHeight_" data-uid="Godot.Font.GetHeight*"></a>
   <h4 id="Godot_Font_GetHeight" data-uid="Godot.Font.GetHeight">GetHeight()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total font height (ascent plus descent) in pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -884,7 +908,8 @@
   
   <a id="Godot_Font_GetStringSize_" data-uid="Godot.Font.GetStringSize*"></a>
   <h4 id="Godot_Font_GetStringSize_System_String_" data-uid="Godot.Font.GetStringSize(System.String)">GetStringSize(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size of a string, taking kerning and advance into account. Note that the height returned is the font height (see <a class="xref" href="Godot.Font.html#Godot_Font_GetHeight">GetHeight()</a>) and has no relation to the string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -926,7 +951,8 @@
   
   <a id="Godot_Font_GetWordwrapStringSize_" data-uid="Godot.Font.GetWordwrapStringSize*"></a>
   <h4 id="Godot_Font_GetWordwrapStringSize_System_String_System_Single_" data-uid="Godot.Font.GetWordwrapStringSize(System.String,System.Single)">GetWordwrapStringSize(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size that the string would have with word wrapping enabled with a fixed <code>width</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -973,7 +999,8 @@
   
   <a id="Godot_Font_HasOutline_" data-uid="Godot.Font.HasOutline*"></a>
   <h4 id="Godot_Font_HasOutline" data-uid="Godot.Font.HasOutline">HasOutline()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the font has an outline.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1023,7 +1050,8 @@
   
   <a id="Godot_Font_UpdateChanges_" data-uid="Godot.Font.UpdateChanges*"></a>
   <h4 id="Godot_Font_UpdateChanges" data-uid="Godot.Font.UpdateChanges">UpdateChanges()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>After editing a font (changing size, ascent, char rects, etc.). Call this function to propagate changes to controls that might use it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

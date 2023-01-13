@@ -83,7 +83,8 @@
   
   <h1 id="Godot_InputEventKey" data-uid="Godot.InputEventKey" class="text-break">Class InputEventKey
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Stores key presses on the keyboard. Supports key presses, key releases and <a class="xref" href="Godot.InputEventKey.html#Godot_InputEventKey_Echo">Echo</a> events.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -435,7 +436,8 @@
   
   <a id="Godot_InputEventKey_Echo_" data-uid="Godot.InputEventKey.Echo*"></a>
   <h4 id="Godot_InputEventKey_Echo" data-uid="Godot.InputEventKey.Echo">Echo</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the key was already pressed before this event. It means the user is holding the key down.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -460,7 +462,9 @@
   
   <a id="Godot_InputEventKey_PhysicalScancode_" data-uid="Godot.InputEventKey.PhysicalScancode*"></a>
   <h4 id="Godot_InputEventKey_PhysicalScancode" data-uid="Godot.InputEventKey.PhysicalScancode">PhysicalScancode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Key physical scancode, which corresponds to one of the <a class="xref" href="Godot.KeyList.html">KeyList</a> constants. Represent the physical location of a key on the 101/102-key US QWERTY keyboard.</p>
+<p>To get a human-readable representation of the <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a>, use <code>OS.get_scancode_string(event.physical_scancode)</code> where <code>event</code> is the <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,7 +489,8 @@
   
   <a id="Godot_InputEventKey_Pressed_" data-uid="Godot.InputEventKey.Pressed*"></a>
   <h4 id="Godot_InputEventKey_Pressed" data-uid="Godot.InputEventKey.Pressed">Pressed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the key&apos;s state is pressed. If <code>false</code>, the key&apos;s state is released.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -510,7 +515,9 @@
   
   <a id="Godot_InputEventKey_Scancode_" data-uid="Godot.InputEventKey.Scancode*"></a>
   <h4 id="Godot_InputEventKey_Scancode" data-uid="Godot.InputEventKey.Scancode">Scancode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The key scancode, which corresponds to one of the <a class="xref" href="Godot.KeyList.html">KeyList</a> constants. Represent key in the current keyboard layout.</p>
+<p>To get a human-readable representation of the <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a>, use <code>OS.get_scancode_string(event.scancode)</code> where <code>event</code> is the <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -535,7 +542,8 @@
   
   <a id="Godot_InputEventKey_Unicode_" data-uid="Godot.InputEventKey.Unicode*"></a>
   <h4 id="Godot_InputEventKey_Unicode" data-uid="Godot.InputEventKey.Unicode">Unicode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The key Unicode identifier (when relevant). Unicode identifiers for the composite characters and complex scripts may not be available unless IME input mode is active. See <a class="xref" href="Godot.OS.html#Godot_OS_SetImeActive_System_Boolean_">SetImeActive(Boolean)</a> for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -587,7 +595,9 @@
   
   <a id="Godot_InputEventKey_GetPhysicalScancodeWithModifiers_" data-uid="Godot.InputEventKey.GetPhysicalScancodeWithModifiers*"></a>
   <h4 id="Godot_InputEventKey_GetPhysicalScancodeWithModifiers" data-uid="Godot.InputEventKey.GetPhysicalScancodeWithModifiers">GetPhysicalScancodeWithModifiers()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the physical scancode combined with modifier keys such as <code>Shift</code> or <code>Alt</code>. See also <a class="xref" href="Godot.InputEventWithModifiers.html">InputEventWithModifiers</a>.</p>
+<p>To get a human-readable representation of the <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a> with modifiers, use <code>OS.get_scancode_string(event.get_physical_scancode_with_modifiers())</code> where <code>event</code> is the <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -637,7 +647,9 @@
   
   <a id="Godot_InputEventKey_GetScancodeWithModifiers_" data-uid="Godot.InputEventKey.GetScancodeWithModifiers*"></a>
   <h4 id="Godot_InputEventKey_GetScancodeWithModifiers" data-uid="Godot.InputEventKey.GetScancodeWithModifiers">GetScancodeWithModifiers()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the scancode combined with modifier keys such as <code>Shift</code> or <code>Alt</code>. See also <a class="xref" href="Godot.InputEventWithModifiers.html">InputEventWithModifiers</a>.</p>
+<p>To get a human-readable representation of the <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a> with modifiers, use <code>OS.get_scancode_string(event.get_scancode_with_modifiers())</code> where <code>event</code> is the <a class="xref" href="Godot.InputEventKey.html">InputEventKey</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

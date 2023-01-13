@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Marshalls" data-uid="Godot.Marshalls" class="text-break">Class Marshalls
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides data transformation and encoding utility functions.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +130,8 @@
   
   <a id="Godot_Marshalls_Base64ToRaw_" data-uid="Godot.Marshalls.Base64ToRaw*"></a>
   <h4 id="Godot_Marshalls_Base64ToRaw_System_String_" data-uid="Godot.Marshalls.Base64ToRaw(System.String)">Base64ToRaw(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a decoded <span class="xref">System.Byte</span> corresponding to the Base64-encoded string <code>base64_str</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -171,7 +173,8 @@
   
   <a id="Godot_Marshalls_Base64ToUtf8_" data-uid="Godot.Marshalls.Base64ToUtf8*"></a>
   <h4 id="Godot_Marshalls_Base64ToUtf8_System_String_" data-uid="Godot.Marshalls.Base64ToUtf8(System.String)">Base64ToUtf8(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a decoded string corresponding to the Base64-encoded string <code>base64_str</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -213,7 +216,9 @@
   
   <a id="Godot_Marshalls_Base64ToVariant_" data-uid="Godot.Marshalls.Base64ToVariant*"></a>
   <h4 id="Godot_Marshalls_Base64ToVariant_System_String_System_Boolean_" data-uid="Godot.Marshalls.Base64ToVariant(System.String,System.Boolean)">Base64ToVariant(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a decoded <code>Variant</code> corresponding to the Base64-encoded string <code>base64_str</code>. If <code>allow_objects</code> is <code>true</code>, decoding objects is allowed.</p>
+<p>Warning: Deserialized objects can contain code which gets executed. Do not use this option if the serialized object comes from untrusted sources to avoid potential security threats such as remote code execution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -260,7 +265,8 @@
   
   <a id="Godot_Marshalls_RawToBase64_" data-uid="Godot.Marshalls.RawToBase64*"></a>
   <h4 id="Godot_Marshalls_RawToBase64_System_Byte___" data-uid="Godot.Marshalls.RawToBase64(System.Byte[])">RawToBase64(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a Base64-encoded string of a given <span class="xref">System.Byte</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -302,7 +308,8 @@
   
   <a id="Godot_Marshalls_Utf8ToBase64_" data-uid="Godot.Marshalls.Utf8ToBase64*"></a>
   <h4 id="Godot_Marshalls_Utf8ToBase64_System_String_" data-uid="Godot.Marshalls.Utf8ToBase64(System.String)">Utf8ToBase64(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a Base64-encoded string of the UTF-8 string <code>utf8_str</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,7 +351,8 @@
   
   <a id="Godot_Marshalls_VariantToBase64_" data-uid="Godot.Marshalls.VariantToBase64*"></a>
   <h4 id="Godot_Marshalls_VariantToBase64_System_Object_System_Boolean_" data-uid="Godot.Marshalls.VariantToBase64(System.Object,System.Boolean)">VariantToBase64(Object, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a Base64-encoded string of the <code>Variant</code> <code>variant</code>. If <code>full_objects</code> is <code>true</code>, encoding objects is allowed (and can potentially include code).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

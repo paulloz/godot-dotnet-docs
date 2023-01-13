@@ -83,7 +83,12 @@
   
   <h1 id="Godot_GridMap" data-uid="Godot.GridMap" class="text-break">Class GridMap
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>GridMap lets you place meshes on a grid interactively. It works both from the editor and from scripts, which can help you create in-game level editors.</p>
+<p>GridMaps use a <a class="xref" href="Godot.MeshLibrary.html">MeshLibrary</a> which contains a list of tiles. Each tile is a mesh with materials plus optional collision and navigation shapes.</p>
+<p>A GridMap contains a collection of cells. Each grid cell refers to a tile in the <a class="xref" href="Godot.MeshLibrary.html">MeshLibrary</a>. All cells in the map have the same dimensions.</p>
+<p>Internally, a GridMap is split into a sparse collection of octants for efficient rendering and physics processing. Every octant has the same dimensions and can contain several cells.</p>
+<p>Note: GridMap doesn&apos;t extend <a class="xref" href="Godot.VisualInstance.html">VisualInstance</a> and therefore can&apos;t be hidden or cull masked based on <a class="xref" href="Godot.VisualInstance.html#Godot_VisualInstance_Layers">Layers</a>. If you make a light not affect the first layer, the whole GridMap won&apos;t be lit by the light in question.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -963,7 +968,8 @@
   
   
   <h4 id="Godot_GridMap_InvalidCellItem" data-uid="Godot.GridMap.InvalidCellItem">InvalidCellItem</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Invalid cell item that can be used in <a class="xref" href="Godot.GridMap.html#Godot_GridMap_SetCellItem_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_">SetCellItem(Int32, Int32, Int32, Int32, Int32)</a> to clear cells (or represent an empty cell in <a class="xref" href="Godot.GridMap.html#Godot_GridMap_GetCellItem_System_Int32_System_Int32_System_Int32_">GetCellItem(Int32, Int32, Int32)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -990,7 +996,8 @@
   
   <a id="Godot_GridMap_BakeNavigation_" data-uid="Godot.GridMap.BakeNavigation*"></a>
   <h4 id="Godot_GridMap_BakeNavigation" data-uid="Godot.GridMap.BakeNavigation">BakeNavigation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this GridMap uses cell navmesh resources to create navigation regions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1015,7 +1022,8 @@
   
   <a id="Godot_GridMap_CellCenterX_" data-uid="Godot.GridMap.CellCenterX*"></a>
   <h4 id="Godot_GridMap_CellCenterX" data-uid="Godot.GridMap.CellCenterX">CellCenterX</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, grid items are centered on the X axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1040,7 +1048,8 @@
   
   <a id="Godot_GridMap_CellCenterY_" data-uid="Godot.GridMap.CellCenterY*"></a>
   <h4 id="Godot_GridMap_CellCenterY" data-uid="Godot.GridMap.CellCenterY">CellCenterY</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, grid items are centered on the Y axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1065,7 +1074,8 @@
   
   <a id="Godot_GridMap_CellCenterZ_" data-uid="Godot.GridMap.CellCenterZ*"></a>
   <h4 id="Godot_GridMap_CellCenterZ" data-uid="Godot.GridMap.CellCenterZ">CellCenterZ</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, grid items are centered on the Z axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1090,7 +1100,8 @@
   
   <a id="Godot_GridMap_CellOctantSize_" data-uid="Godot.GridMap.CellOctantSize*"></a>
   <h4 id="Godot_GridMap_CellOctantSize" data-uid="Godot.GridMap.CellOctantSize">CellOctantSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size of each octant measured in number of cells. This applies to all three axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1115,7 +1126,9 @@
   
   <a id="Godot_GridMap_CellScale_" data-uid="Godot.GridMap.CellScale*"></a>
   <h4 id="Godot_GridMap_CellScale" data-uid="Godot.GridMap.CellScale">CellScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The scale of the cell items.</p>
+<p>This does not affect the size of the grid cells themselves, only the items in them. This can be used to make cell items overlap their neighbors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1140,7 +1153,9 @@
   
   <a id="Godot_GridMap_CellSize_" data-uid="Godot.GridMap.CellSize*"></a>
   <h4 id="Godot_GridMap_CellSize" data-uid="Godot.GridMap.CellSize">CellSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The dimensions of the grid&apos;s cells.</p>
+<p>This does not affect the size of the meshes. See <a class="xref" href="Godot.GridMap.html#Godot_GridMap_CellScale">CellScale</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1165,7 +1180,9 @@
   
   <a id="Godot_GridMap_CollisionLayer_" data-uid="Godot.GridMap.CollisionLayer*"></a>
   <h4 id="Godot_GridMap_CollisionLayer" data-uid="Godot.GridMap.CollisionLayer">CollisionLayer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics layers this GridMap is in.</p>
+<p>GridMaps act as static bodies, meaning they aren&apos;t affected by gravity or other forces. They only affect other physics bodies that collide with them.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1190,7 +1207,8 @@
   
   <a id="Godot_GridMap_CollisionMask_" data-uid="Godot.GridMap.CollisionMask*"></a>
   <h4 id="Godot_GridMap_CollisionMask" data-uid="Godot.GridMap.CollisionMask">CollisionMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The physics layers this GridMap detects collisions in. See <a href="$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks">Collision layers and masks</a> in the documentation for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1215,7 +1233,8 @@
   
   <a id="Godot_GridMap_MeshLibrary_" data-uid="Godot.GridMap.MeshLibrary*"></a>
   <h4 id="Godot_GridMap_MeshLibrary" data-uid="Godot.GridMap.MeshLibrary">MeshLibrary</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The assigned <a class="xref" href="Godot.MeshLibrary.html">MeshLibrary</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1240,7 +1259,8 @@
   
   <a id="Godot_GridMap_NavigationLayers_" data-uid="Godot.GridMap.NavigationLayers*"></a>
   <h4 id="Godot_GridMap_NavigationLayers" data-uid="Godot.GridMap.NavigationLayers">NavigationLayers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The navigation layers the GridMap generates its navigation regions in.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1265,7 +1285,8 @@
   
   <a id="Godot_GridMap_PhysicsMaterial_" data-uid="Godot.GridMap.PhysicsMaterial*"></a>
   <h4 id="Godot_GridMap_PhysicsMaterial" data-uid="Godot.GridMap.PhysicsMaterial">PhysicsMaterial</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Overrides the default friction and bounce physics properties for the whole <a class="xref" href="Godot.GridMap.html">GridMap</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1290,7 +1311,8 @@
   
   <a id="Godot_GridMap_UseInBakedLight_" data-uid="Godot.GridMap.UseInBakedLight*"></a>
   <h4 id="Godot_GridMap_UseInBakedLight" data-uid="Godot.GridMap.UseInBakedLight">UseInBakedLight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls whether this GridMap will be baked in a <a class="xref" href="Godot.BakedLightmap.html">BakedLightmap</a> or not.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1317,7 +1339,8 @@
   
   <a id="Godot_GridMap_Clear_" data-uid="Godot.GridMap.Clear*"></a>
   <h4 id="Godot_GridMap_Clear" data-uid="Godot.GridMap.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clear all cells.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1337,7 +1360,8 @@
   
   <a id="Godot_GridMap_GetBakeMeshes_" data-uid="Godot.GridMap.GetBakeMeshes*"></a>
   <h4 id="Godot_GridMap_GetBakeMeshes" data-uid="Godot.GridMap.GetBakeMeshes">GetBakeMeshes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>es and <a class="xref" href="Godot.Transform.html">Transform</a> references of all bake meshes that exist within the current GridMap.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1404,7 +1428,8 @@
   
   <a id="Godot_GridMap_GetCellItem_" data-uid="Godot.GridMap.GetCellItem*"></a>
   <h4 id="Godot_GridMap_GetCellItem_System_Int32_System_Int32_System_Int32_" data-uid="Godot.GridMap.GetCellItem(System.Int32,System.Int32,System.Int32)">GetCellItem(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.MeshLibrary.html">MeshLibrary</a> item index located at the grid-based X, Y and Z coordinates. If the cell is empty, <a class="xref" href="Godot.GridMap.html#Godot_GridMap_InvalidCellItem">InvalidCellItem</a> will be returned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1456,7 +1481,8 @@
   
   <a id="Godot_GridMap_GetCellItemOrientation_" data-uid="Godot.GridMap.GetCellItemOrientation*"></a>
   <h4 id="Godot_GridMap_GetCellItemOrientation_System_Int32_System_Int32_System_Int32_" data-uid="Godot.GridMap.GetCellItemOrientation(System.Int32,System.Int32,System.Int32)">GetCellItemOrientation(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The orientation of the cell at the grid-based X, Y and Z coordinates. -1 is returned if the cell is empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1658,7 +1684,8 @@
   
   <a id="Godot_GridMap_GetCollisionLayerBit_" data-uid="Godot.GridMap.GetCollisionLayerBit*"></a>
   <h4 id="Godot_GridMap_GetCollisionLayerBit_System_Int32_" data-uid="Godot.GridMap.GetCollisionLayerBit(System.Int32)">GetCollisionLayerBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an individual bit on the <a class="xref" href="Godot.GridMap.html#Godot_GridMap_CollisionLayer">CollisionLayer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1725,7 +1752,8 @@
   
   <a id="Godot_GridMap_GetCollisionMaskBit_" data-uid="Godot.GridMap.GetCollisionMaskBit*"></a>
   <h4 id="Godot_GridMap_GetCollisionMaskBit_System_Int32_" data-uid="Godot.GridMap.GetCollisionMaskBit(System.Int32)">GetCollisionMaskBit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an individual bit on the <a class="xref" href="Godot.GridMap.html#Godot_GridMap_CollisionMask">CollisionMask</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1767,7 +1795,8 @@
   
   <a id="Godot_GridMap_GetMeshes_" data-uid="Godot.GridMap.GetMeshes*"></a>
   <h4 id="Godot_GridMap_GetMeshes" data-uid="Godot.GridMap.GetMeshes">GetMeshes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of <a class="xref" href="Godot.Transform.html">Transform</a> and <a class="xref" href="Godot.Mesh.html">Mesh</a> references corresponding to the non-empty cells in the grid. The transforms are specified in world space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1892,7 +1921,8 @@
   
   <a id="Godot_GridMap_GetUsedCells_" data-uid="Godot.GridMap.GetUsedCells*"></a>
   <h4 id="Godot_GridMap_GetUsedCells" data-uid="Godot.GridMap.GetUsedCells">GetUsedCells()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of <a class="xref" href="Godot.Vector3.html">Vector3</a> with the non-empty cell coordinates in the grid map.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1917,7 +1947,8 @@
   
   <a id="Godot_GridMap_GetUsedCellsByItem_" data-uid="Godot.GridMap.GetUsedCellsByItem*"></a>
   <h4 id="Godot_GridMap_GetUsedCellsByItem_System_Int32_" data-uid="Godot.GridMap.GetUsedCellsByItem(System.Int32)">GetUsedCellsByItem(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of all cells with the given item index specified in <code>item</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2041,7 +2072,8 @@
   
   <a id="Godot_GridMap_MapToWorld_" data-uid="Godot.GridMap.MapToWorld*"></a>
   <h4 id="Godot_GridMap_MapToWorld_System_Int32_System_Int32_System_Int32_" data-uid="Godot.GridMap.MapToWorld(System.Int32,System.Int32,System.Int32)">MapToWorld(Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of a grid cell in the GridMap&apos;s local coordinate space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2147,7 +2179,10 @@
   
   <a id="Godot_GridMap_SetCellItem_" data-uid="Godot.GridMap.SetCellItem*"></a>
   <h4 id="Godot_GridMap_SetCellItem_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Godot.GridMap.SetCellItem(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">SetCellItem(Int32, Int32, Int32, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the mesh index for the cell referenced by its grid-based X, Y and Z coordinates.</p>
+<p>A negative item index such as <a class="xref" href="Godot.GridMap.html#Godot_GridMap_InvalidCellItem">InvalidCellItem</a> will clear the cell.</p>
+<p>Optionally, the item&apos;s orientation can be passed. For valid orientation values, see <code>Basis.get_orthogonal_index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2398,7 +2433,8 @@
   
   <a id="Godot_GridMap_SetCollisionLayerBit_" data-uid="Godot.GridMap.SetCollisionLayerBit*"></a>
   <h4 id="Godot_GridMap_SetCollisionLayerBit_System_Int32_System_Boolean_" data-uid="Godot.GridMap.SetCollisionLayerBit(System.Int32,System.Boolean)">SetCollisionLayerBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an individual bit on the <a class="xref" href="Godot.GridMap.html#Godot_GridMap_CollisionLayer">CollisionLayer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2457,7 +2493,8 @@
   
   <a id="Godot_GridMap_SetCollisionMaskBit_" data-uid="Godot.GridMap.SetCollisionMaskBit*"></a>
   <h4 id="Godot_GridMap_SetCollisionMaskBit_System_Int32_System_Boolean_" data-uid="Godot.GridMap.SetCollisionMaskBit(System.Int32,System.Boolean)">SetCollisionMaskBit(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an individual bit on the <a class="xref" href="Godot.GridMap.html#Godot_GridMap_CollisionMask">CollisionMask</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2624,7 +2661,9 @@
   
   <a id="Godot_GridMap_WorldToMap_" data-uid="Godot.GridMap.WorldToMap*"></a>
   <h4 id="Godot_GridMap_WorldToMap_Godot_Vector3_" data-uid="Godot.GridMap.WorldToMap(Godot.Vector3)">WorldToMap(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the coordinates of the grid cell containing the given point.</p>
+<p><code>pos</code> should be in the GridMap&apos;s local coordinate space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,8 @@
   
   <h1 id="Godot_CanvasItemMaterial" data-uid="Godot.CanvasItemMaterial" class="text-break">Class CanvasItemMaterial
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.CanvasItemMaterial.html">CanvasItemMaterial</a>s provide a means of modifying the textures associated with a CanvasItem. They specialize in describing blend and lighting behaviors for textures. Use a <a class="xref" href="Godot.ShaderMaterial.html">ShaderMaterial</a> to more fully customize a material&apos;s interactions with a <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -371,7 +372,8 @@
   
   <a id="Godot_CanvasItemMaterial_BlendMode_" data-uid="Godot.CanvasItemMaterial.BlendMode*"></a>
   <h4 id="Godot_CanvasItemMaterial_BlendMode" data-uid="Godot.CanvasItemMaterial.BlendMode">BlendMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The manner in which a material&apos;s rendering is applied to underlying textures.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +398,8 @@
   
   <a id="Godot_CanvasItemMaterial_LightMode_" data-uid="Godot.CanvasItemMaterial.LightMode*"></a>
   <h4 id="Godot_CanvasItemMaterial_LightMode" data-uid="Godot.CanvasItemMaterial.LightMode">LightMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The manner in which material reacts to lighting.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +424,9 @@
   
   <a id="Godot_CanvasItemMaterial_ParticlesAnimation_" data-uid="Godot.CanvasItemMaterial.ParticlesAnimation*"></a>
   <h4 id="Godot_CanvasItemMaterial_ParticlesAnimation" data-uid="Godot.CanvasItemMaterial.ParticlesAnimation">ParticlesAnimation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, enable spritesheet-based animation features when assigned to <a class="xref" href="Godot.Particles2D.html">Particles2D</a> and <a class="xref" href="Godot.CPUParticles2D.html">CPUParticles2D</a> nodes. The <a class="xref" href="Godot.ParticlesMaterial.html#Godot_ParticlesMaterial_AnimSpeed">AnimSpeed</a> or <a class="xref" href="Godot.CPUParticles2D.html#Godot_CPUParticles2D_AnimSpeed">AnimSpeed</a> should also be set to a positive value for the animation to play.</p>
+<p>This property (and other <code>particles_anim_*</code> properties that depend on it) has no effect on other types of nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -446,7 +451,9 @@
   
   <a id="Godot_CanvasItemMaterial_ParticlesAnimHFrames_" data-uid="Godot.CanvasItemMaterial.ParticlesAnimHFrames*"></a>
   <h4 id="Godot_CanvasItemMaterial_ParticlesAnimHFrames" data-uid="Godot.CanvasItemMaterial.ParticlesAnimHFrames">ParticlesAnimHFrames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of columns in the spritesheet assigned as <a class="xref" href="Godot.Texture.html">Texture</a> for a <a class="xref" href="Godot.Particles2D.html">Particles2D</a> or <a class="xref" href="Godot.CPUParticles2D.html">CPUParticles2D</a>.</p>
+<p>Note: This property is only used and visible in the editor if <a class="xref" href="Godot.CanvasItemMaterial.html#Godot_CanvasItemMaterial_ParticlesAnimation">ParticlesAnimation</a> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,7 +478,9 @@
   
   <a id="Godot_CanvasItemMaterial_ParticlesAnimLoop_" data-uid="Godot.CanvasItemMaterial.ParticlesAnimLoop*"></a>
   <h4 id="Godot_CanvasItemMaterial_ParticlesAnimLoop" data-uid="Godot.CanvasItemMaterial.ParticlesAnimLoop">ParticlesAnimLoop</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the particles animation will loop.</p>
+<p>Note: This property is only used and visible in the editor if <a class="xref" href="Godot.CanvasItemMaterial.html#Godot_CanvasItemMaterial_ParticlesAnimation">ParticlesAnimation</a> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -496,7 +505,9 @@
   
   <a id="Godot_CanvasItemMaterial_ParticlesAnimVFrames_" data-uid="Godot.CanvasItemMaterial.ParticlesAnimVFrames*"></a>
   <h4 id="Godot_CanvasItemMaterial_ParticlesAnimVFrames" data-uid="Godot.CanvasItemMaterial.ParticlesAnimVFrames">ParticlesAnimVFrames</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of rows in the spritesheet assigned as <a class="xref" href="Godot.Texture.html">Texture</a> for a <a class="xref" href="Godot.Particles2D.html">Particles2D</a> or <a class="xref" href="Godot.CPUParticles2D.html">CPUParticles2D</a>.</p>
+<p>Note: This property is only used and visible in the editor if <a class="xref" href="Godot.CanvasItemMaterial.html#Godot_CanvasItemMaterial_ParticlesAnimation">ParticlesAnimation</a> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

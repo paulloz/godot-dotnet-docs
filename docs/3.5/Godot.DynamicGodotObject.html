@@ -83,7 +83,8 @@
   
   <h1 id="Godot_DynamicGodotObject" data-uid="Godot.DynamicGodotObject" class="text-break">Class DynamicGodotObject
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents an <a class="xref" href="Godot.Object.html">Object</a> whose members can be dynamically accessed at runtime through the Variant API.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -96,13 +97,49 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class DynamicGodotObject : DynamicObject</code></pre>
   </div>
+  <h5 id="Godot_DynamicGodotObject_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The <a class="xref" href="Godot.DynamicGodotObject.html">DynamicGodotObject</a> class enables access to the Variant
+members of a <a class="xref" href="Godot.Object.html">Object</a> instance at runtime.
+</p>
+<p>
+This allows accessing the class members using their original names in the engine as well as the members from the
+script attached to the <a class="xref" href="Godot.Object.html">Object</a>, regardless of the scripting language it was written in.
+</p>
+</div>
+  <h5 id="Godot_DynamicGodotObject_examples"><strong>Examples</strong></h5>
+  <p>This sample shows how to use <a class="xref" href="Godot.DynamicGodotObject.html">DynamicGodotObject</a> to dynamically access the engine members of a <a class="xref" href="Godot.Object.html">Object</a>.</p>
+<pre><code>dynamic sprite = GetNode(&quot;Sprite&quot;).DynamicGodotObject;
+sprite.add_child(this);
+
+if ((sprite.hframes * sprite.vframes) > 0)
+    sprite.frame = 0;</code></pre>
+
+  <p>This sample shows how to use <a class="xref" href="Godot.DynamicGodotObject.html">DynamicGodotObject</a> to dynamically access the members of the script attached to a <a class="xref" href="Godot.Object.html">Object</a>.</p>
+<pre><code>dynamic childNode = GetNode(&quot;ChildNode&quot;).DynamicGodotObject;
+
+if (childNode.print_allowed)
+{
+    childNode.message = &quot;Hello from C#&quot;;
+    childNode.print_message(3);
+}</code></pre>
+<p>The <code>ChildNode</code> node has the following GDScript script attached:</p>
+<pre><code>// # ChildNode.gd
+// var print_allowed = true
+// var message = &quot;&quot;
+//
+// func print_message(times):
+//     for i in times:
+//         print(message)</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="Godot_DynamicGodotObject__ctor_" data-uid="Godot.DynamicGodotObject.#ctor*"></a>
   <h4 id="Godot_DynamicGodotObject__ctor_Godot_Object_" data-uid="Godot.DynamicGodotObject.#ctor(Godot.Object)">DynamicGodotObject(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Godot.DynamicGodotObject.html">DynamicGodotObject</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -121,7 +158,24 @@
       <tr>
         <td><a class="xref" href="Godot.Object.html">Object</a></td>
         <td><span class="parametername">godotObject</span></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Godot.Object.html">Object</a> that will be associated with this <a class="xref" href="Godot.DynamicGodotObject.html">DynamicGodotObject</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p>Thrown when the <code data-dev-comment-type="paramref" class="paramref">godotObject</code> parameter is <span class="xref">null</span>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -131,7 +185,8 @@
   
   <a id="Godot_DynamicGodotObject_Value_" data-uid="Godot.DynamicGodotObject.Value*"></a>
   <h4 id="Godot_DynamicGodotObject_Value" data-uid="Godot.DynamicGodotObject.Value">Value</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Godot.Object.html">Object</a> associated with this <a class="xref" href="Godot.DynamicGodotObject.html">DynamicGodotObject</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

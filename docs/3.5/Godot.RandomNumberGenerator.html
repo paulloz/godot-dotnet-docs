@@ -83,7 +83,15 @@
   
   <h1 id="Godot_RandomNumberGenerator" data-uid="Godot.RandomNumberGenerator" class="text-break">Class RandomNumberGenerator
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>RandomNumberGenerator is a class for generating pseudo-random numbers. It currently uses <a href="http://www.pcg-random.org/">PCG32</a>.</p>
+<p>Note: The underlying algorithm is an implementation detail. As a result, it should not be depended upon for reproducible random streams across Godot versions.</p>
+<p>To generate a random float number (within a given range) based on a time-dependant seed:</p>
+<p><pre><code>var rng = RandomNumberGenerator.new()
+func _ready():
+    rng.randomize()
+    var my_random_number = rng.randf_range(-10.0, 10.0)</code></pre></p>
+<p>Note: The default values of <a class="xref" href="Godot.RandomNumberGenerator.html#Godot_RandomNumberGenerator_Seed">Seed</a> and <a class="xref" href="Godot.RandomNumberGenerator.html#Godot_RandomNumberGenerator_State">State</a> properties are pseudo-random, and changes when calling <a class="xref" href="Godot.RandomNumberGenerator.html#Godot_RandomNumberGenerator_Randomize">Randomize()</a>. The <code>0</code> value documented here is a placeholder, and not the actual default seed.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +305,14 @@
   
   <a id="Godot_RandomNumberGenerator_Seed_" data-uid="Godot.RandomNumberGenerator.Seed*"></a>
   <h4 id="Godot_RandomNumberGenerator_Seed" data-uid="Godot.RandomNumberGenerator.Seed">Seed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes the random number generator state based on the given seed value. A given seed will give a reproducible sequence of pseudo-random numbers.</p>
+<p>Note: The RNG does not have an avalanche effect, and can output similar random streams given similar seeds. Consider using a hash function to improve your seed quality if they&apos;re sourced externally.</p>
+<p>Note: Setting this property produces a side effect of changing the internal <a class="xref" href="Godot.RandomNumberGenerator.html#Godot_RandomNumberGenerator_State">State</a>, so make sure to initialize the seed before modifying the <a class="xref" href="Godot.RandomNumberGenerator.html#Godot_RandomNumberGenerator_State">State</a>:</p>
+<p><pre><code>var rng = RandomNumberGenerator.new()
+rng.seed = hash(&quot;Godot&quot;)
+rng.state = 100 # Restore to some previously saved state.</code></pre></p>
+<p>Warning: the getter of this property returns the previous <a class="xref" href="Godot.RandomNumberGenerator.html#Godot_RandomNumberGenerator_State">State</a>, and not the initial seed value, which is going to be fixed in Godot 4.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +337,15 @@
   
   <a id="Godot_RandomNumberGenerator_State_" data-uid="Godot.RandomNumberGenerator.State*"></a>
   <h4 id="Godot_RandomNumberGenerator_State" data-uid="Godot.RandomNumberGenerator.State">State</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current state of the random number generator. Save and restore this property to restore the generator to a previous state:</p>
+<p><pre><code>var rng = RandomNumberGenerator.new()
+print(rng.randf())
+var saved_state = rng.state # Store current state.
+print(rng.randf()) # Advance internal state.
+rng.state = saved_state # Restore the state.
+print(rng.randf()) # Prints the same value as in previous.</code></pre></p>
+<p>Note: Do not set state to arbitrary values, since the random number generator requires the state to have certain qualities to behave properly. It should only be set to values that came from the state property itself. To initialize the random number generator with arbitrary input, use <a class="xref" href="Godot.RandomNumberGenerator.html#Godot_RandomNumberGenerator_Seed">Seed</a> instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -399,7 +422,8 @@
   
   <a id="Godot_RandomNumberGenerator_Randf_" data-uid="Godot.RandomNumberGenerator.Randf*"></a>
   <h4 id="Godot_RandomNumberGenerator_Randf" data-uid="Godot.RandomNumberGenerator.Randf">Randf()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates a pseudo-random float between <code>0.0</code> and <code>1.0</code> (inclusive).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -424,7 +448,8 @@
   
   <a id="Godot_RandomNumberGenerator_Randfn_" data-uid="Godot.RandomNumberGenerator.Randfn*"></a>
   <h4 id="Godot_RandomNumberGenerator_Randfn_System_Single_System_Single_" data-uid="Godot.RandomNumberGenerator.Randfn(System.Single,System.Single)">Randfn(Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates a <a href="https://en.wikipedia.org/wiki/Normal_distribution">normally-distributed</a> pseudo-random number, using Box-Muller transform with the specified <code>mean</code> and a standard <code>deviation</code>. This is also called Gaussian distribution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,7 +496,8 @@
   
   <a id="Godot_RandomNumberGenerator_RandfRange_" data-uid="Godot.RandomNumberGenerator.RandfRange*"></a>
   <h4 id="Godot_RandomNumberGenerator_RandfRange_System_Single_System_Single_" data-uid="Godot.RandomNumberGenerator.RandfRange(System.Single,System.Single)">RandfRange(Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates a pseudo-random float between <code>from</code> and <code>to</code> (inclusive).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -518,7 +544,8 @@
   
   <a id="Godot_RandomNumberGenerator_Randi_" data-uid="Godot.RandomNumberGenerator.Randi*"></a>
   <h4 id="Godot_RandomNumberGenerator_Randi" data-uid="Godot.RandomNumberGenerator.Randi">Randi()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates a pseudo-random 32-bit unsigned integer between <code>0</code> and <code>4294967295</code> (inclusive).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -543,7 +570,8 @@
   
   <a id="Godot_RandomNumberGenerator_RandiRange_" data-uid="Godot.RandomNumberGenerator.RandiRange*"></a>
   <h4 id="Godot_RandomNumberGenerator_RandiRange_System_Int32_System_Int32_" data-uid="Godot.RandomNumberGenerator.RandiRange(System.Int32,System.Int32)">RandiRange(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates a pseudo-random 32-bit signed integer between <code>from</code> and <code>to</code> (inclusive).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -590,7 +618,8 @@
   
   <a id="Godot_RandomNumberGenerator_Randomize_" data-uid="Godot.RandomNumberGenerator.Randomize*"></a>
   <h4 id="Godot_RandomNumberGenerator_Randomize" data-uid="Godot.RandomNumberGenerator.Randomize">Randomize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Setups a time-based seed to generator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,10 @@
   
   <h1 id="Godot_Image" data-uid="Godot.Image" class="text-break">Class Image
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Native image datatype. Contains image data which can be converted to an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a> and provides commonly used image processing methods. The maximum width and height for an <a class="xref" href="Godot.Image.html">Image</a> are <a class="xref" href="Godot.Image.html#Godot_Image_MaxWidth">MaxWidth</a> and <a class="xref" href="Godot.Image.html#Godot_Image_MaxHeight">MaxHeight</a>.</p>
+<p>An <a class="xref" href="Godot.Image.html">Image</a> cannot be assigned to a <code>texture</code> property of an object directly (such as <a class="xref" href="Godot.Sprite.html">Sprite</a>), and has to be converted manually to an <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a> first.</p>
+<p>Note: The maximum image size is 16384×16384 pixels due to graphics hardware limitations. Larger images may fail to import.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -345,7 +348,8 @@
   
   
   <h4 id="Godot_Image_MaxHeight" data-uid="Godot.Image.MaxHeight">MaxHeight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximal height allowed for <a class="xref" href="Godot.Image.html">Image</a> resources.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -369,7 +373,8 @@
   
   
   <h4 id="Godot_Image_MaxWidth" data-uid="Godot.Image.MaxWidth">MaxWidth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximal width allowed for <a class="xref" href="Godot.Image.html">Image</a> resources.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +401,8 @@
   
   <a id="Godot_Image_Data_" data-uid="Godot.Image.Data*"></a>
   <h4 id="Godot_Image_Data" data-uid="Godot.Image.Data">Data</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Holds all the image&apos;s color data in a given format. See <a class="xref" href="Godot.Image.Format.html">Image.Format</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -423,7 +429,8 @@
   
   <a id="Godot_Image_BlendRect_" data-uid="Godot.Image.BlendRect*"></a>
   <h4 id="Godot_Image_BlendRect_Godot_Image_Godot_Rect2_Godot_Vector2_" data-uid="Godot.Image.BlendRect(Godot.Image,Godot.Rect2,Godot.Vector2)">BlendRect(Image, Rect2, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Alpha-blends <code>src_rect</code> from <code>src</code> image to this image at coordinates <code>dest</code>, clipped accordingly to both image bounds. This image and <code>src</code> image must have the same format. <code>src_rect</code> with not positive size is treated as empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -460,7 +467,8 @@
   
   <a id="Godot_Image_BlendRectMask_" data-uid="Godot.Image.BlendRectMask*"></a>
   <h4 id="Godot_Image_BlendRectMask_Godot_Image_Godot_Image_Godot_Rect2_Godot_Vector2_" data-uid="Godot.Image.BlendRectMask(Godot.Image,Godot.Image,Godot.Rect2,Godot.Vector2)">BlendRectMask(Image, Image, Rect2, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Alpha-blends <code>src_rect</code> from <code>src</code> image to this image using <code>mask</code> image at coordinates <code>dst</code>, clipped accordingly to both image bounds. Alpha channels are required for both <code>src</code> and <code>mask</code>. <code>dst</code> pixels and <code>src</code> pixels will blend if the corresponding mask pixel&apos;s alpha value is not 0. This image and <code>src</code> image must have the same format. <code>src</code> image and <code>mask</code> image must have the same size (width and height) but they can have different formats. <code>src_rect</code> with not positive size is treated as empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -502,7 +510,8 @@
   
   <a id="Godot_Image_BlitRect_" data-uid="Godot.Image.BlitRect*"></a>
   <h4 id="Godot_Image_BlitRect_Godot_Image_Godot_Rect2_Godot_Vector2_" data-uid="Godot.Image.BlitRect(Godot.Image,Godot.Rect2,Godot.Vector2)">BlitRect(Image, Rect2, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Copies <code>src_rect</code> from <code>src</code> image to this image at coordinates <code>dst</code>, clipped accordingly to both image bounds. This image and <code>src</code> image must have the same format. <code>src_rect</code> with not positive size is treated as empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -539,7 +548,8 @@
   
   <a id="Godot_Image_BlitRectMask_" data-uid="Godot.Image.BlitRectMask*"></a>
   <h4 id="Godot_Image_BlitRectMask_Godot_Image_Godot_Image_Godot_Rect2_Godot_Vector2_" data-uid="Godot.Image.BlitRectMask(Godot.Image,Godot.Image,Godot.Rect2,Godot.Vector2)">BlitRectMask(Image, Image, Rect2, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blits <code>src_rect</code> area from <code>src</code> image to this image at the coordinates given by <code>dst</code>, clipped accordingly to both image bounds. <code>src</code> pixel is copied onto <code>dst</code> if the corresponding <code>mask</code> pixel&apos;s alpha value is not 0. This image and <code>src</code> image must have the same format. <code>src</code> image and <code>mask</code> image must have the same size (width and height) but they can have different formats. <code>src_rect</code> with not positive size is treated as empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -581,7 +591,8 @@
   
   <a id="Godot_Image_BumpmapToNormalmap_" data-uid="Godot.Image.BumpmapToNormalmap*"></a>
   <h4 id="Godot_Image_BumpmapToNormalmap_System_Single_" data-uid="Godot.Image.BumpmapToNormalmap(System.Single)">BumpmapToNormalmap(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a bumpmap to a normalmap. A bumpmap provides a height offset per-pixel, while a normalmap provides a normal direction per pixel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -608,7 +619,8 @@
   
   <a id="Godot_Image_ClearMipmaps_" data-uid="Godot.Image.ClearMipmaps*"></a>
   <h4 id="Godot_Image_ClearMipmaps" data-uid="Godot.Image.ClearMipmaps">ClearMipmaps()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the image&apos;s mipmaps.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -618,7 +630,8 @@
   
   <a id="Godot_Image_Compress_" data-uid="Godot.Image.Compress*"></a>
   <h4 id="Godot_Image_Compress_Godot_Image_CompressMode_Godot_Image_CompressSource_System_Single_" data-uid="Godot.Image.Compress(Godot.Image.CompressMode,Godot.Image.CompressSource,System.Single)">Compress(Image.CompressMode, Image.CompressSource, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compresses the image to use less memory. Can not directly access pixel data while the image is compressed. Returns error if the chosen compression mode is not available. See <a class="xref" href="Godot.Image.CompressMode.html">Image.CompressMode</a> and <a class="xref" href="Godot.Image.CompressSource.html">Image.CompressSource</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -670,7 +683,8 @@
   
   <a id="Godot_Image_Convert_" data-uid="Godot.Image.Convert*"></a>
   <h4 id="Godot_Image_Convert_Godot_Image_Format_" data-uid="Godot.Image.Convert(Godot.Image.Format)">Convert(Image.Format)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the image&apos;s format. See <a class="xref" href="Godot.Image.Format.html">Image.Format</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -697,7 +711,8 @@
   
   <a id="Godot_Image_CopyFrom_" data-uid="Godot.Image.CopyFrom*"></a>
   <h4 id="Godot_Image_CopyFrom_Godot_Image_" data-uid="Godot.Image.CopyFrom(Godot.Image)">CopyFrom(Image)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Copies <code>src</code> image to this image.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -724,7 +739,8 @@
   
   <a id="Godot_Image_Create_" data-uid="Godot.Image.Create*"></a>
   <h4 id="Godot_Image_Create_System_Int32_System_Int32_System_Boolean_Godot_Image_Format_" data-uid="Godot.Image.Create(System.Int32,System.Int32,System.Boolean,Godot.Image.Format)">Create(Int32, Int32, Boolean, Image.Format)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates an empty image of given size and format. See <a class="xref" href="Godot.Image.Format.html">Image.Format</a> constants. If <code>use_mipmaps</code> is <code>true</code> then generate mipmaps for this image. See the <a class="xref" href="Godot.Image.html#Godot_Image_GenerateMipmaps_System_Boolean_">GenerateMipmaps(Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -766,7 +782,8 @@
   
   <a id="Godot_Image_CreateFromData_" data-uid="Godot.Image.CreateFromData*"></a>
   <h4 id="Godot_Image_CreateFromData_System_Int32_System_Int32_System_Boolean_Godot_Image_Format_System_Byte___" data-uid="Godot.Image.CreateFromData(System.Int32,System.Int32,System.Boolean,Godot.Image.Format,System.Byte[])">CreateFromData(Int32, Int32, Boolean, Image.Format, Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new image of given size and format. See <a class="xref" href="Godot.Image.Format.html">Image.Format</a> constants. Fills the image with the given raw data. If <code>use_mipmaps</code> is <code>true</code> then loads mipmaps for this image from <code>data</code>. See <a class="xref" href="Godot.Image.html#Godot_Image_GenerateMipmaps_System_Boolean_">GenerateMipmaps(Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -813,7 +830,8 @@
   
   <a id="Godot_Image_Crop_" data-uid="Godot.Image.Crop*"></a>
   <h4 id="Godot_Image_Crop_System_Int32_System_Int32_" data-uid="Godot.Image.Crop(System.Int32,System.Int32)">Crop(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Crops the image to the given <code>width</code> and <code>height</code>. If the specified size is larger than the current size, the extra area is filled with black pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -845,7 +863,8 @@
   
   <a id="Godot_Image_Decompress_" data-uid="Godot.Image.Decompress*"></a>
   <h4 id="Godot_Image_Decompress" data-uid="Godot.Image.Decompress">Decompress()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decompresses the image if it is compressed. Returns an error if decompress function is not available.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -870,7 +889,8 @@
   
   <a id="Godot_Image_DetectAlpha_" data-uid="Godot.Image.DetectAlpha*"></a>
   <h4 id="Godot_Image_DetectAlpha" data-uid="Godot.Image.DetectAlpha">DetectAlpha()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <a class="xref" href="Godot.Image.AlphaMode.html#Godot_Image_AlphaMode_Blend">Blend</a> if the image has data for alpha values. Returns <a class="xref" href="Godot.Image.AlphaMode.html#Godot_Image_AlphaMode_Bit">Bit</a> if all the alpha values are stored in a single bit. Returns <a class="xref" href="Godot.Image.AlphaMode.html#Godot_Image_AlphaMode_None">None</a> if no data for alpha values is found.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -895,7 +915,8 @@
   
   <a id="Godot_Image_ExpandX2Hq2x_" data-uid="Godot.Image.ExpandX2Hq2x*"></a>
   <h4 id="Godot_Image_ExpandX2Hq2x" data-uid="Godot.Image.ExpandX2Hq2x">ExpandX2Hq2x()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stretches the image and enlarges it by a factor of 2. No interpolation is done.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -905,7 +926,8 @@
   
   <a id="Godot_Image_Fill_" data-uid="Godot.Image.Fill*"></a>
   <h4 id="Godot_Image_Fill_Godot_Color_" data-uid="Godot.Image.Fill(Godot.Color)">Fill(Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fills the image with <code>color</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -932,7 +954,8 @@
   
   <a id="Godot_Image_FillRect_" data-uid="Godot.Image.FillRect*"></a>
   <h4 id="Godot_Image_FillRect_Godot_Rect2_Godot_Color_" data-uid="Godot.Image.FillRect(Godot.Rect2,Godot.Color)">FillRect(Rect2, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fills <code>rect</code> with <code>color</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -964,7 +987,8 @@
   
   <a id="Godot_Image_FixAlphaEdges_" data-uid="Godot.Image.FixAlphaEdges*"></a>
   <h4 id="Godot_Image_FixAlphaEdges" data-uid="Godot.Image.FixAlphaEdges">FixAlphaEdges()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blends low-alpha pixels with nearby pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -974,7 +998,8 @@
   
   <a id="Godot_Image_FlipX_" data-uid="Godot.Image.FlipX*"></a>
   <h4 id="Godot_Image_FlipX" data-uid="Godot.Image.FlipX">FlipX()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flips the image horizontally.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -984,7 +1009,8 @@
   
   <a id="Godot_Image_FlipY_" data-uid="Godot.Image.FlipY*"></a>
   <h4 id="Godot_Image_FlipY" data-uid="Godot.Image.FlipY">FlipY()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flips the image vertically.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -994,7 +1020,9 @@
   
   <a id="Godot_Image_GenerateMipmaps_" data-uid="Godot.Image.GenerateMipmaps*"></a>
   <h4 id="Godot_Image_GenerateMipmaps_System_Boolean_" data-uid="Godot.Image.GenerateMipmaps(System.Boolean)">GenerateMipmaps(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates mipmaps for the image. Mipmaps are precalculated lower-resolution copies of the image that are automatically used if the image needs to be scaled down when rendered. They help improve image quality and performance when rendering. This method returns an error if the image is compressed, in a custom format, or if the image&apos;s width/height is <code>0</code>.</p>
+<p>Note: Mipmap generation is done on the CPU, is single-threaded and is always done on the main thread. This means generating mipmaps will result in noticeable stuttering during gameplay, even if <a class="xref" href="Godot.Image.html#Godot_Image_GenerateMipmaps_System_Boolean_">GenerateMipmaps(Boolean)</a> is called from a <a class="xref" href="Godot.Thread.html">Thread</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1036,7 +1064,8 @@
   
   <a id="Godot_Image_GetData_" data-uid="Godot.Image.GetData*"></a>
   <h4 id="Godot_Image_GetData" data-uid="Godot.Image.GetData">GetData()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the image&apos;s raw data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1061,7 +1090,8 @@
   
   <a id="Godot_Image_GetFormat_" data-uid="Godot.Image.GetFormat*"></a>
   <h4 id="Godot_Image_GetFormat" data-uid="Godot.Image.GetFormat">GetFormat()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the image&apos;s format. See <a class="xref" href="Godot.Image.Format.html">Image.Format</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1086,7 +1116,8 @@
   
   <a id="Godot_Image_GetHeight_" data-uid="Godot.Image.GetHeight*"></a>
   <h4 id="Godot_Image_GetHeight" data-uid="Godot.Image.GetHeight">GetHeight()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the image&apos;s height.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1111,7 +1142,8 @@
   
   <a id="Godot_Image_GetMipmapOffset_" data-uid="Godot.Image.GetMipmapOffset*"></a>
   <h4 id="Godot_Image_GetMipmapOffset_System_Int32_" data-uid="Godot.Image.GetMipmapOffset(System.Int32)">GetMipmapOffset(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the offset where the image&apos;s mipmap with index <code>mipmap</code> is stored in the <code>data</code> dictionary.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1153,7 +1185,8 @@
   
   <a id="Godot_Image_GetPixel_" data-uid="Godot.Image.GetPixel*"></a>
   <h4 id="Godot_Image_GetPixel_System_Int32_System_Int32_" data-uid="Godot.Image.GetPixel(System.Int32,System.Int32)">GetPixel(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color of the pixel at <code>(x, y)</code> if the image is locked. If the image is unlocked, it always returns a <a class="xref" href="Godot.Color.html">Color</a> with the value <code>(0, 0, 0, 1.0)</code>. This is the same as <a class="xref" href="Godot.Image.html#Godot_Image_GetPixelv_Godot_Vector2_">GetPixelv(Vector2)</a>, but two integer arguments instead of a Vector2 argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1200,7 +1233,8 @@
   
   <a id="Godot_Image_GetPixelv_" data-uid="Godot.Image.GetPixelv*"></a>
   <h4 id="Godot_Image_GetPixelv_Godot_Vector2_" data-uid="Godot.Image.GetPixelv(Godot.Vector2)">GetPixelv(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color of the pixel at <code>src</code> if the image is locked. If the image is unlocked, it always returns a <a class="xref" href="Godot.Color.html">Color</a> with the value <code>(0, 0, 0, 1.0)</code>. This is the same as <a class="xref" href="Godot.Image.html#Godot_Image_GetPixel_System_Int32_System_Int32_">GetPixel(Int32, Int32)</a>, but with a Vector2 argument instead of two integer arguments.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1242,7 +1276,8 @@
   
   <a id="Godot_Image_GetRect_" data-uid="Godot.Image.GetRect*"></a>
   <h4 id="Godot_Image_GetRect_Godot_Rect2_" data-uid="Godot.Image.GetRect(Godot.Rect2)">GetRect(Rect2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a new image that is a copy of the image&apos;s area specified with <code>rect</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1284,7 +1319,8 @@
   
   <a id="Godot_Image_GetSize_" data-uid="Godot.Image.GetSize*"></a>
   <h4 id="Godot_Image_GetSize" data-uid="Godot.Image.GetSize">GetSize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the image&apos;s size (width and height).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1309,7 +1345,8 @@
   
   <a id="Godot_Image_GetUsedRect_" data-uid="Godot.Image.GetUsedRect*"></a>
   <h4 id="Godot_Image_GetUsedRect" data-uid="Godot.Image.GetUsedRect">GetUsedRect()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.Rect2.html">Rect2</a> enclosing the visible portion of the image, considering each pixel with a non-zero alpha channel as visible.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1334,7 +1371,8 @@
   
   <a id="Godot_Image_GetWidth_" data-uid="Godot.Image.GetWidth*"></a>
   <h4 id="Godot_Image_GetWidth" data-uid="Godot.Image.GetWidth">GetWidth()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the image&apos;s width.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1359,7 +1397,8 @@
   
   <a id="Godot_Image_HasMipmaps_" data-uid="Godot.Image.HasMipmaps*"></a>
   <h4 id="Godot_Image_HasMipmaps" data-uid="Godot.Image.HasMipmaps">HasMipmaps()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the image has generated mipmaps.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1384,7 +1423,8 @@
   
   <a id="Godot_Image_IsCompressed_" data-uid="Godot.Image.IsCompressed*"></a>
   <h4 id="Godot_Image_IsCompressed" data-uid="Godot.Image.IsCompressed">IsCompressed()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the image is compressed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1409,7 +1449,8 @@
   
   <a id="Godot_Image_IsEmpty_" data-uid="Godot.Image.IsEmpty*"></a>
   <h4 id="Godot_Image_IsEmpty" data-uid="Godot.Image.IsEmpty">IsEmpty()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the image has no data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1434,7 +1475,8 @@
   
   <a id="Godot_Image_IsInvisible_" data-uid="Godot.Image.IsInvisible*"></a>
   <h4 id="Godot_Image_IsInvisible" data-uid="Godot.Image.IsInvisible">IsInvisible()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if all the image&apos;s pixels have an alpha value of 0. Returns <code>false</code> if any pixel has an alpha value higher than 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1459,7 +1501,10 @@
   
   <a id="Godot_Image_Load_" data-uid="Godot.Image.Load*"></a>
   <h4 id="Godot_Image_Load_System_String_" data-uid="Godot.Image.Load(System.String)">Load(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads an image from file <code>path</code>. See <a href="$DOCS_URL/tutorials/assets_pipeline/importing_images.html#supported-image-formats">Supported image formats</a> for a list of supported image formats and limitations.</p>
+<p>Warning: This method should only be used in the editor or in cases when you need to load external images at run-time, such as images located at the <code>user://</code> directory, and may not work in exported projects.</p>
+<p>See also <a class="xref" href="Godot.ImageTexture.html">ImageTexture</a> description for usage examples.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1501,7 +1546,9 @@
   
   <a id="Godot_Image_LoadBmpFromBuffer_" data-uid="Godot.Image.LoadBmpFromBuffer*"></a>
   <h4 id="Godot_Image_LoadBmpFromBuffer_System_Byte___" data-uid="Godot.Image.LoadBmpFromBuffer(System.Byte[])">LoadBmpFromBuffer(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads an image from the binary contents of a BMP file.</p>
+<p>Note: Godot&apos;s BMP module doesn&apos;t support 16-bit per pixel images. Only 1-bit, 4-bit, 8-bit, 24-bit, and 32-bit per pixel images are supported.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1543,7 +1590,8 @@
   
   <a id="Godot_Image_LoadJpgFromBuffer_" data-uid="Godot.Image.LoadJpgFromBuffer*"></a>
   <h4 id="Godot_Image_LoadJpgFromBuffer_System_Byte___" data-uid="Godot.Image.LoadJpgFromBuffer(System.Byte[])">LoadJpgFromBuffer(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads an image from the binary contents of a JPEG file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1585,7 +1633,8 @@
   
   <a id="Godot_Image_LoadPngFromBuffer_" data-uid="Godot.Image.LoadPngFromBuffer*"></a>
   <h4 id="Godot_Image_LoadPngFromBuffer_System_Byte___" data-uid="Godot.Image.LoadPngFromBuffer(System.Byte[])">LoadPngFromBuffer(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads an image from the binary contents of a PNG file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1627,7 +1676,8 @@
   
   <a id="Godot_Image_LoadTgaFromBuffer_" data-uid="Godot.Image.LoadTgaFromBuffer*"></a>
   <h4 id="Godot_Image_LoadTgaFromBuffer_System_Byte___" data-uid="Godot.Image.LoadTgaFromBuffer(System.Byte[])">LoadTgaFromBuffer(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads an image from the binary contents of a TGA file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1669,7 +1719,8 @@
   
   <a id="Godot_Image_LoadWebpFromBuffer_" data-uid="Godot.Image.LoadWebpFromBuffer*"></a>
   <h4 id="Godot_Image_LoadWebpFromBuffer_System_Byte___" data-uid="Godot.Image.LoadWebpFromBuffer(System.Byte[])">LoadWebpFromBuffer(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads an image from the binary contents of a WebP file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1711,7 +1762,8 @@
   
   <a id="Godot_Image_Lock_" data-uid="Godot.Image.Lock*"></a>
   <h4 id="Godot_Image_Lock" data-uid="Godot.Image.Lock">Lock()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Locks the data for reading and writing access. Sends an error to the console if the image is not locked when reading or writing a pixel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1721,7 +1773,8 @@
   
   <a id="Godot_Image_NormalmapToXy_" data-uid="Godot.Image.NormalmapToXy*"></a>
   <h4 id="Godot_Image_NormalmapToXy" data-uid="Godot.Image.NormalmapToXy">NormalmapToXy()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the image&apos;s data to represent coordinates on a 3D plane. This is used when the image represents a normalmap. A normalmap can add lots of detail to a 3D surface without increasing the polygon count.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1731,7 +1784,8 @@
   
   <a id="Godot_Image_PremultiplyAlpha_" data-uid="Godot.Image.PremultiplyAlpha*"></a>
   <h4 id="Godot_Image_PremultiplyAlpha" data-uid="Godot.Image.PremultiplyAlpha">PremultiplyAlpha()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Multiplies color values with alpha values. Resulting color values for a pixel are <code>(color * alpha)/256</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1741,7 +1795,8 @@
   
   <a id="Godot_Image_Resize_" data-uid="Godot.Image.Resize*"></a>
   <h4 id="Godot_Image_Resize_System_Int32_System_Int32_Godot_Image_Interpolation_" data-uid="Godot.Image.Resize(System.Int32,System.Int32,Godot.Image.Interpolation)">Resize(Int32, Int32, Image.Interpolation)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resizes the image to the given <code>width</code> and <code>height</code>. New pixels are calculated using the <code>interpolation</code> mode defined via <a class="xref" href="Godot.Image.Interpolation.html">Image.Interpolation</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1778,7 +1833,8 @@
   
   <a id="Godot_Image_ResizeToPo2_" data-uid="Godot.Image.ResizeToPo2*"></a>
   <h4 id="Godot_Image_ResizeToPo2_System_Boolean_Godot_Image_Interpolation_" data-uid="Godot.Image.ResizeToPo2(System.Boolean,Godot.Image.Interpolation)">ResizeToPo2(Boolean, Image.Interpolation)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resizes the image to the nearest power of 2 for the width and height. If <code>square</code> is <code>true</code> then set width and height to be the same. New pixels are calculated using the <code>interpolation</code> mode defined via <a class="xref" href="Godot.Image.Interpolation.html">Image.Interpolation</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1810,7 +1866,8 @@
   
   <a id="Godot_Image_RgbeToSrgb_" data-uid="Godot.Image.RgbeToSrgb*"></a>
   <h4 id="Godot_Image_RgbeToSrgb" data-uid="Godot.Image.RgbeToSrgb">RgbeToSrgb()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a standard RGBE (Red Green Blue Exponent) image to an sRGB image.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1835,7 +1892,9 @@
   
   <a id="Godot_Image_SaveExr_" data-uid="Godot.Image.SaveExr*"></a>
   <h4 id="Godot_Image_SaveExr_System_String_System_Boolean_" data-uid="Godot.Image.SaveExr(System.String,System.Boolean)">SaveExr(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves the image as an EXR file to <code>path</code>. If <code>grayscale</code> is <code>true</code> and the image has only one channel, it will be saved explicitly as monochrome rather than one red channel. This function will return <code>ERR_UNAVAILABLE</code> if Godot was compiled without the TinyEXR module.</p>
+<p>Note: The TinyEXR module is disabled in non-editor builds, which means <a class="xref" href="Godot.Image.html#Godot_Image_SaveExr_System_String_System_Boolean_">SaveExr(String, Boolean)</a> will return <code>ERR_UNAVAILABLE</code> when it is called from an exported project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1882,7 +1941,8 @@
   
   <a id="Godot_Image_SavePng_" data-uid="Godot.Image.SavePng*"></a>
   <h4 id="Godot_Image_SavePng_System_String_" data-uid="Godot.Image.SavePng(System.String)">SavePng(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves the image as a PNG file to <code>path</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1949,7 +2009,14 @@
   
   <a id="Godot_Image_SetPixel_" data-uid="Godot.Image.SetPixel*"></a>
   <h4 id="Godot_Image_SetPixel_System_Int32_System_Int32_Godot_Color_" data-uid="Godot.Image.SetPixel(System.Int32,System.Int32,Godot.Color)">SetPixel(Int32, Int32, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Color.html">Color</a> of the pixel at <code>(x, y)</code> if the image is locked. Example:</p>
+<p><pre><code>var img = Image.new()
+img.create(img_width, img_height, false, Image.FORMAT_RGBA8)
+img.lock()
+img.set_pixel(x, y, color) # Works
+img.unlock()
+img.set_pixel(x, y, color) # Does not have an effect</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1986,7 +2053,14 @@
   
   <a id="Godot_Image_SetPixelv_" data-uid="Godot.Image.SetPixelv*"></a>
   <h4 id="Godot_Image_SetPixelv_Godot_Vector2_Godot_Color_" data-uid="Godot.Image.SetPixelv(Godot.Vector2,Godot.Color)">SetPixelv(Vector2, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Color.html">Color</a> of the pixel at <code>(dst.x, dst.y)</code> if the image is locked. Note that the <code>dst</code> values must be integers. Example:</p>
+<p><pre><code>var img = Image.new()
+img.create(img_width, img_height, false, Image.FORMAT_RGBA8)
+img.lock()
+img.set_pixelv(Vector2(x, y), color) # Works
+img.unlock()
+img.set_pixelv(Vector2(x, y), color) # Does not have an effect</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2018,7 +2092,8 @@
   
   <a id="Godot_Image_ShrinkX2_" data-uid="Godot.Image.ShrinkX2*"></a>
   <h4 id="Godot_Image_ShrinkX2" data-uid="Godot.Image.ShrinkX2">ShrinkX2()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Shrinks the image by a factor of 2.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2028,7 +2103,8 @@
   
   <a id="Godot_Image_SrgbToLinear_" data-uid="Godot.Image.SrgbToLinear*"></a>
   <h4 id="Godot_Image_SrgbToLinear" data-uid="Godot.Image.SrgbToLinear">SrgbToLinear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the raw data from the sRGB colorspace to a linear scale.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2038,7 +2114,8 @@
   
   <a id="Godot_Image_Unlock_" data-uid="Godot.Image.Unlock*"></a>
   <h4 id="Godot_Image_Unlock" data-uid="Godot.Image.Unlock">Unlock()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unlocks the data and prevents changes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

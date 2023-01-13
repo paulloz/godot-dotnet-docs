@@ -83,7 +83,24 @@
   
   <h1 id="Godot_TextureArray" data-uid="Godot.TextureArray" class="text-break">Class TextureArray
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.TextureArray.html">TextureArray</a>s store an array of <a class="xref" href="Godot.Image.html">Image</a>s in a single <a class="xref" href="Godot.Texture.html">Texture</a> primitive. Each layer of the texture array has its own mipmap chain. This makes it is a good alternative to texture atlases. See also <a class="xref" href="Godot.Texture3D.html">Texture3D</a>.</p>
+<p><a class="xref" href="Godot.TextureArray.html">TextureArray</a>s must be displayed using shaders. After importing your file as a <a class="xref" href="Godot.TextureArray.html">TextureArray</a> and setting the appropriate Horizontal and Vertical Slices, display it by setting it as a uniform to a shader, for example (2D):</p>
+<p><pre><code>shader_type canvas_item;
+<p>uniform sampler2DArray tex;
+uniform int index;</p>
+<p>void fragment() {
+COLOR = texture(tex, vec3(UV.x, UV.y, float(index)));
+}</code></pre></p><p>
+<p>Set the integer uniform &quot;index&quot; to show a particular part of the texture as defined by the Horizontal and Vertical Slices in the importer.</p>
+<p>Note: When sampling an albedo texture from a texture array in 3D, the sRGB -> linear conversion hint (<code>hint_albedo</code>) should be used to prevent colors from looking washed out:</p>
+<p><pre><code>shader_type spatial;
+<p>uniform sampler2DArray tex : hint_albedo;
+uniform int index;</p>
+<p>void fragment() {
+ALBEDO = texture(tex, vec3(UV.x, UV.y, float(index)));
+}</code></pre></p></p>
+<p>Note: <a class="xref" href="Godot.TextureArray.html">TextureArray</a>s can only be sampled in shaders in the GLES3 backend. In GLES2, their data can be accessed via scripting, but there is no way to render them in a hardware-accelerated manner.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -380,7 +397,8 @@
   
   <a id="Godot_TextureArray_Create_" data-uid="Godot.TextureArray.Create*"></a>
   <h4 id="Godot_TextureArray_Create_System_UInt32_System_UInt32_System_UInt32_Godot_Image_Format_System_UInt32_" data-uid="Godot.TextureArray.Create(System.UInt32,System.UInt32,System.UInt32,Godot.Image.Format,System.UInt32)">Create(UInt32, UInt32, UInt32, Image.Format, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates the TextureArray with specified <code>width</code>, <code>height</code>, and <code>depth</code>. See <a class="xref" href="Godot.Image.Format.html">Image.Format</a> for <code>format</code> options. See <a class="xref" href="Godot.TextureLayered.FlagsEnum.html">TextureLayered.FlagsEnum</a> enumerator for <code>flags</code> options.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

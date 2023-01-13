@@ -83,7 +83,9 @@
   
   <h1 id="Godot_PopupMenu" data-uid="Godot.PopupMenu" class="text-break">Class PopupMenu
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> is a <a class="xref" href="Godot.Control.html">Control</a> that displays a list of options. They are popular in toolbars or context menus.</p>
+<p>Incremental search: Like <a class="xref" href="Godot.ItemList.html">ItemList</a> and <a class="xref" href="Godot.Tree.html">Tree</a>, <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> supports searching within the list while the control is focused. Press a key that matches the first letter of an item&apos;s name to select the first item starting with the given letter. After that point, there are two ways to perform incremental search: 1) Press the same key again before the timeout duration to select the next item starting with the same letter. 2) Press letter keys that match the rest of the word before the timeout duration to match to select the item in question directly. Both of these actions will be reset to the beginning of the list if the timeout duration has passed since the last keystroke was registered. You can adjust the timeout duration by changing .</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1497,7 +1499,8 @@
   
   <a id="Godot_PopupMenu_AllowSearch_" data-uid="Godot.PopupMenu.AllowSearch*"></a>
   <h4 id="Godot_PopupMenu_AllowSearch" data-uid="Godot.PopupMenu.AllowSearch">AllowSearch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, allows navigating <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> with letter keys.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1522,7 +1525,8 @@
   
   <a id="Godot_PopupMenu_HideOnCheckableItemSelection_" data-uid="Godot.PopupMenu.HideOnCheckableItemSelection*"></a>
   <h4 id="Godot_PopupMenu_HideOnCheckableItemSelection" data-uid="Godot.PopupMenu.HideOnCheckableItemSelection">HideOnCheckableItemSelection</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, hides the <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> when a checkbox or radio button is selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1547,7 +1551,8 @@
   
   <a id="Godot_PopupMenu_HideOnItemSelection_" data-uid="Godot.PopupMenu.HideOnItemSelection*"></a>
   <h4 id="Godot_PopupMenu_HideOnItemSelection" data-uid="Godot.PopupMenu.HideOnItemSelection">HideOnItemSelection</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, hides the <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> when an item is selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1572,7 +1577,8 @@
   
   <a id="Godot_PopupMenu_HideOnStateItemSelection_" data-uid="Godot.PopupMenu.HideOnStateItemSelection*"></a>
   <h4 id="Godot_PopupMenu_HideOnStateItemSelection" data-uid="Godot.PopupMenu.HideOnStateItemSelection">HideOnStateItemSelection</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, hides the <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> when a state item is selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1622,7 +1628,8 @@
   
   <a id="Godot_PopupMenu_SubmenuPopupDelay_" data-uid="Godot.PopupMenu.SubmenuPopupDelay*"></a>
   <h4 id="Godot_PopupMenu_SubmenuPopupDelay" data-uid="Godot.PopupMenu.SubmenuPopupDelay">SubmenuPopupDelay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the delay time in seconds for the submenu item to popup on mouse hovering. If the popup menu is added as a child of another (acting as a submenu), it will inherit the delay time of the parent menu item.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1649,7 +1656,10 @@
   
   <a id="Godot_PopupMenu_AddCheckItem_" data-uid="Godot.PopupMenu.AddCheckItem*"></a>
   <h4 id="Godot_PopupMenu_AddCheckItem_System_String_System_Int32_System_UInt32_" data-uid="Godot.PopupMenu.AddCheckItem(System.String,System.Int32,System.UInt32)">AddCheckItem(String, Int32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new checkable item with text <code>label</code>.</p>
+<p>An <code>id</code> can optionally be provided, as well as an accelerator (<code>accel</code>). If no <code>id</code> is provided, one will be created from the index. If no <code>accel</code> is provided then the default <code>0</code> will be assigned to it. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_GetItemAccelerator_System_Int32_">GetItemAccelerator(Int32)</a> for more info on accelerators.</p>
+<p>Note: Checkable items just display a checkmark, but don&apos;t have any built-in checking behavior and must be checked/unchecked manually. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_SetItemChecked_System_Int32_System_Boolean_">SetItemChecked(Int32, Boolean)</a> for more info on how to control it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1686,7 +1696,10 @@
   
   <a id="Godot_PopupMenu_AddCheckShortcut_" data-uid="Godot.PopupMenu.AddCheckShortcut*"></a>
   <h4 id="Godot_PopupMenu_AddCheckShortcut_Godot_ShortCut_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.AddCheckShortcut(Godot.ShortCut,System.Int32,System.Boolean)">AddCheckShortcut(ShortCut, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new checkable item and assigns the specified <a class="xref" href="Godot.ShortCut.html">ShortCut</a> to it. Sets the label of the checkbox to the <a class="xref" href="Godot.ShortCut.html">ShortCut</a>&apos;s name.</p>
+<p>An <code>id</code> can optionally be provided. If no <code>id</code> is provided, one will be created from the index.</p>
+<p>Note: Checkable items just display a checkmark, but don&apos;t have any built-in checking behavior and must be checked/unchecked manually. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_SetItemChecked_System_Int32_System_Boolean_">SetItemChecked(Int32, Boolean)</a> for more info on how to control it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1723,7 +1736,10 @@
   
   <a id="Godot_PopupMenu_AddIconCheckItem_" data-uid="Godot.PopupMenu.AddIconCheckItem*"></a>
   <h4 id="Godot_PopupMenu_AddIconCheckItem_Godot_Texture_System_String_System_Int32_System_UInt32_" data-uid="Godot.PopupMenu.AddIconCheckItem(Godot.Texture,System.String,System.Int32,System.UInt32)">AddIconCheckItem(Texture, String, Int32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new checkable item with text <code>label</code> and icon <code>texture</code>.</p>
+<p>An <code>id</code> can optionally be provided, as well as an accelerator (<code>accel</code>). If no <code>id</code> is provided, one will be created from the index. If no <code>accel</code> is provided then the default <code>0</code> will be assigned to it. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_GetItemAccelerator_System_Int32_">GetItemAccelerator(Int32)</a> for more info on accelerators.</p>
+<p>Note: Checkable items just display a checkmark, but don&apos;t have any built-in checking behavior and must be checked/unchecked manually. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_SetItemChecked_System_Int32_System_Boolean_">SetItemChecked(Int32, Boolean)</a> for more info on how to control it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1765,7 +1781,10 @@
   
   <a id="Godot_PopupMenu_AddIconCheckShortcut_" data-uid="Godot.PopupMenu.AddIconCheckShortcut*"></a>
   <h4 id="Godot_PopupMenu_AddIconCheckShortcut_Godot_Texture_Godot_ShortCut_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.AddIconCheckShortcut(Godot.Texture,Godot.ShortCut,System.Int32,System.Boolean)">AddIconCheckShortcut(Texture, ShortCut, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new checkable item and assigns the specified <a class="xref" href="Godot.ShortCut.html">ShortCut</a> and icon <code>texture</code> to it. Sets the label of the checkbox to the <a class="xref" href="Godot.ShortCut.html">ShortCut</a>&apos;s name.</p>
+<p>An <code>id</code> can optionally be provided. If no <code>id</code> is provided, one will be created from the index.</p>
+<p>Note: Checkable items just display a checkmark, but don&apos;t have any built-in checking behavior and must be checked/unchecked manually. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_SetItemChecked_System_Int32_System_Boolean_">SetItemChecked(Int32, Boolean)</a> for more info on how to control it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1807,7 +1826,9 @@
   
   <a id="Godot_PopupMenu_AddIconItem_" data-uid="Godot.PopupMenu.AddIconItem*"></a>
   <h4 id="Godot_PopupMenu_AddIconItem_Godot_Texture_System_String_System_Int32_System_UInt32_" data-uid="Godot.PopupMenu.AddIconItem(Godot.Texture,System.String,System.Int32,System.UInt32)">AddIconItem(Texture, String, Int32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new item with text <code>label</code> and icon <code>texture</code>.</p>
+<p>An <code>id</code> can optionally be provided, as well as an accelerator (<code>accel</code>). If no <code>id</code> is provided, one will be created from the index. If no <code>accel</code> is provided then the default <code>0</code> will be assigned to it. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_GetItemAccelerator_System_Int32_">GetItemAccelerator(Int32)</a> for more info on accelerators.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1849,7 +1870,8 @@
   
   <a id="Godot_PopupMenu_AddIconRadioCheckItem_" data-uid="Godot.PopupMenu.AddIconRadioCheckItem*"></a>
   <h4 id="Godot_PopupMenu_AddIconRadioCheckItem_Godot_Texture_System_String_System_Int32_System_UInt32_" data-uid="Godot.PopupMenu.AddIconRadioCheckItem(Godot.Texture,System.String,System.Int32,System.UInt32)">AddIconRadioCheckItem(Texture, String, Int32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Same as <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_AddIconCheckItem_Godot_Texture_System_String_System_Int32_System_UInt32_">AddIconCheckItem(Texture, String, Int32, UInt32)</a>, but uses a radio check button.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1891,7 +1913,8 @@
   
   <a id="Godot_PopupMenu_AddIconRadioCheckShortcut_" data-uid="Godot.PopupMenu.AddIconRadioCheckShortcut*"></a>
   <h4 id="Godot_PopupMenu_AddIconRadioCheckShortcut_Godot_Texture_Godot_ShortCut_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.AddIconRadioCheckShortcut(Godot.Texture,Godot.ShortCut,System.Int32,System.Boolean)">AddIconRadioCheckShortcut(Texture, ShortCut, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Same as <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_AddIconCheckShortcut_Godot_Texture_Godot_ShortCut_System_Int32_System_Boolean_">AddIconCheckShortcut(Texture, ShortCut, Int32, Boolean)</a>, but uses a radio check button.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1933,7 +1956,9 @@
   
   <a id="Godot_PopupMenu_AddIconShortcut_" data-uid="Godot.PopupMenu.AddIconShortcut*"></a>
   <h4 id="Godot_PopupMenu_AddIconShortcut_Godot_Texture_Godot_ShortCut_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.AddIconShortcut(Godot.Texture,Godot.ShortCut,System.Int32,System.Boolean)">AddIconShortcut(Texture, ShortCut, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new item and assigns the specified <a class="xref" href="Godot.ShortCut.html">ShortCut</a> and icon <code>texture</code> to it. Sets the label of the checkbox to the <a class="xref" href="Godot.ShortCut.html">ShortCut</a>&apos;s name.</p>
+<p>An <code>id</code> can optionally be provided. If no <code>id</code> is provided, one will be created from the index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1975,7 +2000,9 @@
   
   <a id="Godot_PopupMenu_AddItem_" data-uid="Godot.PopupMenu.AddItem*"></a>
   <h4 id="Godot_PopupMenu_AddItem_System_String_System_Int32_System_UInt32_" data-uid="Godot.PopupMenu.AddItem(System.String,System.Int32,System.UInt32)">AddItem(String, Int32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new item with text <code>label</code>.</p>
+<p>An <code>id</code> can optionally be provided, as well as an accelerator (<code>accel</code>). If no <code>id</code> is provided, one will be created from the index. If no <code>accel</code> is provided then the default <code>0</code> will be assigned to it. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_GetItemAccelerator_System_Int32_">GetItemAccelerator(Int32)</a> for more info on accelerators.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2012,7 +2039,10 @@
   
   <a id="Godot_PopupMenu_AddMultistateItem_" data-uid="Godot.PopupMenu.AddMultistateItem*"></a>
   <h4 id="Godot_PopupMenu_AddMultistateItem_System_String_System_Int32_System_Int32_System_Int32_System_UInt32_" data-uid="Godot.PopupMenu.AddMultistateItem(System.String,System.Int32,System.Int32,System.Int32,System.UInt32)">AddMultistateItem(String, Int32, Int32, Int32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new multistate item with text <code>label</code>.</p>
+<p>Contrarily to normal binary items, multistate items can have more than two states, as defined by <code>max_states</code>. Each press or activate of the item will increase the state by one. The default value is defined by <code>default_state</code>.</p>
+<p>An <code>id</code> can optionally be provided, as well as an accelerator (<code>accel</code>). If no <code>id</code> is provided, one will be created from the index. If no <code>accel</code> is provided then the default <code>0</code> will be assigned to it. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_GetItemAccelerator_System_Int32_">GetItemAccelerator(Int32)</a> for more info on accelerators.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2059,7 +2089,10 @@
   
   <a id="Godot_PopupMenu_AddRadioCheckItem_" data-uid="Godot.PopupMenu.AddRadioCheckItem*"></a>
   <h4 id="Godot_PopupMenu_AddRadioCheckItem_System_String_System_Int32_System_UInt32_" data-uid="Godot.PopupMenu.AddRadioCheckItem(System.String,System.Int32,System.UInt32)">AddRadioCheckItem(String, Int32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new radio check button with text <code>label</code>.</p>
+<p>An <code>id</code> can optionally be provided, as well as an accelerator (<code>accel</code>). If no <code>id</code> is provided, one will be created from the index. If no <code>accel</code> is provided then the default <code>0</code> will be assigned to it. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_GetItemAccelerator_System_Int32_">GetItemAccelerator(Int32)</a> for more info on accelerators.</p>
+<p>Note: Checkable items just display a checkmark, but don&apos;t have any built-in checking behavior and must be checked/unchecked manually. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_SetItemChecked_System_Int32_System_Boolean_">SetItemChecked(Int32, Boolean)</a> for more info on how to control it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2096,7 +2129,10 @@
   
   <a id="Godot_PopupMenu_AddRadioCheckShortcut_" data-uid="Godot.PopupMenu.AddRadioCheckShortcut*"></a>
   <h4 id="Godot_PopupMenu_AddRadioCheckShortcut_Godot_ShortCut_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.AddRadioCheckShortcut(Godot.ShortCut,System.Int32,System.Boolean)">AddRadioCheckShortcut(ShortCut, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new radio check button and assigns a <a class="xref" href="Godot.ShortCut.html">ShortCut</a> to it. Sets the label of the checkbox to the <a class="xref" href="Godot.ShortCut.html">ShortCut</a>&apos;s name.</p>
+<p>An <code>id</code> can optionally be provided. If no <code>id</code> is provided, one will be created from the index.</p>
+<p>Note: Checkable items just display a checkmark, but don&apos;t have any built-in checking behavior and must be checked/unchecked manually. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_SetItemChecked_System_Int32_System_Boolean_">SetItemChecked(Int32, Boolean)</a> for more info on how to control it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2133,7 +2169,9 @@
   
   <a id="Godot_PopupMenu_AddSeparator_" data-uid="Godot.PopupMenu.AddSeparator*"></a>
   <h4 id="Godot_PopupMenu_AddSeparator_System_String_System_Int32_" data-uid="Godot.PopupMenu.AddSeparator(System.String,System.Int32)">AddSeparator(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a separator between items. Separators also occupy an index, which you can set by using the <code>id</code> parameter.</p>
+<p>A <code>label</code> can optionally be provided, which will appear at the center of the separator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2165,7 +2203,9 @@
   
   <a id="Godot_PopupMenu_AddShortcut_" data-uid="Godot.PopupMenu.AddShortcut*"></a>
   <h4 id="Godot_PopupMenu_AddShortcut_Godot_ShortCut_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.AddShortcut(Godot.ShortCut,System.Int32,System.Boolean)">AddShortcut(ShortCut, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Godot.ShortCut.html">ShortCut</a>.</p>
+<p>An <code>id</code> can optionally be provided. If no <code>id</code> is provided, one will be created from the index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2202,7 +2242,9 @@
   
   <a id="Godot_PopupMenu_AddSubmenuItem_" data-uid="Godot.PopupMenu.AddSubmenuItem*"></a>
   <h4 id="Godot_PopupMenu_AddSubmenuItem_System_String_System_String_System_Int32_" data-uid="Godot.PopupMenu.AddSubmenuItem(System.String,System.String,System.Int32)">AddSubmenuItem(String, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an item that will act as a submenu of the parent <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> node when clicked. The <code>submenu</code> argument is the name of the child <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> node that will be shown when the item is clicked.</p>
+<p>An <code>id</code> can optionally be provided. If no <code>id</code> is provided, one will be created from the index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2239,7 +2281,8 @@
   
   <a id="Godot_PopupMenu_Clear_" data-uid="Godot.PopupMenu.Clear*"></a>
   <h4 id="Godot_PopupMenu_Clear" data-uid="Godot.PopupMenu.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all items from the <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2274,7 +2317,8 @@
   
   <a id="Godot_PopupMenu_GetCurrentIndex_" data-uid="Godot.PopupMenu.GetCurrentIndex*"></a>
   <h4 id="Godot_PopupMenu_GetCurrentIndex" data-uid="Godot.PopupMenu.GetCurrentIndex">GetCurrentIndex()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the index of the currently focused item. Returns <code>-1</code> if no item is focused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2299,7 +2343,8 @@
   
   <a id="Godot_PopupMenu_GetItemAccelerator_" data-uid="Godot.PopupMenu.GetItemAccelerator*"></a>
   <h4 id="Godot_PopupMenu_GetItemAccelerator_System_Int32_" data-uid="Godot.PopupMenu.GetItemAccelerator(System.Int32)">GetItemAccelerator(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the accelerator of the item at index <code>idx</code>. Accelerators are special combinations of keys that activate the item, no matter which control is focused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2341,7 +2386,8 @@
   
   <a id="Godot_PopupMenu_GetItemCount_" data-uid="Godot.PopupMenu.GetItemCount*"></a>
   <h4 id="Godot_PopupMenu_GetItemCount" data-uid="Godot.PopupMenu.GetItemCount">GetItemCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of items in the <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2366,7 +2412,8 @@
   
   <a id="Godot_PopupMenu_GetItemIcon_" data-uid="Godot.PopupMenu.GetItemIcon*"></a>
   <h4 id="Godot_PopupMenu_GetItemIcon_System_Int32_" data-uid="Godot.PopupMenu.GetItemIcon(System.Int32)">GetItemIcon(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the icon of the item at index <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2408,7 +2455,8 @@
   
   <a id="Godot_PopupMenu_GetItemId_" data-uid="Godot.PopupMenu.GetItemId*"></a>
   <h4 id="Godot_PopupMenu_GetItemId_System_Int32_" data-uid="Godot.PopupMenu.GetItemId(System.Int32)">GetItemId(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the id of the item at index <code>idx</code>. <code>id</code> can be manually assigned, while index can not.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2450,7 +2498,8 @@
   
   <a id="Godot_PopupMenu_GetItemIndex_" data-uid="Godot.PopupMenu.GetItemIndex*"></a>
   <h4 id="Godot_PopupMenu_GetItemIndex_System_Int32_" data-uid="Godot.PopupMenu.GetItemIndex(System.Int32)">GetItemIndex(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the index of the item containing the specified <code>id</code>. Index is automatically assigned to each item by the engine. Index can not be set manually.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2492,7 +2541,8 @@
   
   <a id="Godot_PopupMenu_GetItemMetadata_" data-uid="Godot.PopupMenu.GetItemMetadata*"></a>
   <h4 id="Godot_PopupMenu_GetItemMetadata_System_Int32_" data-uid="Godot.PopupMenu.GetItemMetadata(System.Int32)">GetItemMetadata(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the metadata of the specified item, which might be of any type. You can set it with <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_SetItemMetadata_System_Int32_System_Object_">SetItemMetadata(Int32, Object)</a>, which provides a simple way of assigning context data to items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2534,7 +2584,8 @@
   
   <a id="Godot_PopupMenu_GetItemShortcut_" data-uid="Godot.PopupMenu.GetItemShortcut*"></a>
   <h4 id="Godot_PopupMenu_GetItemShortcut_System_Int32_" data-uid="Godot.PopupMenu.GetItemShortcut(System.Int32)">GetItemShortcut(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.ShortCut.html">ShortCut</a> associated with the specified <code>idx</code> item.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2576,7 +2627,8 @@
   
   <a id="Godot_PopupMenu_GetItemSubmenu_" data-uid="Godot.PopupMenu.GetItemSubmenu*"></a>
   <h4 id="Godot_PopupMenu_GetItemSubmenu_System_Int32_" data-uid="Godot.PopupMenu.GetItemSubmenu(System.Int32)">GetItemSubmenu(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the submenu name of the item at index <code>idx</code>. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_AddSubmenuItem_System_String_System_String_System_Int32_">AddSubmenuItem(String, String, Int32)</a> for more info on how to add a submenu.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2618,7 +2670,8 @@
   
   <a id="Godot_PopupMenu_GetItemText_" data-uid="Godot.PopupMenu.GetItemText*"></a>
   <h4 id="Godot_PopupMenu_GetItemText_System_Int32_" data-uid="Godot.PopupMenu.GetItemText(System.Int32)">GetItemText(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the text of the item at index <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2660,7 +2713,8 @@
   
   <a id="Godot_PopupMenu_GetItemTooltip_" data-uid="Godot.PopupMenu.GetItemTooltip*"></a>
   <h4 id="Godot_PopupMenu_GetItemTooltip_System_Int32_" data-uid="Godot.PopupMenu.GetItemTooltip(System.Int32)">GetItemTooltip(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tooltip associated with the specified index <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2802,7 +2856,8 @@
   
   <a id="Godot_PopupMenu_IsHideOnWindowLoseFocus_" data-uid="Godot.PopupMenu.IsHideOnWindowLoseFocus*"></a>
   <h4 id="Godot_PopupMenu_IsHideOnWindowLoseFocus" data-uid="Godot.PopupMenu.IsHideOnWindowLoseFocus">IsHideOnWindowLoseFocus()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the popup will be hidden when the window loses focus or not.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2827,7 +2882,9 @@
   
   <a id="Godot_PopupMenu_IsItemCheckable_" data-uid="Godot.PopupMenu.IsItemCheckable*"></a>
   <h4 id="Godot_PopupMenu_IsItemCheckable_System_Int32_" data-uid="Godot.PopupMenu.IsItemCheckable(System.Int32)">IsItemCheckable(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the item at index <code>idx</code> is checkable in some way, i.e. if it has a checkbox or radio button.</p>
+<p>Note: Checkable items just display a checkmark or radio button, but don&apos;t have any built-in checking behavior and must be checked/unchecked manually.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2869,7 +2926,8 @@
   
   <a id="Godot_PopupMenu_IsItemChecked_" data-uid="Godot.PopupMenu.IsItemChecked*"></a>
   <h4 id="Godot_PopupMenu_IsItemChecked_System_Int32_" data-uid="Godot.PopupMenu.IsItemChecked(System.Int32)">IsItemChecked(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the item at index <code>idx</code> is checked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2911,7 +2969,9 @@
   
   <a id="Godot_PopupMenu_IsItemDisabled_" data-uid="Godot.PopupMenu.IsItemDisabled*"></a>
   <h4 id="Godot_PopupMenu_IsItemDisabled_System_Int32_" data-uid="Godot.PopupMenu.IsItemDisabled(System.Int32)">IsItemDisabled(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the item at index <code>idx</code> is disabled. When it is disabled it can&apos;t be selected, or its action invoked.</p>
+<p>See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_SetItemDisabled_System_Int32_System_Boolean_">SetItemDisabled(Int32, Boolean)</a> for more info on how to disable an item.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2953,7 +3013,9 @@
   
   <a id="Godot_PopupMenu_IsItemRadioCheckable_" data-uid="Godot.PopupMenu.IsItemRadioCheckable*"></a>
   <h4 id="Godot_PopupMenu_IsItemRadioCheckable_System_Int32_" data-uid="Godot.PopupMenu.IsItemRadioCheckable(System.Int32)">IsItemRadioCheckable(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the item at index <code>idx</code> has radio button-style checkability.</p>
+<p>Note: This is purely cosmetic; you must add the logic for checking/unchecking items in radio groups.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2995,7 +3057,8 @@
   
   <a id="Godot_PopupMenu_IsItemSeparator_" data-uid="Godot.PopupMenu.IsItemSeparator*"></a>
   <h4 id="Godot_PopupMenu_IsItemSeparator_System_Int32_" data-uid="Godot.PopupMenu.IsItemSeparator(System.Int32)">IsItemSeparator(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the item is a separator. If it is, it will be displayed as a line. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_AddSeparator_System_String_System_Int32_">AddSeparator(String, Int32)</a> for more info on how to add a separator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3037,7 +3100,8 @@
   
   <a id="Godot_PopupMenu_IsItemShortcutDisabled_" data-uid="Godot.PopupMenu.IsItemShortcutDisabled*"></a>
   <h4 id="Godot_PopupMenu_IsItemShortcutDisabled_System_Int32_" data-uid="Godot.PopupMenu.IsItemShortcutDisabled(System.Int32)">IsItemShortcutDisabled(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the specified item&apos;s shortcut is disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3079,7 +3143,9 @@
   
   <a id="Godot_PopupMenu_RemoveItem_" data-uid="Godot.PopupMenu.RemoveItem*"></a>
   <h4 id="Godot_PopupMenu_RemoveItem_System_Int32_" data-uid="Godot.PopupMenu.RemoveItem(System.Int32)">RemoveItem(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the item at index <code>idx</code> from the menu.</p>
+<p>Note: The indices of items after the removed item will be shifted by one.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3133,7 +3199,9 @@
   
   <a id="Godot_PopupMenu_SetCurrentIndex_" data-uid="Godot.PopupMenu.SetCurrentIndex*"></a>
   <h4 id="Godot_PopupMenu_SetCurrentIndex_System_Int32_" data-uid="Godot.PopupMenu.SetCurrentIndex(System.Int32)">SetCurrentIndex(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the currently focused item as the given <code>index</code>.</p>
+<p>Passing <code>-1</code> as the index makes so that no item is focused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3241,7 +3309,8 @@
   
   <a id="Godot_PopupMenu_SetHideOnWindowLoseFocus_" data-uid="Godot.PopupMenu.SetHideOnWindowLoseFocus*"></a>
   <h4 id="Godot_PopupMenu_SetHideOnWindowLoseFocus_System_Boolean_" data-uid="Godot.PopupMenu.SetHideOnWindowLoseFocus(System.Boolean)">SetHideOnWindowLoseFocus(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hides the <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> when the window loses focus.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3268,7 +3337,8 @@
   
   <a id="Godot_PopupMenu_SetItemAccelerator_" data-uid="Godot.PopupMenu.SetItemAccelerator*"></a>
   <h4 id="Godot_PopupMenu_SetItemAccelerator_System_Int32_System_UInt32_" data-uid="Godot.PopupMenu.SetItemAccelerator(System.Int32,System.UInt32)">SetItemAccelerator(Int32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the accelerator of the item at index <code>idx</code>. Accelerators are special combinations of keys that activate the item, no matter which control is focused.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3300,7 +3370,9 @@
   
   <a id="Godot_PopupMenu_SetItemAsCheckable_" data-uid="Godot.PopupMenu.SetItemAsCheckable*"></a>
   <h4 id="Godot_PopupMenu_SetItemAsCheckable_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.SetItemAsCheckable(System.Int32,System.Boolean)">SetItemAsCheckable(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets whether the item at index <code>idx</code> has a checkbox. If <code>false</code>, sets the type of the item to plain text.</p>
+<p>Note: Checkable items just display a checkmark, but don&apos;t have any built-in checking behavior and must be checked/unchecked manually.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3332,7 +3404,8 @@
   
   <a id="Godot_PopupMenu_SetItemAsRadioCheckable_" data-uid="Godot.PopupMenu.SetItemAsRadioCheckable*"></a>
   <h4 id="Godot_PopupMenu_SetItemAsRadioCheckable_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.SetItemAsRadioCheckable(System.Int32,System.Boolean)">SetItemAsRadioCheckable(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the type of the item at the specified index <code>idx</code> to radio button. If <code>false</code>, sets the type of the item to plain text.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3364,7 +3437,8 @@
   
   <a id="Godot_PopupMenu_SetItemAsSeparator_" data-uid="Godot.PopupMenu.SetItemAsSeparator*"></a>
   <h4 id="Godot_PopupMenu_SetItemAsSeparator_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.SetItemAsSeparator(System.Int32,System.Boolean)">SetItemAsSeparator(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mark the item at index <code>idx</code> as a separator, which means that it would be displayed as a line. If <code>false</code>, sets the type of the item to plain text.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3396,7 +3470,8 @@
   
   <a id="Godot_PopupMenu_SetItemChecked_" data-uid="Godot.PopupMenu.SetItemChecked*"></a>
   <h4 id="Godot_PopupMenu_SetItemChecked_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.SetItemChecked(System.Int32,System.Boolean)">SetItemChecked(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the checkstate status of the item at index <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3428,7 +3503,8 @@
   
   <a id="Godot_PopupMenu_SetItemDisabled_" data-uid="Godot.PopupMenu.SetItemDisabled*"></a>
   <h4 id="Godot_PopupMenu_SetItemDisabled_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.SetItemDisabled(System.Int32,System.Boolean)">SetItemDisabled(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables/disables the item at index <code>idx</code>. When it is disabled, it can&apos;t be selected and its action can&apos;t be invoked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3460,7 +3536,8 @@
   
   <a id="Godot_PopupMenu_SetItemIcon_" data-uid="Godot.PopupMenu.SetItemIcon*"></a>
   <h4 id="Godot_PopupMenu_SetItemIcon_System_Int32_Godot_Texture_" data-uid="Godot.PopupMenu.SetItemIcon(System.Int32,Godot.Texture)">SetItemIcon(Int32, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Replaces the <a class="xref" href="Godot.Texture.html">Texture</a> icon of the specified <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3492,7 +3569,8 @@
   
   <a id="Godot_PopupMenu_SetItemId_" data-uid="Godot.PopupMenu.SetItemId*"></a>
   <h4 id="Godot_PopupMenu_SetItemId_System_Int32_System_Int32_" data-uid="Godot.PopupMenu.SetItemId(System.Int32,System.Int32)">SetItemId(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <code>id</code> of the item at index <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3524,7 +3602,8 @@
   
   <a id="Godot_PopupMenu_SetItemMetadata_" data-uid="Godot.PopupMenu.SetItemMetadata*"></a>
   <h4 id="Godot_PopupMenu_SetItemMetadata_System_Int32_System_Object_" data-uid="Godot.PopupMenu.SetItemMetadata(System.Int32,System.Object)">SetItemMetadata(Int32, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the metadata of an item, which may be of any type. You can later get it with <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_GetItemMetadata_System_Int32_">GetItemMetadata(Int32)</a>, which provides a simple way of assigning context data to items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3556,7 +3635,8 @@
   
   <a id="Godot_PopupMenu_SetItemMultistate_" data-uid="Godot.PopupMenu.SetItemMultistate*"></a>
   <h4 id="Godot_PopupMenu_SetItemMultistate_System_Int32_System_Int32_" data-uid="Godot.PopupMenu.SetItemMultistate(System.Int32,System.Int32)">SetItemMultistate(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the state of a multistate item. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_AddMultistateItem_System_String_System_Int32_System_Int32_System_Int32_System_UInt32_">AddMultistateItem(String, Int32, Int32, Int32, UInt32)</a> for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3588,7 +3668,8 @@
   
   <a id="Godot_PopupMenu_SetItemShortcut_" data-uid="Godot.PopupMenu.SetItemShortcut*"></a>
   <h4 id="Godot_PopupMenu_SetItemShortcut_System_Int32_Godot_ShortCut_System_Boolean_" data-uid="Godot.PopupMenu.SetItemShortcut(System.Int32,Godot.ShortCut,System.Boolean)">SetItemShortcut(Int32, ShortCut, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a <a class="xref" href="Godot.ShortCut.html">ShortCut</a> for the specified item <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3625,7 +3706,8 @@
   
   <a id="Godot_PopupMenu_SetItemShortcutDisabled_" data-uid="Godot.PopupMenu.SetItemShortcutDisabled*"></a>
   <h4 id="Godot_PopupMenu_SetItemShortcutDisabled_System_Int32_System_Boolean_" data-uid="Godot.PopupMenu.SetItemShortcutDisabled(System.Int32,System.Boolean)">SetItemShortcutDisabled(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables the <a class="xref" href="Godot.ShortCut.html">ShortCut</a> of the specified index <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3657,7 +3739,8 @@
   
   <a id="Godot_PopupMenu_SetItemSubmenu_" data-uid="Godot.PopupMenu.SetItemSubmenu*"></a>
   <h4 id="Godot_PopupMenu_SetItemSubmenu_System_Int32_System_String_" data-uid="Godot.PopupMenu.SetItemSubmenu(System.Int32,System.String)">SetItemSubmenu(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the submenu of the item at index <code>idx</code>. The submenu is the name of a child <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> node that would be shown when the item is clicked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3689,7 +3772,8 @@
   
   <a id="Godot_PopupMenu_SetItemText_" data-uid="Godot.PopupMenu.SetItemText*"></a>
   <h4 id="Godot_PopupMenu_SetItemText_System_Int32_System_String_" data-uid="Godot.PopupMenu.SetItemText(System.Int32,System.String)">SetItemText(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the text of the item at index <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3721,7 +3805,8 @@
   
   <a id="Godot_PopupMenu_SetItemTooltip_" data-uid="Godot.PopupMenu.SetItemTooltip*"></a>
   <h4 id="Godot_PopupMenu_SetItemTooltip_System_Int32_System_String_" data-uid="Godot.PopupMenu.SetItemTooltip(System.Int32,System.String)">SetItemTooltip(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <span class="xref">System.String</span> tooltip of the item at the specified index <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3780,7 +3865,8 @@
   
   <a id="Godot_PopupMenu_ToggleItemChecked_" data-uid="Godot.PopupMenu.ToggleItemChecked*"></a>
   <h4 id="Godot_PopupMenu_ToggleItemChecked_System_Int32_" data-uid="Godot.PopupMenu.ToggleItemChecked(System.Int32)">ToggleItemChecked(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Toggles the check state of the item of the specified index <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3807,7 +3893,8 @@
   
   <a id="Godot_PopupMenu_ToggleItemMultistate_" data-uid="Godot.PopupMenu.ToggleItemMultistate*"></a>
   <h4 id="Godot_PopupMenu_ToggleItemMultistate_System_Int32_" data-uid="Godot.PopupMenu.ToggleItemMultistate(System.Int32)">ToggleItemMultistate(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Cycle to the next state of a multistate item. See <a class="xref" href="Godot.PopupMenu.html#Godot_PopupMenu_AddMultistateItem_System_String_System_Int32_System_Int32_System_Int32_System_UInt32_">AddMultistateItem(String, Int32, Int32, Int32, UInt32)</a> for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

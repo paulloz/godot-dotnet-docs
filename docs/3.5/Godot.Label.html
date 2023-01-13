@@ -83,7 +83,10 @@
   
   <h1 id="Godot_Label" data-uid="Godot.Label" class="text-break">Class Label
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Label displays plain text on the screen. It gives you control over the horizontal and vertical alignment and can wrap the text inside the node&apos;s bounding rectangle. It doesn&apos;t support bold, italics, or other formatting. For that, use <a class="xref" href="Godot.RichTextLabel.html">RichTextLabel</a> instead.</p>
+<p>Note: Contrarily to most other <a class="xref" href="Godot.Control.html">Control</a>s, Label&apos;s <a class="xref" href="Godot.Control.html#Godot_Control_MouseFilter">MouseFilter</a> defaults to <a class="xref" href="Godot.Control.MouseFilterEnum.html#Godot_Control_MouseFilterEnum_Ignore">Ignore</a> (i.e. it doesn&apos;t react to mouse input events). This implies that a label won&apos;t display any configured <a class="xref" href="Godot.Control.html#Godot_Control_HintTooltip">HintTooltip</a>, unless you change its mouse filter.</p>
+<p>Note: Unicode characters after <code>0xffff</code> (such as most emoji) are not supported on Windows. They will display as unknown characters instead. This will be resolved in Godot 4.0.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1463,7 +1466,8 @@
   
   <a id="Godot_Label_Align_" data-uid="Godot.Label.Align*"></a>
   <h4 id="Godot_Label_Align" data-uid="Godot.Label.Align">Align</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls the text&apos;s horizontal align. Supports left, center, right, and fill, or justify. Set it to one of the <a class="xref" href="Godot.Label.AlignEnum.html">Label.AlignEnum</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1488,7 +1492,8 @@
   
   <a id="Godot_Label_Autowrap_" data-uid="Godot.Label.Autowrap*"></a>
   <h4 id="Godot_Label_Autowrap" data-uid="Godot.Label.Autowrap">Autowrap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, wraps the text inside the node&apos;s bounding rectangle. If you resize the node, it will change its height automatically to show all the text.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1513,7 +1518,8 @@
   
   <a id="Godot_Label_ClipText_" data-uid="Godot.Label.ClipText*"></a>
   <h4 id="Godot_Label_ClipText" data-uid="Godot.Label.ClipText">ClipText</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the Label only shows the text that fits inside its bounding rectangle and will clip text horizontally.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1538,7 +1544,8 @@
   
   <a id="Godot_Label_LinesSkipped_" data-uid="Godot.Label.LinesSkipped*"></a>
   <h4 id="Godot_Label_LinesSkipped" data-uid="Godot.Label.LinesSkipped">LinesSkipped</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node ignores the first <code>lines_skipped</code> lines before it starts to display text.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1563,7 +1570,8 @@
   
   <a id="Godot_Label_MaxLinesVisible_" data-uid="Godot.Label.MaxLinesVisible*"></a>
   <h4 id="Godot_Label_MaxLinesVisible" data-uid="Godot.Label.MaxLinesVisible">MaxLinesVisible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Limits the lines of text the node shows on screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1588,7 +1596,8 @@
   
   <a id="Godot_Label_PercentVisible_" data-uid="Godot.Label.PercentVisible*"></a>
   <h4 id="Godot_Label_PercentVisible" data-uid="Godot.Label.PercentVisible">PercentVisible</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Limits the amount of visible characters. If you set <code>percent_visible</code> to 0.5, only up to half of the text&apos;s characters will display on screen. Useful to animate the text in a dialog box.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1613,7 +1622,8 @@
   
   <a id="Godot_Label_Text_" data-uid="Godot.Label.Text*"></a>
   <h4 id="Godot_Label_Text" data-uid="Godot.Label.Text">Text</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The text to display on screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1638,7 +1648,8 @@
   
   <a id="Godot_Label_Uppercase_" data-uid="Godot.Label.Uppercase*"></a>
   <h4 id="Godot_Label_Uppercase" data-uid="Godot.Label.Uppercase">Uppercase</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, all the text displays as UPPERCASE.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1663,7 +1674,8 @@
   
   <a id="Godot_Label_Valign_" data-uid="Godot.Label.Valign*"></a>
   <h4 id="Godot_Label_Valign" data-uid="Godot.Label.Valign">Valign</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls the text&apos;s vertical align. Supports top, center, bottom, and fill. Set it to one of the <a class="xref" href="Godot.Label.VAlign.html">Label.VAlign</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1688,7 +1700,8 @@
   
   <a id="Godot_Label_VisibleCharacters_" data-uid="Godot.Label.VisibleCharacters*"></a>
   <h4 id="Godot_Label_VisibleCharacters" data-uid="Godot.Label.VisibleCharacters">VisibleCharacters</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Restricts the number of characters to display. Set to -1 to disable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1740,7 +1753,8 @@
   
   <a id="Godot_Label_GetLineCount_" data-uid="Godot.Label.GetLineCount*"></a>
   <h4 id="Godot_Label_GetLineCount" data-uid="Godot.Label.GetLineCount">GetLineCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of lines of text the Label has.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1765,7 +1779,8 @@
   
   <a id="Godot_Label_GetLineHeight_" data-uid="Godot.Label.GetLineHeight*"></a>
   <h4 id="Godot_Label_GetLineHeight" data-uid="Godot.Label.GetLineHeight">GetLineHeight()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the font size in pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1890,7 +1905,8 @@
   
   <a id="Godot_Label_GetTotalCharacterCount_" data-uid="Godot.Label.GetTotalCharacterCount*"></a>
   <h4 id="Godot_Label_GetTotalCharacterCount" data-uid="Godot.Label.GetTotalCharacterCount">GetTotalCharacterCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total number of printable characters in the text (excluding spaces and newlines).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1965,7 +1981,8 @@
   
   <a id="Godot_Label_GetVisibleLineCount_" data-uid="Godot.Label.GetVisibleLineCount*"></a>
   <h4 id="Godot_Label_GetVisibleLineCount" data-uid="Godot.Label.GetVisibleLineCount">GetVisibleLineCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of lines shown. Useful if the <a class="xref" href="Godot.Label.html">Label</a>&apos;s height cannot currently display all lines.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

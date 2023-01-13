@@ -83,7 +83,20 @@
   
   <h1 id="Godot_SkeletonIK" data-uid="Godot.SkeletonIK" class="text-break">Class SkeletonIK
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>SkeletonIK is used to place the end bone of a <a class="xref" href="Godot.Skeleton.html">Skeleton</a> bone chain at a certain point in 3D by rotating all bones in the chain accordingly. A typical scenario for IK in games is to place a characters feet on the ground or a characters hands on a currently hold object. SkeletonIK uses FabrikInverseKinematic internally to solve the bone chain and applies the results to the <a class="xref" href="Godot.Skeleton.html">Skeleton</a> <code>bones_global_pose_override</code> property for all affected bones in the chain. If fully applied this overwrites any bone transform from <a class="xref" href="Godot.Animation.html">Animation</a>s or bone custom poses set by users. The applied amount can be controlled with the <code>interpolation</code> property.</p>
+<p><pre><code># Apply IK effect automatically on every new frame (not the current)
+skeleton_ik_node.start()
+<h1 id="apply-ik-effect-only-on-the-current-frame">Apply IK effect only on the current frame</h1>
+<p>skeleton_ik_node.start(true)</p>
+<h1 id="stop-ik-effect-and-reset-bones_global_pose_override-on-skeleton">Stop IK effect and reset bones_global_pose_override on Skeleton</h1>
+<p>skeleton_ik_node.stop()</p>
+<h1 id="apply-full-ik-effect">Apply full IK effect</h1>
+<p>skeleton_ik_node.set_interpolation(1.0)</p>
+<h1 id="apply-half-ik-effect">Apply half IK effect</h1>
+<p>skeleton_ik_node.set_interpolation(0.5)</p>
+<h1 id="apply-zero-ik-effect-a-value-at-or-below-001-also-removes-bones_global_pose_override-on-skeleton">Apply zero IK effect (a value at or below 0.01 also removes bones_global_pose_override on Skeleton)</h1>
+<p>skeleton_ik_node.set_interpolation(0.0)</code></pre></p><p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -753,7 +766,8 @@
   
   <a id="Godot_SkeletonIK_Interpolation_" data-uid="Godot.SkeletonIK.Interpolation*"></a>
   <h4 id="Godot_SkeletonIK_Interpolation" data-uid="Godot.SkeletonIK.Interpolation">Interpolation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Interpolation value for how much the IK results are applied to the current skeleton bone chain. A value of <code>1.0</code> will overwrite all skeleton bone transforms completely while a value of <code>0.0</code> will visually disable the SkeletonIK. A value at or below <code>0.01</code> also calls <a class="xref" href="Godot.Skeleton.html#Godot_Skeleton_ClearBonesGlobalPoseOverride">ClearBonesGlobalPoseOverride()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -778,7 +792,8 @@
   
   <a id="Godot_SkeletonIK_Magnet_" data-uid="Godot.SkeletonIK.Magnet*"></a>
   <h4 id="Godot_SkeletonIK_Magnet" data-uid="Godot.SkeletonIK.Magnet">Magnet</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Secondary target position (first is <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_Target">Target</a> property or <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_TargetNode">TargetNode</a>) for the IK chain. Use magnet position (pole target) to control the bending of the IK chain. Only works if the bone chain has more than 2 bones. The middle chain bone position will be linearly interpolated with the magnet position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -803,7 +818,8 @@
   
   <a id="Godot_SkeletonIK_MaxIterations_" data-uid="Godot.SkeletonIK.MaxIterations*"></a>
   <h4 id="Godot_SkeletonIK_MaxIterations" data-uid="Godot.SkeletonIK.MaxIterations">MaxIterations</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of iteration loops used by the IK solver to produce more accurate (and elegant) bone chain results.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -828,7 +844,8 @@
   
   <a id="Godot_SkeletonIK_MinDistance_" data-uid="Godot.SkeletonIK.MinDistance*"></a>
   <h4 id="Godot_SkeletonIK_MinDistance" data-uid="Godot.SkeletonIK.MinDistance">MinDistance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum distance between bone and goal target. If the distance is below this value, the IK solver stops further iterations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -853,7 +870,8 @@
   
   <a id="Godot_SkeletonIK_OverrideTipBasis_" data-uid="Godot.SkeletonIK.OverrideTipBasis*"></a>
   <h4 id="Godot_SkeletonIK_OverrideTipBasis" data-uid="Godot.SkeletonIK.OverrideTipBasis">OverrideTipBasis</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code> overwrites the rotation of the tip bone with the rotation of the <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_Target">Target</a> (or <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_TargetNode">TargetNode</a> if defined).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -878,7 +896,8 @@
   
   <a id="Godot_SkeletonIK_RootBone_" data-uid="Godot.SkeletonIK.RootBone*"></a>
   <h4 id="Godot_SkeletonIK_RootBone" data-uid="Godot.SkeletonIK.RootBone">RootBone</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the current root bone, the first bone in the IK chain.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -903,7 +922,8 @@
   
   <a id="Godot_SkeletonIK_Target_" data-uid="Godot.SkeletonIK.Target*"></a>
   <h4 id="Godot_SkeletonIK_Target" data-uid="Godot.SkeletonIK.Target">Target</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>First target of the IK chain where the tip bone is placed and, if <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_OverrideTipBasis">OverrideTipBasis</a> is <code>true</code>, how the tip bone is rotated. If a <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_TargetNode">TargetNode</a> path is available the nodes transform is used instead and this property is ignored.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -928,7 +948,8 @@
   
   <a id="Godot_SkeletonIK_TargetNode_" data-uid="Godot.SkeletonIK.TargetNode*"></a>
   <h4 id="Godot_SkeletonIK_TargetNode" data-uid="Godot.SkeletonIK.TargetNode">TargetNode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Target node <a class="xref" href="Godot.NodePath.html">NodePath</a> for the IK chain. If available, the node&apos;s current <a class="xref" href="Godot.Transform.html">Transform</a> is used instead of the <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_Target">Target</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -953,7 +974,8 @@
   
   <a id="Godot_SkeletonIK_TipBone_" data-uid="Godot.SkeletonIK.TipBone*"></a>
   <h4 id="Godot_SkeletonIK_TipBone" data-uid="Godot.SkeletonIK.TipBone">TipBone</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the current tip bone, the last bone in the IK chain placed at the <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_Target">Target</a> transform (or <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_TargetNode">TargetNode</a> if defined).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -978,7 +1000,8 @@
   
   <a id="Godot_SkeletonIK_UseMagnet_" data-uid="Godot.SkeletonIK.UseMagnet*"></a>
   <h4 id="Godot_SkeletonIK_UseMagnet" data-uid="Godot.SkeletonIK.UseMagnet">UseMagnet</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, instructs the IK solver to consider the secondary magnet target (pole target) when calculating the bone chain. Use the magnet position (pole target) to control the bending of the IK chain.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1105,7 +1128,8 @@
   
   <a id="Godot_SkeletonIK_GetParentSkeleton_" data-uid="Godot.SkeletonIK.GetParentSkeleton*"></a>
   <h4 id="Godot_SkeletonIK_GetParentSkeleton" data-uid="Godot.SkeletonIK.GetParentSkeleton">GetParentSkeleton()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the parent <a class="xref" href="Godot.Skeleton.html">Skeleton</a> Node that was present when SkeletonIK entered the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>. Returns null if the parent node was not a <a class="xref" href="Godot.Skeleton.html">Skeleton</a> Node when SkeletonIK entered the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1255,7 +1279,8 @@
   
   <a id="Godot_SkeletonIK_IsRunning_" data-uid="Godot.SkeletonIK.IsRunning*"></a>
   <h4 id="Godot_SkeletonIK_IsRunning" data-uid="Godot.SkeletonIK.IsRunning">IsRunning()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if SkeletonIK is applying IK effects on continues frames to the <a class="xref" href="Godot.Skeleton.html">Skeleton</a> bones. Returns <code>false</code> if SkeletonIK is stopped or <a class="xref" href="Godot.SkeletonIK.html#Godot_SkeletonIK_Start_System_Boolean_">Start(Boolean)</a> was used with the <code>one_time</code> parameter set to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1575,7 +1600,8 @@
   
   <a id="Godot_SkeletonIK_Start_" data-uid="Godot.SkeletonIK.Start*"></a>
   <h4 id="Godot_SkeletonIK_Start_System_Boolean_" data-uid="Godot.SkeletonIK.Start(System.Boolean)">Start(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Starts applying IK effects on each frame to the <a class="xref" href="Godot.Skeleton.html">Skeleton</a> bones but will only take effect starting on the next frame. If <code>one_time</code> is <code>true</code>, this will take effect immediately but also reset on the next frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1602,7 +1628,8 @@
   
   <a id="Godot_SkeletonIK_Stop_" data-uid="Godot.SkeletonIK.Stop*"></a>
   <h4 id="Godot_SkeletonIK_Stop" data-uid="Godot.SkeletonIK.Stop">Stop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops applying IK effects on each frame to the <a class="xref" href="Godot.Skeleton.html">Skeleton</a> bones and also calls <a class="xref" href="Godot.Skeleton.html#Godot_Skeleton_ClearBonesGlobalPoseOverride">ClearBonesGlobalPoseOverride()</a> to remove existing overrides on all bones.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

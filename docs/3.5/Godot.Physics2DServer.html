@@ -83,7 +83,8 @@
   
   <h1 id="Godot_Physics2DServer" data-uid="Godot.Physics2DServer" class="text-break">Class Physics2DServer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Physics2DServer is the server responsible for all 2D physics. It can create many kinds of physics objects, but does not insert them on the node tree.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +130,8 @@
   
   <a id="Godot_Physics2DServer_AreaAddShape_" data-uid="Godot.Physics2DServer.AreaAddShape*"></a>
   <h4 id="Godot_Physics2DServer_AreaAddShape_Godot_RID_Godot_RID_System_Nullable_Godot_Transform2D__System_Boolean_" data-uid="Godot.Physics2DServer.AreaAddShape(Godot.RID,Godot.RID,System.Nullable{Godot.Transform2D},System.Boolean)">AreaAddShape(RID, RID, Nullable&lt;Transform2D&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a shape to the area, along with a transform matrix. Shapes are usually referenced by their index, so you should track which shape has a given index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -158,7 +160,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Transform2D.html">Transform2D</a>&gt;</td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is Transform2D.Identity</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -203,7 +206,8 @@
   
   <a id="Godot_Physics2DServer_AreaAttachObjectInstanceId_" data-uid="Godot.Physics2DServer.AreaAttachObjectInstanceId*"></a>
   <h4 id="Godot_Physics2DServer_AreaAttachObjectInstanceId_Godot_RID_System_UInt64_" data-uid="Godot.Physics2DServer.AreaAttachObjectInstanceId(Godot.RID,System.UInt64)">AreaAttachObjectInstanceId(RID, UInt64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns the area to a descendant of <a class="xref" href="Godot.Object.html">Object</a>, so it can exist in the node tree.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -235,7 +239,8 @@
   
   <a id="Godot_Physics2DServer_AreaClearShapes_" data-uid="Godot.Physics2DServer.AreaClearShapes*"></a>
   <h4 id="Godot_Physics2DServer_AreaClearShapes_Godot_RID_" data-uid="Godot.Physics2DServer.AreaClearShapes(Godot.RID)">AreaClearShapes(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all shapes from an area. It does not delete the shapes, so they can be reassigned later.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -262,7 +267,8 @@
   
   <a id="Godot_Physics2DServer_AreaCreate_" data-uid="Godot.Physics2DServer.AreaCreate*"></a>
   <h4 id="Godot_Physics2DServer_AreaCreate" data-uid="Godot.Physics2DServer.AreaCreate">AreaCreate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="Godot.Area2D.html">Area2D</a>. After creating an <a class="xref" href="Godot.Area2D.html">Area2D</a> with this method, assign it to a space using <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_AreaSetSpace_Godot_RID_Godot_RID_">AreaSetSpace(RID, RID)</a> to use the created <a class="xref" href="Godot.Area2D.html">Area2D</a> in the physics world.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -329,7 +335,8 @@
   
   <a id="Godot_Physics2DServer_AreaGetObjectInstanceId_" data-uid="Godot.Physics2DServer.AreaGetObjectInstanceId*"></a>
   <h4 id="Godot_Physics2DServer_AreaGetObjectInstanceId_Godot_RID_" data-uid="Godot.Physics2DServer.AreaGetObjectInstanceId(Godot.RID)">AreaGetObjectInstanceId(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the instance ID of the object the area is assigned to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +378,8 @@
   
   <a id="Godot_Physics2DServer_AreaGetParam_" data-uid="Godot.Physics2DServer.AreaGetParam*"></a>
   <h4 id="Godot_Physics2DServer_AreaGetParam_Godot_RID_Godot_Physics2DServer_AreaParameter_" data-uid="Godot.Physics2DServer.AreaGetParam(Godot.RID,Godot.Physics2DServer.AreaParameter)">AreaGetParam(RID, Physics2DServer.AreaParameter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an area parameter value. See <a class="xref" href="Godot.Physics2DServer.AreaParameter.html">Physics2DServer.AreaParameter</a> for a list of available parameters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -418,7 +426,8 @@
   
   <a id="Godot_Physics2DServer_AreaGetShape_" data-uid="Godot.Physics2DServer.AreaGetShape*"></a>
   <h4 id="Godot_Physics2DServer_AreaGetShape_Godot_RID_System_Int32_" data-uid="Godot.Physics2DServer.AreaGetShape(Godot.RID,System.Int32)">AreaGetShape(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.RID.html">RID</a> of the nth shape of an area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -465,7 +474,8 @@
   
   <a id="Godot_Physics2DServer_AreaGetShapeCount_" data-uid="Godot.Physics2DServer.AreaGetShapeCount*"></a>
   <h4 id="Godot_Physics2DServer_AreaGetShapeCount_Godot_RID_" data-uid="Godot.Physics2DServer.AreaGetShapeCount(Godot.RID)">AreaGetShapeCount(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of shapes assigned to an area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -507,7 +517,8 @@
   
   <a id="Godot_Physics2DServer_AreaGetShapeTransform_" data-uid="Godot.Physics2DServer.AreaGetShapeTransform*"></a>
   <h4 id="Godot_Physics2DServer_AreaGetShapeTransform_Godot_RID_System_Int32_" data-uid="Godot.Physics2DServer.AreaGetShapeTransform(Godot.RID,System.Int32)">AreaGetShapeTransform(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the transform matrix of a shape within an area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -554,7 +565,8 @@
   
   <a id="Godot_Physics2DServer_AreaGetSpace_" data-uid="Godot.Physics2DServer.AreaGetSpace*"></a>
   <h4 id="Godot_Physics2DServer_AreaGetSpace_Godot_RID_" data-uid="Godot.Physics2DServer.AreaGetSpace(Godot.RID)">AreaGetSpace(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the space assigned to the area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -596,7 +608,8 @@
   
   <a id="Godot_Physics2DServer_AreaGetSpaceOverrideMode_" data-uid="Godot.Physics2DServer.AreaGetSpaceOverrideMode*"></a>
   <h4 id="Godot_Physics2DServer_AreaGetSpaceOverrideMode_Godot_RID_" data-uid="Godot.Physics2DServer.AreaGetSpaceOverrideMode(Godot.RID)">AreaGetSpaceOverrideMode(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the space override mode for the area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -638,7 +651,8 @@
   
   <a id="Godot_Physics2DServer_AreaGetTransform_" data-uid="Godot.Physics2DServer.AreaGetTransform*"></a>
   <h4 id="Godot_Physics2DServer_AreaGetTransform_Godot_RID_" data-uid="Godot.Physics2DServer.AreaGetTransform(Godot.RID)">AreaGetTransform(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the transform matrix for an area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -680,7 +694,8 @@
   
   <a id="Godot_Physics2DServer_AreaRemoveShape_" data-uid="Godot.Physics2DServer.AreaRemoveShape*"></a>
   <h4 id="Godot_Physics2DServer_AreaRemoveShape_Godot_RID_System_Int32_" data-uid="Godot.Physics2DServer.AreaRemoveShape(Godot.RID,System.Int32)">AreaRemoveShape(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a shape from an area. It does not delete the shape, so it can be reassigned later.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -749,7 +764,8 @@
   
   <a id="Godot_Physics2DServer_AreaSetCollisionLayer_" data-uid="Godot.Physics2DServer.AreaSetCollisionLayer*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetCollisionLayer_Godot_RID_System_UInt32_" data-uid="Godot.Physics2DServer.AreaSetCollisionLayer(Godot.RID,System.UInt32)">AreaSetCollisionLayer(RID, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns the area to one or many physics layers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -781,7 +797,8 @@
   
   <a id="Godot_Physics2DServer_AreaSetCollisionMask_" data-uid="Godot.Physics2DServer.AreaSetCollisionMask*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetCollisionMask_Godot_RID_System_UInt32_" data-uid="Godot.Physics2DServer.AreaSetCollisionMask(Godot.RID,System.UInt32)">AreaSetCollisionMask(RID, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets which physics layers the area will monitor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -845,7 +862,13 @@
   
   <a id="Godot_Physics2DServer_AreaSetMonitorCallback_" data-uid="Godot.Physics2DServer.AreaSetMonitorCallback*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetMonitorCallback_Godot_RID_Godot_Object_System_String_" data-uid="Godot.Physics2DServer.AreaSetMonitorCallback(Godot.RID,Godot.Object,System.String)">AreaSetMonitorCallback(RID, Object, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the function to call when any body/area enters or exits the area. This callback will be called for any object interacting with the area, and takes five parameters:</p>
+<p>1: <a class="xref" href="Godot.Physics2DServer.AreaBodyStatus.html#Godot_Physics2DServer_AreaBodyStatus_Added">Added</a> or <a class="xref" href="Godot.Physics2DServer.AreaBodyStatus.html#Godot_Physics2DServer_AreaBodyStatus_Removed">Removed</a>, depending on whether the object entered or exited the area.</p>
+<p>2: <a class="xref" href="Godot.RID.html">RID</a> of the object that entered/exited the area.</p>
+<p>3: Instance ID of the object that entered/exited the area.</p>
+<p>4: The shape index of the object that entered/exited the area.</p>
+<p>5: The shape index of the area where the object entered/exited.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -882,7 +905,8 @@
   
   <a id="Godot_Physics2DServer_AreaSetParam_" data-uid="Godot.Physics2DServer.AreaSetParam*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetParam_Godot_RID_Godot_Physics2DServer_AreaParameter_System_Object_" data-uid="Godot.Physics2DServer.AreaSetParam(Godot.RID,Godot.Physics2DServer.AreaParameter,System.Object)">AreaSetParam(RID, Physics2DServer.AreaParameter, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the value for an area parameter. See <a class="xref" href="Godot.Physics2DServer.AreaParameter.html">Physics2DServer.AreaParameter</a> for a list of available parameters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -919,7 +943,8 @@
   
   <a id="Godot_Physics2DServer_AreaSetShape_" data-uid="Godot.Physics2DServer.AreaSetShape*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetShape_Godot_RID_System_Int32_Godot_RID_" data-uid="Godot.Physics2DServer.AreaSetShape(Godot.RID,System.Int32,Godot.RID)">AreaSetShape(RID, Int32, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Substitutes a given area shape by another. The old shape is selected by its index, the new one by its <a class="xref" href="Godot.RID.html">RID</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -956,7 +981,8 @@
   
   <a id="Godot_Physics2DServer_AreaSetShapeDisabled_" data-uid="Godot.Physics2DServer.AreaSetShapeDisabled*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetShapeDisabled_Godot_RID_System_Int32_System_Boolean_" data-uid="Godot.Physics2DServer.AreaSetShapeDisabled(Godot.RID,System.Int32,System.Boolean)">AreaSetShapeDisabled(RID, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables a given shape in an area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -993,7 +1019,8 @@
   
   <a id="Godot_Physics2DServer_AreaSetShapeTransform_" data-uid="Godot.Physics2DServer.AreaSetShapeTransform*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetShapeTransform_Godot_RID_System_Int32_Godot_Transform2D_" data-uid="Godot.Physics2DServer.AreaSetShapeTransform(Godot.RID,System.Int32,Godot.Transform2D)">AreaSetShapeTransform(RID, Int32, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the transform matrix for an area shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1030,7 +1057,8 @@
   
   <a id="Godot_Physics2DServer_AreaSetSpace_" data-uid="Godot.Physics2DServer.AreaSetSpace*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetSpace_Godot_RID_Godot_RID_" data-uid="Godot.Physics2DServer.AreaSetSpace(Godot.RID,Godot.RID)">AreaSetSpace(RID, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns a space to the area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1062,7 +1090,8 @@
   
   <a id="Godot_Physics2DServer_AreaSetSpaceOverrideMode_" data-uid="Godot.Physics2DServer.AreaSetSpaceOverrideMode*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetSpaceOverrideMode_Godot_RID_Godot_Physics2DServer_AreaSpaceOverrideMode_" data-uid="Godot.Physics2DServer.AreaSetSpaceOverrideMode(Godot.RID,Godot.Physics2DServer.AreaSpaceOverrideMode)">AreaSetSpaceOverrideMode(RID, Physics2DServer.AreaSpaceOverrideMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the space override mode for the area. See <a class="xref" href="Godot.Physics2DServer.AreaSpaceOverrideMode.html">Physics2DServer.AreaSpaceOverrideMode</a> for a list of available modes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1094,7 +1123,8 @@
   
   <a id="Godot_Physics2DServer_AreaSetTransform_" data-uid="Godot.Physics2DServer.AreaSetTransform*"></a>
   <h4 id="Godot_Physics2DServer_AreaSetTransform_Godot_RID_Godot_Transform2D_" data-uid="Godot.Physics2DServer.AreaSetTransform(Godot.RID,Godot.Transform2D)">AreaSetTransform(RID, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the transform matrix for an area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1158,7 +1188,8 @@
   
   <a id="Godot_Physics2DServer_BodyAddCollisionException_" data-uid="Godot.Physics2DServer.BodyAddCollisionException*"></a>
   <h4 id="Godot_Physics2DServer_BodyAddCollisionException_Godot_RID_Godot_RID_" data-uid="Godot.Physics2DServer.BodyAddCollisionException(Godot.RID,Godot.RID)">BodyAddCollisionException(RID, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a body to the list of bodies exempt from collisions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1190,7 +1221,8 @@
   
   <a id="Godot_Physics2DServer_BodyAddForce_" data-uid="Godot.Physics2DServer.BodyAddForce*"></a>
   <h4 id="Godot_Physics2DServer_BodyAddForce_Godot_RID_Godot_Vector2_Godot_Vector2_" data-uid="Godot.Physics2DServer.BodyAddForce(Godot.RID,Godot.Vector2,Godot.Vector2)">BodyAddForce(RID, Vector2, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a positioned force to the applied force and torque. As with <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_BodyApplyImpulse_Godot_RID_Godot_Vector2_Godot_Vector2_">BodyApplyImpulse(RID, Vector2, Vector2)</a>, both the force and the offset from the body origin are in global coordinates. A force differs from an impulse in that, while the two are forces, the impulse clears itself after being applied.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1227,7 +1259,8 @@
   
   <a id="Godot_Physics2DServer_BodyAddShape_" data-uid="Godot.Physics2DServer.BodyAddShape*"></a>
   <h4 id="Godot_Physics2DServer_BodyAddShape_Godot_RID_Godot_RID_System_Nullable_Godot_Transform2D__System_Boolean_" data-uid="Godot.Physics2DServer.BodyAddShape(Godot.RID,Godot.RID,System.Nullable{Godot.Transform2D},System.Boolean)">BodyAddShape(RID, RID, Nullable&lt;Transform2D&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a shape to the body, along with a transform matrix. Shapes are usually referenced by their index, so you should track which shape has a given index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1256,7 +1289,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Transform2D.html">Transform2D</a>&gt;</td>
         <td><span class="parametername">transform</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is Transform2D.Identity</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -1333,7 +1367,8 @@
   
   <a id="Godot_Physics2DServer_BodyApplyImpulse_" data-uid="Godot.Physics2DServer.BodyApplyImpulse*"></a>
   <h4 id="Godot_Physics2DServer_BodyApplyImpulse_Godot_RID_Godot_Vector2_Godot_Vector2_" data-uid="Godot.Physics2DServer.BodyApplyImpulse(Godot.RID,Godot.Vector2,Godot.Vector2)">BodyApplyImpulse(RID, Vector2, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a positioned impulse to the applied force and torque. Both the force and the offset from the body origin are in global coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1434,7 +1469,8 @@
   
   <a id="Godot_Physics2DServer_BodyAttachObjectInstanceId_" data-uid="Godot.Physics2DServer.BodyAttachObjectInstanceId*"></a>
   <h4 id="Godot_Physics2DServer_BodyAttachObjectInstanceId_Godot_RID_System_UInt32_" data-uid="Godot.Physics2DServer.BodyAttachObjectInstanceId(Godot.RID,System.UInt32)">BodyAttachObjectInstanceId(RID, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns the area to a descendant of <a class="xref" href="Godot.Object.html">Object</a>, so it can exist in the node tree.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1466,7 +1502,8 @@
   
   <a id="Godot_Physics2DServer_BodyClearShapes_" data-uid="Godot.Physics2DServer.BodyClearShapes*"></a>
   <h4 id="Godot_Physics2DServer_BodyClearShapes_Godot_RID_" data-uid="Godot.Physics2DServer.BodyClearShapes(Godot.RID)">BodyClearShapes(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all shapes from a body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1493,7 +1530,8 @@
   
   <a id="Godot_Physics2DServer_BodyCreate_" data-uid="Godot.Physics2DServer.BodyCreate*"></a>
   <h4 id="Godot_Physics2DServer_BodyCreate" data-uid="Godot.Physics2DServer.BodyCreate">BodyCreate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a physics body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1560,7 +1598,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetCollisionLayer_" data-uid="Godot.Physics2DServer.BodyGetCollisionLayer*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetCollisionLayer_Godot_RID_" data-uid="Godot.Physics2DServer.BodyGetCollisionLayer(Godot.RID)">BodyGetCollisionLayer(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the physics layer or layers a body belongs to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1602,7 +1641,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetCollisionMask_" data-uid="Godot.Physics2DServer.BodyGetCollisionMask*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetCollisionMask_Godot_RID_" data-uid="Godot.Physics2DServer.BodyGetCollisionMask(Godot.RID)">BodyGetCollisionMask(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the physics layer or layers a body can collide with.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1644,7 +1684,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetContinuousCollisionDetectionMode_" data-uid="Godot.Physics2DServer.BodyGetContinuousCollisionDetectionMode*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetContinuousCollisionDetectionMode_Godot_RID_" data-uid="Godot.Physics2DServer.BodyGetContinuousCollisionDetectionMode(Godot.RID)">BodyGetContinuousCollisionDetectionMode(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the continuous collision detection mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1686,7 +1727,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetDirectState_" data-uid="Godot.Physics2DServer.BodyGetDirectState*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetDirectState_Godot_RID_" data-uid="Godot.Physics2DServer.BodyGetDirectState(Godot.RID)">BodyGetDirectState(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Physics2DDirectBodyState.html">Physics2DDirectBodyState</a> of the body. Returns <code>null</code> if the body is destroyed or removed from the physics space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1728,7 +1770,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetMaxContactsReported_" data-uid="Godot.Physics2DServer.BodyGetMaxContactsReported*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetMaxContactsReported_Godot_RID_" data-uid="Godot.Physics2DServer.BodyGetMaxContactsReported(Godot.RID)">BodyGetMaxContactsReported(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the maximum contacts that can be reported. See <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_BodySetMaxContactsReported_Godot_RID_System_Int32_">BodySetMaxContactsReported(RID, Int32)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1770,7 +1813,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetMode_" data-uid="Godot.Physics2DServer.BodyGetMode*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetMode_Godot_RID_" data-uid="Godot.Physics2DServer.BodyGetMode(Godot.RID)">BodyGetMode(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the body mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1812,7 +1856,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetObjectInstanceId_" data-uid="Godot.Physics2DServer.BodyGetObjectInstanceId*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetObjectInstanceId_Godot_RID_" data-uid="Godot.Physics2DServer.BodyGetObjectInstanceId(Godot.RID)">BodyGetObjectInstanceId(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the instance ID of the object the area is assigned to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1854,7 +1899,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetParam_" data-uid="Godot.Physics2DServer.BodyGetParam*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetParam_Godot_RID_Godot_Physics2DServer_BodyParameter_" data-uid="Godot.Physics2DServer.BodyGetParam(Godot.RID,Godot.Physics2DServer.BodyParameter)">BodyGetParam(RID, Physics2DServer.BodyParameter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of a body parameter. See <a class="xref" href="Godot.Physics2DServer.BodyParameter.html">Physics2DServer.BodyParameter</a> for a list of available parameters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1901,7 +1947,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetShape_" data-uid="Godot.Physics2DServer.BodyGetShape*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetShape_Godot_RID_System_Int32_" data-uid="Godot.Physics2DServer.BodyGetShape(Godot.RID,System.Int32)">BodyGetShape(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.RID.html">RID</a> of the nth shape of a body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1948,7 +1995,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetShapeCount_" data-uid="Godot.Physics2DServer.BodyGetShapeCount*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetShapeCount_Godot_RID_" data-uid="Godot.Physics2DServer.BodyGetShapeCount(Godot.RID)">BodyGetShapeCount(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of shapes assigned to a body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1990,7 +2038,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetShapeMetadata_" data-uid="Godot.Physics2DServer.BodyGetShapeMetadata*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetShapeMetadata_Godot_RID_System_Int32_" data-uid="Godot.Physics2DServer.BodyGetShapeMetadata(Godot.RID,System.Int32)">BodyGetShapeMetadata(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the metadata of a shape of a body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2037,7 +2086,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetShapeTransform_" data-uid="Godot.Physics2DServer.BodyGetShapeTransform*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetShapeTransform_Godot_RID_System_Int32_" data-uid="Godot.Physics2DServer.BodyGetShapeTransform(Godot.RID,System.Int32)">BodyGetShapeTransform(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the transform matrix of a body shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2084,7 +2134,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetSpace_" data-uid="Godot.Physics2DServer.BodyGetSpace*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetSpace_Godot_RID_" data-uid="Godot.Physics2DServer.BodyGetSpace(Godot.RID)">BodyGetSpace(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.RID.html">RID</a> of the space assigned to a body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2126,7 +2177,8 @@
   
   <a id="Godot_Physics2DServer_BodyGetState_" data-uid="Godot.Physics2DServer.BodyGetState*"></a>
   <h4 id="Godot_Physics2DServer_BodyGetState_Godot_RID_Godot_Physics2DServer_BodyState_" data-uid="Godot.Physics2DServer.BodyGetState(Godot.RID,Godot.Physics2DServer.BodyState)">BodyGetState(RID, Physics2DServer.BodyState)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a body state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2173,7 +2225,8 @@
   
   <a id="Godot_Physics2DServer_BodyIsOmittingForceIntegration_" data-uid="Godot.Physics2DServer.BodyIsOmittingForceIntegration*"></a>
   <h4 id="Godot_Physics2DServer_BodyIsOmittingForceIntegration_Godot_RID_" data-uid="Godot.Physics2DServer.BodyIsOmittingForceIntegration(Godot.RID)">BodyIsOmittingForceIntegration(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether a body uses a callback function to calculate its own physics (see <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_BodySetForceIntegrationCallback_Godot_RID_Godot_Object_System_String_System_Object_">BodySetForceIntegrationCallback(RID, Object, String, Object)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2215,7 +2268,8 @@
   
   <a id="Godot_Physics2DServer_BodyRemoveCollisionException_" data-uid="Godot.Physics2DServer.BodyRemoveCollisionException*"></a>
   <h4 id="Godot_Physics2DServer_BodyRemoveCollisionException_Godot_RID_Godot_RID_" data-uid="Godot.Physics2DServer.BodyRemoveCollisionException(Godot.RID,Godot.RID)">BodyRemoveCollisionException(RID, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a body from the list of bodies exempt from collisions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2247,7 +2301,8 @@
   
   <a id="Godot_Physics2DServer_BodyRemoveShape_" data-uid="Godot.Physics2DServer.BodyRemoveShape*"></a>
   <h4 id="Godot_Physics2DServer_BodyRemoveShape_Godot_RID_System_Int32_" data-uid="Godot.Physics2DServer.BodyRemoveShape(Godot.RID,System.Int32)">BodyRemoveShape(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a shape from a body. The shape is not deleted, so it can be reused afterwards.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2279,7 +2334,8 @@
   
   <a id="Godot_Physics2DServer_BodySetAxisVelocity_" data-uid="Godot.Physics2DServer.BodySetAxisVelocity*"></a>
   <h4 id="Godot_Physics2DServer_BodySetAxisVelocity_Godot_RID_Godot_Vector2_" data-uid="Godot.Physics2DServer.BodySetAxisVelocity(Godot.RID,Godot.Vector2)">BodySetAxisVelocity(RID, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets an axis velocity. The velocity in the given vector axis will be set as the given vector length. This is useful for jumping behavior.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2311,7 +2367,8 @@
   
   <a id="Godot_Physics2DServer_BodySetCollisionLayer_" data-uid="Godot.Physics2DServer.BodySetCollisionLayer*"></a>
   <h4 id="Godot_Physics2DServer_BodySetCollisionLayer_Godot_RID_System_UInt32_" data-uid="Godot.Physics2DServer.BodySetCollisionLayer(Godot.RID,System.UInt32)">BodySetCollisionLayer(RID, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the physics layer or layers a body belongs to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2343,7 +2400,8 @@
   
   <a id="Godot_Physics2DServer_BodySetCollisionMask_" data-uid="Godot.Physics2DServer.BodySetCollisionMask*"></a>
   <h4 id="Godot_Physics2DServer_BodySetCollisionMask_Godot_RID_System_UInt32_" data-uid="Godot.Physics2DServer.BodySetCollisionMask(Godot.RID,System.UInt32)">BodySetCollisionMask(RID, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the physics layer or layers a body can collide with.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2375,7 +2433,9 @@
   
   <a id="Godot_Physics2DServer_BodySetContinuousCollisionDetectionMode_" data-uid="Godot.Physics2DServer.BodySetContinuousCollisionDetectionMode*"></a>
   <h4 id="Godot_Physics2DServer_BodySetContinuousCollisionDetectionMode_Godot_RID_Godot_Physics2DServer_CCDMode_" data-uid="Godot.Physics2DServer.BodySetContinuousCollisionDetectionMode(Godot.RID,Godot.Physics2DServer.CCDMode)">BodySetContinuousCollisionDetectionMode(RID, Physics2DServer.CCDMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the continuous collision detection mode using one of the <a class="xref" href="Godot.Physics2DServer.CCDMode.html">Physics2DServer.CCDMode</a> constants.</p>
+<p>Continuous collision detection tries to predict where a moving body will collide, instead of moving it and correcting its movement if it collided.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2407,7 +2467,8 @@
   
   <a id="Godot_Physics2DServer_BodySetForceIntegrationCallback_" data-uid="Godot.Physics2DServer.BodySetForceIntegrationCallback*"></a>
   <h4 id="Godot_Physics2DServer_BodySetForceIntegrationCallback_Godot_RID_Godot_Object_System_String_System_Object_" data-uid="Godot.Physics2DServer.BodySetForceIntegrationCallback(Godot.RID,Godot.Object,System.String,System.Object)">BodySetForceIntegrationCallback(RID, Object, String, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the function used to calculate physics for an object, if that object allows it (see <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_BodySetOmitForceIntegration_Godot_RID_System_Boolean_">BodySetOmitForceIntegration(RID, Boolean)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2449,7 +2510,8 @@
   
   <a id="Godot_Physics2DServer_BodySetMaxContactsReported_" data-uid="Godot.Physics2DServer.BodySetMaxContactsReported*"></a>
   <h4 id="Godot_Physics2DServer_BodySetMaxContactsReported_Godot_RID_System_Int32_" data-uid="Godot.Physics2DServer.BodySetMaxContactsReported(Godot.RID,System.Int32)">BodySetMaxContactsReported(RID, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the maximum contacts to report. Bodies can keep a log of the contacts with other bodies, this is enabled by setting the maximum amount of contacts reported to a number greater than 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2481,7 +2543,8 @@
   
   <a id="Godot_Physics2DServer_BodySetMode_" data-uid="Godot.Physics2DServer.BodySetMode*"></a>
   <h4 id="Godot_Physics2DServer_BodySetMode_Godot_RID_Godot_Physics2DServer_BodyMode_" data-uid="Godot.Physics2DServer.BodySetMode(Godot.RID,Godot.Physics2DServer.BodyMode)">BodySetMode(RID, Physics2DServer.BodyMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the body mode using one of the <a class="xref" href="Godot.Physics2DServer.BodyMode.html">Physics2DServer.BodyMode</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2513,7 +2576,8 @@
   
   <a id="Godot_Physics2DServer_BodySetOmitForceIntegration_" data-uid="Godot.Physics2DServer.BodySetOmitForceIntegration*"></a>
   <h4 id="Godot_Physics2DServer_BodySetOmitForceIntegration_Godot_RID_System_Boolean_" data-uid="Godot.Physics2DServer.BodySetOmitForceIntegration(Godot.RID,System.Boolean)">BodySetOmitForceIntegration(RID, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets whether a body uses a callback function to calculate its own physics (see <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_BodySetForceIntegrationCallback_Godot_RID_Godot_Object_System_String_System_Object_">BodySetForceIntegrationCallback(RID, Object, String, Object)</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2545,7 +2609,8 @@
   
   <a id="Godot_Physics2DServer_BodySetParam_" data-uid="Godot.Physics2DServer.BodySetParam*"></a>
   <h4 id="Godot_Physics2DServer_BodySetParam_Godot_RID_Godot_Physics2DServer_BodyParameter_System_Single_" data-uid="Godot.Physics2DServer.BodySetParam(Godot.RID,Godot.Physics2DServer.BodyParameter,System.Single)">BodySetParam(RID, Physics2DServer.BodyParameter, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a body parameter. See <a class="xref" href="Godot.Physics2DServer.BodyParameter.html">Physics2DServer.BodyParameter</a> for a list of available parameters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2582,7 +2647,8 @@
   
   <a id="Godot_Physics2DServer_BodySetShape_" data-uid="Godot.Physics2DServer.BodySetShape*"></a>
   <h4 id="Godot_Physics2DServer_BodySetShape_Godot_RID_System_Int32_Godot_RID_" data-uid="Godot.Physics2DServer.BodySetShape(Godot.RID,System.Int32,Godot.RID)">BodySetShape(RID, Int32, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Substitutes a given body shape by another. The old shape is selected by its index, the new one by its <a class="xref" href="Godot.RID.html">RID</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2619,7 +2685,8 @@
   
   <a id="Godot_Physics2DServer_BodySetShapeAsOneWayCollision_" data-uid="Godot.Physics2DServer.BodySetShapeAsOneWayCollision*"></a>
   <h4 id="Godot_Physics2DServer_BodySetShapeAsOneWayCollision_Godot_RID_System_Int32_System_Boolean_System_Single_" data-uid="Godot.Physics2DServer.BodySetShapeAsOneWayCollision(Godot.RID,System.Int32,System.Boolean,System.Single)">BodySetShapeAsOneWayCollision(RID, Int32, Boolean, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables one way collision on body if <code>enable</code> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2661,7 +2728,8 @@
   
   <a id="Godot_Physics2DServer_BodySetShapeDisabled_" data-uid="Godot.Physics2DServer.BodySetShapeDisabled*"></a>
   <h4 id="Godot_Physics2DServer_BodySetShapeDisabled_Godot_RID_System_Int32_System_Boolean_" data-uid="Godot.Physics2DServer.BodySetShapeDisabled(Godot.RID,System.Int32,System.Boolean)">BodySetShapeDisabled(RID, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables shape in body if <code>disable</code> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2698,7 +2766,8 @@
   
   <a id="Godot_Physics2DServer_BodySetShapeMetadata_" data-uid="Godot.Physics2DServer.BodySetShapeMetadata*"></a>
   <h4 id="Godot_Physics2DServer_BodySetShapeMetadata_Godot_RID_System_Int32_System_Object_" data-uid="Godot.Physics2DServer.BodySetShapeMetadata(Godot.RID,System.Int32,System.Object)">BodySetShapeMetadata(RID, Int32, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets metadata of a shape within a body. This metadata is different from <a class="xref" href="Godot.Object.html#Godot_Object_SetMeta_System_String_System_Object_">SetMeta(String, Object)</a>, and can be retrieved on shape queries.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2735,7 +2804,8 @@
   
   <a id="Godot_Physics2DServer_BodySetShapeTransform_" data-uid="Godot.Physics2DServer.BodySetShapeTransform*"></a>
   <h4 id="Godot_Physics2DServer_BodySetShapeTransform_Godot_RID_System_Int32_Godot_Transform2D_" data-uid="Godot.Physics2DServer.BodySetShapeTransform(Godot.RID,System.Int32,Godot.Transform2D)">BodySetShapeTransform(RID, Int32, Transform2D)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the transform matrix for a body shape.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2772,7 +2842,8 @@
   
   <a id="Godot_Physics2DServer_BodySetSpace_" data-uid="Godot.Physics2DServer.BodySetSpace*"></a>
   <h4 id="Godot_Physics2DServer_BodySetSpace_Godot_RID_Godot_RID_" data-uid="Godot.Physics2DServer.BodySetSpace(Godot.RID,Godot.RID)">BodySetSpace(RID, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns a space to the body (see <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_SpaceCreate">SpaceCreate()</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2804,7 +2875,9 @@
   
   <a id="Godot_Physics2DServer_BodySetState_" data-uid="Godot.Physics2DServer.BodySetState*"></a>
   <h4 id="Godot_Physics2DServer_BodySetState_Godot_RID_Godot_Physics2DServer_BodyState_System_Object_" data-uid="Godot.Physics2DServer.BodySetState(Godot.RID,Godot.Physics2DServer.BodyState,System.Object)">BodySetState(RID, Physics2DServer.BodyState, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a body state using one of the <a class="xref" href="Godot.Physics2DServer.BodyState.html">Physics2DServer.BodyState</a> constants.</p>
+<p>Note that the method doesn&apos;t take effect immediately. The state will change on the next physics frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2841,7 +2914,8 @@
   
   <a id="Godot_Physics2DServer_BodyTestMotion_" data-uid="Godot.Physics2DServer.BodyTestMotion*"></a>
   <h4 id="Godot_Physics2DServer_BodyTestMotion_Godot_RID_Godot_Transform2D_Godot_Vector2_System_Boolean_System_Single_Godot_Physics2DTestMotionResult_System_Boolean_Godot_Collections_Array_" data-uid="Godot.Physics2DServer.BodyTestMotion(Godot.RID,Godot.Transform2D,Godot.Vector2,System.Boolean,System.Single,Godot.Physics2DTestMotionResult,System.Boolean,Godot.Collections.Array)">BodyTestMotion(RID, Transform2D, Vector2, Boolean, Single, Physics2DTestMotionResult, Boolean, Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if a collision would result from moving in the given direction from a given point in space. Margin increases the size of the shapes involved in the collision detection. <a class="xref" href="Godot.Physics2DTestMotionResult.html">Physics2DTestMotionResult</a> can be passed to return additional information in.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2895,7 +2969,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">exclude</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3018,7 +3093,8 @@
   
   <a id="Godot_Physics2DServer_DampedSpringJointCreate_" data-uid="Godot.Physics2DServer.DampedSpringJointCreate*"></a>
   <h4 id="Godot_Physics2DServer_DampedSpringJointCreate_Godot_Vector2_Godot_Vector2_Godot_RID_Godot_RID_" data-uid="Godot.Physics2DServer.DampedSpringJointCreate(Godot.Vector2,Godot.Vector2,Godot.RID,Godot.RID)">DampedSpringJointCreate(Vector2, Vector2, RID, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a damped spring joint between two bodies. If not specified, the second body is assumed to be the joint itself.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3075,7 +3151,8 @@
   
   <a id="Godot_Physics2DServer_DampedStringJointGetParam_" data-uid="Godot.Physics2DServer.DampedStringJointGetParam*"></a>
   <h4 id="Godot_Physics2DServer_DampedStringJointGetParam_Godot_RID_Godot_Physics2DServer_DampedStringParam_" data-uid="Godot.Physics2DServer.DampedStringJointGetParam(Godot.RID,Godot.Physics2DServer.DampedStringParam)">DampedStringJointGetParam(RID, Physics2DServer.DampedStringParam)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of a damped spring joint parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3122,7 +3199,8 @@
   
   <a id="Godot_Physics2DServer_DampedStringJointSetParam_" data-uid="Godot.Physics2DServer.DampedStringJointSetParam*"></a>
   <h4 id="Godot_Physics2DServer_DampedStringJointSetParam_Godot_RID_Godot_Physics2DServer_DampedStringParam_System_Single_" data-uid="Godot.Physics2DServer.DampedStringJointSetParam(Godot.RID,Godot.Physics2DServer.DampedStringParam,System.Single)">DampedStringJointSetParam(RID, Physics2DServer.DampedStringParam, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a damped spring joint parameter. See <a class="xref" href="Godot.Physics2DServer.DampedStringParam.html">Physics2DServer.DampedStringParam</a> for a list of available parameters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3159,7 +3237,8 @@
   
   <a id="Godot_Physics2DServer_FreeRid_" data-uid="Godot.Physics2DServer.FreeRid*"></a>
   <h4 id="Godot_Physics2DServer_FreeRid_Godot_RID_" data-uid="Godot.Physics2DServer.FreeRid(Godot.RID)">FreeRid(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Destroys any of the objects created by Physics2DServer. If the <a class="xref" href="Godot.RID.html">RID</a> passed is not one of the objects that can be created by Physics2DServer, an error will be sent to the console.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3186,7 +3265,8 @@
   
   <a id="Godot_Physics2DServer_GetProcessInfo_" data-uid="Godot.Physics2DServer.GetProcessInfo*"></a>
   <h4 id="Godot_Physics2DServer_GetProcessInfo_Godot_Physics2DServer_ProcessInfo_" data-uid="Godot.Physics2DServer.GetProcessInfo(Godot.Physics2DServer.ProcessInfo)">GetProcessInfo(Physics2DServer.ProcessInfo)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns information about the current state of the 2D physics engine. See <a class="xref" href="Godot.Physics2DServer.ProcessInfo.html">Physics2DServer.ProcessInfo</a> for a list of available states.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3228,7 +3308,8 @@
   
   <a id="Godot_Physics2DServer_GrooveJointCreate_" data-uid="Godot.Physics2DServer.GrooveJointCreate*"></a>
   <h4 id="Godot_Physics2DServer_GrooveJointCreate_Godot_Vector2_Godot_Vector2_Godot_Vector2_Godot_RID_Godot_RID_" data-uid="Godot.Physics2DServer.GrooveJointCreate(Godot.Vector2,Godot.Vector2,Godot.Vector2,Godot.RID,Godot.RID)">GrooveJointCreate(Vector2, Vector2, Vector2, RID, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a groove joint between two bodies. If not specified, the bodies are assumed to be the joint itself.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3290,7 +3371,8 @@
   
   <a id="Godot_Physics2DServer_JointGetParam_" data-uid="Godot.Physics2DServer.JointGetParam*"></a>
   <h4 id="Godot_Physics2DServer_JointGetParam_Godot_RID_Godot_Physics2DServer_JointParam_" data-uid="Godot.Physics2DServer.JointGetParam(Godot.RID,Godot.Physics2DServer.JointParam)">JointGetParam(RID, Physics2DServer.JointParam)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of a joint parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3337,7 +3419,8 @@
   
   <a id="Godot_Physics2DServer_JointGetType_" data-uid="Godot.Physics2DServer.JointGetType*"></a>
   <h4 id="Godot_Physics2DServer_JointGetType_Godot_RID_" data-uid="Godot.Physics2DServer.JointGetType(Godot.RID)">JointGetType(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a joint&apos;s type (see <a class="xref" href="Godot.Physics2DServer.JointType.html">Physics2DServer.JointType</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3379,7 +3462,8 @@
   
   <a id="Godot_Physics2DServer_JointSetParam_" data-uid="Godot.Physics2DServer.JointSetParam*"></a>
   <h4 id="Godot_Physics2DServer_JointSetParam_Godot_RID_Godot_Physics2DServer_JointParam_System_Single_" data-uid="Godot.Physics2DServer.JointSetParam(Godot.RID,Godot.Physics2DServer.JointParam,System.Single)">JointSetParam(RID, Physics2DServer.JointParam, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a joint parameter. See <a class="xref" href="Godot.Physics2DServer.JointParam.html">Physics2DServer.JointParam</a> for a list of available parameters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3441,7 +3525,8 @@
   
   <a id="Godot_Physics2DServer_PinJointCreate_" data-uid="Godot.Physics2DServer.PinJointCreate*"></a>
   <h4 id="Godot_Physics2DServer_PinJointCreate_Godot_Vector2_Godot_RID_Godot_RID_" data-uid="Godot.Physics2DServer.PinJointCreate(Godot.Vector2,Godot.RID,Godot.RID)">PinJointCreate(Vector2, RID, RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a pin joint between two bodies. If not specified, the second body is assumed to be the joint itself.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3568,7 +3653,8 @@
   
   <a id="Godot_Physics2DServer_SetActive_" data-uid="Godot.Physics2DServer.SetActive*"></a>
   <h4 id="Godot_Physics2DServer_SetActive_System_Boolean_" data-uid="Godot.Physics2DServer.SetActive(System.Boolean)">SetActive(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Activates or deactivates the 2D physics engine.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3595,7 +3681,8 @@
   
   <a id="Godot_Physics2DServer_SetCollisionIterations_" data-uid="Godot.Physics2DServer.SetCollisionIterations*"></a>
   <h4 id="Godot_Physics2DServer_SetCollisionIterations_System_Int32_" data-uid="Godot.Physics2DServer.SetCollisionIterations(System.Int32)">SetCollisionIterations(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the amount of iterations for calculating velocities of colliding bodies. The greater the amount of iterations, the more accurate the collisions will be. However, a greater amount of iterations requires more CPU power, which can decrease performance. The default value is <code>8</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3622,7 +3709,8 @@
   
   <a id="Godot_Physics2DServer_ShapeGetData_" data-uid="Godot.Physics2DServer.ShapeGetData*"></a>
   <h4 id="Godot_Physics2DServer_ShapeGetData_Godot_RID_" data-uid="Godot.Physics2DServer.ShapeGetData(Godot.RID)">ShapeGetData(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the shape data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3664,7 +3752,8 @@
   
   <a id="Godot_Physics2DServer_ShapeGetType_" data-uid="Godot.Physics2DServer.ShapeGetType*"></a>
   <h4 id="Godot_Physics2DServer_ShapeGetType_Godot_RID_" data-uid="Godot.Physics2DServer.ShapeGetType(Godot.RID)">ShapeGetType(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a shape&apos;s type (see <a class="xref" href="Godot.Physics2DServer.ShapeType.html">Physics2DServer.ShapeType</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3706,7 +3795,8 @@
   
   <a id="Godot_Physics2DServer_ShapeSetData_" data-uid="Godot.Physics2DServer.ShapeSetData*"></a>
   <h4 id="Godot_Physics2DServer_ShapeSetData_Godot_RID_System_Object_" data-uid="Godot.Physics2DServer.ShapeSetData(Godot.RID,System.Object)">ShapeSetData(RID, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the shape data that defines its shape and size. The data to be passed depends on the kind of shape created <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_ShapeGetType_Godot_RID_">ShapeGetType(RID)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3738,7 +3828,8 @@
   
   <a id="Godot_Physics2DServer_SpaceCreate_" data-uid="Godot.Physics2DServer.SpaceCreate*"></a>
   <h4 id="Godot_Physics2DServer_SpaceCreate" data-uid="Godot.Physics2DServer.SpaceCreate">SpaceCreate()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a space. A space is a collection of parameters for the physics engine that can be assigned to an area or a body. It can be assigned to an area with <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_AreaSetSpace_Godot_RID_Godot_RID_">AreaSetSpace(RID, RID)</a>, or to a body with <a class="xref" href="Godot.Physics2DServer.html#Godot_Physics2DServer_BodySetSpace_Godot_RID_Godot_RID_">BodySetSpace(RID, RID)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3763,7 +3854,8 @@
   
   <a id="Godot_Physics2DServer_SpaceGetDirectState_" data-uid="Godot.Physics2DServer.SpaceGetDirectState*"></a>
   <h4 id="Godot_Physics2DServer_SpaceGetDirectState_Godot_RID_" data-uid="Godot.Physics2DServer.SpaceGetDirectState(Godot.RID)">SpaceGetDirectState(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the state of a space, a <a class="xref" href="Godot.Physics2DDirectSpaceState.html">Physics2DDirectSpaceState</a>. This object can be used to make collision/intersection queries.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3805,7 +3897,8 @@
   
   <a id="Godot_Physics2DServer_SpaceGetParam_" data-uid="Godot.Physics2DServer.SpaceGetParam*"></a>
   <h4 id="Godot_Physics2DServer_SpaceGetParam_Godot_RID_Godot_Physics2DServer_SpaceParameter_" data-uid="Godot.Physics2DServer.SpaceGetParam(Godot.RID,Godot.Physics2DServer.SpaceParameter)">SpaceGetParam(RID, Physics2DServer.SpaceParameter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of a space parameter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3852,7 +3945,8 @@
   
   <a id="Godot_Physics2DServer_SpaceIsActive_" data-uid="Godot.Physics2DServer.SpaceIsActive*"></a>
   <h4 id="Godot_Physics2DServer_SpaceIsActive_Godot_RID_" data-uid="Godot.Physics2DServer.SpaceIsActive(Godot.RID)">SpaceIsActive(RID)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns whether the space is active.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3894,7 +3988,8 @@
   
   <a id="Godot_Physics2DServer_SpaceSetActive_" data-uid="Godot.Physics2DServer.SpaceSetActive*"></a>
   <h4 id="Godot_Physics2DServer_SpaceSetActive_Godot_RID_System_Boolean_" data-uid="Godot.Physics2DServer.SpaceSetActive(Godot.RID,System.Boolean)">SpaceSetActive(RID, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Marks a space as active. It will not have an effect, unless it is assigned to an area or body.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3926,7 +4021,8 @@
   
   <a id="Godot_Physics2DServer_SpaceSetParam_" data-uid="Godot.Physics2DServer.SpaceSetParam*"></a>
   <h4 id="Godot_Physics2DServer_SpaceSetParam_Godot_RID_Godot_Physics2DServer_SpaceParameter_System_Single_" data-uid="Godot.Physics2DServer.SpaceSetParam(Godot.RID,Godot.Physics2DServer.SpaceParameter,System.Single)">SpaceSetParam(RID, Physics2DServer.SpaceParameter, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the value for a space parameter. See <a class="xref" href="Godot.Physics2DServer.SpaceParameter.html">Physics2DServer.SpaceParameter</a> for a list of available parameters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

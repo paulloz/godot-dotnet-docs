@@ -83,7 +83,11 @@
   
   <h1 id="Godot_ItemList" data-uid="Godot.ItemList" class="text-break">Class ItemList
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This control provides a selectable list of items that may be in a single (or multiple columns) with option of text, icons, or both text and icon. Tooltips are supported and may be different for every item in the list.</p>
+<p>Selectable items in the list may be selected or deselected and multiple selection may be enabled. Selection with right mouse button may also be enabled to allow use of popup context menus. Items may also be &quot;activated&quot; by double-clicking them or by pressing Enter.</p>
+<p>Item text only supports single-line strings, newline characters (e.g. <code>\n</code>) in the string won&apos;t produce a newline. Text wrapping is enabled in <a class="xref" href="Godot.ItemList.IconModeEnum.html#Godot_ItemList_IconModeEnum_Top">Top</a> mode, but column&apos;s width is adjusted to fully fit its content by default. You need to set <a class="xref" href="Godot.ItemList.html#Godot_ItemList_FixedColumnWidth">FixedColumnWidth</a> greater than zero to wrap the text.</p>
+<p>Incremental search: Like <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> and <a class="xref" href="Godot.Tree.html">Tree</a>, <a class="xref" href="Godot.ItemList.html">ItemList</a> supports searching within the list while the control is focused. Press a key that matches the first letter of an item&apos;s name to select the first item starting with the given letter. After that point, there are two ways to perform incremental search: 1) Press the same key again before the timeout duration to select the next item starting with the same letter. 2) Press letter keys that match the rest of the word before the timeout duration to match to select the item in question directly. Both of these actions will be reset to the beginning of the list if the timeout duration has passed since the last keystroke was registered. You can adjust the timeout duration by changing .</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1463,7 +1467,8 @@
   
   <a id="Godot_ItemList_AllowReselect_" data-uid="Godot.ItemList.AllowReselect*"></a>
   <h4 id="Godot_ItemList_AllowReselect" data-uid="Godot.ItemList.AllowReselect">AllowReselect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the currently selected item can be selected again.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1488,7 +1493,8 @@
   
   <a id="Godot_ItemList_AllowRmbSelect_" data-uid="Godot.ItemList.AllowRmbSelect*"></a>
   <h4 id="Godot_ItemList_AllowRmbSelect" data-uid="Godot.ItemList.AllowRmbSelect">AllowRmbSelect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, right mouse button click can select items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1513,7 +1519,8 @@
   
   <a id="Godot_ItemList_AutoHeight_" data-uid="Godot.ItemList.AutoHeight*"></a>
   <h4 id="Godot_ItemList_AutoHeight" data-uid="Godot.ItemList.AutoHeight">AutoHeight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the control will automatically resize the height to fit its content.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1538,7 +1545,9 @@
   
   <a id="Godot_ItemList_FixedColumnWidth_" data-uid="Godot.ItemList.FixedColumnWidth*"></a>
   <h4 id="Godot_ItemList_FixedColumnWidth" data-uid="Godot.ItemList.FixedColumnWidth">FixedColumnWidth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The width all columns will be adjusted to.</p>
+<p>A value of zero disables the adjustment, each item will have a width equal to the width of its content and the columns will have an uneven width.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1563,7 +1572,9 @@
   
   <a id="Godot_ItemList_FixedIconSize_" data-uid="Godot.ItemList.FixedIconSize*"></a>
   <h4 id="Godot_ItemList_FixedIconSize" data-uid="Godot.ItemList.FixedIconSize">FixedIconSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The size all icons will be adjusted to.</p>
+<p>If either X or Y component is not greater than zero, icon size won&apos;t be affected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1588,7 +1599,8 @@
   
   <a id="Godot_ItemList_IconMode_" data-uid="Godot.ItemList.IconMode*"></a>
   <h4 id="Godot_ItemList_IconMode" data-uid="Godot.ItemList.IconMode">IconMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The icon position, whether above or to the left of the text. See the <a class="xref" href="Godot.ItemList.IconModeEnum.html">ItemList.IconModeEnum</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1613,7 +1625,8 @@
   
   <a id="Godot_ItemList_IconScale_" data-uid="Godot.ItemList.IconScale*"></a>
   <h4 id="Godot_ItemList_IconScale" data-uid="Godot.ItemList.IconScale">IconScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The scale of icon applied after <a class="xref" href="Godot.ItemList.html#Godot_ItemList_FixedIconSize">FixedIconSize</a> and transposing takes effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1663,7 +1676,10 @@
   
   <a id="Godot_ItemList_MaxColumns_" data-uid="Godot.ItemList.MaxColumns*"></a>
   <h4 id="Godot_ItemList_MaxColumns" data-uid="Godot.ItemList.MaxColumns">MaxColumns</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum columns the list will have.</p>
+<p>If greater than zero, the content will be split among the specified columns.</p>
+<p>A value of zero means unlimited columns, i.e. all items will be put in the same row.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1688,7 +1704,9 @@
   
   <a id="Godot_ItemList_MaxTextLines_" data-uid="Godot.ItemList.MaxTextLines*"></a>
   <h4 id="Godot_ItemList_MaxTextLines" data-uid="Godot.ItemList.MaxTextLines">MaxTextLines</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Maximum lines of text allowed in each item. Space will be reserved even when there is not enough lines of text to display.</p>
+<p>Note: This property takes effect only when <a class="xref" href="Godot.ItemList.html#Godot_ItemList_IconMode">IconMode</a> is <a class="xref" href="Godot.ItemList.IconModeEnum.html#Godot_ItemList_IconModeEnum_Top">Top</a>. To make the text wrap, <a class="xref" href="Godot.ItemList.html#Godot_ItemList_FixedColumnWidth">FixedColumnWidth</a> should be greater than zero.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1713,7 +1731,9 @@
   
   <a id="Godot_ItemList_SameColumnWidth_" data-uid="Godot.ItemList.SameColumnWidth*"></a>
   <h4 id="Godot_ItemList_SameColumnWidth" data-uid="Godot.ItemList.SameColumnWidth">SameColumnWidth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether all columns will have the same width.</p>
+<p>If <code>true</code>, the width is equal to the largest column width of all columns.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1738,7 +1758,8 @@
   
   <a id="Godot_ItemList_SelectMode_" data-uid="Godot.ItemList.SelectMode*"></a>
   <h4 id="Godot_ItemList_SelectMode" data-uid="Godot.ItemList.SelectMode">SelectMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allows single or multiple item selection. See the <a class="xref" href="Godot.ItemList.SelectModeEnum.html">ItemList.SelectModeEnum</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1765,7 +1786,8 @@
   
   <a id="Godot_ItemList_AddIconItem_" data-uid="Godot.ItemList.AddIconItem*"></a>
   <h4 id="Godot_ItemList_AddIconItem_Godot_Texture_System_Boolean_" data-uid="Godot.ItemList.AddIconItem(Godot.Texture,System.Boolean)">AddIconItem(Texture, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an item to the item list with no text, only an icon.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1797,7 +1819,9 @@
   
   <a id="Godot_ItemList_AddItem_" data-uid="Godot.ItemList.AddItem*"></a>
   <h4 id="Godot_ItemList_AddItem_System_String_Godot_Texture_System_Boolean_" data-uid="Godot.ItemList.AddItem(System.String,Godot.Texture,System.Boolean)">AddItem(String, Texture, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds an item to the item list with specified text. Specify an <code>icon</code>, or use <code>null</code> as the <code>icon</code> for a list item with no icon.</p>
+<p>If selectable is <code>true</code>, the list item will be selectable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1834,7 +1858,8 @@
   
   <a id="Godot_ItemList_Clear_" data-uid="Godot.ItemList.Clear*"></a>
   <h4 id="Godot_ItemList_Clear" data-uid="Godot.ItemList.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all items from the list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1844,7 +1869,8 @@
   
   <a id="Godot_ItemList_EnsureCurrentIsVisible_" data-uid="Godot.ItemList.EnsureCurrentIsVisible*"></a>
   <h4 id="Godot_ItemList_EnsureCurrentIsVisible" data-uid="Godot.ItemList.EnsureCurrentIsVisible">EnsureCurrentIsVisible()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Ensure current selection is visible, adjusting the scroll position as necessary.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2004,7 +2030,9 @@
   
   <a id="Godot_ItemList_GetItemAtPosition_" data-uid="Godot.ItemList.GetItemAtPosition*"></a>
   <h4 id="Godot_ItemList_GetItemAtPosition_Godot_Vector2_System_Boolean_" data-uid="Godot.ItemList.GetItemAtPosition(Godot.Vector2,System.Boolean)">GetItemAtPosition(Vector2, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the item index at the given <code>position</code>.</p>
+<p>When there is no item at that point, -1 will be returned if <code>exact</code> is <code>true</code>, and the closest item index will be returned otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2051,7 +2079,8 @@
   
   <a id="Godot_ItemList_GetItemCount_" data-uid="Godot.ItemList.GetItemCount*"></a>
   <h4 id="Godot_ItemList_GetItemCount" data-uid="Godot.ItemList.GetItemCount">GetItemCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of items currently in the list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2076,7 +2105,8 @@
   
   <a id="Godot_ItemList_GetItemCustomBgColor_" data-uid="Godot.ItemList.GetItemCustomBgColor*"></a>
   <h4 id="Godot_ItemList_GetItemCustomBgColor_System_Int32_" data-uid="Godot.ItemList.GetItemCustomBgColor(System.Int32)">GetItemCustomBgColor(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the custom background color of the item specified by <code>idx</code> index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2118,7 +2148,8 @@
   
   <a id="Godot_ItemList_GetItemCustomFgColor_" data-uid="Godot.ItemList.GetItemCustomFgColor*"></a>
   <h4 id="Godot_ItemList_GetItemCustomFgColor_System_Int32_" data-uid="Godot.ItemList.GetItemCustomFgColor(System.Int32)">GetItemCustomFgColor(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the custom foreground color of the item specified by <code>idx</code> index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2160,7 +2191,8 @@
   
   <a id="Godot_ItemList_GetItemIcon_" data-uid="Godot.ItemList.GetItemIcon*"></a>
   <h4 id="Godot_ItemList_GetItemIcon_System_Int32_" data-uid="Godot.ItemList.GetItemIcon(System.Int32)">GetItemIcon(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the icon associated with the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2202,7 +2234,8 @@
   
   <a id="Godot_ItemList_GetItemIconModulate_" data-uid="Godot.ItemList.GetItemIconModulate*"></a>
   <h4 id="Godot_ItemList_GetItemIconModulate_System_Int32_" data-uid="Godot.ItemList.GetItemIconModulate(System.Int32)">GetItemIconModulate(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="Godot.Color.html">Color</a> modulating item&apos;s icon at the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2244,7 +2277,8 @@
   
   <a id="Godot_ItemList_GetItemIconRegion_" data-uid="Godot.ItemList.GetItemIconRegion*"></a>
   <h4 id="Godot_ItemList_GetItemIconRegion_System_Int32_" data-uid="Godot.ItemList.GetItemIconRegion(System.Int32)">GetItemIconRegion(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the region of item&apos;s icon used. The whole icon will be used if the region has no area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2286,7 +2320,8 @@
   
   <a id="Godot_ItemList_GetItemMetadata_" data-uid="Godot.ItemList.GetItemMetadata*"></a>
   <h4 id="Godot_ItemList_GetItemMetadata_System_Int32_" data-uid="Godot.ItemList.GetItemMetadata(System.Int32)">GetItemMetadata(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the metadata value of the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2328,7 +2363,8 @@
   
   <a id="Godot_ItemList_GetItemText_" data-uid="Godot.ItemList.GetItemText*"></a>
   <h4 id="Godot_ItemList_GetItemText_System_Int32_" data-uid="Godot.ItemList.GetItemText(System.Int32)">GetItemText(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the text associated with the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2370,7 +2406,8 @@
   
   <a id="Godot_ItemList_GetItemTooltip_" data-uid="Godot.ItemList.GetItemTooltip*"></a>
   <h4 id="Godot_ItemList_GetItemTooltip_System_Int32_" data-uid="Godot.ItemList.GetItemTooltip(System.Int32)">GetItemTooltip(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tooltip hint associated with the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2462,7 +2499,8 @@
   
   <a id="Godot_ItemList_GetSelectedItems_" data-uid="Godot.ItemList.GetSelectedItems*"></a>
   <h4 id="Godot_ItemList_GetSelectedItems" data-uid="Godot.ItemList.GetSelectedItems">GetSelectedItems()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array with the indexes of the selected items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2512,7 +2550,9 @@
   
   <a id="Godot_ItemList_GetVScroll_" data-uid="Godot.ItemList.GetVScroll*"></a>
   <h4 id="Godot_ItemList_GetVScroll" data-uid="Godot.ItemList.GetVScroll">GetVScroll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the vertical scrollbar.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2562,7 +2602,8 @@
   
   <a id="Godot_ItemList_IsAnythingSelected_" data-uid="Godot.ItemList.IsAnythingSelected*"></a>
   <h4 id="Godot_ItemList_IsAnythingSelected" data-uid="Godot.ItemList.IsAnythingSelected">IsAnythingSelected()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if one or more items are selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2587,7 +2628,8 @@
   
   <a id="Godot_ItemList_IsItemDisabled_" data-uid="Godot.ItemList.IsItemDisabled*"></a>
   <h4 id="Godot_ItemList_IsItemDisabled_System_Int32_" data-uid="Godot.ItemList.IsItemDisabled(System.Int32)">IsItemDisabled(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the item at the specified index is disabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2629,7 +2671,8 @@
   
   <a id="Godot_ItemList_IsItemIconTransposed_" data-uid="Godot.ItemList.IsItemIconTransposed*"></a>
   <h4 id="Godot_ItemList_IsItemIconTransposed_System_Int32_" data-uid="Godot.ItemList.IsItemIconTransposed(System.Int32)">IsItemIconTransposed(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the item icon will be drawn transposed, i.e. the X and Y axes are swapped.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2671,7 +2714,8 @@
   
   <a id="Godot_ItemList_IsItemSelectable_" data-uid="Godot.ItemList.IsItemSelectable*"></a>
   <h4 id="Godot_ItemList_IsItemSelectable_System_Int32_" data-uid="Godot.ItemList.IsItemSelectable(System.Int32)">IsItemSelectable(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the item at the specified index is selectable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2713,7 +2757,8 @@
   
   <a id="Godot_ItemList_IsItemTooltipEnabled_" data-uid="Godot.ItemList.IsItemTooltipEnabled*"></a>
   <h4 id="Godot_ItemList_IsItemTooltipEnabled_System_Int32_" data-uid="Godot.ItemList.IsItemTooltipEnabled(System.Int32)">IsItemTooltipEnabled(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the tooltip is enabled for specified item index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2780,7 +2825,8 @@
   
   <a id="Godot_ItemList_IsSelected_" data-uid="Godot.ItemList.IsSelected*"></a>
   <h4 id="Godot_ItemList_IsSelected_System_Int32_" data-uid="Godot.ItemList.IsSelected(System.Int32)">IsSelected(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the item at the specified index is currently selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2822,7 +2868,8 @@
   
   <a id="Godot_ItemList_MoveItem_" data-uid="Godot.ItemList.MoveItem*"></a>
   <h4 id="Godot_ItemList_MoveItem_System_Int32_System_Int32_" data-uid="Godot.ItemList.MoveItem(System.Int32,System.Int32)">MoveItem(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves item from index <code>from_idx</code> to <code>to_idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2854,7 +2901,8 @@
   
   <a id="Godot_ItemList_RemoveItem_" data-uid="Godot.ItemList.RemoveItem*"></a>
   <h4 id="Godot_ItemList_RemoveItem_System_Int32_" data-uid="Godot.ItemList.RemoveItem(System.Int32)">RemoveItem(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the item specified by <code>idx</code> index from the list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2881,7 +2929,9 @@
   
   <a id="Godot_ItemList_Select_" data-uid="Godot.ItemList.Select*"></a>
   <h4 id="Godot_ItemList_Select_System_Int32_System_Boolean_" data-uid="Godot.ItemList.Select(System.Int32,System.Boolean)">Select(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Select the item at the specified index.</p>
+<p>Note: This method does not trigger the item selection signal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3102,7 +3152,8 @@
   
   <a id="Godot_ItemList_SetItemCustomBgColor_" data-uid="Godot.ItemList.SetItemCustomBgColor*"></a>
   <h4 id="Godot_ItemList_SetItemCustomBgColor_System_Int32_Godot_Color_" data-uid="Godot.ItemList.SetItemCustomBgColor(System.Int32,Godot.Color)">SetItemCustomBgColor(Int32, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the background color of the item specified by <code>idx</code> index to the specified <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3134,7 +3185,8 @@
   
   <a id="Godot_ItemList_SetItemCustomFgColor_" data-uid="Godot.ItemList.SetItemCustomFgColor*"></a>
   <h4 id="Godot_ItemList_SetItemCustomFgColor_System_Int32_Godot_Color_" data-uid="Godot.ItemList.SetItemCustomFgColor(System.Int32,Godot.Color)">SetItemCustomFgColor(Int32, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the foreground color of the item specified by <code>idx</code> index to the specified <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3166,7 +3218,9 @@
   
   <a id="Godot_ItemList_SetItemDisabled_" data-uid="Godot.ItemList.SetItemDisabled*"></a>
   <h4 id="Godot_ItemList_SetItemDisabled_System_Int32_System_Boolean_" data-uid="Godot.ItemList.SetItemDisabled(System.Int32,System.Boolean)">SetItemDisabled(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables (or enables) the item at the specified index.</p>
+<p>Disabled items cannot be selected and do not trigger activation signals (when double-clicking or pressing Enter).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3198,7 +3252,8 @@
   
   <a id="Godot_ItemList_SetItemIcon_" data-uid="Godot.ItemList.SetItemIcon*"></a>
   <h4 id="Godot_ItemList_SetItemIcon_System_Int32_Godot_Texture_" data-uid="Godot.ItemList.SetItemIcon(System.Int32,Godot.Texture)">SetItemIcon(Int32, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets (or replaces) the icon&apos;s <a class="xref" href="Godot.Texture.html">Texture</a> associated with the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3230,7 +3285,8 @@
   
   <a id="Godot_ItemList_SetItemIconModulate_" data-uid="Godot.ItemList.SetItemIconModulate*"></a>
   <h4 id="Godot_ItemList_SetItemIconModulate_System_Int32_Godot_Color_" data-uid="Godot.ItemList.SetItemIconModulate(System.Int32,Godot.Color)">SetItemIconModulate(Int32, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a modulating <a class="xref" href="Godot.Color.html">Color</a> of the item associated with the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3262,7 +3318,8 @@
   
   <a id="Godot_ItemList_SetItemIconRegion_" data-uid="Godot.ItemList.SetItemIconRegion*"></a>
   <h4 id="Godot_ItemList_SetItemIconRegion_System_Int32_Godot_Rect2_" data-uid="Godot.ItemList.SetItemIconRegion(System.Int32,Godot.Rect2)">SetItemIconRegion(Int32, Rect2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the region of item&apos;s icon used. The whole icon will be used if the region has no area.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3294,7 +3351,8 @@
   
   <a id="Godot_ItemList_SetItemIconTransposed_" data-uid="Godot.ItemList.SetItemIconTransposed*"></a>
   <h4 id="Godot_ItemList_SetItemIconTransposed_System_Int32_System_Boolean_" data-uid="Godot.ItemList.SetItemIconTransposed(System.Int32,System.Boolean)">SetItemIconTransposed(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets whether the item icon will be drawn transposed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3326,7 +3384,8 @@
   
   <a id="Godot_ItemList_SetItemMetadata_" data-uid="Godot.ItemList.SetItemMetadata*"></a>
   <h4 id="Godot_ItemList_SetItemMetadata_System_Int32_System_Object_" data-uid="Godot.ItemList.SetItemMetadata(System.Int32,System.Object)">SetItemMetadata(Int32, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a value (of any type) to be stored with the item associated with the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3358,7 +3417,8 @@
   
   <a id="Godot_ItemList_SetItemSelectable_" data-uid="Godot.ItemList.SetItemSelectable*"></a>
   <h4 id="Godot_ItemList_SetItemSelectable_System_Int32_System_Boolean_" data-uid="Godot.ItemList.SetItemSelectable(System.Int32,System.Boolean)">SetItemSelectable(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allows or disallows selection of the item associated with the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3390,7 +3450,8 @@
   
   <a id="Godot_ItemList_SetItemText_" data-uid="Godot.ItemList.SetItemText*"></a>
   <h4 id="Godot_ItemList_SetItemText_System_Int32_System_String_" data-uid="Godot.ItemList.SetItemText(System.Int32,System.String)">SetItemText(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets text of the item associated with the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3422,7 +3483,8 @@
   
   <a id="Godot_ItemList_SetItemTooltip_" data-uid="Godot.ItemList.SetItemTooltip*"></a>
   <h4 id="Godot_ItemList_SetItemTooltip_System_Int32_System_String_" data-uid="Godot.ItemList.SetItemTooltip(System.Int32,System.String)">SetItemTooltip(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tooltip hint for the item associated with the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3454,7 +3516,8 @@
   
   <a id="Godot_ItemList_SetItemTooltipEnabled_" data-uid="Godot.ItemList.SetItemTooltipEnabled*"></a>
   <h4 id="Godot_ItemList_SetItemTooltipEnabled_System_Int32_System_Boolean_" data-uid="Godot.ItemList.SetItemTooltipEnabled(System.Int32,System.Boolean)">SetItemTooltipEnabled(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets whether the tooltip hint is enabled for specified item index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3594,7 +3657,8 @@
   
   <a id="Godot_ItemList_SortItemsByText_" data-uid="Godot.ItemList.SortItemsByText*"></a>
   <h4 id="Godot_ItemList_SortItemsByText" data-uid="Godot.ItemList.SortItemsByText">SortItemsByText()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sorts items in the list by their text.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3604,7 +3668,8 @@
   
   <a id="Godot_ItemList_Unselect_" data-uid="Godot.ItemList.Unselect*"></a>
   <h4 id="Godot_ItemList_Unselect_System_Int32_" data-uid="Godot.ItemList.Unselect(System.Int32)">Unselect(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Ensures the item associated with the specified index is not selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3631,7 +3696,8 @@
   
   <a id="Godot_ItemList_UnselectAll_" data-uid="Godot.ItemList.UnselectAll*"></a>
   <h4 id="Godot_ItemList_UnselectAll" data-uid="Godot.ItemList.UnselectAll">UnselectAll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Ensures there are no items selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

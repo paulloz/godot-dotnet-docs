@@ -83,7 +83,9 @@
   
   <h1 id="Godot_PropertyTweener" data-uid="Godot.PropertyTweener" class="text-break">Class PropertyTweener
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a> is used to interpolate a property in an object. See <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenProperty_Godot_Object_Godot_NodePath_System_Object_System_Single_">TweenProperty(Object, NodePath, Object, Single)</a> for more usage information.</p>
+<p>Note: <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenProperty_Godot_Object_Godot_NodePath_System_Object_System_Single_">TweenProperty(Object, NodePath, Object, Single)</a> is the only correct way to create <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a>. Any <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a> created manually will not function correctly.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -298,7 +300,10 @@
   
   <a id="Godot_PropertyTweener_AsRelative_" data-uid="Godot.PropertyTweener.AsRelative*"></a>
   <h4 id="Godot_PropertyTweener_AsRelative" data-uid="Godot.PropertyTweener.AsRelative">AsRelative()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When called, the final value will be used as a relative value instead. Example:</p>
+<p><pre><code>var tween = get_tree().create_tween()
+tween.tween_property(self, &quot;position&quot;, Vector2.RIGHT * 100, 1).as_relative() #the node will move by 100 pixels to the right</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -323,7 +328,10 @@
   
   <a id="Godot_PropertyTweener_From_" data-uid="Godot.PropertyTweener.From*"></a>
   <h4 id="Godot_PropertyTweener_From_System_Object_" data-uid="Godot.PropertyTweener.From(System.Object)">From(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a custom initial value to the <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a>. Example:</p>
+<p><pre><code>var tween = get_tree().create_tween()
+tween.tween_property(self, &quot;position&quot;, Vector2(200, 100), 1).from(Vector2(100, 100) #this will move the node from position (100, 100) to (200, 100)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -365,7 +373,10 @@
   
   <a id="Godot_PropertyTweener_FromCurrent_" data-uid="Godot.PropertyTweener.FromCurrent*"></a>
   <h4 id="Godot_PropertyTweener_FromCurrent" data-uid="Godot.PropertyTweener.FromCurrent">FromCurrent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes the <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a> use the current property value (i.e. at the time of creating this <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a>) as a starting point. This is equivalent of using <a class="xref" href="Godot.PropertyTweener.html#Godot_PropertyTweener_From_System_Object_">From(Object)</a> with the current value. These two calls will do the same:</p>
+<p><pre><code>tween.tween_property(self, &quot;position&quot;, Vector2(200, 100), 1).from(position)
+tween.tween_property(self, &quot;position&quot;, Vector2(200, 100), 1).from_current()</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -390,7 +401,8 @@
   
   <a id="Godot_PropertyTweener_SetDelay_" data-uid="Godot.PropertyTweener.SetDelay*"></a>
   <h4 id="Godot_PropertyTweener_SetDelay_System_Single_" data-uid="Godot.PropertyTweener.SetDelay(System.Single)">SetDelay(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the time in seconds after which the <a class="xref" href="Godot.PropertyTweener.html">PropertyTweener</a> will start interpolating. By default there&apos;s no delay.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -432,7 +444,8 @@
   
   <a id="Godot_PropertyTweener_SetEase_" data-uid="Godot.PropertyTweener.SetEase*"></a>
   <h4 id="Godot_PropertyTweener_SetEase_Godot_Tween_EaseType_" data-uid="Godot.PropertyTweener.SetEase(Godot.Tween.EaseType)">SetEase(Tween.EaseType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the type of used easing from <a class="xref" href="Godot.Tween.EaseType.html">Tween.EaseType</a>. If not set, the default easing is used from the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> that contains this Tweener.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -474,7 +487,8 @@
   
   <a id="Godot_PropertyTweener_SetTrans_" data-uid="Godot.PropertyTweener.SetTrans*"></a>
   <h4 id="Godot_PropertyTweener_SetTrans_Godot_Tween_TransitionType_" data-uid="Godot.PropertyTweener.SetTrans(Godot.Tween.TransitionType)">SetTrans(Tween.TransitionType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the type of used transition from <a class="xref" href="Godot.Tween.TransitionType.html">Tween.TransitionType</a>. If not set, the default transition is used from the <a class="xref" href="Godot.SceneTreeTween.html">SceneTreeTween</a> that contains this Tweener.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

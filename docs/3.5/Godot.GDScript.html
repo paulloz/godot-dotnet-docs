@@ -83,7 +83,9 @@
   
   <h1 id="Godot_GDScript" data-uid="Godot.GDScript" class="text-break">Class GDScript
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A script implemented in the GDScript programming language. The script extends the functionality of all objects that instance it.</p>
+<p><a class="xref" href="Godot.GDScript.html#Godot_GDScript_New_System_Object___">New(Object[])</a> creates a new instance of the script. <a class="xref" href="Godot.Object.html#Godot_Object_SetScript_Godot_Reference_">SetScript(Reference)</a> extends an existing object, if that object&apos;s class matches one of the script&apos;s base classes.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -395,7 +397,8 @@
   
   <a id="Godot_GDScript_GetAsByteCode_" data-uid="Godot.GDScript.GetAsByteCode*"></a>
   <h4 id="Godot_GDScript_GetAsByteCode" data-uid="Godot.GDScript.GetAsByteCode">GetAsByteCode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns byte code for the script source code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -420,7 +423,12 @@
   
   <a id="Godot_GDScript_New_" data-uid="Godot.GDScript.New*"></a>
   <h4 id="Godot_GDScript_New_System_Object___" data-uid="Godot.GDScript.New(System.Object[])">New(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a new instance of the script.</p>
+<p>For example:</p>
+<p><pre><code>var MyClass = load(&quot;myclass.gd&quot;)
+var instance = MyClass.new()
+assert(instance.get_script() == MyClass)</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

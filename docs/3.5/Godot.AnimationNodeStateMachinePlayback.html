@@ -83,7 +83,11 @@
   
   <h1 id="Godot_AnimationNodeStateMachinePlayback" data-uid="Godot.AnimationNodeStateMachinePlayback" class="text-break">Class AnimationNodeStateMachinePlayback
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Allows control of <a class="xref" href="Godot.AnimationTree.html">AnimationTree</a> state machines created with <a class="xref" href="Godot.AnimationNodeStateMachine.html">AnimationNodeStateMachine</a>. Retrieve with <code>$AnimationTree.get(&quot;parameters/playback&quot;)</code>.</p>
+<p>Example:</p>
+<p><pre><code>var state_machine = $AnimationTree.get(&quot;parameters/playback&quot;)
+state_machine.travel(&quot;some_state&quot;)</code></pre></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -371,7 +375,8 @@
   
   <a id="Godot_AnimationNodeStateMachinePlayback_GetCurrentNode_" data-uid="Godot.AnimationNodeStateMachinePlayback.GetCurrentNode*"></a>
   <h4 id="Godot_AnimationNodeStateMachinePlayback_GetCurrentNode" data-uid="Godot.AnimationNodeStateMachinePlayback.GetCurrentNode">GetCurrentNode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the currently playing animation state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +401,8 @@
   
   <a id="Godot_AnimationNodeStateMachinePlayback_GetCurrentPlayPosition_" data-uid="Godot.AnimationNodeStateMachinePlayback.GetCurrentPlayPosition*"></a>
   <h4 id="Godot_AnimationNodeStateMachinePlayback_GetCurrentPlayPosition" data-uid="Godot.AnimationNodeStateMachinePlayback.GetCurrentPlayPosition">GetCurrentPlayPosition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the playback position within the current animation state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +427,8 @@
   
   <a id="Godot_AnimationNodeStateMachinePlayback_GetTravelPath_" data-uid="Godot.AnimationNodeStateMachinePlayback.GetTravelPath*"></a>
   <h4 id="Godot_AnimationNodeStateMachinePlayback_GetTravelPath" data-uid="Godot.AnimationNodeStateMachinePlayback.GetTravelPath">GetTravelPath()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current travel path as computed internally by the A* algorithm.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -446,7 +453,8 @@
   
   <a id="Godot_AnimationNodeStateMachinePlayback_IsPlaying_" data-uid="Godot.AnimationNodeStateMachinePlayback.IsPlaying*"></a>
   <h4 id="Godot_AnimationNodeStateMachinePlayback_IsPlaying" data-uid="Godot.AnimationNodeStateMachinePlayback.IsPlaying">IsPlaying()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if an animation is playing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,7 +479,8 @@
   
   <a id="Godot_AnimationNodeStateMachinePlayback_Start_" data-uid="Godot.AnimationNodeStateMachinePlayback.Start*"></a>
   <h4 id="Godot_AnimationNodeStateMachinePlayback_Start_System_String_" data-uid="Godot.AnimationNodeStateMachinePlayback.Start(System.String)">Start(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Starts playing the given animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -498,7 +507,8 @@
   
   <a id="Godot_AnimationNodeStateMachinePlayback_Stop_" data-uid="Godot.AnimationNodeStateMachinePlayback.Stop*"></a>
   <h4 id="Godot_AnimationNodeStateMachinePlayback_Stop" data-uid="Godot.AnimationNodeStateMachinePlayback.Stop">Stop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the currently playing animation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -508,7 +518,8 @@
   
   <a id="Godot_AnimationNodeStateMachinePlayback_Travel_" data-uid="Godot.AnimationNodeStateMachinePlayback.Travel*"></a>
   <h4 id="Godot_AnimationNodeStateMachinePlayback_Travel_System_String_" data-uid="Godot.AnimationNodeStateMachinePlayback.Travel(System.String)">Travel(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Transitions from the current state to another one, following the shortest path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

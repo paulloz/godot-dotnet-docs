@@ -83,7 +83,39 @@
   
   <h1 id="Godot_EditorImportPlugin" data-uid="Godot.EditorImportPlugin" class="text-break">Class EditorImportPlugin
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.EditorImportPlugin.html">EditorImportPlugin</a>s provide a way to extend the editor&apos;s resource import functionality. Use them to import resources from custom files or to provide alternatives to the editor&apos;s existing importers.</p>
+<p>EditorImportPlugins work by associating with specific file extensions and a resource type. See <a class="xref" href="Godot.EditorImportPlugin.html#Godot_EditorImportPlugin_GetRecognizedExtensions">GetRecognizedExtensions()</a> and <a class="xref" href="Godot.EditorImportPlugin.html#Godot_EditorImportPlugin_GetResourceType">GetResourceType()</a>. They may optionally specify some import presets that affect the import process. EditorImportPlugins are responsible for creating the resources and saving them in the <code>.import</code> directory (see ).</p>
+<p>Below is an example EditorImportPlugin that imports a <a class="xref" href="Godot.Mesh.html">Mesh</a> from a file with the extension &quot;.special&quot; or &quot;.spec&quot;:</p>
+<p><pre><code>tool
+extends EditorImportPlugin
+<p>func get_importer_name():
+return &quot;my.special.plugin&quot;</p>
+<p>func get_visible_name():
+return &quot;Special Mesh&quot;</p>
+<p>func get_recognized_extensions():
+return [&quot;special&quot;, &quot;spec&quot;]</p>
+<p>func get_save_extension():
+return &quot;mesh&quot;</p>
+<p>func get_resource_type():
+return &quot;Mesh&quot;</p>
+<p>func get_preset_count():
+return 1</p>
+<p>func get_preset_name(i):
+return &quot;Default&quot;</p>
+<p>func get_import_options(i):
+return [{&quot;name&quot;: &quot;my_option&quot;, &quot;default_value&quot;: false}]</p>
+<p>func import(source_file, save_path, options, platform_variants, gen_files):
+var file = File.new()
+if file.open(source_file, File.READ) != OK:
+return FAILED</p>
+<pre><code>var mesh = Mesh.new()
+# Fill the Mesh with data read in &amp;quot;file&amp;quot;, left as an exercise to the reader
+
+var filename = save_path + &amp;quot;.&amp;quot; + get_save_extension()
+return ResourceSaver.save(filename, mesh)&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+</code></pre>
+<p>To use <a class="xref" href="Godot.EditorImportPlugin.html">EditorImportPlugin</a>, register it using the <a class="xref" href="Godot.EditorPlugin.html#Godot_EditorPlugin_AddImportPlugin_Godot_EditorImportPlugin_">AddImportPlugin(EditorImportPlugin)</a> method first.</p>
+</code></pre></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -298,7 +330,8 @@
   
   <a id="Godot_EditorImportPlugin_GetImporterName_" data-uid="Godot.EditorImportPlugin.GetImporterName*"></a>
   <h4 id="Godot_EditorImportPlugin_GetImporterName" data-uid="Godot.EditorImportPlugin.GetImporterName">GetImporterName()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the unique name of the importer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -323,7 +356,8 @@
   
   <a id="Godot_EditorImportPlugin_GetImportOptions_" data-uid="Godot.EditorImportPlugin.GetImportOptions*"></a>
   <h4 id="Godot_EditorImportPlugin_GetImportOptions_System_Int32_" data-uid="Godot.EditorImportPlugin.GetImportOptions(System.Int32)">GetImportOptions(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the options and default values for the preset at this index. Returns an Array of Dictionaries with the following keys: <code>name</code>, <code>default_value</code>, <code>property_hint</code> (optional), <code>hint_string</code> (optional), <code>usage</code> (optional).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -365,7 +399,8 @@
   
   <a id="Godot_EditorImportPlugin_GetImportOrder_" data-uid="Godot.EditorImportPlugin.GetImportOrder*"></a>
   <h4 id="Godot_EditorImportPlugin_GetImportOrder" data-uid="Godot.EditorImportPlugin.GetImportOrder">GetImportOrder()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the order of this importer to be run when importing resources. Importers with lower import orders will be called first, and higher values will be called later. Use this to ensure the importer runs after the dependencies are already imported. The default import order is <code>0</code> unless overridden by a specific importer. See <a class="xref" href="Godot.ResourceImporter.ImportOrder.html">ResourceImporter.ImportOrder</a> for some predefined values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -390,7 +425,15 @@
   
   <a id="Godot_EditorImportPlugin_GetOptionVisibility_" data-uid="Godot.EditorImportPlugin.GetOptionVisibility*"></a>
   <h4 id="Godot_EditorImportPlugin_GetOptionVisibility_System_String_Godot_Collections_Dictionary_" data-uid="Godot.EditorImportPlugin.GetOptionVisibility(System.String,Godot.Collections.Dictionary)">GetOptionVisibility(String, Dictionary)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method can be overridden to hide specific import options if conditions are met. This is mainly useful for hiding options that depend on others if one of them is disabled. For example:</p>
+<p><pre><code>func get_option_visibility(option, options):
+    # Only show the lossy quality setting if the compression mode is set to &quot;Lossy&quot;.
+    if option == &quot;compress/lossy_quality&quot; and options.has(&quot;compress/mode&quot;):
+        return int(options[&quot;compress/mode&quot;]) == COMPRESS_LOSSY
+<pre><code>return true&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+</code></pre>
+<p>Return <code>true</code> to make all options always visible.</p>
+</code></pre></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -437,7 +480,8 @@
   
   <a id="Godot_EditorImportPlugin_GetPresetCount_" data-uid="Godot.EditorImportPlugin.GetPresetCount*"></a>
   <h4 id="Godot_EditorImportPlugin_GetPresetCount" data-uid="Godot.EditorImportPlugin.GetPresetCount">GetPresetCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the number of initial presets defined by the plugin. Use <a class="xref" href="Godot.EditorImportPlugin.html#Godot_EditorImportPlugin_GetImportOptions_System_Int32_">GetImportOptions(Int32)</a> to get the default options for the preset and <a class="xref" href="Godot.EditorImportPlugin.html#Godot_EditorImportPlugin_GetPresetName_System_Int32_">GetPresetName(Int32)</a> to get the name of the preset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -462,7 +506,8 @@
   
   <a id="Godot_EditorImportPlugin_GetPresetName_" data-uid="Godot.EditorImportPlugin.GetPresetName*"></a>
   <h4 id="Godot_EditorImportPlugin_GetPresetName_System_Int32_" data-uid="Godot.EditorImportPlugin.GetPresetName(System.Int32)">GetPresetName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name of the options preset at this index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -504,7 +549,8 @@
   
   <a id="Godot_EditorImportPlugin_GetPriority_" data-uid="Godot.EditorImportPlugin.GetPriority*"></a>
   <h4 id="Godot_EditorImportPlugin_GetPriority" data-uid="Godot.EditorImportPlugin.GetPriority">GetPriority()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the priority of this plugin for the recognized extension. Higher priority plugins will be preferred. The default priority is <code>1.0</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -529,7 +575,8 @@
   
   <a id="Godot_EditorImportPlugin_GetRecognizedExtensions_" data-uid="Godot.EditorImportPlugin.GetRecognizedExtensions*"></a>
   <h4 id="Godot_EditorImportPlugin_GetRecognizedExtensions" data-uid="Godot.EditorImportPlugin.GetRecognizedExtensions">GetRecognizedExtensions()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the list of file extensions to associate with this loader (case-insensitive). e.g. <code>[&quot;obj&quot;]</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -554,7 +601,8 @@
   
   <a id="Godot_EditorImportPlugin_GetResourceType_" data-uid="Godot.EditorImportPlugin.GetResourceType*"></a>
   <h4 id="Godot_EditorImportPlugin_GetResourceType" data-uid="Godot.EditorImportPlugin.GetResourceType">GetResourceType()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the Godot resource type associated with this loader. e.g. <code>&quot;Mesh&quot;</code> or <code>&quot;Animation&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -579,7 +627,8 @@
   
   <a id="Godot_EditorImportPlugin_GetSaveExtension_" data-uid="Godot.EditorImportPlugin.GetSaveExtension*"></a>
   <h4 id="Godot_EditorImportPlugin_GetSaveExtension" data-uid="Godot.EditorImportPlugin.GetSaveExtension">GetSaveExtension()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the extension used to save this resource in the <code>.import</code> directory (see ).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -604,7 +653,8 @@
   
   <a id="Godot_EditorImportPlugin_GetVisibleName_" data-uid="Godot.EditorImportPlugin.GetVisibleName*"></a>
   <h4 id="Godot_EditorImportPlugin_GetVisibleName" data-uid="Godot.EditorImportPlugin.GetVisibleName">GetVisibleName()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name to display in the import window. You should choose this name as a continuation to &quot;Import as&quot;, e.g. &quot;Import as Special Mesh&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -629,7 +679,9 @@
   
   <a id="Godot_EditorImportPlugin_Import_" data-uid="Godot.EditorImportPlugin.Import*"></a>
   <h4 id="Godot_EditorImportPlugin_Import_System_String_System_String_Godot_Collections_Dictionary_Godot_Collections_Array_Godot_Collections_Array_" data-uid="Godot.EditorImportPlugin.Import(System.String,System.String,Godot.Collections.Dictionary,Godot.Collections.Array,Godot.Collections.Array)">Import(String, String, Dictionary, Array, Array)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Imports <code>source_file</code> into <code>save_path</code> with the import <code>options</code> specified. The <code>platform_variants</code> and <code>gen_files</code> arrays will be modified by this function.</p>
+<p>This method must be overridden to do the actual importing work. See this class&apos; description for an example of overriding this method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

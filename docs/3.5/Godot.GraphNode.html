@@ -83,7 +83,10 @@
   
   <h1 id="Godot_GraphNode" data-uid="Godot.GraphNode" class="text-break">Class GraphNode
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A GraphNode is a container. Each GraphNode can have several input and output slots, sometimes referred to as ports, allowing connections between GraphNodes. To add a slot to GraphNode, add any <a class="xref" href="Godot.Control.html">Control</a>-derived child node to it.</p>
+<p>After adding at least one child to GraphNode new sections will be automatically created in the Inspector called &apos;Slot&apos;. When &apos;Slot&apos; is expanded you will see list with index number for each slot. You can click on each of them to expand further.</p>
+<p>In the Inspector you can enable (show) or disable (hide) slots. By default, all slots are disabled so you may not see any slots on your GraphNode initially. You can assign a type to each slot. Only slots of the same type will be able to connect to each other. You can also assign colors to slots. A tuple of input and output slots is defined for each GUI element included in the GraphNode. Input connections are on the left and output connections are on the right side of GraphNode. Only enabled slots are counted as connections.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1473,7 +1476,8 @@
   
   <a id="Godot_GraphNode_Comment_" data-uid="Godot.GraphNode.Comment*"></a>
   <h4 id="Godot_GraphNode_Comment" data-uid="Godot.GraphNode.Comment">Comment</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the GraphNode is a comment node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1498,7 +1502,9 @@
   
   <a id="Godot_GraphNode_Offset_" data-uid="Godot.GraphNode.Offset*"></a>
   <h4 id="Godot_GraphNode_Offset" data-uid="Godot.GraphNode.Offset">Offset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The offset of the GraphNode, relative to the scroll offset of the <a class="xref" href="Godot.GraphEdit.html">GraphEdit</a>.</p>
+<p>Note: You cannot use position directly, as <a class="xref" href="Godot.GraphEdit.html">GraphEdit</a> is a <a class="xref" href="Godot.Container.html">Container</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1523,7 +1529,8 @@
   
   <a id="Godot_GraphNode_Overlay_" data-uid="Godot.GraphNode.Overlay*"></a>
   <h4 id="Godot_GraphNode_Overlay" data-uid="Godot.GraphNode.Overlay">Overlay</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the overlay shown above the GraphNode. See <a class="xref" href="Godot.GraphNode.OverlayEnum.html">GraphNode.OverlayEnum</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1548,7 +1555,9 @@
   
   <a id="Godot_GraphNode_Resizable_" data-uid="Godot.GraphNode.Resizable*"></a>
   <h4 id="Godot_GraphNode_Resizable" data-uid="Godot.GraphNode.Resizable">Resizable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the user can resize the GraphNode.</p>
+<p>Note: Dragging the handle will only emit the <code>resize_request</code> signal, the GraphNode needs to be resized manually.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1573,7 +1582,8 @@
   
   <a id="Godot_GraphNode_Selected_" data-uid="Godot.GraphNode.Selected*"></a>
   <h4 id="Godot_GraphNode_Selected" data-uid="Godot.GraphNode.Selected">Selected</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the GraphNode is selected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1598,7 +1608,9 @@
   
   <a id="Godot_GraphNode_ShowClose_" data-uid="Godot.GraphNode.ShowClose*"></a>
   <h4 id="Godot_GraphNode_ShowClose" data-uid="Godot.GraphNode.ShowClose">ShowClose</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the close button will be visible.</p>
+<p>Note: Pressing it will only emit the <code>close_request</code> signal, the GraphNode needs to be removed manually.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1623,7 +1635,8 @@
   
   <a id="Godot_GraphNode_Title_" data-uid="Godot.GraphNode.Title*"></a>
   <h4 id="Godot_GraphNode_Title" data-uid="Godot.GraphNode.Title">Title</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The text displayed in the GraphNode&apos;s title bar.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1650,7 +1663,8 @@
   
   <a id="Godot_GraphNode_ClearAllSlots_" data-uid="Godot.GraphNode.ClearAllSlots*"></a>
   <h4 id="Godot_GraphNode_ClearAllSlots" data-uid="Godot.GraphNode.ClearAllSlots">ClearAllSlots()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables all input and output slots of the GraphNode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1660,7 +1674,8 @@
   
   <a id="Godot_GraphNode_ClearSlot_" data-uid="Godot.GraphNode.ClearSlot*"></a>
   <h4 id="Godot_GraphNode_ClearSlot_System_Int32_" data-uid="Godot.GraphNode.ClearSlot(System.Int32)">ClearSlot(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables input and output slot whose index is <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1687,7 +1702,8 @@
   
   <a id="Godot_GraphNode_GetConnectionInputColor_" data-uid="Godot.GraphNode.GetConnectionInputColor*"></a>
   <h4 id="Godot_GraphNode_GetConnectionInputColor_System_Int32_" data-uid="Godot.GraphNode.GetConnectionInputColor(System.Int32)">GetConnectionInputColor(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Color.html">Color</a> of the input connection <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1729,7 +1745,8 @@
   
   <a id="Godot_GraphNode_GetConnectionInputCount_" data-uid="Godot.GraphNode.GetConnectionInputCount*"></a>
   <h4 id="Godot_GraphNode_GetConnectionInputCount" data-uid="Godot.GraphNode.GetConnectionInputCount">GetConnectionInputCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of enabled input slots (connections) to the GraphNode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1754,7 +1771,8 @@
   
   <a id="Godot_GraphNode_GetConnectionInputPosition_" data-uid="Godot.GraphNode.GetConnectionInputPosition*"></a>
   <h4 id="Godot_GraphNode_GetConnectionInputPosition_System_Int32_" data-uid="Godot.GraphNode.GetConnectionInputPosition(System.Int32)">GetConnectionInputPosition(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the input connection <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1796,7 +1814,8 @@
   
   <a id="Godot_GraphNode_GetConnectionInputType_" data-uid="Godot.GraphNode.GetConnectionInputType*"></a>
   <h4 id="Godot_GraphNode_GetConnectionInputType_System_Int32_" data-uid="Godot.GraphNode.GetConnectionInputType(System.Int32)">GetConnectionInputType(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the type of the input connection <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1838,7 +1857,8 @@
   
   <a id="Godot_GraphNode_GetConnectionOutputColor_" data-uid="Godot.GraphNode.GetConnectionOutputColor*"></a>
   <h4 id="Godot_GraphNode_GetConnectionOutputColor_System_Int32_" data-uid="Godot.GraphNode.GetConnectionOutputColor(System.Int32)">GetConnectionOutputColor(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Color.html">Color</a> of the output connection <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1880,7 +1900,8 @@
   
   <a id="Godot_GraphNode_GetConnectionOutputCount_" data-uid="Godot.GraphNode.GetConnectionOutputCount*"></a>
   <h4 id="Godot_GraphNode_GetConnectionOutputCount" data-uid="Godot.GraphNode.GetConnectionOutputCount">GetConnectionOutputCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of enabled output slots (connections) of the GraphNode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1905,7 +1926,8 @@
   
   <a id="Godot_GraphNode_GetConnectionOutputPosition_" data-uid="Godot.GraphNode.GetConnectionOutputPosition*"></a>
   <h4 id="Godot_GraphNode_GetConnectionOutputPosition_System_Int32_" data-uid="Godot.GraphNode.GetConnectionOutputPosition(System.Int32)">GetConnectionOutputPosition(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the output connection <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1947,7 +1969,8 @@
   
   <a id="Godot_GraphNode_GetConnectionOutputType_" data-uid="Godot.GraphNode.GetConnectionOutputType*"></a>
   <h4 id="Godot_GraphNode_GetConnectionOutputType_System_Int32_" data-uid="Godot.GraphNode.GetConnectionOutputType(System.Int32)">GetConnectionOutputType(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the type of the output connection <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2039,7 +2062,8 @@
   
   <a id="Godot_GraphNode_GetSlotColorLeft_" data-uid="Godot.GraphNode.GetSlotColorLeft*"></a>
   <h4 id="Godot_GraphNode_GetSlotColorLeft_System_Int32_" data-uid="Godot.GraphNode.GetSlotColorLeft(System.Int32)">GetSlotColorLeft(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the left (input) <a class="xref" href="Godot.Color.html">Color</a> of the slot <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2081,7 +2105,8 @@
   
   <a id="Godot_GraphNode_GetSlotColorRight_" data-uid="Godot.GraphNode.GetSlotColorRight*"></a>
   <h4 id="Godot_GraphNode_GetSlotColorRight_System_Int32_" data-uid="Godot.GraphNode.GetSlotColorRight(System.Int32)">GetSlotColorRight(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the right (output) <a class="xref" href="Godot.Color.html">Color</a> of the slot <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2123,7 +2148,8 @@
   
   <a id="Godot_GraphNode_GetSlotTypeLeft_" data-uid="Godot.GraphNode.GetSlotTypeLeft*"></a>
   <h4 id="Godot_GraphNode_GetSlotTypeLeft_System_Int32_" data-uid="Godot.GraphNode.GetSlotTypeLeft(System.Int32)">GetSlotTypeLeft(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the left (input) type of the slot <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2165,7 +2191,8 @@
   
   <a id="Godot_GraphNode_GetSlotTypeRight_" data-uid="Godot.GraphNode.GetSlotTypeRight*"></a>
   <h4 id="Godot_GraphNode_GetSlotTypeRight_System_Int32_" data-uid="Godot.GraphNode.GetSlotTypeRight(System.Int32)">GetSlotTypeRight(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the right (output) type of the slot <code>idx</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2332,7 +2359,8 @@
   
   <a id="Godot_GraphNode_IsSlotEnabledLeft_" data-uid="Godot.GraphNode.IsSlotEnabledLeft*"></a>
   <h4 id="Godot_GraphNode_IsSlotEnabledLeft_System_Int32_" data-uid="Godot.GraphNode.IsSlotEnabledLeft(System.Int32)">IsSlotEnabledLeft(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if left (input) side of the slot <code>idx</code> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2374,7 +2402,8 @@
   
   <a id="Godot_GraphNode_IsSlotEnabledRight_" data-uid="Godot.GraphNode.IsSlotEnabledRight*"></a>
   <h4 id="Godot_GraphNode_IsSlotEnabledRight_System_Int32_" data-uid="Godot.GraphNode.IsSlotEnabledRight(System.Int32)">IsSlotEnabledRight(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if right (output) side of the slot <code>idx</code> is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2578,7 +2607,14 @@
   
   <a id="Godot_GraphNode_SetSlot_" data-uid="Godot.GraphNode.SetSlot*"></a>
   <h4 id="Godot_GraphNode_SetSlot_System_Int32_System_Boolean_System_Int32_Godot_Color_System_Boolean_System_Int32_Godot_Color_Godot_Texture_Godot_Texture_" data-uid="Godot.GraphNode.SetSlot(System.Int32,System.Boolean,System.Int32,Godot.Color,System.Boolean,System.Int32,Godot.Color,Godot.Texture,Godot.Texture)">SetSlot(Int32, Boolean, Int32, Color, Boolean, Int32, Color, Texture, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets properties of the slot with ID <code>idx</code>.</p>
+<p>If <code>enable_left</code>/<code>right</code>, a port will appear and the slot will be able to be connected from this side.</p>
+<p><code>type_left</code>/<code>right</code> is an arbitrary type of the port. Only ports with the same type values can be connected.</p>
+<p><code>color_left</code>/<code>right</code> is the tint of the port&apos;s icon on this side.</p>
+<p><code>custom_left</code>/<code>right</code> is a custom texture for this side&apos;s port.</p>
+<p>Note: This method only sets properties of the slot. To create the slot, add a <a class="xref" href="Godot.Control.html">Control</a>-derived child to the GraphNode.</p>
+<p>Individual properties can be set using one of the <code>set_slot_*</code> methods. You must enable at least one side of the slot to do so.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2645,7 +2681,8 @@
   
   <a id="Godot_GraphNode_SetSlotColorLeft_" data-uid="Godot.GraphNode.SetSlotColorLeft*"></a>
   <h4 id="Godot_GraphNode_SetSlotColorLeft_System_Int32_Godot_Color_" data-uid="Godot.GraphNode.SetSlotColorLeft(System.Int32,Godot.Color)">SetSlotColorLeft(Int32, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Color.html">Color</a> of the left (input) side of the slot <code>idx</code> to <code>color_left</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2677,7 +2714,8 @@
   
   <a id="Godot_GraphNode_SetSlotColorRight_" data-uid="Godot.GraphNode.SetSlotColorRight*"></a>
   <h4 id="Godot_GraphNode_SetSlotColorRight_System_Int32_Godot_Color_" data-uid="Godot.GraphNode.SetSlotColorRight(System.Int32,Godot.Color)">SetSlotColorRight(Int32, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Color.html">Color</a> of the right (output) side of the slot <code>idx</code> to <code>color_right</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2709,7 +2747,8 @@
   
   <a id="Godot_GraphNode_SetSlotEnabledLeft_" data-uid="Godot.GraphNode.SetSlotEnabledLeft*"></a>
   <h4 id="Godot_GraphNode_SetSlotEnabledLeft_System_Int32_System_Boolean_" data-uid="Godot.GraphNode.SetSlotEnabledLeft(System.Int32,System.Boolean)">SetSlotEnabledLeft(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Toggles the left (input) side of the slot <code>idx</code>. If <code>enable_left</code> is <code>true</code>, a port will appear on the left side and the slot will be able to be connected from this side.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2741,7 +2780,8 @@
   
   <a id="Godot_GraphNode_SetSlotEnabledRight_" data-uid="Godot.GraphNode.SetSlotEnabledRight*"></a>
   <h4 id="Godot_GraphNode_SetSlotEnabledRight_System_Int32_System_Boolean_" data-uid="Godot.GraphNode.SetSlotEnabledRight(System.Int32,System.Boolean)">SetSlotEnabledRight(Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Toggles the right (output) side of the slot <code>idx</code>. If <code>enable_right</code> is <code>true</code>, a port will appear on the right side and the slot will be able to be connected from this side.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2773,7 +2813,8 @@
   
   <a id="Godot_GraphNode_SetSlotTypeLeft_" data-uid="Godot.GraphNode.SetSlotTypeLeft*"></a>
   <h4 id="Godot_GraphNode_SetSlotTypeLeft_System_Int32_System_Int32_" data-uid="Godot.GraphNode.SetSlotTypeLeft(System.Int32,System.Int32)">SetSlotTypeLeft(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the left (input) type of the slot <code>idx</code> to <code>type_left</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2805,7 +2846,8 @@
   
   <a id="Godot_GraphNode_SetSlotTypeRight_" data-uid="Godot.GraphNode.SetSlotTypeRight*"></a>
   <h4 id="Godot_GraphNode_SetSlotTypeRight_System_Int32_System_Int32_" data-uid="Godot.GraphNode.SetSlotTypeRight(System.Int32,System.Int32)">SetSlotTypeRight(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the right (output) type of the slot <code>idx</code> to <code>type_right</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

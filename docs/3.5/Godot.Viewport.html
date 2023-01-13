@@ -83,7 +83,14 @@
   
   <h1 id="Godot_Viewport" data-uid="Godot.Viewport" class="text-break">Class Viewport
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A Viewport creates a different view into the screen, or a sub-view inside another viewport. Children 2D Nodes will display on it, and children Camera 3D nodes will render on it too.</p>
+<p>Optionally, a viewport can have its own 2D or 3D world, so they don&apos;t share what they draw with other viewports.</p>
+<p>If a viewport is a child of a <a class="xref" href="Godot.ViewportContainer.html">ViewportContainer</a>, it will automatically take up its size, otherwise it must be set manually.</p>
+<p>Viewports can also choose to be audio listeners, so they generate positional audio depending on a 2D or 3D camera child of it.</p>
+<p>Also, viewports can be assigned to different screens in case the devices have multiple screens.</p>
+<p>Finally, viewports can also behave as render targets, in which case they will not be visible unless the associated texture is used to draw.</p>
+<p>Note: By default, a newly created Viewport in Godot 3.x will appear to be upside down. Enabling <a class="xref" href="Godot.Viewport.html#Godot_Viewport_RenderTargetVFlip">RenderTargetVFlip</a> will display the Viewport with the correct orientation.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -753,7 +760,8 @@
   
   <a id="Godot_Viewport_Arvr_" data-uid="Godot.Viewport.Arvr*"></a>
   <h4 id="Godot_Viewport_Arvr" data-uid="Godot.Viewport.Arvr">Arvr</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the viewport will be used in AR/VR process.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -778,7 +786,8 @@
   
   <a id="Godot_Viewport_AudioListenerEnable2d_" data-uid="Godot.Viewport.AudioListenerEnable2d*"></a>
   <h4 id="Godot_Viewport_AudioListenerEnable2d" data-uid="Godot.Viewport.AudioListenerEnable2d">AudioListenerEnable2d</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the viewport will process 2D audio streams.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -803,7 +812,8 @@
   
   <a id="Godot_Viewport_AudioListenerEnable3d_" data-uid="Godot.Viewport.AudioListenerEnable3d*"></a>
   <h4 id="Godot_Viewport_AudioListenerEnable3d" data-uid="Godot.Viewport.AudioListenerEnable3d">AudioListenerEnable3d</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the viewport will process 3D audio streams.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -828,7 +838,8 @@
   
   <a id="Godot_Viewport_CanvasTransform_" data-uid="Godot.Viewport.CanvasTransform*"></a>
   <h4 id="Godot_Viewport_CanvasTransform" data-uid="Godot.Viewport.CanvasTransform">CanvasTransform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The canvas transform of the viewport, useful for changing the on-screen positions of all child <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a>s. This is relative to the global canvas transform of the viewport.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -853,7 +864,9 @@
   
   <a id="Godot_Viewport_Debanding_" data-uid="Godot.Viewport.Debanding*"></a>
   <h4 id="Godot_Viewport_Debanding" data-uid="Godot.Viewport.Debanding">Debanding</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, uses a fast post-processing filter to make banding significantly less visible. In some cases, debanding may introduce a slightly noticeable dithering pattern. It&apos;s recommended to enable debanding only when actually needed since the dithering pattern will make lossless-compressed screenshots larger.</p>
+<p>Note: Only available on the GLES3 backend. <a class="xref" href="Godot.Viewport.html#Godot_Viewport_Hdr">Hdr</a> must also be <code>true</code> for debanding to be effective.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -878,7 +891,8 @@
   
   <a id="Godot_Viewport_DebugDraw_" data-uid="Godot.Viewport.DebugDraw*"></a>
   <h4 id="Godot_Viewport_DebugDraw" data-uid="Godot.Viewport.DebugDraw">DebugDraw</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The overlay mode for test rendered geometry in debug purposes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -903,7 +917,8 @@
   
   <a id="Godot_Viewport_Disable3d_" data-uid="Godot.Viewport.Disable3d*"></a>
   <h4 id="Godot_Viewport_Disable3d" data-uid="Godot.Viewport.Disable3d">Disable3d</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the viewport will disable 3D rendering. For actual disabling use <code>usage</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -928,7 +943,8 @@
   
   <a id="Godot_Viewport_Fxaa_" data-uid="Godot.Viewport.Fxaa*"></a>
   <h4 id="Godot_Viewport_Fxaa" data-uid="Godot.Viewport.Fxaa">Fxaa</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables fast approximate antialiasing. FXAA is a popular screen-space antialiasing method, which is fast but will make the image look blurry, especially at lower resolutions. It can still work relatively well at large resolutions such as 1440p and 4K. Some of the lost sharpness can be recovered by enabling contrast-adaptive sharpening (see <a class="xref" href="Godot.Viewport.html#Godot_Viewport_SharpenIntensity">SharpenIntensity</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -953,7 +969,8 @@
   
   <a id="Godot_Viewport_GlobalCanvasTransform_" data-uid="Godot.Viewport.GlobalCanvasTransform*"></a>
   <h4 id="Godot_Viewport_GlobalCanvasTransform" data-uid="Godot.Viewport.GlobalCanvasTransform">GlobalCanvasTransform</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The global canvas transform of the viewport. The canvas transform is relative to this.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -978,7 +995,8 @@
   
   <a id="Godot_Viewport_GuiDisableInput_" data-uid="Godot.Viewport.GuiDisableInput*"></a>
   <h4 id="Godot_Viewport_GuiDisableInput" data-uid="Godot.Viewport.GuiDisableInput">GuiDisableInput</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the viewport will not receive input events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1003,7 +1021,8 @@
   
   <a id="Godot_Viewport_GuiSnapControlsToPixels_" data-uid="Godot.Viewport.GuiSnapControlsToPixels*"></a>
   <h4 id="Godot_Viewport_GuiSnapControlsToPixels" data-uid="Godot.Viewport.GuiSnapControlsToPixels">GuiSnapControlsToPixels</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the GUI controls on the viewport will lay pixel perfectly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1053,7 +1072,10 @@
   
   <a id="Godot_Viewport_Hdr_" data-uid="Godot.Viewport.Hdr*"></a>
   <h4 id="Godot_Viewport_Hdr" data-uid="Godot.Viewport.Hdr">Hdr</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the viewport rendering will receive benefits from High Dynamic Range algorithm. High Dynamic Range allows the viewport to receive values that are outside the 0-1 range. In Godot, HDR uses half floating-point precision (16-bit) by default. To use full floating-point precision (32-bit), enable <a class="xref" href="Godot.Viewport.html#Godot_Viewport_Use32BpcDepth">Use32BpcDepth</a>.</p>
+<p>Note: Requires <a class="xref" href="Godot.Viewport.html#Godot_Viewport_Usage">Usage</a> to be set to <a class="xref" href="Godot.Viewport.UsageEnum.html#Godot_Viewport_UsageEnum_Usage3d">Usage3d</a> or <a class="xref" href="Godot.Viewport.UsageEnum.html#Godot_Viewport_UsageEnum_Usage3dNoEffects">Usage3dNoEffects</a>, since HDR is not supported for 2D.</p>
+<p>Note: Only available on the GLES3 backend.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1078,7 +1100,8 @@
   
   <a id="Godot_Viewport_Keep3dLinear_" data-uid="Godot.Viewport.Keep3dLinear*"></a>
   <h4 id="Godot_Viewport_Keep3dLinear" data-uid="Godot.Viewport.Keep3dLinear">Keep3dLinear</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the result after 3D rendering will not have a linear to sRGB color conversion applied. This is important when the viewport is used as a render target where the result is used as a texture on a 3D object rendered in another viewport. It is also important if the viewport is used to create data that is not color based (noise, heightmaps, pickmaps, etc.). Do not enable this when the viewport is used as a texture on a 2D object or if the viewport is your final output. For the GLES2 driver this will convert the sRGB output to linear, this should only be used for VR plugins that require input in linear color space!</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1103,7 +1126,8 @@
   
   <a id="Godot_Viewport_Msaa_" data-uid="Godot.Viewport.Msaa*"></a>
   <h4 id="Godot_Viewport_Msaa" data-uid="Godot.Viewport.Msaa">Msaa</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The multisample anti-aliasing mode. A higher number results in smoother edges at the cost of significantly worse performance. A value of 4 is best unless targeting very high-end systems.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1128,7 +1152,8 @@
   
   <a id="Godot_Viewport_OwnWorld_" data-uid="Godot.Viewport.OwnWorld*"></a>
   <h4 id="Godot_Viewport_OwnWorld" data-uid="Godot.Viewport.OwnWorld">OwnWorld</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the viewport will use a unique copy of the <a class="xref" href="Godot.World.html">World</a> defined in <a class="xref" href="Godot.Viewport.html#Godot_Viewport_World">World</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1153,7 +1178,8 @@
   
   <a id="Godot_Viewport_PhysicsObjectPicking_" data-uid="Godot.Viewport.PhysicsObjectPicking*"></a>
   <h4 id="Godot_Viewport_PhysicsObjectPicking" data-uid="Godot.Viewport.PhysicsObjectPicking">PhysicsObjectPicking</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the objects rendered by viewport become subjects of mouse picking process.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1178,7 +1204,8 @@
   
   <a id="Godot_Viewport_RenderDirectToScreen_" data-uid="Godot.Viewport.RenderDirectToScreen*"></a>
   <h4 id="Godot_Viewport_RenderDirectToScreen" data-uid="Godot.Viewport.RenderDirectToScreen">RenderDirectToScreen</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, renders the Viewport directly to the screen instead of to the root viewport. Only available in GLES2. This is a low-level optimization and should not be used in most cases. If used, reading from the Viewport or from <code>SCREEN_TEXTURE</code> becomes unavailable. For more information see <a class="xref" href="Godot.VisualServer.html#Godot_VisualServer_ViewportSetRenderDirectToScreen_Godot_RID_System_Boolean_">ViewportSetRenderDirectToScreen(RID, Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1203,7 +1230,9 @@
   
   <a id="Godot_Viewport_RenderTargetClearMode_" data-uid="Godot.Viewport.RenderTargetClearMode*"></a>
   <h4 id="Godot_Viewport_RenderTargetClearMode" data-uid="Godot.Viewport.RenderTargetClearMode">RenderTargetClearMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The clear mode when viewport used as a render target.</p>
+<p>Note: This property is intended for 2D usage.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1228,7 +1257,8 @@
   
   <a id="Godot_Viewport_RenderTargetUpdateMode_" data-uid="Godot.Viewport.RenderTargetUpdateMode*"></a>
   <h4 id="Godot_Viewport_RenderTargetUpdateMode" data-uid="Godot.Viewport.RenderTargetUpdateMode">RenderTargetUpdateMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The update mode when viewport used as a render target.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1253,7 +1283,8 @@
   
   <a id="Godot_Viewport_RenderTargetVFlip_" data-uid="Godot.Viewport.RenderTargetVFlip*"></a>
   <h4 id="Godot_Viewport_RenderTargetVFlip" data-uid="Godot.Viewport.RenderTargetVFlip">RenderTargetVFlip</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the result of rendering will be flipped vertically. Since Viewports in Godot 3.x render upside-down, it&apos;s recommended to set this to <code>true</code> in most situations.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1278,7 +1309,8 @@
   
   <a id="Godot_Viewport_ShadowAtlasQuad0_" data-uid="Godot.Viewport.ShadowAtlasQuad0*"></a>
   <h4 id="Godot_Viewport_ShadowAtlasQuad0" data-uid="Godot.Viewport.ShadowAtlasQuad0">ShadowAtlasQuad0</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The subdivision amount of the first quadrant on the shadow atlas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1303,7 +1335,8 @@
   
   <a id="Godot_Viewport_ShadowAtlasQuad1_" data-uid="Godot.Viewport.ShadowAtlasQuad1*"></a>
   <h4 id="Godot_Viewport_ShadowAtlasQuad1" data-uid="Godot.Viewport.ShadowAtlasQuad1">ShadowAtlasQuad1</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The subdivision amount of the second quadrant on the shadow atlas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1328,7 +1361,8 @@
   
   <a id="Godot_Viewport_ShadowAtlasQuad2_" data-uid="Godot.Viewport.ShadowAtlasQuad2*"></a>
   <h4 id="Godot_Viewport_ShadowAtlasQuad2" data-uid="Godot.Viewport.ShadowAtlasQuad2">ShadowAtlasQuad2</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The subdivision amount of the third quadrant on the shadow atlas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1353,7 +1387,8 @@
   
   <a id="Godot_Viewport_ShadowAtlasQuad3_" data-uid="Godot.Viewport.ShadowAtlasQuad3*"></a>
   <h4 id="Godot_Viewport_ShadowAtlasQuad3" data-uid="Godot.Viewport.ShadowAtlasQuad3">ShadowAtlasQuad3</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The subdivision amount of the fourth quadrant on the shadow atlas.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1378,7 +1413,9 @@
   
   <a id="Godot_Viewport_ShadowAtlasSize_" data-uid="Godot.Viewport.ShadowAtlasSize*"></a>
   <h4 id="Godot_Viewport_ShadowAtlasSize" data-uid="Godot.Viewport.ShadowAtlasSize">ShadowAtlasSize</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The shadow atlas&apos; resolution (used for omni and spot lights). The value will be rounded up to the nearest power of 2.</p>
+<p>Note: If this is set to <code>0</code>, both point and directional shadows won&apos;t be visible. Since user-created viewports default to a value of <code>0</code>, this value must be set above <code>0</code> manually (typically at least <code>256</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1403,7 +1440,8 @@
   
   <a id="Godot_Viewport_SharpenIntensity_" data-uid="Godot.Viewport.SharpenIntensity*"></a>
   <h4 id="Godot_Viewport_SharpenIntensity" data-uid="Godot.Viewport.SharpenIntensity">SharpenIntensity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set to a value greater than <code>0.0</code>, contrast-adaptive sharpening will be applied to the 3D viewport. This has a low performance cost and can be used to recover some of the sharpness lost from using FXAA. Values around <code>0.5</code> generally give the best results. See also <a class="xref" href="Godot.Viewport.html#Godot_Viewport_Fxaa">Fxaa</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1428,7 +1466,8 @@
   
   <a id="Godot_Viewport_Size_" data-uid="Godot.Viewport.Size*"></a>
   <h4 id="Godot_Viewport_Size" data-uid="Godot.Viewport.Size">Size</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The width and height of viewport. Must be set to a value greater than or equal to 2 pixels on both dimensions. Otherwise, nothing will be displayed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1453,7 +1492,8 @@
   
   <a id="Godot_Viewport_SizeOverrideStretch_" data-uid="Godot.Viewport.SizeOverrideStretch*"></a>
   <h4 id="Godot_Viewport_SizeOverrideStretch" data-uid="Godot.Viewport.SizeOverrideStretch">SizeOverrideStretch</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the size override affects stretch as well.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1478,7 +1518,8 @@
   
   <a id="Godot_Viewport_TransparentBg_" data-uid="Godot.Viewport.TransparentBg*"></a>
   <h4 id="Godot_Viewport_TransparentBg" data-uid="Godot.Viewport.TransparentBg">TransparentBg</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the viewport should render its background as transparent.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1503,7 +1544,9 @@
   
   <a id="Godot_Viewport_Usage_" data-uid="Godot.Viewport.Usage*"></a>
   <h4 id="Godot_Viewport_Usage" data-uid="Godot.Viewport.Usage">Usage</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The rendering mode of viewport.</p>
+<p>Note: If set to <a class="xref" href="Godot.Viewport.UsageEnum.html#Godot_Viewport_UsageEnum_Usage2d">Usage2d</a> or <a class="xref" href="Godot.Viewport.UsageEnum.html#Godot_Viewport_UsageEnum_Usage2dNoSampling">Usage2dNoSampling</a>, <a class="xref" href="Godot.Viewport.html#Godot_Viewport_Hdr">Hdr</a> will have no effect when enabled since HDR is not supported for 2D.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1528,7 +1571,10 @@
   
   <a id="Godot_Viewport_Use32BpcDepth_" data-uid="Godot.Viewport.Use32BpcDepth*"></a>
   <h4 id="Godot_Viewport_Use32BpcDepth" data-uid="Godot.Viewport.Use32BpcDepth">Use32BpcDepth</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, allocates the viewport&apos;s framebuffer with full floating-point precision (32-bit) instead of half floating-point precision (16-bit). Only effective when <a class="xref" href="Godot.Viewport.html#Godot_Viewport_Hdr">Hdr</a> is also enabled.</p>
+<p>Note: Enabling this setting does not improve rendering quality. Using full floating-point precision is slower, and is generally only needed for advanced shaders that require a high level of precision. To reduce banding, enable <a class="xref" href="Godot.Viewport.html#Godot_Viewport_Debanding">Debanding</a> instead.</p>
+<p>Note: Only available on the GLES3 backend.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1553,7 +1599,8 @@
   
   <a id="Godot_Viewport_World_" data-uid="Godot.Viewport.World*"></a>
   <h4 id="Godot_Viewport_World" data-uid="Godot.Viewport.World">World</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The custom <a class="xref" href="Godot.World.html">World</a> which can be used as 3D environment source.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1578,7 +1625,8 @@
   
   <a id="Godot_Viewport_World2d_" data-uid="Godot.Viewport.World2d*"></a>
   <h4 id="Godot_Viewport_World2d" data-uid="Godot.Viewport.World2d">World2d</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The custom <a class="xref" href="Godot.World2D.html">World2D</a> which can be used as 2D environment source.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1605,7 +1653,8 @@
   
   <a id="Godot_Viewport_FindWorld_" data-uid="Godot.Viewport.FindWorld*"></a>
   <h4 id="Godot_Viewport_FindWorld" data-uid="Godot.Viewport.FindWorld">FindWorld()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the first valid <a class="xref" href="Godot.World.html">World</a> for this viewport, searching the <a class="xref" href="Godot.Viewport.html#Godot_Viewport_World">World</a> property of itself and any Viewport ancestor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1630,7 +1679,8 @@
   
   <a id="Godot_Viewport_FindWorld2d_" data-uid="Godot.Viewport.FindWorld2d*"></a>
   <h4 id="Godot_Viewport_FindWorld2d" data-uid="Godot.Viewport.FindWorld2d">FindWorld2d()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the first valid <a class="xref" href="Godot.World2D.html">World2D</a> for this viewport, searching the <a class="xref" href="Godot.Viewport.html#Godot_Viewport_World2d">World2d</a> property of itself and any Viewport ancestor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1655,7 +1705,8 @@
   
   <a id="Godot_Viewport_GetCamera_" data-uid="Godot.Viewport.GetCamera*"></a>
   <h4 id="Godot_Viewport_GetCamera" data-uid="Godot.Viewport.GetCamera">GetCamera()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the active 3D camera.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1755,7 +1806,8 @@
   
   <a id="Godot_Viewport_GetFinalTransform_" data-uid="Godot.Viewport.GetFinalTransform*"></a>
   <h4 id="Godot_Viewport_GetFinalTransform" data-uid="Godot.Viewport.GetFinalTransform">GetFinalTransform()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total transform of the viewport.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1855,7 +1907,8 @@
   
   <a id="Godot_Viewport_GetModalStackTop_" data-uid="Godot.Viewport.GetModalStackTop*"></a>
   <h4 id="Godot_Viewport_GetModalStackTop" data-uid="Godot.Viewport.GetModalStackTop">GetModalStackTop()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the topmost modal in the stack.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1880,7 +1933,8 @@
   
   <a id="Godot_Viewport_GetMousePosition_" data-uid="Godot.Viewport.GetMousePosition*"></a>
   <h4 id="Godot_Viewport_GetMousePosition" data-uid="Godot.Viewport.GetMousePosition">GetMousePosition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the mouse&apos;s position in this <a class="xref" href="Godot.Viewport.html">Viewport</a> using the coordinate system of this <a class="xref" href="Godot.Viewport.html">Viewport</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1955,7 +2009,8 @@
   
   <a id="Godot_Viewport_GetRenderInfo_" data-uid="Godot.Viewport.GetRenderInfo*"></a>
   <h4 id="Godot_Viewport_GetRenderInfo_Godot_Viewport_RenderInfo_" data-uid="Godot.Viewport.GetRenderInfo(Godot.Viewport.RenderInfo)">GetRenderInfo(Viewport.RenderInfo)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns information about the viewport from the rendering pipeline.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1997,7 +2052,8 @@
   
   <a id="Godot_Viewport_GetShadowAtlasQuadrantSubdiv_" data-uid="Godot.Viewport.GetShadowAtlasQuadrantSubdiv*"></a>
   <h4 id="Godot_Viewport_GetShadowAtlasQuadrantSubdiv_System_Int32_" data-uid="Godot.Viewport.GetShadowAtlasQuadrantSubdiv(System.Int32)">GetShadowAtlasQuadrantSubdiv(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Viewport.ShadowAtlasQuadrantSubdiv.html">Viewport.ShadowAtlasQuadrantSubdiv</a> of the specified quadrant.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2114,7 +2170,8 @@
   
   <a id="Godot_Viewport_GetSizeOverride_" data-uid="Godot.Viewport.GetSizeOverride*"></a>
   <h4 id="Godot_Viewport_GetSizeOverride" data-uid="Godot.Viewport.GetSizeOverride">GetSizeOverride()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size override set with <a class="xref" href="Godot.Viewport.html#Godot_Viewport_SetSizeOverride_System_Boolean_System_Nullable_Godot_Vector2__System_Nullable_Godot_Vector2__">SetSizeOverride(Boolean, Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2139,7 +2196,11 @@
   
   <a id="Godot_Viewport_GetTexture_" data-uid="Godot.Viewport.GetTexture*"></a>
   <h4 id="Godot_Viewport_GetTexture" data-uid="Godot.Viewport.GetTexture">GetTexture()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the viewport&apos;s texture.</p>
+<p>Note: Due to the way OpenGL works, the resulting <a class="xref" href="Godot.ViewportTexture.html">ViewportTexture</a> is flipped vertically. You can use <a class="xref" href="Godot.Image.html#Godot_Image_FlipY">FlipY()</a> on the result of <a class="xref" href="Godot.Texture.html#Godot_Texture_GetData">GetData()</a> to flip it back, for example:</p>
+<p><pre><code>var img = get_viewport().get_texture().get_data()
+img.flip_y()</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2314,7 +2375,8 @@
   
   <a id="Godot_Viewport_GetViewportRid_" data-uid="Godot.Viewport.GetViewportRid*"></a>
   <h4 id="Godot_Viewport_GetViewportRid" data-uid="Godot.Viewport.GetViewportRid">GetViewportRid()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the viewport&apos;s RID from the <a class="xref" href="Godot.VisualServer.html">VisualServer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2339,7 +2401,8 @@
   
   <a id="Godot_Viewport_GetVisibleRect_" data-uid="Godot.Viewport.GetVisibleRect*"></a>
   <h4 id="Godot_Viewport_GetVisibleRect" data-uid="Godot.Viewport.GetVisibleRect">GetVisibleRect()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the visible rectangle in global screen coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2414,7 +2477,8 @@
   
   <a id="Godot_Viewport_GuiGetDragData_" data-uid="Godot.Viewport.GuiGetDragData*"></a>
   <h4 id="Godot_Viewport_GuiGetDragData" data-uid="Godot.Viewport.GuiGetDragData">GuiGetDragData()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the drag data from the GUI, that was previously returned by <a class="xref" href="Godot.Control.html#Godot_Control_GetDragData_Godot_Vector2_">GetDragData(Vector2)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2439,7 +2503,8 @@
   
   <a id="Godot_Viewport_GuiHasModalStack_" data-uid="Godot.Viewport.GuiHasModalStack*"></a>
   <h4 id="Godot_Viewport_GuiHasModalStack" data-uid="Godot.Viewport.GuiHasModalStack">GuiHasModalStack()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if there are visible modals on-screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2464,7 +2529,9 @@
   
   <a id="Godot_Viewport_GuiIsDragging_" data-uid="Godot.Viewport.GuiIsDragging*"></a>
   <h4 id="Godot_Viewport_GuiIsDragging" data-uid="Godot.Viewport.GuiIsDragging">GuiIsDragging()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the viewport is currently performing a drag operation.</p>
+<p>Alternative to <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragBegin">NotificationDragBegin</a> and <a class="xref" href="Godot.Node.html#Godot_Node_NotificationDragEnd">NotificationDragEnd</a> when you prefer polling the value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2489,7 +2556,8 @@
   
   <a id="Godot_Viewport_GuiIsDragSuccessful_" data-uid="Godot.Viewport.GuiIsDragSuccessful*"></a>
   <h4 id="Godot_Viewport_GuiIsDragSuccessful" data-uid="Godot.Viewport.GuiIsDragSuccessful">GuiIsDragSuccessful()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the drag operation is successful.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2716,7 +2784,8 @@
   
   <a id="Godot_Viewport_IsSizeOverrideEnabled_" data-uid="Godot.Viewport.IsSizeOverrideEnabled*"></a>
   <h4 id="Godot_Viewport_IsSizeOverrideEnabled" data-uid="Godot.Viewport.IsSizeOverrideEnabled">IsSizeOverrideEnabled()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the size override is enabled. See <a class="xref" href="Godot.Viewport.html#Godot_Viewport_SetSizeOverride_System_Boolean_System_Nullable_Godot_Vector2__System_Nullable_Godot_Vector2__">SetSizeOverride(Boolean, Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2895,7 +2964,8 @@
   
   <a id="Godot_Viewport_SetAttachToScreenRect_" data-uid="Godot.Viewport.SetAttachToScreenRect*"></a>
   <h4 id="Godot_Viewport_SetAttachToScreenRect_Godot_Rect2_" data-uid="Godot.Viewport.SetAttachToScreenRect(Godot.Rect2)">SetAttachToScreenRect(Rect2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Attaches this <a class="xref" href="Godot.Viewport.html">Viewport</a> to the root <a class="xref" href="Godot.Viewport.html">Viewport</a> with the specified rectangle. This bypasses the need for another node to display this <a class="xref" href="Godot.Viewport.html">Viewport</a> but makes you responsible for updating the position of this <a class="xref" href="Godot.Viewport.html">Viewport</a> manually.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3138,7 +3208,8 @@
   
   <a id="Godot_Viewport_SetInputAsHandled_" data-uid="Godot.Viewport.SetInputAsHandled*"></a>
   <h4 id="Godot_Viewport_SetInputAsHandled" data-uid="Godot.Viewport.SetInputAsHandled">SetInputAsHandled()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stops the input from propagating further down the <a class="xref" href="Godot.SceneTree.html">SceneTree</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3229,7 +3300,8 @@
   
   <a id="Godot_Viewport_SetShadowAtlasQuadrantSubdiv_" data-uid="Godot.Viewport.SetShadowAtlasQuadrantSubdiv*"></a>
   <h4 id="Godot_Viewport_SetShadowAtlasQuadrantSubdiv_System_Int32_Godot_Viewport_ShadowAtlasQuadrantSubdiv_" data-uid="Godot.Viewport.SetShadowAtlasQuadrantSubdiv(System.Int32,Godot.Viewport.ShadowAtlasQuadrantSubdiv)">SetShadowAtlasQuadrantSubdiv(Int32, Viewport.ShadowAtlasQuadrantSubdiv)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the number of subdivisions to use in the specified quadrant. A higher number of subdivisions allows you to have more shadows in the scene at once, but reduces the quality of the shadows. A good practice is to have quadrants with a varying number of subdivisions and to have as few subdivisions as possible.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3342,7 +3414,8 @@
   
   <a id="Godot_Viewport_SetSizeOverride_" data-uid="Godot.Viewport.SetSizeOverride*"></a>
   <h4 id="Godot_Viewport_SetSizeOverride_System_Boolean_System_Nullable_Godot_Vector2__System_Nullable_Godot_Vector2__" data-uid="Godot.Viewport.SetSizeOverride(System.Boolean,System.Nullable{Godot.Vector2},System.Nullable{Godot.Vector2})">SetSizeOverride(Boolean, Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the size override of the viewport. If the <code>enable</code> parameter is <code>true</code> the override is used, otherwise it uses the default size. If the size parameter is <code>(-1, -1)</code>, it won&apos;t update the size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3366,12 +3439,14 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">size</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(-1, -1)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">margin</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3784,7 +3859,8 @@
   
   <a id="Godot_Viewport_UpdateWorlds_" data-uid="Godot.Viewport.UpdateWorlds*"></a>
   <h4 id="Godot_Viewport_UpdateWorlds" data-uid="Godot.Viewport.UpdateWorlds">UpdateWorlds()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Forces update of the 2D and 3D worlds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3819,7 +3895,8 @@
   
   <a id="Godot_Viewport_WarpMouse_" data-uid="Godot.Viewport.WarpMouse*"></a>
   <h4 id="Godot_Viewport_WarpMouse_Godot_Vector2_" data-uid="Godot.Viewport.WarpMouse(Godot.Vector2)">WarpMouse(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the mouse pointer to the specified position in this <a class="xref" href="Godot.Viewport.html">Viewport</a> using the coordinate system of this <a class="xref" href="Godot.Viewport.html">Viewport</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,9 @@
   
   <h1 id="Godot_ConvexPolygonShape2D" data-uid="Godot.ConvexPolygonShape2D" class="text-break">Class ConvexPolygonShape2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Convex polygon shape for 2D physics. A convex polygon, whatever its shape, is internally decomposed into as many convex polygons as needed to ensure all collision checks against it are always done on convex polygons (which are faster to check).</p>
+<p>The main difference between a <a class="xref" href="Godot.ConvexPolygonShape2D.html">ConvexPolygonShape2D</a> and a <a class="xref" href="Godot.ConcavePolygonShape2D.html">ConcavePolygonShape2D</a> is that a concave polygon assumes it is concave and uses a more complex method of collision detection, and a convex one forces itself to be convex in order to speed up collision detection.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -371,7 +373,8 @@
   
   <a id="Godot_ConvexPolygonShape2D_Points_" data-uid="Godot.ConvexPolygonShape2D.Points*"></a>
   <h4 id="Godot_ConvexPolygonShape2D_Points" data-uid="Godot.ConvexPolygonShape2D.Points">Points</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The polygon&apos;s list of vertices. Can be in either clockwise or counterclockwise order. Only set this property with convex hull points, use <a class="xref" href="Godot.ConvexPolygonShape2D.html#Godot_ConvexPolygonShape2D_SetPointCloud_Godot_Vector2___">SetPointCloud(Vector2[])</a> to generate a convex hull shape from concave shape points.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -423,7 +426,8 @@
   
   <a id="Godot_ConvexPolygonShape2D_SetPointCloud_" data-uid="Godot.ConvexPolygonShape2D.SetPointCloud*"></a>
   <h4 id="Godot_ConvexPolygonShape2D_SetPointCloud_Godot_Vector2___" data-uid="Godot.ConvexPolygonShape2D.SetPointCloud(Godot.Vector2[])">SetPointCloud(Vector2[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Based on the set of points provided, this creates and assigns the <a class="xref" href="Godot.ConvexPolygonShape2D.html#Godot_ConvexPolygonShape2D_Points">Points</a> property using the convex hull algorithm. Removing all unneeded points. See <a class="xref" href="Godot.Geometry.html#Godot_Geometry_ConvexHull2d_Godot_Vector2___">ConvexHull2d(Vector2[])</a> for details.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

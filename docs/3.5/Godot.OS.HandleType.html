@@ -101,7 +101,11 @@
   
   
   <h4 id="Godot_OS_HandleType_ApplicationHandle" data-uid="Godot.OS.HandleType.ApplicationHandle">ApplicationHandle</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Application handle:</p>
+<p>- Windows: <code>HINSTANCE</code> of the application</p>
+<p>- MacOS: <code>NSApplication*</code> of the application (not yet implemented)</p>
+<p>- Android: <code>JNIEnv*</code> of the application (not yet implemented)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +129,9 @@
   
   
   <h4 id="Godot_OS_HandleType_DisplayHandle" data-uid="Godot.OS.HandleType.DisplayHandle">DisplayHandle</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Display handle:</p>
+<p>- Linux: <code>X11::Display*</code> for the display</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +155,11 @@
   
   
   <h4 id="Godot_OS_HandleType_OpenglContext" data-uid="Godot.OS.HandleType.OpenglContext">OpenglContext</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>OpenGL Context:</p>
+<p>- Windows: <code>HGLRC</code></p>
+<p>- Linux: <code>X11::GLXContext</code></p>
+<p>- MacOS: <code>NSOpenGLContext*</code> (not yet implemented)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,7 +207,12 @@
   
   
   <h4 id="Godot_OS_HandleType_WindowHandle" data-uid="Godot.OS.HandleType.WindowHandle">WindowHandle</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Window handle:</p>
+<p>- Windows: <code>HWND</code> of the main window</p>
+<p>- Linux: <code>X11::Window*</code> of the main window</p>
+<p>- MacOS: <code>NSWindow*</code> of the main window (not yet implemented)</p>
+<p>- Android: <code>jObject</code> the main android activity (not yet implemented)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -221,7 +236,10 @@
   
   
   <h4 id="Godot_OS_HandleType_WindowView" data-uid="Godot.OS.HandleType.WindowView">WindowView</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Window view:</p>
+<p>- Windows: <code>HDC</code> of the main window drawing context</p>
+<p>- MacOS: <code>NSView*</code> of the main windows view (not yet implemented)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

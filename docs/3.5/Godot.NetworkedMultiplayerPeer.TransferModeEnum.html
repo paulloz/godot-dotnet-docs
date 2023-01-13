@@ -101,7 +101,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerPeer_TransferModeEnum_Reliable" data-uid="Godot.NetworkedMultiplayerPeer.TransferModeEnum.Reliable">Reliable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Packets must be received and resend attempts should be made until the packets are acknowledged. Packets must be received in the order they were sent in. Most reliable transfer mode, but potentially the slowest due to the overhead. Use for critical data that must be transmitted and arrive in order, for example an ability being triggered or a chat message. Consider carefully if the information really is critical, and use sparingly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +126,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerPeer_TransferModeEnum_Unreliable" data-uid="Godot.NetworkedMultiplayerPeer.TransferModeEnum.Unreliable">Unreliable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Packets are not acknowledged, no resend attempts are made for lost packets. Packets may arrive in any order. Potentially faster than <a class="xref" href="Godot.NetworkedMultiplayerPeer.TransferModeEnum.html#Godot_NetworkedMultiplayerPeer_TransferModeEnum_UnreliableOrdered">UnreliableOrdered</a>. Use for non-critical data, and always consider whether the order matters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +151,8 @@
   
   
   <h4 id="Godot_NetworkedMultiplayerPeer_TransferModeEnum_UnreliableOrdered" data-uid="Godot.NetworkedMultiplayerPeer.TransferModeEnum.UnreliableOrdered">UnreliableOrdered</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Packets are not acknowledged, no resend attempts are made for lost packets. Packets are received in the order they were sent in. Potentially faster than <a class="xref" href="Godot.NetworkedMultiplayerPeer.TransferModeEnum.html#Godot_NetworkedMultiplayerPeer_TransferModeEnum_Reliable">Reliable</a>. Use for non-critical data or data that would be outdated if received late due to resend attempt(s) anyway, for example movement and positional data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,8 @@
   
   <h1 id="Godot_ResourceInteractiveLoader" data-uid="Godot.ResourceInteractiveLoader" class="text-break">Class ResourceInteractiveLoader
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Interactive <a class="xref" href="Godot.Resource.html">Resource</a> loader. This object is returned by <a class="xref" href="Godot.ResourceLoader.html">ResourceLoader</a> when performing an interactive load. It allows loading resources with high granularity, which makes it mainly useful for displaying loading bars or percentages.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -285,7 +286,8 @@
   
   <a id="Godot_ResourceInteractiveLoader_GetResource_" data-uid="Godot.ResourceInteractiveLoader.GetResource*"></a>
   <h4 id="Godot_ResourceInteractiveLoader_GetResource" data-uid="Godot.ResourceInteractiveLoader.GetResource">GetResource()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the loaded resource if the load operation completed successfully, <code>null</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -310,7 +312,8 @@
   
   <a id="Godot_ResourceInteractiveLoader_GetStage_" data-uid="Godot.ResourceInteractiveLoader.GetStage*"></a>
   <h4 id="Godot_ResourceInteractiveLoader_GetStage" data-uid="Godot.ResourceInteractiveLoader.GetStage">GetStage()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the load stage. The total amount of stages can be queried with <a class="xref" href="Godot.ResourceInteractiveLoader.html#Godot_ResourceInteractiveLoader_GetStageCount">GetStageCount()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -335,7 +338,8 @@
   
   <a id="Godot_ResourceInteractiveLoader_GetStageCount_" data-uid="Godot.ResourceInteractiveLoader.GetStageCount*"></a>
   <h4 id="Godot_ResourceInteractiveLoader_GetStageCount" data-uid="Godot.ResourceInteractiveLoader.GetStageCount">GetStageCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total amount of stages (calls to <a class="xref" href="Godot.ResourceInteractiveLoader.html#Godot_ResourceInteractiveLoader_Poll">Poll()</a>) needed to completely load this resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -360,7 +364,11 @@
   
   <a id="Godot_ResourceInteractiveLoader_Poll_" data-uid="Godot.ResourceInteractiveLoader.Poll*"></a>
   <h4 id="Godot_ResourceInteractiveLoader_Poll" data-uid="Godot.ResourceInteractiveLoader.Poll">Poll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Polls the loading operation, i.e. loads a data chunk up to the next stage.</p>
+<p>Returns <code>OK</code> if the poll is successful but the load operation has not finished yet (intermediate stage). This means <a class="xref" href="Godot.ResourceInteractiveLoader.html#Godot_ResourceInteractiveLoader_Poll">Poll()</a> will have to be called again until the last stage is completed.</p>
+<p>Returns <code>ERR_FILE_EOF</code> if the load operation has completed successfully. The loaded resource can be obtained by calling <a class="xref" href="Godot.ResourceInteractiveLoader.html#Godot_ResourceInteractiveLoader_GetResource">GetResource()</a>.</p>
+<p>Returns another <a class="xref" href="Godot.Error.html">Error</a> code if the poll has failed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -385,7 +393,10 @@
   
   <a id="Godot_ResourceInteractiveLoader_Wait_" data-uid="Godot.ResourceInteractiveLoader.Wait*"></a>
   <h4 id="Godot_ResourceInteractiveLoader_Wait" data-uid="Godot.ResourceInteractiveLoader.Wait">Wait()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Polls the loading operation successively until the resource is completely loaded or a <a class="xref" href="Godot.ResourceInteractiveLoader.html#Godot_ResourceInteractiveLoader_Poll">Poll()</a> fails.</p>
+<p>Returns <code>ERR_FILE_EOF</code> if the load operation has completed successfully. The loaded resource can be obtained by calling <a class="xref" href="Godot.ResourceInteractiveLoader.html#Godot_ResourceInteractiveLoader_GetResource">GetResource()</a>.</p>
+<p>Returns another <a class="xref" href="Godot.Error.html">Error</a> code if a poll has failed, aborting the operation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

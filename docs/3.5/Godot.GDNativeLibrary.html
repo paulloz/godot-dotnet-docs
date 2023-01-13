@@ -83,7 +83,8 @@
   
   <h1 id="Godot_GDNativeLibrary" data-uid="Godot.GDNativeLibrary" class="text-break">Class GDNativeLibrary
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A GDNative library can implement <a class="xref" href="Godot.NativeScript.html">NativeScript</a>s, global functions to call with the <a class="xref" href="Godot.GDNative.html">GDNative</a> class, or low-level engine extensions through interfaces such as <a class="xref" href="Godot.ARVRInterfaceGDNative.html">ARVRInterfaceGDNative</a>. The library must be compiled for each platform and architecture that the project will run on.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -346,7 +347,8 @@
   
   <a id="Godot_GDNativeLibrary_ConfigFile_" data-uid="Godot.GDNativeLibrary.ConfigFile*"></a>
   <h4 id="Godot_GDNativeLibrary_ConfigFile" data-uid="Godot.GDNativeLibrary.ConfigFile">ConfigFile</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This resource in INI-style <a class="xref" href="Godot.ConfigFile.html">ConfigFile</a> format, as in <code>.gdnlib</code> files.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +373,9 @@
   
   <a id="Godot_GDNativeLibrary_LoadOnce_" data-uid="Godot.GDNativeLibrary.LoadOnce*"></a>
   <h4 id="Godot_GDNativeLibrary_LoadOnce" data-uid="Godot.GDNativeLibrary.LoadOnce">LoadOnce</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, Godot loads only one copy of the library and each script that references the library will share static data like static or global variables.</p>
+<p>If <code>false</code>, Godot loads a separate copy of the library into memory for each script that references it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +400,9 @@
   
   <a id="Godot_GDNativeLibrary_Reloadable_" data-uid="Godot.GDNativeLibrary.Reloadable*"></a>
   <h4 id="Godot_GDNativeLibrary_Reloadable" data-uid="Godot.GDNativeLibrary.Reloadable">Reloadable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the editor will temporarily unload the library whenever the user switches away from the editor window, allowing the user to recompile the library without restarting Godot.</p>
+<p>Note: If the library defines tool scripts that run inside the editor, <code>reloadable</code> must be <code>false</code>. Otherwise, the editor will attempt to unload the tool scripts while they&apos;re in use and crash.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +427,9 @@
   
   <a id="Godot_GDNativeLibrary_Singleton_" data-uid="Godot.GDNativeLibrary.Singleton*"></a>
   <h4 id="Godot_GDNativeLibrary_Singleton" data-uid="Godot.GDNativeLibrary.Singleton">Singleton</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, Godot loads the library at startup rather than the first time a script uses the library, calling <code>{prefix}gdnative_singleton</code> after initializing the library (where <code>{prefix}</code> is the value of <a class="xref" href="Godot.GDNativeLibrary.html#Godot_GDNativeLibrary_SymbolPrefix">SymbolPrefix</a>). The library remains loaded as long as Godot is running.</p>
+<p>Note: A singleton library cannot be <a class="xref" href="Godot.GDNativeLibrary.html#Godot_GDNativeLibrary_Reloadable">Reloadable</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -446,7 +454,9 @@
   
   <a id="Godot_GDNativeLibrary_SymbolPrefix_" data-uid="Godot.GDNativeLibrary.SymbolPrefix*"></a>
   <h4 id="Godot_GDNativeLibrary_SymbolPrefix" data-uid="Godot.GDNativeLibrary.SymbolPrefix">SymbolPrefix</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The prefix this library&apos;s entry point functions begin with. For example, a GDNativeLibrary would declare its <code>gdnative_init</code> function as <code>godot_gdnative_init</code> by default.</p>
+<p>On platforms that require statically linking libraries (currently only iOS), each library must have a different <code>symbol_prefix</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -498,7 +508,8 @@
   
   <a id="Godot_GDNativeLibrary_GetCurrentDependencies_" data-uid="Godot.GDNativeLibrary.GetCurrentDependencies*"></a>
   <h4 id="Godot_GDNativeLibrary_GetCurrentDependencies" data-uid="Godot.GDNativeLibrary.GetCurrentDependencies">GetCurrentDependencies()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns paths to all dependency libraries for the current platform and architecture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -523,7 +534,8 @@
   
   <a id="Godot_GDNativeLibrary_GetCurrentLibraryPath_" data-uid="Godot.GDNativeLibrary.GetCurrentLibraryPath*"></a>
   <h4 id="Godot_GDNativeLibrary_GetCurrentLibraryPath" data-uid="Godot.GDNativeLibrary.GetCurrentLibraryPath">GetCurrentLibraryPath()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the path to the dynamic library file for the current platform and architecture.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

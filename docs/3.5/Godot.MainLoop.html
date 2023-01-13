@@ -83,7 +83,35 @@
   
   <h1 id="Godot_MainLoop" data-uid="Godot.MainLoop" class="text-break">Class MainLoop
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.MainLoop.html">MainLoop</a> is the abstract base class for a Godot project&apos;s game loop. It is inherited by <a class="xref" href="Godot.SceneTree.html">SceneTree</a>, which is the default game loop implementation used in Godot projects, though it is also possible to write and use one&apos;s own <a class="xref" href="Godot.MainLoop.html">MainLoop</a> subclass instead of the scene tree.</p>
+<p>Upon the application start, a <a class="xref" href="Godot.MainLoop.html">MainLoop</a> implementation must be provided to the OS; otherwise, the application will exit. This happens automatically (and a <a class="xref" href="Godot.SceneTree.html">SceneTree</a> is created) unless a main <a class="xref" href="Godot.Script.html">Script</a> is provided from the command line (with e.g. <code>godot -s my_loop.gd</code>, which should then be a <a class="xref" href="Godot.MainLoop.html">MainLoop</a> implementation.</p>
+<p>Here is an example script implementing a simple <a class="xref" href="Godot.MainLoop.html">MainLoop</a>:</p>
+<p><pre><code>extends MainLoop
+<p>var time_elapsed = 0
+var keys_typed = []
+var quit = false</p>
+<p>func _initialize():
+print(&quot;Initialized:&quot;)
+print(&quot;  Starting time: %s&quot; % str(time_elapsed))</p>
+<p>func _idle(delta):
+time_elapsed += delta
+# Return true to end the main loop.
+return quit</p>
+<p>func _input_event(event):
+# Record keys.
+if event is InputEventKey and event.pressed and !event.echo:
+keys_typed.append(OS.get_scancode_string(event.scancode))
+# Quit on Escape press.
+if event.scancode == KEY_ESCAPE:
+quit = true
+# Quit on any mouse click.
+if event is InputEventMouseButton:
+quit = true</p>
+<p>func _finalize():
+print(&quot;Finalized:&quot;)
+print(&quot;  End time: %s&quot; % str(time_elapsed))
+print(&quot;  Keys typed: %s&quot; % var2str(keys_typed))</code></pre></p><p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -287,7 +315,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationAppPaused" data-uid="Godot.MainLoop.NotificationAppPaused">NotificationAppPaused</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the app is paused.</p>
+<p>Specific to the Android platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -311,7 +341,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationAppResumed" data-uid="Godot.MainLoop.NotificationAppResumed">NotificationAppResumed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the app is resumed.</p>
+<p>Specific to the Android platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -335,7 +367,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationCrash" data-uid="Godot.MainLoop.NotificationCrash">NotificationCrash</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from Godot&apos;s crash handler when the engine is about to crash.</p>
+<p>Implemented on desktop platforms if the crash handler is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -359,7 +393,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationOsImeUpdate" data-uid="Godot.MainLoop.NotificationOsImeUpdate">NotificationOsImeUpdate</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when an update of the Input Method Engine occurs (e.g. change of IME cursor position or composition string).</p>
+<p>Specific to the macOS platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -383,7 +419,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationOsMemoryWarning" data-uid="Godot.MainLoop.NotificationOsMemoryWarning">NotificationOsMemoryWarning</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the application is exceeding its allocated memory.</p>
+<p>Specific to the iOS platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -407,7 +445,8 @@
   
   
   <h4 id="Godot_MainLoop_NotificationTranslationChanged" data-uid="Godot.MainLoop.NotificationTranslationChanged">NotificationTranslationChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received when translations may have changed. Can be triggered by the user changing the locale. Can be used to respond to language changes, for example to change the UI strings on the fly. Useful when working with the built-in translation support, like <a class="xref" href="Godot.Object.html#Godot_Object_Tr_System_String_">Tr(String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -431,7 +470,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationWmAbout" data-uid="Godot.MainLoop.NotificationWmAbout">NotificationWmAbout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when a request for &quot;About&quot; information is sent.</p>
+<p>Specific to the macOS platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -455,7 +496,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationWmFocusIn" data-uid="Godot.MainLoop.NotificationWmFocusIn">NotificationWmFocusIn</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the game window is focused.</p>
+<p>Implemented on all platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -479,7 +522,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationWmFocusOut" data-uid="Godot.MainLoop.NotificationWmFocusOut">NotificationWmFocusOut</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the game window is unfocused.</p>
+<p>Implemented on all platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -503,7 +548,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationWmGoBackRequest" data-uid="Godot.MainLoop.NotificationWmGoBackRequest">NotificationWmGoBackRequest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when a go back request is sent (e.g. pressing the &quot;Back&quot; button on Android).</p>
+<p>Specific to the Android platform.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -527,7 +574,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationWmMouseEnter" data-uid="Godot.MainLoop.NotificationWmMouseEnter">NotificationWmMouseEnter</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the mouse enters the game window.</p>
+<p>Implemented on desktop and web platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -551,7 +600,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationWmMouseExit" data-uid="Godot.MainLoop.NotificationWmMouseExit">NotificationWmMouseExit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when the mouse leaves the game window.</p>
+<p>Implemented on desktop and web platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -575,7 +626,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationWmQuitRequest" data-uid="Godot.MainLoop.NotificationWmQuitRequest">NotificationWmQuitRequest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when a quit request is sent (e.g. closing the window with a &quot;Close&quot; button or Alt+F4).</p>
+<p>Implemented on desktop platforms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -599,7 +652,9 @@
   
   
   <h4 id="Godot_MainLoop_NotificationWmUnfocusRequest" data-uid="Godot.MainLoop.NotificationWmUnfocusRequest">NotificationWmUnfocusRequest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Notification received from the OS when an unfocus request is sent (e.g. another OS window wants to take the focus).</p>
+<p>No supported platforms currently send this notification.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -626,7 +681,8 @@
   
   <a id="Godot_MainLoop__DropFiles_" data-uid="Godot.MainLoop._DropFiles*"></a>
   <h4 id="Godot_MainLoop__DropFiles_System_String___System_Int32_" data-uid="Godot.MainLoop._DropFiles(System.String[],System.Int32)">_DropFiles(String[], Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when files are dragged from the OS file manager and dropped in the game window. The arguments are a list of file paths and the identifier of the screen where the drag originated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -658,7 +714,8 @@
   
   <a id="Godot_MainLoop__Finalize_" data-uid="Godot.MainLoop._Finalize*"></a>
   <h4 id="Godot_MainLoop__Finalize" data-uid="Godot.MainLoop._Finalize">_Finalize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called before the program exits.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -668,7 +725,8 @@
   
   <a id="Godot_MainLoop__GlobalMenuAction_" data-uid="Godot.MainLoop._GlobalMenuAction*"></a>
   <h4 id="Godot_MainLoop__GlobalMenuAction_System_Object_System_Object_" data-uid="Godot.MainLoop._GlobalMenuAction(System.Object,System.Object)">_GlobalMenuAction(Object, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when the user performs an action in the system global menu (e.g. the Mac OS menu bar).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -700,7 +758,9 @@
   
   <a id="Godot_MainLoop__Idle_" data-uid="Godot.MainLoop._Idle*"></a>
   <h4 id="Godot_MainLoop__Idle_System_Single_" data-uid="Godot.MainLoop._Idle(System.Single)">_Idle(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called each idle frame with the time since the last idle frame as argument (in seconds). Equivalent to <a class="xref" href="Godot.Node.html#Godot_Node__Process_System_Single_">_Process(Single)</a>.</p>
+<p>If implemented, the method must return a boolean value. <code>true</code> ends the main loop, while <code>false</code> lets it proceed to the next frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -742,7 +802,8 @@
   
   <a id="Godot_MainLoop__Initialize_" data-uid="Godot.MainLoop._Initialize*"></a>
   <h4 id="Godot_MainLoop__Initialize" data-uid="Godot.MainLoop._Initialize">_Initialize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called once during initialization.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -752,7 +813,8 @@
   
   <a id="Godot_MainLoop__InputEvent_" data-uid="Godot.MainLoop._InputEvent*"></a>
   <h4 id="Godot_MainLoop__InputEvent_Godot_InputEvent_" data-uid="Godot.MainLoop._InputEvent(Godot.InputEvent)">_InputEvent(InputEvent)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called whenever an <a class="xref" href="Godot.InputEvent.html">InputEvent</a> is received by the main loop.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -779,7 +841,8 @@
   
   <a id="Godot_MainLoop__InputText_" data-uid="Godot.MainLoop._InputText*"></a>
   <h4 id="Godot_MainLoop__InputText_System_String_" data-uid="Godot.MainLoop._InputText(System.String)">_InputText(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deprecated callback, does not do anything. Use <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__InputEvent_Godot_InputEvent_">_InputEvent(InputEvent)</a> to parse text input. Will be removed in Godot 4.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -806,7 +869,9 @@
   
   <a id="Godot_MainLoop__Iteration_" data-uid="Godot.MainLoop._Iteration*"></a>
   <h4 id="Godot_MainLoop__Iteration_System_Single_" data-uid="Godot.MainLoop._Iteration(System.Single)">_Iteration(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called each physics frame with the time since the last physics frame as argument (<code>delta</code>, in seconds). Equivalent to <a class="xref" href="Godot.Node.html#Godot_Node__PhysicsProcess_System_Single_">_PhysicsProcess(Single)</a>.</p>
+<p>If implemented, the method must return a boolean value. <code>true</code> ends the main loop, while <code>false</code> lets it proceed to the next frame.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -848,7 +913,8 @@
   
   <a id="Godot_MainLoop_Finish_" data-uid="Godot.MainLoop.Finish*"></a>
   <h4 id="Godot_MainLoop_Finish" data-uid="Godot.MainLoop.Finish">Finish()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should not be called manually, override <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__Finalize">_Finalize()</a> instead. Will be removed in Godot 4.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -858,7 +924,8 @@
   
   <a id="Godot_MainLoop_Idle_" data-uid="Godot.MainLoop.Idle*"></a>
   <h4 id="Godot_MainLoop_Idle_System_Single_" data-uid="Godot.MainLoop.Idle(System.Single)">Idle(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should not be called manually, override <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__Idle_System_Single_">_Idle(Single)</a> instead. Will be removed in Godot 4.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -900,7 +967,8 @@
   
   <a id="Godot_MainLoop_Init_" data-uid="Godot.MainLoop.Init*"></a>
   <h4 id="Godot_MainLoop_Init" data-uid="Godot.MainLoop.Init">Init()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should not be called manually, override <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__Initialize">_Initialize()</a> instead. Will be removed in Godot 4.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -910,7 +978,8 @@
   
   <a id="Godot_MainLoop_InputEvent_" data-uid="Godot.MainLoop.InputEvent*"></a>
   <h4 id="Godot_MainLoop_InputEvent_Godot_InputEvent_" data-uid="Godot.MainLoop.InputEvent(Godot.InputEvent)">InputEvent(InputEvent)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should not be called manually, override <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__InputEvent_Godot_InputEvent_">_InputEvent(InputEvent)</a> instead. Will be removed in Godot 4.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -937,7 +1006,8 @@
   
   <a id="Godot_MainLoop_InputText_" data-uid="Godot.MainLoop.InputText*"></a>
   <h4 id="Godot_MainLoop_InputText_System_String_" data-uid="Godot.MainLoop.InputText(System.String)">InputText(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should not be called manually, override <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__InputText_System_String_">_InputText(String)</a> instead. Will be removed in Godot 4.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -964,7 +1034,8 @@
   
   <a id="Godot_MainLoop_Iteration_" data-uid="Godot.MainLoop.Iteration*"></a>
   <h4 id="Godot_MainLoop_Iteration_System_Single_" data-uid="Godot.MainLoop.Iteration(System.Single)">Iteration(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Should not be called manually, override <a class="xref" href="Godot.MainLoop.html#Godot_MainLoop__Iteration_System_Single_">_Iteration(Single)</a> instead. Will be removed in Godot 4.0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

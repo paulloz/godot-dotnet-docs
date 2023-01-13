@@ -83,7 +83,86 @@
   
   <h1 id="Godot_WebXRInterface" data-uid="Godot.WebXRInterface" class="text-break">Class WebXRInterface
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>WebXR is an open standard that allows creating VR and AR applications that run in the web browser.</p>
+<p>As such, this interface is only available when running in an HTML5 export.</p>
+<p>WebXR supports a wide range of devices, from the very capable (like Valve Index, HTC Vive, Oculus Rift and Quest) down to the much less capable (like Google Cardboard, Oculus Go, GearVR, or plain smartphones).</p>
+<p>Since WebXR is based on Javascript, it makes extensive use of callbacks, which means that <a class="xref" href="Godot.WebXRInterface.html">WebXRInterface</a> is forced to use signals, where other AR/VR interfaces would instead use functions that return a result immediately. This makes <a class="xref" href="Godot.WebXRInterface.html">WebXRInterface</a> quite a bit more complicated to initialize than other AR/VR interfaces.</p>
+<p>Here&apos;s the minimum code required to start an immersive VR session:</p>
+<p><pre><code>extends Spatial
+<p>var webxr_interface
+var vr_supported = false</p>
+<p>func _ready():
+# We assume this node has a button as a child.
+# This button is for the user to consent to entering immersive VR mode.
+$Button.connect(&quot;pressed&quot;, self, &quot;_on_Button_pressed&quot;)</p>
+<pre><code>webxr_interface = ARVRServer.find_interface(&amp;quot;WebXR&amp;quot;)
+if webxr_interface:
+    # Map to the standard button/axis ids when possible.
+    webxr_interface.xr_standard_mapping = true
+
+    # WebXR uses a lot of asynchronous callbacks, so we connect to various
+    # signals in order to receive them.
+    webxr_interface.connect(&amp;quot;session_supported&amp;quot;, self, &amp;quot;_webxr_session_supported&amp;quot;)
+    webxr_interface.connect(&amp;quot;session_started&amp;quot;, self, &amp;quot;_webxr_session_started&amp;quot;)
+    webxr_interface.connect(&amp;quot;session_ended&amp;quot;, self, &amp;quot;_webxr_session_ended&amp;quot;)
+    webxr_interface.connect(&amp;quot;session_failed&amp;quot;, self, &amp;quot;_webxr_session_failed&amp;quot;)
+
+    # This returns immediately - our _webxr_session_supported() method
+    # (which we connected to the &amp;quot;session_supported&amp;quot; signal above) will
+    # be called sometime later to let us know if it&amp;apos;s supported or not.
+    webxr_interface.is_session_supported(&amp;quot;immersive-vr&amp;quot;)
+</code></pre>
+<p>func _webxr_session_supported(session_mode, supported):
+if session_mode == 'immersive-vr':
+vr_supported = supported</p>
+<p>func _on_Button_pressed():
+if not vr_supported:
+OS.alert(&quot;Your browser doesn't support VR&quot;)
+return</p>
+<pre><code># We want an immersive VR session, as opposed to AR (&amp;apos;immersive-ar&amp;apos;) or a
+# simple 3DoF viewer (&amp;apos;viewer&amp;apos;).
+webxr_interface.session_mode = &amp;apos;immersive-vr&amp;apos;
+# &amp;apos;bounded-floor&amp;apos; is room scale, &amp;apos;local-floor&amp;apos; is a standing or sitting
+# experience (it puts you 1.6m above the ground if you have 3DoF headset),
+# whereas as &amp;apos;local&amp;apos; puts you down at the ARVROrigin.
+# This list means it&amp;apos;ll first try to request &amp;apos;bounded-floor&amp;apos;, then
+# fallback on &amp;apos;local-floor&amp;apos; and ultimately &amp;apos;local&amp;apos;, if nothing else is
+# supported.
+webxr_interface.requested_reference_space_types = &amp;apos;bounded-floor, local-floor, local&amp;apos;
+# In order to use &amp;apos;local-floor&amp;apos; or &amp;apos;bounded-floor&amp;apos; we must also
+# mark the features as required or optional.
+webxr_interface.required_features = &amp;apos;local-floor&amp;apos;
+webxr_interface.optional_features = &amp;apos;bounded-floor&amp;apos;
+
+# This will return false if we&amp;apos;re unable to even request the session,
+# however, it can still fail asynchronously later in the process, so we
+# only know if it&amp;apos;s really succeeded or failed when our
+# _webxr_session_started() or _webxr_session_failed() methods are called.
+if not webxr_interface.initialize():
+    OS.alert(&amp;quot;Failed to initialize&amp;quot;)
+    return
+</code></pre>
+<p>func _webxr_session_started():
+$Button.visible = false
+# This tells Godot to start rendering to the headset.
+get_viewport().arvr = true
+# This will be the reference space type you ultimately got, out of the
+# types that you requested above. This is useful if you want the game to
+# work a little differently in 'bounded-floor' versus 'local-floor'.
+print (&quot;Reference space type: &quot; + webxr_interface.reference_space_type)</p>
+<p>func _webxr_session_ended():
+$Button.visible = true
+# If the user exits immersive mode, then we tell Godot to render to the web
+# page again.
+get_viewport().arvr = false</p>
+<p>func _webxr_session_failed(message):
+OS.alert(&quot;Failed to initialize: &quot; + message)</code></pre></p><p>
+<p>There are several ways to handle &quot;controller&quot; input:</p>
+<p>- Using <a class="xref" href="Godot.ARVRController.html">ARVRController</a> nodes and their <code>ARVRController.button_pressed</code> and <code>ARVRController.button_release</code> signals. This is how controllers are typically handled in AR/VR apps in Godot, however, this will only work with advanced VR controllers like the Oculus Touch or Index controllers, for example. The buttons codes are defined by <a href="https://immersive-web.github.io/webxr-gamepads-module/#xr-standard-gamepad-mapping">Section 3.3 of the WebXR Gamepads Module</a>.</p>
+<p>- Using <a class="xref" href="Godot.Node.html#Godot_Node__UnhandledInput_Godot_InputEvent_">_UnhandledInput(InputEvent)</a> and <a class="xref" href="Godot.InputEventJoypadButton.html">InputEventJoypadButton</a> or <a class="xref" href="Godot.InputEventJoypadMotion.html">InputEventJoypadMotion</a>. This works the same as normal joypads, except the <a class="xref" href="Godot.InputEvent.html#Godot_InputEvent_Device">Device</a> starts at 100, so the left controller is 100 and the right controller is 101, and the button codes are also defined by <a href="https://immersive-web.github.io/webxr-gamepads-module/#xr-standard-gamepad-mapping">Section 3.3 of the WebXR Gamepads Module</a>.</p>
+<p>- Using the <code>select</code>, <code>squeeze</code> and related signals. This method will work for both advanced VR controllers, and non-traditional &quot;controllers&quot; like a tap on the screen, a spoken voice command or a button press on the device itself. The <code>controller_id</code> passed to these signals is the same id as used in <a class="xref" href="Godot.ARVRController.html#Godot_ARVRController_ControllerId">ControllerId</a>.</p>
+<p>You can use one or all of these methods to allow your game or app to support a wider or narrower set of devices and input methods, or to allow more advanced interactions with more advanced devices.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -337,7 +416,10 @@
   
   <a id="Godot_WebXRInterface_BoundsGeometry_" data-uid="Godot.WebXRInterface.BoundsGeometry*"></a>
   <h4 id="Godot_WebXRInterface_BoundsGeometry" data-uid="Godot.WebXRInterface.BoundsGeometry">BoundsGeometry</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The vertices of a polygon which defines the boundaries of the user&apos;s play area.</p>
+<p>This will only be available if <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_ReferenceSpaceType">ReferenceSpaceType</a> is <code>&quot;bounded-floor&quot;</code> and only on certain browsers and devices that support it.</p>
+<p>The <code>reference_space_reset</code> signal may indicate when this changes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -362,7 +444,11 @@
   
   <a id="Godot_WebXRInterface_OptionalFeatures_" data-uid="Godot.WebXRInterface.OptionalFeatures*"></a>
   <h4 id="Godot_WebXRInterface_OptionalFeatures" data-uid="Godot.WebXRInterface.OptionalFeatures">OptionalFeatures</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A comma-seperated list of optional features used by <a class="xref" href="Godot.ARVRInterface.html#Godot_ARVRInterface_Initialize">Initialize()</a> when setting up the WebXR session.</p>
+<p>If a user&apos;s browser or device doesn&apos;t support one of the given features, initialization will continue, but you won&apos;t be able to use the requested feature.</p>
+<p>This doesn&apos;t have any effect on the interface when already initialized.</p>
+<p>Possible values come from <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceType">WebXR&apos;s XRReferenceSpaceType</a>. If you want to use a particular reference space type, it must be listed in either <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_RequiredFeatures">RequiredFeatures</a> or <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_OptionalFeatures">OptionalFeatures</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -387,7 +473,9 @@
   
   <a id="Godot_WebXRInterface_ReferenceSpaceType_" data-uid="Godot.WebXRInterface.ReferenceSpaceType*"></a>
   <h4 id="Godot_WebXRInterface_ReferenceSpaceType" data-uid="Godot.WebXRInterface.ReferenceSpaceType">ReferenceSpaceType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The reference space type (from the list of requested types set in the <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_RequestedReferenceSpaceTypes">RequestedReferenceSpaceTypes</a> property), that was ultimately used by <a class="xref" href="Godot.ARVRInterface.html#Godot_ARVRInterface_Initialize">Initialize()</a> when setting up the WebXR session.</p>
+<p>Possible values come from <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceType">WebXR&apos;s XRReferenceSpaceType</a>. If you want to use a particular reference space type, it must be listed in either <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_RequiredFeatures">RequiredFeatures</a> or <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_OptionalFeatures">OptionalFeatures</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -412,7 +500,11 @@
   
   <a id="Godot_WebXRInterface_RequestedReferenceSpaceTypes_" data-uid="Godot.WebXRInterface.RequestedReferenceSpaceTypes*"></a>
   <h4 id="Godot_WebXRInterface_RequestedReferenceSpaceTypes" data-uid="Godot.WebXRInterface.RequestedReferenceSpaceTypes">RequestedReferenceSpaceTypes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A comma-seperated list of reference space types used by <a class="xref" href="Godot.ARVRInterface.html#Godot_ARVRInterface_Initialize">Initialize()</a> when setting up the WebXR session.</p>
+<p>The reference space types are requested in order, and the first on supported by the users device or browser will be used. The <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_ReferenceSpaceType">ReferenceSpaceType</a> property contains the reference space type that was ultimately used.</p>
+<p>This doesn&apos;t have any effect on the interface when already initialized.</p>
+<p>Possible values come from <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceType">WebXR&apos;s XRReferenceSpaceType</a>. If you want to use a particular reference space type, it must be listed in either <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_RequiredFeatures">RequiredFeatures</a> or <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_OptionalFeatures">OptionalFeatures</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -437,7 +529,11 @@
   
   <a id="Godot_WebXRInterface_RequiredFeatures_" data-uid="Godot.WebXRInterface.RequiredFeatures*"></a>
   <h4 id="Godot_WebXRInterface_RequiredFeatures" data-uid="Godot.WebXRInterface.RequiredFeatures">RequiredFeatures</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A comma-seperated list of required features used by <a class="xref" href="Godot.ARVRInterface.html#Godot_ARVRInterface_Initialize">Initialize()</a> when setting up the WebXR session.</p>
+<p>If a user&apos;s browser or device doesn&apos;t support one of the given features, initialization will fail and <code>session_failed</code> will be emitted.</p>
+<p>This doesn&apos;t have any effect on the interface when already initialized.</p>
+<p>Possible values come from <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceType">WebXR&apos;s XRReferenceSpaceType</a>. If you want to use a particular reference space type, it must be listed in either <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_RequiredFeatures">RequiredFeatures</a> or <a class="xref" href="Godot.WebXRInterface.html#Godot_WebXRInterface_OptionalFeatures">OptionalFeatures</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -462,7 +558,10 @@
   
   <a id="Godot_WebXRInterface_SessionMode_" data-uid="Godot.WebXRInterface.SessionMode*"></a>
   <h4 id="Godot_WebXRInterface_SessionMode" data-uid="Godot.WebXRInterface.SessionMode">SessionMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The session mode used by <a class="xref" href="Godot.ARVRInterface.html#Godot_ARVRInterface_Initialize">Initialize()</a> when setting up the WebXR session.</p>
+<p>This doesn&apos;t have any effect on the interface when already initialized.</p>
+<p>Possible values come from <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionMode">WebXR&apos;s XRSessionMode</a>, including: <code>&quot;immersive-vr&quot;</code>, <code>&quot;immersive-ar&quot;</code>, and <code>&quot;inline&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -487,7 +586,9 @@
   
   <a id="Godot_WebXRInterface_VisibilityState_" data-uid="Godot.WebXRInterface.VisibilityState*"></a>
   <h4 id="Godot_WebXRInterface_VisibilityState" data-uid="Godot.WebXRInterface.VisibilityState">VisibilityState</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates if the WebXR session&apos;s imagery is visible to the user.</p>
+<p>Possible values come from <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRVisibilityState">WebXR&apos;s XRVisibilityState</a>, including <code>&quot;hidden&quot;</code>, <code>&quot;visible&quot;</code>, and <code>&quot;visible-blurred&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -512,7 +613,9 @@
   
   <a id="Godot_WebXRInterface_XrStandardMapping_" data-uid="Godot.WebXRInterface.XrStandardMapping*"></a>
   <h4 id="Godot_WebXRInterface_XrStandardMapping" data-uid="Godot.WebXRInterface.XrStandardMapping">XrStandardMapping</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If set to true, the button and axes ids will be converted to match the standard ids used by other AR/VR interfaces, when possible.</p>
+<p>Otherwise, the ids will be passed through unaltered from WebXR.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -564,7 +667,16 @@
   
   <a id="Godot_WebXRInterface_GetController_" data-uid="Godot.WebXRInterface.GetController*"></a>
   <h4 id="Godot_WebXRInterface_GetController_System_Int32_" data-uid="Godot.WebXRInterface.GetController(System.Int32)">GetController(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets an <a class="xref" href="Godot.ARVRPositionalTracker.html">ARVRPositionalTracker</a> for the given <code>controller_id</code>.</p>
+<p>In the context of WebXR, a &quot;controller&quot; can be an advanced VR controller like the Oculus Touch or Index controllers, or even a tap on the screen, a spoken voice command or a button press on the device itself. When a non-traditional controller is used, interpret the position and orientation of the <a class="xref" href="Godot.ARVRPositionalTracker.html">ARVRPositionalTracker</a> as a ray pointing at the object the user wishes to interact with.</p>
+<p>Use this method to get information about the controller that triggered one of these signals:</p>
+<p>- <code>selectstart</code></p>
+<p>- <code>select</code></p>
+<p>- <code>selectend</code></p>
+<p>- <code>squeezestart</code></p>
+<p>- <code>squeeze</code></p>
+<p>- <code>squeezestart</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -606,7 +718,9 @@
   
   <a id="Godot_WebXRInterface_GetControllerTargetRayMode_" data-uid="Godot.WebXRInterface.GetControllerTargetRayMode*"></a>
   <h4 id="Godot_WebXRInterface_GetControllerTargetRayMode_System_Int32_" data-uid="Godot.WebXRInterface.GetControllerTargetRayMode(System.Int32)">GetControllerTargetRayMode(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the target ray mode for the given <code>controller_id</code>.</p>
+<p>This can help interpret the input coming from that controller. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRayMode">XRInputSource.targetRayMode</a> for more information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -823,7 +937,10 @@
   
   <a id="Godot_WebXRInterface_IsSessionSupported_" data-uid="Godot.WebXRInterface.IsSessionSupported*"></a>
   <h4 id="Godot_WebXRInterface_IsSessionSupported_System_String_" data-uid="Godot.WebXRInterface.IsSessionSupported(System.String)">IsSessionSupported(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if the given <code>session_mode</code> is supported by the user&apos;s browser.</p>
+<p>Possible values come from <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionMode">WebXR&apos;s XRSessionMode</a>, including: <code>&quot;immersive-vr&quot;</code>, <code>&quot;immersive-ar&quot;</code>, and <code>&quot;inline&quot;</code>.</p>
+<p>This method returns nothing, instead it emits the <code>session_supported</code> signal with the result.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

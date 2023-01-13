@@ -83,7 +83,9 @@
   
   <h1 id="Godot_X509Certificate" data-uid="Godot.X509Certificate" class="text-break">Class X509Certificate
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The X509Certificate class represents an X509 certificate. Certificates can be loaded and saved like any other <a class="xref" href="Godot.Resource.html">Resource</a>.</p>
+<p>They can be used as the server certificate in <a class="xref" href="Godot.StreamPeerSSL.html#Godot_StreamPeerSSL_AcceptStream_Godot_StreamPeer_Godot_CryptoKey_Godot_X509Certificate_Godot_X509Certificate_">AcceptStream(StreamPeer, CryptoKey, X509Certificate, X509Certificate)</a> (along with the proper <a class="xref" href="Godot.CryptoKey.html">CryptoKey</a>), and to specify the only certificate that should be accepted when connecting to an SSL server via <a class="xref" href="Godot.StreamPeerSSL.html#Godot_StreamPeerSSL_ConnectToStream_Godot_StreamPeer_System_Boolean_System_String_Godot_X509Certificate_">ConnectToStream(StreamPeer, Boolean, String, X509Certificate)</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -346,7 +348,8 @@
   
   <a id="Godot_X509Certificate_Load_" data-uid="Godot.X509Certificate.Load*"></a>
   <h4 id="Godot_X509Certificate_Load_System_String_" data-uid="Godot.X509Certificate.Load(System.String)">Load(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Loads a certificate from <code>path</code> (&quot;*.crt&quot; file).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -388,7 +391,8 @@
   
   <a id="Godot_X509Certificate_Save_" data-uid="Godot.X509Certificate.Save*"></a>
   <h4 id="Godot_X509Certificate_Save_System_String_" data-uid="Godot.X509Certificate.Save(System.String)">Save(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Saves a certificate to the given <code>path</code> (should be a &quot;*.crt&quot; file).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

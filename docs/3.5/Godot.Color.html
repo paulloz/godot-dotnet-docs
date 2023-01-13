@@ -83,7 +83,14 @@
   
   <h1 id="Godot_Color" data-uid="Godot.Color" class="text-break">Class Color
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A color represented by red, green, blue, and alpha (RGBA) components.
+The alpha component is often used for transparency.
+Values are in floating-point and usually range from 0 to 1.
+Some properties (such as <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Modulate">Modulate</a>) may accept values
+greater than 1 (overbright or HDR colors).</p>
+<p>If you want to supply values in a range of 0 to 255, you should use
+<a class="xref" href="Godot.Color.html#Godot_Color_Color8_System_Byte_System_Byte_System_Byte_System_Byte_">Color8(Byte, Byte, Byte, Byte)</a> and the <code>r8</code>/<code>g8</code>/<code>b8</code>/<code>a8</code> properties.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -106,7 +113,8 @@
   
   <a id="Godot_Color__ctor_" data-uid="Godot.Color.#ctor*"></a>
   <h4 id="Godot_Color__ctor_Godot_Color_System_Single_" data-uid="Godot.Color.#ctor(Godot.Color,System.Single)">Color(Color, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Godot.Color.html">Color</a> from an existing color and an alpha value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,12 +133,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">c</span></td>
-        <td></td>
+        <td><p>The color to construct from. Only its RGB values are used.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">a</span></td>
-        <td></td>
+        <td><p>The color's alpha (transparency) value, typically on the range of 0 to 1. Default: 1.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -138,7 +148,9 @@
   
   <a id="Godot_Color__ctor_" data-uid="Godot.Color.#ctor*"></a>
   <h4 id="Godot_Color__ctor_System_Int32_" data-uid="Godot.Color.#ctor(System.Int32)">Color(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Godot.Color.html">Color</a> from a 32-bit integer in RGBA format
+(each byte represents a color channel).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -157,7 +169,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">rgba</span></td>
-        <td></td>
+        <td><p>The <span class="xref">langword_csharp_int</span> representing the color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -165,7 +178,9 @@
   
   <a id="Godot_Color__ctor_" data-uid="Godot.Color.#ctor*"></a>
   <h4 id="Godot_Color__ctor_System_Int64_" data-uid="Godot.Color.#ctor(System.Int64)">Color(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Godot.Color.html">Color</a> from a 64-bit integer in RGBA format
+(each word represents a color channel).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -184,7 +199,8 @@
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">rgba</span></td>
-        <td></td>
+        <td><p>The <span class="xref">langword_csharp_long</span> representing the color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -192,7 +208,8 @@
   
   <a id="Godot_Color__ctor_" data-uid="Godot.Color.#ctor*"></a>
   <h4 id="Godot_Color__ctor_System_Single_System_Single_System_Single_System_Single_" data-uid="Godot.Color.#ctor(System.Single,System.Single,System.Single,System.Single)">Color(Single, Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Godot.Color.html">Color</a> from RGBA values, typically on the range of 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -211,22 +228,26 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">r</span></td>
-        <td></td>
+        <td><p>The color's red component, typically on the range of 0 to 1.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">g</span></td>
-        <td></td>
+        <td><p>The color's green component, typically on the range of 0 to 1.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">b</span></td>
-        <td></td>
+        <td><p>The color's blue component, typically on the range of 0 to 1.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">a</span></td>
-        <td></td>
+        <td><p>The color's alpha (transparency) value, typically on the range of 0 to 1. Default: 1.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -234,7 +255,8 @@
   
   <a id="Godot_Color__ctor_" data-uid="Godot.Color.#ctor*"></a>
   <h4 id="Godot_Color__ctor_System_String_" data-uid="Godot.Color.#ctor(System.String)">Color(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Godot.Color.html">Color</a> from the HTML hexadecimal color string in RGBA format.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,7 +275,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">rgba</span></td>
-        <td></td>
+        <td><p>A string for the HTML hexadecimal representation of this color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -262,7 +285,8 @@
   
   
   <h4 id="Godot_Color_a" data-uid="Godot.Color.a">a</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The color's alpha (transparency) component, typically on the range of 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -286,7 +310,8 @@
   
   
   <h4 id="Godot_Color_b" data-uid="Godot.Color.b">b</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The color's blue component, typically on the range of 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -310,7 +335,8 @@
   
   
   <h4 id="Godot_Color_g" data-uid="Godot.Color.g">g</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The color's green component, typically on the range of 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -334,7 +360,8 @@
   
   
   <h4 id="Godot_Color_r" data-uid="Godot.Color.r">r</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The color's red component, typically on the range of 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -361,7 +388,8 @@
   
   <a id="Godot_Color_a8_" data-uid="Godot.Color.a8*"></a>
   <h4 id="Godot_Color_a8" data-uid="Godot.Color.a8">a8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Wrapper for <a class="xref" href="Godot.Color.html#Godot_Color_a">a</a> that uses the range 0 to 255 instead of 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -378,7 +406,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>Getting is equivalent to multiplying by 255 and rounding. Setting is equivalent to dividing by 255.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -386,7 +415,8 @@
   
   <a id="Godot_Color_b8_" data-uid="Godot.Color.b8*"></a>
   <h4 id="Godot_Color_b8" data-uid="Godot.Color.b8">b8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Wrapper for <a class="xref" href="Godot.Color.html#Godot_Color_b">b</a> that uses the range 0 to 255 instead of 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -403,7 +433,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>Getting is equivalent to multiplying by 255 and rounding. Setting is equivalent to dividing by 255.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -411,7 +442,8 @@
   
   <a id="Godot_Color_g8_" data-uid="Godot.Color.g8*"></a>
   <h4 id="Godot_Color_g8" data-uid="Godot.Color.g8">g8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Wrapper for <a class="xref" href="Godot.Color.html#Godot_Color_g">g</a> that uses the range 0 to 255 instead of 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -428,7 +460,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>Getting is equivalent to multiplying by 255 and rounding. Setting is equivalent to dividing by 255.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -436,7 +469,8 @@
   
   <a id="Godot_Color_h_" data-uid="Godot.Color.h*"></a>
   <h4 id="Godot_Color_h" data-uid="Godot.Color.h">h</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The HSV hue of this color, on the range 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -453,7 +487,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>Getting is a long process, refer to the source code for details. Setting uses <a class="xref" href="Godot.Color.html#Godot_Color_FromHsv_System_Single_System_Single_System_Single_System_Single_">FromHsv(Single, Single, Single, Single)</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -461,7 +496,8 @@
   
   <a id="Godot_Color_Item_" data-uid="Godot.Color.Item*"></a>
   <h4 id="Godot_Color_Item_System_Int32_" data-uid="Godot.Color.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Access color components using their index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -495,7 +531,11 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p><code>[0]</code> is equivalent to <a class="xref" href="Godot.Color.html#Godot_Color_r">r</a>,
+<code>[1]</code> is equivalent to <a class="xref" href="Godot.Color.html#Godot_Color_g">g</a>,
+<code>[2]</code> is equivalent to <a class="xref" href="Godot.Color.html#Godot_Color_b">b</a>,
+<code>[3]</code> is equivalent to <a class="xref" href="Godot.Color.html#Godot_Color_a">a</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -503,7 +543,8 @@
   
   <a id="Godot_Color_r8_" data-uid="Godot.Color.r8*"></a>
   <h4 id="Godot_Color_r8" data-uid="Godot.Color.r8">r8</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Wrapper for <a class="xref" href="Godot.Color.html#Godot_Color_r">r</a> that uses the range 0 to 255 instead of 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -520,7 +561,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>Getting is equivalent to multiplying by 255 and rounding. Setting is equivalent to dividing by 255.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -528,7 +570,8 @@
   
   <a id="Godot_Color_s_" data-uid="Godot.Color.s*"></a>
   <h4 id="Godot_Color_s" data-uid="Godot.Color.s">s</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The HSV saturation of this color, on the range 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -545,7 +588,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>Getting is equivalent to the ratio between the min and max RGB value. Setting uses <a class="xref" href="Godot.Color.html#Godot_Color_FromHsv_System_Single_System_Single_System_Single_System_Single_">FromHsv(Single, Single, Single, Single)</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -553,7 +597,8 @@
   
   <a id="Godot_Color_v_" data-uid="Godot.Color.v*"></a>
   <h4 id="Godot_Color_v" data-uid="Godot.Color.v">v</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The HSV value (brightness) of this color, on the range 0 to 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -570,7 +615,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>Getting is equivalent to using <span class="xref">System.Math.Max(System.Single,System.Single)</span> on the RGB components. Setting uses <a class="xref" href="Godot.Color.html#Godot_Color_FromHsv_System_Single_System_Single_System_Single_System_Single_">FromHsv(Single, Single, Single, Single)</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -580,7 +626,10 @@
   
   <a id="Godot_Color_Blend_" data-uid="Godot.Color.Blend*"></a>
   <h4 id="Godot_Color_Blend_Godot_Color_" data-uid="Godot.Color.Blend(Godot.Color)">Blend(Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a new color resulting from blending this color over another.
+If the color is opaque, the result is also opaque.
+The second color may have a range of alpha values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -599,7 +648,8 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">over</span></td>
-        <td></td>
+        <td><p>The color to blend over.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -614,7 +664,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>This color blended over <code data-dev-comment-type="paramref" class="paramref">over</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -622,7 +673,9 @@
   
   <a id="Godot_Color_Color8_" data-uid="Godot.Color.Color8*"></a>
   <h4 id="Godot_Color_Color8_System_Byte_System_Byte_System_Byte_System_Byte_" data-uid="Godot.Color.Color8(System.Byte,System.Byte,System.Byte,System.Byte)">Color8(Byte, Byte, Byte, Byte)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a color constructed from integer red, green, blue, and alpha channels.
+Each channel should have 8 bits of information ranging from 0 to 255.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -641,22 +694,26 @@
       <tr>
         <td><span class="xref">System.Byte</span></td>
         <td><span class="parametername">r8</span></td>
-        <td></td>
+        <td><p>The red component represented on the range of 0 to 255.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span></td>
         <td><span class="parametername">g8</span></td>
-        <td></td>
+        <td><p>The green component represented on the range of 0 to 255.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span></td>
         <td><span class="parametername">b8</span></td>
-        <td></td>
+        <td><p>The blue component represented on the range of 0 to 255.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span></td>
         <td><span class="parametername">a8</span></td>
-        <td></td>
+        <td><p>The alpha (transparency) component represented on the range of 0 to 255.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -671,7 +728,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The constructed color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -679,7 +737,10 @@
   
   <a id="Godot_Color_ColorN_" data-uid="Godot.Color.ColorN*"></a>
   <h4 id="Godot_Color_ColorN_System_String_System_Single_" data-uid="Godot.Color.ColorN(System.String,System.Single)">ColorN(String, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a color according to the standardized name, with the
+specified alpha value. Supported color names are the same as
+the constants defined in <a class="xref" href="Godot.Colors.html">Colors</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -698,12 +759,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>The name of the color.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">alpha</span></td>
-        <td></td>
+        <td><p>The alpha (transparency) component represented on the range of 0 to 1. Default: 1.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -718,7 +781,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The constructed color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -726,7 +790,8 @@
   
   <a id="Godot_Color_Contrasted_" data-uid="Godot.Color.Contrasted*"></a>
   <h4 id="Godot_Color_Contrasted" data-uid="Godot.Color.Contrasted">Contrasted()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the most contrasting color.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -743,7 +808,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The most contrasting color</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -751,7 +817,9 @@
   
   <a id="Godot_Color_Darkened_" data-uid="Godot.Color.Darkened*"></a>
   <h4 id="Godot_Color_Darkened_System_Single_" data-uid="Godot.Color.Darkened(System.Single)">Darkened(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a new color resulting from making this color darker
+by the specified ratio (on the range of 0 to 1).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -770,7 +838,8 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">amount</span></td>
-        <td></td>
+        <td><p>The ratio to darken by.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -785,7 +854,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The darkened color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -793,7 +863,10 @@
   
   <a id="Godot_Color_Equals_" data-uid="Godot.Color.Equals*"></a>
   <h4 id="Godot_Color_Equals_Godot_Color_" data-uid="Godot.Color.Equals(Godot.Color)">Equals(Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the colors are exactly equal.
+Note: Due to floating-point precision errors, consider using
+<a class="xref" href="Godot.Color.html#Godot_Color_IsEqualApprox_Godot_Color_">IsEqualApprox(Color)</a> instead, which is more reliable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -812,7 +885,8 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>The other color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -827,7 +901,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the colors are equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -835,7 +910,8 @@
   
   <a id="Godot_Color_Equals_" data-uid="Godot.Color.Equals*"></a>
   <h4 id="Godot_Color_Equals_System_Object_" data-uid="Godot.Color.Equals(System.Object)">Equals(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if this color and <code data-dev-comment-type="paramref" class="paramref">obj</code> are equal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -854,7 +930,8 @@
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>The other object to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -869,7 +946,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the color and the other object are equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -877,7 +955,10 @@
   
   <a id="Godot_Color_FromHsv_" data-uid="Godot.Color.FromHsv*"></a>
   <h4 id="Godot_Color_FromHsv_System_Single_System_Single_System_Single_System_Single_" data-uid="Godot.Color.FromHsv(System.Single,System.Single,System.Single,System.Single)">FromHsv(Single, Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a color from an HSV profile, with values on the
+range of 0 to 1. This is equivalent to using each of
+the <code>h</code>/<code>s</code>/<code>v</code> properties, but much more efficient.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -896,22 +977,26 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">hue</span></td>
-        <td></td>
+        <td><p>The HSV hue, typically on the range of 0 to 1.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">saturation</span></td>
-        <td></td>
+        <td><p>The HSV saturation, typically on the range of 0 to 1.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The HSV value (brightness), typically on the range of 0 to 1.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">alpha</span></td>
-        <td></td>
+        <td><p>The alpha (transparency) value, typically on the range of 0 to 1.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -926,7 +1011,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The constructed color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -934,7 +1020,8 @@
   
   <a id="Godot_Color_GetHashCode_" data-uid="Godot.Color.GetHashCode*"></a>
   <h4 id="Godot_Color_GetHashCode" data-uid="Godot.Color.GetHashCode">GetHashCode()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Serves as the hash function for <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -951,7 +1038,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>A hash code for this color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -959,7 +1047,8 @@
   
   <a id="Godot_Color_Inverted_" data-uid="Godot.Color.Inverted*"></a>
   <h4 id="Godot_Color_Inverted" data-uid="Godot.Color.Inverted">Inverted()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the inverted color: <code>(1 - r, 1 - g, 1 - b, a)</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -976,7 +1065,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The inverted color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -984,7 +1074,9 @@
   
   <a id="Godot_Color_IsEqualApprox_" data-uid="Godot.Color.IsEqualApprox*"></a>
   <h4 id="Godot_Color_IsEqualApprox_Godot_Color_" data-uid="Godot.Color.IsEqualApprox(Godot.Color)">IsEqualApprox(Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if this color and <code data-dev-comment-type="paramref" class="paramref">other</code> are approximately equal,
+by running <a class="xref" href="Godot.Mathf.html#Godot_Mathf_IsEqualApprox_System_Single_System_Single_">IsEqualApprox(Single, Single)</a> on each component.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1003,7 +1095,8 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>The other color to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1018,7 +1111,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the colors are approximately equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1026,7 +1120,9 @@
   
   <a id="Godot_Color_Lightened_" data-uid="Godot.Color.Lightened*"></a>
   <h4 id="Godot_Color_Lightened_System_Single_" data-uid="Godot.Color.Lightened(System.Single)">Lightened(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a new color resulting from making this color lighter
+by the specified ratio (on the range of 0 to 1).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1045,7 +1141,8 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">amount</span></td>
-        <td></td>
+        <td><p>The ratio to lighten by.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1060,7 +1157,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The darkened color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1068,7 +1166,9 @@
   
   <a id="Godot_Color_LinearInterpolate_" data-uid="Godot.Color.LinearInterpolate*"></a>
   <h4 id="Godot_Color_LinearInterpolate_Godot_Color_Godot_Color_" data-uid="Godot.Color.LinearInterpolate(Godot.Color,Godot.Color)">LinearInterpolate(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the result of the linear interpolation between
+this color and <code data-dev-comment-type="paramref" class="paramref">to</code> by color amount <code data-dev-comment-type="paramref" class="paramref">weight</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1087,12 +1187,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">to</span></td>
-        <td></td>
+        <td><p>The destination color for interpolation.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">weight</span></td>
-        <td></td>
+        <td><p>A color with components on the range of 0.0 to 1.0, representing the amount of interpolation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1107,7 +1209,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The resulting color of the interpolation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1115,7 +1218,9 @@
   
   <a id="Godot_Color_LinearInterpolate_" data-uid="Godot.Color.LinearInterpolate*"></a>
   <h4 id="Godot_Color_LinearInterpolate_Godot_Color_System_Single_" data-uid="Godot.Color.LinearInterpolate(Godot.Color,System.Single)">LinearInterpolate(Color, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the result of the linear interpolation between
+this color and <code data-dev-comment-type="paramref" class="paramref">to</code> by amount <code data-dev-comment-type="paramref" class="paramref">weight</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1134,12 +1239,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">to</span></td>
-        <td></td>
+        <td><p>The destination color for interpolation.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">weight</span></td>
-        <td></td>
+        <td><p>A value on the range of 0.0 to 1.0, representing the amount of interpolation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1154,7 +1261,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The resulting color of the interpolation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1162,7 +1270,10 @@
   
   <a id="Godot_Color_ToAbgr32_" data-uid="Godot.Color.ToAbgr32*"></a>
   <h4 id="Godot_Color_ToAbgr32" data-uid="Godot.Color.ToAbgr32">ToAbgr32()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color converted to a 32-bit integer in ABGR
+format (each byte represents a color channel).
+ABGR is the reversed version of the default format.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1179,7 +1290,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>A <span class="xref">langword_csharp_int</span> representing this color in ABGR32 format.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1187,7 +1299,10 @@
   
   <a id="Godot_Color_ToAbgr64_" data-uid="Godot.Color.ToAbgr64*"></a>
   <h4 id="Godot_Color_ToAbgr64" data-uid="Godot.Color.ToAbgr64">ToAbgr64()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color converted to a 64-bit integer in ABGR
+format (each word represents a color channel).
+ABGR is the reversed version of the default format.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1204,7 +1319,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
+        <td><p>A <span class="xref">langword_csharp_long</span> representing this color in ABGR64 format.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1212,7 +1328,10 @@
   
   <a id="Godot_Color_ToArgb32_" data-uid="Godot.Color.ToArgb32*"></a>
   <h4 id="Godot_Color_ToArgb32" data-uid="Godot.Color.ToArgb32">ToArgb32()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color converted to a 32-bit integer in ARGB
+format (each byte represents a color channel).
+ARGB is more compatible with DirectX, but not used much in Godot.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1229,7 +1348,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>A <span class="xref">langword_csharp_int</span> representing this color in ARGB32 format.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1237,7 +1357,10 @@
   
   <a id="Godot_Color_ToArgb64_" data-uid="Godot.Color.ToArgb64*"></a>
   <h4 id="Godot_Color_ToArgb64" data-uid="Godot.Color.ToArgb64">ToArgb64()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color converted to a 64-bit integer in ARGB
+format (each word represents a color channel).
+ARGB is more compatible with DirectX, but not used much in Godot.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1254,7 +1377,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
+        <td><p>A <span class="xref">langword_csharp_long</span> representing this color in ARGB64 format.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1262,7 +1386,9 @@
   
   <a id="Godot_Color_ToHsv_" data-uid="Godot.Color.ToHsv*"></a>
   <h4 id="Godot_Color_ToHsv_System_Single__System_Single__System_Single__" data-uid="Godot.Color.ToHsv(System.Single@,System.Single@,System.Single@)">ToHsv(out Single, out Single, out Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a color to HSV values. This is equivalent to using each of
+the <code>h</code>/<code>s</code>/<code>v</code> properties, but much more efficient.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1281,17 +1407,20 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">hue</span></td>
-        <td></td>
+        <td><p>Output parameter for the HSV hue.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">saturation</span></td>
-        <td></td>
+        <td><p>Output parameter for the HSV saturation.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>Output parameter for the HSV value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1299,7 +1428,8 @@
   
   <a id="Godot_Color_ToHtml_" data-uid="Godot.Color.ToHtml*"></a>
   <h4 id="Godot_Color_ToHtml_System_Boolean_" data-uid="Godot.Color.ToHtml(System.Boolean)">ToHtml(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color's HTML hexadecimal color string in RGBA format.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1318,7 +1448,8 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">includeAlpha</span></td>
-        <td></td>
+        <td><p>Whether or not to include alpha. If <span class="xref">false</span>, the color is RGB instead of RGBA.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1333,7 +1464,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string for the HTML hexadecimal representation of this color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1341,7 +1473,10 @@
   
   <a id="Godot_Color_ToRgba32_" data-uid="Godot.Color.ToRgba32*"></a>
   <h4 id="Godot_Color_ToRgba32" data-uid="Godot.Color.ToRgba32">ToRgba32()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color converted to a 32-bit integer in RGBA
+format (each byte represents a color channel).
+RGBA is Godot's default and recommended format.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1358,7 +1493,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>A <span class="xref">langword_csharp_int</span> representing this color in RGBA32 format.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1366,7 +1502,10 @@
   
   <a id="Godot_Color_ToRgba64_" data-uid="Godot.Color.ToRgba64*"></a>
   <h4 id="Godot_Color_ToRgba64" data-uid="Godot.Color.ToRgba64">ToRgba64()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color converted to a 64-bit integer in RGBA
+format (each word represents a color channel).
+RGBA is Godot's default and recommended format.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1383,7 +1522,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
+        <td><p>A <span class="xref">langword_csharp_long</span> representing this color in RGBA64 format.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1391,7 +1531,8 @@
   
   <a id="Godot_Color_ToString_" data-uid="Godot.Color.ToString*"></a>
   <h4 id="Godot_Color_ToString" data-uid="Godot.Color.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.Color.html">Color</a> to a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1408,7 +1549,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string representation of this color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1416,7 +1558,8 @@
   
   <a id="Godot_Color_ToString_" data-uid="Godot.Color.ToString*"></a>
   <h4 id="Godot_Color_ToString_System_String_" data-uid="Godot.Color.ToString(System.String)">ToString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this <a class="xref" href="Godot.Color.html">Color</a> to a string with the given <code data-dev-comment-type="paramref" class="paramref">format</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1450,7 +1593,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string representation of this color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1460,7 +1604,9 @@
   
   <a id="Godot_Color_op_Addition_" data-uid="Godot.Color.op_Addition*"></a>
   <h4 id="Godot_Color_op_Addition_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_Addition(Godot.Color,Godot.Color)">Addition(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds each component of the <a class="xref" href="Godot.Color.html">Color</a>
+with the components of the given <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1479,12 +1625,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1499,7 +1647,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The added color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1507,7 +1656,9 @@
   
   <a id="Godot_Color_op_Division_" data-uid="Godot.Color.op_Division*"></a>
   <h4 id="Godot_Color_op_Division_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_Division(Godot.Color,Godot.Color)">Division(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Divides each component of the <a class="xref" href="Godot.Color.html">Color</a>
+by the components of the given <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1526,12 +1677,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The dividend color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The divisor color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1546,7 +1699,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The divided color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1554,7 +1708,9 @@
   
   <a id="Godot_Color_op_Division_" data-uid="Godot.Color.op_Division*"></a>
   <h4 id="Godot_Color_op_Division_Godot_Color_System_Single_" data-uid="Godot.Color.op_Division(Godot.Color,System.Single)">Division(Color, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Divides each component of the <a class="xref" href="Godot.Color.html">Color</a>
+by the given <span class="xref">langword_csharp_float</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1573,12 +1729,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>The dividend vector.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">scale</span></td>
-        <td></td>
+        <td><p>The divisor value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1593,7 +1751,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The divided color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1601,7 +1760,10 @@
   
   <a id="Godot_Color_op_Equality_" data-uid="Godot.Color.op_Equality*"></a>
   <h4 id="Godot_Color_op_Equality_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_Equality(Godot.Color,Godot.Color)">Equality(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the colors are exactly equal.
+Note: Due to floating-point precision errors, consider using
+<a class="xref" href="Godot.Color.html#Godot_Color_IsEqualApprox_Godot_Color_">IsEqualApprox(Color)</a> instead, which is more reliable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1620,12 +1782,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1640,7 +1804,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the colors are equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1648,7 +1813,14 @@
   
   <a id="Godot_Color_op_GreaterThan_" data-uid="Godot.Color.op_GreaterThan*"></a>
   <h4 id="Godot_Color_op_GreaterThan_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_GreaterThan(Godot.Color,Godot.Color)">GreaterThan(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="Godot.Color.html">Color</a>s by first checking if
+the red value of the <code data-dev-comment-type="paramref" class="paramref">left</code> color is greater than
+the red value of the <code data-dev-comment-type="paramref" class="paramref">right</code> color.
+If the red values are exactly equal, then it repeats this check
+with the green values of the two colors, then with the blue values,
+and then with the alpha value.
+This operator is useful for sorting colors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1667,12 +1839,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1687,7 +1861,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the left is greater than the right.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1695,7 +1870,14 @@
   
   <a id="Godot_Color_op_GreaterThanOrEqual_" data-uid="Godot.Color.op_GreaterThanOrEqual*"></a>
   <h4 id="Godot_Color_op_GreaterThanOrEqual_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_GreaterThanOrEqual(Godot.Color,Godot.Color)">GreaterThanOrEqual(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="Godot.Color.html">Color</a>s by first checking if
+the red value of the <code data-dev-comment-type="paramref" class="paramref">left</code> color is greater than
+or equal to the red value of the <code data-dev-comment-type="paramref" class="paramref">right</code> color.
+If the red values are exactly equal, then it repeats this check
+with the green values of the two colors, then with the blue values,
+and then with the alpha value.
+This operator is useful for sorting colors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1714,12 +1896,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1734,7 +1918,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the left is greater than or equal to the right.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1742,7 +1927,10 @@
   
   <a id="Godot_Color_op_Inequality_" data-uid="Godot.Color.op_Inequality*"></a>
   <h4 id="Godot_Color_op_Inequality_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_Inequality(Godot.Color,Godot.Color)">Inequality(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the colors are not equal.
+Note: Due to floating-point precision errors, consider using
+<a class="xref" href="Godot.Color.html#Godot_Color_IsEqualApprox_Godot_Color_">IsEqualApprox(Color)</a> instead, which is more reliable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1761,12 +1949,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1781,7 +1971,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the colors are equal.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1789,7 +1980,14 @@
   
   <a id="Godot_Color_op_LessThan_" data-uid="Godot.Color.op_LessThan*"></a>
   <h4 id="Godot_Color_op_LessThan_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_LessThan(Godot.Color,Godot.Color)">LessThan(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="Godot.Color.html">Color</a>s by first checking if
+the red value of the <code data-dev-comment-type="paramref" class="paramref">left</code> color is less than
+the red value of the <code data-dev-comment-type="paramref" class="paramref">right</code> color.
+If the red values are exactly equal, then it repeats this check
+with the green values of the two colors, then with the blue values,
+and then with the alpha value.
+This operator is useful for sorting colors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1808,12 +2006,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1828,7 +2028,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the left is less than the right.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1836,7 +2037,14 @@
   
   <a id="Godot_Color_op_LessThanOrEqual_" data-uid="Godot.Color.op_LessThanOrEqual*"></a>
   <h4 id="Godot_Color_op_LessThanOrEqual_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_LessThanOrEqual(Godot.Color,Godot.Color)">LessThanOrEqual(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="Godot.Color.html">Color</a>s by first checking if
+the red value of the <code data-dev-comment-type="paramref" class="paramref">left</code> color is less than
+or equal to the red value of the <code data-dev-comment-type="paramref" class="paramref">right</code> color.
+If the red values are exactly equal, then it repeats this check
+with the green values of the two colors, then with the blue values,
+and then with the alpha value.
+This operator is useful for sorting colors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1855,12 +2063,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1875,7 +2085,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether or not the left is less than or equal to the right.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1883,7 +2094,9 @@
   
   <a id="Godot_Color_op_Multiply_" data-uid="Godot.Color.op_Multiply*"></a>
   <h4 id="Godot_Color_op_Multiply_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_Multiply(Godot.Color,Godot.Color)">Multiply(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Multiplies each component of the <a class="xref" href="Godot.Color.html">Color</a>
+by the components of the given <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1902,12 +2115,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1922,7 +2137,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The multiplied color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1930,7 +2146,9 @@
   
   <a id="Godot_Color_op_Multiply_" data-uid="Godot.Color.op_Multiply*"></a>
   <h4 id="Godot_Color_op_Multiply_Godot_Color_System_Single_" data-uid="Godot.Color.op_Multiply(Godot.Color,System.Single)">Multiply(Color, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Multiplies each component of the <a class="xref" href="Godot.Color.html">Color</a>
+by the given <span class="xref">langword_csharp_float</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1949,12 +2167,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>The color to multiply.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">scale</span></td>
-        <td></td>
+        <td><p>The value to multiply by.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1969,7 +2189,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The multiplied color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1977,7 +2198,9 @@
   
   <a id="Godot_Color_op_Multiply_" data-uid="Godot.Color.op_Multiply*"></a>
   <h4 id="Godot_Color_op_Multiply_System_Single_Godot_Color_" data-uid="Godot.Color.op_Multiply(System.Single,Godot.Color)">Multiply(Single, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Multiplies each component of the <a class="xref" href="Godot.Color.html">Color</a>
+by the given <span class="xref">langword_csharp_float</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1996,12 +2219,14 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">scale</span></td>
-        <td></td>
+        <td><p>The value to multiply by.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>The color to multiply.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2016,7 +2241,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The multiplied color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2024,7 +2250,9 @@
   
   <a id="Godot_Color_op_Subtraction_" data-uid="Godot.Color.op_Subtraction*"></a>
   <h4 id="Godot_Color_op_Subtraction_Godot_Color_Godot_Color_" data-uid="Godot.Color.op_Subtraction(Godot.Color,Godot.Color)">Subtraction(Color, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Subtracts each component of the <a class="xref" href="Godot.Color.html">Color</a>
+by the components of the given <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2043,12 +2271,14 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The left color.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The right color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2063,7 +2293,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The subtracted color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2071,7 +2302,10 @@
   
   <a id="Godot_Color_op_UnaryNegation_" data-uid="Godot.Color.op_UnaryNegation*"></a>
   <h4 id="Godot_Color_op_UnaryNegation_Godot_Color_" data-uid="Godot.Color.op_UnaryNegation(Godot.Color)">UnaryNegation(Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inverts the given color. This is equivalent to
+<code>Colors.White - c</code> or
+<code>new Color(1 - c.r, 1 - c.g, 1 - c.b, 1 - c.a)</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2090,7 +2324,8 @@
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>The color to invert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2105,7 +2340,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Godot.Color.html">Color</a></td>
-        <td></td>
+        <td><p>The inverted color</p>
+</td>
       </tr>
     </tbody>
   </table>

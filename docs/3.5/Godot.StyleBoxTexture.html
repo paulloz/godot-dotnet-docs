@@ -83,7 +83,8 @@
   
   <h1 id="Godot_StyleBoxTexture" data-uid="Godot.StyleBoxTexture" class="text-break">Class StyleBoxTexture
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Texture-based nine-patch <a class="xref" href="Godot.StyleBox.html">StyleBox</a>, in a way similar to <a class="xref" href="Godot.NinePatchRect.html">NinePatchRect</a>. This stylebox performs a 3×3 scaling of a texture, where only the center cell is fully stretched. This makes it possible to design bordered styles regardless of the stylebox&apos;s size.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -386,7 +387,8 @@
   
   <a id="Godot_StyleBoxTexture_AxisStretchHorizontal_" data-uid="Godot.StyleBoxTexture.AxisStretchHorizontal*"></a>
   <h4 id="Godot_StyleBoxTexture_AxisStretchHorizontal" data-uid="Godot.StyleBoxTexture.AxisStretchHorizontal">AxisStretchHorizontal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls how the stylebox&apos;s texture will be stretched or tiled horizontally. See <a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -411,7 +413,8 @@
   
   <a id="Godot_StyleBoxTexture_AxisStretchVertical_" data-uid="Godot.StyleBoxTexture.AxisStretchVertical*"></a>
   <h4 id="Godot_StyleBoxTexture_AxisStretchVertical" data-uid="Godot.StyleBoxTexture.AxisStretchVertical">AxisStretchVertical</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Controls how the stylebox&apos;s texture will be stretched or tiled vertically. See <a class="xref" href="Godot.StyleBoxTexture.AxisStretchMode.html">StyleBoxTexture.AxisStretchMode</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -436,7 +439,8 @@
   
   <a id="Godot_StyleBoxTexture_DrawCenter_" data-uid="Godot.StyleBoxTexture.DrawCenter*"></a>
   <h4 id="Godot_StyleBoxTexture_DrawCenter" data-uid="Godot.StyleBoxTexture.DrawCenter">DrawCenter</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the nine-patch texture&apos;s center tile will be drawn.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -461,7 +465,8 @@
   
   <a id="Godot_StyleBoxTexture_ExpandMarginBottom_" data-uid="Godot.StyleBoxTexture.ExpandMarginBottom*"></a>
   <h4 id="Godot_StyleBoxTexture_ExpandMarginBottom" data-uid="Godot.StyleBoxTexture.ExpandMarginBottom">ExpandMarginBottom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Expands the bottom margin of this style box when drawing, causing it to be drawn larger than requested.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -486,7 +491,8 @@
   
   <a id="Godot_StyleBoxTexture_ExpandMarginLeft_" data-uid="Godot.StyleBoxTexture.ExpandMarginLeft*"></a>
   <h4 id="Godot_StyleBoxTexture_ExpandMarginLeft" data-uid="Godot.StyleBoxTexture.ExpandMarginLeft">ExpandMarginLeft</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Expands the left margin of this style box when drawing, causing it to be drawn larger than requested.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -511,7 +517,8 @@
   
   <a id="Godot_StyleBoxTexture_ExpandMarginRight_" data-uid="Godot.StyleBoxTexture.ExpandMarginRight*"></a>
   <h4 id="Godot_StyleBoxTexture_ExpandMarginRight" data-uid="Godot.StyleBoxTexture.ExpandMarginRight">ExpandMarginRight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Expands the right margin of this style box when drawing, causing it to be drawn larger than requested.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -536,7 +543,8 @@
   
   <a id="Godot_StyleBoxTexture_ExpandMarginTop_" data-uid="Godot.StyleBoxTexture.ExpandMarginTop*"></a>
   <h4 id="Godot_StyleBoxTexture_ExpandMarginTop" data-uid="Godot.StyleBoxTexture.ExpandMarginTop">ExpandMarginTop</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Expands the top margin of this style box when drawing, causing it to be drawn larger than requested.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -561,7 +569,10 @@
   
   <a id="Godot_StyleBoxTexture_MarginBottom_" data-uid="Godot.StyleBoxTexture.MarginBottom*"></a>
   <h4 id="Godot_StyleBoxTexture_MarginBottom" data-uid="Godot.StyleBoxTexture.MarginBottom">MarginBottom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Increases the bottom margin of the 3×3 texture box.</p>
+<p>A higher value means more of the source texture is considered to be part of the bottom border of the 3×3 box.</p>
+<p>This is also the value used as fallback for <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginBottom">ContentMarginBottom</a> if it is negative.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -586,7 +597,10 @@
   
   <a id="Godot_StyleBoxTexture_MarginLeft_" data-uid="Godot.StyleBoxTexture.MarginLeft*"></a>
   <h4 id="Godot_StyleBoxTexture_MarginLeft" data-uid="Godot.StyleBoxTexture.MarginLeft">MarginLeft</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Increases the left margin of the 3×3 texture box.</p>
+<p>A higher value means more of the source texture is considered to be part of the left border of the 3×3 box.</p>
+<p>This is also the value used as fallback for <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginLeft">ContentMarginLeft</a> if it is negative.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -611,7 +625,10 @@
   
   <a id="Godot_StyleBoxTexture_MarginRight_" data-uid="Godot.StyleBoxTexture.MarginRight*"></a>
   <h4 id="Godot_StyleBoxTexture_MarginRight" data-uid="Godot.StyleBoxTexture.MarginRight">MarginRight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Increases the right margin of the 3×3 texture box.</p>
+<p>A higher value means more of the source texture is considered to be part of the right border of the 3×3 box.</p>
+<p>This is also the value used as fallback for <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginRight">ContentMarginRight</a> if it is negative.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -636,7 +653,10 @@
   
   <a id="Godot_StyleBoxTexture_MarginTop_" data-uid="Godot.StyleBoxTexture.MarginTop*"></a>
   <h4 id="Godot_StyleBoxTexture_MarginTop" data-uid="Godot.StyleBoxTexture.MarginTop">MarginTop</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Increases the top margin of the 3×3 texture box.</p>
+<p>A higher value means more of the source texture is considered to be part of the top border of the 3×3 box.</p>
+<p>This is also the value used as fallback for <a class="xref" href="Godot.StyleBox.html#Godot_StyleBox_ContentMarginTop">ContentMarginTop</a> if it is negative.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -661,7 +681,8 @@
   
   <a id="Godot_StyleBoxTexture_ModulateColor_" data-uid="Godot.StyleBoxTexture.ModulateColor*"></a>
   <h4 id="Godot_StyleBoxTexture_ModulateColor" data-uid="Godot.StyleBoxTexture.ModulateColor">ModulateColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Modulates the color of the texture when this style box is drawn.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -686,7 +707,9 @@
   
   <a id="Godot_StyleBoxTexture_NormalMap_" data-uid="Godot.StyleBoxTexture.NormalMap*"></a>
   <h4 id="Godot_StyleBoxTexture_NormalMap" data-uid="Godot.StyleBoxTexture.NormalMap">NormalMap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The normal map to use when drawing this style box.</p>
+<p>Note: Godot expects the normal map to use X+, Y-, and Z+ coordinates. See <a href="http://wiki.polycount.com/wiki/Normal_Map_Technical_Details#Common_Swizzle_Coordinates">this page</a> for a comparison of normal map coordinates expected by popular engines.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -711,7 +734,9 @@
   
   <a id="Godot_StyleBoxTexture_RegionRect_" data-uid="Godot.StyleBoxTexture.RegionRect*"></a>
   <h4 id="Godot_StyleBoxTexture_RegionRect" data-uid="Godot.StyleBoxTexture.RegionRect">RegionRect</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Species a sub-region of the texture to use.</p>
+<p>This is equivalent to first wrapping the texture in an <a class="xref" href="Godot.AtlasTexture.html">AtlasTexture</a> with the same region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -736,7 +761,8 @@
   
   <a id="Godot_StyleBoxTexture_Texture_" data-uid="Godot.StyleBoxTexture.Texture*"></a>
   <h4 id="Godot_StyleBoxTexture_Texture" data-uid="Godot.StyleBoxTexture.Texture">Texture</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The texture to use when drawing this style box.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -763,7 +789,8 @@
   
   <a id="Godot_StyleBoxTexture_GetExpandMarginSize_" data-uid="Godot.StyleBoxTexture.GetExpandMarginSize*"></a>
   <h4 id="Godot_StyleBoxTexture_GetExpandMarginSize_Godot_Margin_" data-uid="Godot.StyleBoxTexture.GetExpandMarginSize(Godot.Margin)">GetExpandMarginSize(Margin)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size of the given <code>margin</code>&apos;s expand margin. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -830,7 +857,8 @@
   
   <a id="Godot_StyleBoxTexture_GetMarginSize_" data-uid="Godot.StyleBoxTexture.GetMarginSize*"></a>
   <h4 id="Godot_StyleBoxTexture_GetMarginSize_Godot_Margin_" data-uid="Godot.StyleBoxTexture.GetMarginSize(Godot.Margin)">GetMarginSize(Margin)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the size of the given <code>margin</code>. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1049,7 +1077,8 @@
   
   <a id="Godot_StyleBoxTexture_SetExpandMarginAll_" data-uid="Godot.StyleBoxTexture.SetExpandMarginAll*"></a>
   <h4 id="Godot_StyleBoxTexture_SetExpandMarginAll_System_Single_" data-uid="Godot.StyleBoxTexture.SetExpandMarginAll(System.Single)">SetExpandMarginAll(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the expand margin to <code>size</code> pixels for all margins.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1076,7 +1105,8 @@
   
   <a id="Godot_StyleBoxTexture_SetExpandMarginIndividual_" data-uid="Godot.StyleBoxTexture.SetExpandMarginIndividual*"></a>
   <h4 id="Godot_StyleBoxTexture_SetExpandMarginIndividual_System_Single_System_Single_System_Single_System_Single_" data-uid="Godot.StyleBoxTexture.SetExpandMarginIndividual(System.Single,System.Single,System.Single,System.Single)">SetExpandMarginIndividual(Single, Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the expand margin for each margin to <code>size_left</code>, <code>size_top</code>, <code>size_right</code>, and <code>size_bottom</code> pixels.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1118,7 +1148,8 @@
   
   <a id="Godot_StyleBoxTexture_SetExpandMarginSize_" data-uid="Godot.StyleBoxTexture.SetExpandMarginSize*"></a>
   <h4 id="Godot_StyleBoxTexture_SetExpandMarginSize_Godot_Margin_System_Single_" data-uid="Godot.StyleBoxTexture.SetExpandMarginSize(Godot.Margin,System.Single)">SetExpandMarginSize(Margin, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the expand margin to <code>size</code> pixels for the given <code>margin</code>. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1177,7 +1208,8 @@
   
   <a id="Godot_StyleBoxTexture_SetMarginSize_" data-uid="Godot.StyleBoxTexture.SetMarginSize*"></a>
   <h4 id="Godot_StyleBoxTexture_SetMarginSize_Godot_Margin_System_Single_" data-uid="Godot.StyleBoxTexture.SetMarginSize(Godot.Margin,System.Single)">SetMarginSize(Margin, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the margin to <code>size</code> pixels for the given <code>margin</code>. See <a class="xref" href="Godot.Margin.html">Margin</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

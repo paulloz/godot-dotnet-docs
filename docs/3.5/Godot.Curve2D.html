@@ -83,7 +83,9 @@
   
   <h1 id="Godot_Curve2D" data-uid="Godot.Curve2D" class="text-break">Class Curve2D
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class describes a Bézier curve in 2D space. It is mainly used to give a shape to a <a class="xref" href="Godot.Path2D.html">Path2D</a>, but can be manually sampled for other purposes.</p>
+<p>It keeps a cache of precalculated points along the curve, to speed up further calculations.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -371,7 +373,8 @@
   
   <a id="Godot_Curve2D_BakeInterval_" data-uid="Godot.Curve2D.BakeInterval*"></a>
   <h4 id="Godot_Curve2D_BakeInterval" data-uid="Godot.Curve2D.BakeInterval">BakeInterval</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The distance in pixels between two adjacent cached points. Changing it forces the cache to be recomputed the next time the <a class="xref" href="Godot.Curve2D.html#Godot_Curve2D_GetBakedPoints">GetBakedPoints()</a> or <a class="xref" href="Godot.Curve2D.html#Godot_Curve2D_GetBakedLength">GetBakedLength()</a> function is called. The smaller the distance, the more points in the cache and the more memory it will consume, so use with care.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -398,7 +401,9 @@
   
   <a id="Godot_Curve2D_AddPoint_" data-uid="Godot.Curve2D.AddPoint*"></a>
   <h4 id="Godot_Curve2D_AddPoint_Godot_Vector2_System_Nullable_Godot_Vector2__System_Nullable_Godot_Vector2__System_Int32_" data-uid="Godot.Curve2D.AddPoint(Godot.Vector2,System.Nullable{Godot.Vector2},System.Nullable{Godot.Vector2},System.Int32)">AddPoint(Vector2, Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a point with the specified <code>position</code> relative to the curve&apos;s own position, with control points <code>in</code> and <code>out</code>. Appends the new point at the end of the point list.</p>
+<p>If <code>index</code> is given, the new point is inserted before the existing point identified by index <code>index</code>. Every existing point starting from <code>index</code> is shifted further down the list of points. The index must be greater than or equal to <code>0</code> and must not exceed the number of existing points in the line. See <a class="xref" href="Godot.Curve2D.html#Godot_Curve2D_GetPointCount">GetPointCount()</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -422,12 +427,14 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">in</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Vector2.html">Vector2</a>&gt;</td>
         <td><span class="parametername">out</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Vector2(0, 0)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
@@ -440,7 +447,8 @@
   
   <a id="Godot_Curve2D_ClearPoints_" data-uid="Godot.Curve2D.ClearPoints*"></a>
   <h4 id="Godot_Curve2D_ClearPoints" data-uid="Godot.Curve2D.ClearPoints">ClearPoints()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all points from the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -450,7 +458,8 @@
   
   <a id="Godot_Curve2D_GetBakedLength_" data-uid="Godot.Curve2D.GetBakedLength*"></a>
   <h4 id="Godot_Curve2D_GetBakedLength" data-uid="Godot.Curve2D.GetBakedLength">GetBakedLength()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total length of the curve, based on the cached points. Given enough density (see <a class="xref" href="Godot.Curve2D.html#Godot_Curve2D_BakeInterval">BakeInterval</a>), it should be approximate enough.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -475,7 +484,8 @@
   
   <a id="Godot_Curve2D_GetBakedPoints_" data-uid="Godot.Curve2D.GetBakedPoints*"></a>
   <h4 id="Godot_Curve2D_GetBakedPoints" data-uid="Godot.Curve2D.GetBakedPoints">GetBakedPoints()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the cache of points as a <a class="xref" href="Godot.Vector2.html">Vector2</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -525,7 +535,9 @@
   
   <a id="Godot_Curve2D_GetClosestOffset_" data-uid="Godot.Curve2D.GetClosestOffset*"></a>
   <h4 id="Godot_Curve2D_GetClosestOffset_Godot_Vector2_" data-uid="Godot.Curve2D.GetClosestOffset(Godot.Vector2)">GetClosestOffset(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the closest offset to <code>to_point</code>. This offset is meant to be used in <a class="xref" href="Godot.Curve2D.html#Godot_Curve2D_InterpolateBaked_System_Single_System_Boolean_">InterpolateBaked(Single, Boolean)</a>.</p>
+<p><code>to_point</code> must be in this curve&apos;s local space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -567,7 +579,9 @@
   
   <a id="Godot_Curve2D_GetClosestPoint_" data-uid="Godot.Curve2D.GetClosestPoint*"></a>
   <h4 id="Godot_Curve2D_GetClosestPoint_Godot_Vector2_" data-uid="Godot.Curve2D.GetClosestPoint(Godot.Vector2)">GetClosestPoint(Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the closest baked point (in curve&apos;s local space) to <code>to_point</code>.</p>
+<p><code>to_point</code> must be in this curve&apos;s local space.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -609,7 +623,8 @@
   
   <a id="Godot_Curve2D_GetPointCount_" data-uid="Godot.Curve2D.GetPointCount*"></a>
   <h4 id="Godot_Curve2D_GetPointCount" data-uid="Godot.Curve2D.GetPointCount">GetPointCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of points describing the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -634,7 +649,8 @@
   
   <a id="Godot_Curve2D_GetPointIn_" data-uid="Godot.Curve2D.GetPointIn*"></a>
   <h4 id="Godot_Curve2D_GetPointIn_System_Int32_" data-uid="Godot.Curve2D.GetPointIn(System.Int32)">GetPointIn(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the control point leading to the vertex <code>idx</code>. The returned position is relative to the vertex <code>idx</code>. If the index is out of bounds, the function sends an error to the console, and returns <code>(0, 0)</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -676,7 +692,8 @@
   
   <a id="Godot_Curve2D_GetPointOut_" data-uid="Godot.Curve2D.GetPointOut*"></a>
   <h4 id="Godot_Curve2D_GetPointOut_System_Int32_" data-uid="Godot.Curve2D.GetPointOut(System.Int32)">GetPointOut(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the control point leading out of the vertex <code>idx</code>. The returned position is relative to the vertex <code>idx</code>. If the index is out of bounds, the function sends an error to the console, and returns <code>(0, 0)</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -718,7 +735,8 @@
   
   <a id="Godot_Curve2D_GetPointPosition_" data-uid="Godot.Curve2D.GetPointPosition*"></a>
   <h4 id="Godot_Curve2D_GetPointPosition_System_Int32_" data-uid="Godot.Curve2D.GetPointPosition(System.Int32)">GetPointPosition(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position of the vertex <code>idx</code>. If the index is out of bounds, the function sends an error to the console, and returns <code>(0, 0)</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -760,7 +778,9 @@
   
   <a id="Godot_Curve2D_Interpolate_" data-uid="Godot.Curve2D.Interpolate*"></a>
   <h4 id="Godot_Curve2D_Interpolate_System_Int32_System_Single_" data-uid="Godot.Curve2D.Interpolate(System.Int32,System.Single)">Interpolate(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position between the vertex <code>idx</code> and the vertex <code>idx + 1</code>, where <code>t</code> controls if the point is the first vertex (<code>t = 0.0</code>), the last vertex (<code>t = 1.0</code>), or in between. Values of <code>t</code> outside the range (<code>0.0 >= t &lt;=1</code>) give strange, but predictable results.</p>
+<p>If <code>idx</code> is out of bounds it is truncated to the first or last vertex, and <code>t</code> is ignored. If the curve has no points, the function sends an error to the console, and returns <code>(0, 0)</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -807,7 +827,10 @@
   
   <a id="Godot_Curve2D_InterpolateBaked_" data-uid="Godot.Curve2D.InterpolateBaked*"></a>
   <h4 id="Godot_Curve2D_InterpolateBaked_System_Single_System_Boolean_" data-uid="Godot.Curve2D.InterpolateBaked(System.Single,System.Boolean)">InterpolateBaked(Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a point within the curve at position <code>offset</code>, where <code>offset</code> is measured as a pixel distance along the curve.</p>
+<p>To do that, it finds the two cached points where the <code>offset</code> lies between, then interpolates the values. This interpolation is cubic if <code>cubic</code> is set to <code>true</code>, or linear if set to <code>false</code>.</p>
+<p>Cubic interpolation tends to follow the curves better, but linear is faster (and often, precise enough).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -854,7 +877,8 @@
   
   <a id="Godot_Curve2D_Interpolatef_" data-uid="Godot.Curve2D.Interpolatef*"></a>
   <h4 id="Godot_Curve2D_Interpolatef_System_Single_" data-uid="Godot.Curve2D.Interpolatef(System.Single)">Interpolatef(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the position at the vertex <code>fofs</code>. It calls <a class="xref" href="Godot.Curve2D.html#Godot_Curve2D_Interpolate_System_Int32_System_Single_">Interpolate(Int32, Single)</a> using the integer part of <code>fofs</code> as <code>idx</code>, and its fractional part as <code>t</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -896,7 +920,8 @@
   
   <a id="Godot_Curve2D_RemovePoint_" data-uid="Godot.Curve2D.RemovePoint*"></a>
   <h4 id="Godot_Curve2D_RemovePoint_System_Int32_" data-uid="Godot.Curve2D.RemovePoint(System.Int32)">RemovePoint(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deletes the point <code>idx</code> from the curve. Sends an error to the console if <code>idx</code> is out of bounds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -950,7 +975,8 @@
   
   <a id="Godot_Curve2D_SetPointIn_" data-uid="Godot.Curve2D.SetPointIn*"></a>
   <h4 id="Godot_Curve2D_SetPointIn_System_Int32_Godot_Vector2_" data-uid="Godot.Curve2D.SetPointIn(System.Int32,Godot.Vector2)">SetPointIn(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the position of the control point leading to the vertex <code>idx</code>. If the index is out of bounds, the function sends an error to the console. The position is relative to the vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -982,7 +1008,8 @@
   
   <a id="Godot_Curve2D_SetPointOut_" data-uid="Godot.Curve2D.SetPointOut*"></a>
   <h4 id="Godot_Curve2D_SetPointOut_System_Int32_Godot_Vector2_" data-uid="Godot.Curve2D.SetPointOut(System.Int32,Godot.Vector2)">SetPointOut(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the position of the control point leading out of the vertex <code>idx</code>. If the index is out of bounds, the function sends an error to the console. The position is relative to the vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1014,7 +1041,8 @@
   
   <a id="Godot_Curve2D_SetPointPosition_" data-uid="Godot.Curve2D.SetPointPosition*"></a>
   <h4 id="Godot_Curve2D_SetPointPosition_System_Int32_Godot_Vector2_" data-uid="Godot.Curve2D.SetPointPosition(System.Int32,Godot.Vector2)">SetPointPosition(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the position for the vertex <code>idx</code>. If the index is out of bounds, the function sends an error to the console.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1046,7 +1074,11 @@
   
   <a id="Godot_Curve2D_Tessellate_" data-uid="Godot.Curve2D.Tessellate*"></a>
   <h4 id="Godot_Curve2D_Tessellate_System_Int32_System_Single_" data-uid="Godot.Curve2D.Tessellate(System.Int32,System.Single)">Tessellate(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of points along the curve, with a curvature controlled point density. That is, the curvier parts will have more points than the straighter parts.</p>
+<p>This approximation makes straight segments between each point, then subdivides those segments until the resulting shape is similar enough.</p>
+<p><code>max_stages</code> controls how many subdivisions a curve segment may face before it is considered approximate enough. Each subdivision splits the segment in half, so the default 5 stages may mean up to 32 subdivisions per curve segment. Increase with care!</p>
+<p><code>tolerance_degrees</code> controls how many degrees the midpoint of a segment may deviate from the real curve, before the segment has to be subdivided.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

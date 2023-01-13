@@ -83,7 +83,11 @@
   
   <h1 id="Godot_Texture" data-uid="Godot.Texture" class="text-break">Class Texture
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A texture works by registering an image in the video hardware, which then can be used in 3D models or 2D <a class="xref" href="Godot.Sprite.html">Sprite</a> or GUI <a class="xref" href="Godot.Control.html">Control</a>.</p>
+<p>Textures are often created by loading them from a file. See <code>@GDScript.load</code>.</p>
+<p><a class="xref" href="Godot.Texture.html">Texture</a> is a base for other resources. It cannot be used directly.</p>
+<p>Note: The maximum texture size is 16384×16384 pixels due to graphics hardware limitations. Larger textures may fail to import.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -348,7 +352,8 @@
   
   <a id="Godot_Texture_Flags_" data-uid="Godot.Texture.Flags*"></a>
   <h4 id="Godot_Texture_Flags" data-uid="Godot.Texture.Flags">Flags</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The texture&apos;s <a class="xref" href="Godot.Texture.FlagsEnum.html">Texture.FlagsEnum</a>. <a class="xref" href="Godot.Texture.FlagsEnum.html">Texture.FlagsEnum</a> are used to set various properties of the <a class="xref" href="Godot.Texture.html">Texture</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -375,7 +380,8 @@
   
   <a id="Godot_Texture_Draw_" data-uid="Godot.Texture.Draw*"></a>
   <h4 id="Godot_Texture_Draw_Godot_RID_Godot_Vector2_System_Nullable_Godot_Color__System_Boolean_Godot_Texture_" data-uid="Godot.Texture.Draw(Godot.RID,Godot.Vector2,System.Nullable{Godot.Color},System.Boolean,Godot.Texture)">Draw(RID, Vector2, Nullable&lt;Color&gt;, Boolean, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Draws the texture using a <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a> with the <a class="xref" href="Godot.VisualServer.html">VisualServer</a> API at the specified <code>position</code>. Equivalent to <a class="xref" href="Godot.VisualServer.html#Godot_VisualServer_CanvasItemAddTextureRect_Godot_RID_Godot_Rect2_Godot_RID_System_Boolean_System_Nullable_Godot_Color__System_Boolean_Godot_RID_">CanvasItemAddTextureRect(RID, Rect2, RID, Boolean, Nullable&lt;Color&gt;, Boolean, RID)</a> with a rect at <code>position</code> and the size of this <a class="xref" href="Godot.Texture.html">Texture</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -404,7 +410,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">modulate</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Color(1, 1, 1, 1)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -422,7 +429,8 @@
   
   <a id="Godot_Texture_DrawRect_" data-uid="Godot.Texture.DrawRect*"></a>
   <h4 id="Godot_Texture_DrawRect_Godot_RID_Godot_Rect2_System_Boolean_System_Nullable_Godot_Color__System_Boolean_Godot_Texture_" data-uid="Godot.Texture.DrawRect(Godot.RID,Godot.Rect2,System.Boolean,System.Nullable{Godot.Color},System.Boolean,Godot.Texture)">DrawRect(RID, Rect2, Boolean, Nullable&lt;Color&gt;, Boolean, Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Draws the texture using a <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a> with the <a class="xref" href="Godot.VisualServer.html">VisualServer</a> API. Equivalent to <a class="xref" href="Godot.VisualServer.html#Godot_VisualServer_CanvasItemAddTextureRect_Godot_RID_Godot_Rect2_Godot_RID_System_Boolean_System_Nullable_Godot_Color__System_Boolean_Godot_RID_">CanvasItemAddTextureRect(RID, Rect2, RID, Boolean, Nullable&lt;Color&gt;, Boolean, RID)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -456,7 +464,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">modulate</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Color(1, 1, 1, 1)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -474,7 +483,8 @@
   
   <a id="Godot_Texture_DrawRectRegion_" data-uid="Godot.Texture.DrawRectRegion*"></a>
   <h4 id="Godot_Texture_DrawRectRegion_Godot_RID_Godot_Rect2_Godot_Rect2_System_Nullable_Godot_Color__System_Boolean_Godot_Texture_System_Boolean_" data-uid="Godot.Texture.DrawRectRegion(Godot.RID,Godot.Rect2,Godot.Rect2,System.Nullable{Godot.Color},System.Boolean,Godot.Texture,System.Boolean)">DrawRectRegion(RID, Rect2, Rect2, Nullable&lt;Color&gt;, Boolean, Texture, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Draws a part of the texture using a <a class="xref" href="Godot.CanvasItem.html">CanvasItem</a> with the <a class="xref" href="Godot.VisualServer.html">VisualServer</a> API. Equivalent to <a class="xref" href="Godot.VisualServer.html#Godot_VisualServer_CanvasItemAddTextureRectRegion_Godot_RID_Godot_Rect2_Godot_RID_Godot_Rect2_System_Nullable_Godot_Color__System_Boolean_Godot_RID_System_Boolean_">CanvasItemAddTextureRectRegion(RID, Rect2, RID, Rect2, Nullable&lt;Color&gt;, Boolean, RID, Boolean)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -508,7 +518,8 @@
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Godot.Color.html">Color</a>&gt;</td>
         <td><span class="parametername">modulate</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Color(1, 1, 1, 1)</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -531,7 +542,8 @@
   
   <a id="Godot_Texture_GetData_" data-uid="Godot.Texture.GetData*"></a>
   <h4 id="Godot_Texture_GetData" data-uid="Godot.Texture.GetData">GetData()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an <a class="xref" href="Godot.Image.html">Image</a> that is a copy of data from this <a class="xref" href="Godot.Texture.html">Texture</a>. <a class="xref" href="Godot.Image.html">Image</a>s can be accessed and manipulated directly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -581,7 +593,8 @@
   
   <a id="Godot_Texture_GetHeight_" data-uid="Godot.Texture.GetHeight*"></a>
   <h4 id="Godot_Texture_GetHeight" data-uid="Godot.Texture.GetHeight">GetHeight()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the texture height.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -606,7 +619,8 @@
   
   <a id="Godot_Texture_GetSize_" data-uid="Godot.Texture.GetSize*"></a>
   <h4 id="Godot_Texture_GetSize" data-uid="Godot.Texture.GetSize">GetSize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the texture size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -631,7 +645,8 @@
   
   <a id="Godot_Texture_GetWidth_" data-uid="Godot.Texture.GetWidth*"></a>
   <h4 id="Godot_Texture_GetWidth" data-uid="Godot.Texture.GetWidth">GetWidth()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the texture width.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -656,7 +671,8 @@
   
   <a id="Godot_Texture_HasAlpha_" data-uid="Godot.Texture.HasAlpha*"></a>
   <h4 id="Godot_Texture_HasAlpha" data-uid="Godot.Texture.HasAlpha">HasAlpha()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this <a class="xref" href="Godot.Texture.html">Texture</a> has an alpha channel.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

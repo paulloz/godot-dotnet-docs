@@ -83,7 +83,8 @@
   
   <h1 id="Godot_StringExtensions" data-uid="Godot.StringExtensions" class="text-break">Class StringExtensions
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Extension methods to manipulate strings.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -102,7 +103,8 @@
   
   <a id="Godot_StringExtensions_BaseName_" data-uid="Godot.StringExtensions.BaseName*"></a>
   <h4 id="Godot_StringExtensions_BaseName_System_String_" data-uid="Godot.StringExtensions.BaseName(System.String)">BaseName(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If the string is a path to a file, return the path to the file without the extension.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -121,7 +123,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The path to a file.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -136,15 +139,24 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The path to the file without the extension.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_BaseName_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Extension_System_String_">Extension(String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_GetBaseDir_System_String_">GetBaseDir(String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_GetFile_System_String_">GetFile(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_BeginsWith_" data-uid="Godot.StringExtensions.BeginsWith*"></a>
   <h4 id="Godot_StringExtensions_BeginsWith_System_String_System_String_" data-uid="Godot.StringExtensions.BeginsWith(System.String,System.String)">BeginsWith(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the strings begins
+with the given string <code data-dev-comment-type="paramref" class="paramref">text</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -163,12 +175,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>The beginning string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -183,7 +197,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string begins with the given string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -191,7 +206,8 @@
   
   <a id="Godot_StringExtensions_Bigrams_" data-uid="Godot.StringExtensions.Bigrams*"></a>
   <h4 id="Godot_StringExtensions_Bigrams_System_String_" data-uid="Godot.StringExtensions.Bigrams(System.String)">Bigrams(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the bigrams (pairs of consecutive letters) of this string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -210,7 +226,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string that will be used.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -225,7 +242,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
-        <td></td>
+        <td><p>The bigrams of this string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -233,7 +251,10 @@
   
   <a id="Godot_StringExtensions_BinToInt_" data-uid="Godot.StringExtensions.BinToInt*"></a>
   <h4 id="Godot_StringExtensions_BinToInt_System_String_" data-uid="Godot.StringExtensions.BinToInt(System.String)">BinToInt(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a string containing a binary number into an integer.
+Binary strings can either be prefixed with <code>0b</code> or not,
+and they can also start with a <code>-</code> before the optional prefix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -252,7 +273,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -267,7 +289,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The converted string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -275,7 +298,11 @@
   
   <a id="Godot_StringExtensions_Capitalize_" data-uid="Godot.StringExtensions.Capitalize*"></a>
   <h4 id="Godot_StringExtensions_Capitalize_System_String_" data-uid="Godot.StringExtensions.Capitalize(System.String)">Capitalize(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Changes the case of some letters. Replace underscores with spaces, convert all letters
+to lowercase then capitalize first and every letter following the space character.
+For <code>capitalize camelCase mixed_with_underscores</code> it will return
+<code>Capitalize Camelcase Mixed With Underscores</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -294,7 +321,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to capitalize.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -309,7 +337,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The capitalized string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -317,7 +346,8 @@
   
   <a id="Godot_StringExtensions_CasecmpTo_" data-uid="Godot.StringExtensions.CasecmpTo*"></a>
   <h4 id="Godot_StringExtensions_CasecmpTo_System_String_System_String_" data-uid="Godot.StringExtensions.CasecmpTo(System.String,System.String)">CasecmpTo(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a case-sensitive comparison to another string, return -1 if less, 0 if equal and +1 if greater.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -336,12 +366,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to compare.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">to</span></td>
-        <td></td>
+        <td><p>The other string to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -356,15 +388,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>-1 if less, 0 if equal and +1 if greater.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_CasecmpTo_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_NocasecmpTo_System_String_System_String_">NocasecmpTo(String, String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_CompareTo_System_String_System_String_System_Boolean_">CompareTo(String, String, Boolean)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_CEscape_" data-uid="Godot.StringExtensions.CEscape*"></a>
   <h4 id="Godot_StringExtensions_CEscape_System_String_" data-uid="Godot.StringExtensions.CEscape(System.String)">CEscape(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the string with special characters escaped using the C language standard.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -383,7 +422,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to escape.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -398,7 +438,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The escaped string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -406,7 +447,8 @@
   
   <a id="Godot_StringExtensions_CompareTo_" data-uid="Godot.StringExtensions.CompareTo*"></a>
   <h4 id="Godot_StringExtensions_CompareTo_System_String_System_String_System_Boolean_" data-uid="Godot.StringExtensions.CompareTo(System.String,System.String,System.Boolean)">CompareTo(String, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a comparison to another string, return -1 if less, 0 if equal and +1 if greater.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -425,17 +467,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to compare.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">to</span></td>
-        <td></td>
+        <td><p>The other string to compare.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">caseSensitive</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, the comparison will be case sensitive.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -450,7 +495,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>-1 if less, 0 if equal and +1 if greater.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -458,7 +504,8 @@
   
   <a id="Godot_StringExtensions_Count_" data-uid="Godot.StringExtensions.Count*"></a>
   <h4 id="Godot_StringExtensions_Count_System_String_System_String_System_Boolean_System_Int32_System_Int32_" data-uid="Godot.StringExtensions.Count(System.String,System.String,System.Boolean,System.Int32,System.Int32)">Count(String, String, Boolean, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the amount of substrings <code data-dev-comment-type="paramref" class="paramref">what</code> in the string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -477,27 +524,32 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string where the substring will be searched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring that will be counted.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">caseSensitive</span></td>
-        <td></td>
+        <td><p>If the search is case sensitive.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>Index to start searching from.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">to</span></td>
-        <td></td>
+        <td><p>Index to stop searching at.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -512,7 +564,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>Amount of substrings in the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -520,7 +573,9 @@
   
   <a id="Godot_StringExtensions_CUnescape_" data-uid="Godot.StringExtensions.CUnescape*"></a>
   <h4 id="Godot_StringExtensions_CUnescape_System_String_" data-uid="Godot.StringExtensions.CUnescape(System.String)">CUnescape(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the string with escaped characters replaced by their meanings
+according to the C language standard.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -539,7 +594,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to unescape.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -554,7 +610,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The unescaped string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -562,7 +619,8 @@
   
   <a id="Godot_StringExtensions_Empty_" data-uid="Godot.StringExtensions.Empty*"></a>
   <h4 id="Godot_StringExtensions_Empty_System_String_" data-uid="Godot.StringExtensions.Empty(System.String)">Empty(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the string is empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -604,7 +662,9 @@
   
   <a id="Godot_StringExtensions_EndsWith_" data-uid="Godot.StringExtensions.EndsWith*"></a>
   <h4 id="Godot_StringExtensions_EndsWith_System_String_System_String_" data-uid="Godot.StringExtensions.EndsWith(System.String,System.String)">EndsWith(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the strings ends
+with the given string <code data-dev-comment-type="paramref" class="paramref">text</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -623,12 +683,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>The ending string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -643,7 +705,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string ends with the given string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -651,7 +714,8 @@
   
   <a id="Godot_StringExtensions_Erase_" data-uid="Godot.StringExtensions.Erase*"></a>
   <h4 id="Godot_StringExtensions_Erase_System_Text_StringBuilder_System_Int32_System_Int32_" data-uid="Godot.StringExtensions.Erase(System.Text.StringBuilder,System.Int32,System.Int32)">Erase(StringBuilder, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Erase <code data-dev-comment-type="paramref" class="paramref">chars</code> characters from the string starting from <code data-dev-comment-type="paramref" class="paramref">pos</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -670,17 +734,20 @@
       <tr>
         <td><span class="xref">System.Text.StringBuilder</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to modify.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pos</span></td>
-        <td></td>
+        <td><p>Starting position from which to erase.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">chars</span></td>
-        <td></td>
+        <td><p>Amount of characters to erase.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -688,7 +755,10 @@
   
   <a id="Godot_StringExtensions_Extension_" data-uid="Godot.StringExtensions.Extension*"></a>
   <h4 id="Godot_StringExtensions_Extension_System_String_" data-uid="Godot.StringExtensions.Extension(System.String)">Extension(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the extension without the leading period character (<code>.</code>)
+if the string is a valid file name or path. If the string does not contain
+an extension, returns an empty string instead.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -707,7 +777,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The path to a file.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -722,15 +793,33 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The extension of the file or an empty string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_Extension_System_String__examples">Examples</h5>
+  <pre><code>GD.Print(&quot;/path/to/file.txt&quot;.GetExtension())  // &quot;txt&quot;
+GD.Print(&quot;file.txt&quot;.GetExtension())  // &quot;txt&quot;
+GD.Print(&quot;file.sample.txt&quot;.GetExtension())  // &quot;txt&quot;
+GD.Print(&quot;.txt&quot;.GetExtension())  // &quot;txt&quot;
+GD.Print(&quot;file.txt.&quot;.GetExtension())  // &quot;&quot; (empty string)
+GD.Print(&quot;file.txt..&quot;.GetExtension())  // &quot;&quot; (empty string)
+GD.Print(&quot;txt&quot;.GetExtension())  // &quot;&quot; (empty string)
+GD.Print(&quot;&quot;.GetExtension())  // &quot;&quot; (empty string)</code></pre>
+
+  <h5 id="Godot_StringExtensions_Extension_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_BaseName_System_String_">BaseName(String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_GetBaseDir_System_String_">GetBaseDir(String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_GetFile_System_String_">GetFile(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_Find_" data-uid="Godot.StringExtensions.Find*"></a>
   <h4 id="Godot_StringExtensions_Find_System_String_System_Char_System_Int32_System_Boolean_" data-uid="Godot.StringExtensions.Find(System.String,System.Char,System.Int32,System.Boolean)">Find(String, Char, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Find the first occurrence of a char. Optionally, the search starting position can be passed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -749,22 +838,26 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string that will be searched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Char</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring to find.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The search starting position.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">caseSensitive</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, the search is case sensitive.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -779,15 +872,24 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The first instance of the char, or -1 if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_Find_System_String_System_Char_System_Int32_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Find_System_String_System_String_System_Int32_System_Boolean_">Find(String, String, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindLast_System_String_System_String_System_Boolean_">FindLast(String, String, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindLast_System_String_System_String_System_Int32_System_Boolean_">FindLast(String, String, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindN_System_String_System_String_System_Int32_">FindN(String, String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_Find_" data-uid="Godot.StringExtensions.Find*"></a>
   <h4 id="Godot_StringExtensions_Find_System_String_System_String_System_Int32_System_Boolean_" data-uid="Godot.StringExtensions.Find(System.String,System.String,System.Int32,System.Boolean)">Find(String, String, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Find the first occurrence of a substring. Optionally, the search starting position can be passed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -806,22 +908,26 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string that will be searched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring to find.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The search starting position.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">caseSensitive</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, the search is case sensitive.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -836,15 +942,24 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The starting position of the substring, or -1 if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_Find_System_String_System_String_System_Int32_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Find_System_String_System_Char_System_Int32_System_Boolean_">Find(String, Char, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindLast_System_String_System_String_System_Boolean_">FindLast(String, String, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindLast_System_String_System_String_System_Int32_System_Boolean_">FindLast(String, String, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindN_System_String_System_String_System_Int32_">FindN(String, String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_FindLast_" data-uid="Godot.StringExtensions.FindLast*"></a>
   <h4 id="Godot_StringExtensions_FindLast_System_String_System_String_System_Boolean_" data-uid="Godot.StringExtensions.FindLast(System.String,System.String,System.Boolean)">FindLast(String, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Find the last occurrence of a substring.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -863,17 +978,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string that will be searched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring to find.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">caseSensitive</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, the search is case sensitive.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -888,15 +1006,24 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The starting position of the substring, or -1 if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_FindLast_System_String_System_String_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Find_System_String_System_String_System_Int32_System_Boolean_">Find(String, String, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Find_System_String_System_Char_System_Int32_System_Boolean_">Find(String, Char, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindLast_System_String_System_String_System_Int32_System_Boolean_">FindLast(String, String, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindN_System_String_System_String_System_Int32_">FindN(String, String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_FindLast_" data-uid="Godot.StringExtensions.FindLast*"></a>
   <h4 id="Godot_StringExtensions_FindLast_System_String_System_String_System_Int32_System_Boolean_" data-uid="Godot.StringExtensions.FindLast(System.String,System.String,System.Int32,System.Boolean)">FindLast(String, String, Int32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Find the last occurrence of a substring specifying the search starting position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -915,22 +1042,26 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string that will be searched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring to find.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The search starting position.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">caseSensitive</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, the search is case sensitive.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -945,15 +1076,25 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The starting position of the substring, or -1 if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_FindLast_System_String_System_String_System_Int32_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Find_System_String_System_String_System_Int32_System_Boolean_">Find(String, String, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Find_System_String_System_Char_System_Int32_System_Boolean_">Find(String, Char, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindLast_System_String_System_String_System_Boolean_">FindLast(String, String, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindN_System_String_System_String_System_Int32_">FindN(String, String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_FindN_" data-uid="Godot.StringExtensions.FindN*"></a>
   <h4 id="Godot_StringExtensions_FindN_System_String_System_String_System_Int32_" data-uid="Godot.StringExtensions.FindN(System.String,System.String,System.Int32)">FindN(String, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Find the first occurrence of a substring but search as case-insensitive.
+Optionally, the search starting position can be passed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -972,17 +1113,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string that will be searched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring to find.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The search starting position.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -997,15 +1141,24 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The starting position of the substring, or -1 if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_FindN_System_String_System_String_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Find_System_String_System_String_System_Int32_System_Boolean_">Find(String, String, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Find_System_String_System_Char_System_Int32_System_Boolean_">Find(String, Char, Int32, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindLast_System_String_System_String_System_Boolean_">FindLast(String, String, Boolean)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_FindLast_System_String_System_String_System_Int32_System_Boolean_">FindLast(String, String, Int32, Boolean)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_GetBaseDir_" data-uid="Godot.StringExtensions.GetBaseDir*"></a>
   <h4 id="Godot_StringExtensions_GetBaseDir_System_String_" data-uid="Godot.StringExtensions.GetBaseDir(System.String)">GetBaseDir(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If the string is a path to a file, return the base directory.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1024,7 +1177,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The path to a file.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1039,15 +1193,23 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The base directory.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_GetBaseDir_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_BaseName_System_String_">BaseName(String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Extension_System_String_">Extension(String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_GetFile_System_String_">GetFile(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_GetFile_" data-uid="Godot.StringExtensions.GetFile*"></a>
   <h4 id="Godot_StringExtensions_GetFile_System_String_" data-uid="Godot.StringExtensions.GetFile(System.String)">GetFile(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If the string is a path to a file, return the file and ignore the base directory.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1066,7 +1228,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The path to a file.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1081,15 +1244,28 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The file name.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_GetFile_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_BaseName_System_String_">BaseName(String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Extension_System_String_">Extension(String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_GetBaseDir_System_String_">GetBaseDir(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_GetStringFromASCII_" data-uid="Godot.StringExtensions.GetStringFromASCII*"></a>
   <h4 id="Godot_StringExtensions_GetStringFromASCII_System_Byte___" data-uid="Godot.StringExtensions.GetStringFromASCII(System.Byte[])">GetStringFromASCII(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given byte array of ASCII encoded text to a string.
+Faster alternative to <a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_GetStringFromUTF8_System_Byte___">GetStringFromUTF8(Byte[])</a> if the
+content is ASCII-only. Unlike the UTF-8 function this function
+maps every byte to a character in the array. Multibyte sequences
+will not be interpreted correctly. For parsing user input always
+use <a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_GetStringFromUTF8_System_Byte___">GetStringFromUTF8(Byte[])</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1108,7 +1284,8 @@
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">bytes</span></td>
-        <td></td>
+        <td><p>A byte array of ASCII characters (on the range of 0-127).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1123,7 +1300,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string created from the bytes.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1131,7 +1309,12 @@
   
   <a id="Godot_StringExtensions_GetStringFromUTF8_" data-uid="Godot.StringExtensions.GetStringFromUTF8*"></a>
   <h4 id="Godot_StringExtensions_GetStringFromUTF8_System_Byte___" data-uid="Godot.StringExtensions.GetStringFromUTF8(System.Byte[])">GetStringFromUTF8(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the given byte array of UTF-8 encoded text to a string.
+Slower than <a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_GetStringFromASCII_System_Byte___">GetStringFromASCII(Byte[])</a> but supports UTF-8
+encoded data. Use this function if you are unsure about the
+source of the data. For user input this function
+should always be preferred.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1150,7 +1333,8 @@
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">bytes</span></td>
-        <td></td>
+        <td><p>A byte array of UTF-8 characters (a character may take up multiple bytes).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1165,7 +1349,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string created from the bytes.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1173,7 +1358,8 @@
   
   <a id="Godot_StringExtensions_Hash_" data-uid="Godot.StringExtensions.Hash*"></a>
   <h4 id="Godot_StringExtensions_Hash_System_String_" data-uid="Godot.StringExtensions.Hash(System.String)">Hash(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hash the string and return a 32 bits unsigned integer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1192,7 +1378,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to hash.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1207,7 +1394,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
-        <td></td>
+        <td><p>The calculated hash of the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1215,7 +1403,8 @@
   
   <a id="Godot_StringExtensions_HexEncode_" data-uid="Godot.StringExtensions.HexEncode*"></a>
   <h4 id="Godot_StringExtensions_HexEncode_System_Byte___" data-uid="Godot.StringExtensions.HexEncode(System.Byte[])">HexEncode(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a hexadecimal representation of this byte array as a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1234,7 +1423,8 @@
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">bytes</span></td>
-        <td></td>
+        <td><p>The byte array to encode.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1249,7 +1439,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The hexadecimal representation of this byte array.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1257,7 +1448,10 @@
   
   <a id="Godot_StringExtensions_HexToInt_" data-uid="Godot.StringExtensions.HexToInt*"></a>
   <h4 id="Godot_StringExtensions_HexToInt_System_String_" data-uid="Godot.StringExtensions.HexToInt(System.String)">HexToInt(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a string containing a hexadecimal number into an integer.
+Hexadecimal strings can either be prefixed with <code>0x</code> or not,
+and they can also start with a <code>-</code> before the optional prefix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1276,7 +1470,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1291,7 +1486,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The converted string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1299,7 +1495,8 @@
   
   <a id="Godot_StringExtensions_Insert_" data-uid="Godot.StringExtensions.Insert*"></a>
   <h4 id="Godot_StringExtensions_Insert_System_String_System_Int32_System_String_" data-uid="Godot.StringExtensions.Insert(System.String,System.Int32,System.String)">Insert(String, Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Inserts a substring at a given position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1318,17 +1515,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to modify.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pos</span></td>
-        <td></td>
+        <td><p>Position at which to insert the substring.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>Substring to insert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1343,7 +1543,9 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The string with <code data-dev-comment-type="paramref" class="paramref">what</code> inserted at the given
+position <code data-dev-comment-type="paramref" class="paramref">pos</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1351,7 +1553,10 @@
   
   <a id="Godot_StringExtensions_IsAbsPath_" data-uid="Godot.StringExtensions.IsAbsPath*"></a>
   <h4 id="Godot_StringExtensions_IsAbsPath_System_String_" data-uid="Godot.StringExtensions.IsAbsPath(System.String)">IsAbsPath(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the string is a path to a file or
+directory and its starting point is explicitly defined. This includes
+<code>res://</code>, <code>user://</code>, <code>C:&lt;/code&gt;, <code>/</code>, etc.<p>
+</code></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1370,7 +1575,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1385,15 +1591,24 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string is an absolute path.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_IsAbsPath_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_IsRelPath_System_String_">IsRelPath(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_IsRelPath_" data-uid="Godot.StringExtensions.IsRelPath*"></a>
   <h4 id="Godot_StringExtensions_IsRelPath_System_String_" data-uid="Godot.StringExtensions.IsRelPath(System.String)">IsRelPath(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the string is a path to a file or
+directory and its starting point is implicitly defined within the
+context it is being used. The starting point may refer to the current
+directory (<code>./</code>), or the current <a class="xref" href="Godot.Node.html">Node</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1412,7 +1627,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1427,15 +1643,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string is a relative path.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_IsRelPath_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_IsAbsPath_System_String_">IsAbsPath(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_IsSubsequenceOf_" data-uid="Godot.StringExtensions.IsSubsequenceOf*"></a>
   <h4 id="Godot_StringExtensions_IsSubsequenceOf_System_String_System_String_System_Boolean_" data-uid="Godot.StringExtensions.IsSubsequenceOf(System.String,System.String,System.Boolean)">IsSubsequenceOf(String, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether this string is a subsequence of the given string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1454,17 +1676,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The subsequence to search.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>The string that contains the subsequence.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">caseSensitive</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, the check is case sensitive.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1479,15 +1704,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string is a subsequence of the given string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_IsSubsequenceOf_System_String_System_String_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_IsSubsequenceOfI_System_String_System_String_">IsSubsequenceOfI(String, String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_IsSubsequenceOfI_" data-uid="Godot.StringExtensions.IsSubsequenceOfI*"></a>
   <h4 id="Godot_StringExtensions_IsSubsequenceOfI_System_String_System_String_" data-uid="Godot.StringExtensions.IsSubsequenceOfI(System.String,System.String)">IsSubsequenceOfI(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether this string is a subsequence of the given string, ignoring case differences.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1506,12 +1737,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The subsequence to search.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>The string that contains the subsequence.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1526,15 +1759,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string is a subsequence of the given string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_IsSubsequenceOfI_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_IsSubsequenceOf_System_String_System_String_System_Boolean_">IsSubsequenceOf(String, String, Boolean)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_IsValidFloat_" data-uid="Godot.StringExtensions.IsValidFloat*"></a>
   <h4 id="Godot_StringExtensions_IsValidFloat_System_String_" data-uid="Godot.StringExtensions.IsValidFloat(System.String)">IsValidFloat(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether the string contains a valid <span class="xref">langword_csharp_float</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1553,7 +1792,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1568,7 +1808,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string contains a valid floating point number.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1576,7 +1817,8 @@
   
   <a id="Godot_StringExtensions_IsValidHtmlColor_" data-uid="Godot.StringExtensions.IsValidHtmlColor*"></a>
   <h4 id="Godot_StringExtensions_IsValidHtmlColor_System_String_" data-uid="Godot.StringExtensions.IsValidHtmlColor(System.String)">IsValidHtmlColor(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether the string contains a valid color in HTML notation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1595,7 +1837,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1610,7 +1853,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string contains a valid HTML color.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1618,7 +1862,10 @@
   
   <a id="Godot_StringExtensions_IsValidIdentifier_" data-uid="Godot.StringExtensions.IsValidIdentifier*"></a>
   <h4 id="Godot_StringExtensions_IsValidIdentifier_System_String_" data-uid="Godot.StringExtensions.IsValidIdentifier(System.String)">IsValidIdentifier(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether the string is a valid identifier. As is common in
+programming languages, a valid identifier may contain only letters,
+digits and underscores (_) and the first character may not be a digit.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1637,7 +1884,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1652,7 +1900,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string contains a valid identifier.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1660,7 +1909,8 @@
   
   <a id="Godot_StringExtensions_IsValidInteger_" data-uid="Godot.StringExtensions.IsValidInteger*"></a>
   <h4 id="Godot_StringExtensions_IsValidInteger_System_String_" data-uid="Godot.StringExtensions.IsValidInteger(System.String)">IsValidInteger(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether the string contains a valid integer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1679,7 +1929,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1694,7 +1945,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string contains a valid integer.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1702,7 +1954,8 @@
   
   <a id="Godot_StringExtensions_IsValidIPAddress_" data-uid="Godot.StringExtensions.IsValidIPAddress*"></a>
   <h4 id="Godot_StringExtensions_IsValidIPAddress_System_String_" data-uid="Godot.StringExtensions.IsValidIPAddress(System.String)">IsValidIPAddress(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether the string contains a valid IP address.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1721,7 +1974,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1736,7 +1990,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the string contains a valid IP address.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1744,7 +1999,8 @@
   
   <a id="Godot_StringExtensions_JSONEscape_" data-uid="Godot.StringExtensions.JSONEscape*"></a>
   <h4 id="Godot_StringExtensions_JSONEscape_System_String_" data-uid="Godot.StringExtensions.JSONEscape(System.String)">JSONEscape(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the string with special characters escaped using the JSON standard.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1763,7 +2019,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to escape.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1778,7 +2035,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The escaped string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1786,7 +2044,8 @@
   
   <a id="Godot_StringExtensions_Left_" data-uid="Godot.StringExtensions.Left*"></a>
   <h4 id="Godot_StringExtensions_Left_System_String_System_Int32_" data-uid="Godot.StringExtensions.Left(System.String,System.Int32)">Left(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an amount of characters from the left of the string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1805,12 +2064,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The original string.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pos</span></td>
-        <td></td>
+        <td><p>The position in the string where the left side ends.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1825,15 +2086,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The left side of the string from the given position.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_Left_System_String_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Right_System_String_System_Int32_">Right(String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_Length_" data-uid="Godot.StringExtensions.Length*"></a>
   <h4 id="Godot_StringExtensions_Length_System_String_" data-uid="Godot.StringExtensions.Length(System.String)">Length(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the length of the string in characters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1852,7 +2119,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1867,7 +2135,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The length of the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1875,7 +2144,8 @@
   
   <a id="Godot_StringExtensions_LStrip_" data-uid="Godot.StringExtensions.LStrip*"></a>
   <h4 id="Godot_StringExtensions_LStrip_System_String_System_String_" data-uid="Godot.StringExtensions.LStrip(System.String,System.String)">LStrip(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the string with characters removed from the left.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1894,12 +2164,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to remove characters from.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">chars</span></td>
-        <td></td>
+        <td><p>The characters to be removed.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1914,15 +2186,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A copy of the string with characters removed from the left.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_LStrip_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_RStrip_System_String_System_String_">RStrip(String, String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_Match_" data-uid="Godot.StringExtensions.Match*"></a>
   <h4 id="Godot_StringExtensions_Match_System_String_System_String_System_Boolean_" data-uid="Godot.StringExtensions.Match(System.String,System.String,System.Boolean)">Match(String, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Do a simple case sensitive expression match, using ? and * wildcards
+(see <span class="xref">Godot.StringExtensions.ExprMatch(System.String,System.String,System.Boolean)</span>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1941,17 +2220,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">expr</span></td>
-        <td></td>
+        <td><p>Expression to check.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">caseSensitive</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, the check will be case sensitive.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1966,15 +2248,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the expression has any matches.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_Match_System_String_System_String_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_MatchN_System_String_System_String_">MatchN(String, String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_MatchN_" data-uid="Godot.StringExtensions.MatchN*"></a>
   <h4 id="Godot_StringExtensions_MatchN_System_String_System_String_" data-uid="Godot.StringExtensions.MatchN(System.String,System.String)">MatchN(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Do a simple case insensitive expression match, using ? and * wildcards
+(see <span class="xref">Godot.StringExtensions.ExprMatch(System.String,System.String,System.Boolean)</span>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1993,12 +2282,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">expr</span></td>
-        <td></td>
+        <td><p>Expression to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2013,15 +2304,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If the expression has any matches.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_MatchN_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Match_System_String_System_String_System_Boolean_">Match(String, String, Boolean)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_MD5Buffer_" data-uid="Godot.StringExtensions.MD5Buffer*"></a>
   <h4 id="Godot_StringExtensions_MD5Buffer_System_String_" data-uid="Godot.StringExtensions.MD5Buffer(System.String)">MD5Buffer(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the MD5 hash of the string as an array of bytes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2040,7 +2337,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to hash.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2055,15 +2353,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
+        <td><p>The MD5 hash of the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_MD5Buffer_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_MD5Text_System_String_">MD5Text(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_MD5Text_" data-uid="Godot.StringExtensions.MD5Text*"></a>
   <h4 id="Godot_StringExtensions_MD5Text_System_String_" data-uid="Godot.StringExtensions.MD5Text(System.String)">MD5Text(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the MD5 hash of the string as a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2082,7 +2386,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to hash.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2097,15 +2402,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The MD5 hash of the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_MD5Text_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_MD5Buffer_System_String_">MD5Buffer(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_NocasecmpTo_" data-uid="Godot.StringExtensions.NocasecmpTo*"></a>
   <h4 id="Godot_StringExtensions_NocasecmpTo_System_String_System_String_" data-uid="Godot.StringExtensions.NocasecmpTo(System.String,System.String)">NocasecmpTo(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Perform a case-insensitive comparison to another string, return -1 if less, 0 if equal and +1 if greater.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2124,12 +2435,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to compare.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">to</span></td>
-        <td></td>
+        <td><p>The other string to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2144,15 +2457,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>-1 if less, 0 if equal and +1 if greater.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_NocasecmpTo_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_CasecmpTo_System_String_System_String_">CasecmpTo(String, String)</a></div>
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_CompareTo_System_String_System_String_System_Boolean_">CompareTo(String, String, Boolean)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_OrdAt_" data-uid="Godot.StringExtensions.OrdAt*"></a>
   <h4 id="Godot_StringExtensions_OrdAt_System_String_System_Int32_" data-uid="Godot.StringExtensions.OrdAt(System.String,System.Int32)">OrdAt(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the character code at position <code data-dev-comment-type="paramref" class="paramref">at</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2171,12 +2491,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to check.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">at</span></td>
-        <td></td>
+        <td><p>The position int the string for the character to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2191,7 +2513,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The character code.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2199,7 +2522,9 @@
   
   <a id="Godot_StringExtensions_PadDecimals_" data-uid="Godot.StringExtensions.PadDecimals*"></a>
   <h4 id="Godot_StringExtensions_PadDecimals_System_String_System_Int32_" data-uid="Godot.StringExtensions.PadDecimals(System.String,System.Int32)">PadDecimals(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Format a number to have an exact number of <code data-dev-comment-type="paramref" class="paramref">digits</code>
+after the decimal point.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2218,12 +2543,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to pad.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">digits</span></td>
-        <td></td>
+        <td><p>Amount of digits after the decimal point.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2238,15 +2565,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The string padded with zeroes.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_PadDecimals_System_String_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_PadZeros_System_String_System_Int32_">PadZeros(String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_PadZeros_" data-uid="Godot.StringExtensions.PadZeros*"></a>
   <h4 id="Godot_StringExtensions_PadZeros_System_String_System_Int32_" data-uid="Godot.StringExtensions.PadZeros(System.String,System.Int32)">PadZeros(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Format a number to have an exact number of <code data-dev-comment-type="paramref" class="paramref">digits</code>
+before the decimal point.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2265,12 +2599,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to pad.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">digits</span></td>
-        <td></td>
+        <td><p>Amount of digits before the decimal point.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2285,15 +2621,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The string padded with zeroes.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_PadZeros_System_String_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_PadDecimals_System_String_System_Int32_">PadDecimals(String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_PercentDecode_" data-uid="Godot.StringExtensions.PercentDecode*"></a>
   <h4 id="Godot_StringExtensions_PercentDecode_System_String_" data-uid="Godot.StringExtensions.PercentDecode(System.String)">PercentDecode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decode a percent-encoded string. See <a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_PercentEncode_System_String_">PercentEncode(String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2335,7 +2677,9 @@
   
   <a id="Godot_StringExtensions_PercentEncode_" data-uid="Godot.StringExtensions.PercentEncode*"></a>
   <h4 id="Godot_StringExtensions_PercentEncode_System_String_" data-uid="Godot.StringExtensions.PercentEncode(System.String)">PercentEncode(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Percent-encode a string. This is meant to encode parameters in a URL
+when sending a HTTP GET request and bodies of form-urlencoded POST request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2373,11 +2717,18 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_PercentEncode_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_PercentDecode_System_String_">PercentDecode(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_PlusFile_" data-uid="Godot.StringExtensions.PlusFile*"></a>
   <h4 id="Godot_StringExtensions_PlusFile_System_String_System_String_" data-uid="Godot.StringExtensions.PlusFile(System.String,System.String)">PlusFile(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If the string is a path, this concatenates <code data-dev-comment-type="paramref" class="paramref">file</code>
+at the end of the string as a subpath.
+E.g. <code>&quot;this/is&quot;.PlusFile(&quot;path&quot;) == &quot;this/is/path&quot;</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2396,12 +2747,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The path that will be concatenated.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">file</span></td>
-        <td></td>
+        <td><p>File name to concatenate with the path.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2416,7 +2769,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The concatenated path with the given file name.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2424,7 +2778,8 @@
   
   <a id="Godot_StringExtensions_Replace_" data-uid="Godot.StringExtensions.Replace*"></a>
   <h4 id="Godot_StringExtensions_Replace_System_String_System_String_System_String_" data-uid="Godot.StringExtensions.Replace(System.String,System.String,System.String)">Replace(String, String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Replace occurrences of a substring for different ones inside the string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2443,17 +2798,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to modify.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring to be replaced in the string.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">forwhat</span></td>
-        <td></td>
+        <td><p>The substring that replaces <code data-dev-comment-type="paramref" class="paramref">what</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2468,15 +2826,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The string with the substring occurrences replaced.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_Replace_System_String_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ReplaceN_System_String_System_String_System_String_">ReplaceN(String, String, String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_ReplaceN_" data-uid="Godot.StringExtensions.ReplaceN*"></a>
   <h4 id="Godot_StringExtensions_ReplaceN_System_String_System_String_System_String_" data-uid="Godot.StringExtensions.ReplaceN(System.String,System.String,System.String)">ReplaceN(String, String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Replace occurrences of a substring for different ones inside the string, but search case-insensitive.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2495,17 +2859,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to modify.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring to be replaced in the string.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">forwhat</span></td>
-        <td></td>
+        <td><p>The substring that replaces <code data-dev-comment-type="paramref" class="paramref">what</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2520,15 +2887,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The string with the substring occurrences replaced.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_ReplaceN_System_String_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Replace_System_String_System_String_System_String_">Replace(String, String, String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_RFind_" data-uid="Godot.StringExtensions.RFind*"></a>
   <h4 id="Godot_StringExtensions_RFind_System_String_System_String_System_Int32_" data-uid="Godot.StringExtensions.RFind(System.String,System.String,System.Int32)">RFind(String, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Perform a search for a substring, but start from the end of the string instead of the beginning.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2547,17 +2920,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string that will be searched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring to search in the string.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The position at which to start searching.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2572,15 +2948,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The position at which the substring was found, or -1 if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_RFind_System_String_System_String_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_RFindN_System_String_System_String_System_Int32_">RFindN(String, String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_RFindN_" data-uid="Godot.StringExtensions.RFindN*"></a>
   <h4 id="Godot_StringExtensions_RFindN_System_String_System_String_System_Int32_" data-uid="Godot.StringExtensions.RFindN(System.String,System.String,System.Int32)">RFindN(String, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Perform a search for a substring, but start from the end of the string instead of the beginning.
+Also search case-insensitive.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2599,17 +2982,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string that will be searched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">what</span></td>
-        <td></td>
+        <td><p>The substring to search in the string.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The position at which to start searching.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2624,15 +3010,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The position at which the substring was found, or -1 if not found.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_RFindN_System_String_System_String_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_RFind_System_String_System_String_System_Int32_">RFind(String, String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_Right_" data-uid="Godot.StringExtensions.Right*"></a>
   <h4 id="Godot_StringExtensions_Right_System_String_System_Int32_" data-uid="Godot.StringExtensions.Right(System.String,System.Int32)">Right(String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the right side of the string from a given position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2651,12 +3043,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The original string.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pos</span></td>
-        <td></td>
+        <td><p>The position in the string from which the right side starts.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2671,15 +3065,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The right side of the string from the given position.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_Right_System_String_System_Int32__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Left_System_String_System_Int32_">Left(String, Int32)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_RStrip_" data-uid="Godot.StringExtensions.RStrip*"></a>
   <h4 id="Godot_StringExtensions_RStrip_System_String_System_String_" data-uid="Godot.StringExtensions.RStrip(System.String,System.String)">RStrip(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the string with characters removed from the right.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2698,12 +3098,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to remove characters from.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">chars</span></td>
-        <td></td>
+        <td><p>The characters to be removed.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2718,15 +3120,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A copy of the string with characters removed from the right.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_RStrip_System_String_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_LStrip_System_String_System_String_">LStrip(String, String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_SHA256Buffer_" data-uid="Godot.StringExtensions.SHA256Buffer*"></a>
   <h4 id="Godot_StringExtensions_SHA256Buffer_System_String_" data-uid="Godot.StringExtensions.SHA256Buffer(System.String)">SHA256Buffer(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the SHA-256 hash of the string as an array of bytes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2745,7 +3153,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to hash.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2760,15 +3169,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
+        <td><p>The SHA-256 hash of the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_SHA256Buffer_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_SHA256Text_System_String_">SHA256Text(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_SHA256Text_" data-uid="Godot.StringExtensions.SHA256Text*"></a>
   <h4 id="Godot_StringExtensions_SHA256Text_System_String_" data-uid="Godot.StringExtensions.SHA256Text(System.String)">SHA256Text(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the SHA-256 hash of the string as a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2787,7 +3202,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to hash.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2802,15 +3218,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The SHA-256 hash of the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_SHA256Text_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_SHA256Buffer_System_String_">SHA256Buffer(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_Similarity_" data-uid="Godot.StringExtensions.Similarity*"></a>
   <h4 id="Godot_StringExtensions_Similarity_System_String_System_String_" data-uid="Godot.StringExtensions.Similarity(System.String,System.String)">Similarity(String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the similarity index of the text compared to this string.
+1 means totally similar and 0 means totally dissimilar.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2829,12 +3252,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to compare.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>The other string to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2849,7 +3274,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>The similarity index.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2857,7 +3283,8 @@
   
   <a id="Godot_StringExtensions_SimplifyPath_" data-uid="Godot.StringExtensions.SimplifyPath*"></a>
   <h4 id="Godot_StringExtensions_SimplifyPath_System_String_" data-uid="Godot.StringExtensions.SimplifyPath(System.String)">SimplifyPath(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a simplified canonical path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2899,7 +3326,9 @@
   
   <a id="Godot_StringExtensions_Split_" data-uid="Godot.StringExtensions.Split*"></a>
   <h4 id="Godot_StringExtensions_Split_System_String_System_String_System_Boolean_" data-uid="Godot.StringExtensions.Split(System.String,System.String,System.Boolean)">Split(String, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Split the string by a divisor string, return an array of the substrings.
+Example &quot;One,Two,Three&quot; will return [&quot;One&quot;,&quot;Two&quot;,&quot;Three&quot;] if split by &quot;,&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2918,17 +3347,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to split.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">divisor</span></td>
-        <td></td>
+        <td><p>The divisor string that splits the string.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">allowEmpty</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, the array may include empty strings.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2943,15 +3375,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
-        <td></td>
+        <td><p>The array of strings split from the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_Split_System_String_System_String_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_SplitFloats_System_String_System_String_System_Boolean_">SplitFloats(String, String, Boolean)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_SplitFloats_" data-uid="Godot.StringExtensions.SplitFloats*"></a>
   <h4 id="Godot_StringExtensions_SplitFloats_System_String_System_String_System_Boolean_" data-uid="Godot.StringExtensions.SplitFloats(System.String,System.String,System.Boolean)">SplitFloats(String, String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Split the string in floats by using a divisor string, return an array of the substrings.
+Example &quot;1,2.5,3&quot; will return [1,2.5,3] if split by &quot;,&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2970,17 +3409,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to split.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">divisor</span></td>
-        <td></td>
+        <td><p>The divisor string that splits the string.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">allowEmpty</span></td>
-        <td></td>
+        <td><p>If <span class="xref">true</span>, the array may include empty floats.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2995,15 +3437,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span>[]</td>
-        <td></td>
+        <td><p>The array of floats split from the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_SplitFloats_System_String_System_String_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_Split_System_String_System_String_System_Boolean_">Split(String, String, Boolean)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_StripEdges_" data-uid="Godot.StringExtensions.StripEdges*"></a>
   <h4 id="Godot_StringExtensions_StripEdges_System_String_System_Boolean_System_Boolean_" data-uid="Godot.StringExtensions.StripEdges(System.String,System.Boolean,System.Boolean)">StripEdges(String, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the string stripped of any non-printable character at the beginning and the end.
+The optional arguments are used to toggle stripping on the left and right edges respectively.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3022,17 +3471,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to strip.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>If the left side should be stripped.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>If the right side should be stripped.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3047,7 +3499,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The string stripped of any non-printable characters.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3055,7 +3508,8 @@
   
   <a id="Godot_StringExtensions_Substr_" data-uid="Godot.StringExtensions.Substr*"></a>
   <h4 id="Godot_StringExtensions_Substr_System_String_System_Int32_System_Int32_" data-uid="Godot.StringExtensions.Substr(System.String,System.Int32,System.Int32)">Substr(String, Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns part of the string from the position <code data-dev-comment-type="paramref" class="paramref">from</code>, with length <code data-dev-comment-type="paramref" class="paramref">len</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3074,17 +3528,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to slice.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The position in the string that the part starts from.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">len</span></td>
-        <td></td>
+        <td><p>The length of the returned part.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3099,7 +3556,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>Part of the string from the position <code data-dev-comment-type="paramref" class="paramref">from</code>, with length <code data-dev-comment-type="paramref" class="paramref">len</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3107,7 +3565,10 @@
   
   <a id="Godot_StringExtensions_ToAscii_" data-uid="Godot.StringExtensions.ToAscii*"></a>
   <h4 id="Godot_StringExtensions_ToAscii_System_String_" data-uid="Godot.StringExtensions.ToAscii(System.String)">ToAscii(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the String (which is a character array) to PoolByteArray (which is an array of bytes).
+The conversion is speeded up in comparison to <a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ToUTF8_System_String_">ToUTF8(String)</a> with the assumption
+that all the characters the String contains are only ASCII characters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3126,7 +3587,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3141,15 +3603,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
+        <td><p>The string as ASCII encoded bytes.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_ToAscii_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ToUTF8_System_String_">ToUTF8(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_ToFloat_" data-uid="Godot.StringExtensions.ToFloat*"></a>
   <h4 id="Godot_StringExtensions_ToFloat_System_String_" data-uid="Godot.StringExtensions.ToFloat(System.String)">ToFloat(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a string, containing a decimal number, into a <span class="xref">langword_csharp_float</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3168,7 +3636,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3183,15 +3652,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
+        <td><p>The number representation of the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_ToFloat_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ToInt_System_String_">ToInt(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_ToInt_" data-uid="Godot.StringExtensions.ToInt*"></a>
   <h4 id="Godot_StringExtensions_ToInt_System_String_" data-uid="Godot.StringExtensions.ToInt(System.String)">ToInt(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a string, containing an integer number, into an <span class="xref">langword_csharp_int</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3210,7 +3685,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3225,15 +3701,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The number representation of the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_ToInt_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ToFloat_System_String_">ToFloat(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_ToLower_" data-uid="Godot.StringExtensions.ToLower*"></a>
   <h4 id="Godot_StringExtensions_ToLower_System_String_" data-uid="Godot.StringExtensions.ToLower(System.String)">ToLower(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the string converted to lowercase.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3252,7 +3734,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3267,15 +3750,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The string converted to lowercase.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_ToLower_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ToUpper_System_String_">ToUpper(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_ToUpper_" data-uid="Godot.StringExtensions.ToUpper*"></a>
   <h4 id="Godot_StringExtensions_ToUpper_System_String_" data-uid="Godot.StringExtensions.ToUpper(System.String)">ToUpper(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the string converted to uppercase.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3294,7 +3783,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3309,15 +3799,23 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The string converted to uppercase.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_ToUpper_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ToLower_System_String_">ToLower(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_ToUTF8_" data-uid="Godot.StringExtensions.ToUTF8*"></a>
   <h4 id="Godot_StringExtensions_ToUTF8_System_String_" data-uid="Godot.StringExtensions.ToUTF8(System.String)">ToUTF8(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the String (which is an array of characters) to PoolByteArray (which is an array of bytes).
+The conversion is a bit slower than <a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ToAscii_System_String_">ToAscii(String)</a>, but supports all UTF-8 characters.
+Therefore, you should prefer this function over <a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ToAscii_System_String_">ToAscii(String)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3336,7 +3834,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to convert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3351,15 +3850,21 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
+        <td><p>The string as UTF-8 encoded bytes.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_ToUTF8_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_ToAscii_System_String_">ToAscii(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_XMLEscape_" data-uid="Godot.StringExtensions.XMLEscape*"></a>
   <h4 id="Godot_StringExtensions_XMLEscape_System_String_" data-uid="Godot.StringExtensions.XMLEscape(System.String)">XMLEscape(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the string with special characters escaped using the XML standard.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3378,7 +3883,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to escape.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3393,15 +3899,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The escaped string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_XMLEscape_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_XMLUnescape_System_String_">XMLUnescape(String)</a></div>
+  </div>
   
   
   <a id="Godot_StringExtensions_XMLUnescape_" data-uid="Godot.StringExtensions.XMLUnescape*"></a>
   <h4 id="Godot_StringExtensions_XMLUnescape_System_String_" data-uid="Godot.StringExtensions.XMLUnescape(System.String)">XMLUnescape(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a copy of the string with escaped characters replaced by their meanings
+according to the XML standard.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3420,7 +3933,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">instance</span></td>
-        <td></td>
+        <td><p>The string to unescape.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3435,10 +3949,15 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The unescaped string.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Godot_StringExtensions_XMLUnescape_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Godot.StringExtensions.html#Godot_StringExtensions_XMLEscape_System_String_">XMLEscape(String)</a></div>
+  </div>
 </article>
           </div>
           

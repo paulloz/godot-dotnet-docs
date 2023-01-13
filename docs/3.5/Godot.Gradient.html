@@ -83,7 +83,9 @@
   
   <h1 id="Godot_Gradient" data-uid="Godot.Gradient" class="text-break">Class Gradient
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Given a set of colors, this resource will interpolate them in order. This means that if you have color 1, color 2 and color 3, the gradient will interpolate from color 1 to color 2 and from color 2 to color 3. The gradient will initially have 2 colors (black and white), one (black) at gradient lower offset 0 and the other (white) at the gradient higher offset 1.</p>
+<p>See also <a class="xref" href="Godot.Curve.html">Curve</a> which supports more complex easing methods, but does not support colors.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -346,7 +348,8 @@
   
   <a id="Godot_Gradient_Colors_" data-uid="Godot.Gradient.Colors*"></a>
   <h4 id="Godot_Gradient_Colors" data-uid="Godot.Gradient.Colors">Colors</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gradient&apos;s colors returned as a <a class="xref" href="Godot.Color.html">Color</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +374,8 @@
   
   <a id="Godot_Gradient_InterpolationMode_" data-uid="Godot.Gradient.InterpolationMode*"></a>
   <h4 id="Godot_Gradient_InterpolationMode" data-uid="Godot.Gradient.InterpolationMode">InterpolationMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Defines how the colors between points of the gradient are interpolated. See <a class="xref" href="Godot.Gradient.InterpolationModeEnum.html">Gradient.InterpolationModeEnum</a> for available modes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +400,8 @@
   
   <a id="Godot_Gradient_Offsets_" data-uid="Godot.Gradient.Offsets*"></a>
   <h4 id="Godot_Gradient_Offsets" data-uid="Godot.Gradient.Offsets">Offsets</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gradient&apos;s offsets returned as a <span class="xref">System.Single</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -423,7 +428,8 @@
   
   <a id="Godot_Gradient_AddPoint_" data-uid="Godot.Gradient.AddPoint*"></a>
   <h4 id="Godot_Gradient_AddPoint_System_Single_Godot_Color_" data-uid="Godot.Gradient.AddPoint(System.Single,Godot.Color)">AddPoint(Single, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the specified color to the end of the ramp, with the specified offset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -455,7 +461,8 @@
   
   <a id="Godot_Gradient_GetColor_" data-uid="Godot.Gradient.GetColor*"></a>
   <h4 id="Godot_Gradient_GetColor_System_Int32_" data-uid="Godot.Gradient.GetColor(System.Int32)">GetColor(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color of the ramp color at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -547,7 +554,8 @@
   
   <a id="Godot_Gradient_GetOffset_" data-uid="Godot.Gradient.GetOffset*"></a>
   <h4 id="Godot_Gradient_GetOffset_System_Int32_" data-uid="Godot.Gradient.GetOffset(System.Int32)">GetOffset(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the offset of the ramp color at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -614,7 +622,8 @@
   
   <a id="Godot_Gradient_GetPointCount_" data-uid="Godot.Gradient.GetPointCount*"></a>
   <h4 id="Godot_Gradient_GetPointCount" data-uid="Godot.Gradient.GetPointCount">GetPointCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of colors in the ramp.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -639,7 +648,8 @@
   
   <a id="Godot_Gradient_Interpolate_" data-uid="Godot.Gradient.Interpolate*"></a>
   <h4 id="Godot_Gradient_Interpolate_System_Single_" data-uid="Godot.Gradient.Interpolate(System.Single)">Interpolate(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the interpolated color specified by <code>offset</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -681,7 +691,8 @@
   
   <a id="Godot_Gradient_RemovePoint_" data-uid="Godot.Gradient.RemovePoint*"></a>
   <h4 id="Godot_Gradient_RemovePoint_System_Int32_" data-uid="Godot.Gradient.RemovePoint(System.Int32)">RemovePoint(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the color at the index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -708,7 +719,8 @@
   
   <a id="Godot_Gradient_SetColor_" data-uid="Godot.Gradient.SetColor*"></a>
   <h4 id="Godot_Gradient_SetColor_System_Int32_Godot_Color_" data-uid="Godot.Gradient.SetColor(System.Int32,Godot.Color)">SetColor(Int32, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the color of the ramp color at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -794,7 +806,8 @@
   
   <a id="Godot_Gradient_SetOffset_" data-uid="Godot.Gradient.SetOffset*"></a>
   <h4 id="Godot_Gradient_SetOffset_System_Int32_System_Single_" data-uid="Godot.Gradient.SetOffset(System.Int32,System.Single)">SetOffset(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the offset for the ramp color at index <code>point</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,9 @@
   
   <h1 id="Godot_CallbackTweener" data-uid="Godot.CallbackTweener" class="text-break">Class CallbackTweener
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><a class="xref" href="Godot.CallbackTweener.html">CallbackTweener</a> is used to call a method in a tweening sequence. See <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenCallback_Godot_Object_System_String_Godot_Collections_Array_">TweenCallback(Object, String, Array)</a> for more usage information.</p>
+<p>Note: <a class="xref" href="Godot.SceneTreeTween.html#Godot_SceneTreeTween_TweenCallback_Godot_Object_System_String_Godot_Collections_Array_">TweenCallback(Object, String, Array)</a> is the only correct way to create <a class="xref" href="Godot.CallbackTweener.html">CallbackTweener</a>. Any <a class="xref" href="Godot.CallbackTweener.html">CallbackTweener</a> created manually will not function correctly.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -298,7 +300,10 @@
   
   <a id="Godot_CallbackTweener_SetDelay_" data-uid="Godot.CallbackTweener.SetDelay*"></a>
   <h4 id="Godot_CallbackTweener_SetDelay_System_Single_" data-uid="Godot.CallbackTweener.SetDelay(System.Single)">SetDelay(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Makes the callback call delayed by given time in seconds. Example:</p>
+<p><pre><code>var tween = get_tree().create_tween()
+tween.tween_callback(queue_free).set_delay(2) #this will call queue_free() after 2 seconds</code></pre></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

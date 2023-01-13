@@ -83,7 +83,10 @@
   
   <h1 id="Godot_ARVRPositionalTracker" data-uid="Godot.ARVRPositionalTracker" class="text-break">Class ARVRPositionalTracker
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An instance of this object represents a device that is tracked, such as a controller or anchor point. HMDs aren&apos;t represented here as they are handled internally.</p>
+<p>As controllers are turned on and the AR/VR interface detects them, instances of this object are automatically added to this list of active tracking objects accessible through the <a class="xref" href="Godot.ARVRServer.html">ARVRServer</a>.</p>
+<p>The <a class="xref" href="Godot.ARVRController.html">ARVRController</a> and <a class="xref" href="Godot.ARVRAnchor.html">ARVRAnchor</a> both consume objects of this type and should be used in your project. The positional trackers are just under-the-hood objects that make this all work. These are mostly exposed so that GDNative-based interfaces can interact with them.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +300,8 @@
   
   <a id="Godot_ARVRPositionalTracker_Rumble_" data-uid="Godot.ARVRPositionalTracker.Rumble*"></a>
   <h4 id="Godot_ARVRPositionalTracker_Rumble" data-uid="Godot.ARVRPositionalTracker.Rumble">Rumble</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The degree to which the tracker rumbles. Ranges from <code>0.0</code> to <code>1.0</code> with precision <code>.01</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -324,7 +328,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetHand_" data-uid="Godot.ARVRPositionalTracker.GetHand*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetHand" data-uid="Godot.ARVRPositionalTracker.GetHand">GetHand()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the hand holding this tracker, if known. See <a class="xref" href="Godot.ARVRPositionalTracker.TrackerHand.html">ARVRPositionalTracker.TrackerHand</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -349,7 +354,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetJoyId_" data-uid="Godot.ARVRPositionalTracker.GetJoyId*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetJoyId" data-uid="Godot.ARVRPositionalTracker.GetJoyId">GetJoyId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If this is a controller that is being tracked, the controller will also be represented by a joystick entry with this ID.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +380,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetMesh_" data-uid="Godot.ARVRPositionalTracker.GetMesh*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetMesh" data-uid="Godot.ARVRPositionalTracker.GetMesh">GetMesh()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the mesh related to a controller or anchor point if one is available.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -399,7 +406,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetName_" data-uid="Godot.ARVRPositionalTracker.GetName*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetName" data-uid="Godot.ARVRPositionalTracker.GetName">GetName()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the controller or anchor point&apos;s name if available.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -424,7 +432,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetOrientation_" data-uid="Godot.ARVRPositionalTracker.GetOrientation*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetOrientation" data-uid="Godot.ARVRPositionalTracker.GetOrientation">GetOrientation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the controller&apos;s orientation matrix.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -449,7 +458,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetPosition_" data-uid="Godot.ARVRPositionalTracker.GetPosition*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetPosition" data-uid="Godot.ARVRPositionalTracker.GetPosition">GetPosition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the world-space controller position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -499,7 +509,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetTrackerId_" data-uid="Godot.ARVRPositionalTracker.GetTrackerId*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetTrackerId" data-uid="Godot.ARVRPositionalTracker.GetTrackerId">GetTrackerId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the internal tracker ID. This uniquely identifies the tracker per tracker type and matches the ID you need to specify for nodes such as the <a class="xref" href="Godot.ARVRController.html">ARVRController</a> and <a class="xref" href="Godot.ARVRAnchor.html">ARVRAnchor</a> nodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -524,7 +535,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetTracksOrientation_" data-uid="Godot.ARVRPositionalTracker.GetTracksOrientation*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetTracksOrientation" data-uid="Godot.ARVRPositionalTracker.GetTracksOrientation">GetTracksOrientation()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this device tracks orientation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -549,7 +561,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetTracksPosition_" data-uid="Godot.ARVRPositionalTracker.GetTracksPosition*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetTracksPosition" data-uid="Godot.ARVRPositionalTracker.GetTracksPosition">GetTracksPosition()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this device tracks position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -574,7 +587,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetTransform_" data-uid="Godot.ARVRPositionalTracker.GetTransform*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetTransform_System_Boolean_" data-uid="Godot.ARVRPositionalTracker.GetTransform(System.Boolean)">GetTransform(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the transform combining this device&apos;s orientation and position.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -616,7 +630,8 @@
   
   <a id="Godot_ARVRPositionalTracker_GetType_" data-uid="Godot.ARVRPositionalTracker.GetType*"></a>
   <h4 id="Godot_ARVRPositionalTracker_GetType" data-uid="Godot.ARVRPositionalTracker.GetType">GetType()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tracker&apos;s type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

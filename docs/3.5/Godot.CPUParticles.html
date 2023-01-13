@@ -83,7 +83,10 @@
   
   <h1 id="Godot_CPUParticles" data-uid="Godot.CPUParticles" class="text-break">Class CPUParticles
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>CPU-based 3D particle node used to create a variety of particle systems and effects.</p>
+<p>See also <a class="xref" href="Godot.Particles.html">Particles</a>, which provides the same functionality with hardware acceleration, but may not run on older devices.</p>
+<p>Note: Unlike <a class="xref" href="Godot.Particles.html">Particles</a>, the visibility rect is generated on-the-fly and doesn&apos;t need to be configured by the user.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1135,7 +1138,9 @@
   
   <a id="Godot_CPUParticles_Amount_" data-uid="Godot.CPUParticles.Amount*"></a>
   <h4 id="Godot_CPUParticles_Amount" data-uid="Godot.CPUParticles.Amount">Amount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of particles emitted in one emission cycle (corresponding to the <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_Lifetime">Lifetime</a>).</p>
+<p>Note: Changing <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_Amount">Amount</a> will reset the particle emission, therefore removing all particles that were already emitted before changing <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_Amount">Amount</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1160,7 +1165,8 @@
   
   <a id="Godot_CPUParticles_Angle_" data-uid="Godot.CPUParticles.Angle*"></a>
   <h4 id="Godot_CPUParticles_Angle" data-uid="Godot.CPUParticles.Angle">Angle</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initial rotation applied to each particle, in degrees.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1185,7 +1191,8 @@
   
   <a id="Godot_CPUParticles_AngleCurve_" data-uid="Godot.CPUParticles.AngleCurve*"></a>
   <h4 id="Godot_CPUParticles_AngleCurve" data-uid="Godot.CPUParticles.AngleCurve">AngleCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s rotation will be animated along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1210,7 +1217,8 @@
   
   <a id="Godot_CPUParticles_AngleRandom_" data-uid="Godot.CPUParticles.AngleRandom*"></a>
   <h4 id="Godot_CPUParticles_AngleRandom" data-uid="Godot.CPUParticles.AngleRandom">AngleRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Rotation randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1235,7 +1243,8 @@
   
   <a id="Godot_CPUParticles_AngularVelocity_" data-uid="Godot.CPUParticles.AngularVelocity*"></a>
   <h4 id="Godot_CPUParticles_AngularVelocity" data-uid="Godot.CPUParticles.AngularVelocity">AngularVelocity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initial angular velocity applied to each particle in degrees per second. Sets the speed of rotation of the particle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1260,7 +1269,8 @@
   
   <a id="Godot_CPUParticles_AngularVelocityCurve_" data-uid="Godot.CPUParticles.AngularVelocityCurve*"></a>
   <h4 id="Godot_CPUParticles_AngularVelocityCurve" data-uid="Godot.CPUParticles.AngularVelocityCurve">AngularVelocityCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s angular velocity will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1285,7 +1295,8 @@
   
   <a id="Godot_CPUParticles_AngularVelocityRandom_" data-uid="Godot.CPUParticles.AngularVelocityRandom*"></a>
   <h4 id="Godot_CPUParticles_AngularVelocityRandom" data-uid="Godot.CPUParticles.AngularVelocityRandom">AngularVelocityRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Angular velocity randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1310,7 +1321,8 @@
   
   <a id="Godot_CPUParticles_AnimOffset_" data-uid="Godot.CPUParticles.AnimOffset*"></a>
   <h4 id="Godot_CPUParticles_AnimOffset" data-uid="Godot.CPUParticles.AnimOffset">AnimOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle animation offset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1335,7 +1347,8 @@
   
   <a id="Godot_CPUParticles_AnimOffsetCurve_" data-uid="Godot.CPUParticles.AnimOffsetCurve*"></a>
   <h4 id="Godot_CPUParticles_AnimOffsetCurve" data-uid="Godot.CPUParticles.AnimOffsetCurve">AnimOffsetCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s animation offset will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1360,7 +1373,8 @@
   
   <a id="Godot_CPUParticles_AnimOffsetRandom_" data-uid="Godot.CPUParticles.AnimOffsetRandom*"></a>
   <h4 id="Godot_CPUParticles_AnimOffsetRandom" data-uid="Godot.CPUParticles.AnimOffsetRandom">AnimOffsetRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Animation offset randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1385,7 +1399,8 @@
   
   <a id="Godot_CPUParticles_AnimSpeed_" data-uid="Godot.CPUParticles.AnimSpeed*"></a>
   <h4 id="Godot_CPUParticles_AnimSpeed" data-uid="Godot.CPUParticles.AnimSpeed">AnimSpeed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle animation speed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1410,7 +1425,8 @@
   
   <a id="Godot_CPUParticles_AnimSpeedCurve_" data-uid="Godot.CPUParticles.AnimSpeedCurve*"></a>
   <h4 id="Godot_CPUParticles_AnimSpeedCurve" data-uid="Godot.CPUParticles.AnimSpeedCurve">AnimSpeedCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s animation speed will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1435,7 +1451,8 @@
   
   <a id="Godot_CPUParticles_AnimSpeedRandom_" data-uid="Godot.CPUParticles.AnimSpeedRandom*"></a>
   <h4 id="Godot_CPUParticles_AnimSpeedRandom" data-uid="Godot.CPUParticles.AnimSpeedRandom">AnimSpeedRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Animation speed randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1460,7 +1477,8 @@
   
   <a id="Godot_CPUParticles_Color_" data-uid="Godot.CPUParticles.Color*"></a>
   <h4 id="Godot_CPUParticles_Color" data-uid="Godot.CPUParticles.Color">Color</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s initial color. To have particle display color in a <a class="xref" href="Godot.SpatialMaterial.html">SpatialMaterial</a> make sure to set <a class="xref" href="Godot.SpatialMaterial.html#Godot_SpatialMaterial_VertexColorUseAsAlbedo">VertexColorUseAsAlbedo</a> to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1485,7 +1503,8 @@
   
   <a id="Godot_CPUParticles_ColorInitialRamp_" data-uid="Godot.CPUParticles.ColorInitialRamp*"></a>
   <h4 id="Godot_CPUParticles_ColorInitialRamp" data-uid="Godot.CPUParticles.ColorInitialRamp">ColorInitialRamp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s initial color will vary along this <a class="xref" href="Godot.GradientTexture.html">GradientTexture</a> (multiplied with <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_Color">Color</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1510,7 +1529,8 @@
   
   <a id="Godot_CPUParticles_ColorRamp_" data-uid="Godot.CPUParticles.ColorRamp*"></a>
   <h4 id="Godot_CPUParticles_ColorRamp" data-uid="Godot.CPUParticles.ColorRamp">ColorRamp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s color will vary along this <a class="xref" href="Godot.GradientTexture.html">GradientTexture</a> over its lifetime (multiplied with <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_Color">Color</a>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1535,7 +1555,8 @@
   
   <a id="Godot_CPUParticles_Damping_" data-uid="Godot.CPUParticles.Damping*"></a>
   <h4 id="Godot_CPUParticles_Damping" data-uid="Godot.CPUParticles.Damping">Damping</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The rate at which particles lose velocity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1560,7 +1581,8 @@
   
   <a id="Godot_CPUParticles_DampingCurve_" data-uid="Godot.CPUParticles.DampingCurve*"></a>
   <h4 id="Godot_CPUParticles_DampingCurve" data-uid="Godot.CPUParticles.DampingCurve">DampingCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Damping will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1585,7 +1607,8 @@
   
   <a id="Godot_CPUParticles_DampingRandom_" data-uid="Godot.CPUParticles.DampingRandom*"></a>
   <h4 id="Godot_CPUParticles_DampingRandom" data-uid="Godot.CPUParticles.DampingRandom">DampingRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Damping randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1610,7 +1633,8 @@
   
   <a id="Godot_CPUParticles_Direction_" data-uid="Godot.CPUParticles.Direction*"></a>
   <h4 id="Godot_CPUParticles_Direction" data-uid="Godot.CPUParticles.Direction">Direction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Unit vector specifying the particles&apos; emission direction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1635,7 +1659,8 @@
   
   <a id="Godot_CPUParticles_DrawOrder_" data-uid="Godot.CPUParticles.DrawOrder*"></a>
   <h4 id="Godot_CPUParticles_DrawOrder" data-uid="Godot.CPUParticles.DrawOrder">DrawOrder</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle draw order. Uses <a class="xref" href="Godot.CPUParticles.DrawOrderEnum.html">CPUParticles.DrawOrderEnum</a> values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1660,7 +1685,8 @@
   
   <a id="Godot_CPUParticles_EmissionBoxExtents_" data-uid="Godot.CPUParticles.EmissionBoxExtents*"></a>
   <h4 id="Godot_CPUParticles_EmissionBoxExtents" data-uid="Godot.CPUParticles.EmissionBoxExtents">EmissionBoxExtents</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The rectangle&apos;s extents if <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_EmissionShape">EmissionShape</a> is set to <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_Box">Box</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1685,7 +1711,8 @@
   
   <a id="Godot_CPUParticles_EmissionColors_" data-uid="Godot.CPUParticles.EmissionColors*"></a>
   <h4 id="Godot_CPUParticles_EmissionColors" data-uid="Godot.CPUParticles.EmissionColors">EmissionColors</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Color.html">Color</a>s to modulate particles by when using <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_Points">Points</a> or <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_DirectedPoints">DirectedPoints</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1710,7 +1737,8 @@
   
   <a id="Godot_CPUParticles_EmissionNormals_" data-uid="Godot.CPUParticles.EmissionNormals*"></a>
   <h4 id="Godot_CPUParticles_EmissionNormals" data-uid="Godot.CPUParticles.EmissionNormals">EmissionNormals</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the direction the particles will be emitted in when using <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_DirectedPoints">DirectedPoints</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1735,7 +1763,8 @@
   
   <a id="Godot_CPUParticles_EmissionPoints_" data-uid="Godot.CPUParticles.EmissionPoints*"></a>
   <h4 id="Godot_CPUParticles_EmissionPoints" data-uid="Godot.CPUParticles.EmissionPoints">EmissionPoints</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the initial positions to spawn particles when using <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_Points">Points</a> or <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_DirectedPoints">DirectedPoints</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1760,7 +1789,8 @@
   
   <a id="Godot_CPUParticles_EmissionRingAxis_" data-uid="Godot.CPUParticles.EmissionRingAxis*"></a>
   <h4 id="Godot_CPUParticles_EmissionRingAxis" data-uid="Godot.CPUParticles.EmissionRingAxis">EmissionRingAxis</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The axis for the ring shaped emitter when using <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_Ring">Ring</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1785,7 +1815,8 @@
   
   <a id="Godot_CPUParticles_EmissionRingHeight_" data-uid="Godot.CPUParticles.EmissionRingHeight*"></a>
   <h4 id="Godot_CPUParticles_EmissionRingHeight" data-uid="Godot.CPUParticles.EmissionRingHeight">EmissionRingHeight</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The height for the ring shaped emitter when using <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_Ring">Ring</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1810,7 +1841,8 @@
   
   <a id="Godot_CPUParticles_EmissionRingInnerRadius_" data-uid="Godot.CPUParticles.EmissionRingInnerRadius*"></a>
   <h4 id="Godot_CPUParticles_EmissionRingInnerRadius" data-uid="Godot.CPUParticles.EmissionRingInnerRadius">EmissionRingInnerRadius</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The inner radius for the ring shaped emitter when using <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_Ring">Ring</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1835,7 +1867,8 @@
   
   <a id="Godot_CPUParticles_EmissionRingRadius_" data-uid="Godot.CPUParticles.EmissionRingRadius*"></a>
   <h4 id="Godot_CPUParticles_EmissionRingRadius" data-uid="Godot.CPUParticles.EmissionRingRadius">EmissionRingRadius</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The radius for the ring shaped emitter when using <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_Ring">Ring</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1860,7 +1893,8 @@
   
   <a id="Godot_CPUParticles_EmissionShape_" data-uid="Godot.CPUParticles.EmissionShape*"></a>
   <h4 id="Godot_CPUParticles_EmissionShape" data-uid="Godot.CPUParticles.EmissionShape">EmissionShape</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particles will be emitted inside this region. See <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html">CPUParticles.EmissionShapeEnum</a> for possible values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1885,7 +1919,8 @@
   
   <a id="Godot_CPUParticles_EmissionSphereRadius_" data-uid="Godot.CPUParticles.EmissionSphereRadius*"></a>
   <h4 id="Godot_CPUParticles_EmissionSphereRadius" data-uid="Godot.CPUParticles.EmissionSphereRadius">EmissionSphereRadius</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The sphere&apos;s radius if <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html">CPUParticles.EmissionShapeEnum</a> is set to <a class="xref" href="Godot.CPUParticles.EmissionShapeEnum.html#Godot_CPUParticles_EmissionShapeEnum_Sphere">Sphere</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1910,7 +1945,8 @@
   
   <a id="Godot_CPUParticles_Emitting_" data-uid="Godot.CPUParticles.Emitting*"></a>
   <h4 id="Godot_CPUParticles_Emitting" data-uid="Godot.CPUParticles.Emitting">Emitting</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, particles are being emitted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1935,7 +1971,8 @@
   
   <a id="Godot_CPUParticles_Explosiveness_" data-uid="Godot.CPUParticles.Explosiveness*"></a>
   <h4 id="Godot_CPUParticles_Explosiveness" data-uid="Godot.CPUParticles.Explosiveness">Explosiveness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>How rapidly particles in an emission cycle are emitted. If greater than <code>0</code>, there will be a gap in emissions before the next cycle begins.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1960,7 +1997,8 @@
   
   <a id="Godot_CPUParticles_FixedFps_" data-uid="Godot.CPUParticles.FixedFps*"></a>
   <h4 id="Godot_CPUParticles_FixedFps" data-uid="Godot.CPUParticles.FixedFps">FixedFps</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The particle system&apos;s frame rate is fixed to a value. For instance, changing the value to 2 will make the particles render at 2 frames per second. Note this does not slow down the particle system itself.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1985,7 +2023,8 @@
   
   <a id="Godot_CPUParticles_FlagAlignY_" data-uid="Godot.CPUParticles.FlagAlignY*"></a>
   <h4 id="Godot_CPUParticles_FlagAlignY" data-uid="Godot.CPUParticles.FlagAlignY">FlagAlignY</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Align Y axis of particle with the direction of its velocity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2010,7 +2049,8 @@
   
   <a id="Godot_CPUParticles_FlagDisableZ_" data-uid="Godot.CPUParticles.FlagDisableZ*"></a>
   <h4 id="Godot_CPUParticles_FlagDisableZ" data-uid="Godot.CPUParticles.FlagDisableZ">FlagDisableZ</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, particles will not move on the z axis.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2035,7 +2075,8 @@
   
   <a id="Godot_CPUParticles_FlagRotateY_" data-uid="Godot.CPUParticles.FlagRotateY*"></a>
   <h4 id="Godot_CPUParticles_FlagRotateY" data-uid="Godot.CPUParticles.FlagRotateY">FlagRotateY</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, particles rotate around Y axis by <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_Angle">Angle</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2060,7 +2101,8 @@
   
   <a id="Godot_CPUParticles_Flatness_" data-uid="Godot.CPUParticles.Flatness*"></a>
   <h4 id="Godot_CPUParticles_Flatness" data-uid="Godot.CPUParticles.Flatness">Flatness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Amount of <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_Spread">Spread</a> in Y/Z plane. A value of <code>1</code> restricts particles to X/Z plane.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2085,7 +2127,8 @@
   
   <a id="Godot_CPUParticles_FractDelta_" data-uid="Godot.CPUParticles.FractDelta*"></a>
   <h4 id="Godot_CPUParticles_FractDelta" data-uid="Godot.CPUParticles.FractDelta">FractDelta</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, results in fractional delta calculation which has a smoother particles display effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2110,7 +2153,8 @@
   
   <a id="Godot_CPUParticles_Gravity_" data-uid="Godot.CPUParticles.Gravity*"></a>
   <h4 id="Godot_CPUParticles_Gravity" data-uid="Godot.CPUParticles.Gravity">Gravity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gravity applied to every particle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2135,7 +2179,8 @@
   
   <a id="Godot_CPUParticles_HueVariation_" data-uid="Godot.CPUParticles.HueVariation*"></a>
   <h4 id="Godot_CPUParticles_HueVariation" data-uid="Godot.CPUParticles.HueVariation">HueVariation</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initial hue variation applied to each particle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2160,7 +2205,8 @@
   
   <a id="Godot_CPUParticles_HueVariationCurve_" data-uid="Godot.CPUParticles.HueVariationCurve*"></a>
   <h4 id="Godot_CPUParticles_HueVariationCurve" data-uid="Godot.CPUParticles.HueVariationCurve">HueVariationCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s hue will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2185,7 +2231,8 @@
   
   <a id="Godot_CPUParticles_HueVariationRandom_" data-uid="Godot.CPUParticles.HueVariationRandom*"></a>
   <h4 id="Godot_CPUParticles_HueVariationRandom" data-uid="Godot.CPUParticles.HueVariationRandom">HueVariationRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hue variation randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2210,7 +2257,8 @@
   
   <a id="Godot_CPUParticles_InitialVelocity_" data-uid="Godot.CPUParticles.InitialVelocity*"></a>
   <h4 id="Godot_CPUParticles_InitialVelocity" data-uid="Godot.CPUParticles.InitialVelocity">InitialVelocity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initial velocity magnitude for each particle. Direction comes from <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_Spread">Spread</a> and the node&apos;s orientation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2235,7 +2283,8 @@
   
   <a id="Godot_CPUParticles_InitialVelocityRandom_" data-uid="Godot.CPUParticles.InitialVelocityRandom*"></a>
   <h4 id="Godot_CPUParticles_InitialVelocityRandom" data-uid="Godot.CPUParticles.InitialVelocityRandom">InitialVelocityRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initial velocity randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2260,7 +2309,8 @@
   
   <a id="Godot_CPUParticles_Lifetime_" data-uid="Godot.CPUParticles.Lifetime*"></a>
   <h4 id="Godot_CPUParticles_Lifetime" data-uid="Godot.CPUParticles.Lifetime">Lifetime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The amount of time each particle will exist (in seconds).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2285,7 +2335,8 @@
   
   <a id="Godot_CPUParticles_LifetimeRandomness_" data-uid="Godot.CPUParticles.LifetimeRandomness*"></a>
   <h4 id="Godot_CPUParticles_LifetimeRandomness" data-uid="Godot.CPUParticles.LifetimeRandomness">LifetimeRandomness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle lifetime randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2310,7 +2361,8 @@
   
   <a id="Godot_CPUParticles_LinearAccel_" data-uid="Godot.CPUParticles.LinearAccel*"></a>
   <h4 id="Godot_CPUParticles_LinearAccel" data-uid="Godot.CPUParticles.LinearAccel">LinearAccel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Linear acceleration applied to each particle in the direction of motion.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2335,7 +2387,8 @@
   
   <a id="Godot_CPUParticles_LinearAccelCurve_" data-uid="Godot.CPUParticles.LinearAccelCurve*"></a>
   <h4 id="Godot_CPUParticles_LinearAccelCurve" data-uid="Godot.CPUParticles.LinearAccelCurve">LinearAccelCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s linear acceleration will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2360,7 +2413,8 @@
   
   <a id="Godot_CPUParticles_LinearAccelRandom_" data-uid="Godot.CPUParticles.LinearAccelRandom*"></a>
   <h4 id="Godot_CPUParticles_LinearAccelRandom" data-uid="Godot.CPUParticles.LinearAccelRandom">LinearAccelRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Linear acceleration randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2385,7 +2439,8 @@
   
   <a id="Godot_CPUParticles_LocalCoords_" data-uid="Godot.CPUParticles.LocalCoords*"></a>
   <h4 id="Godot_CPUParticles_LocalCoords" data-uid="Godot.CPUParticles.LocalCoords">LocalCoords</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, particles use the parent node&apos;s coordinate space. If <code>false</code>, they use global coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2410,7 +2465,8 @@
   
   <a id="Godot_CPUParticles_Mesh_" data-uid="Godot.CPUParticles.Mesh*"></a>
   <h4 id="Godot_CPUParticles_Mesh" data-uid="Godot.CPUParticles.Mesh">Mesh</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Mesh.html">Mesh</a> used for each particle. If <code>null</code>, particles will be spheres.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2435,7 +2491,8 @@
   
   <a id="Godot_CPUParticles_OneShot_" data-uid="Godot.CPUParticles.OneShot*"></a>
   <h4 id="Godot_CPUParticles_OneShot" data-uid="Godot.CPUParticles.OneShot">OneShot</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, only one emission cycle occurs. If set <code>true</code> during a cycle, emission will stop at the cycle&apos;s end.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2460,7 +2517,9 @@
   
   <a id="Godot_CPUParticles_OrbitVelocity_" data-uid="Godot.CPUParticles.OrbitVelocity*"></a>
   <h4 id="Godot_CPUParticles_OrbitVelocity" data-uid="Godot.CPUParticles.OrbitVelocity">OrbitVelocity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Orbital velocity applied to each particle. Makes the particles circle around origin in the local XY plane. Specified in number of full rotations around origin per second.</p>
+<p>This property is only available when <a class="xref" href="Godot.CPUParticles.html#Godot_CPUParticles_FlagDisableZ">FlagDisableZ</a> is <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2485,7 +2544,8 @@
   
   <a id="Godot_CPUParticles_OrbitVelocityCurve_" data-uid="Godot.CPUParticles.OrbitVelocityCurve*"></a>
   <h4 id="Godot_CPUParticles_OrbitVelocityCurve" data-uid="Godot.CPUParticles.OrbitVelocityCurve">OrbitVelocityCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s orbital velocity will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2510,7 +2570,8 @@
   
   <a id="Godot_CPUParticles_OrbitVelocityRandom_" data-uid="Godot.CPUParticles.OrbitVelocityRandom*"></a>
   <h4 id="Godot_CPUParticles_OrbitVelocityRandom" data-uid="Godot.CPUParticles.OrbitVelocityRandom">OrbitVelocityRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Orbital velocity randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2535,7 +2596,8 @@
   
   <a id="Godot_CPUParticles_Preprocess_" data-uid="Godot.CPUParticles.Preprocess*"></a>
   <h4 id="Godot_CPUParticles_Preprocess" data-uid="Godot.CPUParticles.Preprocess">Preprocess</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle system starts as if it had already run for this many seconds.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2560,7 +2622,8 @@
   
   <a id="Godot_CPUParticles_RadialAccel_" data-uid="Godot.CPUParticles.RadialAccel*"></a>
   <h4 id="Godot_CPUParticles_RadialAccel" data-uid="Godot.CPUParticles.RadialAccel">RadialAccel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Radial acceleration applied to each particle. Makes particle accelerate away from origin.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2585,7 +2648,8 @@
   
   <a id="Godot_CPUParticles_RadialAccelCurve_" data-uid="Godot.CPUParticles.RadialAccelCurve*"></a>
   <h4 id="Godot_CPUParticles_RadialAccelCurve" data-uid="Godot.CPUParticles.RadialAccelCurve">RadialAccelCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s radial acceleration will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2610,7 +2674,8 @@
   
   <a id="Godot_CPUParticles_RadialAccelRandom_" data-uid="Godot.CPUParticles.RadialAccelRandom*"></a>
   <h4 id="Godot_CPUParticles_RadialAccelRandom" data-uid="Godot.CPUParticles.RadialAccelRandom">RadialAccelRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Radial acceleration randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2635,7 +2700,8 @@
   
   <a id="Godot_CPUParticles_Randomness_" data-uid="Godot.CPUParticles.Randomness*"></a>
   <h4 id="Godot_CPUParticles_Randomness" data-uid="Godot.CPUParticles.Randomness">Randomness</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Emission lifetime randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2660,7 +2726,8 @@
   
   <a id="Godot_CPUParticles_ScaleAmount_" data-uid="Godot.CPUParticles.ScaleAmount*"></a>
   <h4 id="Godot_CPUParticles_ScaleAmount" data-uid="Godot.CPUParticles.ScaleAmount">ScaleAmount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initial scale applied to each particle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2685,7 +2752,8 @@
   
   <a id="Godot_CPUParticles_ScaleAmountCurve_" data-uid="Godot.CPUParticles.ScaleAmountCurve*"></a>
   <h4 id="Godot_CPUParticles_ScaleAmountCurve" data-uid="Godot.CPUParticles.ScaleAmountCurve">ScaleAmountCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s scale will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2710,7 +2778,8 @@
   
   <a id="Godot_CPUParticles_ScaleAmountRandom_" data-uid="Godot.CPUParticles.ScaleAmountRandom*"></a>
   <h4 id="Godot_CPUParticles_ScaleAmountRandom" data-uid="Godot.CPUParticles.ScaleAmountRandom">ScaleAmountRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scale randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2735,7 +2804,8 @@
   
   <a id="Godot_CPUParticles_SpeedScale_" data-uid="Godot.CPUParticles.SpeedScale*"></a>
   <h4 id="Godot_CPUParticles_SpeedScale" data-uid="Godot.CPUParticles.SpeedScale">SpeedScale</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Particle system&apos;s running speed scaling ratio. A value of <code>0</code> can be used to pause the particles.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2760,7 +2830,8 @@
   
   <a id="Godot_CPUParticles_Spread_" data-uid="Godot.CPUParticles.Spread*"></a>
   <h4 id="Godot_CPUParticles_Spread" data-uid="Godot.CPUParticles.Spread">Spread</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s initial direction range from <code>+spread</code> to <code>-spread</code> degrees. Applied to X/Z plane and Y/Z planes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2785,7 +2856,8 @@
   
   <a id="Godot_CPUParticles_TangentialAccel_" data-uid="Godot.CPUParticles.TangentialAccel*"></a>
   <h4 id="Godot_CPUParticles_TangentialAccel" data-uid="Godot.CPUParticles.TangentialAccel">TangentialAccel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tangential acceleration applied to each particle. Tangential acceleration is perpendicular to the particle&apos;s velocity giving the particles a swirling motion.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2810,7 +2882,8 @@
   
   <a id="Godot_CPUParticles_TangentialAccelCurve_" data-uid="Godot.CPUParticles.TangentialAccelCurve*"></a>
   <h4 id="Godot_CPUParticles_TangentialAccelCurve" data-uid="Godot.CPUParticles.TangentialAccelCurve">TangentialAccelCurve</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Each particle&apos;s tangential acceleration will vary along this <a class="xref" href="Godot.Curve.html">Curve</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2835,7 +2908,8 @@
   
   <a id="Godot_CPUParticles_TangentialAccelRandom_" data-uid="Godot.CPUParticles.TangentialAccelRandom*"></a>
   <h4 id="Godot_CPUParticles_TangentialAccelRandom" data-uid="Godot.CPUParticles.TangentialAccelRandom">TangentialAccelRandom</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tangential acceleration randomness ratio.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2862,7 +2936,8 @@
   
   <a id="Godot_CPUParticles_ConvertFromParticles_" data-uid="Godot.CPUParticles.ConvertFromParticles*"></a>
   <h4 id="Godot_CPUParticles_ConvertFromParticles_Godot_Node_" data-uid="Godot.CPUParticles.ConvertFromParticles(Godot.Node)">ConvertFromParticles(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets this node&apos;s properties to match a given <a class="xref" href="Godot.Particles.html">Particles</a> node with an assigned <a class="xref" href="Godot.ParticlesMaterial.html">ParticlesMaterial</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3514,7 +3589,8 @@
   
   <a id="Godot_CPUParticles_GetParam_" data-uid="Godot.CPUParticles.GetParam*"></a>
   <h4 id="Godot_CPUParticles_GetParam_Godot_CPUParticles_Parameter_" data-uid="Godot.CPUParticles.GetParam(Godot.CPUParticles.Parameter)">GetParam(CPUParticles.Parameter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the base value of the parameter specified by <a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3556,7 +3632,8 @@
   
   <a id="Godot_CPUParticles_GetParamCurve_" data-uid="Godot.CPUParticles.GetParamCurve*"></a>
   <h4 id="Godot_CPUParticles_GetParamCurve_Godot_CPUParticles_Parameter_" data-uid="Godot.CPUParticles.GetParamCurve(Godot.CPUParticles.Parameter)">GetParamCurve(CPUParticles.Parameter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Curve.html">Curve</a> of the parameter specified by <a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3598,7 +3675,8 @@
   
   <a id="Godot_CPUParticles_GetParamRandomness_" data-uid="Godot.CPUParticles.GetParamRandomness*"></a>
   <h4 id="Godot_CPUParticles_GetParamRandomness_Godot_CPUParticles_Parameter_" data-uid="Godot.CPUParticles.GetParamRandomness(Godot.CPUParticles.Parameter)">GetParamRandomness(CPUParticles.Parameter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the randomness factor of the parameter specified by <a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3640,7 +3718,8 @@
   
   <a id="Godot_CPUParticles_GetParticleFlag_" data-uid="Godot.CPUParticles.GetParticleFlag*"></a>
   <h4 id="Godot_CPUParticles_GetParticleFlag_Godot_CPUParticles_Flags_" data-uid="Godot.CPUParticles.GetParticleFlag(Godot.CPUParticles.Flags)">GetParticleFlag(CPUParticles.Flags)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the enabled state of the given flag (see <a class="xref" href="Godot.CPUParticles.Flags.html">CPUParticles.Flags</a> for options).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3832,7 +3911,8 @@
   
   <a id="Godot_CPUParticles_Restart_" data-uid="Godot.CPUParticles.Restart*"></a>
   <h4 id="Godot_CPUParticles_Restart" data-uid="Godot.CPUParticles.Restart">Restart()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Restarts the particle emitter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4544,7 +4624,8 @@
   
   <a id="Godot_CPUParticles_SetParam_" data-uid="Godot.CPUParticles.SetParam*"></a>
   <h4 id="Godot_CPUParticles_SetParam_Godot_CPUParticles_Parameter_System_Single_" data-uid="Godot.CPUParticles.SetParam(Godot.CPUParticles.Parameter,System.Single)">SetParam(CPUParticles.Parameter, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the base value of the parameter specified by <a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4576,7 +4657,8 @@
   
   <a id="Godot_CPUParticles_SetParamCurve_" data-uid="Godot.CPUParticles.SetParamCurve*"></a>
   <h4 id="Godot_CPUParticles_SetParamCurve_Godot_CPUParticles_Parameter_Godot_Curve_" data-uid="Godot.CPUParticles.SetParamCurve(Godot.CPUParticles.Parameter,Godot.Curve)">SetParamCurve(CPUParticles.Parameter, Curve)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Godot.Curve.html">Curve</a> of the parameter specified by <a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4608,7 +4690,8 @@
   
   <a id="Godot_CPUParticles_SetParamRandomness_" data-uid="Godot.CPUParticles.SetParamRandomness*"></a>
   <h4 id="Godot_CPUParticles_SetParamRandomness_Godot_CPUParticles_Parameter_System_Single_" data-uid="Godot.CPUParticles.SetParamRandomness(Godot.CPUParticles.Parameter,System.Single)">SetParamRandomness(CPUParticles.Parameter, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the randomness factor of the parameter specified by <a class="xref" href="Godot.CPUParticles.Parameter.html">CPUParticles.Parameter</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4640,7 +4723,8 @@
   
   <a id="Godot_CPUParticles_SetParticleFlag_" data-uid="Godot.CPUParticles.SetParticleFlag*"></a>
   <h4 id="Godot_CPUParticles_SetParticleFlag_Godot_CPUParticles_Flags_System_Boolean_" data-uid="Godot.CPUParticles.SetParticleFlag(Godot.CPUParticles.Flags,System.Boolean)">SetParticleFlag(CPUParticles.Flags, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables or disables the given flag (see <a class="xref" href="Godot.CPUParticles.Flags.html">CPUParticles.Flags</a> for options).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

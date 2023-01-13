@@ -101,7 +101,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressBase" data-uid="Godot.Mesh.ArrayFormat.CompressBase">CompressBase</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used internally to calculate other <code>ARRAY_COMPRESS_*</code> enum values. Do not use.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +126,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressBones" data-uid="Godot.Mesh.ArrayFormat.CompressBones">CompressBones</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark a compressed bone array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +151,9 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressColor" data-uid="Godot.Mesh.ArrayFormat.CompressColor">CompressColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark a compressed (half float) color array.</p>
+<p>Note: If this flag is enabled, vertex colors will be stored as 8-bit unsigned integers. This will clamp overbright colors to <code>Color(1, 1, 1, 1)</code> and reduce colors&apos; precision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -173,7 +177,9 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressDefault" data-uid="Godot.Mesh.ArrayFormat.CompressDefault">CompressDefault</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Used to set flags <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressVertex">CompressVertex</a>, <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressNormal">CompressNormal</a>, <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressTangent">CompressTangent</a>, <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressColor">CompressColor</a>, <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressTexUv">CompressTexUv</a>, <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressTexUv2">CompressTexUv2</a>, <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressWeights">CompressWeights</a>, and <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_FlagUseOctahedralCompression">FlagUseOctahedralCompression</a> quickly.</p>
+<p>Note: Since this flag enables <a class="xref" href="Godot.Mesh.ArrayFormat.html#Godot_Mesh_ArrayFormat_CompressColor">CompressColor</a>, vertex colors will be stored as 8-bit unsigned integers. This will clamp overbright colors to <code>Color(1, 1, 1, 1)</code> and reduce colors&apos; precision.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,7 +203,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressIndex" data-uid="Godot.Mesh.ArrayFormat.CompressIndex">CompressIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark a compressed index array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -221,7 +228,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressNormal" data-uid="Godot.Mesh.ArrayFormat.CompressNormal">CompressNormal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark a compressed (half float) normal array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -245,7 +253,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressTangent" data-uid="Godot.Mesh.ArrayFormat.CompressTangent">CompressTangent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark a compressed (half float) tangent array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -269,7 +278,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressTexUv" data-uid="Godot.Mesh.ArrayFormat.CompressTexUv">CompressTexUv</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark a compressed (half float) UV coordinates array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -293,7 +303,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressTexUv2" data-uid="Godot.Mesh.ArrayFormat.CompressTexUv2">CompressTexUv2</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark a compressed (half float) UV coordinates array for the second UV coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -317,7 +328,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressVertex" data-uid="Godot.Mesh.ArrayFormat.CompressVertex">CompressVertex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark a compressed (half float) vertex array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -341,7 +353,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_CompressWeights" data-uid="Godot.Mesh.ArrayFormat.CompressWeights">CompressWeights</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark a compressed (half float) weight array.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -365,7 +378,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FlagUse16BitBones" data-uid="Godot.Mesh.ArrayFormat.FlagUse16BitBones">FlagUse16BitBones</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark that the array uses 16-bit bones instead of 8-bit.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -389,7 +403,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FlagUse2dVertices" data-uid="Godot.Mesh.ArrayFormat.FlagUse2dVertices">FlagUse2dVertices</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark that the array contains 2D vertices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -413,7 +428,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FlagUseOctahedralCompression" data-uid="Godot.Mesh.ArrayFormat.FlagUseOctahedralCompression">FlagUseOctahedralCompression</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flag used to mark that the array uses an octahedral representation of normal and tangent vectors rather than cartesian.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -437,7 +453,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FormatBones" data-uid="Godot.Mesh.ArrayFormat.FormatBones">FormatBones</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mesh array contains bones.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -461,7 +478,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FormatColor" data-uid="Godot.Mesh.ArrayFormat.FormatColor">FormatColor</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mesh array contains colors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -485,7 +503,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FormatIndex" data-uid="Godot.Mesh.ArrayFormat.FormatIndex">FormatIndex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mesh array uses indices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -509,7 +528,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FormatNormal" data-uid="Godot.Mesh.ArrayFormat.FormatNormal">FormatNormal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mesh array contains normals.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -533,7 +553,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FormatTangent" data-uid="Godot.Mesh.ArrayFormat.FormatTangent">FormatTangent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mesh array contains tangents.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -557,7 +578,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FormatTexUv" data-uid="Godot.Mesh.ArrayFormat.FormatTexUv">FormatTexUv</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mesh array contains UVs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -581,7 +603,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FormatTexUv2" data-uid="Godot.Mesh.ArrayFormat.FormatTexUv2">FormatTexUv2</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mesh array contains second UV.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -605,7 +628,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FormatVertex" data-uid="Godot.Mesh.ArrayFormat.FormatVertex">FormatVertex</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mesh array contains vertices. All meshes require a vertex array so this should always be present.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -629,7 +653,8 @@
   
   
   <h4 id="Godot_Mesh_ArrayFormat_FormatWeights" data-uid="Godot.Mesh.ArrayFormat.FormatWeights">FormatWeights</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Mesh array contains bone weights.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

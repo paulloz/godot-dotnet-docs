@@ -83,7 +83,9 @@
   
   <h1 id="Godot_AudioEffectLimiter" data-uid="Godot.AudioEffectLimiter" class="text-break">Class AudioEffectLimiter
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A limiter is similar to a compressor, but it&apos;s less flexible and designed to disallow sound going over a given dB threshold. Adding one in the Master bus is always recommended to reduce the effects of clipping.</p>
+<p>Soft clipping starts to reduce the peaks a little below the threshold level and progressively increases its effect as the input level increases such that the threshold is never exceeded.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -347,7 +349,8 @@
   
   <a id="Godot_AudioEffectLimiter_CeilingDb_" data-uid="Godot.AudioEffectLimiter.CeilingDb*"></a>
   <h4 id="Godot_AudioEffectLimiter_CeilingDb" data-uid="Godot.AudioEffectLimiter.CeilingDb">CeilingDb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The waveform&apos;s maximum allowed value, in decibels. Value can range from -20 to -0.1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -372,7 +375,8 @@
   
   <a id="Godot_AudioEffectLimiter_SoftClipDb_" data-uid="Godot.AudioEffectLimiter.SoftClipDb*"></a>
   <h4 id="Godot_AudioEffectLimiter_SoftClipDb" data-uid="Godot.AudioEffectLimiter.SoftClipDb">SoftClipDb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies a gain to the limited waves, in decibels. Value can range from 0 to 6.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -422,7 +426,8 @@
   
   <a id="Godot_AudioEffectLimiter_ThresholdDb_" data-uid="Godot.AudioEffectLimiter.ThresholdDb*"></a>
   <h4 id="Godot_AudioEffectLimiter_ThresholdDb" data-uid="Godot.AudioEffectLimiter.ThresholdDb">ThresholdDb</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Threshold from which the limiter begins to be active, in decibels. Value can range from -30 to 0.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

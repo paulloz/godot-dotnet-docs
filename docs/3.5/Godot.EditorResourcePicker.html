@@ -83,7 +83,9 @@
   
   <h1 id="Godot_EditorResourcePicker" data-uid="Godot.EditorResourcePicker" class="text-break">Class EditorResourcePicker
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This <a class="xref" href="Godot.Control.html">Control</a> node is used in the editor&apos;s Inspector dock to allow editing of <a class="xref" href="Godot.Resource.html">Resource</a> type properties. It provides options for creating, loading, saving and converting resources. Can be used with <a class="xref" href="Godot.EditorInspectorPlugin.html">EditorInspectorPlugin</a> to recreate the same behavior.</p>
+<p>Note: This <a class="xref" href="Godot.Control.html">Control</a> does not include any editor for the resource, as editing is controlled by the Inspector dock itself or sub-Inspectors.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1488,7 +1490,8 @@
   
   <a id="Godot_EditorResourcePicker_BaseType_" data-uid="Godot.EditorResourcePicker.BaseType*"></a>
   <h4 id="Godot_EditorResourcePicker_BaseType" data-uid="Godot.EditorResourcePicker.BaseType">BaseType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The base type of allowed resource types. Can be a comma-separated list of several options.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1513,7 +1516,8 @@
   
   <a id="Godot_EditorResourcePicker_Editable_" data-uid="Godot.EditorResourcePicker.Editable*"></a>
   <h4 id="Godot_EditorResourcePicker_Editable" data-uid="Godot.EditorResourcePicker.Editable">Editable</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the value can be selected and edited.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1538,7 +1542,8 @@
   
   <a id="Godot_EditorResourcePicker_EditedResource_" data-uid="Godot.EditorResourcePicker.EditedResource*"></a>
   <h4 id="Godot_EditorResourcePicker_EditedResource" data-uid="Godot.EditorResourcePicker.EditedResource">EditedResource</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The edited resource value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1563,7 +1568,8 @@
   
   <a id="Godot_EditorResourcePicker_ToggleMode_" data-uid="Godot.EditorResourcePicker.ToggleMode*"></a>
   <h4 id="Godot_EditorResourcePicker_ToggleMode" data-uid="Godot.EditorResourcePicker.ToggleMode">ToggleMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the main button with the resource preview works in the toggle mode. Use <a class="xref" href="Godot.EditorResourcePicker.html#Godot_EditorResourcePicker_SetTogglePressed_System_Boolean_">SetTogglePressed(Boolean)</a> to manually set the state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1679,7 +1685,8 @@
   
   <a id="Godot_EditorResourcePicker_GetAllowedTypes_" data-uid="Godot.EditorResourcePicker.GetAllowedTypes*"></a>
   <h4 id="Godot_EditorResourcePicker_GetAllowedTypes" data-uid="Godot.EditorResourcePicker.GetAllowedTypes">GetAllowedTypes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a list of all allowed types and subtypes corresponding to the <a class="xref" href="Godot.EditorResourcePicker.html#Godot_EditorResourcePicker_BaseType">BaseType</a>. If the <a class="xref" href="Godot.EditorResourcePicker.html#Godot_EditorResourcePicker_BaseType">BaseType</a> is empty, an empty list is returned.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1801,7 +1808,8 @@
   
   <a id="Godot_EditorResourcePicker_HandleMenuSelected_" data-uid="Godot.EditorResourcePicker.HandleMenuSelected*"></a>
   <h4 id="Godot_EditorResourcePicker_HandleMenuSelected_System_Int32_" data-uid="Godot.EditorResourcePicker.HandleMenuSelected(System.Int32)">HandleMenuSelected(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This virtual method can be implemented to handle context menu items not handled by default. See <a class="xref" href="Godot.EditorResourcePicker.html#Godot_EditorResourcePicker_SetCreateOptions_Godot_Object_">SetCreateOptions(Object)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1920,7 +1928,9 @@
   
   <a id="Godot_EditorResourcePicker_SetCreateOptions_" data-uid="Godot.EditorResourcePicker.SetCreateOptions*"></a>
   <h4 id="Godot_EditorResourcePicker_SetCreateOptions_Godot_Object_" data-uid="Godot.EditorResourcePicker.SetCreateOptions(Godot.Object)">SetCreateOptions(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This virtual method is called when updating the context menu of <a class="xref" href="Godot.EditorResourcePicker.html">EditorResourcePicker</a>. Implement this method to override the &quot;New ...&quot; items with your own options. <code>menu_node</code> is a reference to the <a class="xref" href="Godot.PopupMenu.html">PopupMenu</a> node.</p>
+<p>Note: Implement <a class="xref" href="Godot.EditorResourcePicker.html#Godot_EditorResourcePicker_HandleMenuSelected_System_Int32_">HandleMenuSelected(Int32)</a> to handle these custom items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2028,7 +2038,8 @@
   
   <a id="Godot_EditorResourcePicker_SetTogglePressed_" data-uid="Godot.EditorResourcePicker.SetTogglePressed*"></a>
   <h4 id="Godot_EditorResourcePicker_SetTogglePressed_System_Boolean_" data-uid="Godot.EditorResourcePicker.SetTogglePressed(System.Boolean)">SetTogglePressed(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the toggle mode state for the main button. Works only if <a class="xref" href="Godot.EditorResourcePicker.html#Godot_EditorResourcePicker_ToggleMode">ToggleMode</a> is set to <code>true</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

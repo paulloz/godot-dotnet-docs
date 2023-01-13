@@ -83,7 +83,8 @@
   
   <h1 id="Godot_XMLParser" data-uid="Godot.XMLParser" class="text-break">Class XMLParser
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class can serve as base to make custom XML parsers. Since XML is a very flexible standard, this interface is low-level so it can be applied to any possible schema.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +298,8 @@
   
   <a id="Godot_XMLParser_GetAttributeCount_" data-uid="Godot.XMLParser.GetAttributeCount*"></a>
   <h4 id="Godot_XMLParser_GetAttributeCount" data-uid="Godot.XMLParser.GetAttributeCount">GetAttributeCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the amount of attributes in the current element.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +324,8 @@
   
   <a id="Godot_XMLParser_GetAttributeName_" data-uid="Godot.XMLParser.GetAttributeName*"></a>
   <h4 id="Godot_XMLParser_GetAttributeName_System_Int32_" data-uid="Godot.XMLParser.GetAttributeName(System.Int32)">GetAttributeName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name of the attribute specified by the index in <code>idx</code> argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -364,7 +367,8 @@
   
   <a id="Godot_XMLParser_GetAttributeValue_" data-uid="Godot.XMLParser.GetAttributeValue*"></a>
   <h4 id="Godot_XMLParser_GetAttributeValue_System_Int32_" data-uid="Godot.XMLParser.GetAttributeValue(System.Int32)">GetAttributeValue(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the value of the attribute specified by the index in <code>idx</code> argument.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -406,7 +410,8 @@
   
   <a id="Godot_XMLParser_GetCurrentLine_" data-uid="Godot.XMLParser.GetCurrentLine*"></a>
   <h4 id="Godot_XMLParser_GetCurrentLine" data-uid="Godot.XMLParser.GetCurrentLine">GetCurrentLine()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the current line in the parsed file (currently not implemented).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -431,7 +436,8 @@
   
   <a id="Godot_XMLParser_GetNamedAttributeValue_" data-uid="Godot.XMLParser.GetNamedAttributeValue*"></a>
   <h4 id="Godot_XMLParser_GetNamedAttributeValue_System_String_" data-uid="Godot.XMLParser.GetNamedAttributeValue(System.String)">GetNamedAttributeValue(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the value of a certain attribute of the current element by name. This will raise an error if the element has no such attribute.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -473,7 +479,8 @@
   
   <a id="Godot_XMLParser_GetNamedAttributeValueSafe_" data-uid="Godot.XMLParser.GetNamedAttributeValueSafe*"></a>
   <h4 id="Godot_XMLParser_GetNamedAttributeValueSafe_System_String_" data-uid="Godot.XMLParser.GetNamedAttributeValueSafe(System.String)">GetNamedAttributeValueSafe(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the value of a certain attribute of the current element by name. This will return an empty <span class="xref">System.String</span> if the attribute is not found.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -515,7 +522,8 @@
   
   <a id="Godot_XMLParser_GetNodeData_" data-uid="Godot.XMLParser.GetNodeData*"></a>
   <h4 id="Godot_XMLParser_GetNodeData" data-uid="Godot.XMLParser.GetNodeData">GetNodeData()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the contents of a text node. This will raise an error in any other type of node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -540,7 +548,8 @@
   
   <a id="Godot_XMLParser_GetNodeName_" data-uid="Godot.XMLParser.GetNodeName*"></a>
   <h4 id="Godot_XMLParser_GetNodeName" data-uid="Godot.XMLParser.GetNodeName">GetNodeName()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name of the current element node. This will raise an error if the current node type is neither <a class="xref" href="Godot.XMLParser.NodeType.html#Godot_XMLParser_NodeType_Element">Element</a> nor <a class="xref" href="Godot.XMLParser.NodeType.html#Godot_XMLParser_NodeType_ElementEnd">ElementEnd</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -565,7 +574,8 @@
   
   <a id="Godot_XMLParser_GetNodeOffset_" data-uid="Godot.XMLParser.GetNodeOffset*"></a>
   <h4 id="Godot_XMLParser_GetNodeOffset" data-uid="Godot.XMLParser.GetNodeOffset">GetNodeOffset()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the byte offset of the current node since the beginning of the file or buffer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -590,7 +600,8 @@
   
   <a id="Godot_XMLParser_GetNodeType_" data-uid="Godot.XMLParser.GetNodeType*"></a>
   <h4 id="Godot_XMLParser_GetNodeType" data-uid="Godot.XMLParser.GetNodeType">GetNodeType()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the type of the current node. Compare with <a class="xref" href="Godot.XMLParser.NodeType.html">XMLParser.NodeType</a> constants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -615,7 +626,8 @@
   
   <a id="Godot_XMLParser_HasAttribute_" data-uid="Godot.XMLParser.HasAttribute*"></a>
   <h4 id="Godot_XMLParser_HasAttribute_System_String_" data-uid="Godot.XMLParser.HasAttribute(System.String)">HasAttribute(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether the current element has a certain attribute.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -657,7 +669,8 @@
   
   <a id="Godot_XMLParser_IsEmpty_" data-uid="Godot.XMLParser.IsEmpty*"></a>
   <h4 id="Godot_XMLParser_IsEmpty" data-uid="Godot.XMLParser.IsEmpty">IsEmpty()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check whether the current element is empty (this only works for completely empty tags, e.g. <code>&lt;element \></code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -682,7 +695,8 @@
   
   <a id="Godot_XMLParser_Open_" data-uid="Godot.XMLParser.Open*"></a>
   <h4 id="Godot_XMLParser_Open_System_String_" data-uid="Godot.XMLParser.Open(System.String)">Open(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opens an XML file for parsing. This returns an error code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -724,7 +738,8 @@
   
   <a id="Godot_XMLParser_OpenBuffer_" data-uid="Godot.XMLParser.OpenBuffer*"></a>
   <h4 id="Godot_XMLParser_OpenBuffer_System_Byte___" data-uid="Godot.XMLParser.OpenBuffer(System.Byte[])">OpenBuffer(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Opens an XML raw buffer for parsing. This returns an error code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -766,7 +781,8 @@
   
   <a id="Godot_XMLParser_Read_" data-uid="Godot.XMLParser.Read*"></a>
   <h4 id="Godot_XMLParser_Read" data-uid="Godot.XMLParser.Read">Read()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads the next node of the file. This returns an error code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -791,7 +807,8 @@
   
   <a id="Godot_XMLParser_Seek_" data-uid="Godot.XMLParser.Seek*"></a>
   <h4 id="Godot_XMLParser_Seek_System_UInt64_" data-uid="Godot.XMLParser.Seek(System.UInt64)">Seek(UInt64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Moves the buffer cursor to a certain offset (since the beginning) and read the next node there. This returns an error code.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -833,7 +850,8 @@
   
   <a id="Godot_XMLParser_SkipSection_" data-uid="Godot.XMLParser.SkipSection*"></a>
   <h4 id="Godot_XMLParser_SkipSection" data-uid="Godot.XMLParser.SkipSection">SkipSection()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Skips the current section. If the node contains other elements, they will be ignored and the cursor will go to the closing of the current element.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

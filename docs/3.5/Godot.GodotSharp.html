@@ -83,7 +83,9 @@
   
   <h1 id="Godot_GodotSharp" data-uid="Godot.GodotSharp" class="text-break">Class GodotSharp
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class is a bridge between Godot and the Mono runtime. It exposes several low-level operations and is only available in Mono-enabled Godot builds.</p>
+<p>See also <a class="xref" href="Godot.CSharpScript.html">CSharpScript</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,7 +131,8 @@
   
   <a id="Godot_GodotSharp_AttachThread_" data-uid="Godot.GodotSharp.AttachThread*"></a>
   <h4 id="Godot_GodotSharp_AttachThread" data-uid="Godot.GodotSharp.AttachThread">AttachThread()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Attaches the current thread to the Mono runtime.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -139,7 +142,8 @@
   
   <a id="Godot_GodotSharp_DetachThread_" data-uid="Godot.GodotSharp.DetachThread*"></a>
   <h4 id="Godot_GodotSharp_DetachThread" data-uid="Godot.GodotSharp.DetachThread">DetachThread()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Detaches the current thread from the Mono runtime.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +153,9 @@
   
   <a id="Godot_GodotSharp_GetDomainId_" data-uid="Godot.GodotSharp.GetDomainId*"></a>
   <h4 id="Godot_GodotSharp_GetDomainId" data-uid="Godot.GodotSharp.GetDomainId">GetDomainId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the current MonoDomain ID.</p>
+<p>Note: The Mono runtime must be initialized for this method to work (use <a class="xref" href="Godot.GodotSharp.html#Godot_GodotSharp_IsRuntimeInitialized">IsRuntimeInitialized()</a> to check). If the Mono runtime isn&apos;t initialized at the time this method is called, the engine will crash.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -174,7 +180,9 @@
   
   <a id="Godot_GodotSharp_GetScriptsDomainId_" data-uid="Godot.GodotSharp.GetScriptsDomainId*"></a>
   <h4 id="Godot_GodotSharp_GetScriptsDomainId" data-uid="Godot.GodotSharp.GetScriptsDomainId">GetScriptsDomainId()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the scripts MonoDomain&apos;s ID. This will be the same MonoDomain ID as <a class="xref" href="Godot.GodotSharp.html#Godot_GodotSharp_GetDomainId">GetDomainId()</a>, unless the scripts domain isn&apos;t loaded.</p>
+<p>Note: The Mono runtime must be initialized for this method to work (use <a class="xref" href="Godot.GodotSharp.html#Godot_GodotSharp_IsRuntimeInitialized">IsRuntimeInitialized()</a> to check). If the Mono runtime isn&apos;t initialized at the time this method is called, the engine will crash.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -199,7 +207,8 @@
   
   <a id="Godot_GodotSharp_IsDomainFinalizingForUnload_" data-uid="Godot.GodotSharp.IsDomainFinalizingForUnload*"></a>
   <h4 id="Godot_GodotSharp_IsDomainFinalizingForUnload_System_Int32_" data-uid="Godot.GodotSharp.IsDomainFinalizingForUnload(System.Int32)">IsDomainFinalizingForUnload(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the domain is being finalized, <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -241,7 +250,8 @@
   
   <a id="Godot_GodotSharp_IsRuntimeInitialized_" data-uid="Godot.GodotSharp.IsRuntimeInitialized*"></a>
   <h4 id="Godot_GodotSharp_IsRuntimeInitialized" data-uid="Godot.GodotSharp.IsRuntimeInitialized">IsRuntimeInitialized()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the Mono runtime is initialized, <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -266,7 +276,8 @@
   
   <a id="Godot_GodotSharp_IsRuntimeShuttingDown_" data-uid="Godot.GodotSharp.IsRuntimeShuttingDown*"></a>
   <h4 id="Godot_GodotSharp_IsRuntimeShuttingDown" data-uid="Godot.GodotSharp.IsRuntimeShuttingDown">IsRuntimeShuttingDown()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the Mono runtime is shutting down, <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -291,7 +302,8 @@
   
   <a id="Godot_GodotSharp_IsScriptsDomainLoaded_" data-uid="Godot.GodotSharp.IsScriptsDomainLoaded*"></a>
   <h4 id="Godot_GodotSharp_IsScriptsDomainLoaded" data-uid="Godot.GodotSharp.IsScriptsDomainLoaded">IsScriptsDomainLoaded()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the scripts domain is loaded, <code>false</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

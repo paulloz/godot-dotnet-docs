@@ -83,7 +83,9 @@
   
   <h1 id="Godot_Curve" data-uid="Godot.Curve" class="text-break">Class Curve
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A curve that can be saved and re-used for other objects. By default, it ranges between <code>0</code> and <code>1</code> on the Y axis and positions points relative to the <code>0.5</code> Y position.</p>
+<p>See also <a class="xref" href="Godot.Gradient.html">Gradient</a> which is designed for color interpolation. See also <a class="xref" href="Godot.Curve2D.html">Curve2D</a> and <a class="xref" href="Godot.Curve3D.html">Curve3D</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -371,7 +373,8 @@
   
   <a id="Godot_Curve_BakeResolution_" data-uid="Godot.Curve.BakeResolution*"></a>
   <h4 id="Godot_Curve_BakeResolution" data-uid="Godot.Curve.BakeResolution">BakeResolution</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of points to include in the baked (i.e. cached) curve data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +399,8 @@
   
   <a id="Godot_Curve_MaxValue_" data-uid="Godot.Curve.MaxValue*"></a>
   <h4 id="Godot_Curve_MaxValue" data-uid="Godot.Curve.MaxValue">MaxValue</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum value the curve can reach.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +425,8 @@
   
   <a id="Godot_Curve_MinValue_" data-uid="Godot.Curve.MinValue*"></a>
   <h4 id="Godot_Curve_MinValue" data-uid="Godot.Curve.MinValue">MinValue</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The minimum value the curve can reach.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -448,7 +453,8 @@
   
   <a id="Godot_Curve_AddPoint_" data-uid="Godot.Curve.AddPoint*"></a>
   <h4 id="Godot_Curve_AddPoint_Godot_Vector2_System_Single_System_Single_Godot_Curve_TangentMode_Godot_Curve_TangentMode_" data-uid="Godot.Curve.AddPoint(Godot.Vector2,System.Single,System.Single,Godot.Curve.TangentMode,Godot.Curve.TangentMode)">AddPoint(Vector2, Single, Single, Curve.TangentMode, Curve.TangentMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a point to the curve. For each side, if the <code>*_mode</code> is <a class="xref" href="Godot.Curve.TangentMode.html#Godot_Curve_TangentMode_Linear">Linear</a>, the <code>*_tangent</code> angle (in degrees) uses the slope of the curve halfway to the adjacent point. Allows custom assignments to the <code>*_tangent</code> angle if <code>*_mode</code> is set to <a class="xref" href="Godot.Curve.TangentMode.html#Godot_Curve_TangentMode_Free">Free</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -510,7 +516,8 @@
   
   <a id="Godot_Curve_Bake_" data-uid="Godot.Curve.Bake*"></a>
   <h4 id="Godot_Curve_Bake" data-uid="Godot.Curve.Bake">Bake()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Recomputes the baked cache of points for the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -520,7 +527,8 @@
   
   <a id="Godot_Curve_CleanDupes_" data-uid="Godot.Curve.CleanDupes*"></a>
   <h4 id="Godot_Curve_CleanDupes" data-uid="Godot.Curve.CleanDupes">CleanDupes()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes points that are closer than <code>CMP_EPSILON</code> (0.00001) units to their neighbor on the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -530,7 +538,8 @@
   
   <a id="Godot_Curve_ClearPoints_" data-uid="Godot.Curve.ClearPoints*"></a>
   <h4 id="Godot_Curve_ClearPoints" data-uid="Godot.Curve.ClearPoints">ClearPoints()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all points from the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -615,7 +624,8 @@
   
   <a id="Godot_Curve_GetPointCount_" data-uid="Godot.Curve.GetPointCount*"></a>
   <h4 id="Godot_Curve_GetPointCount" data-uid="Godot.Curve.GetPointCount">GetPointCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of points describing the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -640,7 +650,8 @@
   
   <a id="Godot_Curve_GetPointLeftMode_" data-uid="Godot.Curve.GetPointLeftMode*"></a>
   <h4 id="Godot_Curve_GetPointLeftMode_System_Int32_" data-uid="Godot.Curve.GetPointLeftMode(System.Int32)">GetPointLeftMode(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the left <a class="xref" href="Godot.Curve.TangentMode.html">Curve.TangentMode</a> for the point at <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -682,7 +693,8 @@
   
   <a id="Godot_Curve_GetPointLeftTangent_" data-uid="Godot.Curve.GetPointLeftTangent*"></a>
   <h4 id="Godot_Curve_GetPointLeftTangent_System_Int32_" data-uid="Godot.Curve.GetPointLeftTangent(System.Int32)">GetPointLeftTangent(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the left tangent angle (in degrees) for the point at <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -724,7 +736,8 @@
   
   <a id="Godot_Curve_GetPointPosition_" data-uid="Godot.Curve.GetPointPosition*"></a>
   <h4 id="Godot_Curve_GetPointPosition_System_Int32_" data-uid="Godot.Curve.GetPointPosition(System.Int32)">GetPointPosition(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the curve coordinates for the point at <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -766,7 +779,8 @@
   
   <a id="Godot_Curve_GetPointRightMode_" data-uid="Godot.Curve.GetPointRightMode*"></a>
   <h4 id="Godot_Curve_GetPointRightMode_System_Int32_" data-uid="Godot.Curve.GetPointRightMode(System.Int32)">GetPointRightMode(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the right <a class="xref" href="Godot.Curve.TangentMode.html">Curve.TangentMode</a> for the point at <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -808,7 +822,8 @@
   
   <a id="Godot_Curve_GetPointRightTangent_" data-uid="Godot.Curve.GetPointRightTangent*"></a>
   <h4 id="Godot_Curve_GetPointRightTangent_System_Int32_" data-uid="Godot.Curve.GetPointRightTangent(System.Int32)">GetPointRightTangent(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the right tangent angle (in degrees) for the point at <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -850,7 +865,8 @@
   
   <a id="Godot_Curve_Interpolate_" data-uid="Godot.Curve.Interpolate*"></a>
   <h4 id="Godot_Curve_Interpolate_System_Single_" data-uid="Godot.Curve.Interpolate(System.Single)">Interpolate(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the Y value for the point that would exist at the X position <code>offset</code> along the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -892,7 +908,8 @@
   
   <a id="Godot_Curve_InterpolateBaked_" data-uid="Godot.Curve.InterpolateBaked*"></a>
   <h4 id="Godot_Curve_InterpolateBaked_System_Single_" data-uid="Godot.Curve.InterpolateBaked(System.Single)">InterpolateBaked(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the Y value for the point that would exist at the X position <code>offset</code> along the curve using the baked cache. Bakes the curve&apos;s points if not already baked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -934,7 +951,8 @@
   
   <a id="Godot_Curve_RemovePoint_" data-uid="Godot.Curve.RemovePoint*"></a>
   <h4 id="Godot_Curve_RemovePoint_System_Int32_" data-uid="Godot.Curve.RemovePoint(System.Int32)">RemovePoint(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the point at <code>index</code> from the curve.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1042,7 +1060,8 @@
   
   <a id="Godot_Curve_SetPointLeftMode_" data-uid="Godot.Curve.SetPointLeftMode*"></a>
   <h4 id="Godot_Curve_SetPointLeftMode_System_Int32_Godot_Curve_TangentMode_" data-uid="Godot.Curve.SetPointLeftMode(System.Int32,Godot.Curve.TangentMode)">SetPointLeftMode(Int32, Curve.TangentMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the left <a class="xref" href="Godot.Curve.TangentMode.html">Curve.TangentMode</a> for the point at <code>index</code> to <code>mode</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1074,7 +1093,8 @@
   
   <a id="Godot_Curve_SetPointLeftTangent_" data-uid="Godot.Curve.SetPointLeftTangent*"></a>
   <h4 id="Godot_Curve_SetPointLeftTangent_System_Int32_System_Single_" data-uid="Godot.Curve.SetPointLeftTangent(System.Int32,System.Single)">SetPointLeftTangent(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the left tangent angle for the point at <code>index</code> to <code>tangent</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1106,7 +1126,8 @@
   
   <a id="Godot_Curve_SetPointOffset_" data-uid="Godot.Curve.SetPointOffset*"></a>
   <h4 id="Godot_Curve_SetPointOffset_System_Int32_System_Single_" data-uid="Godot.Curve.SetPointOffset(System.Int32,System.Single)">SetPointOffset(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the offset from <code>0.5</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1153,7 +1174,8 @@
   
   <a id="Godot_Curve_SetPointRightMode_" data-uid="Godot.Curve.SetPointRightMode*"></a>
   <h4 id="Godot_Curve_SetPointRightMode_System_Int32_Godot_Curve_TangentMode_" data-uid="Godot.Curve.SetPointRightMode(System.Int32,Godot.Curve.TangentMode)">SetPointRightMode(Int32, Curve.TangentMode)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the right <a class="xref" href="Godot.Curve.TangentMode.html">Curve.TangentMode</a> for the point at <code>index</code> to <code>mode</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1185,7 +1207,8 @@
   
   <a id="Godot_Curve_SetPointRightTangent_" data-uid="Godot.Curve.SetPointRightTangent*"></a>
   <h4 id="Godot_Curve_SetPointRightTangent_System_Int32_System_Single_" data-uid="Godot.Curve.SetPointRightTangent(System.Int32,System.Single)">SetPointRightTangent(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the right tangent angle for the point at <code>index</code> to <code>tangent</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1217,7 +1240,8 @@
   
   <a id="Godot_Curve_SetPointValue_" data-uid="Godot.Curve.SetPointValue*"></a>
   <h4 id="Godot_Curve_SetPointValue_System_Int32_System_Single_" data-uid="Godot.Curve.SetPointValue(System.Int32,System.Single)">SetPointValue(Int32, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Assigns the vertical position <code>y</code> to the point at <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -101,7 +101,8 @@
   
   
   <h4 id="Godot_Image_Interpolation_Bilinear" data-uid="Godot.Image.Interpolation.Bilinear">Bilinear</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs bilinear interpolation. If the image is resized, it will be blurry. This mode is faster than <a class="xref" href="Godot.Image.Interpolation.html#Godot_Image_Interpolation_Cubic">Cubic</a>, but it results in lower quality.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +126,8 @@
   
   
   <h4 id="Godot_Image_Interpolation_Cubic" data-uid="Godot.Image.Interpolation.Cubic">Cubic</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs cubic interpolation. If the image is resized, it will be blurry. This mode often gives better results compared to <a class="xref" href="Godot.Image.Interpolation.html#Godot_Image_Interpolation_Bilinear">Bilinear</a>, at the cost of being slower.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -149,7 +151,8 @@
   
   
   <h4 id="Godot_Image_Interpolation_Lanczos" data-uid="Godot.Image.Interpolation.Lanczos">Lanczos</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs Lanczos interpolation. This is the slowest image resizing mode, but it typically gives the best results, especially when downscalng images.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -173,7 +176,8 @@
   
   
   <h4 id="Godot_Image_Interpolation_Nearest" data-uid="Godot.Image.Interpolation.Nearest">Nearest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs nearest-neighbor interpolation. If the image is resized, it will be pixelated.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,7 +201,12 @@
   
   
   <h4 id="Godot_Image_Interpolation_Trilinear" data-uid="Godot.Image.Interpolation.Trilinear">Trilinear</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs bilinear separately on the two most-suited mipmap levels, then linearly interpolates between them.</p>
+<p>It&apos;s slower than <a class="xref" href="Godot.Image.Interpolation.html#Godot_Image_Interpolation_Bilinear">Bilinear</a>, but produces higher-quality results with far fewer aliasing artifacts.</p>
+<p>If the image does not have mipmaps, they will be generated and used internally, but no mipmaps will be generated on the resulting image.</p>
+<p>Note: If you intend to scale multiple copies of the original image, it&apos;s better to call <a class="xref" href="Godot.Image.html#Godot_Image_GenerateMipmaps_System_Boolean_">GenerateMipmaps(Boolean)</a>] on it in advance, to avoid wasting processing power in generating them again and again.</p>
+<p>On the other hand, if the image already has mipmaps, they will be used, and a new set will be generated for the resulting image.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

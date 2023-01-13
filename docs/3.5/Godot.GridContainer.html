@@ -83,7 +83,10 @@
   
   <h1 id="Godot_GridContainer" data-uid="Godot.GridContainer" class="text-break">Class GridContainer
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>GridContainer will arrange its Control-derived children in a grid like structure, the grid columns are specified using the <a class="xref" href="Godot.GridContainer.html#Godot_GridContainer_Columns">Columns</a> property and the number of rows will be equal to the number of children in the container divided by the number of columns. For example, if the container has 5 children, and 2 columns, there will be 3 rows in the container.</p>
+<p>Notice that grid layout will preserve the columns and rows for every size of the container, and that empty columns will be expanded automatically.</p>
+<p>Note: GridContainer only works with child nodes inheriting from Control. It won&apos;t rearrange child nodes inheriting from Node2D.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1473,7 +1476,8 @@
   
   <a id="Godot_GridContainer_Columns_" data-uid="Godot.GridContainer.Columns*"></a>
   <h4 id="Godot_GridContainer_Columns" data-uid="Godot.GridContainer.Columns">Columns</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of columns in the <a class="xref" href="Godot.GridContainer.html">GridContainer</a>. If modified, <a class="xref" href="Godot.GridContainer.html">GridContainer</a> reorders its Control-derived children to accommodate the new layout.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

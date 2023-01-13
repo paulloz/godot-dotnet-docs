@@ -83,7 +83,48 @@
   
   <h1 id="Godot_UPNP" data-uid="Godot.UPNP" class="text-break">Class UPNP
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class can be used to discover compatible <a class="xref" href="Godot.UPNPDevice.html">UPNPDevice</a>s on the local network and execute commands on them, like managing port mappings (for port forwarding/NAT traversal) and querying the local and remote network IP address. Note that methods on this class are synchronous and block the calling thread.</p>
+<p>To forward a specific port (here <code>7777</code>, note both <a class="xref" href="Godot.UPNP.html#Godot_UPNP_Discover_System_Int32_System_Int32_System_String_">Discover(Int32, Int32, String)</a> and <a class="xref" href="Godot.UPNP.html#Godot_UPNP_AddPortMapping_System_Int32_System_Int32_System_String_System_String_System_Int32_">AddPortMapping(Int32, Int32, String, String, Int32)</a> can return errors that should be checked):</p>
+<p><pre><code>var upnp = UPNP.new()
+upnp.discover()
+upnp.add_port_mapping(7777)</code></pre></p>
+<p>To close a specific port (e.g. after you have finished using it):</p>
+<p><pre><code>upnp.delete_port_mapping(port)</code></pre></p>
+<p>Note: UPnP discovery blocks the current thread. To perform discovery without blocking the main thread, use <a class="xref" href="Godot.Thread.html">Thread</a>s like this:</p>
+<p><pre><code># Emitted when UPnP port mapping setup is completed (regardless of success or failure).
+signal upnp_completed(error)
+<h1 id="replace-this-with-your-own-server-port-number-between-1024-and-65535">Replace this with your own server port number between 1024 and 65535.</h1>
+<p>const SERVER_PORT = 3928
+var thread = null</p>
+<p>func _upnp_setup(server_port):
+# UPNP queries take some time.
+var upnp = UPNP.new()
+var err = upnp.discover()</p>
+<pre><code>if err != OK:
+    push_error(str(err))
+    emit_signal(&amp;quot;upnp_completed&amp;quot;, err)
+    return
+
+if upnp.get_gateway() and upnp.get_gateway().is_valid_gateway():
+    upnp.add_port_mapping(server_port, server_port, ProjectSettings.get_setting(&amp;quot;application/config/name&amp;quot;), &amp;quot;UDP&amp;quot;)
+    upnp.add_port_mapping(server_port, server_port, ProjectSettings.get_setting(&amp;quot;application/config/name&amp;quot;), &amp;quot;TCP&amp;quot;)
+    emit_signal(&amp;quot;upnp_completed&amp;quot;, OK)
+</code></pre>
+<p>func _ready():
+thread = Thread.new()
+thread.start(self, &quot;_upnp_setup&quot;, SERVER_PORT)</p>
+<p>func _exit_tree():
+# Wait for thread finish here to handle game exit while the thread is running.
+thread.wait_to_finish()</code></pre></p><p>
+<p>Terminology: In the context of UPnP networking, &quot;gateway&quot; (or &quot;internet gateway device&quot;, short IGD) refers to network devices that allow computers in the local network to access the internet (&quot;wide area network&quot;, WAN). These gateways are often also called &quot;routers&quot;.</p>
+<p>Pitfalls:</p>
+<p>- As explained above, these calls are blocking and shouldn&apos;t be run on the main thread, especially as they can block for multiple seconds at a time. Use threading!</p>
+<p>- Networking is physical and messy. Packets get lost in transit or get filtered, addresses, free ports and assigned mappings change, and devices may leave or join the network at any time. Be mindful of this, be diligent when checking and handling errors, and handle these gracefully if you can: add clear error UI, timeouts and re-try handling.</p>
+<p>- Port mappings may change (and be removed) at any time, and the remote/external IP address of the gateway can change likewise. You should consider re-querying the external IP and try to update/refresh the port mapping periodically (for example, every 5 minutes and on networking failures).</p>
+<p>- Not all devices support UPnP, and some users disable UPnP support. You need to handle this (e.g. documenting and requiring the user to manually forward ports, or adding alternative methods of NAT traversal, like a relay/mirror server, or NAT hole punching, STUN/TURN, etc.).</p>
+<p>- Consider what happens on mapping conflicts. Maybe multiple users on the same network would like to play your game at the same time, or maybe another application uses the same port. Make the port configurable, and optimally choose a port automatically (re-trying with a different port on failure).</p>
+<p>Further reading: If you want to know more about UPnP (and the Internet Gateway Device (IGD) and Port Control Protocol (PCP) specifically), <a href="https://en.wikipedia.org/wiki/Universal_Plug_and_Play">Wikipedia</a> is a good first stop, the specification can be found at the <a href="https://openconnectivity.org/developer/specifications/upnp-resources/upnp/">Open Connectivity Foundation</a> and Godot&apos;s implementation is based on the <a href="https://github.com/miniupnp/miniupnp">MiniUPnP client</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +338,8 @@
   
   <a id="Godot_UPNP_DiscoverIpv6_" data-uid="Godot.UPNP.DiscoverIpv6*"></a>
   <h4 id="Godot_UPNP_DiscoverIpv6" data-uid="Godot.UPNP.DiscoverIpv6">DiscoverIpv6</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, IPv6 is used for <a class="xref" href="Godot.UPNPDevice.html">UPNPDevice</a> discovery.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,7 +364,8 @@
   
   <a id="Godot_UPNP_DiscoverLocalPort_" data-uid="Godot.UPNP.DiscoverLocalPort*"></a>
   <h4 id="Godot_UPNP_DiscoverLocalPort" data-uid="Godot.UPNP.DiscoverLocalPort">DiscoverLocalPort</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>0</code>, the local port to use for discovery is chosen automatically by the system. If <code>1</code>, discovery will be done from the source port 1900 (same as destination port). Otherwise, the value will be used as the port.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -347,7 +390,8 @@
   
   <a id="Godot_UPNP_DiscoverMulticastIf_" data-uid="Godot.UPNP.DiscoverMulticastIf*"></a>
   <h4 id="Godot_UPNP_DiscoverMulticastIf" data-uid="Godot.UPNP.DiscoverMulticastIf">DiscoverMulticastIf</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Multicast interface to use for discovery. Uses the default multicast interface if empty.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +418,8 @@
   
   <a id="Godot_UPNP_AddDevice_" data-uid="Godot.UPNP.AddDevice*"></a>
   <h4 id="Godot_UPNP_AddDevice_Godot_UPNPDevice_" data-uid="Godot.UPNP.AddDevice(Godot.UPNPDevice)">AddDevice(UPNPDevice)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the given <a class="xref" href="Godot.UPNPDevice.html">UPNPDevice</a> to the list of discovered devices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -401,7 +446,13 @@
   
   <a id="Godot_UPNP_AddPortMapping_" data-uid="Godot.UPNP.AddPortMapping*"></a>
   <h4 id="Godot_UPNP_AddPortMapping_System_Int32_System_Int32_System_String_System_String_System_Int32_" data-uid="Godot.UPNP.AddPortMapping(System.Int32,System.Int32,System.String,System.String,System.Int32)">AddPortMapping(Int32, Int32, String, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a mapping to forward the external <code>port</code> (between 1 and 65535, although recommended to use port 1024 or above) on the default gateway (see <a class="xref" href="Godot.UPNP.html#Godot_UPNP_GetGateway">GetGateway()</a>) to the <code>internal_port</code> on the local machine for the given protocol <code>proto</code> (either <code>TCP</code> or <code>UDP</code>, with UDP being the default). If a port mapping for the given port and protocol combination already exists on that gateway device, this method tries to overwrite it. If that is not desired, you can retrieve the gateway manually with <a class="xref" href="Godot.UPNP.html#Godot_UPNP_GetGateway">GetGateway()</a> and call <a class="xref" href="Godot.UPNP.html#Godot_UPNP_AddPortMapping_System_Int32_System_Int32_System_String_System_String_System_Int32_">AddPortMapping(Int32, Int32, String, String, Int32)</a> on it, if any. Note that forwarding a well-known port (below 1024) with UPnP may fail depending on the device.</p>
+<p>Depending on the gateway device, if a mapping for that port already exists, it will either be updated or it will refuse this command due to that conflict, especially if the existing mapping for that port wasn&apos;t created via UPnP or points to a different network address (or device) than this one.</p>
+<p>If <code>internal_port</code> is <code>0</code> (the default), the same port number is used for both the external and the internal port (the <code>port</code> value).</p>
+<p>The description (<code>desc</code>) is shown in some routers management UIs and can be used to point out which application added the mapping.</p>
+<p>The mapping&apos;s lease <code>duration</code> can be limited by specifying a duration in seconds. The default of <code>0</code> means no duration, i.e. a permanent lease and notably some devices only support these permanent leases. Note that whether permanent or not, this is only a request and the gateway may still decide at any point to remove the mapping (which usually happens on a reboot of the gateway, when its external IP address changes, or on some models when it detects a port mapping has become inactive, i.e. had no traffic for multiple minutes). If not <code>0</code> (permanent), the allowed range according to spec is between <code>120</code> (2 minutes) and <code>86400</code> seconds (24 hours).</p>
+<p>See <a class="xref" href="Godot.UPNP.UPNPResult.html">UPNP.UPNPResult</a> for possible return values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -463,7 +514,8 @@
   
   <a id="Godot_UPNP_ClearDevices_" data-uid="Godot.UPNP.ClearDevices*"></a>
   <h4 id="Godot_UPNP_ClearDevices" data-uid="Godot.UPNP.ClearDevices">ClearDevices()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears the list of discovered devices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -473,7 +525,8 @@
   
   <a id="Godot_UPNP_DeletePortMapping_" data-uid="Godot.UPNP.DeletePortMapping*"></a>
   <h4 id="Godot_UPNP_DeletePortMapping_System_Int32_System_String_" data-uid="Godot.UPNP.DeletePortMapping(System.Int32,System.String)">DeletePortMapping(Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Deletes the port mapping for the given port and protocol combination on the default gateway (see <a class="xref" href="Godot.UPNP.html#Godot_UPNP_GetGateway">GetGateway()</a>) if one exists. <code>port</code> must be a valid port between 1 and 65535, <code>proto</code> can be either <code>TCP</code> or <code>UDP</code>. May be refused for mappings pointing to addresses other than this one, for well-known ports (below 1024), or for mappings not added via UPnP. See <a class="xref" href="Godot.UPNP.UPNPResult.html">UPNP.UPNPResult</a> for possible return values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -520,7 +573,10 @@
   
   <a id="Godot_UPNP_Discover_" data-uid="Godot.UPNP.Discover*"></a>
   <h4 id="Godot_UPNP_Discover_System_Int32_System_Int32_System_String_" data-uid="Godot.UPNP.Discover(System.Int32,System.Int32,System.String)">Discover(Int32, Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Discovers local <a class="xref" href="Godot.UPNPDevice.html">UPNPDevice</a>s. Clears the list of previously discovered devices.</p>
+<p>Filters for IGD (InternetGatewayDevice) type devices by default, as those manage port forwarding. <code>timeout</code> is the time to wait for responses in milliseconds. <code>ttl</code> is the time-to-live; only touch this if you know what you&apos;re doing.</p>
+<p>See <a class="xref" href="Godot.UPNP.UPNPResult.html">UPNP.UPNPResult</a> for possible return values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -572,7 +628,8 @@
   
   <a id="Godot_UPNP_GetDevice_" data-uid="Godot.UPNP.GetDevice*"></a>
   <h4 id="Godot_UPNP_GetDevice_System_Int32_" data-uid="Godot.UPNP.GetDevice(System.Int32)">GetDevice(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.UPNPDevice.html">UPNPDevice</a> at the given <code>index</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -614,7 +671,8 @@
   
   <a id="Godot_UPNP_GetDeviceCount_" data-uid="Godot.UPNP.GetDeviceCount*"></a>
   <h4 id="Godot_UPNP_GetDeviceCount" data-uid="Godot.UPNP.GetDeviceCount">GetDeviceCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of discovered <a class="xref" href="Godot.UPNPDevice.html">UPNPDevice</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -689,7 +747,8 @@
   
   <a id="Godot_UPNP_GetGateway_" data-uid="Godot.UPNP.GetGateway*"></a>
   <h4 id="Godot_UPNP_GetGateway" data-uid="Godot.UPNP.GetGateway">GetGateway()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the default gateway. That is the first discovered <a class="xref" href="Godot.UPNPDevice.html">UPNPDevice</a> that is also a valid IGD (InternetGatewayDevice).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -739,7 +798,8 @@
   
   <a id="Godot_UPNP_QueryExternalAddress_" data-uid="Godot.UPNP.QueryExternalAddress*"></a>
   <h4 id="Godot_UPNP_QueryExternalAddress" data-uid="Godot.UPNP.QueryExternalAddress">QueryExternalAddress()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the external <a class="xref" href="Godot.IP.html">IP</a> address of the default gateway (see <a class="xref" href="Godot.UPNP.html#Godot_UPNP_GetGateway">GetGateway()</a>) as string. Returns an empty string on error.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -764,7 +824,8 @@
   
   <a id="Godot_UPNP_RemoveDevice_" data-uid="Godot.UPNP.RemoveDevice*"></a>
   <h4 id="Godot_UPNP_RemoveDevice_System_Int32_" data-uid="Godot.UPNP.RemoveDevice(System.Int32)">RemoveDevice(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the device at <code>index</code> from the list of discovered devices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -791,7 +852,8 @@
   
   <a id="Godot_UPNP_SetDevice_" data-uid="Godot.UPNP.SetDevice*"></a>
   <h4 id="Godot_UPNP_SetDevice_System_Int32_Godot_UPNPDevice_" data-uid="Godot.UPNP.SetDevice(System.Int32,Godot.UPNPDevice)">SetDevice(Int32, UPNPDevice)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the device at <code>index</code> from the list of discovered devices to <code>device</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

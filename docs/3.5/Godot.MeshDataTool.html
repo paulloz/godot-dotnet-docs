@@ -83,7 +83,27 @@
   
   <h1 id="Godot_MeshDataTool" data-uid="Godot.MeshDataTool" class="text-break">Class MeshDataTool
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>MeshDataTool provides access to individual vertices in a <a class="xref" href="Godot.Mesh.html">Mesh</a>. It allows users to read and edit vertex data of meshes. It also creates an array of faces and edges.</p>
+<p>To use MeshDataTool, load a mesh with <a class="xref" href="Godot.MeshDataTool.html#Godot_MeshDataTool_CreateFromSurface_Godot_ArrayMesh_System_Int32_">CreateFromSurface(ArrayMesh, Int32)</a>. When you are finished editing the data commit the data to a mesh with <a class="xref" href="Godot.MeshDataTool.html#Godot_MeshDataTool_CommitToSurface_Godot_ArrayMesh_">CommitToSurface(ArrayMesh)</a>.</p>
+<p>Below is an example of how MeshDataTool may be used.</p>
+<p><pre><code>var mesh = ArrayMesh.new()
+mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, CubeMesh.new().get_mesh_arrays())
+var mdt = MeshDataTool.new()
+mdt.create_from_surface(mesh, 0)
+for i in range(mdt.get_vertex_count()):
+    var vertex = mdt.get_vertex(i)
+    # In this example we extend the mesh by one unit, which results in separated faces as it is flat shaded.
+    vertex += mdt.get_vertex_normal(i)
+    # Save your change.
+    mdt.set_vertex(i, vertex)
+mesh.surface_remove(0)
+mdt.commit_to_surface(mesh)
+var mi = MeshInstance.new()
+mi.mesh = mesh
+add_child(mi)</code></pre></p>
+<p>See also <a class="xref" href="Godot.ArrayMesh.html">ArrayMesh</a>, <a class="xref" href="Godot.ImmediateGeometry.html">ImmediateGeometry</a> and <a class="xref" href="Godot.SurfaceTool.html">SurfaceTool</a> for procedural geometry generation.</p>
+<p>Note: Godot uses clockwise <a href="https://learnopengl.com/Advanced-OpenGL/Face-culling">winding order</a> for front faces of triangle primitive modes.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -297,7 +317,8 @@
   
   <a id="Godot_MeshDataTool_Clear_" data-uid="Godot.MeshDataTool.Clear*"></a>
   <h4 id="Godot_MeshDataTool_Clear" data-uid="Godot.MeshDataTool.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clears all data currently in MeshDataTool.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -307,7 +328,8 @@
   
   <a id="Godot_MeshDataTool_CommitToSurface_" data-uid="Godot.MeshDataTool.CommitToSurface*"></a>
   <h4 id="Godot_MeshDataTool_CommitToSurface_Godot_ArrayMesh_" data-uid="Godot.MeshDataTool.CommitToSurface(Godot.ArrayMesh)">CommitToSurface(ArrayMesh)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new surface to specified <a class="xref" href="Godot.Mesh.html">Mesh</a> with edited data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -349,7 +371,9 @@
   
   <a id="Godot_MeshDataTool_CreateFromSurface_" data-uid="Godot.MeshDataTool.CreateFromSurface*"></a>
   <h4 id="Godot_MeshDataTool_CreateFromSurface_Godot_ArrayMesh_System_Int32_" data-uid="Godot.MeshDataTool.CreateFromSurface(Godot.ArrayMesh,System.Int32)">CreateFromSurface(ArrayMesh, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Uses specified surface of given <a class="xref" href="Godot.Mesh.html">Mesh</a> to populate data for MeshDataTool.</p>
+<p>Requires <a class="xref" href="Godot.Mesh.html">Mesh</a> with primitive type <a class="xref" href="Godot.Mesh.PrimitiveType.html#Godot_Mesh_PrimitiveType_Triangles">Triangles</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +420,8 @@
   
   <a id="Godot_MeshDataTool_GetEdgeCount_" data-uid="Godot.MeshDataTool.GetEdgeCount*"></a>
   <h4 id="Godot_MeshDataTool_GetEdgeCount" data-uid="Godot.MeshDataTool.GetEdgeCount">GetEdgeCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of edges in this <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +446,8 @@
   
   <a id="Godot_MeshDataTool_GetEdgeFaces_" data-uid="Godot.MeshDataTool.GetEdgeFaces*"></a>
   <h4 id="Godot_MeshDataTool_GetEdgeFaces_System_Int32_" data-uid="Godot.MeshDataTool.GetEdgeFaces(System.Int32)">GetEdgeFaces(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns array of faces that touch given edge.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -463,7 +489,8 @@
   
   <a id="Godot_MeshDataTool_GetEdgeMeta_" data-uid="Godot.MeshDataTool.GetEdgeMeta*"></a>
   <h4 id="Godot_MeshDataTool_GetEdgeMeta_System_Int32_" data-uid="Godot.MeshDataTool.GetEdgeMeta(System.Int32)">GetEdgeMeta(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns meta information assigned to given edge.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -505,7 +532,9 @@
   
   <a id="Godot_MeshDataTool_GetEdgeVertex_" data-uid="Godot.MeshDataTool.GetEdgeVertex*"></a>
   <h4 id="Godot_MeshDataTool_GetEdgeVertex_System_Int32_System_Int32_" data-uid="Godot.MeshDataTool.GetEdgeVertex(System.Int32,System.Int32)">GetEdgeVertex(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns index of specified vertex connected to given edge.</p>
+<p>Vertex argument can only be 0 or 1 because edges are comprised of two vertices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -552,7 +581,8 @@
   
   <a id="Godot_MeshDataTool_GetFaceCount_" data-uid="Godot.MeshDataTool.GetFaceCount*"></a>
   <h4 id="Godot_MeshDataTool_GetFaceCount" data-uid="Godot.MeshDataTool.GetFaceCount">GetFaceCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of faces in this <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -577,7 +607,9 @@
   
   <a id="Godot_MeshDataTool_GetFaceEdge_" data-uid="Godot.MeshDataTool.GetFaceEdge*"></a>
   <h4 id="Godot_MeshDataTool_GetFaceEdge_System_Int32_System_Int32_" data-uid="Godot.MeshDataTool.GetFaceEdge(System.Int32,System.Int32)">GetFaceEdge(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns specified edge associated with given face.</p>
+<p>Edge argument must be either 0, 1, or 2 because a face only has three edges.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -624,7 +656,8 @@
   
   <a id="Godot_MeshDataTool_GetFaceMeta_" data-uid="Godot.MeshDataTool.GetFaceMeta*"></a>
   <h4 id="Godot_MeshDataTool_GetFaceMeta_System_Int32_" data-uid="Godot.MeshDataTool.GetFaceMeta(System.Int32)">GetFaceMeta(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the metadata associated with the given face.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -666,7 +699,8 @@
   
   <a id="Godot_MeshDataTool_GetFaceNormal_" data-uid="Godot.MeshDataTool.GetFaceNormal*"></a>
   <h4 id="Godot_MeshDataTool_GetFaceNormal_System_Int32_" data-uid="Godot.MeshDataTool.GetFaceNormal(System.Int32)">GetFaceNormal(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calculates and returns the face normal of the given face.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -708,7 +742,9 @@
   
   <a id="Godot_MeshDataTool_GetFaceVertex_" data-uid="Godot.MeshDataTool.GetFaceVertex*"></a>
   <h4 id="Godot_MeshDataTool_GetFaceVertex_System_Int32_System_Int32_" data-uid="Godot.MeshDataTool.GetFaceVertex(System.Int32,System.Int32)">GetFaceVertex(Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the specified vertex of the given face.</p>
+<p>Vertex argument must be either 0, 1, or 2 because faces contain three vertices.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -755,7 +791,9 @@
   
   <a id="Godot_MeshDataTool_GetFormat_" data-uid="Godot.MeshDataTool.GetFormat*"></a>
   <h4 id="Godot_MeshDataTool_GetFormat" data-uid="Godot.MeshDataTool.GetFormat">GetFormat()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Mesh.html">Mesh</a>&apos;s format. Format is an integer made up of <a class="xref" href="Godot.Mesh.html">Mesh</a> format flags combined together. For example, a mesh containing both vertices and normals would return a format of <code>3</code> because <a class="xref" href="Godot.ArrayMesh.ArrayFormat.html#Godot_ArrayMesh_ArrayFormat_Vertex">Vertex</a> is <code>1</code> and <a class="xref" href="Godot.ArrayMesh.ArrayFormat.html#Godot_ArrayMesh_ArrayFormat_Normal">Normal</a> is <code>2</code>.</p>
+<p>See <a class="xref" href="Godot.ArrayMesh.ArrayFormat.html">ArrayMesh.ArrayFormat</a> for a list of format flags.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -780,7 +818,8 @@
   
   <a id="Godot_MeshDataTool_GetMaterial_" data-uid="Godot.MeshDataTool.GetMaterial*"></a>
   <h4 id="Godot_MeshDataTool_GetMaterial" data-uid="Godot.MeshDataTool.GetMaterial">GetMaterial()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the material assigned to the <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -805,7 +844,8 @@
   
   <a id="Godot_MeshDataTool_GetVertex_" data-uid="Godot.MeshDataTool.GetVertex*"></a>
   <h4 id="Godot_MeshDataTool_GetVertex_System_Int32_" data-uid="Godot.MeshDataTool.GetVertex(System.Int32)">GetVertex(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the vertex at given index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -847,7 +887,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexBones_" data-uid="Godot.MeshDataTool.GetVertexBones*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexBones_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexBones(System.Int32)">GetVertexBones(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the bones of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -889,7 +930,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexColor_" data-uid="Godot.MeshDataTool.GetVertexColor*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexColor_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexColor(System.Int32)">GetVertexColor(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the color of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -931,7 +973,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexCount_" data-uid="Godot.MeshDataTool.GetVertexCount*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexCount" data-uid="Godot.MeshDataTool.GetVertexCount">GetVertexCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the total number of vertices in <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -956,7 +999,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexEdges_" data-uid="Godot.MeshDataTool.GetVertexEdges*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexEdges_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexEdges(System.Int32)">GetVertexEdges(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of edges that share the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -998,7 +1042,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexFaces_" data-uid="Godot.MeshDataTool.GetVertexFaces*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexFaces_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexFaces(System.Int32)">GetVertexFaces(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an array of faces that share the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1040,7 +1085,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexMeta_" data-uid="Godot.MeshDataTool.GetVertexMeta*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexMeta_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexMeta(System.Int32)">GetVertexMeta(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the metadata associated with the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1082,7 +1128,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexNormal_" data-uid="Godot.MeshDataTool.GetVertexNormal*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexNormal_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexNormal(System.Int32)">GetVertexNormal(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the normal of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1124,7 +1171,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexTangent_" data-uid="Godot.MeshDataTool.GetVertexTangent*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexTangent_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexTangent(System.Int32)">GetVertexTangent(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the tangent of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1166,7 +1214,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexUv_" data-uid="Godot.MeshDataTool.GetVertexUv*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexUv_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexUv(System.Int32)">GetVertexUv(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the UV of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1208,7 +1257,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexUv2_" data-uid="Godot.MeshDataTool.GetVertexUv2*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexUv2_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexUv2(System.Int32)">GetVertexUv2(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the UV2 of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1250,7 +1300,8 @@
   
   <a id="Godot_MeshDataTool_GetVertexWeights_" data-uid="Godot.MeshDataTool.GetVertexWeights*"></a>
   <h4 id="Godot_MeshDataTool_GetVertexWeights_System_Int32_" data-uid="Godot.MeshDataTool.GetVertexWeights(System.Int32)">GetVertexWeights(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns bone weights of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1292,7 +1343,8 @@
   
   <a id="Godot_MeshDataTool_SetEdgeMeta_" data-uid="Godot.MeshDataTool.SetEdgeMeta*"></a>
   <h4 id="Godot_MeshDataTool_SetEdgeMeta_System_Int32_System_Object_" data-uid="Godot.MeshDataTool.SetEdgeMeta(System.Int32,System.Object)">SetEdgeMeta(Int32, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the metadata of the given edge.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1324,7 +1376,8 @@
   
   <a id="Godot_MeshDataTool_SetFaceMeta_" data-uid="Godot.MeshDataTool.SetFaceMeta*"></a>
   <h4 id="Godot_MeshDataTool_SetFaceMeta_System_Int32_System_Object_" data-uid="Godot.MeshDataTool.SetFaceMeta(System.Int32,System.Object)">SetFaceMeta(Int32, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the metadata of the given face.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1356,7 +1409,8 @@
   
   <a id="Godot_MeshDataTool_SetMaterial_" data-uid="Godot.MeshDataTool.SetMaterial*"></a>
   <h4 id="Godot_MeshDataTool_SetMaterial_Godot_Material_" data-uid="Godot.MeshDataTool.SetMaterial(Godot.Material)">SetMaterial(Material)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the material to be used by newly-constructed <a class="xref" href="Godot.Mesh.html">Mesh</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1383,7 +1437,8 @@
   
   <a id="Godot_MeshDataTool_SetVertex_" data-uid="Godot.MeshDataTool.SetVertex*"></a>
   <h4 id="Godot_MeshDataTool_SetVertex_System_Int32_Godot_Vector3_" data-uid="Godot.MeshDataTool.SetVertex(System.Int32,Godot.Vector3)">SetVertex(Int32, Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the position of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1415,7 +1470,8 @@
   
   <a id="Godot_MeshDataTool_SetVertexBones_" data-uid="Godot.MeshDataTool.SetVertexBones*"></a>
   <h4 id="Godot_MeshDataTool_SetVertexBones_System_Int32_System_Int32___" data-uid="Godot.MeshDataTool.SetVertexBones(System.Int32,System.Int32[])">SetVertexBones(Int32, Int32[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the bones of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1447,7 +1503,8 @@
   
   <a id="Godot_MeshDataTool_SetVertexColor_" data-uid="Godot.MeshDataTool.SetVertexColor*"></a>
   <h4 id="Godot_MeshDataTool_SetVertexColor_System_Int32_Godot_Color_" data-uid="Godot.MeshDataTool.SetVertexColor(System.Int32,Godot.Color)">SetVertexColor(Int32, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the color of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1479,7 +1536,8 @@
   
   <a id="Godot_MeshDataTool_SetVertexMeta_" data-uid="Godot.MeshDataTool.SetVertexMeta*"></a>
   <h4 id="Godot_MeshDataTool_SetVertexMeta_System_Int32_System_Object_" data-uid="Godot.MeshDataTool.SetVertexMeta(System.Int32,System.Object)">SetVertexMeta(Int32, Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the metadata associated with the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1511,7 +1569,8 @@
   
   <a id="Godot_MeshDataTool_SetVertexNormal_" data-uid="Godot.MeshDataTool.SetVertexNormal*"></a>
   <h4 id="Godot_MeshDataTool_SetVertexNormal_System_Int32_Godot_Vector3_" data-uid="Godot.MeshDataTool.SetVertexNormal(System.Int32,Godot.Vector3)">SetVertexNormal(Int32, Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the normal of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1543,7 +1602,8 @@
   
   <a id="Godot_MeshDataTool_SetVertexTangent_" data-uid="Godot.MeshDataTool.SetVertexTangent*"></a>
   <h4 id="Godot_MeshDataTool_SetVertexTangent_System_Int32_Godot_Plane_" data-uid="Godot.MeshDataTool.SetVertexTangent(System.Int32,Godot.Plane)">SetVertexTangent(Int32, Plane)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the tangent of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1575,7 +1635,8 @@
   
   <a id="Godot_MeshDataTool_SetVertexUv_" data-uid="Godot.MeshDataTool.SetVertexUv*"></a>
   <h4 id="Godot_MeshDataTool_SetVertexUv_System_Int32_Godot_Vector2_" data-uid="Godot.MeshDataTool.SetVertexUv(System.Int32,Godot.Vector2)">SetVertexUv(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the UV of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1607,7 +1668,8 @@
   
   <a id="Godot_MeshDataTool_SetVertexUv2_" data-uid="Godot.MeshDataTool.SetVertexUv2*"></a>
   <h4 id="Godot_MeshDataTool_SetVertexUv2_System_Int32_Godot_Vector2_" data-uid="Godot.MeshDataTool.SetVertexUv2(System.Int32,Godot.Vector2)">SetVertexUv2(Int32, Vector2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the UV2 of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1639,7 +1701,8 @@
   
   <a id="Godot_MeshDataTool_SetVertexWeights_" data-uid="Godot.MeshDataTool.SetVertexWeights*"></a>
   <h4 id="Godot_MeshDataTool_SetVertexWeights_System_Int32_System_Single___" data-uid="Godot.MeshDataTool.SetVertexWeights(System.Int32,System.Single[])">SetVertexWeights(Int32, Single[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the bone weights of the given vertex.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

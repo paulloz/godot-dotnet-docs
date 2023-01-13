@@ -83,7 +83,8 @@
   
   <h1 id="Godot_MeshInstance" data-uid="Godot.MeshInstance" class="text-break">Class MeshInstance
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>MeshInstance is a node that takes a <a class="xref" href="Godot.Mesh.html">Mesh</a> resource and adds it to the current scenario by creating an instance of it. This is the class most often used to get 3D geometry rendered and can be used to instance a single <a class="xref" href="Godot.Mesh.html">Mesh</a> in many places. This allows reusing geometry, which can save on resources. When a <a class="xref" href="Godot.Mesh.html">Mesh</a> has to be instanced more than thousands of times at close proximity, consider using a <a class="xref" href="Godot.MultiMesh.html">MultiMesh</a> in a <a class="xref" href="Godot.MultiMeshInstance.html">MultiMeshInstance</a> instead.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1136,7 +1137,8 @@
   
   <a id="Godot_MeshInstance_Mesh_" data-uid="Godot.MeshInstance.Mesh*"></a>
   <h4 id="Godot_MeshInstance_Mesh" data-uid="Godot.MeshInstance.Mesh">Mesh</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Mesh.html">Mesh</a> resource for the instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1161,7 +1163,8 @@
   
   <a id="Godot_MeshInstance_Skeleton_" data-uid="Godot.MeshInstance.Skeleton*"></a>
   <h4 id="Godot_MeshInstance_Skeleton" data-uid="Godot.MeshInstance.Skeleton">Skeleton</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a class="xref" href="Godot.NodePath.html">NodePath</a> to the <a class="xref" href="Godot.Skeleton.html">Skeleton</a> associated with the instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1186,7 +1189,8 @@
   
   <a id="Godot_MeshInstance_Skin_" data-uid="Godot.MeshInstance.Skin*"></a>
   <h4 id="Godot_MeshInstance_Skin" data-uid="Godot.MeshInstance.Skin">Skin</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the skin to be used by this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1211,7 +1215,9 @@
   
   <a id="Godot_MeshInstance_SoftwareSkinningTransformNormals_" data-uid="Godot.MeshInstance.SoftwareSkinningTransformNormals*"></a>
   <h4 id="Godot_MeshInstance_SoftwareSkinningTransformNormals" data-uid="Godot.MeshInstance.SoftwareSkinningTransformNormals">SoftwareSkinningTransformNormals</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, normals are transformed when software skinning is used. Set to <code>false</code> when normals are not needed for better performance.</p>
+<p>See  for details about how software skinning is enabled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1238,7 +1244,10 @@
   
   <a id="Godot_MeshInstance_CreateConvexCollision_" data-uid="Godot.MeshInstance.CreateConvexCollision*"></a>
   <h4 id="Godot_MeshInstance_CreateConvexCollision_System_Boolean_System_Boolean_" data-uid="Godot.MeshInstance.CreateConvexCollision(System.Boolean,System.Boolean)">CreateConvexCollision(Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This helper creates a <a class="xref" href="Godot.StaticBody.html">StaticBody</a> child node with a <a class="xref" href="Godot.ConvexPolygonShape.html">ConvexPolygonShape</a> collision shape calculated from the mesh geometry. It&apos;s mainly used for testing.</p>
+<p>If <code>clean</code> is <code>true</code> (default), duplicate and interior vertices are removed automatically. You can set it to <code>false</code> to make the process faster if not needed.</p>
+<p>If <code>simplify</code> is <code>true</code>, the geometry can be further simplified to reduce the amount of vertices. Disabled by default.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1270,7 +1279,8 @@
   
   <a id="Godot_MeshInstance_CreateDebugTangents_" data-uid="Godot.MeshInstance.CreateDebugTangents*"></a>
   <h4 id="Godot_MeshInstance_CreateDebugTangents" data-uid="Godot.MeshInstance.CreateDebugTangents">CreateDebugTangents()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This helper creates a <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> child node with gizmos at every vertex calculated from the mesh geometry. It&apos;s mainly used for testing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1280,7 +1290,8 @@
   
   <a id="Godot_MeshInstance_CreateMultipleConvexCollisions_" data-uid="Godot.MeshInstance.CreateMultipleConvexCollisions*"></a>
   <h4 id="Godot_MeshInstance_CreateMultipleConvexCollisions" data-uid="Godot.MeshInstance.CreateMultipleConvexCollisions">CreateMultipleConvexCollisions()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This helper creates a <a class="xref" href="Godot.StaticBody.html">StaticBody</a> child node with multiple <a class="xref" href="Godot.ConvexPolygonShape.html">ConvexPolygonShape</a> collision shapes calculated from the mesh geometry via convex decomposition. It&apos;s mainly used for testing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1290,7 +1301,8 @@
   
   <a id="Godot_MeshInstance_CreateTrimeshCollision_" data-uid="Godot.MeshInstance.CreateTrimeshCollision*"></a>
   <h4 id="Godot_MeshInstance_CreateTrimeshCollision" data-uid="Godot.MeshInstance.CreateTrimeshCollision">CreateTrimeshCollision()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This helper creates a <a class="xref" href="Godot.StaticBody.html">StaticBody</a> child node with a <a class="xref" href="Godot.ConcavePolygonShape.html">ConcavePolygonShape</a> collision shape calculated from the mesh geometry. It&apos;s mainly used for testing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1300,7 +1312,8 @@
   
   <a id="Godot_MeshInstance_GetActiveMaterial_" data-uid="Godot.MeshInstance.GetActiveMaterial*"></a>
   <h4 id="Godot_MeshInstance_GetActiveMaterial_System_Int32_" data-uid="Godot.MeshInstance.GetActiveMaterial(System.Int32)">GetActiveMaterial(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Godot.Material.html">Material</a> that will be used by the <a class="xref" href="Godot.Mesh.html">Mesh</a> when drawing. This can return the <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_MaterialOverride">MaterialOverride</a>, the surface override <a class="xref" href="Godot.Material.html">Material</a> defined in this <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a>, or the surface <a class="xref" href="Godot.Material.html">Material</a> defined in the <a class="xref" href="Godot.Mesh.html">Mesh</a>. For example, if <a class="xref" href="Godot.GeometryInstance.html#Godot_GeometryInstance_MaterialOverride">MaterialOverride</a> is used, all surfaces will return the override material.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1417,7 +1430,9 @@
   
   <a id="Godot_MeshInstance_GetSurfaceMaterial_" data-uid="Godot.MeshInstance.GetSurfaceMaterial*"></a>
   <h4 id="Godot_MeshInstance_GetSurfaceMaterial_System_Int32_" data-uid="Godot.MeshInstance.GetSurfaceMaterial(System.Int32)">GetSurfaceMaterial(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the override <a class="xref" href="Godot.Material.html">Material</a> for a surface of the <a class="xref" href="Godot.Mesh.html">Mesh</a> resource.</p>
+<p>Note: This function only returns override materials associated with this <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a>. Consider using <a class="xref" href="Godot.MeshInstance.html#Godot_MeshInstance_GetActiveMaterial_System_Int32_">GetActiveMaterial(Int32)</a> or <a class="xref" href="Godot.Mesh.html#Godot_Mesh_SurfaceGetMaterial_System_Int32_">SurfaceGetMaterial(Int32)</a> to get materials associated with the <a class="xref" href="Godot.Mesh.html">Mesh</a> resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1459,7 +1474,8 @@
   
   <a id="Godot_MeshInstance_GetSurfaceMaterialCount_" data-uid="Godot.MeshInstance.GetSurfaceMaterialCount*"></a>
   <h4 id="Godot_MeshInstance_GetSurfaceMaterialCount" data-uid="Godot.MeshInstance.GetSurfaceMaterialCount">GetSurfaceMaterialCount()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the number of surface override materials.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1484,7 +1500,9 @@
   
   <a id="Godot_MeshInstance_IsMergeableWith_" data-uid="Godot.MeshInstance.IsMergeableWith*"></a>
   <h4 id="Godot_MeshInstance_IsMergeableWith_Godot_Node_" data-uid="Godot.MeshInstance.IsMergeableWith(Godot.Node)">IsMergeableWith(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> can be merged with the specified <code>other_mesh_instance</code>, using the <a class="xref" href="Godot.MeshInstance.html#Godot_MeshInstance_MergeMeshes_Godot_Collections_Array_System_Boolean_System_Boolean_">MergeMeshes(Array, Boolean, Boolean)</a> function.</p>
+<p>In order to be mergeable, properties of the <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> must match, and each surface must match, in terms of material, attributes and vertex format.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1551,7 +1569,13 @@
   
   <a id="Godot_MeshInstance_MergeMeshes_" data-uid="Godot.MeshInstance.MergeMeshes*"></a>
   <h4 id="Godot_MeshInstance_MergeMeshes_Godot_Collections_Array_System_Boolean_System_Boolean_" data-uid="Godot.MeshInstance.MergeMeshes(Godot.Collections.Array,System.Boolean,System.Boolean)">MergeMeshes(Array, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This function can merge together the data from several source <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a>s into a single destination <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> (the MeshInstance the function is called from). This is primarily useful for improving performance by reducing the number of drawcalls and <a class="xref" href="Godot.Node.html">Node</a>s.</p>
+<p>Merging should only be attempted for simple meshes that do not contain animation.</p>
+<p>The final vertices can either be returned in global space, or in local space relative to the destination <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> global transform (the destination Node must be inside the <a class="xref" href="Godot.SceneTree.html">SceneTree</a> for local space to work).</p>
+<p>The function will make a final check for compatibility between the <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a>s by default, this should always be used unless you have previously checked for compatibility using <a class="xref" href="Godot.MeshInstance.html#Godot_MeshInstance_IsMergeableWith_Godot_Node_">IsMergeableWith(Node)</a>. If the compatibility check is omitted and the meshes are merged, you may see rendering errors.</p>
+<p>Note: The requirements for similarity between meshes are quite stringent. They can be checked using the <a class="xref" href="Godot.MeshInstance.html#Godot_MeshInstance_IsMergeableWith_Godot_Node_">IsMergeableWith(Node)</a> function prior to calling <a class="xref" href="Godot.MeshInstance.html#Godot_MeshInstance_MergeMeshes_Godot_Collections_Array_System_Boolean_System_Boolean_">MergeMeshes(Array, Boolean, Boolean)</a>.</p>
+<p>Also note that any initial data in the destination <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> data will be discarded.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1570,7 +1594,8 @@
       <tr>
         <td><a class="xref" href="Godot.Collections.Array.html">Array</a></td>
         <td><span class="parametername">meshInstances</span></td>
-        <td></td>
+        <td><p>If the parameter is null, then the default value is new Godot.Collections.Array { }</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -1711,7 +1736,8 @@
   
   <a id="Godot_MeshInstance_SetSurfaceMaterial_" data-uid="Godot.MeshInstance.SetSurfaceMaterial*"></a>
   <h4 id="Godot_MeshInstance_SetSurfaceMaterial_System_Int32_Godot_Material_" data-uid="Godot.MeshInstance.SetSurfaceMaterial(System.Int32,Godot.Material)">SetSurfaceMaterial(Int32, Material)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the override <a class="xref" href="Godot.Material.html">Material</a> for the specified surface of the <a class="xref" href="Godot.Mesh.html">Mesh</a> resource. This material is associated with this <a class="xref" href="Godot.MeshInstance.html">MeshInstance</a> rather than with the <a class="xref" href="Godot.Mesh.html">Mesh</a> resource.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

@@ -83,7 +83,8 @@
   
   <h1 id="Godot_GLTFLight" data-uid="Godot.GLTFLight" class="text-break">Class GLTFLight
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Note: This class is only compiled in editor builds. Run-time glTF loading and saving is not available in exported projects. References to <a class="xref" href="Godot.GLTFLight.html">GLTFLight</a> within a script will cause an error in an exported project.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -346,7 +347,8 @@
   
   <a id="Godot_GLTFLight_Color_" data-uid="Godot.GLTFLight.Color*"></a>
   <h4 id="Godot_GLTFLight_Color" data-uid="Godot.GLTFLight.Color">Color</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Godot.Color.html">Color</a> of the light. Defaults to white. A black color causes the light to have no effect.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +373,9 @@
   
   <a id="Godot_GLTFLight_InnerConeAngle_" data-uid="Godot.GLTFLight.InnerConeAngle*"></a>
   <h4 id="Godot_GLTFLight_InnerConeAngle" data-uid="Godot.GLTFLight.InnerConeAngle">InnerConeAngle</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The inner angle of the cone in a spotlight. Must be less than or equal to the outer cone angle.</p>
+<p>Within this angle, the light is at full brightness. Between the inner and outer cone angles, there is a transition from full brightness to zero brightness. When creating a Godot <a class="xref" href="Godot.SpotLight.html">SpotLight</a>, the ratio between the inner and outer cone angles is used to calculate the attenuation of the light.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -396,7 +400,8 @@
   
   <a id="Godot_GLTFLight_Intensity_" data-uid="Godot.GLTFLight.Intensity*"></a>
   <h4 id="Godot_GLTFLight_Intensity" data-uid="Godot.GLTFLight.Intensity">Intensity</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The intensity of the light. This is expressed in candelas (lumens per steradian) for point and spot lights, and lux (lumens per m²) for directional lights. When creating a Godot light, this value is converted to a unitless multiplier.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +426,9 @@
   
   <a id="Godot_GLTFLight_OuterConeAngle_" data-uid="Godot.GLTFLight.OuterConeAngle*"></a>
   <h4 id="Godot_GLTFLight_OuterConeAngle" data-uid="Godot.GLTFLight.OuterConeAngle">OuterConeAngle</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The outer angle of the cone in a spotlight. Must be greater than or equal to the inner angle.</p>
+<p>At this angle, the light drops off to zero brightness. Between the inner and outer cone angles, there is a transition from full brightness to zero brightness. If this angle is a half turn, then the spotlight emits in all directions. When creating a Godot <a class="xref" href="Godot.SpotLight.html">SpotLight</a>, the outer cone angle is used as the angle of the spotlight.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -446,7 +453,8 @@
   
   <a id="Godot_GLTFLight_Range_" data-uid="Godot.GLTFLight.Range*"></a>
   <h4 id="Godot_GLTFLight_Range" data-uid="Godot.GLTFLight.Range">Range</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The range of the light, beyond which the light has no effect. GLTF lights with no range defined behave like physical lights (which have infinite range). When creating a Godot light, the range is clamped to 4096.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -471,7 +479,8 @@
   
   <a id="Godot_GLTFLight_Type_" data-uid="Godot.GLTFLight.Type*"></a>
   <h4 id="Godot_GLTFLight_Type" data-uid="Godot.GLTFLight.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The type of the light. The values accepted by Godot are &quot;point&quot;, &quot;spot&quot;, and &quot;directional&quot;, which correspond to Godot&apos;s <a class="xref" href="Godot.OmniLight.html">OmniLight</a>, <a class="xref" href="Godot.SpotLight.html">SpotLight</a>, and <a class="xref" href="Godot.DirectionalLight.html">DirectionalLight</a> respectively.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

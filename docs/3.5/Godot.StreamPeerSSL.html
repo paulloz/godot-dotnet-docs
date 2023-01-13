@@ -83,7 +83,8 @@
   
   <h1 id="Godot_StreamPeerSSL" data-uid="Godot.StreamPeerSSL" class="text-break">Class StreamPeerSSL
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>SSL stream peer. This object can be used to connect to an SSL server or accept a single SSL client connection.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -427,7 +428,8 @@
   
   <a id="Godot_StreamPeerSSL_AcceptStream_" data-uid="Godot.StreamPeerSSL.AcceptStream*"></a>
   <h4 id="Godot_StreamPeerSSL_AcceptStream_Godot_StreamPeer_Godot_CryptoKey_Godot_X509Certificate_Godot_X509Certificate_" data-uid="Godot.StreamPeerSSL.AcceptStream(Godot.StreamPeer,Godot.CryptoKey,Godot.X509Certificate,Godot.X509Certificate)">AcceptStream(StreamPeer, CryptoKey, X509Certificate, X509Certificate)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Accepts a peer connection as a server using the given <code>private_key</code> and providing the given <code>certificate</code> to the client. You can pass the optional <code>chain</code> parameter to provide additional CA chain information along with the certificate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -484,7 +486,9 @@
   
   <a id="Godot_StreamPeerSSL_ConnectToStream_" data-uid="Godot.StreamPeerSSL.ConnectToStream*"></a>
   <h4 id="Godot_StreamPeerSSL_ConnectToStream_Godot_StreamPeer_System_Boolean_System_String_Godot_X509Certificate_" data-uid="Godot.StreamPeerSSL.ConnectToStream(Godot.StreamPeer,System.Boolean,System.String,Godot.X509Certificate)">ConnectToStream(StreamPeer, Boolean, String, X509Certificate)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Connects to a peer using an underlying <a class="xref" href="Godot.StreamPeer.html">StreamPeer</a> <code>stream</code>. If <code>validate_certs</code> is <code>true</code>, <a class="xref" href="Godot.StreamPeerSSL.html">StreamPeerSSL</a> will validate that the certificate presented by the peer matches the <code>for_hostname</code>.</p>
+<p>Note: Specifying a custom <code>valid_certificate</code> is not supported in HTML5 exports due to browsers restrictions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -541,7 +545,8 @@
   
   <a id="Godot_StreamPeerSSL_DisconnectFromStream_" data-uid="Godot.StreamPeerSSL.DisconnectFromStream*"></a>
   <h4 id="Godot_StreamPeerSSL_DisconnectFromStream" data-uid="Godot.StreamPeerSSL.DisconnectFromStream">DisconnectFromStream()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disconnects from host.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -551,7 +556,8 @@
   
   <a id="Godot_StreamPeerSSL_GetStatus_" data-uid="Godot.StreamPeerSSL.GetStatus*"></a>
   <h4 id="Godot_StreamPeerSSL_GetStatus" data-uid="Godot.StreamPeerSSL.GetStatus">GetStatus()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the status of the connection. See <a class="xref" href="Godot.StreamPeerSSL.Status.html">StreamPeerSSL.Status</a> for values.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -601,7 +607,8 @@
   
   <a id="Godot_StreamPeerSSL_Poll_" data-uid="Godot.StreamPeerSSL.Poll*"></a>
   <h4 id="Godot_StreamPeerSSL_Poll" data-uid="Godot.StreamPeerSSL.Poll">Poll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Poll the connection to check for incoming bytes. Call this right before <a class="xref" href="Godot.StreamPeer.html#Godot_StreamPeer_GetAvailableBytes">GetAvailableBytes()</a> for it to work properly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

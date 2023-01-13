@@ -83,7 +83,8 @@
   
   <h1 id="Godot_AcceptDialog" data-uid="Godot.AcceptDialog" class="text-break">Class AcceptDialog
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This dialog is useful for small notifications to the user about an event. It can only be accepted or closed, with the same result.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -1520,7 +1521,8 @@
   
   <a id="Godot_AcceptDialog_DialogAutowrap_" data-uid="Godot.AcceptDialog.DialogAutowrap*"></a>
   <h4 id="Godot_AcceptDialog_DialogAutowrap" data-uid="Godot.AcceptDialog.DialogAutowrap">DialogAutowrap</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets autowrapping for the text in the dialog.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1545,7 +1547,9 @@
   
   <a id="Godot_AcceptDialog_DialogHideOnOk_" data-uid="Godot.AcceptDialog.DialogHideOnOk*"></a>
   <h4 id="Godot_AcceptDialog_DialogHideOnOk" data-uid="Godot.AcceptDialog.DialogHideOnOk">DialogHideOnOk</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>If <code>true</code>, the dialog is hidden when the OK button is pressed. You can set it to <code>false</code> if you want to do e.g. input validation when receiving the <code>confirmed</code> signal, and handle hiding the dialog in your own logic.</p>
+<p>Note: Some nodes derived from this class can have a different default value, and potentially their own built-in logic overriding this setting. For example <a class="xref" href="Godot.FileDialog.html">FileDialog</a> defaults to <code>false</code>, and has its own input validation code that is called when you press OK, which eventually hides the dialog if the input is valid. As such, this property can&apos;t be used in <a class="xref" href="Godot.FileDialog.html">FileDialog</a> to disable hiding the dialog when pressing OK.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1570,7 +1574,8 @@
   
   <a id="Godot_AcceptDialog_DialogText_" data-uid="Godot.AcceptDialog.DialogText*"></a>
   <h4 id="Godot_AcceptDialog_DialogText" data-uid="Godot.AcceptDialog.DialogText">DialogText</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The text displayed by the dialog.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1597,7 +1602,10 @@
   
   <a id="Godot_AcceptDialog_AddButton_" data-uid="Godot.AcceptDialog.AddButton*"></a>
   <h4 id="Godot_AcceptDialog_AddButton_System_String_System_Boolean_System_String_" data-uid="Godot.AcceptDialog.AddButton(System.String,System.Boolean,System.String)">AddButton(String, Boolean, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a button with label <code>text</code> and a custom <code>action</code> to the dialog and returns the created button. <code>action</code> will be passed to the <code>custom_action</code> signal when pressed.</p>
+<p>If <code>true</code>, <code>right</code> will place the button to the right of any sibling buttons.</p>
+<p>You can use <a class="xref" href="Godot.AcceptDialog.html#Godot_AcceptDialog_RemoveButton_Godot_Control_">RemoveButton(Control)</a> method to remove a button created with this method from the dialog.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1649,7 +1657,9 @@
   
   <a id="Godot_AcceptDialog_AddCancel_" data-uid="Godot.AcceptDialog.AddCancel*"></a>
   <h4 id="Godot_AcceptDialog_AddCancel_System_String_" data-uid="Godot.AcceptDialog.AddCancel(System.String)">AddCancel(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a button with label <code>name</code> and a cancel action to the dialog and returns the created button.</p>
+<p>You can use <a class="xref" href="Godot.AcceptDialog.html#Godot_AcceptDialog_RemoveButton_Godot_Control_">RemoveButton(Control)</a> method to remove a button created with this method from the dialog.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1716,7 +1726,9 @@
   
   <a id="Godot_AcceptDialog_GetLabel_" data-uid="Godot.AcceptDialog.GetLabel*"></a>
   <h4 id="Godot_AcceptDialog_GetLabel" data-uid="Godot.AcceptDialog.GetLabel">GetLabel()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the label used for built-in text.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1741,7 +1753,9 @@
   
   <a id="Godot_AcceptDialog_GetOk_" data-uid="Godot.AcceptDialog.GetOk*"></a>
   <h4 id="Godot_AcceptDialog_GetOk" data-uid="Godot.AcceptDialog.GetOk">GetOk()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the OK <a class="xref" href="Godot.Button.html">Button</a> instance.</p>
+<p>Warning: This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their <a class="xref" href="Godot.CanvasItem.html#Godot_CanvasItem_Visible">Visible</a> property.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1816,7 +1830,8 @@
   
   <a id="Godot_AcceptDialog_RegisterTextEnter_" data-uid="Godot.AcceptDialog.RegisterTextEnter*"></a>
   <h4 id="Godot_AcceptDialog_RegisterTextEnter_Godot_Node_" data-uid="Godot.AcceptDialog.RegisterTextEnter(Godot.Node)">RegisterTextEnter(Node)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Registers a <a class="xref" href="Godot.LineEdit.html">LineEdit</a> in the dialog. When the enter key is pressed, the dialog will be accepted.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1843,7 +1858,8 @@
   
   <a id="Godot_AcceptDialog_RemoveButton_" data-uid="Godot.AcceptDialog.RemoveButton*"></a>
   <h4 id="Godot_AcceptDialog_RemoveButton_Godot_Control_" data-uid="Godot.AcceptDialog.RemoveButton(Godot.Control)">RemoveButton(Control)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes the <code>button</code> from the dialog. Does NOT free the <code>button</code>. The <code>button</code> must be a <a class="xref" href="Godot.Button.html">Button</a> added with <a class="xref" href="Godot.AcceptDialog.html#Godot_AcceptDialog_AddButton_System_String_System_Boolean_System_String_">AddButton(String, Boolean, String)</a> or <a class="xref" href="Godot.AcceptDialog.html#Godot_AcceptDialog_AddCancel_System_String_">AddCancel(String)</a> method. After removal, pressing the <code>button</code> will no longer emit this dialog&apos;s <code>custom_action</code> signal or cancel this dialog.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
