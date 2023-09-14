@@ -2,6 +2,12 @@
 
 Unofficial web version of Godot's C# API documentation (https://paulloz.github.io/godot-csharp-api/).
 
+# Disclaimer
+
+This repository has been archived, and the documentation website put offline. I do not want to host an outdated documentation platform, and keeping everything tightly up to date with the stable version of Godot has proven to be a challenge recently.  
+
+Sorry for the inconvenience.
+
 ## How to use this repository
 
 Should I be unable to maintain this, here's a quick rundown of how to generate the documentation and build the website.
