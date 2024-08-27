@@ -1,0 +1,5 @@
+# Temporary build artifacts (metadata step)
+tmp/
+tmp-*.json
+# Final build result (build step)
+site/

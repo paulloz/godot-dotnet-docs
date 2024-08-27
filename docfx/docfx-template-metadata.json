@@ -1,0 +1,18 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "**.dll"
+          ],
+          "src": "src/$version"
+        }
+      ],
+      "dest": "tmp/metadata/$version",
+      "filter": "docfx/filter.yml",
+      "memberLayout": "samePage"
+    }
+  ],
+  "disableGitFeatures": false
+}

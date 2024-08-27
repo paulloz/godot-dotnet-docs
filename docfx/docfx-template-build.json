@@ -1,0 +1,28 @@
+{
+  "rules": {
+    "InvalidFileLink": "Suggestion",
+    "InvalidBookmark": "Suggestion"
+  },
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "src": "metadata/$version",
+        "dest": "$version"
+      }
+    ],
+    "xref": [
+      "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json"
+    ],
+    "globalMetadata": {
+      "_appName": "Godot Engine",
+      "_appTitle": "Godot Engine",
+      "_disableContribution": true,
+      "_enableSearch": "true"
+    },
+    "dest": "../site"
+  },
+  "disableGitFeatures": true
+}

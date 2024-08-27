@@ -1,0 +1,13 @@
+apiRules:
+- exclude:
+    uidRegex: ^Godot\.Bridge$
+    type: Namespace
+- exclude:
+    uidRegex: ^Godot\.NativeInterop$
+    type: Namespace
+- exclude:
+    uidRegex: ^Godot\.[a-zA-Z0-9]+\.(Method|Property|Signal)Name$
+    type: Class
+- exclude:
+    uidRegex: ^Godot\.[a-zA-Z0-9]+\.[a-zA-Z0-9]+EventHandler$
+    type: Delegate
