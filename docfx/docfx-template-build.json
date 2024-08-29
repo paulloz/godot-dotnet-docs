@@ -11,6 +11,13 @@
         ],
         "src": "metadata/$version",
         "dest": "$version"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "../docfx/api",
+        "dest": "$version"
       }
     ],
     "xref": [
